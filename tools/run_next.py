@@ -28,7 +28,8 @@ RESULT_LIMIT = 800
 GENERIC_ARG_LIMIT = 4000
 COORDINATOR_SYSTEM = (
     "Run only the exact next python tools/workflow.py command reported by status. "
-    "Wait for each bash command to finish. Never background a command, never use hub "
+    "Wait for each bash command to finish. Always pass timeout=3600 on bash. "
+    "Never background a command, never use hub "
     "or task, and never start a nested agent. If status asks for checkpoint dispositions, "
     "edit the reading copies and write that JSON yourself, then run checkpointed. "
     "Do not commit and do not run workflow.py committed."

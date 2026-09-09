@@ -40,6 +40,7 @@ class RunNextTest(unittest.TestCase):
         self.assertIn("--no-pty", command)
         self.assertIn("--no-extensions", command)
         self.assertIn("checkpoint dispositions", run_next.COORDINATOR_SYSTEM)
+        self.assertIn("timeout=3600", run_next.COORDINATOR_SYSTEM)
         overlay = run_next.COORDINATOR_OVERLAY.read_text(encoding="utf-8")
         self.assertIn("autoBackground:\n    enabled: false", overlay)
         self.assertIn("hub: deny", overlay)
