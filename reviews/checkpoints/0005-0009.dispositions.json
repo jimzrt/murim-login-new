@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Removed the unquoted blank line so the consecutive chapter 5 skill notices remain in one continuous System blockquote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Changed the chapter 8 reference from “the last room” to “the next room,” resolving the room-count contradiction.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Changed the chapter 9 panel heading to System and kept Skill Window as an ordinary line inside the blockquote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Replaced Young Sect Leader with the established title Lesser Family Head.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Changed sect’s public funds to the family’s public funds, matching the Jin Family terminology.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Corrected bounded continuity state to three martial arts occupying slots, matching the established 3 / 10 display.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C07",
+      "reason": "Recast the idiom as hunger being the best seasoning while preserving that Taekyung finishes the meal.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C08",
+      "reason": "Recast the founder wordplay as a natural reference to the family’s founding granddad.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

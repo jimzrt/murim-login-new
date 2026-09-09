@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "All of Wipeng’s Sound Transmission lines are formatted as ordinary dialogue blockquotes without a System heading, while the actual Level display remains a System panel.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "The sentence now makes Taekyung the subject who forgot the hereditary martial arts after going too long without practicing them.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Jin Wikyung is identified as the Young Sect Leader in the family-council agenda sentence.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "가로회의 is translated as a family council meeting and remains distinct from the Elder Council; the later reference was changed accordingly.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Taekyung’s self-correction from Jin Wikyung’s name to the respectful kinship address is restored as “Jin Wikyung—I mean, my brother?”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "The translation now preserves Taekyung’s specific fear that Wipeng would beat him before dragging him to the training hall.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "투로 is rendered as the movement sequence for the manoeuvre technique, matching the following footprint-based execution description.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "The awkward phrase has been replaced with “Feeling strangely choked up,” preserving the emotional reaction in natural English.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

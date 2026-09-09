@@ -1,0 +1,40 @@
+{
+  "chapter": 9,
+  "draft_sha256": "612218ef92d5e064dbd0dcb796443d0ca9622e73e6fffb30aef2e37ee340e0da",
+  "finding_count": 8,
+  "major_or_critical_count": 6,
+  "packet_sha256": "fb8e7f12c0fbd4bd050c6639747451c269ccf1dd60b3fd9b7fa5821c7c7f34ed",
+  "qa_sha256": "0e268deec64a5317d588f641b380fd886bd294157b5247e25ab5828321606372",
+  "report_sha256": "e3821922e66191f4fde915a58e565f71805c74b1e179a0be3fdcceda8cd5d140",
+  "usage": {
+    "cache_read_tokens": 17536,
+    "cache_write_tokens": 0,
+    "cost_usd": 0.10533440000000001,
+    "elapsed_seconds": 228.91,
+    "exact": true,
+    "input_bytes": 48268,
+    "input_tokens": 190,
+    "models": {
+      "openai-codex/gpt-5.6-sol": {
+        "cache_read_tokens": 17536,
+        "cache_write_tokens": 0,
+        "cost_usd": 0.10533440000000001,
+        "input_tokens": 190,
+        "model": "gpt-5.6-sol",
+        "output_tokens": 4878,
+        "provider": "openai-codex",
+        "reasoning_tokens": 3357,
+        "requests": 1,
+        "total_tokens": 22604
+      }
+    },
+    "output_bytes": 6263,
+    "output_tokens": 4878,
+    "reasoning_tokens": 3357,
+    "requested_model": "openai-codex/gpt-5.6-sol:medium",
+    "requests": 1,
+    "total_tokens": 22604,
+    "usage_source": "omp_provider_reported"
+  },
+  "version": 2
+}
