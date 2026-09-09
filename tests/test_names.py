@@ -17,7 +17,7 @@ class NamesLedgerTest(unittest.TestCase):
         mapping = {item["korean"]: names.strip_english(item["english"]) for item in names.ledger_for_source("천력부 장삼 천관일")}
         self.assertEqual(mapping["천력부"], "Heavenly Axe")
         self.assertEqual(mapping["장삼"], "Jang Sam")
-        self.assertEqual(mapping["천관일"], "Thrust of the Heavenly Crown")
+        self.assertEqual(mapping["천관일"], "Sky-Piercing Strike")
 
     def test_profile_aliases_join_the_ledger(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -79,3 +79,19 @@ class NamesLedgerTest(unittest.TestCase):
             ledger=[],
         )
         self.assertEqual(hits[0]["korean"], "천관일")
+
+    def test_spaced_romanization_is_detected(self):
+        hits = names.novel_romanizations("천력부", "He mentioned Cheon Ryeok Bu.", ledger=[])
+        self.assertEqual(hits[0]["korean"], "천력부")
+
+    def test_lowercase_common_word_is_not_reported_as_a_name(self):
+        self.assertEqual(
+            names.novel_romanizations("파노라마가 보였다.", "A panorama appeared.", ledger=[]),
+            [],
+        )
+
+    def test_laughter_is_not_reported_as_a_name(self):
+        self.assertEqual(
+            names.novel_romanizations("하하하.", "Hahaha.", ledger=[]),
+            [],
+        )

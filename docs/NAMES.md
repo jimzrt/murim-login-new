@@ -9,6 +9,16 @@ use. First use of an unlisted name or title almost always needs a footnote.
 | ------ | ----------------- | ----- |
 | 장삼 | **Jang Sam** | Bandit; personal name |
 | 천력부 | **Heavenly Axe** | Epithet of Jang Sam; never romanize |
-| 천관일 | **Thrust of the Heavenly Crown** | Final form of the Jin Family's Spear Technique; 天貫軼 |
+| 천관일 | **Sky-Piercing Strike** | Final form of the Jin Family's Spear Technique; 天貫軼 |
 | 녹림십팔채 | **Eighteen Strongholds of Green Forest** | |
 | 홍화루 | **Honghwaru** | Lower District Sect Shanxi branch; pleasure house in Taiyuan |
+| 하연 | **Hayeon** | Jin Taekyung’s younger sister |
+| 응현 | **Eung-hyeon** | Jin Family branch location |
+| 산음 | **Saneum** | Jin Family branch location |
+| 삭주 | **Sakju** | Jin Family branch location |
+| 정양 | **Jeongyang** | Shanxi location |
+| 혼주 | **Honju** | Shanxi location |
+| 견정 | **Gyeonjeong** | Acupoint |
+| 아문 | **Amun** | Acupoint |
+| 봉안 | **Bongan** | Acupoint |
+| 입동 | **Ip-dong** | Acupoint |

@@ -58,7 +58,7 @@ class ContextPacketTest(unittest.TestCase):
         entries = context.exact_glossary_entries("천력부 천관일")
         mapping = {item["korean"]: item["english"] for item in entries}
         self.assertIn("Heavenly Axe", mapping["천력부"])
-        self.assertIn("Thrust of the Heavenly Crown", mapping["천관일"])
+        self.assertIn("Sky-Piercing Strike", mapping["천관일"])
 
     def test_summary_packet_uses_beats_not_reading_copies(self):
         with tempfile.TemporaryDirectory() as directory:

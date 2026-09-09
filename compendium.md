@@ -318,7 +318,7 @@ Avoid unnecessarily leaving Korean honorifics such as *sahyeong*, *sasuk*, *saji
 | 진가창법   | **Jin Family's Spear Technique**       |
 | 진가검법   | **Jin Sword Technique**                |
 | 일격     | **One Strike**                         |
-| 천관일    | **Thrust of the Heavenly Crown**       |
+| 천관일    | **Sky-Piercing Strike**               |
 
 The established skill index uses exactly these labels.
 
@@ -330,8 +330,7 @@ The established skill index uses exactly these labels.
 | **Whirlwind of the Black Snake** |
 | **Return of Spear**              |
 | **Strike of Divine Ruler**       |
-| **Thrust of the Heavenly Crown** |
-
+| **Sky-Piercing Strike**            |
 For numbered proficiency, use:
 
 **1st Mastery → 2nd Mastery → ... → 10th Mastery**

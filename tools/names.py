@@ -132,6 +132,7 @@ JOSA = (
     "에게서", "으로부터", "에서", "으로", "에게", "부터", "까지", "처럼", "보다",
     "이나", "이랑", "이란", "이", "가", "을", "를", "은", "는", "의", "도", "만", "과", "와", "로",
 )
+IGNORED_KOREAN = {"하하하"}
 
 
 def _cores(token: str) -> list[str]:
@@ -159,10 +160,17 @@ TOKEN = re.compile(r"[A-Za-z]+(?:-[A-Za-z]+)*")
 def _english_tokens(translation: str) -> set[str]:
     tokens: set[str] = set()
     for raw in TOKEN.findall(translation):
+        if not raw[0].isupper():
+            continue
         folded = raw.casefold()
         tokens.add(folded)
         tokens.add(folded.replace("-", ""))
     return tokens
+
+
+def _romanization_sequences(translation: str) -> set[str]:
+    words = [word.casefold() for word in re.findall(r"[A-Za-z]+(?:-[A-Za-z]+)*", translation)]
+    return {" ".join(words[index:index + size]) for size in (2, 3) for index in range(len(words) - size + 1)}
 
 
 def _romanization_hit(korean: str, tokens: set[str]) -> bool:
@@ -178,15 +186,23 @@ def _romanization_hit(korean: str, tokens: set[str]) -> bool:
 def novel_romanizations(source: str, translation: str, ledger: list[dict] | None = None) -> list[dict]:
     known = {item["korean"] for item in (ledger if ledger is not None else load_names_ledger())}
     tokens = _english_tokens(translation)
+    sequences = _romanization_sequences(translation)
     found: list[dict] = []
     seen: set[str] = set()
     for korean in KOREAN.findall(source):
+        if korean in IGNORED_KOREAN:
+            continue
         if any(korean == term or korean.startswith(term) for term in known):
             continue
         for core in _cores(korean):
             if core in seen or core in known:
                 continue
-            if _romanization_hit(core, tokens):
+            variants = romanization_variants(core)
+            if _romanization_hit(core, tokens) or any(
+                item in sequences and len(re.sub(r"[^a-z]", "", item)) >= 6
+                for item in variants
+                if " " in item
+            ):
                 found.append({"korean": core, "romanization": romanize(core)})
                 seen.add(core)
                 break
