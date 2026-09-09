@@ -20,14 +20,17 @@ STAGES = (
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
+MODEL_ROLES = ("draft", "review", "revision", "summary", "coordinator")
 DEFAULT_CONFIG = {
-    "coordinator_model": "openai-codex/gpt-5.6-luna:high",
-    "draft_model": "openai-codex/gpt-5.6-luna:high",
-    "review_model": "openai-codex/gpt-5.6-sol:medium",
-    "revision_model": "openai-codex/gpt-5.6-luna:high",
+    "models": {
+        "draft": "openai-codex/gpt-5.6-luna:high",
+        "review": "openai-codex/gpt-5.6-sol:medium",
+        "revision": "openai-codex/gpt-5.6-luna:high",
+        "summary": "openai-codex/gpt-5.6-luna:high",
+        "coordinator": "openai-codex/gpt-5.6-luna:high",
+    },
     "context_max_bytes": 16384,
     "continuity_source_limit": 2,
-    "summary_model": "openai-codex/gpt-5.6-luna:high",
     "packet_token_limits": {"draft": 60000, "review": 60000, "revision": 60000, "checkpoint": 120000, "summary": 20000},
     "summary_interval": 5,
     "beat_max_bytes": 4096,
@@ -36,9 +39,29 @@ DEFAULT_CONFIG = {
 }
 
 
+def resolve_role_models(value: dict) -> dict:
+    models = value.get("models") if isinstance(value.get("models"), dict) else {}
+    resolved: dict[str, str] = {}
+    missing: list[str] = []
+    for role in MODEL_ROLES:
+        name = models.get(role) or value.get(f"{role}_model")
+        if not isinstance(name, str) or not name.strip():
+            missing.append(role)
+            continue
+        resolved[role] = name.strip()
+    if missing:
+        raise SystemExit("docs/workflow.json models must define: " + ", ".join(missing))
+    value = dict(value)
+    value["models"] = resolved
+    for role, name in resolved.items():
+        value[f"{role}_model"] = name
+    return value
+
+
 def project_config() -> dict:
     path = ROOT / "docs" / "workflow.json"
     value = json.loads(path.read_text(encoding="utf-8")) if path.exists() else DEFAULT_CONFIG
+    value = resolve_role_models(value)
     summary = int(value["summary_interval"])
     checkpoint = int(value["checkpoint_review_interval"])
     if summary <= 0 or checkpoint <= 0 or checkpoint % summary:

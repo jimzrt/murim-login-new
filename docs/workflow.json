@@ -1,10 +1,12 @@
 {
   "version": 1,
-  "coordinator_model": "openai-codex/gpt-5.6-luna:high",
-  "draft_model": "openai-codex/gpt-5.6-luna:high",
-  "review_model": "openai-codex/gpt-5.6-sol:medium",
-  "revision_model": "openai-codex/gpt-5.6-luna:high",
-  "summary_model": "openai-codex/gpt-5.6-luna:high",
+  "models": {
+    "draft": "openai-codex/gpt-5.6-luna:high",
+    "review": "openai-codex/gpt-5.6-sol:medium",
+    "revision": "openai-codex/gpt-5.6-luna:high",
+    "summary": "openai-codex/gpt-5.6-luna:high",
+    "coordinator": "openai-codex/gpt-5.6-luna:high"
+  },
   "context_max_bytes": 16384,
   "continuity_source_limit": 2,
   "packet_token_limits": {

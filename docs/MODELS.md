@@ -1,12 +1,16 @@
 # Runtime Model Configuration
 
-The authoritative configuration is `docs/workflow.json`.
+The only place to set models is `models` in [`docs/workflow.json`](workflow.json):
 
-- Draft: `openai-codex/gpt-5.6-luna:high`
-- Review: `openai-codex/gpt-5.6-sol:medium`
-- Revision: `openai-codex/gpt-5.6-luna:high`
-- Summary: `openai-codex/gpt-5.6-luna:high`
-- Coordinator: `openai-codex/gpt-5.6-luna:high`
+- `draft`
+- `review` (chapter review, checkpoint review, and retrofit review)
+- `revision` (chapter revision and retrofit refinement)
+- `summary`
+- `coordinator`
+
+Do not copy those IDs into docs or defaults elsewhere. Call sites read the resolved
+`draft_model`, `review_model`, `revision_model`, `summary_model`, and
+`coordinator_model` keys from `project_config()`.
 
 All calls are isolated, non-interactive, tool-free, session-free, and bounded by
 phase-specific packets and token ceilings. Do not silently substitute models.

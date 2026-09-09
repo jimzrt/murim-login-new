@@ -13,9 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
-from context import build_review_packet, estimated_tokens, workflow_config
+from context import build_review_packet, estimated_tokens
 from model_io import parse_json_object, review_markdown, validate_review
-from workflow import run_omp
+from workflow import project_config, run_omp
 
 
 def atomic_write(path: Path, text: str) -> None:
@@ -43,7 +43,7 @@ def main() -> int:
     qa = json.loads(qa_path.read_text(encoding="utf-8"))
     packet = build_review_packet(args.chapter, draft, qa)
     packet_tokens = estimated_tokens(packet)
-    packet_limit = workflow_config()["packet_token_limits"]["review"]
+    packet_limit = project_config()["packet_token_limits"]["review"]
     if packet_tokens > packet_limit:
         print(f"review packet estimate {packet_tokens} exceeds configured limit {packet_limit}", file=sys.stderr)
         return 1
@@ -56,7 +56,7 @@ def main() -> int:
         print(packet_path)
         return 0
     try:
-        raw, usage = run_omp(packet_path, workflow_config()["review_model"], 660)
+        raw, usage = run_omp(packet_path, project_config()["review_model"], 660)
     except SystemExit as error:
         print(error, file=sys.stderr)
         return 1

@@ -162,6 +162,34 @@ class WorkflowTest(unittest.TestCase):
         self.assertIn("Plot 0", packet)
         self.assertNotIn("translations/", packet)
 
+    def test_each_role_model_is_independent(self):
+        resolved = workflow.resolve_role_models({
+            "models": {
+                "draft": "provider/draft:high",
+                "review": "provider/review:medium",
+                "revision": "provider/revision:high",
+                "summary": "provider/summary:high",
+                "coordinator": "provider/coordinator:high",
+            }
+        })
+        self.assertEqual(resolved["draft_model"], "provider/draft:high")
+        self.assertEqual(resolved["review_model"], "provider/review:medium")
+        self.assertEqual(resolved["revision_model"], "provider/revision:high")
+        self.assertEqual(resolved["summary_model"], "provider/summary:high")
+        self.assertEqual(resolved["coordinator_model"], "provider/coordinator:high")
+        self.assertEqual(resolved["models"]["draft"], "provider/draft:high")
+
+    def test_missing_role_model_is_a_hard_failure(self):
+        with self.assertRaises(SystemExit):
+            workflow.resolve_role_models({
+                "models": {
+                    "draft": "provider/draft:high",
+                    "review": "provider/review:medium",
+                    "revision": "provider/revision:high",
+                    "summary": "provider/summary:high",
+                }
+            })
+
 
 if __name__ == "__main__":
     unittest.main()
