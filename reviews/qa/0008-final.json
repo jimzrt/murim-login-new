@@ -1,0 +1,87 @@
+{
+  "chapter": 8,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.31,
+    "source_characters": 5384,
+    "source_paragraphs": 166,
+    "translation_characters": 12438,
+    "translation_paragraphs": 162
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "천무학관",
+        "preferred": "Heaven's Gate Temple"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "보법",
+        "preferred": "manoeuvre technique / footwork technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "운기조식",
+        "preferred": "circulate one's qi"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기루",
+        "preferred": "pleasure house"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가심법",
+        "preferred": "Jin Family's Cultivation Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가보법",
+        "preferred": "Jin Family's Manoeuvre Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가창법",
+        "preferred": "Jin Family's Spear Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "동기화",
+        "preferred": "Synchronization / Sync"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

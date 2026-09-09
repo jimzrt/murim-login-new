@@ -314,6 +314,12 @@ Avoid unnecessarily leaving Korean honorifics such as *sahyeong*, *sasuk*, *saji
 
 The established skill index uses exactly these labels.
 
+### Other martial arts manuals
+
+| Korean | Preferred English |
+| ------ | ----------------- |
+| 삼전보 | **Three-Turn Footwork** |
+
 ### Jin Family's Spear Technique — established forms
 
 | Preferred English                |
@@ -499,6 +505,8 @@ Use Chinese geographical names in their established English forms rather than Ko
 | 팔천협    | **Eight Spring Gorge** |
 
 For Chapter 2's pleasure house, retain the proper name **Honghwaru**.
+
+For the clinic in Chapter 8, use **Medicine King Hall** for 약왕당.
 
 ---
 

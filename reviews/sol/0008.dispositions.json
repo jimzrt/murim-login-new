@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Changed the servant’s line to identify the second floor as Taekyung’s bedroom, matching the two-story building and the first-floor exploration that follows.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Changed the area description to “a goshiwon room measuring barely seven square meters,” removing the incorrect linear-dimension phrasing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Changed “Yes!” to “Jackpot!” so the reaction reads as excitement over finding the manual rather than acceptance of the System prompt.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Changed “restore the family’s fortunes” to “strengthen the family,” preserving the source’s meaning without implying a prior decline.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Changed “What the hell did I just see?” to “What did I just see?” to preserve Wipeng’s stunned reaction without adding profanity absent from the source.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

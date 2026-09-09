@@ -1,0 +1,56 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "“The second floor contains your bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "current": "“This floor is the bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "defect": "“이 층” means the second floor here, not the floor where the servant and Taekyung are currently standing. The current wording conflicts with Taekyung immediately exploring the first-floor rooms.",
+      "id": "F01",
+      "rationale": "The building has just been identified as two stories, and the following narration explicitly places the six rooms Taekyung explores on the first floor.",
+      "severity": "major",
+      "source": "“이 층이 침실입니다. 내부 곳곳에 종을 설치해 두었으니 필요한 일이 생기시면 종을 울려 주십시오.”"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "To someone who had lived in a goshiwon room measuring barely seven square meters,[^1] this was no different from an Olympic stadium.",
+      "current": "To someone who had lived in a goshiwon studio barely seven square meters across,[^1] this was no different from an Olympic stadium.",
+      "defect": "“Seven square meters across” incorrectly treats an area measurement as a linear dimension and sounds unnatural.",
+      "id": "F02",
+      "rationale": "Two pyeong is approximately seven square meters of floor area.",
+      "severity": "minor",
+      "source": "2평 남짓한 고시원 원룸에 살던 내게는 올림픽 경기장이나 다름없다."
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Jackpot!",
+      "current": "Yes!",
+      "defect": "Placed directly after the System’s yes-or-no prompt, “Yes!” can be read as Taekyung accepting the martial art, even though the subsequent prose establishes that he has not accepted it.",
+      "id": "F03",
+      "rationale": "Here 됐다 is a celebratory reaction to finding a martial arts manual, not an answer to the System prompt.",
+      "severity": "minor",
+      "source": "됐다!"
+    },
+    {
+      "confidence": 0.95,
+      "correction": "If a political marriage could strengthen the family, it would be a small price to pay as far as he was concerned.",
+      "current": "If a political marriage could restore the family’s fortunes, it would be a cheap sacrifice as far as he was concerned.",
+      "defect": "“Restore the family’s fortunes” adds that the family previously declined or lost its fortunes, which the source does not state.",
+      "id": "F04",
+      "rationale": "가문을 일으키다 means to elevate, strengthen, or bring prosperity to the family; it does not inherently imply restoration after a decline.",
+      "severity": "minor",
+      "source": "정략혼으로 가문을 일으킬 수 있다면 그로서는 값싼 희생이었다."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "The next moment, Wipeng’s mouth fell open.\n\n*What did I just see?*",
+      "current": "The next moment, Wipeng’s mouth fell open.\n\n*What the hell did I just see?*",
+      "defect": "“The hell” adds profanity absent from this reaction.",
+      "id": "F05",
+      "rationale": "The source conveys stunned disbelief without profanity; the chapter’s explicit profanity appears later in Taekyung’s speech and should retain that contrast.",
+      "severity": "minor",
+      "source": "다음 순간, 위팽의 입이 딱 벌어졌다. 내가 방금 뭘 본거지?"
+    }
+  ],
+  "summary": "One spatial mistranslation and several smaller fidelity or prose issues.",
+  "version": 1
+}

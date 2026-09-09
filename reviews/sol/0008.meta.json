@@ -1,0 +1,12 @@
+{
+  "chapter": 8,
+  "draft_sha256": "e79387a45e63d6e5829d6c43133a42e0e48d6cbd6da81ebbabbe69ef3968e6dd",
+  "estimated_input_tokens": 10255,
+  "estimated_output_tokens": 932,
+  "finding_count": 5,
+  "major_or_critical_count": 1,
+  "packet_sha256": "5e965abd9af14b8822dedd3f1cc80ec19b6b254cff654e759fc0815d37f26fcf",
+  "qa_sha256": "a7b8737314301ef0ee9db903e76b239dd2b6a31eb926dbe8f14120cc7c9a9c6b",
+  "report_sha256": "309bdfdfac5310af4609a140a4bddc7088a58caddece2a6eaad906fcf39feac9",
+  "version": 1
+}
