@@ -1,11 +1,11 @@
 {
   "version": 1,
   "models": {
-    "draft": "cursor/gpt-5.6-luna:high",
+    "draft": "openai-codex/gpt-5.6-luna:high",
     "review": "cursor/cursor-grok-4.6:medium",
-    "revision": "cursor/gpt-5.6-luna:high",
-    "summary": "cursor/gpt-5.6-luna:high",
-    "coordinator": "cursor/gpt-5.6-luna:high"
+    "revision": "openai-codex/gpt-5.6-luna:high",
+    "summary": "openai-codex/gpt-5.6-luna:high",
+    "coordinator": "openai-codex/gpt-5.6-luna:high"
   },
   "context_max_bytes": 16384,
   "continuity_source_limit": 2,
