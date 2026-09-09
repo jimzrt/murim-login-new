@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 19,
-  "continuity_sources": [18, 19],
+  "safe_through": 20,
+  "continuity_sources": [19, 20],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -33,7 +33,12 @@
     "The Jin Family has roughly 200 martial artists, fewer than 20 First Rate masters outside the wider senior group, and three Peak masters; Mount Heng has at least 300 martial artists, more than 50 First Rate masters, and five Peak masters.",
     "Mount Heng has declared war on the Jin Family. The System establishes a War relationship, designates Taekyung a public enemy, creates the Main Quest — War, and warns that fleeing will incur severe penalties; Wikyung seals the family grounds against entry or exit without his seal.",
     "Wolhwa is Eun Sowol, a Level 50 martial artist and Branch Leader of the Lower District Sect’s Shanxi branch; Honghwaru in Taiyuan serves as that branch’s establishment.",
-    "The Lower District Sect offers aid against Mount Heng in exchange for half of Mount Heng’s shops and assets, which Wikyung accepts as acting Family Head."
+    "The Lower District Sect offers aid against Mount Heng in exchange for half of Mount Heng’s shops and assets, which Wikyung accepts as acting Family Head.",
+    "The Jin Family and Lower District Sect form a wartime alliance: the sect will stop selling Shanxi information to other sects and devote all resources to war intelligence in exchange for half of Mount Heng’s shops and exclusive pleasure-district rights.",
+    "Wolhwa’s investigation has found neither proof clearing Taekyung nor Lee Seogeun’s killer. She treats the alliance as a profitable investment in either Taekyung’s legitimacy or the Jin Family’s ability to conceal the crime.",
+    "Yama Whip is a Peak whip master who serves as Wolhwa’s coachman; the gate guards identify him as the legendary whip master who vanished more than ten years ago after fighting remnants of the Demonic path.",
+    "Taekyung deliberately encourages the gate guards’ mistaken belief that he helped Yama Whip defeat Cheonryeokbu; the System reports Poisoner rumors dying down, the Sleeping Dragon rumor gaining credibility, 20 Fame gained, and passionate supporters appearing.",
+    "Lee Cheonbaek, the Blood Wolf Sword and Sect Leader of Mount Heng, is Lee Seogeun’s father. He expels the poison from his own body after touching his son’s corpse, vows revenge, and sends about two hundred armed martial artists out that night."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
@@ -44,6 +49,8 @@
     "Preserve brisk dark action-comedy and character hierarchy without archaic wuxia diction.",
     "Use the accepted terms Heaven's Gate Temple, Three-Turn Footwork, Sound Transmission, Jin Family's Cultivation/Spear/Manoeuvre Techniques, and pleasure house.",
     "Preserve the gold-spoon/God-Spoon wordplay and explain it briefly in a footnote.",
-    "Preserve the System titles Gambler and Sex Fiend, and render the Mount Heng demand as commanderies and counties."
+    "Preserve the System titles Gambler and Sex Fiend, and render the Mount Heng demand as commanderies and counties.",
+    "Preserve the alliance terms, the approximate count “about two hundred,” the rank “Super First Rate,” and the guards’ crude insult.",
+    "Keep Taekyung’s staged title delivery as “Yama. Whip. Great Hero!” rather than treating Yama Whip as a personal name."
   ]
 }

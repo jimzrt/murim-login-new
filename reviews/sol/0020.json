@@ -1,0 +1,76 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "A group of some two hundred fully armed men stood outside. / That night, some two hundred martial artists left the Mount Heng Sword Sect.",
+      "current": "A group of more than two hundred fully armed men stood outside. / That night, more than two hundred martial artists left the Mount Heng Sword Sect.",
+      "defect": "이백여 명 is about two hundred, not more than two hundred. The departing force is counted high twice.",
+      "id": "F01",
+      "rationale": "여 marks an approximate count. Raising it to ‘more than two hundred’ changes the size of the revenge party, a scene quantity.",
+      "severity": "major",
+      "source": "철저히 무장한 이백여 명의 무리. / 그날 밤, 이백여 명의 무사가 항산검문을 빠져나왔다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "You’re overlooking one important thing. If I’m innocent, then who actually poisoned Lee Seogeun?",
+      "current": "You’re overlooking one important thing. If I’m innocent, then who was the mastermind behind Lee Seogeun’s poisoning?",
+      "defect": "주범 is the principal culprit who poisoned Lee Seogeun, not a behind-the-scenes mastermind.",
+      "id": "F02",
+      "rationale": "The missing puzzle piece is the perpetrator of the poisoning. Mastermind implies an orchestrator the Korean does not name. The next lines still say 범인, ‘culprit.’",
+      "severity": "major",
+      "source": "중요한 하나가 빠졌네요. 내가 결백하다면 이소군을 독살한 주범은 누구인가?"
+    },
+    {
+      "confidence": 0.74,
+      "correction": "He’s a master. No doubt about it. At least Super First Rate, maybe even Peak.",
+      "current": "He’s a master. No doubt about it. At least First Rate, maybe even Peak.",
+      "defect": "초일류 is a higher rung than 일류 (First Rate). The guards’ floor is Super First Rate, not ordinary First Rate.",
+      "id": "F03",
+      "rationale": "The packet binds 일류 to First Rate and 절정 to Peak. 최소 초일류 sets the estimate above First Rate on the way to Peak.",
+      "severity": "major",
+      "source": "고수야. 틀림없어. 최소 초일류, 어쩌면 절정 고수일지도 모르지."
+    },
+    {
+      "confidence": 0.81,
+      "correction": "What the hell would a little shit like you know, butting into your elders’ conversation?",
+      "current": "What the hell does some young punk know, interrupting his elders’ conversation?",
+      "defect": "노무 새끼 is a hard insult. Young punk sanitizes the senior guards’ register.",
+      "id": "F04",
+      "rationale": "Hierarchy and characterization sit in the seniors talking down to the junior. The Korean is crude; the English is milder slang.",
+      "severity": "major",
+      "source": "어린 노무 새끼가 뭘 안다고 어르신들 얘기하는데 끼어들어?"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "She had adjusted the negotiations like a fastidious businesswoman, then formed an alliance as if it were the most natural thing in the world.",
+      "current": "Now that I thought about it, she had never once mentioned Lee Seogeun. She had adjusted the negotiations like a shrewd businesswoman, then formed an alliance as if it were the most natural thing in the world.",
+      "defect": "깐깐한 is strict, exacting, fastidious. Shrewd adds cunning the source does not use here.",
+      "id": "F05",
+      "rationale": "This is Taekyung’s read of how she handled the talks: picky and businesslike, not necessarily shrewd.",
+      "severity": "minor",
+      "source": "그녀는 단 한 번도 이소군과 연관된 이야기를 꺼내지 않았다. 깐깐한 사업가처럼 협의를 조정하고 당연하다는 듯 동맹을 맺었다."
+    },
+    {
+      "confidence": 0.77,
+      "correction": "If we could prove that all of this was a conspiracy carried out by someone else, we could stop the war.",
+      "current": "If we could prove that everything had been a conspiracy carried out by someone else, we might be able to stop the war.",
+      "defect": "막을 수 있다 is that the war can be stopped. Might weakens the hope that then gets shattered.",
+      "id": "F06",
+      "rationale": "The next beat is that this expectation is smashed. Softening the modal changes how sure that hope is.",
+      "severity": "minor",
+      "source": "이 모든 것이 누군가에 의해 벌어진 음모라는 것을 증명한다면, 전쟁을 막을 수 있다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "To meet you again like this—Yama. Whip. Great Hero!",
+      "current": "It’s wonderful to see you again, Great Hero Yama. Whip!",
+      "defect": "The syllable break belongs on 염라편, then 대협. Great Hero Yama. Whip splits the epithet into a false name.",
+      "id": "F07",
+      "rationale": "He is performing the title the guards just supplied, one syllable at a time, then Great Hero. The period after Yama makes it sound like Great Hero Yama.",
+      "severity": "minor",
+      "source": "이렇게 다시 뵙는군요. 염.라.편. 대협!"
+    }
+  ],
+  "summary": "Mostly faithful, but the departure force is inflated from ‘about two hundred,’ 주범 is recast as a mastermind, 초일류 is flattened to First Rate, and the gate seniors’ insult is softened.",
+  "version": 1
+}

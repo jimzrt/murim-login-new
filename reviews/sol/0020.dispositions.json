@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "이백여 명 is an approximate count; both departure lines now read ‘about two hundred,’ not ‘more than two hundred.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "주범 is the principal poisoner; replaced ‘mastermind behind’ with ‘who actually poisoned Lee Seogeun.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "최소 초일류 is Super First Rate, a rung above First Rate on the way to Peak.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored the seniors’ crude register: 어린 노무 새끼 as ‘a little shit like you,’ not sanitized ‘young punk.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "깐깐한 is fastidious/exacting; removed ‘shrewd,’ which added cunning the source does not use.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "막을 수 있다 is that the war can be stopped; dropped ‘might’ so the hope that then shatters stays firm.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Syllable break is on 염라편, then 대협: ‘Yama. Whip. Great Hero,’ not ‘Great Hero Yama. Whip.’",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

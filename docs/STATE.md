@@ -2,51 +2,18 @@
 
 Updated: 2026-09-09
 
-- Last completed: 19
-- Next chapter: 20
-- Current block: 15–19 (5/5)
-- Latest translation: `translations/0019.md`
-- Latest summary: `summaries/beats/0019.md`
-- Safe profiles through: chapter 19
+- Last completed: 20
+- Next chapter: 21
+- Current block: 20–24 (1/5)
+- Latest translation: `translations/0020.md`
+- Latest summary: `summaries/beats/0020.md`
+- Safe profiles through: chapter 20
 
 
 ## Current Block
 
-Chapters 15–19 begin after Taekyung’s duel with Lee Seogeun. Taekyung wins,
-completes the Duel Quest, reaches Level 17, and advances his Cultivation
-Technique to the Fourth Stage and Qi Sense to the Third Stage. Lee is killed
-in the departing carriage by a masked assassin, while Jin Wikyung ends
-Taekyung’s confinement through a coerced family consensus.
+Chapter 20 finalizes the Jin Family’s alliance with the Lower District Sect. The sect will stop selling Shanxi information to other sects and devote all resources to war intelligence in exchange for half of Mount Heng’s shops and exclusive pleasure-district rights. Wolhwa admits that her investigation found neither proof clearing Taekyung nor Lee Seogeun’s killer, and frames the alliance as a profitable investment in either Taekyung’s legitimacy or the Jin Family’s ability to conceal the crime. Taekyung recognizes her coachman as the Peak whip master Yama Whip and deliberately encourages the gate guards’ mistaken belief that he helped defeat Cheonryeokbu, increasing the credibility of the Sleeping Dragon rumor and gaining 20 Fame. Lee Cheonbaek, Mount Heng’s Sect Leader and Lee Seogeun’s father, vows revenge and sends about two hundred armed martial artists toward the Jin Family.
 
-In chapter 16, Wikyung receives an urgent messenger hawk after drawing
-triumphant pictures of Taekyung’s duel. Taekyung confirms the Jin Family’s
-Sleeping Dragon of Shanxi rumor, gaining Fame as belief spreads, and identifies
-internal energy as the apparent gate for martial-realm advancement. His Main
-Quest requires First Rate, Level 30, and Fame 500 for Logout. The Head Elder
-returns after years of seclusion and appears at a secret family-council meeting
-about the Mount Heng Sword Sect.
-
-In chapter 17, Taekyung discovers a powerful unidentified energy in his dantian
-that rejects his attempt to use it and nearly consumes his internal energy.
-Cultivation raises his internal energy slightly and Sinews and Bones by 1 each,
-but the Status Window still displays ten years. The Elder Council summons him
-to question him about Lee Seogeun’s poisoning and the Mount Heng crisis. Jin
-Wikyung guides him through Sound Transmission while the council’s senior faction
-blames Taekyung and the Head Elder observes from the seat of honor.
-
-In chapter 18, the council rejects handing Taekyung over and pivots to war
-preparation after the Head Elder publicly backs Wikyung. The Jin Family is
-badly outmatched by Mount Heng, which then declares war. Wikyung seals the
-family grounds, while the System creates the Main Quest — War, marks Taekyung
-a public enemy, and warns that fleeing will incur severe penalties.
-
-In chapter 19, Wikyung, Wipeng, and Taekyung discuss the Head Elder’s
-possible ulterior motives, the rapidly spreading Lee Seogeun poisoning rumor,
-and the failure of Shanxi sects to answer their requests for support. Wolhwa
-arrives as Eun Sowol, the Level 50 Branch Leader of the Lower District Sect’s
-Shanxi branch, and offers aid in exchange for half of Mount Heng’s shops and
-assets. Wikyung accepts as acting Family Head; Wolhwa also claims to like
-Taekyung.
 
 
 ## Open Questions
