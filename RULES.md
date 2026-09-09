@@ -16,6 +16,7 @@
 - Search only exact Korean terms already present in the current chapter; the compendium contains future-sensitive entries.
 - Never re-romanize established names or invent grand names for uncertain terms. First use of an unlisted name or title almost always needs a footnote or a mapped ledger term.
 - Use `qi` for Murim energy and `mana` for the modern Hunter system when the source distinguishes them.
+- In System panels, render `등급` as `**Grade:**` for quest, item, skill, and martial-art classifications. Reserve `rank` for Hunter classifications or ordinary prose; never replace a System `Grade` field with `Rank`.
 
 ## English and Markdown
 

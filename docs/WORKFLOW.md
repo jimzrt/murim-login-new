@@ -36,7 +36,7 @@ compendium, or safe profiles and remove them from active context.
 `docs/NAMES.md`, `compendium.md` table rows, and character profile headings/aliases
 form the names ledger. Packets inject a row only when that Korean is in the
 current chapter. Deterministic QA warns if the draft romanizes a source term
-that has no ledger entry.
+that has no ledger entry and blocks `Rank:` as a System/UI classification field.
 
 `docs/STATE.md` is a short human operational view, not a historical review log.
 Review history belongs to the structured files under `reviews/`.

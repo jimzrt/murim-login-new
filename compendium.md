@@ -404,6 +404,8 @@ Keep the system language deliberately game-like and terse.
 | 서브 퀘스트           | **Side Quest**                 |
 | 보상               | **Reward**                     |
 | 칭호               | **Title**                      |
+| 등급               | **Grade**                      | System/UI field for quest, item, and martial-art classifications; do not use “Rank” here |
+| 랭크               | **rank**                       | Hunter-world rank terminology |
 | 명가의 자제         | **Scion of a Prestigious Family** |
 | 가문의 수치         | **Shame of the Family**        |
 | 장비               | **Equipment**                  |

@@ -8,6 +8,7 @@ import re
 HANGUL = re.compile(r"[가-힣]")
 FOOTNOTE_REF = re.compile(r"\[\^([^\]]+)\](?!:)")
 FOOTNOTE_DEF = re.compile(r"^\[\^([^\]]+)\]:", re.MULTILINE)
+SYSTEM_RANK_FIELD = re.compile(r"^>\s*\*\*Rank:\*\*", re.MULTILINE)
 ARABIC_NUMBER = re.compile(r"(?<![\w.])\d+(?:[.,]\d+)*(?!\w)")
 SEMANTIC_PROBES = (
     (re.compile(r"끄덕"), re.compile(r"\bnod(?:s|ded|ding)?\b", re.I), "source contains a nod but the translation has no form of 'nod'"),
@@ -55,6 +56,12 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
                 if "[" in system_lines[cursor] or "]" in system_lines[cursor]:
                     warnings.append(finding("system_brackets", "System window contains square brackets", line=cursor + 1))
                 cursor += 1
+    for match in SYSTEM_RANK_FIELD.finditer(translation):
+        errors.append(finding(
+            "system_grade",
+            "System UI uses Rank; use Grade for the 등급 field",
+            line=translation.count("\n", 0, match.start()) + 1,
+        ))
     source_numbers = set(ARABIC_NUMBER.findall(source))
     target_numbers = set(ARABIC_NUMBER.findall(translation))
     missing_numbers = sorted(source_numbers - target_numbers)

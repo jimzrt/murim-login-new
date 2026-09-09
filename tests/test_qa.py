@@ -32,6 +32,13 @@ class QaTest(unittest.TestCase):
         warning = next(item for item in result["warnings"] if item["code"] == "novel_name")
         self.assertEqual(warning["details"]["korean"], "가나다라마")
 
+    def test_system_rank_label_is_blocked(self):
+        source = "＃1화\n\n" + ("그는 말했다. " * 9) + "등급이 표시되었다.\n\n* * *\n\n100"
+        target = "# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.”\n\n> **System**\n>\n> **Rank:** Main Quest\n\n* * *\n\n100 remained.\n"
+        result = run_qa(1, source, target, [])
+        self.assertFalse(result["passed"], result)
+        self.assertTrue(any(item["code"] == "system_grade" for item in result["errors"]))
+
     def test_ledger_term_missing_preferred_english_is_terminology(self):
         source = "＃1화\n\n" + ("그는 말했다. " * 9) + "천력부가 나타났다.\n\n* * *\n\n100"
         target = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” Cheonryeokbu appeared.\n\n* * *\n\n100 remained.\n'
