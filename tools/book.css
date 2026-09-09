@@ -1,0 +1,155 @@
+@page {
+  size: A5;
+  margin: 18mm 16mm 20mm;
+}
+
+:root {
+  color-scheme: light;
+  --ink: #20242b;
+  --muted: #68717d;
+  --paper: #fffdf8;
+  --panel: #f2f5f8;
+  --frame: #657284;
+  --accent: #34495e;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.62;
+  margin: 0 auto;
+  max-width: 42rem;
+  padding: 2rem 1.25rem;
+}
+
+.chapter-nav {
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  margin: 0 0 1.5rem;
+}
+
+.chapter-nav a {
+  color: var(--accent);
+}
+
+.chapter-position {
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+
+.contents li {
+  margin: 0.4rem 0;
+}
+
+.cover-image {
+  display: block;
+  height: auto;
+  margin: 0 auto 2rem;
+  max-height: 65vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin: 0 0 2rem;
+  page-break-before: always;
+  break-before: page;
+}
+
+.chapter:first-child h1 {
+  page-break-before: auto;
+  break-before: auto;
+}
+
+p {
+  orphans: 3;
+  widows: 3;
+}
+
+blockquote {
+  border-left: 0.2rem solid #b9c2cc;
+  color: #3e4854;
+  margin: 1rem 0;
+  padding: 0.1rem 1rem;
+}
+
+.system-window {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #f2f5f8;
+  border: 1px solid #657284;
+  color: #18232f;
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 0.92em;
+  line-height: 1.45;
+  margin: 1.35em 0;
+  padding: 1.15em 1.25em 1em !important;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.system-window > p:first-child {
+  border-bottom: 1px solid #c3ccd5;
+  color: #34495e;
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.system-window > :last-child {
+  margin-bottom: 0;
+}
+
+.system-window p,
+.system-window ul,
+.system-window ol {
+  margin-top: 0.55rem;
+  margin-bottom: 0.55rem;
+}
+
+.system-window code {
+  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+}
+
+.footnotes {
+  border-top: 1px solid #c3ccd5;
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+@media screen {
+  .chapter + .chapter {
+    border-top: 1px solid #d8dde3;
+    margin-top: 4rem;
+    padding-top: 3rem;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+
+  .chapter + .chapter {
+    page-break-before: always;
+    break-before: page;
+  }
+}

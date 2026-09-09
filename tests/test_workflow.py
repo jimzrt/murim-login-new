@@ -1,0 +1,64 @@
+import json
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+from tools import workflow
+
+
+class WorkflowTest(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        (self.root / "docs").mkdir()
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 0\n- Next chapter: 1\n", encoding="utf-8"
+        )
+        self.root_patch = patch.object(workflow, "ROOT", self.root)
+        self.hash_patch = patch.object(workflow, "source_hash", return_value="source-hash")
+        self.root_patch.start()
+        self.hash_patch.start()
+
+    def tearDown(self):
+        self.hash_patch.stop()
+        self.root_patch.stop()
+        self.temporary.cleanup()
+
+    def test_accept_promotes_revised_copy_only_after_state_update(self):
+        state, paths = workflow.load(1)
+        paths["revised"].parent.mkdir(parents=True, exist_ok=True)
+        paths["revised"].write_text("# Chapter 1\n\nFinished.\n", encoding="utf-8")
+        state["stage"] = "REVISED"
+        state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
+        workflow.atomic_json(paths["state"], state)
+
+        with self.assertRaises(SystemExit):
+            workflow.command_accept(1)
+        self.assertFalse(paths["translation"].exists())
+
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 1\n- Next chapter: 2\n", encoding="utf-8"
+        )
+        workflow.command_accept(1)
+        self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 1\n\nFinished.\n")
+        recorded = json.loads(paths["state"].read_text(encoding="utf-8"))
+        self.assertEqual(recorded["stage"], "ACCEPTED")
+
+    def test_existing_completed_translation_reconciles_as_accepted(self):
+        translation = self.root / "translations" / "0000.md"
+        translation.parent.mkdir()
+        translation.write_text("# Chapter 0\n\nAccepted.\n", encoding="utf-8")
+        state, _ = workflow.load(0)
+        self.assertEqual(state["stage"], "COMMITTED")
+        self.assertTrue(state["reconciled_legacy_acceptance"])
+
+    def test_reading_copy_rejects_hangul(self):
+        path = self.root / "bad.md"
+        path.write_text("# Chapter 2\n\n안녕\n", encoding="utf-8")
+        with self.assertRaises(SystemExit):
+            workflow.validate_reading_copy(path, 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
