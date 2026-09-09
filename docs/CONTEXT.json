@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 24,
-  "continuity_sources": [23, 24],
+  "safe_through": 25,
+  "continuity_sources": [24, 25],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -54,7 +54,12 @@
     "Taekyung's reconnaissance squad encounters Socheon and Soyul near its hunter's shelter as more than twenty Mount Heng Sword Sect pursuers arrive; the System creates the Sudden Quest — Survivors of the Sakju Branch, requiring Taekyung to rescue them.",
     "Taekyung orders the squad into attack and defensive formations, then charges alone so he can claim the enemies' EXP and Merit. The System identifies several pursuers at Levels 11 and 12.",
     "Taekyung kills the pursuers with the Jin Family's Manoeuvre and Spear Techniques, using the fourth forms and finishing with Cheongwan-il, the final form of the Jin Family's Spear Technique.",
-    "The final opponent is Level 32 Black Mountain Blade. Taekyung defeats him, completes the Survivors of the Sakju Branch Quest, receives large EXP and Merit, levels up to at least Level 20, and triggers a Chain Quest."
+    "The final opponent is Level 32 Black Mountain Blade. Taekyung defeats him, completes the Survivors of the Sakju Branch Quest, receives large EXP and Merit, levels up to at least Level 20, and triggers a Chain Quest.",
+    "Gong Yacheong, Socheon, and Soyul survive the Sakju Branch pursuit; the System recognizes them as the three survivors, completes the Survivors of the Sakju Branch Quest, creates a Chain Quest, and grants Taekyung Merit, Fame, and multiple level-ups.",
+    "Taekyung gives Gong Yacheong and the children the false name Hong Gil-dong, promises Socheon that he will kill Jopil, then tries to retreat after learning that Jopil is a Peak master; Hyuk Mujin arrives and exposes Taekyung's identity.",
+    "Jopil, One Question, One Kill, is a Peak master. He kills the Mount Heng Sword Sect Hall Master and the ten-odd martial artists sent to oversee and guide the wandering martial artists, then decides to pursue Taekyung's group toward Honju.",
+    "From the scars and footprints, Jopil identifies an unknown highly skilled spearman as the killer of Black Mountain Blade and the other pursuers; the spearman is not identified as a Peak master.",
+    "Jin Wikyung sends Wipeng with more than twenty riders to locate and protect Taekyung."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
