@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "safe_through": 22,
-  "continuity_sources": [21, 22],
+  "safe_through": 23,
+  "continuity_sources": [22, 23],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame.",
     "Taekyung is Lv. 17; his Jin Family’s Cultivation, Spear, and Manoeuvre Techniques are at the Fourth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
-    "Hyuk Mujin is Lv. 20; Training Mode can summon him and Taekyung can partially adjust a summoned opponent’s abilities.",
+    "Hyuk Mujin is Lv. 22; earlier Training Mode can summon him and Taekyung can partially adjust a summoned opponent’s abilities.",
     "Jin Wikyung is Taekyung’s thirty-five-year-old eldest brother and the Lesser Family Head of the Jin Family of Taiyuan; Wipeng is his trusted guard.",
     "At the Medicine King Hall, Taekyung pretends to have amnesia, and Jin Wikyung believes him.",
     "Jin Mukyung is twenty-five, the Heaven Shaking Sword, and a cadet at Heaven's Gate Temple.",
@@ -40,10 +40,15 @@
     "Taekyung deliberately encourages the gate guards’ mistaken belief that he helped Yama Whip defeat Cheonryeokbu; the System reports Poisoner rumors dying down, the Sleeping Dragon rumor gaining credibility, 20 Fame gained, and passionate supporters appearing.",
     "Lee Cheonbaek, the Blood Wolf Sword and Sect Leader of Mount Heng, is Lee Seogeun’s father. He expels the poison from his own body after touching his son’s corpse, vows revenge, and sends about two hundred armed martial artists out that night.",
     "In Chapter 21, Mount Heng’s war begins with twenty-five murdered children from the Jin Family’s Saneum, Eung-hyeon, and Sakju branches. The Head Elder pressures Taekyung into service by invoking the Sleeping Dragon rumor and Yama Whip story; Taekyung becomes leader of White Tiger Hall’s reconnaissance squad with a repeating 100-Merit quest and moves into its communal quarters.",
-    "In Chapter 22, Taekyung takes command of the ten-person reconnaissance squad, appoints Level 22 Hyuk Mujin deputy squad leader after learning Hyuk has killed five bandits, assigns squad numbers, and leads the rookies toward the county towns near the Jin Family.",
+    "In Chapter 22, Taekyung takes command of the ten-person reconnaissance squad, appoints Level 22 Hyuk Mujin deputy squad leader after learning that Hyuk has killed five bandits, assigns squad numbers, and leads the rookies toward the county towns near the Jin Family.",
     "The Chapter 22 reconnaissance squad has nine sword users, one spear user (Level 13 Han Yeop), and no shield user; four members have never killed anyone, while Hyuk is the only member with a kill record. Taekyung applies his F-rank Hunter experience to practical melee training.",
     "The reconnaissance squad’s first deployment is announced by three bells at Mi-si, approximately 1–3 p.m.; after one day, Wikyung remains worried about Taekyung but insists he is grown and can manage without being coddled.",
-    "A Lower District Sect messenger hawk reports that Jopil, One Question, One Kill, and twenty special-detachment members have appeared in Jeongyang. Wikyung orders fifty martial artists to retrieve Jin Family members safely and learns that Taekyung went to Jeongyang."
+    "A Lower District Sect messenger hawk reports that Jopil, One Question, One Kill, and twenty special-detachment members have appeared in Jeongyang. Wikyung orders fifty martial artists to retrieve Jin Family members safely and learns that Taekyung went to Jeongyang.",
+    "Taekyung’s reconnaissance squad is ordered to scout near Jeongyang and return within five days. He enforces two hours of travel followed by fifteen minutes of rest, equips three members with shields, and drills basic formation, dispersal, and all-out retreat.",
+    "Hyuk Mujin mocks Taekyung’s retreat tactics and accuses him of causing the war. Taekyung catches Hyuk’s fourth punch, keeps him upright by holding his fist, and knocks him unconscious with a fifth blow; Hyuk is knocked out again after charging Taekyung at the shelter.",
+    "A sudden blizzard forces the squad into a small hunter’s shelter. After seeing Taekyung beat Hyuk, the other squad members ask him to train them.",
+    "Jopil, One Question, One Kill, leads about fifty wandering martial artists in massacring Jin Family survivors from the Sakju Branch near Jeongyang.",
+    "Black Mountain Blade is Jopil’s right-hand man and a First Rate wandering martial artist. Jopil orders him to take half the group and pursue one martial artist and two children who escaped through Jeongyang toward Honju."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

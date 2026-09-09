@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "Yet somehow, he didn’t fall. He couldn’t—not unless I let go of his fist.",
+      "current": "Yet somehow, he didn’t fall.\n\nThat was only possible because I had to let go of his fist.",
+      "defect": "Reverses the causal mechanic: Hyuk stays up only because Taekyung is still holding the caught fist; falling is possible only if that grip is released. “I had to let go” makes release the reason he remains standing.",
+      "id": "F01",
+      "rationale": "놔줘야만 가능한 일 attaches to collapsing, not to remaining upright. The next slap lands after that held pose; the draft’s obligation-to-release reading changes the action.",
+      "severity": "critical",
+      "source": "하지만 용케도 쓰러지지 않았다. 그건 내가 녀석의 주먹을 놔줘야만 가능한 일이니까."
+    },
+    {
+      "confidence": 0.96,
+      "correction": "The Third Young Master—I mean Squad Leader—must have a reason for doing this… right?",
+      "current": "Squad Leader must have a reason for doing this… right?",
+      "defect": "Omits Han Yeop’s audible self-correction from Third Young Master to Squad Leader, a hierarchy and characterization beat.",
+      "id": "F02",
+      "rationale": "삼공자, 아니 조장님 is a pragmatic register shift, not filler. Dropping it flattens how he addresses Taekyung in front of Hyuk.",
+      "severity": "major",
+      "source": "삼공자, 아니 조장님께서 다 생각이 있으셔서 그런 게 아닐까……요?"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "They passed through Jeongyang only a few two-hour periods ago and are headed for Honju.",
+      "current": "They passed through Jeongyang only a few hours ago and are headed for Honju.",
+      "defect": "시진 was already rendered as two hours in this chapter; 몇 시진 is several two-hour periods, not “a few hours.”",
+      "id": "F03",
+      "rationale": "한 시진 이동 was translated as two hours of travel. Treating 몇 시진 as ordinary hours understates elapsed time and breaks the chapter’s own conversion.",
+      "severity": "major",
+      "source": "불과 몇 시진 전에 정양을 통과, 혼주로 향하고 있다고 합니다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "*Seeing once, my ass—beating once is better than a hundred hearings.*\n\nOne beating really was better than explaining a hundred times.",
+      "current": "*I guess one beating really is better than a hundred explanations.*",
+      "defect": "Collapses the twisted proverb 백문이 불여일퍽 and the following gloss into one explanation, losing the 일견→일퍽 wordplay.",
+      "id": "F04",
+      "rationale": "The source first parodies 백문이 불여일견, then restates it. The joke is the swapped character, not only the gloss.",
+      "severity": "major",
+      "source": "‘백문이 불여일퍽이라더니.’\n백번 말하는 것보다 한 번 패는 게 낫구나."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Hyuk Mujin was caught up in a pointless hunger for glory",
+      "current": "Hyuk Mujin was consumed by useless ambition",
+      "defect": "공명심 is thirst for glory/distinction, not generic ambition.",
+      "id": "F05",
+      "rationale": "The contrast is glory-seeking versus Han Yeop’s fear of fighting. “Ambition” blurs that motive.",
+      "severity": "minor",
+      "source": "혁무진 쪽은 쓸데없는 공명심에 사로잡혀 있고"
+    },
+    {
+      "confidence": 0.95,
+      "correction": "Gulp.\n\nSomeone’s throat bobbed loudly.",
+      "current": "Glug.\n\nSomeone’s throat bobbed loudly.",
+      "defect": "꿀꺽 is a gulp; glug is liquid pouring.",
+      "id": "F06",
+      "rationale": "Wrong onomatopoeia for a swallowed breath in a silent standoff.",
+      "severity": "minor",
+      "source": "꿀꺽. 누군가의 목울대가 크게 일렁였다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "The martial artist had belonged to the Sakju Branch, one of the ten or so branches of the Jin Family of Taiyuan.",
+      "current": "The martial artist had belonged to the Sakju Branch, one of the dozen or so branches of the Jin Family of Taiyuan.",
+      "defect": "십여 개 is ten or so, not a dozen or so.",
+      "id": "F07",
+      "rationale": "Quantity is specified as 십여, about ten, not twelve.",
+      "severity": "minor",
+      "source": "무사는 태원진가에 속한 십여 개 지부 중 하나인 삭주(朔州) 지부 소속이었다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "“Spread out. Scatter and assemble. Disperse.”",
+      "current": "“Spread out. Break formation. Regroup. Scatter.”",
+      "defect": "Three drill calls become four. 헤쳐 모여 is one paired command, not two separate orders.",
+      "id": "F08",
+      "rationale": "Adding a fourth spoken command changes the drill sequence even if the parts of 헤쳐 모여 are individually recognizable.",
+      "severity": "minor",
+      "source": "“펼쳐. 헤쳐 모여. 산개.”"
+    }
+  ],
+  "summary": "Critical fight mechanic reversal on Hyuk’s fourth blow; major losses of Han Yeop’s address correction, shichen duration, and the 백문이 불여일퍽 joke; smaller quantity, command, and register slips.",
+  "version": 1
+}
