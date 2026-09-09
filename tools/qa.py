@@ -9,6 +9,10 @@ HANGUL = re.compile(r"[가-힣]")
 FOOTNOTE_REF = re.compile(r"\[\^([^\]]+)\](?!:)")
 FOOTNOTE_DEF = re.compile(r"^\[\^([^\]]+)\]:", re.MULTILINE)
 SYSTEM_RANK_FIELD = re.compile(r"^>\s*\*\*Rank:\*\*", re.MULTILINE)
+SKILL_REDISTRIBUTE_OBJECTIVE = re.compile(
+    r"\bCheck and Redistribute Skill Window Points complete\b",
+    re.IGNORECASE,
+)
 ARABIC_NUMBER = re.compile(r"(?<![\w.])\d+(?:[.,]\d+)*(?!\w)")
 SEMANTIC_PROBES = (
     (re.compile(r"끄덕"), re.compile(r"\bnod(?:s|ded|ding)?\b", re.I), "source contains a nod but the translation has no form of 'nod'"),
@@ -60,6 +64,12 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
         errors.append(finding(
             "system_grade",
             "System UI uses Rank; use Grade for the 등급 field",
+            line=translation.count("\n", 0, match.start()) + 1,
+        ))
+    for match in SKILL_REDISTRIBUTE_OBJECTIVE.finditer(translation):
+        errors.append(finding(
+            "quest_terminology",
+            "Skill Window points are unassigned here; use Distribute, not Redistribute",
             line=translation.count("\n", 0, match.start()) + 1,
         ))
     source_numbers = set(ARABIC_NUMBER.findall(source))

@@ -39,6 +39,13 @@ class QaTest(unittest.TestCase):
         self.assertFalse(result["passed"], result)
         self.assertTrue(any(item["code"] == "system_grade" for item in result["errors"]))
 
+    def test_skill_points_do_not_change_to_redistribute(self):
+        source = "＃3화\n\n" + ("그는 말했다. " * 9) + "스킬창 확인 및 분배.\n\n* * *\n\n100"
+        target = "# Chapter 3\n\nHe said, “This is deliberately long enough to pass the translation ratio check.”\n\n> **System**\n>\n> Check and Redistribute Skill Window Points complete.\n\n* * *\n\n100 remained.\n"
+        result = run_qa(3, source, target, [])
+        self.assertFalse(result["passed"], result)
+        self.assertTrue(any(item["code"] == "quest_terminology" for item in result["errors"]))
+
     def test_ledger_term_missing_preferred_english_is_terminology(self):
         source = "＃1화\n\n" + ("그는 말했다. " * 9) + "천력부가 나타났다.\n\n* * *\n\n100"
         target = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” Cheonryeokbu appeared.\n\n* * *\n\n100 remained.\n'

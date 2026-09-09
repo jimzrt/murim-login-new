@@ -406,6 +406,8 @@ Keep the system language deliberately game-like and terse.
 | 칭호               | **Title**                      |
 | 등급               | **Grade**                      | System/UI field for quest, item, and martial-art classifications; do not use “Rank” here |
 | 랭크               | **rank**                       | Hunter-world rank terminology |
+| 상태창 확인 및 분배     | **Check and Distribute Status Window Points** | Fixed Tutorial objective/completion wording |
+| 스킬창 확인 및 분배     | **Check and Distribute Skill Window Points** | Fixed Tutorial objective/completion wording; do not change to “Redistribute” unless points are being reallocated |
 | 명가의 자제         | **Scion of a Prestigious Family** |
 | 가문의 수치         | **Shame of the Family**        |
 | 장비               | **Equipment**                  |
