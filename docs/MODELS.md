@@ -3,14 +3,15 @@
 The only place to set models is `models` in [`docs/workflow.json`](workflow.json):
 
 - `draft`
-- `review` (chapter review, checkpoint review, and retrofit review)
+- `review` (chapter review and retrofit review)
 - `revision` (chapter revision and retrofit refinement)
 - `summary`
 - `coordinator`
+- `checkpoint` (optional; five-chapter checkpoint review; defaults to `review`)
 
 Do not copy those IDs into docs or defaults elsewhere. Call sites read the resolved
-`draft_model`, `review_model`, `revision_model`, `summary_model`, and
-`coordinator_model` keys from `project_config()`.
+`draft_model`, `review_model`, `revision_model`, `summary_model`,
+`coordinator_model`, and `checkpoint_model` keys from `project_config()`.
 
 All calls are isolated, non-interactive, tool-free, session-free, and bounded by
 phase-specific packets and token ceilings. Do not silently substitute models.

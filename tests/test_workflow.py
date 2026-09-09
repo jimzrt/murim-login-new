@@ -177,7 +177,22 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(resolved["revision_model"], "provider/revision:high")
         self.assertEqual(resolved["summary_model"], "provider/summary:high")
         self.assertEqual(resolved["coordinator_model"], "provider/coordinator:high")
+        self.assertEqual(resolved["checkpoint_model"], "provider/review:medium")
         self.assertEqual(resolved["models"]["draft"], "provider/draft:high")
+
+    def test_checkpoint_model_can_override_review(self):
+        resolved = workflow.resolve_role_models({
+            "models": {
+                "draft": "provider/draft:high",
+                "review": "provider/review:medium",
+                "revision": "provider/revision:high",
+                "summary": "provider/summary:high",
+                "coordinator": "provider/coordinator:high",
+                "checkpoint": "provider/checkpoint:medium",
+            }
+        })
+        self.assertEqual(resolved["review_model"], "provider/review:medium")
+        self.assertEqual(resolved["checkpoint_model"], "provider/checkpoint:medium")
 
     def test_missing_role_model_is_a_hard_failure(self):
         with self.assertRaises(SystemExit):
@@ -189,6 +204,17 @@ class WorkflowTest(unittest.TestCase):
                     "summary": "provider/summary:high",
                 }
             })
+
+    def test_incomplete_chapter_resumes_in_flight_transaction(self):
+        work = self.root / ".work"
+        for number, stage in ((13, "COMMITTED"), (14, "CHECKPOINT_REVIEWED"), (15, "READY")):
+            folder = work / f"{number:04d}"
+            folder.mkdir(parents=True)
+            (folder / "workflow.json").write_text(
+                f'{{"chapter":{number},"stage":"{stage}","artifacts":{{}}}}\n',
+                encoding="utf-8",
+            )
+        self.assertEqual(workflow.incomplete_chapter(), 14)
 
 
 if __name__ == "__main__":

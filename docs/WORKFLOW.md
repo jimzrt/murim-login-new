@@ -9,7 +9,10 @@ Run `python tools/workflow.py status N`. `.work/NNNN/workflow.json` is the
 transaction record. Conversation history is not. Do not edit transaction JSON
 or rebase hashes manually. Source changes, stale hashes, invalid model JSON,
 packet-budget failures, QA failures, and unresolved major findings are stop
-conditions.
+conditions. `python tools/run_next.py` resumes an in-flight transaction even
+if `docs/STATE.md` already names the next chapter; do not start that later
+chapter until the current one is committed. Invalid model JSON saves the raw
+output under `.work/NNNN/` as `*-raw.txt`.
 
 ## Bounded Context Hygiene
 

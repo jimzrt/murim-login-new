@@ -55,6 +55,11 @@ def resolve_role_models(value: dict) -> dict:
     value["models"] = resolved
     for role, name in resolved.items():
         value[f"{role}_model"] = name
+    checkpoint = models.get("checkpoint") or value.get("checkpoint_model")
+    if isinstance(checkpoint, str) and checkpoint.strip():
+        value["checkpoint_model"] = checkpoint.strip()
+    else:
+        value["checkpoint_model"] = value["review_model"]
     return value
 
 
@@ -206,6 +211,49 @@ def save(state: dict, p: dict[str, Path], stage: str, **artifacts: str) -> None:
     state["stage"] = stage
     state["artifacts"].update(artifacts)
     atomic_json(p["state"], state)
+
+
+IN_FLIGHT_STAGES = {
+    "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED",
+    "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED",
+}
+
+
+def _git_tracks(relative: str) -> bool:
+    result = subprocess.run(
+        ["git", "ls-files", "--error-unmatch", relative],
+        cwd=ROOT, text=True, capture_output=True,
+    )
+    return result.returncode == 0
+
+
+def incomplete_chapter() -> int | None:
+    work = ROOT / ".work"
+    if not work.is_dir():
+        return None
+    found: list[int] = []
+    for path in sorted(work.glob("[0-9][0-9][0-9][0-9]/workflow.json")):
+        try:
+            state = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        number = state.get("chapter")
+        stage = state.get("stage")
+        if not isinstance(number, int):
+            continue
+        if stage in IN_FLIGHT_STAGES:
+            found.append(number)
+        elif stage == "ACCEPTED" and not _git_tracks(f"translations/{number:04d}.md"):
+            found.append(number)
+    unique = sorted(set(found))
+    if len(unique) > 1:
+        raise SystemExit("multiple incomplete chapter transactions: " + ", ".join(map(str, unique)))
+    return unique[0] if unique else None
+
+
+def record_failed_model_output(path: Path, raw: str, error: Exception) -> None:
+    atomic_text(path, raw)
+    raise SystemExit(f"{error}\nraw output saved: {path.relative_to(ROOT)}") from None
 
 
 def record_metric(p: dict[str, Path], phase: str, **values: object) -> None:
@@ -424,7 +472,7 @@ def command_revise(number: int) -> None:
     try:
         revision = parse_revision_response(raw, review)
     except ValueError as error:
-        raise SystemExit(str(error)) from None
+        record_failed_model_output(p["work"] / "revision-raw.txt", raw, error)
     atomic_text(p["revised"], revision["translation"])
     canonical_dispositions = {"version": 1, "dispositions": revision["dispositions"]}
     atomic_json(p["dispositions"], canonical_dispositions)
@@ -580,7 +628,7 @@ Return this exact shape with no Markdown fence:
 """
     enforce_packet_budget("checkpoint", packet)
     atomic_text(p["checkpoint_packet"], packet)
-    raw_report, metrics = run_omp(p["checkpoint_packet"], project_config()["review_model"], 960)
+    raw_report, metrics = run_omp(p["checkpoint_packet"], project_config()["checkpoint_model"], 960)
     try:
         from tools.model_io import parse_json_object, review_markdown, validate_review
     except ModuleNotFoundError:
@@ -588,7 +636,7 @@ Return this exact shape with no Markdown fence:
     try:
         report = validate_review(parse_json_object(raw_report))
     except ValueError as error:
-        raise SystemExit(str(error)) from None
+        record_failed_model_output(p["work"] / "checkpoint-raw.txt", raw_report, error)
     atomic_json(p["checkpoint_json"], report)
     atomic_text(p["checkpoint_report"], review_markdown(report))
     record_metric(

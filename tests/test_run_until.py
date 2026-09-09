@@ -20,9 +20,12 @@ class RunUntilTest(unittest.TestCase):
         self.root = Path(self.temporary.name)
         write_state(self.root, 13)
         self.root_patch = patch.object(run_until, "ROOT", self.root)
+        self.incomplete_patch = patch.object(run_until, "incomplete_chapter", return_value=None)
         self.root_patch.start()
+        self.incomplete_patch.start()
 
     def tearDown(self):
+        self.incomplete_patch.stop()
         self.root_patch.stop()
         self.temporary.cleanup()
 
@@ -30,6 +33,13 @@ class RunUntilTest(unittest.TestCase):
         self.assertEqual(run_until.planned_chapters(16), [13, 14, 15, 16])
         self.assertEqual(run_until.planned_chapters(13), [13])
         self.assertEqual(run_until.planned_chapters(12), [])
+
+    def test_plans_from_incomplete_transaction_before_state(self):
+        write_state(self.root, 15)
+        self.incomplete_patch.stop()
+        with patch.object(run_until, "incomplete_chapter", return_value=14):
+            self.assertEqual(run_until.planned_chapters(16), [14, 15, 16])
+        self.incomplete_patch.start()
 
     def test_dry_run_prints_plan_without_running(self):
         with patch.object(run_until, "run_next_chapter") as runner:

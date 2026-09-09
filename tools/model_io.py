@@ -10,18 +10,38 @@ SEVERITIES = {"critical", "major", "minor"}
 DISPOSITIONS = {"applied", "rejected", "unresolved"}
 
 
+def _json_candidates(text: str) -> list[str]:
+    candidates = [text]
+    start = text.find("{")
+    end = text.rfind("}")
+    if start >= 0 and end > start:
+        span = text[start : end + 1]
+        if span != text:
+            candidates.append(span)
+    return candidates
+
+
 def parse_json_object(raw: str) -> dict:
     text = raw.strip()
     fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, re.DOTALL | re.IGNORECASE)
     if fenced:
-        text = fenced.group(1)
-    try:
-        value = json.loads(text)
-    except json.JSONDecodeError as error:
-        raise ValueError(f"model did not return valid JSON: {error}") from None
-    if not isinstance(value, dict):
-        raise ValueError("model response must be one JSON object")
-    return value
+        text = fenced.group(1).strip()
+    if not text:
+        raise ValueError("model did not return valid JSON: empty response")
+    last_error: Exception | None = None
+    for candidate in _json_candidates(text):
+        try:
+            value = json.loads(candidate)
+        except json.JSONDecodeError as error:
+            last_error = error
+            continue
+        if isinstance(value, dict):
+            return value
+        last_error = ValueError("model response must be one JSON object")
+    preview = repr(raw[:400])
+    if last_error is None:
+        raise ValueError(f"model did not return valid JSON: {preview}")
+    raise ValueError(f"model did not return valid JSON: {last_error}\nPreview: {preview}") from None
 
 
 def validate_review(value: dict) -> dict:

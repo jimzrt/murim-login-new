@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from cost_report import build_report, format_report, usage_line
 from omp_json import EventCapture, OmpJsonError
-from workflow import command_committed, interval_due, paths, project_config, record_metric
+from workflow import command_committed, incomplete_chapter, interval_due, paths, project_config, record_metric
 
 TRANSLATION_RE = re.compile(r"^translations/(\d{4})\.md$")
 WORKFLOW_RE = re.compile(r"(?:python\s+)?tools/workflow\.py\s+(\S+)(?:\s+(\d+))?")
@@ -29,8 +29,9 @@ GENERIC_ARG_LIMIT = 4000
 COORDINATOR_SYSTEM = (
     "Run only the exact next python tools/workflow.py command reported by status. "
     "Wait for each bash command to finish. Never background a command, never use hub "
-    "or task, and never start a nested agent. Do not commit and do not run "
-    "workflow.py committed."
+    "or task, and never start a nested agent. If status asks for checkpoint dispositions, "
+    "edit the reading copies and write that JSON yourself, then run checkpointed. "
+    "Do not commit and do not run workflow.py committed."
 )
 
 
@@ -50,14 +51,17 @@ def git(*args: str, capture: bool = True) -> str:
     return result.stdout.strip() if capture else ""
 
 
-def require_clean_repository() -> str:
+def require_repository(chapter: int, *, resume: bool) -> str:
     try:
         head = git("rev-parse", "--verify", "HEAD")
-        dirty = git("status", "--porcelain")
+        dirty = changed_paths()
     except subprocess.CalledProcessError as error:
         raise SystemExit(error.stderr.strip() or "project must be an initialized Git repository") from None
-    if dirty:
+    if not resume and dirty:
         raise SystemExit("working tree must be clean before run_next; commit or stash existing changes")
+    unexpected = [path for path in dirty if not allowed_change(path, chapter)]
+    if unexpected:
+        raise SystemExit("working tree has unexpected changes: " + ", ".join(unexpected))
     return head
 
 
@@ -420,24 +424,13 @@ def run_coordinator(chapter: int, model: str) -> dict:
     return metrics
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", default=project_config().get("coordinator_model", project_config()["draft_model"]))
-    args = parser.parse_args()
-    chapter = next_chapter()
-    starting_head = require_clean_repository()
-    print(f"Chapter {chapter}: starting", flush=True)
-    try:
-        metrics = run_coordinator(chapter, args.model)
-    except OmpJsonError as error:
-        raise SystemExit(str(error)) from None
-    if git("rev-parse", "--verify", "HEAD") != starting_head:
-        raise SystemExit("coordinator committed unexpectedly; exact coordinator usage was not checkpointed")
+def commit_accepted(chapter: int, metrics: dict | None) -> None:
     transaction = json.loads(paths(chapter)["state"].read_text(encoding="utf-8"))
     if transaction.get("stage") != "ACCEPTED":
         raise SystemExit(f"coordinator stopped at {transaction.get('stage')}; expected ACCEPTED")
-    record_metric(paths(chapter), "coordinator_model", **metrics)
-    print_cost_report(chapter)
+    if metrics:
+        record_metric(paths(chapter), "coordinator_model", **metrics)
+        print_cost_report(chapter)
     changes = changed_paths()
     unexpected = [path for path in changes if not allowed_change(path, chapter)]
     if unexpected:
@@ -450,11 +443,36 @@ def main() -> int:
     git("add", "-A")
     git("commit", "-m", f"Accept Chapter {chapter}", capture=False)
     command_committed(chapter, "HEAD")
-    print(
-        f"Chapter {chapter}: COMMITTED — {metrics['input_tokens']} input, "
-        f"{metrics['output_tokens']} output coordinator tokens",
-        flush=True,
-    )
+    if metrics:
+        print(
+            f"Chapter {chapter}: COMMITTED — {metrics['input_tokens']} input, "
+            f"{metrics['output_tokens']} output coordinator tokens",
+            flush=True,
+        )
+    else:
+        print(f"Chapter {chapter}: COMMITTED", flush=True)
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--model", default=project_config().get("coordinator_model", project_config()["draft_model"]))
+    args = parser.parse_args()
+    in_progress = incomplete_chapter()
+    chapter = in_progress if in_progress is not None else next_chapter()
+    starting_head = require_repository(chapter, resume=in_progress is not None)
+    state_path = paths(chapter)["state"]
+    stage = json.loads(state_path.read_text(encoding="utf-8")).get("stage") if state_path.exists() else None
+    label = "resume" if in_progress is not None else "starting"
+    print(f"Chapter {chapter}: {label}", flush=True)
+    metrics = None
+    if stage != "ACCEPTED":
+        try:
+            metrics = run_coordinator(chapter, args.model)
+        except OmpJsonError as error:
+            raise SystemExit(str(error)) from None
+        if git("rev-parse", "--verify", "HEAD") != starting_head:
+            raise SystemExit("coordinator committed unexpectedly; exact coordinator usage was not checkpointed")
+    commit_accepted(chapter, metrics)
     return 0
 
 

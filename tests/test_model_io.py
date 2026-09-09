@@ -26,6 +26,15 @@ class ModelIoTest(unittest.TestCase):
         value = parse_json_object('```json\n{"findings": [], "summary": "No actionable findings"}\n```')
         self.assertEqual(validate_review(value)["findings"], [])
 
+    def test_json_embedded_in_prose_is_extracted(self):
+        value = parse_json_object('Here is the review.\n{"findings": [], "summary": "No actionable findings"}\n')
+        self.assertEqual(value["summary"], "No actionable findings")
+
+    def test_empty_response_names_the_failure(self):
+        with self.assertRaises(ValueError) as error:
+            parse_json_object("   ")
+        self.assertIn("empty response", str(error.exception))
+
     def test_revision_requires_exactly_one_disposition_per_finding(self):
         review = self.review()
         with self.assertRaises(ValueError):

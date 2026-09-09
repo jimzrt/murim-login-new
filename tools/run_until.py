@@ -10,6 +10,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+
+from workflow import incomplete_chapter
 
 
 def next_chapter() -> int:
@@ -20,10 +23,14 @@ def next_chapter() -> int:
     return int(match.group(1))
 
 
+def start_chapter() -> int:
+    return incomplete_chapter() or next_chapter()
+
+
 def planned_chapters(until: int) -> list[int]:
     if until < 0:
         raise SystemExit("until chapter must be a non-negative integer")
-    start = next_chapter()
+    start = start_chapter()
     if start > until:
         return []
     return list(range(start, until + 1))
@@ -43,7 +50,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="print the plan and exit")
     args = parser.parse_args()
     chapters = planned_chapters(args.until)
-    start = next_chapter()
+    start = start_chapter()
     if not chapters:
         print(f"Nothing to do: next chapter is {start}, until is {args.until}", flush=True)
         return 0
@@ -57,7 +64,7 @@ def main() -> int:
             print(f"  would run chapter {chapter}", flush=True)
         return 0
     for index, chapter in enumerate(chapters, 1):
-        current = next_chapter()
+        current = start_chapter()
         if current != chapter:
             raise SystemExit(
                 f"next chapter is {current}, expected {chapter}; stopping before run_next"
@@ -67,10 +74,15 @@ def main() -> int:
         if code:
             print(
                 f"Chapter {chapter} failed with exit code {code}; stopping. "
-                f"Next chapter is {next_chapter()}.",
+                f"Resume chapter {chapter}; do not start a later chapter until it is committed.",
                 flush=True,
             )
             return code
+        leftover = incomplete_chapter()
+        if leftover is not None:
+            raise SystemExit(
+                f"run_next returned success but chapter {leftover} is still in progress"
+            )
         advanced = next_chapter()
         if advanced != chapter + 1:
             raise SystemExit(

@@ -63,7 +63,9 @@ def main() -> int:
     try:
         review = validate_review(parse_json_object(raw))
     except ValueError as error:
-        print(error, file=sys.stderr)
+        raw_path = ROOT / ".work" / f"{args.chapter:04d}" / "review-raw.txt"
+        atomic_write(raw_path, raw)
+        print(f"{error}\nraw output saved: {raw_path.relative_to(ROOT)}", file=sys.stderr)
         return 1
     canonical = json.dumps(review, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     atomic_write(report_json, canonical)
