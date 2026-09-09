@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Updated docs/CONTEXT.json and the current state/profile summaries to record Fifth-Stage Spear and Manoeuvre Techniques and progression to at least Level 20; the final endpoint remains truncated in the Chapter 24 System panel.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Reworded the active state, checkpoint summaries, chapter beats, and Taekyung profile to describe ten reconnaissance-squad members under Taekyung, with the deployed group identified as eleven people including him.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Expanded the Chapter 24 completion notice and durable summaries to the full title, Survivors of the Sakju Branch Quest.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Marked the recalled mission order as Taekyung’s italicized remembered instruction in Chapter 23.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Rejected because the revised Chapter 24 reading copy already renders the mother’s remembered spoken words as italicized direct speech: *Survive. You must survive.*",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Replaced the broad asset wording with the finalized terms—half of Mount Heng’s shops and exclusive pleasure-district rights—in active context, summaries, and affected profiles.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C07",
+      "reason": "Recast the Chapter 23 proverb riff as natural spoken English: “Seeing is believing, my ass. One beating beats a hundred explanations.”",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

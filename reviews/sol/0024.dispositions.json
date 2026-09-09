@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Recast the sentence so Socheon’s fire-filled eyes modify how he looks at the flickering torches, rather than making the torches appear inside eyes.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Rendered 반 시진 as “more than half a shichen” instead of “more than half an hour,” preserving the source duration; added a factual footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Changed the mother’s departure to say that she led the others away, preserving her active role.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Changed both formation commands from “Spread out!” to “Form up!” to reflect assembling the instructed formations.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored Taekyung’s surprised reaction as “…Huh?” after the System displays the pursuers’ levels.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Rendered 보법을 밟아 나갔다 as advancing with the Manoeuvre Technique rather than taking a generic step.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Replaced “Whoosh!” with “Splurt!” to convey the finishing strike’s bursting, splattering impact.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,76 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "Update the technique stages to Fifth Stage. Replace the exact Level 17 and Main Quest 17/30 claims with the latest confirmed progression; because the final Chapter 24 level-up count is truncated, record that Taekyung reached at least Level 20 unless an accepted source-fidelity decision establishes the exact endpoint.",
+      "current": "Taekyung is Lv. 17; his Jin Family’s Cultivation, Spear, and Manoeuvre Techniques are at the Fourth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
+      "defect": "The active state is stale and internally contradicts the reading copies. Chapter 21 displays the Spear and Manoeuvre Techniques at the Fifth Stage, while Chapter 24 shows at least three level-ups from Level 17.",
+      "id": "C01",
+      "rationale": "The durable state is the handoff for later chapters; stale progression can produce incorrect System windows, combat scaling, and Main Quest status.",
+      "severity": "major",
+      "source": "Durable state, active_continuity; Chapters 21 and 24 progression"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Describe it consistently as Taekyung leading ten subordinates, or as an eleven-person group including its squad leader. Update every summary and active-state reference that calls the entire group a ten-person squad.",
+      "current": "Taekyung becomes leader of White Tiger Hall’s ten-person reconnaissance squad",
+      "defect": "This treats the whole squad as ten people, but Chapter 22 introduces ten members waiting under Taekyung, and Chapter 23 explicitly has eleven horses. The deployed group is eleven people including Taekyung.",
+      "id": "C02",
+      "rationale": "The current wording conflicts with the nine sword users plus Han Yeop under Taekyung and can cause later head-count and formation errors.",
+      "severity": "major",
+      "source": "Checkpoint summary and durable state, reconnaissance-squad descriptions"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Use the full established title in the completion notice: “You completed the **Survivors of the Sakju Branch** Quest!”",
+      "current": "You completed the **Survivors** Quest!",
+      "defect": "The completion notice shortens the established quest title **Survivors of the Sakju Branch**, creating terminology drift within the same chapter.",
+      "id": "C03",
+      "rationale": "The binding decisions require this Sudden Quest and the subsequent Chain Quest to remain distinct; preserving the exact title prevents ambiguity in summaries and later System references.",
+      "severity": "minor",
+      "source": "Chapter 24, final System panel"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "Apply the intended reading-copy formatting consistently—most likely italics if Taekyung is recalling the order, or curly quotation marks if it is presented as spoken dialogue.",
+      "current": "Scout the area near Jeongyang and return within five days.",
+      "defect": "The recalled mission order appears as an unmarked standalone paragraph rather than formatted speech, quotation, or direct thought.",
+      "id": "C04",
+      "rationale": "The isolated plain-text line is visually inconsistent with the surrounding prose and with the packet’s treatment of direct thoughts and speech.",
+      "severity": "minor",
+      "source": "Chapter 23, first-mission recollection after the opening exposition"
+    },
+    {
+      "confidence": 0.97,
+      "correction": "Format the remembered utterance as direct speech with curly quotation marks, retaining any italics only if the surrounding convention deliberately marks dream speech that way.",
+      "current": "Survive. You must survive.",
+      "defect": "The mother is explicitly described as speaking, but her words appear without curly quotation marks or direct-thought italics.",
+      "id": "C05",
+      "rationale": "Leaving the line unmarked violates the reading-copy speech convention and momentarily makes narration, memory, and dialogue indistinguishable.",
+      "severity": "minor",
+      "source": "Chapter 24, Socheon recalling his mother’s dream"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Replace “half of Mount Heng’s shops and assets” with the precise finalized terms: half of Mount Heng’s shops and exclusive rights to the pleasure district.",
+      "current": "The Lower District Sect offers aid against Mount Heng in exchange for half of Mount Heng’s shops and assets, which Wikyung accepts as acting Family Head.",
+      "defect": "The phrase “and assets” broadens the consideration beyond the finalized terms stated in Chapter 20 and elsewhere in the checkpoint: half of Mount Heng’s shops plus exclusive pleasure-district rights.",
+      "id": "C06",
+      "rationale": "Alliance compensation is an active contractual hook. The broader wording can create a later contradiction over what property the Lower District Sect was promised.",
+      "severity": "major",
+      "source": "Durable state, active_continuity alliance-offer entry"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Recast the proverb riff in natural spoken English while preserving the seeing-versus-beating joke, for example: “Seeing is believing, my ass. One beating beats a hundred explanations.”",
+      "current": "Seeing once, my ass—beating once is better than a hundred hearings.",
+      "defect": "The literal proverb construction “a hundred hearings” is conspicuously unnatural in contemporary US English and weakens the timing of Taekyung’s punchline.",
+      "id": "C07",
+      "rationale": "Taekyung’s narration should sound conversational and brisk; the current dictionary-like phrasing creates localized voice drift.",
+      "severity": "minor",
+      "source": "Chapter 23, Taekyung reacting to the squad’s request for training"
+    }
+  ],
+  "summary": "The reading copies preserve the checkpoint’s major plot hooks and tone, but the durable state contains material progression, squad-size, and alliance-term contradictions. Two passages also lose required dialogue or thought formatting, and the Chapter 24 System panel shortens an established quest title.",
+  "version": 1
+}
