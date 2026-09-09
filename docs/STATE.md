@@ -2,19 +2,21 @@
 
 Updated: 2026-09-09
 
-- Last completed: 7
-- Next chapter: 8
-- Current block: 5–9 (3/5)
-- Latest translation: `translations/0007.md`
+- Last completed: 8
+- Next chapter: 9
+- Current block: 5–9 (4/5)
+- Latest translation: `translations/0008.md`
 - Latest summary: `summaries/0000-0004.md`
-- Safe profiles through: chapter 7
+- Safe profiles through: chapter 8
 
 ## Current Block
 
-Chapters 5–7 complete the tutorial, reveal that Logout requires First Rate,
-Lv. 30, and 500 Fame, and bring Taekyung to the Medicine King Hall after his
-fight with Hyuk Mujin. An eldest brother beyond Qi Sense's detection limit has
-just revealed himself while examining Taekyung.
+Chapters 5–8 complete the tutorial, reveal that Logout requires First Rate,
+Lv. 30, and 500 Fame, bring Taekyung to the Medicine King Hall after his fight
+with Hyuk Mujin, and establish his amnesia pretense at the Jin Family. He finds
+an unused room of martial arts manuals, learns that the System tracks ten
+martial-art slots with three already filled, and is caught practicing footwork
+late at night by Jin Wikyung and Wipeng.
 
 ## Open Questions
 

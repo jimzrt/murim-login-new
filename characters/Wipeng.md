@@ -1,10 +1,10 @@
 # Wipeng (위팽)
 
-- **Safe through:** Chapter 6
+- **Safe through:** Chapter 8
 - **Aliases:** None revealed
 - **Role:** Jin Wikyung’s personal guard
-- **Personality:** Loyal, observant, and resigned to his master’s impulsive departures
-- **Voice:** Not yet substantially heard; communicates primarily through a weary, knowing sigh
+- **Personality:** Loyal, observant, teasing, and resigned to his master’s impulsive departures
+- **Voice:** Weary and knowing; jokes with Jin Wikyung and uses Sound Transmission
 - **Relationships:** Trusted guard and retainer of Jin Wikyung
-- **Continuity:** Watches Jin Wikyung leave the office after the gate incident and recognizes that this behavior has happened before
-- **Sources:** Korean source and accepted translation, Chapter 6
+- **Continuity:** Follows Jin Wikyung after work, jokes about the light in Taekyung’s pavilion, and is stunned to find Taekyung practicing footwork late at night
+- **Sources:** Korean source and accepted translation, Chapters 6 and 8

@@ -92,5 +92,6 @@ Use `Accept Chapter N`, then register the exact commit through the controller.
 ## Exports
 
 Run `python tools/build.py`; select chapters and formats as documented by
-`python tools/build.py --help`. Styling lives in `tools/system-window.lua` and
-`tools/book.css`.
+`python tools/build.py --help`. HTML is the Astro reader in `reader/`
+(`npm run dev` there for a live preview). PDF and EPUB still use Pandoc,
+with styling in `tools/system-window.lua` and `tools/book.css`.
