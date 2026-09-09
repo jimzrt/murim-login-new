@@ -1,0 +1,124 @@
+{
+  "chapter": 21,
+  "stages": {
+    "coordinator_model": {
+      "cache_read_tokens": 1596928,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.07566376000000001,
+      "elapsed_seconds": 1064.737,
+      "exact": true,
+      "input_tokens": 164458,
+      "models": {
+        "openai-codex/gpt-5.6-luna": {
+          "cache_read_tokens": 1596928,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.07566376000000001,
+          "input_tokens": 164458,
+          "model": "gpt-5.6-luna",
+          "output_tokens": 9028,
+          "provider": "openai-codex",
+          "requests": 43,
+          "total_tokens": 1770414
+        }
+      },
+      "output_tokens": 9028,
+      "requested_model": "openai-codex/gpt-5.6-luna:high",
+      "requests": 43,
+      "total_tokens": 1770414,
+      "usage_source": "omp_provider_reported"
+    },
+    "draft_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.015161599999999999,
+      "elapsed_seconds": 161.571,
+      "exact": true,
+      "input_bytes": 73247,
+      "input_tokens": 23422,
+      "models": {
+        "openai-codex/gpt-5.6-luna": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.015161599999999999,
+          "input_tokens": 23422,
+          "model": "gpt-5.6-luna",
+          "output_tokens": 8731,
+          "provider": "openai-codex",
+          "reasoning_tokens": 5696,
+          "requests": 1,
+          "total_tokens": 32153
+        }
+      },
+      "output_bytes": 13733,
+      "output_tokens": 8731,
+      "reasoning_tokens": 5696,
+      "requested_model": "openai-codex/gpt-5.6-luna:high",
+      "requests": 1,
+      "total_tokens": 32153,
+      "usage_source": "omp_provider_reported"
+    },
+    "draft_packet": {
+      "input_bytes": 73247,
+      "packet_token_estimate": 18312
+    },
+    "review_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 226.058,
+      "exact": true,
+      "finding_count": 8,
+      "input_bytes": 55289,
+      "input_tokens": 0,
+      "major_or_critical_count": 6,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 5669,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 5669
+        }
+      },
+      "output_bytes": 4852,
+      "output_tokens": 5669,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "total_tokens": 5669,
+      "usage_source": "omp_provider_reported"
+    },
+    "revision_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 185.555,
+      "exact": true,
+      "input_bytes": 50641,
+      "input_tokens": 0,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 10604,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 10604
+        }
+      },
+      "output_bytes": 15257,
+      "output_tokens": 10604,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "total_tokens": 10604,
+      "usage_source": "omp_provider_reported"
+    }
+  },
+  "version": 2
+}

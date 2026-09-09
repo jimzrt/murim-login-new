@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "검은 is the issued sword (검+은) stowed in Inventory before drawing the Sharp Spear; removed invented old clothes and black Inventory.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "철창 is the two-meter iron spear he cannot summon in communal quarters, not a cage.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the Head Elder’s faint smile as the object of Wikyung’s gaze; Wikyung then asks Taekyung.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 무사1 as the nameless-extra gag Ordinary Martial Artist #1.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "도움을 줬다 has no object; the help is the elder’s rebuke to Wikyung, not ‘us’.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "어떻게 돼먹은 is coarse contempt, matched with ‘What the hell is wrong with this AI?’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Restored 떨리는 손으로: the torch-bearer is already shaking before he doubles over.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "입을 벌렸다 is a gape at the quarters, not the start of speech.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

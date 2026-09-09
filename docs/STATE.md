@@ -2,17 +2,17 @@
 
 Updated: 2026-09-09
 
-- Last completed: 20
-- Next chapter: 21
-- Current block: 20–24 (1/5)
-- Latest translation: `translations/0020.md`
-- Latest summary: `summaries/beats/0020.md`
-- Safe profiles through: chapter 20
+- Last completed: 21
+- Next chapter: 22
+- Current block: 20–24 (2/5)
+- Latest translation: `translations/0021.md`
+- Latest summary: `summaries/beats/0021.md`
+- Safe profiles through: chapter 21
 
 
 ## Current Block
 
-Chapter 20 finalizes the Jin Family’s alliance with the Lower District Sect. The sect will stop selling Shanxi information to other sects and devote all resources to war intelligence in exchange for half of Mount Heng’s shops and exclusive pleasure-district rights. Wolhwa admits that her investigation found neither proof clearing Taekyung nor Lee Seogeun’s killer, and frames the alliance as a profitable investment in either Taekyung’s legitimacy or the Jin Family’s ability to conceal the crime. Taekyung recognizes her coachman as the Peak whip master Yama Whip and deliberately encourages the gate guards’ mistaken belief that he helped defeat Cheonryeokbu, increasing the credibility of the Sleeping Dragon rumor and gaining 20 Fame. Lee Cheonbaek, Mount Heng’s Sect Leader and Lee Seogeun’s father, vows revenge and sends about two hundred armed martial artists toward the Jin Family.
+Chapter 21 begins the Jin Family’s war with Mount Heng. Taekyung’s cultivation practice still cannot draw out hardened internal energy, but the System shows his Cultivation Technique at Fourth Stage, his Spear and Manoeuvre Techniques at Fifth Stage, and Sinews and Bones at 105. Mount Heng’s attack is marked by the deaths of twenty-five children from the Jin Family’s Saneum, Eung-hyeon, and Sakju branches. The Head Elder coldly reframes the massacre as war’s necessary sacrifice, then uses Taekyung’s Sleeping Dragon rumor and alleged partnership with Yama Whip to force him into wartime service. Taekyung becomes leader of White Tiger Hall’s reconnaissance squad under the Head Elder’s faction, accepts a repeating quest for 100 Merit, and moves into the squad’s communal quarters with the Sharp Spear.
 
 
 

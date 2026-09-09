@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "I changed clothes, shoved the sword deep into my Inventory, then pulled out the *Sharp Spear*.",
+      "current": "I changed clothes, shoved my old ones deep into the black Inventory, then pulled out the *Sharp Spear*.",
+      "defect": "검은 is 검+은 (the issued sword), not ‘black’. He stows the sword and draws the spear; old clothes and a ‘black Inventory’ are invented.",
+      "id": "F01",
+      "rationale": "Issued gear is a sword, black uniform, and plaque. After putting on the uniform he hides 검 and takes out [예리한 창], which the next paragraph explains he cannot summon in communal quarters.",
+      "severity": "critical",
+      "source": "옷을 갈아입고, 검은 인벤토리 깊숙이 처박은 다음 [예리한 창]을 꺼냈다."
+    },
+    {
+      "confidence": 0.97,
+      "correction": "I couldn’t have a two-meter iron spear pop out of thin air whenever I needed one.",
+      "current": "I couldn’t have a two-meter iron cage materialize from thin air whenever I needed one.",
+      "defect": "철창 is the two-meter iron spear, not a cage.",
+      "id": "F02",
+      "rationale": "Immediate context is [예리한 창] and concealing a spear during communal living. Modern ‘prison bars’ sense of 철창 does not apply.",
+      "severity": "critical",
+      "source": "필요할 때마다 허공에서 2m짜리 철창이 튀어나오는 마술을 보여 줄 수는 없는 법이다."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "The Head Elder smiled faintly. Jin Wikyung, who had been gazing at that smile, asked me,",
+      "current": "With a faint smile, the Head Elder stared at Jin Wikyung.\n\nJin Wikyung turned to me.",
+      "defect": "Subject of the gaze is reversed: Wikyung has been watching the Head Elder’s smile; the Head Elder does not stare at Wikyung.",
+      "id": "F03",
+      "rationale": "빙긋 is the elder’s smile; 대장로의 웃음을 물끄러미 바라보던 진위경 names Wikyung as the one looking, then 내게 물었다.",
+      "severity": "critical",
+      "source": "빙긋. 대장로의 웃음을 물끄러미 바라보던 진위경이 내게 물었다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Once I hung the wooden plaque engraved with *Squad Leader* at my waist, I felt like I’d become Ordinary Martial Artist #1 of the Jin Family of Taiyuan.",
+      "current": "Once I hung the wooden plaque engraved with *Squad Leader* at my waist, I felt like an ordinary martial artist of the Jin Family of Taiyuan.",
+      "defect": "Dropping 무사1 loses the nameless-extra gag (Martial Artist #1).",
+      "id": "F04",
+      "rationale": "무사1 is a numbered-mob joke, not generic ‘ordinary martial artist’.",
+      "severity": "major",
+      "source": "조장이라고 음각된 목패를 허리춤에 차자 태원진가의 평범한 무사1이 된 것 같았다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "*He helped. The Head Elder, of all people…*",
+      "current": "*He helped us. The Head Elder, of all people…*",
+      "defect": "도움을 줬다 has no object ‘us’; the help is the elder’s rebuke restoring Wikyung’s composure.",
+      "id": "F05",
+      "rationale": "Prior sentences are about Wikyung being shaken and the elder’s cold 일침; adding ‘us’ changes who benefited.",
+      "severity": "major",
+      "source": "‘도움을 줬다. 다른 누구도 아닌, 바로 그 대장로가……’"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "*What the hell is wrong with this AI?*",
+      "current": "*What kind of AI is this?*",
+      "defect": "어떻게 돼먹은 is crude contempt; the English is milder and less in character.",
+      "id": "F06",
+      "rationale": "돼먹은 is a coarse slam at the NPC, not a neutral ‘what kind’.",
+      "severity": "major",
+      "source": "‘어떻게 돼먹은 인공지능이야.’"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "One of the martial artists, holding a torch in a shaking hand, doubled over",
+      "current": "One of the martial artists holding a torch doubled over",
+      "defect": "Omits 떨리는 손으로; the torch-bearer is already shaking before he doubles over.",
+      "id": "F07",
+      "rationale": "The trembling is the first physical cue of horror and leads into the dropped torch.",
+      "severity": "minor",
+      "source": "떨리는 손으로 횃불을 들고 있던 무사 하나가 허리를 숙이는 것을 시작으로"
+    },
+    {
+      "confidence": 0.87,
+      "correction": "Before I knew it I had arrived at the reconnaissance squad’s quarters, and my mouth fell open.",
+      "current": "Before I knew it, I had arrived at the reconnaissance squad’s quarters. I opened my mouth.",
+      "defect": "입을 벌렸다 is a gape at the quarters, not starting to speak.",
+      "id": "F08",
+      "rationale": "The next lines are the building’s condition (cracked wood, stench, beehive), so the gesture is astonishment.",
+      "severity": "minor",
+      "source": "어느새 정찰조의 숙소에 도착한 나는 입을 벌렸다."
+    }
+  ],
+  "summary": "Three scene-fact errors: 검은 is the issued sword (검+은), not a black Inventory or old clothes; 철창 is the iron spear, not a cage; Jin Wikyung gazes at the Head Elder’s smile, not the reverse.",
+  "version": 1
+}
