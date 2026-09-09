@@ -124,8 +124,10 @@ def review_markdown(review: dict) -> str:
         return "# Review\n\nNo actionable findings.\n"
     sections = ["# Review", "", review["summary"]]
     for finding in review["findings"]:
+        chapter_line = [f"- **Chapter:** {finding['chapter']}"] if "chapter" in finding else []
         sections.extend([
             "", f"## {finding['id']} — {finding['severity'].title()}", "",
+            *chapter_line,
             f"- **Confidence:** {finding['confidence']:.2f}",
             f"- **Source:** {finding['source']}",
             f"- **Current:** {finding['current']}",
@@ -134,3 +136,50 @@ def review_markdown(review: dict) -> str:
             f"- **Rationale:** {finding['rationale']}",
         ])
     return "\n".join(sections).rstrip() + "\n"
+
+
+def validate_range_review(value: dict, chapters: set[int]) -> dict:
+    review = validate_review(value)
+    for finding in review["findings"]:
+        chapter = finding.get("chapter")
+        if not isinstance(chapter, int) or isinstance(chapter, bool) or chapter not in chapters:
+            raise ValueError(f"finding {finding['id']} has invalid chapter: {chapter}")
+    return review
+
+
+def validate_patchset(value: dict, review: dict) -> dict:
+    patches = value.get("patches")
+    if not isinstance(patches, list):
+        raise ValueError("patch response requires a patches array")
+    finding_by_id = {item["id"]: item for item in review["findings"]}
+    normalized_patches: list[dict] = []
+    covered: set[str] = set()
+    for position, patch in enumerate(patches, 1):
+        if not isinstance(patch, dict):
+            raise ValueError(f"patch {position} must be an object")
+        chapter = patch.get("chapter")
+        finding_ids = patch.get("finding_ids")
+        old = patch.get("old")
+        new = patch.get("new")
+        if not isinstance(chapter, int) or isinstance(chapter, bool):
+            raise ValueError(f"patch {position} requires an integer chapter")
+        if not isinstance(finding_ids, list) or not finding_ids:
+            raise ValueError(f"patch {position} requires finding_ids")
+        if any(identifier not in finding_by_id for identifier in finding_ids):
+            raise ValueError(f"patch {position} references an unknown finding")
+        if any(finding_by_id[identifier].get("chapter") != chapter for identifier in finding_ids):
+            raise ValueError(f"patch {position} mixes findings from another chapter")
+        if not isinstance(old, str) or not old:
+            raise ValueError(f"patch {position} requires exact nonempty old text")
+        if not isinstance(new, str) or old == new:
+            raise ValueError(f"patch {position} requires different replacement text")
+        covered.update(finding_ids)
+        normalized_patches.append({"chapter": chapter, "finding_ids": finding_ids, "old": old, "new": new})
+    dispositions = validate_dispositions(value.get("dispositions"), review)
+    applied = {item["finding_id"] for item in dispositions if item["status"] == "applied"}
+    if applied != covered:
+        raise ValueError("applied dispositions must exactly match findings covered by patches")
+    summary = value.get("summary", "")
+    if not isinstance(summary, str):
+        raise ValueError("patch summary must be a string")
+    return {"version": 1, "summary": summary.strip(), "patches": normalized_patches, "dispositions": dispositions}

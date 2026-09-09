@@ -33,6 +33,19 @@ def build_report() -> dict:
             "findings": value.get("finding_count", 0),
             "major_or_critical": value.get("major_or_critical_count", 0),
         })
+    retrofit_audits = []
+    for path in sorted((ROOT / "reviews" / "retrofit").glob("[0-9]*-[0-9]*/state.json")):
+        value = json.loads(path.read_text(encoding="utf-8"))
+        review_metrics = value.get("review_metrics", [])
+        refine_metrics = value.get("refine_metrics", {})
+        retrofit_audits.append({
+            "range": path.parent.name,
+            "stage": value.get("stage"),
+            "findings": value.get("finding_count", 0),
+            "changed_chapters": value.get("changed_chapters", []),
+            "estimated_review_input_tokens": sum(item.get("estimated_input_tokens", 0) for item in review_metrics) or value.get("estimated_review_input_tokens", 0),
+            "estimated_refine_input_tokens": refine_metrics.get("estimated_input_tokens", 0),
+        })
     totals = {
         key: sum(value[key] for value in stages.values())
         for key in ("estimated_input_tokens", "estimated_output_tokens", "elapsed_seconds")
@@ -44,6 +57,7 @@ def build_report() -> dict:
         "totals": totals,
         "checkpoint_reviews": checkpoint_reviews,
         "checkpoint_unique_finding_total": sum(item["findings"] for item in checkpoint_reviews),
+        "retrofit_audits": retrofit_audits,
     }
 
 
@@ -59,6 +73,8 @@ def main() -> int:
     for name, values in sorted(report["stages"].items()):
         print(f"{name}: {values['calls']} calls, ~{int(values['estimated_input_tokens'])} input tokens, ~{int(values['estimated_output_tokens'])} output tokens")
     print(f"Checkpoint findings: {report['checkpoint_unique_finding_total']} across {len(report['checkpoint_reviews'])} reviews")
+    for audit in report["retrofit_audits"]:
+        print(f"Retrofit {audit['range']}: {audit['stage']}, {audit['findings']} findings, ~{audit['estimated_review_input_tokens']} review input tokens, ~{audit['estimated_refine_input_tokens']} refine input tokens")
     return 0
 
 

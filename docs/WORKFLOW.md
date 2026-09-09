@@ -51,6 +51,31 @@ If checkpoint reviews repeatedly find nothing new, increase
 If they catch meaningful drift, keep the shorter interval. A checkpoint uses
 structured findings and exact structured dispositions just like chapter review.
 
+## Retrospective Range Audit
+
+Use this only for a targeted new pass over accepted chapters. It is deliberately
+separate from normal chapter state:
+
+```bash
+python tools/audit_range.py run 0 7 --dry-run
+python tools/audit_range.py run 0 7
+```
+
+The dry run performs local QA, builds bounded block packets, and reports the
+estimated review input without calling a model. The full run reviews configured
+blocks in parallel with Sol, merges structured findings, asks Luna once for
+exact bounded replacements rather than complete chapters, applies them only
+when each old span occurs exactly once and meets the configured confidence
+threshold, and runs final QA. Chapters without
+findings are not sent to refinement and are not changed.
+
+Artifacts and metrics are stored under `reviews/retrofit/START-END/`; recoverable
+pre-edit copies are stored under ignored `.work/retrofit/`. Inspect the Git diff
+and commit one range checkpoint after `VERIFIED`. This workflow never changes
+`docs/STATE.md`, `docs/CONTEXT.json`, summaries, profiles, or the ordinary
+chapter transaction unless a human separately accepts a genuinely durable
+terminology decision.
+
 ## New Major Character
 
 Create `characters/<preferred-name>.md` only for recurring, plot-bearing, or

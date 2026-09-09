@@ -1,6 +1,14 @@
 import unittest
 
-from tools.model_io import blocking_dispositions, parse_json_object, parse_revision_response, validate_review, validate_revision
+from tools.model_io import (
+    blocking_dispositions,
+    parse_json_object,
+    parse_revision_response,
+    validate_patchset,
+    validate_range_review,
+    validate_review,
+    validate_revision,
+)
 
 
 class ModelIoTest(unittest.TestCase):
@@ -42,3 +50,14 @@ class ModelIoTest(unittest.TestCase):
         revision = parse_revision_response(raw, review)
         self.assertTrue(revision["translation"].startswith("# Chapter 1"))
         self.assertEqual(revision["dispositions"][0]["status"], "applied")
+
+    def test_range_review_requires_chapter_and_patch_coverage(self):
+        value = self.review()
+        value["findings"][0]["chapter"] = 3
+        review = validate_range_review(value, {3, 4})
+        patchset = validate_patchset({
+            "summary": "Fixed.",
+            "patches": [{"chapter": 3, "finding_ids": ["F01"], "old": "Current.", "new": "Corrected."}],
+            "dispositions": [{"finding_id": "F01", "status": "applied", "reason": "Corrected."}],
+        }, review)
+        self.assertEqual(patchset["patches"][0]["chapter"], 3)

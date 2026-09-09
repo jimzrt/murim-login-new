@@ -13,5 +13,10 @@
   },
   "summary_interval": 5,
   "checkpoint_review_interval": 5,
-  "checkpoint_evaluation_window": 20
+  "checkpoint_evaluation_window": 20,
+  "retrofit_block_size": 5,
+  "retrofit_parallel_jobs": 2,
+  "retrofit_review_token_limit": 70000,
+  "retrofit_refine_token_limit": 80000,
+  "retrofit_min_auto_confidence": 0.8
 }

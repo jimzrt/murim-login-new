@@ -13,3 +13,4 @@
 - Run chapter review only through `python tools/workflow.py review N`.
 - Never start nested agents or reviewer sessions.
 - Stop on command failure, stale hashes, ambiguity, or `COMMITTED`.
+- For accepted-range re-audits, use `tools/audit_range.py`; never reopen normal chapter transactions.

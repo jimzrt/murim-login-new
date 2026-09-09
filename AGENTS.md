@@ -52,3 +52,12 @@ command. Never commit `.work/`, caches, or an unaccepted draft.
 Binding language policy is in `RULES.md`. Configuration is in
 `docs/workflow.json`. Read `docs/WORKFLOW.md` only for recovery, profiles,
 checkpoint tuning, or exports.
+
+## Retrospective Range Audit
+
+When the user explicitly requests a new pass over already accepted chapters,
+do not reopen their normal chapter transactions. Run
+`python tools/audit_range.py status START END`, follow only its reported actions,
+and stop at `VERIFIED`. This maintenance flow performs deterministic QA, bounded
+parallel block reviews, one patch-planning call, exact atomic replacements, and
+final QA. It never advances `docs/STATE.md` or `docs/CONTEXT.json`.
