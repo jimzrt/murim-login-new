@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from cost_report import build_report, format_report, usage_line
 from omp_json import EventCapture, OmpJsonError
+from run_lock import hold_run_lock
 from workflow import command_committed, incomplete_chapter, interval_due, paths, project_config, record_metric
 
 TRANSLATION_RE = re.compile(r"^translations/(\d{4})\.md$")
@@ -499,19 +500,23 @@ def main() -> int:
     args = parser.parse_args()
     in_progress = incomplete_chapter()
     chapter = in_progress if in_progress is not None else next_chapter()
-    starting_head = require_repository(chapter, resume=in_progress is not None)
     state_path = paths(chapter)["state"]
     stage = json.loads(state_path.read_text(encoding="utf-8")).get("stage") if state_path.exists() else None
     label = "resume" if in_progress is not None else "starting"
-    print(f"Chapter {chapter}: {label}", flush=True)
-    metrics = None
-    if stage != "ACCEPTED":
-        try:
-            metrics = run_coordinator(chapter, args.model)
-        except OmpJsonError as error:
-            raise SystemExit(str(error)) from None
-        unexpected_coordinator_commit(starting_head, chapter)
-    commit_accepted(chapter, metrics)
+    with hold_run_lock(ROOT, holder="run_next", chapter=chapter, stage=stage or label) as lock:
+        starting_head = require_repository(chapter, resume=in_progress is not None)
+        print(f"Chapter {chapter}: {label}", flush=True)
+        metrics = None
+        if stage != "ACCEPTED":
+            lock.update(stage="coordinator")
+            try:
+                metrics = run_coordinator(chapter, args.model)
+            except OmpJsonError as error:
+                raise SystemExit(str(error)) from None
+            unexpected_coordinator_commit(starting_head, chapter)
+        lock.update(stage="committing")
+        commit_accepted(chapter, metrics)
+        lock.update(stage="COMMITTED")
     return 0
 
 

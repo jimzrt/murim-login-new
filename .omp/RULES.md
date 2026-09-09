@@ -18,4 +18,4 @@
 - For accepted-range re-audits, use `tools/audit_range.py`; never reopen normal chapter transactions.
 - docs/CONTEXT.json must keep version, safe_through, continuity_sources, active_continuity, open_questions, and temporary_decisions.
 - Always pass timeout=3600 on bash calls to workflow.py.
-
+- Only one translation run at a time; `.work/run.lock` is the exclusive lock. Do not start run_next, run_until, or a mutating workflow command while another run holds it.

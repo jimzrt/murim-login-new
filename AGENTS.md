@@ -13,7 +13,9 @@ python tools/run_next.py
 It reads the exact next chapter from `docs/STATE.md`, runs the controller through
 `ACCEPTED`, records the coordinator's exact OMP JSON usage, creates `Accept
 Chapter N`, registers that commit, and stops at `COMMITTED`. It requires a clean
-Git worktree. When invoked by this wrapper, stop at `ACCEPTED`; never commit or
+Git worktree. An exclusive lock at `.work/run.lock` prevents a second
+`run_next`/`run_until` from overlapping; inspect it with `python tools/run_lock.py`.
+When invoked by this wrapper, stop at `ACCEPTED`; never commit or
 run `workflow.py committed` yourself.
 
 ## Controller Loop

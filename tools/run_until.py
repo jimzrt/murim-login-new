@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
+from run_lock import hold_run_lock
 from workflow import incomplete_chapter
 
 
@@ -63,36 +64,41 @@ def main() -> int:
         for chapter in chapters:
             print(f"  would run chapter {chapter}", flush=True)
         return 0
-    for index, chapter in enumerate(chapters, 1):
-        current = start_chapter()
-        if current != chapter:
-            raise SystemExit(
-                f"next chapter is {current}, expected {chapter}; stopping before run_next"
-            )
-        print(f"\n=== Chapter {chapter} ({index}/{len(chapters)}) ===", flush=True)
-        code = run_next_chapter(args.model)
-        if code:
-            print(
-                f"Chapter {chapter} failed with exit code {code}; stopping. "
-                f"Resume chapter {chapter}; do not start a later chapter until it is committed.",
-                flush=True,
-            )
-            return code
-        leftover = incomplete_chapter()
-        if leftover is not None:
-            raise SystemExit(
-                f"run_next returned success but chapter {leftover} is still in progress"
-            )
-        advanced = next_chapter()
-        if advanced != chapter + 1:
-            raise SystemExit(
-                f"run_next returned success but next chapter is {advanced}, expected {chapter + 1}"
-            )
-        remaining = args.until - chapter
-        if remaining:
-            print(f"Chapter {chapter}: done; {remaining} remaining through {args.until}", flush=True)
-        else:
-            print(f"Chapter {chapter}: done; reached chapter {args.until}", flush=True)
+    with hold_run_lock(
+        ROOT, holder="run_until", chapter=chapters[0], stage="starting", until=args.until
+    ) as lock:
+        for index, chapter in enumerate(chapters, 1):
+            current = start_chapter()
+            if current != chapter:
+                raise SystemExit(
+                    f"next chapter is {current}, expected {chapter}; stopping before run_next"
+                )
+            lock.update(chapter=chapter, stage="run_next")
+            print(f"\n=== Chapter {chapter} ({index}/{len(chapters)}) ===", flush=True)
+            code = run_next_chapter(args.model)
+            if code:
+                lock.update(stage="failed")
+                print(
+                    f"Chapter {chapter} failed with exit code {code}; stopping. "
+                    f"Resume chapter {chapter}; do not start a later chapter until it is committed.",
+                    flush=True,
+                )
+                return code
+            leftover = incomplete_chapter()
+            if leftover is not None:
+                raise SystemExit(
+                    f"run_next returned success but chapter {leftover} is still in progress"
+                )
+            advanced = next_chapter()
+            if advanced != chapter + 1:
+                raise SystemExit(
+                    f"run_next returned success but next chapter is {advanced}, expected {chapter + 1}"
+                )
+            remaining = args.until - chapter
+            if remaining:
+                print(f"Chapter {chapter}: done; {remaining} remaining through {args.until}", flush=True)
+            else:
+                print(f"Chapter {chapter}: done; reached chapter {args.until}", flush=True)
     return 0
 
 

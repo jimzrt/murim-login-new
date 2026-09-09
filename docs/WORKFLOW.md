@@ -16,6 +16,14 @@ output under `.work/NNNN/` as `*-raw.txt`. Every model call also writes its OMP
 JSON event stream under `.work/NNNN/omp/<phase>.jsonl`, with parsed text beside
 it. Use those logs when a revision aborts with `stopReason=error`.
 
+Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
+`workflow.py` commands, and `audit_range.py` take an exclusive flock on
+`.work/run.lock` and write JSON there (pid, holder, chapter, stage). A second
+start fails with that status. Nested `run_next` under `run_until`, and
+coordinator `workflow.py` calls, join the same lock. The kernel drops the lock
+if the process dies; the file is gitignored. Inspect with
+`python tools/run_lock.py`. Status and dry-run commands do not take the lock.
+
 ## Bounded Context Hygiene
 
 `docs/CONTEXT.json` is the only model-facing state ledger. Before drafting N it
@@ -41,6 +49,15 @@ and elapsed time live in `reviews/metrics/`. Run `python tools/cost_report.py`
 to inspect aggregate usage and checkpoint yield.
 
 ## Routine Next-Chapter Run and Usage
+
+
+Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
+`workflow.py` commands, and `audit_range.py` take an exclusive flock on
+`.work/run.lock` and write JSON there (pid, holder, chapter, stage). A second
+start fails with that status. Nested `run_next` under `run_until`, and
+coordinator `workflow.py` calls, join the same lock. The kernel drops the lock
+if the process dies; the file is gitignored. Inspect with
+`python tools/run_lock.py`.
 
 From a clean Git worktree, run:
 

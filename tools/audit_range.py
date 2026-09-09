@@ -20,6 +20,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 try:
+    from tools.run_lock import hold_run_lock
     from tools.context import exact_glossary_entries, glossary_text, profile_entries, profiles_text
     from tools.model_io import (
         blocking_dispositions,
@@ -32,6 +33,7 @@ try:
     from tools.workflow import estimated_tokens, project_config, run_omp
     from tools.chapter import extract_chapter, source_chapters
 except ModuleNotFoundError:
+    from run_lock import hold_run_lock
     from context import exact_glossary_entries, glossary_text, profile_entries, profiles_text
     from model_io import blocking_dispositions, parse_json_object, review_markdown, validate_patchset, validate_range_review
     from qa import run_qa
@@ -473,22 +475,27 @@ def main() -> int:
         if name == "run":
             item.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
-    if args.command == "status":
-        status(args.start, args.end)
-    elif args.command == "prepare":
-        prepare(args.start, args.end, args.block_size)
-        status(args.start, args.end)
-    elif args.command == "review":
-        review(args.start, args.end, args.jobs)
-        status(args.start, args.end)
-    elif args.command == "refine":
-        refine(args.start, args.end)
-        status(args.start, args.end)
-    elif args.command == "verify":
-        verify(args.start, args.end)
-        status(args.start, args.end)
-    else:
-        run_all(args.start, args.end, args.block_size, args.jobs, args.dry_run)
+    if args.command == "status" or (args.command == "run" and args.dry_run):
+        if args.command == "status":
+            status(args.start, args.end)
+        else:
+            run_all(args.start, args.end, args.block_size, args.jobs, True)
+        return 0
+    with hold_run_lock(ROOT, holder="audit_range", chapter=args.start, stage=args.command):
+        if args.command == "prepare":
+            prepare(args.start, args.end, args.block_size)
+            status(args.start, args.end)
+        elif args.command == "review":
+            review(args.start, args.end, args.jobs)
+            status(args.start, args.end)
+        elif args.command == "refine":
+            refine(args.start, args.end)
+            status(args.start, args.end)
+        elif args.command == "verify":
+            verify(args.start, args.end)
+            status(args.start, args.end)
+        else:
+            run_all(args.start, args.end, args.block_size, args.jobs, args.dry_run)
     return 0
 
 

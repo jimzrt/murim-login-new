@@ -15,6 +15,11 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+try:
+    from tools.run_lock import hold_run_lock
+except ModuleNotFoundError:
+    from run_lock import hold_run_lock
+
 STAGES = (
     "READY", "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED",
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
@@ -848,28 +853,33 @@ def main() -> int:
         parser.error("chapter must be non-negative")
     if args.command == "status":
         command_status(args.chapter, args.json)
-    elif args.command == "prepare":
-        command_prepare(args.chapter)
-    elif args.command == "drafted":
-        command_drafted(args.chapter)
-    elif args.command == "draft":
-        command_draft(args.chapter)
-    elif args.command == "review":
-        command_review(args.chapter, args.dry_run)
-    elif args.command == "revised":
-        command_revised(args.chapter)
-    elif args.command == "revise":
-        command_revise(args.chapter)
-    elif args.command == "summarize":
-        command_summarize(args.chapter)
-    elif args.command == "checkpoint":
-        command_checkpoint(args.chapter)
-    elif args.command == "checkpointed":
-        command_checkpointed(args.chapter)
-    elif args.command == "accept":
-        command_accept(args.chapter)
-    else:
-        command_committed(args.chapter, args.commit)
+        return 0
+    if args.command == "review" and getattr(args, "dry_run", False):
+        command_review(args.chapter, True)
+        return 0
+    with hold_run_lock(ROOT, holder="workflow", chapter=args.chapter, stage=args.command):
+        if args.command == "prepare":
+            command_prepare(args.chapter)
+        elif args.command == "drafted":
+            command_drafted(args.chapter)
+        elif args.command == "draft":
+            command_draft(args.chapter)
+        elif args.command == "review":
+            command_review(args.chapter, args.dry_run)
+        elif args.command == "revised":
+            command_revised(args.chapter)
+        elif args.command == "revise":
+            command_revise(args.chapter)
+        elif args.command == "summarize":
+            command_summarize(args.chapter)
+        elif args.command == "checkpoint":
+            command_checkpoint(args.chapter)
+        elif args.command == "checkpointed":
+            command_checkpointed(args.chapter)
+        elif args.command == "accept":
+            command_accept(args.chapter)
+        else:
+            command_committed(args.chapter, args.commit)
     return 0
 
 
