@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 11,
-  "continuity_sources": [10, 11],
+  "safe_through": 12,
+  "continuity_sources": [11, 12],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -17,8 +17,10 @@
     "Taekyung acquires the Jin Family's Spear Technique and begins practicing it with internal energy and a sharp iron spear after the training wooden spear proves too light to control.",
     "The training hall contains grain-repelling pills, an underground spring, and weapons; Taekyung completed one hundred successful repetitions of the Jin Family's Spear Technique.",
     "Taekyung combined the Jin Family's Manoeuvre and Spear Techniques, depleted his internal energy, and completed the Unity of Self and Object achievement.",
-    "The Jin Family's Manoeuvre Technique and Spear Technique reached the Third Stage, while the Jin Family's Cultivation Technique reached the Second Stage; the achievement reward remains unopened.",
-    "The Mount Heng Sword Sect has contacted the Jin Family, and Jin Wikyung orders every Shanxi branch to prepare for its purpose."
+    "The Jin Family’s Manoeuvre Technique and Spear Technique reached the Third Stage, while the Jin Family’s Cultivation Technique reached the Third Stage after Taekyung opened the Unity of Self and Object achievement reward.",
+    "The Mount Heng Sword Sect has contacted the Jin Family, and Jin Wikyung orders every Shanxi branch to prepare for its purpose.",
+    "The reward is a Clear-Heart Pill ring that steadies Taekyung’s mind and improves concentration and cultivation.",
+    "Training Mode can summon Lv. 20 Hyuk Mujin and Lv. 10 Cheon Ryeokbu; Taekyung can partially adjust a summoned opponent’s abilities and is testing the techniques against Hyuk Mujin."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

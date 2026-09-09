@@ -2,21 +2,21 @@
 
 Updated: 2026-09-09
 
-- Last completed: 11
-- Next chapter: 12
-- Current block: 10–14 (2/5)
-- Latest translation: `translations/0011.md`
+- Last completed: 12
+- Next chapter: 13
+- Current block: 10–14 (3/5)
+- Latest translation: `translations/0012.md`
 - Latest summary: `summaries/0005-0009.md`
-- Safe profiles through: chapter 11
+- Safe profiles through: chapter 12
 
 ## Current Block
 
-Chapters 10–11 place Taekyung in a staged confinement at the Jin Family’s
+Chapters 10–12 place Taekyung in staged confinement at the Jin Family’s
 training hall. He acquires and masters the Jin Family’s Spear Technique,
-combines it with the Manoeuvre Technique, and reaches Level 13 after a
-breakthrough that exhausts his internal energy. Jin Wikyung and Wipeng
-continue protecting him while the Mount Heng Sword Sect makes contact and
-triggers preparations across Shanxi.
+combines it with the Manoeuvre Technique, reaches Level 13, and completes
+the Unity of Self and Object achievement. He opens its reward, trains until
+the Jin Family’s Cultivation Technique reaches the Third Stage, and activates
+Training Mode, which lets him test himself against summoned opponents.
 
 ## Open Questions
 

@@ -1,0 +1,75 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Reassigned the waking action to Seong Jinho: 'If he’d gotten up, he should have woken me.'",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Rendered 현대판 무림인들 as 'modern-day Murim martial artists' rather than people originating from Murim.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Changed the line to a coping thought about accepting the slow progress: 'I had to think of it that way if I was going to hold on.'",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered 이 초식 as 'This form' without inventing a second-form designation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Rendered 권사 as 'fist fighter' to distinguish the Murim unarmed fighter from Western boxing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Preserved the Hunter-versus-Murim contrast with 'Jin Taekyung the Murim martial artist.'",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Rendered 어딜 as the interception 'Where do you think you’re going!' rather than a command to retreat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Changed the final punchline from excitement to finding the deadly situation fun.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Formatted the remembered news headline as a normal blockquote without a System heading.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Retained the uncertain technique name as the transliteration 'Cheongwanil' instead of inventing an English title.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "Rendered the sarcastic title as 'That so-called goshiwon manager' and added the required spoiler-free first-use footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F12",
+      "reason": "Removed square brackets from the summonable-opponent names inside the System panel.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F13",
+      "reason": "Formatted 'All right. Again.' as direct internal thought rather than spoken dialogue.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F14",
+      "reason": "Changed 'translucent face' to 'opaque face' to preserve 불투명한.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

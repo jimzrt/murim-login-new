@@ -1,0 +1,146 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "If he'd gotten up, he should have woken me so we could at least have a bowl of hangover soup.",
+      "current": "If I had woken up, he should have woken me too, so we could at least have a bowl of hangover soup.",
+      "defect": "Omitted subject is Jinho, already collapsed/idle; the draft makes Taekyung the one who woke.",
+      "id": "F01",
+      "rationale": "자빠진 거야 frames Jinho as the one who should have risen and then woken Taekyung; 날 깨웠어야 requires Jinho as waker, not Taekyung waking himself.",
+      "severity": "critical",
+      "source": "일어났으면 해장국이라도 한 그릇 하자고 날 깨웠어야 했다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "In other words, they were modern-day Murim martial artists.",
+      "current": "In other words, modern-day martial artists from Murim.",
+      "defect": "현대판 무림인들 are modern equivalents of Murim people on Earth; from Murim reads as origin in Murim.",
+      "id": "F02",
+      "rationale": "현대판 marks analogy, not travel from Murim; locative from changes who they are.",
+      "severity": "major",
+      "source": "한마디로 현대판 무림인들인 셈이다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "I had to think of it that way if I was going to hold on.",
+      "current": "I have to do this if I want to hold out.",
+      "defect": "이렇게라도 continues the coping thought (call the slow Third Stage good enough), not the need to train.",
+      "id": "F03",
+      "rationale": "Immediately follows 그렇게 생각하려고 노력 중이다; the pronoun target is that attitude, not spear practice.",
+      "severity": "major",
+      "source": "‘이렇게라도 해야 버티지.’"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "This form began.",
+      "current": "The second form began.",
+      "defect": "Adds an unstated form number; 이 초식 is this form, not 이 초식.",
+      "id": "F04",
+      "rationale": "Only 일 초식 is numbered; assigning Second Form invents a technique identity the source does not name.",
+      "severity": "major",
+      "source": "이 초식이 시작됐다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "The Hyuk Mujin projected here was a fist fighter.",
+      "current": "The Hyuk Mujin projected here was a boxer.",
+      "defect": "권사 is a fist-using martial artist, not a Western boxer; the chapter already used 권투 for boxing.",
+      "id": "F05",
+      "rationale": "Hanja 拳士 and the later 주먹/발을 보면 reading mark Murim unarmed fighting, not boxing.",
+      "severity": "major",
+      "source": "이 자리에 투영해 낸 혁무진은 권사(拳士)다."
+    },
+    {
+      "confidence": 0.89,
+      "correction": "It was an attack F-rank Hunter Jin Taekyung couldn't perform. But Jin Taekyung the Murim martial artist, drawing up internal energy, could.",
+      "current": "It was an attack F-rank Hunter Jin Taekyung couldn't perform. But martial artist Jin Taekyung, who could draw on internal energy, could do it.",
+      "defect": "The contrast is Hunter vs 무림인, not Hunter vs generic martial artist.",
+      "id": "F06",
+      "rationale": "무림인 is the series term for a person of Murim; collapsing it to martial artist erases the Hunter/Murim split the sentence is built on.",
+      "severity": "major",
+      "source": "F급 헌터 진태경은 할 수 없는 공격. 그러나 공력을 끌어 올린 무림인 진태경이라면 가능하다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "\"Where do you think you're going!\"",
+      "current": "\"Get the hell away!\"",
+      "defect": "어딜 intercepts the approach (don't you dare / where do you think you're going); it is not a command to leave.",
+      "id": "F07",
+      "rationale": "Spoken as he swings the shaft to stop Hyuk closing; telling him to get away reverses the speech act.",
+      "severity": "major",
+      "source": "“어딜!”"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Finding this fun in a situation like this meant I was pretty damn crazy, too.",
+      "current": "Feeling excited in a situation like this meant I was pretty damn crazy, too.",
+      "defect": "재미 is finding it fun, matching 재미있는 싸움 and the illusion's 재미?; excited changes the emotion.",
+      "id": "F08",
+      "rationale": "The punchline is amusement at a duel to the death, not adrenaline-excitement.",
+      "severity": "major",
+      "source": "이 상황에서 재미를 느끼다니. 나도 어지간히 미친놈이다."
+    },
+    {
+      "confidence": 0.87,
+      "correction": "Use a normal blockquote (or a News heading), not a System window.",
+      "current": "> **System**\n>\n> **Chinese Martial Arts Alliance: Twenty-Five Members Massacred in an F-Rank Gate. More Than Half Confirmed Dead from Goblin Poison Needles…**",
+      "defect": "This is a news headline he remembers, not a game System panel.",
+      "id": "F09",
+      "rationale": "The surrounding prose is 뉴스 1면; System heading is reserved for actual System UI.",
+      "severity": "major",
+      "source": "- 중화 무술 연맹 소속 25인. F급 게이트에서 몰살. 그중 절반 이상이 고블린 독침에 의해 사망한 것으로 밝혀져……."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "It was the final form of the Jin Family's Spear Technique: Cheongwanil.",
+      "current": "It was the final form of the Jin Family's Spear Technique: the Sky-Piercing Strike.",
+      "defect": "천관일 is not in the binding glossary; Sky-Piercing Strike invents a grand English technique name.",
+      "id": "F10",
+      "rationale": "Uncertain source names must not be upgraded into coined heroic titles.",
+      "severity": "major",
+      "source": "진가창법의 최후 절초. 천관일이다."
+    },
+    {
+      "confidence": 0.85,
+      "correction": "That so-called goshiwon manager. Add a first-use footnote: a goshiwon is cheap cubicle boarding, often for exam students.",
+      "current": "That guy's the manager of the goshiwon.",
+      "defect": "고시원 is left unexplained, and 라는 양반이 sarcasm is flattened.",
+      "id": "F11",
+      "rationale": "Binding footnote rules require a brief 고시원 note when the living arrangement matters; the line also mocks the title, not merely states it.",
+      "severity": "major",
+      "source": "고시원 총무라는 양반이."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "**Lv. 20 Hyuk Mujin**, **Lv. 10 Cheon Ryeokbu** (no square brackets inside the panel).",
+      "current": "**[Lv. 20 Hyuk Mujin]**, **[Lv. 10 Cheon Ryeokbu]**",
+      "defect": "System windows keep square brackets around UI names.",
+      "id": "F12",
+      "rationale": "The System heading and blockquote already mark the panel; inner [] are forbidden.",
+      "severity": "minor",
+      "source": "[Lv.20 혁무진], [Lv.10 천력부]"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "*All right. Again.*",
+      "current": "\"Good. Again.\"",
+      "defect": "Marked as spoken dialogue; source uses the chapter's thought quotes, before he talks to the illusion.",
+      "id": "F13",
+      "rationale": "Same ‘…’ thought markup as surrounding interior monologue; speech comes later with the rebuilt illusion.",
+      "severity": "minor",
+      "source": "‘좋아, 다시.’"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "For an instant, it seemed a sneer crossed his opaque face.",
+      "current": "For an instant, it seemed that a sneer appeared on his translucent face.",
+      "defect": "불투명한 is opaque, not translucent; the figure was 투명한 earlier.",
+      "id": "F14",
+      "rationale": "불투명 explicitly negates transparency; translucent splits the difference the Korean does not.",
+      "severity": "minor",
+      "source": "얼핏 그의 불투명한 얼굴에 비웃음이 떠오르는 듯했다."
+    }
+  ],
+  "summary": "One critical subject reversal on Seong Jinho waking Taekyung; several major losses of Murim identity, coping-thought causality, form numbering, and register, plus System/footnote formatting defects.",
+  "version": 1
+}
