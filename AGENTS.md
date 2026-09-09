@@ -2,6 +2,20 @@
 
 Translate exactly one explicitly requested chapter. Never start the next chapter.
 
+## Routine Trigger
+
+For the next chapter, the preferred entry point is:
+
+```bash
+python tools/run_next.py
+```
+
+It reads the exact next chapter from `docs/STATE.md`, runs the controller through
+`ACCEPTED`, records the coordinator's exact OMP JSON usage, creates `Accept
+Chapter N`, registers that commit, and stops at `COMMITTED`. It requires a clean
+Git worktree. When invoked by this wrapper, stop at `ACCEPTED`; never commit or
+run `workflow.py committed` yourself.
+
 ## Controller Loop
 
 For chapter `N`, run `python tools/workflow.py status N`. Perform only the
@@ -47,7 +61,8 @@ not load the bulk source, full compendium, archive directories, or
 `translations/NNNN.md` contains accepted reading copies only. After promotion,
 commit the chapter, structured review/dispositions, QA reports, metrics, and
 relevant durable-context changes. Register the exact commit with the reported
-command. Never commit `.work/`, caches, or an unaccepted draft.
+command. The `run_next.py` wrapper performs these last two operations itself.
+Never commit `.work/`, caches, or an unaccepted draft.
 
 Binding language policy is in `RULES.md`. Configuration is in
 `docs/workflow.json`. Read `docs/WORKFLOW.md` only for recovery, profiles,

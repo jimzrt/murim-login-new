@@ -12,7 +12,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +21,7 @@ STAGES = (
 )
 HANGUL = re.compile(r"[가-힣]")
 DEFAULT_CONFIG = {
+    "coordinator_model": "openai-codex/gpt-5.6-luna:high",
     "draft_model": "openai-codex/gpt-5.6-luna:high",
     "review_model": "openai-codex/gpt-5.6-sol:medium",
     "revision_model": "openai-codex/gpt-5.6-luna:high",
@@ -182,9 +182,10 @@ def save(state: dict, p: dict[str, Path], stage: str, **artifacts: str) -> None:
 
 
 def record_metric(p: dict[str, Path], phase: str, **values: object) -> None:
-    metrics = {"version": 1, "chapter": int(p["work"].name), "stages": {}}
+    metrics = {"version": 2, "chapter": int(p["work"].name), "stages": {}}
     if p["metrics"].exists():
         metrics = json.loads(p["metrics"].read_text(encoding="utf-8"))
+    metrics["version"] = 2
     metrics.setdefault("stages", {})[phase] = values
     atomic_json(p["metrics"], metrics)
 
@@ -234,7 +235,7 @@ def command_prepare(number: int) -> None:
     packet_tokens = enforce_packet_budget("draft", packet)
     p["context"].parent.mkdir(parents=True, exist_ok=True)
     atomic_text(p["context"], packet)
-    record_metric(p, "draft_packet", estimated_input_tokens=packet_tokens, input_bytes=len(packet.encode("utf-8")))
+    record_metric(p, "draft_packet", packet_token_estimate=packet_tokens, input_bytes=len(packet.encode("utf-8")))
     save(state, p, "CONTEXT_READY", context_sha256=digest(p["context"]))
 
 
@@ -258,9 +259,14 @@ def command_drafted(number: int) -> None:
 
 
 def run_omp(packet: Path, model: str, timeout: int) -> tuple[str, dict]:
+    try:
+        from tools.omp_json import OmpJsonError, run_json_command
+    except ModuleNotFoundError:
+        from omp_json import OmpJsonError, run_json_command
     command = [
         "omp",
-        "-p",
+        "--mode",
+        "json",
         "--no-session",
         "--no-tools",
         "--no-rules",
@@ -273,24 +279,12 @@ def run_omp(packet: Path, model: str, timeout: int) -> tuple[str, dict]:
         str(timeout - 60),
         f"@{packet}",
     ]
-    started = time.monotonic()
     try:
-        result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=timeout)
-    except subprocess.TimeoutExpired as error:
-        raise SystemExit(f"model call timed out: {error}") from None
-    if result.returncode:
-        raise SystemExit(result.stderr.strip() or result.stdout.strip() or "model call failed")
-    if not result.stdout.strip():
-        raise SystemExit("model call returned empty output")
-    output = result.stdout.strip() + "\n"
-    return output, {
-        "model": model,
-        "elapsed_seconds": round(time.monotonic() - started, 3),
-        "estimated_input_tokens": estimated_tokens(packet.read_text(encoding="utf-8")),
-        "estimated_output_tokens": estimated_tokens(output),
-        "input_bytes": packet.stat().st_size,
-        "output_bytes": len(output.encode("utf-8")),
-    }
+        output, metrics = run_json_command(command, cwd=ROOT, requested_model=model, timeout=timeout)
+    except OmpJsonError as error:
+        raise SystemExit(str(error)) from None
+    metrics["input_bytes"] = packet.stat().st_size
+    return output, metrics
 
 
 def command_draft(number: int) -> None:
@@ -317,7 +311,6 @@ def command_review(number: int, dry_run: bool) -> None:
     ]
     if dry_run:
         command.append("--dry-run")
-    started = time.monotonic()
     try:
         subprocess.run(command, cwd=ROOT, check=True)
     except subprocess.CalledProcessError as error:
@@ -338,10 +331,7 @@ def command_review(number: int, dry_run: bool) -> None:
     record_metric(
         p,
         "review_model",
-        model=project_config()["review_model"],
-        elapsed_seconds=round(time.monotonic() - started, 3),
-        estimated_input_tokens=estimated_tokens(p["packet"].read_text(encoding="utf-8")),
-        estimated_output_tokens=estimated_tokens(p["review_json"].read_text(encoding="utf-8")),
+        **meta["usage"],
         finding_count=meta["finding_count"],
         major_or_critical_count=meta["major_or_critical_count"],
     )

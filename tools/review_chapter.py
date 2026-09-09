@@ -7,7 +7,6 @@ import argparse
 import hashlib
 import json
 import os
-import subprocess
 import sys
 import tempfile
 from pathlib import Path
@@ -16,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from context import build_review_packet, estimated_tokens, workflow_config
 from model_io import parse_json_object, review_markdown, validate_review
+from workflow import run_omp
 
 
 def atomic_write(path: Path, text: str) -> None:
@@ -55,21 +55,13 @@ def main() -> int:
     if args.dry_run:
         print(packet_path)
         return 0
-    command = [
-        "omp", "-p", "--no-session", "--no-tools", "--no-rules", "--no-extensions",
-        "--config", str(ROOT / ".omp" / "review-overlay.yml"),
-        "--model", workflow_config()["review_model"], "--max-time", "600", f"@{packet_path}",
-    ]
     try:
-        result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=660)
-    except subprocess.TimeoutExpired as error:
-        print(f"review timed out: {error}", file=sys.stderr)
-        return 124
-    if result.returncode:
-        print(result.stderr.strip() or result.stdout.strip() or "review failed", file=sys.stderr)
-        return result.returncode
+        raw, usage = run_omp(packet_path, workflow_config()["review_model"], 660)
+    except SystemExit as error:
+        print(error, file=sys.stderr)
+        return 1
     try:
-        review = validate_review(parse_json_object(result.stdout))
+        review = validate_review(parse_json_object(raw))
     except ValueError as error:
         print(error, file=sys.stderr)
         return 1
@@ -77,7 +69,7 @@ def main() -> int:
     atomic_write(report_json, canonical)
     atomic_write(report_markdown, review_markdown(review))
     metadata = {
-        "version": 1,
+        "version": 2,
         "chapter": args.chapter,
         "draft_sha256": sha256_text(draft),
         "qa_sha256": sha256_text(json.dumps(qa, ensure_ascii=False, sort_keys=True)),
@@ -85,8 +77,7 @@ def main() -> int:
         "report_sha256": sha256_text(canonical),
         "finding_count": len(review["findings"]),
         "major_or_critical_count": sum(item["severity"] in {"major", "critical"} for item in review["findings"]),
-        "estimated_input_tokens": packet_tokens,
-        "estimated_output_tokens": estimated_tokens(canonical),
+        "usage": usage,
     }
     atomic_write(metadata_path, json.dumps(metadata, indent=2, sort_keys=True) + "\n")
     print(report_markdown)

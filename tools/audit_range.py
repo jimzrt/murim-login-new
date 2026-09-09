@@ -199,13 +199,13 @@ def prepare(start: int, end: int, block_size: int) -> dict:
         block_records.append({
             "start": chapter_block[0], "end": chapter_block[-1],
             "chapters": chapter_block, "packet": packet_path.name,
-            "packet_sha256": digest(packet_path), "estimated_input_tokens": tokens,
+            "packet_sha256": digest(packet_path), "packet_token_estimate": tokens,
         })
         total_tokens += tokens
     state = {
         "version": 1, "range": [start, end], "stage": "PREPARED",
         "normal_workflow_untouched": True, "initial": initial,
-        "blocks": block_records, "estimated_review_input_tokens": total_tokens,
+        "blocks": block_records, "review_packet_token_estimate": total_tokens,
         "changed_chapters": [],
     }
     atomic_json(state_path(start, end), state)
@@ -406,7 +406,8 @@ def refine(start: int, end: int) -> dict:
     atomic_json(directory / "patchset.json", patchset)
     state["stage"] = "REFINED"
     state["changed_chapters"] = changed
-    state["refine_metrics"] = {**metrics, "estimated_input_tokens": tokens}
+    state["refine_metrics"] = metrics
+    state["refine_packet_token_estimate"] = tokens
     atomic_json(state_path(start, end), state)
     return state
 
@@ -444,7 +445,7 @@ def run_all(start: int, end: int, block_size: int, jobs: int, dry_run: bool) -> 
     path = state_path(start, end)
     state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else prepare(start, end, block_size)
     if dry_run:
-        print(f"Prepared {len(state['blocks'])} packets; estimated review input: {state['estimated_review_input_tokens']} tokens")
+        print(f"Prepared {len(state['blocks'])} packets; packet budget estimate: {state['review_packet_token_estimate']} tokens")
         return
     while state["stage"] != "VERIFIED":
         if state["stage"] == "PREPARED":

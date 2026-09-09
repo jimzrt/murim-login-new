@@ -31,9 +31,35 @@ human view is `reviews/sol/NNNN.md`; hashes and counts are in
 `reviews/sol/NNNN.dispositions.json`. Every finding needs exactly one applied,
 rejected, or unresolved disposition. Unresolved critical/major findings block.
 
-Deterministic reports live in `reviews/qa/`; phase usage estimates and elapsed
-time live in `reviews/metrics/`. Run `python tools/cost_report.py` to inspect
-aggregate usage and checkpoint yield.
+Deterministic reports live in `reviews/qa/`; exact provider-reported phase usage
+and elapsed time live in `reviews/metrics/`. Run `python tools/cost_report.py`
+to inspect aggregate usage and checkpoint yield.
+
+## Routine Next-Chapter Run and Usage
+
+From a clean Git worktree, run:
+
+```bash
+python tools/run_next.py
+```
+
+The wrapper reads `- Next chapter: N` from `docs/STATE.md`, displays coordinator
+text/tool progress, runs exactly that chapter through `ACCEPTED`, records the
+coordinator's own JSON usage, commits the accepted change set, registers the
+commit, and stops. The inner chapter calls and outer coordinator are therefore
+all attributed to the same chapter before its checkpoint is created.
+
+Inspect exact usage with:
+
+```bash
+python tools/cost_report.py --chapter N
+python tools/cost_report.py --chapter N --json
+python tools/cost_report.py --json
+```
+
+Model calls use OMP JSON events, with no additional model request or prompt
+content. Missing provider usage is a hard failure. Older estimated records are
+reported as unavailable and excluded rather than mixed into exact totals.
 
 ## Checkpoints and Summaries
 
@@ -61,8 +87,8 @@ python tools/audit_range.py run 0 7 --dry-run
 python tools/audit_range.py run 0 7
 ```
 
-The dry run performs local QA, builds bounded block packets, and reports the
-estimated review input without calling a model. The full run reviews configured
+The dry run performs local QA, builds bounded block packets, and reports a
+packet-size budget estimate without calling a model. The full run reviews configured
 blocks in parallel with Sol, merges structured findings, asks Luna once for
 exact bounded replacements rather than complete chapters, applies them only
 when each old span occurs exactly once and meets the configured confidence
@@ -92,6 +118,5 @@ Use `Accept Chapter N`, then register the exact commit through the controller.
 ## Exports
 
 Run `python tools/build.py`; select chapters and formats as documented by
-`python tools/build.py --help`. HTML is the Astro reader in `reader/`
-(`npm run dev` there for a live preview). PDF and EPUB still use Pandoc,
-with styling in `tools/system-window.lua` and `tools/book.css`.
+`python tools/build.py --help`. Styling lives in `tools/system-window.lua` and
+`tools/book.css`.

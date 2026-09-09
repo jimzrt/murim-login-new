@@ -5,6 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from tools import workflow
+from tools import omp_json
 
 
 class WorkflowTest(unittest.TestCase):
@@ -71,6 +72,30 @@ class WorkflowTest(unittest.TestCase):
     def test_new_transaction_must_match_next_chapter(self):
         with self.assertRaises(SystemExit):
             workflow.load(2)
+
+    def test_model_call_uses_json_mode_and_preserves_exact_usage(self):
+        packet = self.root / "packet.md"
+        packet.write_text("bounded packet", encoding="utf-8")
+        exact = {
+            "exact": True,
+            "usage_source": "omp_provider_reported",
+            "input_tokens": 12,
+            "output_tokens": 3,
+            "cache_read_tokens": 4,
+            "cache_write_tokens": 0,
+            "total_tokens": 19,
+            "requests": 1,
+            "models": {},
+        }
+        with patch.object(omp_json, "run_json_command", return_value=("answer\n", exact)) as runner:
+            output, metrics = workflow.run_omp(packet, "provider/model:high", 120)
+        command = runner.call_args.args[0]
+        self.assertIn("--mode", command)
+        self.assertIn("json", command)
+        self.assertNotIn("-p", command)
+        self.assertEqual(output, "answer\n")
+        self.assertTrue(metrics["exact"])
+        self.assertEqual(metrics["input_tokens"], 12)
 
 
 if __name__ == "__main__":

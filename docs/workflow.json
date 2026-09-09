@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "coordinator_model": "openai-codex/gpt-5.6-luna:high",
   "draft_model": "openai-codex/gpt-5.6-luna:high",
   "review_model": "openai-codex/gpt-5.6-sol:medium",
   "revision_model": "openai-codex/gpt-5.6-luna:high",
