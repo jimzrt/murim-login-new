@@ -87,27 +87,32 @@ blockquote {
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: #f2f5f8;
-  border: 1px solid #657284;
-  color: #18232f;
-  font-family: "DejaVu Sans Mono", "Courier New", monospace;
-  font-size: 0.92em;
-  line-height: 1.45;
-  margin: 1.35em 0;
-  padding: 1.15em 1.25em 1em !important;
+  background-color: #2a5f9a;
+  border: 3px double #c9a227;
+  color: #f4f1e6;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.82em;
+  font-weight: normal;
+  line-height: 1.32;
+  text-align: center;
+  margin: 1em 0;
+  padding: 0.65em 0.65em !important;
   page-break-inside: avoid;
   break-inside: avoid;
 }
 
 .system-window > p:first-child {
-  border-bottom: 1px solid #c3ccd5;
-  color: #34495e;
-  font-family: "DejaVu Sans Mono", "Courier New", monospace;
-  font-size: 0.78rem;
-  font-weight: 700;
+  display: table;
+  width: auto;
+  margin: 0 auto 0.5em auto;
+  padding: 0.12em 0.55em;
+  background-color: #245a96;
+  border: 1px solid #c9a227;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.72em;
+  font-weight: bold;
   letter-spacing: 0.12em;
-  margin: 0 0 0.7rem;
-  padding-bottom: 0.35rem;
   text-transform: uppercase;
 }
 
@@ -118,12 +123,24 @@ blockquote {
 .system-window p,
 .system-window ul,
 .system-window ol {
-  margin-top: 0.55rem;
-  margin-bottom: 0.55rem;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  color: #f4f1e6;
+}
+
+.system-window ul,
+.system-window ol {
+  text-align: left;
+  padding-left: 1.2em;
+}
+
+.system-window strong {
+  color: #e8d089;
 }
 
 .system-window code {
-  font-family: "DejaVu Sans Mono", "Courier New", monospace;
+  font-family: "Courier New", Courier, monospace;
+  color: #f4f1e6;
 }
 
 .footnotes {
