@@ -1,10 +1,10 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 14
+- **Safe through:** Chapter 15
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
 - **Voice:** First-person, conversational, dryly self-mocking; uses vivid trap-and-prey imagery, game jargon, and occasional profanity
 - **Relationships:** Son of a deceased father; supports his mother and younger sibling
-- **Continuity:** Reaches Level 14 after three days in the training hall, raising the Jin Family’s Manoeuvre and Spear Techniques to the Fourth Stage while keeping the Cultivation Technique at the Third Stage. He exits confinement to face an accusation that his former self tried to rape a Mount Heng Sword Sect daughter, then accepts the Duel Quest to prevent war after the sect’s envoy demands the Jin Family surrender every commandery and county except Taiyuan. In the duel, he blocks Lee Seogeun’s attacks despite the Level gap, kicks his unguarded chest, and loses the Intimidation status effect.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–14
+- **Continuity:** Reaches Level 17 after defeating Lee Seogeun in the Duel Quest. His Jin Family’s Cultivation, Manoeuvre, and Spear Techniques are Fourth Stage, and Qi Sense is Third Stage, allowing detection of targets up to Level 50. The quest grants him the Gambler title, EXP, and Fame, and his victory ends his protective confinement.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–15

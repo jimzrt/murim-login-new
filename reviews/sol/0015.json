@@ -1,0 +1,106 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "But when he heard today that the Third Young Master had laid a hand on the Mount Heng Sword Sect’s cherished jewel, it dawned on him.",
+      "current": "But when he heard today that the Third Young Master had provoked Mount Heng Sword Sect’s most treasured jade, enlightenment had struck him.",
+      "defect": "건드렸다 is laying hands on their cherished person-treasure, not “provoking” an object called jade; the alleged offense is misstated.",
+      "id": "F01",
+      "rationale": "장중보옥 is the palm-treasure metaphor for a beloved child; 건드리다 is physical interference with that person, which is what Wipeng treats as proof Taekyung never changed.",
+      "severity": "major",
+      "source": "오늘 항산검문의 장중보옥을 건드렸다는 얘길 듣고 깨달음이 왔다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "In his eyes, Jin Taekyung was past a bad seed with yellow sprouts—he was practically gold.[^1] Footnote: 싹수가 노랗다 (“the sprouts are yellow”) means a hopeless case; the line pushes yellow to gold to intensify that, not inherited wealth.",
+      "current": "In his eyes, Jin Taekyung was beyond merely being a bad seed—he was practically a golden spoon.[^1]",
+      "defect": "황금빛 extends the yellow of 싹수가 노랗다 (hopeless) into gold; it is not 금수저 / born-rich “golden spoon,” and the footnote teaches the wrong joke.",
+      "id": "F02",
+      "rationale": "The next sentence contrasts that hopelessness with family status. Recasting the pun as privilege reverses Wipeng’s evaluation in this line.",
+      "severity": "major",
+      "source": "위팽의 눈에 비친 진태경은 싹수가 노란 정도를 넘어 황금빛에 가깝다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“What trash?”\n\nBuh. Buh-buh.\n\nJin Wikyung looked down calmly at the warrior, who could no longer get the words out.",
+      "current": "“Wh—what?”\n\n“Buh… buh-buh…”\n\nJin Wikyung looked down at the warrior, who could no longer pronounce anything properly.",
+      "defect": "뭔 레기? is a contemptuous “what trash?” (from 쓰레기), almost certainly Wikyung’s line before the warrior’s broken 어버; the draft makes a confused “Wh—what?” and drops the insult.",
+      "id": "F03",
+      "rationale": "Wikyung’s casual contempt is the beat before the slap; losing 레기 and assigning a stunned question changes speaker, register, and characterization.",
+      "severity": "major",
+      "source": "“뭔 레기?”\n\n어버. 어버버.\n\n발음도 제대로 못 하는 무사를 가만히 내려다보던 진위경이"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Crazy bastard. He’s talking shit.",
+      "current": "This lunatic’s completely lost it.",
+      "defect": "지랄한다 is crude (“he’s talking shit / throwing a fit”); “completely lost it” sanitizes the profanity and collapses 미친놈 and 지랄한다 into one milder gloss.",
+      "id": "F04",
+      "rationale": "Rules require matching strong profanity; this is Wipeng’s private register when Taekyung accepts the duel.",
+      "severity": "major",
+      "source": "‘미친놈, 지랄한다.’"
+    },
+    {
+      "confidence": 0.94,
+      "correction": "Those words made Lee Seogeun’s eyes go wild with rage.",
+      "current": "Lee Seogeun’s eyes rolled back at those words.",
+      "defect": "눈이 뒤집혔다 means he flew into a rage; English “eyes rolled back” reads as fainting or losing consciousness, which he does not do before the next charge.",
+      "id": "F05",
+      "rationale": "He immediately shouts and attacks; a literal eye-roll contradicts the following action.",
+      "severity": "major",
+      "source": "그 말을 들은 이소군의 눈이 뒤집혔다."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "- Let’s do this. Mount Beimang first. We can go to the Mount Heng Sword Sect after. Add a brief footnote: Beimang is a burial mountain; “going to Beimang” means dying.",
+      "current": "- Let’s do this. We’ll go to Mount Beomang first. We can head to the Mount Heng Sword Sect afterward.",
+      "defect": "북망산 is Beimang/Bukmang, the burial mountain and a death idiom, not a place romanized Beomang (that would be 범망). The assassin’s itinerary joke is “you die first.”",
+      "id": "F06",
+      "rationale": "The line is the murder’s punchline, immediately followed by paralysis and the needle. A fake toponym Beomang hides that mechanism.",
+      "severity": "major",
+      "source": "- 이렇게 하자. 우선은 북망산 먼저. 항산검문은 다음에 가는 걸로 하자고."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“Who is it!” Lee Seogeun shouted, but no sound escaped his throat.",
+      "current": "Who was it?\n\nLee Seogeun shouted, but no sound escaped his throat.",
+      "defect": "누구냐! is the shouted line that fails to leave his throat; unquoted “Who was it?” reads as narrator/thought and splits the shout from its content.",
+      "id": "F07",
+      "rationale": "The failed vocative is the first proof the Sound Transmission / needle has already locked his voice.",
+      "severity": "major",
+      "source": "누구냐! 이소군은 외쳤지만 소리가 새어 나가지 않았다."
+    },
+    {
+      "confidence": 0.87,
+      "correction": "His chest felt tight, and his throat hurt as if it were on fire.",
+      "current": "His chest felt constricted, and his throat burned as if it were parched.",
+      "defect": "목이 타는 듯 아프다 is burning pain in the throat, not thirst/parchedness; the simile changes the poisoning symptom.",
+      "id": "F08",
+      "rationale": "This is the needle/toxin taking hold, not dryness from shouting.",
+      "severity": "major",
+      "source": "가슴이 답답하고 목이 타는 듯 아프다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "The wind blew, and some ten teeth went flying through the air.",
+      "current": "The wind split, and more than a dozen teeth went flying through the air.",
+      "defect": "바람이 불었고 is “the wind blew,” not split; 십여 개 is about ten, not more than twelve.",
+      "id": "F09",
+      "rationale": "Quantity and the physical cue are both slightly rewritten without source support.",
+      "severity": "minor",
+      "source": "바람이 불었고, 십여 개의 이빨이 하늘을 날았다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "The masked man smiled brightly as he retrieved the blue-black needle from the dead man’s brow.",
+      "current": "The masked man smiled faintly as he pulled the blue-black needle from the dead man’s brow.",
+      "defect": "싱긋 is a clear, almost sweet smile, not faint; 대침 is a large needle, reduced to an unmarked needle.",
+      "id": "F10",
+      "rationale": "The killer’s cheerful 싱긋 against 잘 가게, 이 소협 is the closing tone; “faintly” softens it.",
+      "severity": "minor",
+      "source": "복면인은 싱긋 웃으며 망자의 미간에 꽂힌 검푸른 대침을 회수했다."
+    }
+  ],
+  "summary": "Several semantic and register errors: Wipeng’s yellow-to-gold “bad seed” pun is recast as wealth; 장중보옥을 건드렸다 is weakened to “provoked… jade”; Wikyung’s “뭔 레기?” and 지랄한다 are sanitized; 눈이 뒤집혔다 becomes a literal faint; 북망산 is misromanized and stripped of its graveyard/death idiom; the assassination shout and burning-throat cue are blurred.",
+  "version": 1
+}

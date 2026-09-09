@@ -1,0 +1,55 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "건드렸다 restored as laying a hand on the sect’s cherished jewel (장중보옥 as beloved person-treasure), not ‘provoking’ an object called jade; 깨달음 rendered as dawning realization, not martial enlightenment.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "황금빛 extends 싹수가 노랗다 into gold as intensified hopelessness; removed the golden-spoon/wealth reading and corrected the footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "뭔 레기? restored as Wikyung’s contemptuous ‘What trash?’; 어버 kept as broken speech; 가만히 restored as looking down calmly.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "미친놈, 지랄한다 kept as two crude beats (‘Crazy bastard. He’s talking shit.’) instead of a sanitized single gloss.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "눈이 뒤집혔다 rendered as flying into a rage, not a literal eye-roll/faint before the charge.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "북망산 restored as Mount Beimang with a burial-mountain footnote so the assassin’s itinerary joke remains a death idiom.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "누구냐! restored as the shouted line that fails to leave his throat, not unquoted narrator thought.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "목이 타는 듯 아프다 restored as burning throat pain, not parchedness/thirst.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "바람이 불었고 kept as the wind blew; 십여 개 as some ten teeth, not a split wind or more than a dozen.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "싱긋 restored as a bright smile; 대침 as a large needle, matching the killer’s cheerful close.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

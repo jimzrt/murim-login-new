@@ -2,24 +2,21 @@
 
 Updated: 2026-09-09
 
-- Last completed: 14
-- Next chapter: 15
-- Current block: 10–14 (5/5)
-- Latest translation: `translations/0014.md`
-- Latest summary: `summaries/0010-0014.md`
-- Safe profiles through: chapter 14
+- Last completed: 15
+- Next chapter: 16
+- Current block: 15–19 (1/5)
+- Latest translation: `translations/0015.md`
+- Latest summary: `summaries/beats/0015.md`
+- Safe profiles through: chapter 15
 
 
 ## Current Block
 
-Chapters 10–14 place Taekyung in staged confinement at the Jin Family’s
-training hall. He acquires and masters the Jin Family’s Spear Technique,
-combines it with the Manoeuvre Technique, reaches Level 14, and completes the
-Unity of Self and Object achievement. He opens its reward, trains until the
-Jin Family’s Cultivation Technique reaches the Third Stage, then leaves the
-hall to face a Mount Heng Sword Sect envoy and a Level 30 accuser. He accepts
-the resulting Duel Quest to prevent war, then discovers he can block Lee
-Seogeun’s attacks despite the Level gap.
+Chapters 15–19 begin after Taekyung’s duel with Lee Seogeun. Taekyung wins,
+completes the Duel Quest, reaches Level 17, and advances his Cultivation
+Technique to the Fourth Stage and Qi Sense to the Third Stage. Lee is killed
+in the departing carriage by a masked assassin, while Jin Wikyung ends
+Taekyung’s confinement through a coerced family consensus.
 
 
 ## Open Questions
