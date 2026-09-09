@@ -127,6 +127,39 @@ def usage_line(label: str, usage: dict) -> str:
     )
 
 
+def chapter_report(report: dict, chapter: int) -> dict:
+    selected = report["chapters"].get(str(chapter))
+    if selected is None:
+        raise SystemExit(f"no usage metrics for chapter {chapter}")
+    if not selected["stages"]:
+        raise SystemExit(f"exact usage is unavailable for chapter {chapter}")
+    return selected
+
+
+def format_report(report: dict, chapter: int | None = None) -> str:
+    if chapter is not None:
+        selected = chapter_report(report, chapter)
+        lines = [f"Chapter {chapter}"]
+        for name, usage in selected["stages"].items():
+            lines.append(usage_line(name, usage))
+        for name, usage in selected["models"].items():
+            lines.append(usage_line(name, usage))
+        lines.append(usage_line("Total", selected["totals"]))
+        return "\n".join(lines)
+    lines = [f"Chapters with metric files: {len(report['chapters'])}"]
+    for name, usage in report["models"].items():
+        lines.append(usage_line(name, usage))
+    lines.append(usage_line("Total", report["totals"]))
+    if report["unavailable_stages"]:
+        lines.append(
+            f"Exact usage unavailable for {len(report['unavailable_stages'])} legacy stages; they were excluded."
+        )
+    lines.append(
+        f"Checkpoint findings: {report['checkpoint_unique_finding_total']} across {len(report['checkpoint_reviews'])} reviews"
+    )
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--chapter", type=int)
@@ -135,27 +168,11 @@ def main() -> int:
     report = build_report()
     selected: dict = report
     if args.chapter is not None:
-        selected = report["chapters"].get(str(args.chapter))
-        if selected is None:
-            raise SystemExit(f"no usage metrics for chapter {args.chapter}")
-        if not selected["stages"]:
-            raise SystemExit(f"exact usage is unavailable for chapter {args.chapter}")
+        selected = chapter_report(report, args.chapter)
     if args.json:
         print(json.dumps(selected, indent=2, sort_keys=True))
         return 0
-    if args.chapter is not None:
-        print(f"Chapter {args.chapter}")
-        for name, usage in selected["models"].items():
-            print(usage_line(name, usage))
-        print(usage_line("Total", selected["totals"]))
-        return 0
-    print(f"Chapters with metric files: {len(report['chapters'])}")
-    for name, usage in report["models"].items():
-        print(usage_line(name, usage))
-    print(usage_line("Total", report["totals"]))
-    if report["unavailable_stages"]:
-        print(f"Exact usage unavailable for {len(report['unavailable_stages'])} legacy stages; they were excluded.")
-    print(f"Checkpoint findings: {report['checkpoint_unique_finding_total']} across {len(report['checkpoint_reviews'])} reviews")
+    print(format_report(report, args.chapter))
     return 0
 
 

@@ -42,6 +42,14 @@ class CostReportTest(unittest.TestCase):
         self.assertEqual(report["totals"]["input_tokens"], 10)
         self.assertEqual(report["chapters"]["8"]["models"]["openai-codex/luna"]["output_tokens"], 5)
         self.assertEqual(report["checkpoint_unique_finding_total"], 2)
+        text = cost_report.format_report(report, 8)
+        self.assertIn("Chapter 8", text)
+        self.assertIn("draft_model:", text.split("openai-codex/luna:")[0])
+        self.assertIn("openai-codex/luna:", text)
+        self.assertIn("Total:", text)
+        full = cost_report.format_report(report)
+        self.assertIn("Chapters with metric files: 1", full)
+        self.assertIn("Checkpoint findings: 2 across 1 reviews", full)
 
     def test_legacy_estimates_are_excluded(self):
         with tempfile.TemporaryDirectory() as directory:

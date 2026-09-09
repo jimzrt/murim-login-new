@@ -44,10 +44,13 @@ python tools/run_next.py
 ```
 
 The wrapper reads `- Next chapter: N` from `docs/STATE.md`, displays coordinator
-text/tool progress, runs exactly that chapter through `ACCEPTED`, records the
-coordinator's own JSON usage, commits the accepted change set, registers the
-commit, and stops. The inner chapter calls and outer coordinator are therefore
-all attributed to the same chapter before its checkpoint is created.
+text and tool arguments as they run, runs exactly that chapter through
+`ACCEPTED`, records the coordinator's own JSON usage, prints the chapter cost
+report plus a project total, commits the accepted change set, registers the
+commit, and stops. On a checkpoint chapter, applied review patches to earlier
+reading copies in the same block are included in `Accept Chapter N`. The inner
+chapter calls and outer coordinator are therefore all attributed to the same
+chapter before its checkpoint is created.
 
 Inspect exact usage with:
 
@@ -111,9 +114,10 @@ chapters. Safe profiles contain revealed facts only.
 
 ## Git Checkpoint
 
-After `ACCEPTED`, inspect `git status` and commit only the promoted translation,
-packet, structured review/dispositions, QA, metrics, and relevant context files.
-Use `Accept Chapter N`, then register the exact commit through the controller.
+After `ACCEPTED`, `run_next.py` commits the promoted translation, packet,
+structured review/dispositions, QA, metrics, relevant context files, and any
+checkpoint patches to earlier translations in the current block. Use
+`Accept Chapter N`, then register the exact commit through the controller.
 
 ## Exports
 
