@@ -29,8 +29,14 @@ class WorkflowTest(unittest.TestCase):
         state, paths = workflow.load(1)
         paths["revised"].parent.mkdir(parents=True, exist_ok=True)
         paths["revised"].write_text("# Chapter 1\n\nFinished.\n", encoding="utf-8")
+        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
+        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
+        paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
+        paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
         state["stage"] = "REVISED"
         state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
+        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
+        state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
         workflow.atomic_json(paths["state"], state)
 
         with self.assertRaises(SystemExit):
@@ -39,6 +45,9 @@ class WorkflowTest(unittest.TestCase):
 
         (self.root / "docs" / "STATE.md").write_text(
             "# Translation State\n\n- Last completed: 1\n- Next chapter: 2\n", encoding="utf-8"
+        )
+        (self.root / "docs" / "CONTEXT.json").write_text(
+            '{"safe_through":1,"continuity_sources":[1]}\n', encoding="utf-8"
         )
         workflow.command_accept(1)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 1\n\nFinished.\n")
@@ -58,6 +67,10 @@ class WorkflowTest(unittest.TestCase):
         path.write_text("# Chapter 2\n\n안녕\n", encoding="utf-8")
         with self.assertRaises(SystemExit):
             workflow.validate_reading_copy(path, 2)
+
+    def test_new_transaction_must_match_next_chapter(self):
+        with self.assertRaises(SystemExit):
+            workflow.load(2)
 
 
 if __name__ == "__main__":

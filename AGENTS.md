@@ -4,45 +4,51 @@ Translate exactly one explicitly requested chapter. Never start the next chapter
 
 ## Controller Loop
 
-For chapter `N`, run:
+For chapter `N`, run `python tools/workflow.py status N`. Perform only the
+reported next action, then run `status` again. Never infer a stage from chat
+history or skip, combine, or reorder stages. Stop at `COMMITTED`, or immediately
+on ambiguity, stale hashes, failed QA, an over-budget packet, invalid model JSON,
+or any failed command.
 
-```bash
-python tools/workflow.py status N
-```
+The controller owns retrieval, phase-specific packets, model calls, QA, review
+completion, hashes, promotion, recovery, and the next action. Routine work must
+not load the bulk source, full compendium, archive directories, or
+`characters/spoilers/`.
 
-Perform only the reported next action, then run `status` again. Never infer a
-stage from chat history or skip, combine, or reorder stages. Stop at `COMMITTED`,
-or immediately on `ERROR`, an ambiguous source passage, a stale hash, or a
-failed command.
+## Model-Facing Context
 
-The controller owns retrieval, artifact paths, review completion, hash checks,
-promotion, recovery, and the next action. Routine chapter work must not load
-`docs/WORKFLOW.md`, the bulk source, the full compendium, archive directories,
-or `characters/spoilers/`.
+- `docs/CONTEXT.json` is the bounded active state. Keep only active continuity,
+  unresolved questions, temporary decisions, and zero to two explicit
+  `continuity_sources`. Move stable facts to profiles/compendium and resolved
+  plot to summaries.
+- Draft receives the source, complete rules, exact glossary matches, matching
+  profiles, bounded active state, latest summary, and only the explicitly named
+  continuity reading copies.
+- Review receives the source, draft, rules, exact glossary matches, matching
+  profiles, active continuity, and deterministic QA. It does not receive prior
+  translations or the summary archive.
+- Revision receives the source, draft, structured findings, rules, glossary,
+  and matching profiles. It does not receive draft-only history or state.
 
-## Model Tasks
+## Gates
 
-- At `CONTEXT_READY`, run the reported `draft` command. The controller makes one
-  isolated Luna call and validates `.work/NNNN/draft.md`.
-- At `REVIEWED`, run the reported `revise` command. The controller gives Luna
-  only the bounded context, reviewed draft, and saved findings, then validates
-  `.work/NNNN/revised.md`.
-- Do not invoke `omp`, `/advisor`, `/advisor-pi`, a hub, task agent, or nested
-  reviewer directly. Controller model calls block until their isolated process
-  exits successfully.
-- At `REVISED`, update only durable terminology, affected safe profiles,
-  continuity, the applicable five-chapter summary, and `docs/STATE.md`.
-- For chapters ending in 4 or 9, follow the controller's checkpoint review and
-  disposition stages before acceptance. Do not substitute an advisor session.
+- Luna drafts; deterministic QA must pass; Sol returns validated structured
+  findings; Luna returns the revised reading copy plus one disposition per
+  finding; final QA must pass.
+- Unresolved critical or major findings block acceptance. Reviews and
+  dispositions are durable JSON with generated Markdown reading reports.
+- At `REVISED`, update durable terminology, affected safe profiles,
+  `docs/CONTEXT.json`, `docs/STATE.md`, and the applicable summary.
+- Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
+  task agent, nested session, or direct `omp` invocation.
 
 ## Acceptance
 
-`translations/NNNN.md` is an accepted reading copy, never a draft. After the
-controller promotes it, inspect and commit only the accepted chapter artifacts
-and relevant durable-context changes. Then register the exact commit using the
-controller's reported command. Never commit `.work/`, caches, or an unaccepted
-draft.
+`translations/NNNN.md` contains accepted reading copies only. After promotion,
+commit the chapter, structured review/dispositions, QA reports, metrics, and
+relevant durable-context changes. Register the exact commit with the reported
+command. Never commit `.work/`, caches, or an unaccepted draft.
 
-The binding translation and formatting policy is `RULES.md`. Recovery,
-character-profile creation, five-chapter checkpoints, exports, and exceptional
-procedures are in `docs/WORKFLOW.md`; read that file only when one applies.
+Binding language policy is in `RULES.md`. Configuration is in
+`docs/workflow.json`. Read `docs/WORKFLOW.md` only for recovery, profiles,
+checkpoint tuning, or exports.

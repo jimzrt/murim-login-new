@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "draft_model": "openai-codex/gpt-5.6-luna:high",
+  "review_model": "openai-codex/gpt-5.6-sol:medium",
+  "revision_model": "openai-codex/gpt-5.6-luna:high",
+  "context_max_bytes": 16384,
+  "continuity_source_limit": 2,
+  "packet_token_limits": {
+    "draft": 60000,
+    "review": 60000,
+    "revision": 60000,
+    "checkpoint": 120000
+  },
+  "summary_interval": 5,
+  "checkpoint_review_interval": 5,
+  "checkpoint_evaluation_window": 20
+}

@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,6 +21,46 @@ STAGES = (
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
+DEFAULT_CONFIG = {
+    "draft_model": "openai-codex/gpt-5.6-luna:high",
+    "review_model": "openai-codex/gpt-5.6-sol:medium",
+    "revision_model": "openai-codex/gpt-5.6-luna:high",
+    "context_max_bytes": 16384,
+    "continuity_source_limit": 2,
+    "packet_token_limits": {"draft": 60000, "review": 60000, "revision": 60000, "checkpoint": 120000},
+    "summary_interval": 5,
+    "checkpoint_review_interval": 5,
+    "checkpoint_evaluation_window": 20,
+}
+
+
+def project_config() -> dict:
+    path = ROOT / "docs" / "workflow.json"
+    value = json.loads(path.read_text(encoding="utf-8")) if path.exists() else DEFAULT_CONFIG
+    summary = int(value["summary_interval"])
+    checkpoint = int(value["checkpoint_review_interval"])
+    if summary <= 0 or checkpoint <= 0 or checkpoint % summary:
+        raise SystemExit("checkpoint_review_interval must be a positive multiple of summary_interval")
+    if int(value["continuity_source_limit"]) < 0 or int(value["continuity_source_limit"]) > 2:
+        raise SystemExit("continuity_source_limit must be between 0 and 2")
+    return value
+
+
+def estimated_tokens(text: str) -> int:
+    return (len(text.encode("utf-8")) + 3) // 4
+
+
+def enforce_packet_budget(phase: str, text: str) -> int:
+    estimate = estimated_tokens(text)
+    limit = project_config()["packet_token_limits"][phase]
+    if estimate > limit:
+        raise SystemExit(f"{phase} packet estimate {estimate} exceeds configured limit {limit}")
+    return estimate
+
+
+def interval_due(number: int, key: str) -> bool:
+    interval = int(project_config()[key])
+    return interval > 0 and (number + 1) % interval == 0
 
 
 def digest(path: Path) -> str:
@@ -45,24 +86,34 @@ def atomic_text(path: Path, text: str) -> None:
 
 def paths(number: int) -> dict[str, Path]:
     work = ROOT / ".work" / f"{number:04d}"
-    block_start = number - 4
+    checkpoint_interval = int(project_config()["checkpoint_review_interval"])
+    block_start = number - checkpoint_interval + 1
     block_name = f"{block_start:04d}-{number:04d}"
+    summary_interval = int(project_config()["summary_interval"])
+    summary_start = number - summary_interval + 1
+    summary_name = f"{summary_start:04d}-{number:04d}"
     return {
         "work": work,
         "state": work / "workflow.json",
         "context": work / "context.md",
         "draft": work / "draft.md",
+        "draft_qa": ROOT / "reviews" / "qa" / f"{number:04d}-draft.json",
         "revised": work / "revised.md",
+        "final_qa": ROOT / "reviews" / "qa" / f"{number:04d}-final.json",
         "revision_context": work / "revision-context.md",
+        "dispositions": ROOT / "reviews" / "sol" / f"{number:04d}.dispositions.json",
+        "metrics": ROOT / "reviews" / "metrics" / f"{number:04d}.json",
         "translation": ROOT / "translations" / f"{number:04d}.md",
         "packet": ROOT / "reviews" / "packets" / f"{number:04d}.md",
         "report": ROOT / "reviews" / "sol" / f"{number:04d}.md",
-        "review_meta": ROOT / "reviews" / "sol" / f"{number:04d}.json",
-        "checkpoint_summary": ROOT / "summaries" / f"{block_name}.md",
+        "review_json": ROOT / "reviews" / "sol" / f"{number:04d}.json",
+        "review_meta": ROOT / "reviews" / "sol" / f"{number:04d}.meta.json",
+        "checkpoint_summary": ROOT / "summaries" / f"{summary_name}.md",
         "checkpoint_packet": ROOT / "reviews" / "packets" / f"checkpoint-{block_name}.md",
         "checkpoint_report": ROOT / "reviews" / "checkpoints" / f"{block_name}.md",
-        "checkpoint_meta": ROOT / "reviews" / "checkpoints" / f"{block_name}.json",
-        "checkpoint_disposition": work / "checkpoint-disposition.md",
+        "checkpoint_json": ROOT / "reviews" / "checkpoints" / f"{block_name}.json",
+        "checkpoint_meta": ROOT / "reviews" / "checkpoints" / f"{block_name}.meta.json",
+        "checkpoint_disposition": ROOT / "reviews" / "checkpoints" / f"{block_name}.dispositions.json",
     }
 
 
@@ -92,11 +143,18 @@ def load(number: int) -> tuple[dict, dict[str, Path]]:
             (ROOT / "docs" / "STATE.md").read_text(encoding="utf-8"),
             re.MULTILINE,
         )
+        next_match = re.search(
+            r"^- Next chapter:\s*(\d+)\s*$",
+            (ROOT / "docs" / "STATE.md").read_text(encoding="utf-8"),
+            re.MULTILINE,
+        )
         already_accepted = bool(
             completed_match
             and number <= int(completed_match.group(1))
             and p["translation"].exists()
         )
+        if not already_accepted and next_match and number != int(next_match.group(1)):
+            raise SystemExit(f"requested chapter {number} does not match docs/STATE.md next chapter {next_match.group(1)}")
         state = {
             "version": 1,
             "chapter": number,
@@ -123,6 +181,14 @@ def save(state: dict, p: dict[str, Path], stage: str, **artifacts: str) -> None:
     atomic_json(p["state"], state)
 
 
+def record_metric(p: dict[str, Path], phase: str, **values: object) -> None:
+    metrics = {"version": 1, "chapter": int(p["work"].name), "stages": {}}
+    if p["metrics"].exists():
+        metrics = json.loads(p["metrics"].read_text(encoding="utf-8"))
+    metrics.setdefault("stages", {})[phase] = values
+    atomic_json(p["metrics"], metrics)
+
+
 def validate_reading_copy(path: Path, number: int) -> None:
     if not path.exists() or not path.read_text(encoding="utf-8").strip():
         raise SystemExit(f"missing or empty reading copy: {path}")
@@ -136,8 +202,10 @@ def validate_reading_copy(path: Path, number: int) -> None:
 
 def next_action(state: dict, p: dict[str, Path]) -> str:
     number = state["chapter"]
-    if state["stage"] == "REVISED" and number % 5 == 4:
+    if state["stage"] == "REVISED" and interval_due(number, "checkpoint_review_interval"):
         return f"update state and {p['checkpoint_summary'].relative_to(ROOT)}, then: python tools/workflow.py checkpoint {number}"
+    if state["stage"] == "REVISED" and interval_due(number, "summary_interval"):
+        return f"update state and {p['checkpoint_summary'].relative_to(ROOT)}, then: python tools/workflow.py accept {number}"
     return {
         "READY": f"python tools/workflow.py prepare {number}",
         "CONTEXT_READY": f"python tools/workflow.py draft {number}",
@@ -155,13 +223,18 @@ def command_prepare(number: int) -> None:
     state, p = load(number)
     require(state, "READY", "CONTEXT_READY")
     try:
-        from tools.context import build_context
+        from tools.context import build_draft_packet
     except ModuleNotFoundError:  # Direct execution from tools/.
-        from context import build_context
+        from context import build_draft_packet
 
-    packet = build_context(number)
+    try:
+        packet = build_draft_packet(number)
+    except (ValueError, FileNotFoundError) as error:
+        raise SystemExit(str(error)) from None
+    packet_tokens = enforce_packet_budget("draft", packet)
     p["context"].parent.mkdir(parents=True, exist_ok=True)
     atomic_text(p["context"], packet)
+    record_metric(p, "draft_packet", estimated_input_tokens=packet_tokens, input_bytes=len(packet.encode("utf-8")))
     save(state, p, "CONTEXT_READY", context_sha256=digest(p["context"]))
 
 
@@ -169,10 +242,22 @@ def command_drafted(number: int) -> None:
     state, p = load(number)
     require(state, "CONTEXT_READY", "DRAFTED")
     validate_reading_copy(p["draft"], number)
-    save(state, p, "DRAFTED", draft_sha256=digest(p["draft"]))
+    try:
+        from tools.context import chapter_text, exact_glossary_entries
+        from tools.qa import run_qa
+    except ModuleNotFoundError:
+        from context import chapter_text, exact_glossary_entries
+        from qa import run_qa
+    source = chapter_text(number)
+    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
+    qa = run_qa(number, source, p["draft"].read_text(encoding="utf-8"), glossary)
+    atomic_json(p["draft_qa"], qa)
+    if not qa["passed"]:
+        raise SystemExit(f"draft failed deterministic QA; inspect {p['draft_qa']}")
+    save(state, p, "DRAFTED", draft_sha256=digest(p["draft"]), draft_qa_sha256=digest(p["draft_qa"]))
 
 
-def run_omp(packet: Path, model: str, timeout: int) -> str:
+def run_omp(packet: Path, model: str, timeout: int) -> tuple[str, dict]:
     command = [
         "omp",
         "-p",
@@ -188,6 +273,7 @@ def run_omp(packet: Path, model: str, timeout: int) -> str:
         str(timeout - 60),
         f"@{packet}",
     ]
+    started = time.monotonic()
     try:
         result = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as error:
@@ -196,7 +282,15 @@ def run_omp(packet: Path, model: str, timeout: int) -> str:
         raise SystemExit(result.stderr.strip() or result.stdout.strip() or "model call failed")
     if not result.stdout.strip():
         raise SystemExit("model call returned empty output")
-    return result.stdout.strip() + "\n"
+    output = result.stdout.strip() + "\n"
+    return output, {
+        "model": model,
+        "elapsed_seconds": round(time.monotonic() - started, 3),
+        "estimated_input_tokens": estimated_tokens(packet.read_text(encoding="utf-8")),
+        "estimated_output_tokens": estimated_tokens(output),
+        "input_bytes": packet.stat().st_size,
+        "output_bytes": len(output.encode("utf-8")),
+    }
 
 
 def command_draft(number: int) -> None:
@@ -204,7 +298,9 @@ def command_draft(number: int) -> None:
     require(state, "CONTEXT_READY")
     if digest(p["context"]) != state["artifacts"]["context_sha256"]:
         raise SystemExit("context packet changed after CONTEXT_READY; run prepare again")
-    atomic_text(p["draft"], run_omp(p["context"], "openai-codex/gpt-5.6-luna:high", 960))
+    output, metrics = run_omp(p["context"], project_config()["draft_model"], 960)
+    atomic_text(p["draft"], output)
+    record_metric(p, "draft_model", **metrics)
     command_drafted(number)
 
 
@@ -213,10 +309,19 @@ def command_review(number: int, dry_run: bool) -> None:
     require(state, "DRAFTED")
     if digest(p["draft"]) != state["artifacts"]["draft_sha256"]:
         raise SystemExit(f"draft changed after DRAFTED; run: python tools/workflow.py drafted {number}")
-    command = [sys.executable, str(ROOT / "tools" / "review_chapter.py"), str(number), "--draft", str(p["draft"])]
+    if digest(p["draft_qa"]) != state["artifacts"]["draft_qa_sha256"]:
+        raise SystemExit("draft QA changed after DRAFTED")
+    command = [
+        sys.executable, str(ROOT / "tools" / "review_chapter.py"), str(number),
+        "--draft", str(p["draft"]), "--qa", str(p["draft_qa"]),
+    ]
     if dry_run:
         command.append("--dry-run")
-    subprocess.run(command, cwd=ROOT, check=True)
+    started = time.monotonic()
+    try:
+        subprocess.run(command, cwd=ROOT, check=True)
+    except subprocess.CalledProcessError as error:
+        raise SystemExit(f"review command failed with exit code {error.returncode}") from None
     if dry_run:
         return
     meta = json.loads(p["review_meta"].read_text(encoding="utf-8"))
@@ -227,7 +332,18 @@ def command_review(number: int, dry_run: bool) -> None:
         p,
         "REVIEWED",
         reviewed_draft_sha256=meta["draft_sha256"],
-        report_sha256=digest(p["report"]),
+        report_sha256=digest(p["review_json"]),
+        review_markdown_sha256=digest(p["report"]),
+    )
+    record_metric(
+        p,
+        "review_model",
+        model=project_config()["review_model"],
+        elapsed_seconds=round(time.monotonic() - started, 3),
+        estimated_input_tokens=estimated_tokens(p["packet"].read_text(encoding="utf-8")),
+        estimated_output_tokens=estimated_tokens(p["review_json"].read_text(encoding="utf-8")),
+        finding_count=meta["finding_count"],
+        major_or_critical_count=meta["major_or_critical_count"],
     )
 
 
@@ -237,7 +353,34 @@ def command_revised(number: int) -> None:
     if digest(p["draft"]) != state["artifacts"]["reviewed_draft_sha256"]:
         raise SystemExit("review is stale because draft.md changed")
     validate_reading_copy(p["revised"], number)
-    save(state, p, "REVISED", revised_sha256=digest(p["revised"]))
+    if not p["dispositions"].exists():
+        raise SystemExit(f"missing structured dispositions: {p['dispositions']}")
+    review = json.loads(p["review_json"].read_text(encoding="utf-8"))
+    dispositions = json.loads(p["dispositions"].read_text(encoding="utf-8"))
+    try:
+        from tools.model_io import blocking_dispositions
+        from tools.context import chapter_text, exact_glossary_entries
+        from tools.qa import run_qa
+    except ModuleNotFoundError:
+        from model_io import blocking_dispositions
+        from context import chapter_text, exact_glossary_entries
+        from qa import run_qa
+    if blocking_dispositions(review, dispositions):
+        raise SystemExit("critical or major findings remain unresolved")
+    source = chapter_text(number)
+    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
+    qa = run_qa(number, source, p["revised"].read_text(encoding="utf-8"), glossary)
+    atomic_json(p["final_qa"], qa)
+    if not qa["passed"]:
+        raise SystemExit(f"revision failed deterministic QA; inspect {p['final_qa']}")
+    save(
+        state,
+        p,
+        "REVISED",
+        revised_sha256=digest(p["revised"]),
+        dispositions_sha256=digest(p["dispositions"]),
+        final_qa_sha256=digest(p["final_qa"]),
+    )
 
 
 def command_revise(number: int) -> None:
@@ -245,31 +388,27 @@ def command_revise(number: int) -> None:
     require(state, "REVIEWED")
     if digest(p["draft"]) != state["artifacts"]["reviewed_draft_sha256"]:
         raise SystemExit("review is stale because draft.md changed")
-    if digest(p["report"]) != state["artifacts"]["report_sha256"]:
+    if digest(p["review_json"]) != state["artifacts"]["report_sha256"]:
         raise SystemExit("saved review changed after REVIEWED")
-    packet = f"""# Revision Task — Chapter {number}
-
-Return only the complete revised English Markdown reading copy beginning with
-`# Chapter {number}`. Apply only source-supported review findings. Preserve
-meaning and ambiguity, then make the natural-English collocation pass required
-by the binding rules. Do not describe changes or include audit notes.
-
-## Bounded chapter context
-
-{p['context'].read_text(encoding='utf-8').rstrip()}
-
-## Draft reviewed
-
-```markdown
-{p['draft'].read_text(encoding='utf-8').rstrip()}
-```
-
-## Reviewer findings
-
-{p['report'].read_text(encoding='utf-8').rstrip()}
-"""
+    try:
+        from tools.context import build_revision_packet
+        from tools.model_io import parse_revision_response
+    except ModuleNotFoundError:
+        from context import build_revision_packet
+        from model_io import parse_revision_response
+    review = json.loads(p["review_json"].read_text(encoding="utf-8"))
+    packet = build_revision_packet(number, p["draft"].read_text(encoding="utf-8"), review)
+    enforce_packet_budget("revision", packet)
     atomic_text(p["revision_context"], packet)
-    atomic_text(p["revised"], run_omp(p["revision_context"], "openai-codex/gpt-5.6-luna:high", 960))
+    raw, metrics = run_omp(p["revision_context"], project_config()["revision_model"], 960)
+    try:
+        revision = parse_revision_response(raw, review)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
+    atomic_text(p["revised"], revision["translation"])
+    canonical_dispositions = {"version": 1, "dispositions": revision["dispositions"]}
+    atomic_json(p["dispositions"], canonical_dispositions)
+    record_metric(p, "revision_model", **metrics)
     command_revised(number)
 
 
@@ -285,36 +424,87 @@ def state_claims_completion(number: int) -> bool:
     )
 
 
+def context_claims_completion(number: int) -> bool:
+    path = ROOT / "docs" / "CONTEXT.json"
+    if not path.exists() or path.stat().st_size > project_config()["context_max_bytes"]:
+        return False
+    value = json.loads(path.read_text(encoding="utf-8"))
+    sources = value.get("continuity_sources")
+    return bool(
+        value.get("safe_through") == number
+        and isinstance(sources, list)
+        and len(sources) <= project_config()["continuity_source_limit"]
+        and all(isinstance(item, int) and 0 <= item <= number for item in sources)
+    )
+
+
 def checkpoint_exists(number: int) -> bool:
-    if number % 5 != 4:
+    if not interval_due(number, "summary_interval"):
         return True
-    start = number - 4
+    start = number - int(project_config()["summary_interval"]) + 1
     return (ROOT / "summaries" / f"{start:04d}-{number:04d}.md").exists()
+
+
+def checkpoint_summary_paths(number: int) -> list[Path]:
+    summary_interval = int(project_config()["summary_interval"])
+    review_interval = int(project_config()["checkpoint_review_interval"])
+    first_end = number - review_interval + summary_interval
+    return [
+        ROOT / "summaries" / f"{end-summary_interval+1:04d}-{end:04d}.md"
+        for end in range(first_end, number + 1, summary_interval)
+    ]
 
 
 def command_checkpoint(number: int) -> None:
     state, p = load(number)
     require(state, "REVISED")
-    if number % 5 != 4:
+    if not interval_due(number, "checkpoint_review_interval"):
         raise SystemExit("this chapter does not end a five-chapter block")
     if not state_claims_completion(number):
         raise SystemExit("update Last completed and Next chapter in docs/STATE.md before checkpoint review")
-    if not p["checkpoint_summary"].exists():
-        raise SystemExit(f"missing checkpoint summary: {p['checkpoint_summary']}")
+    if not context_claims_completion(number):
+        raise SystemExit(f"update bounded docs/CONTEXT.json through chapter {number} before checkpoint review")
+    summary_paths = checkpoint_summary_paths(number)
+    missing_summaries = [path for path in summary_paths if not path.exists()]
+    if missing_summaries:
+        raise SystemExit("missing checkpoint summaries: " + ", ".join(map(str, missing_summaries)))
     chapters: list[str] = []
-    for chapter in range(number - 4, number + 1):
+    review_interval = int(project_config()["checkpoint_review_interval"])
+    for chapter in range(number - review_interval + 1, number + 1):
         chapter_path = p["revised"] if chapter == number else ROOT / "translations" / f"{chapter:04d}.md"
         validate_reading_copy(chapter_path, chapter)
         chapters.append(f"## Chapter artifact {chapter}\n\n{chapter_path.read_text(encoding='utf-8').strip()}")
     rules = (ROOT / "RULES.md").read_text(encoding="utf-8").strip()
-    durable_state = (ROOT / "docs" / "STATE.md").read_text(encoding="utf-8").strip()
-    packet = f"""# Five-Chapter Checkpoint — {number - 4}–{number}
+    durable_state = (ROOT / "docs" / "CONTEXT.json").read_text(encoding="utf-8").strip()
+    summaries = "\n\n".join(path.read_text(encoding="utf-8").strip() for path in summary_paths)
+    packet = f"""# Checkpoint Review — {number - review_interval + 1}–{number}
 
-Review only this bounded packet. Check the five English reading copies, summary,
+Review only this bounded packet. Check the English reading copies, summaries,
 and active state for voice drift, terminology drift, dropped hooks, formatting
 differences, internal contradiction, and accidental spoilers. Do not redo the
-source-fidelity reviews and do not rewrite files. Return a finite prioritized
-list of exact actionable findings, or exactly `No actionable findings`.
+source-fidelity reviews and do not rewrite files. Return exactly one JSON object
+using the chapter-review schema: summary plus a findings array. Use stable IDs
+`C01`, `C02`, and so on; source identifies the chapter/location, current quotes
+the exact English, correction gives the action, and confidence is 0 through 1.
+Use an empty findings array when nothing is actionable.
+
+Return this exact shape with no Markdown fence:
+
+{{
+  "summary": "brief assessment",
+  "findings": [
+    {{
+      "id": "C01",
+      "severity": "critical|major|minor",
+      "source": "chapter and location",
+      "current": "exact current English",
+      "defect": "specific defect",
+      "correction": "recommended action",
+      "rationale": "specific reason",
+      "confidence": 0.0
+    }}
+  ]
+}}
 
 ## Binding rules
 
@@ -322,7 +512,7 @@ list of exact actionable findings, or exactly `No actionable findings`.
 
 ## Checkpoint summary
 
-{p['checkpoint_summary'].read_text(encoding='utf-8').strip()}
+{summaries}
 
 ## Durable state
 
@@ -332,17 +522,34 @@ list of exact actionable findings, or exactly `No actionable findings`.
 
 {chr(10).join(chapters)}
 """
+    enforce_packet_budget("checkpoint", packet)
     atomic_text(p["checkpoint_packet"], packet)
-    atomic_text(
-        p["checkpoint_report"],
-        run_omp(p["checkpoint_packet"], "openai-codex/gpt-5.6-sol:medium", 960),
+    raw_report, metrics = run_omp(p["checkpoint_packet"], project_config()["review_model"], 960)
+    try:
+        from tools.model_io import parse_json_object, review_markdown, validate_review
+    except ModuleNotFoundError:
+        from model_io import parse_json_object, review_markdown, validate_review
+    try:
+        report = validate_review(parse_json_object(raw_report))
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
+    atomic_json(p["checkpoint_json"], report)
+    atomic_text(p["checkpoint_report"], review_markdown(report))
+    record_metric(
+        p,
+        "checkpoint_model",
+        **metrics,
+        finding_count=len(report["findings"]),
+        major_or_critical_count=sum(item["severity"] in {"major", "critical"} for item in report["findings"]),
     )
     metadata = {
         "chapter": number,
         "packet_sha256": digest(p["checkpoint_packet"]),
-        "report_sha256": digest(p["checkpoint_report"]),
+        "report_sha256": digest(p["checkpoint_json"]),
+        "finding_count": len(report["findings"]),
+        "major_or_critical_count": sum(item["severity"] in {"major", "critical"} for item in report["findings"]),
         "revised_sha256": digest(p["revised"]),
-        "summary_sha256": digest(p["checkpoint_summary"]),
+        "summary_sha256": {str(path.relative_to(ROOT)): digest(path) for path in summary_paths},
     }
     atomic_json(p["checkpoint_meta"], metadata)
     save(state, p, "CHECKPOINT_REVIEWED", checkpoint_report_sha256=metadata["report_sha256"])
@@ -351,31 +558,66 @@ list of exact actionable findings, or exactly `No actionable findings`.
 def command_checkpointed(number: int) -> None:
     state, p = load(number)
     require(state, "CHECKPOINT_REVIEWED")
-    if digest(p["checkpoint_report"]) != state["artifacts"]["checkpoint_report_sha256"]:
+    if digest(p["checkpoint_json"]) != state["artifacts"]["checkpoint_report_sha256"]:
         raise SystemExit("checkpoint report changed after review")
-    if not p["checkpoint_disposition"].exists() or not p["checkpoint_disposition"].read_text(encoding="utf-8").strip():
-        raise SystemExit("write a nonempty checkpoint disposition before continuing")
+    if not p["checkpoint_disposition"].exists():
+        raise SystemExit("write checkpoint-disposition.json before continuing")
+    try:
+        disposition_object = json.loads(p["checkpoint_disposition"].read_text(encoding="utf-8"))
+        from tools.model_io import blocking_dispositions, validate_dispositions
+    except ModuleNotFoundError:
+        from model_io import blocking_dispositions, validate_dispositions
+    except json.JSONDecodeError as error:
+        raise SystemExit(f"invalid checkpoint disposition JSON: {error}") from None
+    checkpoint_review = json.loads(p["checkpoint_json"].read_text(encoding="utf-8"))
+    try:
+        normalized = validate_dispositions(disposition_object.get("dispositions"), checkpoint_review)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
+    normalized_object = {"version": 1, "dispositions": normalized}
+    if blocking_dispositions(checkpoint_review, normalized_object):
+        raise SystemExit("critical or major checkpoint findings remain unresolved")
+    atomic_json(p["checkpoint_disposition"], normalized_object)
     validate_reading_copy(p["revised"], number)
+    try:
+        from tools.context import chapter_text, exact_glossary_entries
+        from tools.qa import run_qa
+    except ModuleNotFoundError:
+        from context import chapter_text, exact_glossary_entries
+        from qa import run_qa
+    source = chapter_text(number)
+    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
+    qa = run_qa(number, source, p["revised"].read_text(encoding="utf-8"), glossary)
+    atomic_json(p["final_qa"], qa)
+    if not qa["passed"]:
+        raise SystemExit(f"checkpoint revision failed deterministic QA; inspect {p['final_qa']}")
     save(
         state,
         p,
         "CHECKPOINT_APPLIED",
         revised_sha256=digest(p["revised"]),
         checkpoint_disposition_sha256=digest(p["checkpoint_disposition"]),
+        final_qa_sha256=digest(p["final_qa"]),
     )
 
 
 def command_accept(number: int) -> None:
     state, p = load(number)
-    expected = "CHECKPOINT_APPLIED" if number % 5 == 4 else "REVISED"
+    expected = "CHECKPOINT_APPLIED" if interval_due(number, "checkpoint_review_interval") else "REVISED"
     require(state, expected)
     validate_reading_copy(p["revised"], number)
     if digest(p["revised"]) != state["artifacts"]["revised_sha256"]:
         raise SystemExit("revised.md changed after REVISED; record it again before acceptance")
+    if digest(p["dispositions"]) != state["artifacts"]["dispositions_sha256"]:
+        raise SystemExit("structured dispositions changed after REVISED")
+    if digest(p["final_qa"]) != state["artifacts"]["final_qa_sha256"]:
+        raise SystemExit("final QA changed after REVISED")
     if not state_claims_completion(number):
         raise SystemExit(
             f"docs/STATE.md must say '- Last completed: {number}' and '- Next chapter: {number + 1}' before acceptance"
         )
+    if not context_claims_completion(number):
+        raise SystemExit(f"docs/CONTEXT.json must be bounded and safe_through must equal {number}")
     if not checkpoint_exists(number):
         raise SystemExit("five-chapter summary is missing for this checkpoint chapter")
     p["translation"].parent.mkdir(parents=True, exist_ok=True)
@@ -399,15 +641,27 @@ def command_committed(number: int, commit: str) -> None:
         str(p["report"].relative_to(ROOT)),
         str(p["review_meta"].relative_to(ROOT)),
     }
-    if number % 5 == 4:
+    if interval_due(number, "checkpoint_review_interval"):
         required.update(
             {
                 str(p["checkpoint_summary"].relative_to(ROOT)),
                 str(p["checkpoint_packet"].relative_to(ROOT)),
                 str(p["checkpoint_report"].relative_to(ROOT)),
+                str(p["checkpoint_json"].relative_to(ROOT)),
                 str(p["checkpoint_meta"].relative_to(ROOT)),
+                str(p["checkpoint_disposition"].relative_to(ROOT)),
             }
         )
+    required.update(
+        {
+            str(p["review_json"].relative_to(ROOT)),
+            str(p["review_meta"].relative_to(ROOT)),
+            str(p["dispositions"].relative_to(ROOT)),
+            str(p["draft_qa"].relative_to(ROOT)),
+            str(p["final_qa"].relative_to(ROOT)),
+            str(p["metrics"].relative_to(ROOT)),
+        }
+    )
     missing = required.difference(names)
     if missing:
         raise SystemExit("commit is missing: " + ", ".join(sorted(missing)))
