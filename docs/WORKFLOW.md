@@ -67,9 +67,13 @@ reported as unavailable and excluded rather than mixed into exact totals.
 ## Checkpoints and Summaries
 
 Summary and checkpoint-review intervals are independent in
-`docs/workflow.json`. Keep compact plot summaries at the configured summary
-interval. Initially review every five chapters. After at least the configured
-evaluation window, inspect checkpoint-only finding yield:
+`docs/workflow.json`. After each revised chapter, write a compact beat at
+`summaries/beats/NNNN.md` from that chapter only. At the summary interval,
+`python tools/workflow.py summarize N` builds a bounded packet from the previous
+block summary, this block's beats, and `docs/CONTEXT.json` — not the five full
+reading copies — and writes `summaries/START-END.md`. Keep those compact plot
+summaries at the configured interval. Initially review every five chapters. After
+at least the configured evaluation window, inspect checkpoint-only finding yield:
 
 ```bash
 python tools/cost_report.py

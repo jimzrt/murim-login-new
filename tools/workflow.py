@@ -27,8 +27,10 @@ DEFAULT_CONFIG = {
     "revision_model": "openai-codex/gpt-5.6-luna:high",
     "context_max_bytes": 16384,
     "continuity_source_limit": 2,
-    "packet_token_limits": {"draft": 60000, "review": 60000, "revision": 60000, "checkpoint": 120000},
+    "summary_model": "openai-codex/gpt-5.6-luna:high",
+    "packet_token_limits": {"draft": 60000, "review": 60000, "revision": 60000, "checkpoint": 120000, "summary": 20000},
     "summary_interval": 5,
+    "beat_max_bytes": 4096,
     "checkpoint_review_interval": 5,
     "checkpoint_evaluation_window": 20,
 }
@@ -108,7 +110,9 @@ def paths(number: int) -> dict[str, Path]:
         "report": ROOT / "reviews" / "sol" / f"{number:04d}.md",
         "review_json": ROOT / "reviews" / "sol" / f"{number:04d}.json",
         "review_meta": ROOT / "reviews" / "sol" / f"{number:04d}.meta.json",
+        "beat": ROOT / "summaries" / "beats" / f"{number:04d}.md",
         "checkpoint_summary": ROOT / "summaries" / f"{summary_name}.md",
+        "summary_packet": ROOT / "reviews" / "packets" / f"summary-{summary_name}.md",
         "checkpoint_packet": ROOT / "reviews" / "packets" / f"checkpoint-{block_name}.md",
         "checkpoint_report": ROOT / "reviews" / "checkpoints" / f"{block_name}.md",
         "checkpoint_json": ROOT / "reviews" / "checkpoints" / f"{block_name}.json",
@@ -203,16 +207,19 @@ def validate_reading_copy(path: Path, number: int) -> None:
 
 def next_action(state: dict, p: dict[str, Path]) -> str:
     number = state["chapter"]
-    if state["stage"] == "REVISED" and interval_due(number, "checkpoint_review_interval"):
-        return f"update state and {p['checkpoint_summary'].relative_to(ROOT)}, then: python tools/workflow.py checkpoint {number}"
-    if state["stage"] == "REVISED" and interval_due(number, "summary_interval"):
-        return f"update state and {p['checkpoint_summary'].relative_to(ROOT)}, then: python tools/workflow.py accept {number}"
+    if state["stage"] == "REVISED":
+        beat = p["beat"].relative_to(ROOT)
+        durable = f"update {beat}, docs/STATE.md, docs/CONTEXT.json, and profiles from this chapter only"
+        if interval_due(number, "summary_interval") and not checkpoint_exists(number):
+            return f"{durable}, then: python tools/workflow.py summarize {number}"
+        if interval_due(number, "checkpoint_review_interval"):
+            return f"python tools/workflow.py checkpoint {number}"
+        return f"{durable}, then: python tools/workflow.py accept {number}"
     return {
         "READY": f"python tools/workflow.py prepare {number}",
         "CONTEXT_READY": f"python tools/workflow.py draft {number}",
         "DRAFTED": f"python tools/workflow.py review {number}",
         "REVIEWED": f"python tools/workflow.py revise {number}",
-        "REVISED": f"update compendium/profiles/docs/STATE.md, then: python tools/workflow.py accept {number}",
         "CHECKPOINT_REVIEWED": f"apply or disposition checkpoint findings in {p['checkpoint_disposition'].relative_to(ROOT)}, then: python tools/workflow.py checkpointed {number}",
         "CHECKPOINT_APPLIED": f"python tools/workflow.py accept {number}",
         "ACCEPTED": f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD",
@@ -400,6 +407,42 @@ def command_revise(number: int) -> None:
     atomic_json(p["dispositions"], canonical_dispositions)
     record_metric(p, "revision_model", **metrics)
     command_revised(number)
+
+
+def command_summarize(number: int) -> None:
+    state, p = load(number)
+    require(state, "REVISED")
+    if not interval_due(number, "summary_interval"):
+        raise SystemExit("this chapter does not end a summary block")
+    if not state_claims_completion(number):
+        raise SystemExit("update Last completed and Next chapter in docs/STATE.md before summarizing")
+    if not context_claims_completion(number):
+        raise SystemExit(f"update bounded docs/CONTEXT.json through chapter {number} before summarizing")
+    try:
+        from tools.context import build_summary_packet, normalize_block_summary
+    except ModuleNotFoundError:
+        from context import build_summary_packet, normalize_block_summary
+    try:
+        packet = build_summary_packet(number)
+    except (ValueError, FileNotFoundError) as error:
+        raise SystemExit(str(error)) from None
+    packet_tokens = enforce_packet_budget("summary", packet)
+    atomic_text(p["summary_packet"], packet)
+    raw, metrics = run_omp(p["summary_packet"], project_config()["summary_model"], 960)
+    interval = int(project_config()["summary_interval"])
+    start = number - interval + 1
+    try:
+        summary = normalize_block_summary(raw, start, number)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
+    atomic_text(p["checkpoint_summary"], summary)
+    record_metric(
+        p,
+        "summary_model",
+        **metrics,
+        packet_token_estimate=packet_tokens,
+    )
+    save(state, p, "REVISED", summary_sha256=digest(p["checkpoint_summary"]))
 
 
 def state_claims_completion(number: int) -> bool:
@@ -610,6 +653,8 @@ def command_accept(number: int) -> None:
         raise SystemExit(f"docs/CONTEXT.json must be bounded and safe_through must equal {number}")
     if not checkpoint_exists(number):
         raise SystemExit("five-chapter summary is missing for this checkpoint chapter")
+    if not p["beat"].exists():
+        raise SystemExit(f"write {p['beat'].relative_to(ROOT)} before acceptance")
     p["translation"].parent.mkdir(parents=True, exist_ok=True)
     temporary = p["translation"].with_suffix(".md.tmp")
     shutil.copyfile(p["revised"], temporary)
@@ -630,11 +675,18 @@ def command_committed(number: int, commit: str) -> None:
         str(p["translation"].relative_to(ROOT)),
         str(p["report"].relative_to(ROOT)),
         str(p["review_meta"].relative_to(ROOT)),
+        str(p["beat"].relative_to(ROOT)),
     }
-    if interval_due(number, "checkpoint_review_interval"):
+    if interval_due(number, "summary_interval"):
         required.update(
             {
                 str(p["checkpoint_summary"].relative_to(ROOT)),
+                str(p["summary_packet"].relative_to(ROOT)),
+            }
+        )
+    if interval_due(number, "checkpoint_review_interval"):
+        required.update(
+            {
                 str(p["checkpoint_packet"].relative_to(ROOT)),
                 str(p["checkpoint_report"].relative_to(ROOT)),
                 str(p["checkpoint_json"].relative_to(ROOT)),
@@ -672,7 +724,7 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
         "status", "prepare", "draft", "drafted", "review", "revise",
-        "revised", "checkpoint", "checkpointed", "accept",
+        "revised", "summarize", "checkpoint", "checkpointed", "accept",
     ):
         item = sub.add_parser(name)
         item.add_argument("chapter", type=int)
@@ -700,6 +752,8 @@ def main() -> int:
         command_revised(args.chapter)
     elif args.command == "revise":
         command_revise(args.chapter)
+    elif args.command == "summarize":
+        command_summarize(args.chapter)
     elif args.command == "checkpoint":
         command_checkpoint(args.chapter)
     elif args.command == "checkpointed":

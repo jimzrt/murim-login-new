@@ -43,6 +43,8 @@ not load the bulk source, full compendium, archive directories, or
   translations or the summary archive.
 - Revision receives the source, draft, structured findings, rules, glossary,
   and matching profiles. It does not receive draft-only history or state.
+- Summarize receives the previous block summary, this block's chapter beats,
+  and bounded active state. It does not receive full reading copies.
 
 ## Gates
 
@@ -52,7 +54,9 @@ not load the bulk source, full compendium, archive directories, or
 - Unresolved critical or major findings block acceptance. Reviews and
   dispositions are durable JSON with generated Markdown reading reports.
 - At `REVISED`, update durable terminology, affected safe profiles,
-  `docs/CONTEXT.json`, `docs/STATE.md`, and the applicable summary.
+  `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from
+  this chapter only. Do not load other reading copies to summarize. When
+  status asks for it, run `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
   task agent, nested session, or direct `omp` invocation.
 

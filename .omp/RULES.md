@@ -3,7 +3,7 @@
 - Process exactly one explicitly requested chapter; never advance automatically.
 - Ask `python tools/workflow.py status N` what to do next.
 - Never infer, skip, combine, or reorder workflow stages.
-- Read only the artifact named by the current action.
+- Never load other chapters' reading copies to write a summary; write only the current chapter beat, then run `workflow.py summarize` when asked.
 - Never read bulk archives or `characters/spoilers/` during chapter work.
 - Never write a draft to `translations/`.
 - A review is valid only for the recorded draft SHA256.

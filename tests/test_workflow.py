@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 from tools import workflow
 from tools import omp_json
+from tools import context
 
 
 class WorkflowTest(unittest.TestCase):
@@ -49,6 +50,13 @@ class WorkflowTest(unittest.TestCase):
         )
         (self.root / "docs" / "CONTEXT.json").write_text(
             '{"safe_through":1,"continuity_sources":[1]}\n', encoding="utf-8"
+        )
+        with self.assertRaises(SystemExit):
+            workflow.command_accept(1)
+        paths["beat"].parent.mkdir(parents=True, exist_ok=True)
+        paths["beat"].write_text(
+            "# Chapter 1\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
+            encoding="utf-8",
         )
         workflow.command_accept(1)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 1\n\nFinished.\n")
@@ -96,6 +104,63 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(output, "answer\n")
         self.assertTrue(metrics["exact"])
         self.assertEqual(metrics["input_tokens"], 12)
+
+    def test_revised_block_asks_for_summarize_then_checkpoint(self):
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 8\n- Next chapter: 9\n", encoding="utf-8"
+        )
+        state, paths = workflow.load(9)
+        state["stage"] = "REVISED"
+        action = workflow.next_action(state, paths)
+        self.assertIn("summaries/beats/0009.md", action)
+        self.assertIn("python tools/workflow.py summarize 9", action)
+        paths["checkpoint_summary"].parent.mkdir(parents=True, exist_ok=True)
+        paths["checkpoint_summary"].write_text("# Chapters 5–9\n", encoding="utf-8")
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py checkpoint 9")
+
+    def test_summarize_packet_is_written_from_beats(self):
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 3\n- Next chapter: 4\n", encoding="utf-8"
+        )
+        (self.root / "docs" / "workflow.json").write_text(
+            json.dumps({**workflow.DEFAULT_CONFIG, "version": 1}), encoding="utf-8"
+        )
+        beats = self.root / "summaries" / "beats"
+        beats.mkdir(parents=True)
+        for chapter in range(5):
+            (beats / f"{chapter:04d}.md").write_text(
+                f"# Chapter {chapter}\n\n## Plot\n\nPlot {chapter}.\n\n## Continuity\n\n- Hook {chapter}.\n\n## Translation Decisions\n\n- Term {chapter}.\n",
+                encoding="utf-8",
+            )
+        state, paths = workflow.load(4)
+        paths["revised"].parent.mkdir(parents=True, exist_ok=True)
+        state["stage"] = "REVISED"
+        workflow.atomic_json(paths["state"], state)
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 4\n- Next chapter: 5\n", encoding="utf-8"
+        )
+        (self.root / "docs" / "CONTEXT.json").write_text(
+            '{"safe_through":4,"continuity_sources":[4]}\n', encoding="utf-8"
+        )
+        exact = {
+            "exact": True,
+            "usage_source": "omp_provider_reported",
+            "input_tokens": 8,
+            "output_tokens": 4,
+            "cache_read_tokens": 0,
+            "cache_write_tokens": 0,
+            "total_tokens": 12,
+            "requests": 1,
+            "models": {},
+        }
+        summary = "# Chapters 0–4\n\n## Plot\n\nBlock plot.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- Term.\n"
+        with patch.object(context, "ROOT", self.root), patch.object(workflow, "run_omp", return_value=(summary, exact)):
+            workflow.command_summarize(4)
+        written = paths["checkpoint_summary"].read_text(encoding="utf-8")
+        self.assertIn("# Chapters 0–4", written)
+        packet = paths["summary_packet"].read_text(encoding="utf-8")
+        self.assertIn("Plot 0", packet)
+        self.assertNotIn("translations/", packet)
 
 
 if __name__ == "__main__":

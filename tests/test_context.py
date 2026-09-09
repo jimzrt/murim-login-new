@@ -1,4 +1,7 @@
+import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest.mock import patch
 
 from tools import context
@@ -36,6 +39,43 @@ class ContextPacketTest(unittest.TestCase):
         self.assertIn("Three-Turn Footwork", mapping["삼전보"])
         self.assertIn("Well-Endowed Man", mapping["대물남"])
         self.assertIn("pavilion", mapping["전각"])
+
+    def test_summary_packet_uses_beats_not_reading_copies(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "docs").mkdir()
+            (root / "docs" / "workflow.json").write_text(json.dumps({
+                "summary_interval": 5,
+                "beat_max_bytes": 4096,
+                "context_max_bytes": 16384,
+                "continuity_source_limit": 2,
+            }), encoding="utf-8")
+            (root / "docs" / "CONTEXT.json").write_text(
+                '{"safe_through":9,"continuity_sources":[9]}\n', encoding="utf-8"
+            )
+            (root / "summaries").mkdir()
+            (root / "summaries" / "0000-0004.md").write_text("# Chapters 0–4\n\nPrior block.\n", encoding="utf-8")
+            beats = root / "summaries" / "beats"
+            beats.mkdir()
+            for chapter in range(5, 10):
+                (beats / f"{chapter:04d}.md").write_text(
+                    f"# Chapter {chapter}\n\n## Plot\n\nPlot {chapter}.\n\n## Continuity\n\n- Hook {chapter}.\n\n## Translation Decisions\n\n- Term {chapter}.\n",
+                    encoding="utf-8",
+                )
+            with patch.object(context, "ROOT", root):
+                packet = context.build_summary_packet(9)
+        self.assertIn("## Chapter beats", packet)
+        self.assertIn("Plot 5", packet)
+        self.assertIn("Plot 9", packet)
+        self.assertIn("Prior block.", packet)
+        self.assertNotIn("translations/", packet)
+        self.assertNotIn("# Chapter 5\n\nOnce upon", packet)
+        summary = context.normalize_block_summary(
+            "```markdown\n# Chapters 5-9\n\n## Plot\n\nP.\n\n## Continuity\n\n- C.\n\n## Translation Decisions\n\n- T.\n```",
+            5,
+            9,
+        )
+        self.assertTrue(summary.startswith("# Chapters 5–9\n"))
 
 
 if __name__ == "__main__":

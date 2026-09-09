@@ -5,6 +5,7 @@ The authoritative configuration is `docs/workflow.json`.
 - Draft: `openai-codex/gpt-5.6-luna:high`
 - Review: `openai-codex/gpt-5.6-sol:medium`
 - Revision: `openai-codex/gpt-5.6-luna:high`
+- Summary: `openai-codex/gpt-5.6-luna:high`
 - Coordinator: `openai-codex/gpt-5.6-luna:high`
 
 All calls are isolated, non-interactive, tool-free, session-free, and bounded by

@@ -111,6 +111,94 @@ def latest_summary_entry(number: int) -> tuple[Path | None, str]:
     return path, path.read_text(encoding="utf-8").strip()
 
 
+def beat_path(number: int) -> Path:
+    return ROOT / "summaries" / "beats" / f"{number:04d}.md"
+
+
+def validate_beat(path: Path, number: int, max_bytes: int) -> str:
+    if not path.exists() or not path.read_text(encoding="utf-8").strip():
+        raise ValueError(f"missing or empty chapter beat: {path}")
+    text = path.read_text(encoding="utf-8")
+    if len(text.encode("utf-8")) > max_bytes:
+        raise ValueError(f"chapter beat exceeds beat_max_bytes: {path}")
+    first = next((line.strip() for line in text.splitlines() if line.strip()), "")
+    if first != f"# Chapter {number}":
+        raise ValueError(f"first nonblank line must be '# Chapter {number}'")
+    for heading in ("## Plot", "## Continuity", "## Translation Decisions"):
+        if heading not in text:
+            raise ValueError(f"chapter beat missing {heading}: {path}")
+    return text.strip()
+
+
+def strip_markdown_fence(text: str) -> str:
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.splitlines()
+        if lines and lines[0].startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+        text = "\n".join(lines).strip()
+    return text
+
+
+def normalize_block_summary(text: str, start: int, end: int) -> str:
+    text = strip_markdown_fence(text)
+    first = next((line.strip() for line in text.splitlines() if line.strip()), "")
+    expected = {f"# Chapters {start}–{end}", f"# Chapters {start}-{end}"}
+    if first not in expected:
+        raise ValueError(f"first nonblank line must be '# Chapters {start}–{end}'")
+    for heading in ("## Plot", "## Continuity", "## Translation Decisions"):
+        if heading not in text:
+            raise ValueError(f"block summary missing {heading}")
+    lines = text.splitlines()
+    for index, line in enumerate(lines):
+        if line.strip():
+            lines[index] = f"# Chapters {start}–{end}"
+            break
+    return "\n".join(lines).strip() + "\n"
+
+
+def build_summary_packet(number: int) -> str:
+    config = workflow_config()
+    interval = int(config["summary_interval"])
+    max_bytes = int(config["beat_max_bytes"])
+    start = number - interval + 1
+    previous_path, previous = latest_summary_entry(start)
+    beats: list[str] = []
+    used = [ROOT / "docs" / "CONTEXT.json"]
+    for chapter in range(start, number + 1):
+        path = beat_path(chapter)
+        beats.append(f"### Chapter {chapter}\n\n{validate_beat(path, chapter, max_bytes)}")
+        used.append(path)
+    if previous_path:
+        used.append(previous_path)
+    durable = (ROOT / "docs" / "CONTEXT.json").read_text(encoding="utf-8").strip()
+    body = f"""# Summary Task — Chapters {start}–{number}
+
+Write a compact plot summary for this block only. Return only the Markdown
+file beginning with `# Chapters {start}–{number}` and the sections Plot,
+Continuity, and Translation Decisions. Capture unresolved hooks and binding
+facts a later chapter needs. Do not invent plot, quote long passages, or
+include reading copies.
+
+## Previous block summary
+
+{previous}
+
+## Chapter beats
+
+{chr(10).join(beats)}
+
+## Durable state after chapter {number}
+
+```json
+{durable}
+```
+"""
+    return body.replace("# Summary Task", f"<!-- packet-manifest\n{manifest(used, body)}\n-->\n\n# Summary Task", 1)
+
+
 def continuity_text(context: dict) -> tuple[list[Path], str]:
     paths: list[Path] = []
     parts: list[str] = []
