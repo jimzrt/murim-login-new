@@ -1,6 +1,6 @@
 ---
 import type { ChapterIndexItem } from "../lib/chapters";
-import { groupedChapters } from "../lib/chapters";
+import { groupedChapters, withBase } from "../lib/chapters";
 import "../styles/global.css";
 
 interface Props {
@@ -10,15 +10,16 @@ interface Props {
 
 const { title, chapters } = Astro.props;
 const groups = groupedChapters(chapters);
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-base={base}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A translation of the web novel Murim Login." />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
     <title>{title}</title>
     <script is:inline>
       (function () {
@@ -29,13 +30,13 @@ const groups = groupedChapters(chapters);
     </script>
     {
       import.meta.env.PROD && (
-        <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+        <link rel="stylesheet" href={withBase("pagefind/pagefind-component-ui.css")} />
       )
     }
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/">Murim Login</a>
+      <a class="brand" href={base}>Murim Login</a>
       <label class="jump">
         <span class="sr-only">Jump to chapter</span>
         <select id="jump">
@@ -63,15 +64,19 @@ const groups = groupedChapters(chapters);
       </button>
     </header>
     <slot />
-    {import.meta.env.PROD && <pagefind-modal></pagefind-modal>}
     {
       import.meta.env.PROD && (
-        <script is:inline src="/pagefind/pagefind-component-ui.js" type="module" />
+        <>
+          <pagefind-config bundle-path={withBase("pagefind/")} base-url={base} />
+          <pagefind-modal />
+          <script is:inline src={withBase("pagefind/pagefind-component-ui.js")} type="module" />
+        </>
       )
     }
     <script is:inline>
       (function () {
         var root = document.documentElement;
+        var base = root.getAttribute("data-base") || "/";
         document.getElementById("theme")?.addEventListener("click", function () {
           var next = root.dataset.theme === "dark" ? "light" : "dark";
           localStorage.setItem("murim-theme", next);
@@ -93,7 +98,7 @@ const groups = groupedChapters(chapters);
         var cont = document.getElementById("continue");
         var last = localStorage.getItem("murim-chapter");
         if (cont && last) {
-          cont.href = "/chapter/" + last + "/";
+          cont.href = base + "chapter/" + last + "/";
           cont.hidden = false;
         }
       })();

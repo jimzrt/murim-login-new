@@ -9,8 +9,17 @@ export interface ChapterIndexItem {
   href: string;
 }
 
+export function withBase(path: string): string {
+  const base = import.meta.env.BASE_URL ?? "/";
+  return `${base}${path.replace(/^\//, "")}`;
+}
+
 export function chapterHref(chapter: number): string {
-  return `/chapter/${chapter}/`;
+  return withBase(`chapter/${chapter}/`);
+}
+
+export function chaptersHref(): string {
+  return withBase("chapters/");
 }
 
 export async function allChapters(): Promise<ChapterEntry[]> {

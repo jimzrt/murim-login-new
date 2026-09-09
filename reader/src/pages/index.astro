@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { allChapters, chapterHref, toIndex } from "../lib/chapters";
+import { allChapters, chapterHref, chaptersHref, toIndex, withBase } from "../lib/chapters";
 
 const entries = await allChapters();
 const chapters = toIndex(entries);
@@ -10,13 +10,13 @@ const first = entries[0];
 <Base title="Murim Login" chapters={chapters}>
   <main class="wrap">
     <section class="hero">
-      <img class="cover-image" src="/cover.jpg" alt="Murim Login cover" />
+      <img class="cover-image" src={withBase("cover.jpg")} alt="Murim Login cover" />
       <h1>Murim Login</h1>
       <p class="lede">English translation. Chapters are static HTML; theme and last chapter stay in this browser.</p>
       <div class="cta-row">
-        <a id="continue" class="button" hidden href={first ? chapterHref(first.data.chapter) : "/chapters/"}>Continue reading</a>
+        <a id="continue" class="button" hidden href={first ? chapterHref(first.data.chapter) : chaptersHref()}>Continue reading</a>
         {first && <a class="button-secondary" href={chapterHref(first.data.chapter)}>Start at {first.data.title}</a>}
-        <a class="button-secondary" href="/chapters/">All chapters</a>
+        <a class="button-secondary" href={chaptersHref()}>All chapters</a>
       </div>
     </section>
   </main>

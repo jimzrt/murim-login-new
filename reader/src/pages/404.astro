@@ -1,12 +1,12 @@
 ---
 import Base from "../layouts/Base.astro";
-import { allChapters, toIndex } from "../lib/chapters";
+import { allChapters, chaptersHref, toIndex } from "../lib/chapters";
 ---
 
 <Base title="Not found — Murim Login" chapters={toIndex(await allChapters())}>
   <main class="wrap hero">
     <h1>Not found</h1>
     <p class="lede">That page is not in this build.</p>
-    <p><a class="button" href="/chapters/">All chapters</a></p>
+    <p><a class="button" href={chaptersHref()}>All chapters</a></p>
   </main>
 </Base>
