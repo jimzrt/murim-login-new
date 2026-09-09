@@ -2,20 +2,19 @@
 
 Updated: 2026-09-09
 
-- Last completed: 8
-- Next chapter: 9
-- Current block: 5–9 (4/5)
-- Latest translation: `translations/0008.md`
+- Last completed: 7
+- Next chapter: 8
+- Current block: 5–9 (3/5)
+- Latest translation: `translations/0007.md`
 - Latest summary: `summaries/0000-0004.md`
-- Safe profiles through: chapter 8
+- Safe profiles through: chapter 7
 
 ## Current Block
 
-Chapters 5–8 complete the tutorial, reveal that Logout requires First Rate,
+Chapters 5–7 complete the tutorial, reveal that Logout requires First Rate,
 Lv. 30, and 500 Fame, and bring Taekyung to the Medicine King Hall after his
-fight with Hyuk Mujin. Taekyung moves into a Jin Family residence, finds a
-large collection of martial arts manuals, and begins practicing footwork late
-into the night while Jin Wikyung and Wipeng watch.
+fight with Hyuk Mujin. An eldest brother beyond Qi Sense's detection limit has
+just revealed himself while examining Taekyung.
 
 ## Open Questions
 

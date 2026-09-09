@@ -9,6 +9,15 @@ HANGUL = re.compile(r"[가-힣]")
 FOOTNOTE_REF = re.compile(r"\[\^([^\]]+)\](?!:)")
 FOOTNOTE_DEF = re.compile(r"^\[\^([^\]]+)\]:", re.MULTILINE)
 ARABIC_NUMBER = re.compile(r"(?<![\w.])\d+(?:[.,]\d+)*(?!\w)")
+SEMANTIC_PROBES = (
+    (re.compile(r"끄덕"), re.compile(r"\bnod(?:s|ded|ding)?\b", re.I), "source contains a nod but the translation has no form of 'nod'"),
+    (re.compile(r"큰형"), re.compile(r"\beldest (?:older )?brother\b", re.I), "큰형 should preserve eldest-brother specificity"),
+    (re.compile(r"생도"), re.compile(r"\bcadets?\b", re.I), "생도 should use the established term 'cadet'"),
+    (re.compile(r"삼전보"), re.compile(r"\bThree-Turn Footwork\b", re.I), "삼전보 should use 'Three-Turn Footwork'"),
+    (re.compile(r"대물남"), re.compile(r"\bWell-Endowed Man\b", re.I), "대물남 should retain the euphemistic rendering 'Well-Endowed Man'"),
+    (re.compile(r"시침\s*뚝\s*떼"), re.compile(r"\b(?:as if nothing|pretend\w*|nothing had happened|act\w* as (?:if|though))\b", re.I), "시침 뚝 떼고 carries an acting-as-if-nothing-happened nuance"),
+    (re.compile(r"수더분"), re.compile(r"\b(?:friendly|approachable|mild|unassuming|easygoing|open)\b", re.I), "수더분 describes a mild, approachable, or unassuming impression, not mere plainness"),
+)
 
 
 def finding(code: str, message: str, **details: object) -> dict:
@@ -51,6 +60,11 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
     missing_numbers = sorted(source_numbers - target_numbers)
     if missing_numbers:
         warnings.append(finding("numbers", "Arabic numerals from the source are absent", values=missing_numbers))
+    for source_pattern, target_pattern, message in SEMANTIC_PROBES:
+        if source_pattern.search(source) and not target_pattern.search(translation):
+            warnings.append(finding("semantic_probe", message))
+    if "전음" in source and "공력" in source and not re.search(r"\b(?:internal energy|qi)\b", translation, re.I):
+        warnings.append(finding("mechanism", "source explains Sound Transmission through internal energy, but that mechanism is absent"))
     for korean, english in glossary:
         plain = re.sub(r"[*_`]", "", english).strip()
         if korean in source and plain and plain.casefold() not in translation.casefold():

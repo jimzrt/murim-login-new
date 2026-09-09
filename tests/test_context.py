@@ -26,6 +26,16 @@ class ContextPacketTest(unittest.TestCase):
         self.assertNotIn("Latest completed summary", review_packet)
         self.assertNotIn("active_continuity", revision_packet)
         self.assertIn("Structured findings", revision_packet)
+        self.assertIn("Semantic errors outrank stylistic improvements", review_packet)
+
+    def test_confirmed_terms_are_retrieved_by_exact_source_match(self):
+        entries = context.exact_glossary_entries("큰형 생도 삼전보 대물남 전각 전음")
+        mapping = {item["korean"]: item["english"] for item in entries}
+        self.assertIn("eldest brother", mapping["큰형"])
+        self.assertIn("cadet", mapping["생도"])
+        self.assertIn("Three-Turn Footwork", mapping["삼전보"])
+        self.assertIn("Well-Endowed Man", mapping["대물남"])
+        self.assertIn("pavilion", mapping["전각"])
 
 
 if __name__ == "__main__":

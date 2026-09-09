@@ -3,7 +3,9 @@
 ## Fidelity
 
 - Translate the Korean source—not the wiki, manhwa, fan translations, or expected plot.
+- Semantic fidelity outranks elegance. Never improve rhythm, humor, or localization by changing a physical action, negation, relationship, hierarchy, mechanism, quantity, or causal detail.
 - Preserve every fact, causal link, joke, emotional beat, repetition, and intentional omission. Add nothing.
+- Preserve small action verbs and pragmatic cues exactly: nodding versus shaking one's head, pretending nothing happened, and mild or approachable impressions are characterization, not expendable texture.
 - Preserve viewpoint and tense. Resolve omitted subjects only when context supports it; retain genuine ambiguity.
 - Match each speaker's hierarchy, intimacy, humor, and profanity naturally. Do not mechanically retain every honorific or classical self-reference.
 - Do not censor or soften content.
@@ -30,8 +32,9 @@
 - Preserve the series’ contrast between danger and comedy. Let absurdity, bad timing, blunt reactions, and grim situations create dark humor without adding jokes absent from the Korean.
 - Jin Taekyung’s narration is conversational, observant, self-mocking, and occasionally profane. It may be irreverent even when the situation is serious.
 - Keep deadpan punchlines short and well-timed. Do not explain a joke after delivering it.
+- Preserve the source's level of explicitness. A euphemism may remain euphemistic even when its meaning is sexual or crude; do not replace it with more graphic English merely for impact.
 - Make dialogue spontaneous and character-specific. Preserve hierarchy and intimacy through word choice, address, rhythm, and restraint—not archaic wuxia English.
-- Use strong profanity when the Korean is strong, but do not make ordinary lines uniformly vulgar. Profanity should reveal mood or relationship.
+- Use strong profanity when the Korean is strong, but neither intensify nor sanitize it. Do not make ordinary lines uniformly vulgar. Profanity should reveal mood or relationship.
 - Keep action and injury vivid but clear rather than purple. Do not make violence funny unless the source’s framing does.
 - Avoid stiff literalism, translator-added melodrama, dated internet slang, and quippy superhero-style banter.
 - On the second pass, correct awkward English collocations and word choices without changing meaning or voice. Prefer ordinary, spoken English over stiff Latinate or ceremonial wording when the scene is brisk or comic: “goose bumps” rather than “gooseflesh,” and “laid into them” rather than “launched into a solemn denunciation.” Read the prose aloud and replace any phrase that sounds like a formal essay, legal document, or literal dictionary gloss unless the source deliberately calls for that register.

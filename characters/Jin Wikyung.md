@@ -1,10 +1,10 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 8
+- **Safe through:** Chapter 6
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
-- **Personality:** Calm and authoritative in public, but openly affectionate and concerned with Jin Taekyung; responsible, dutiful, and resigned to a future political marriage for the family’s sake
-- **Voice:** Restrained, even, and commanding in public; warm and worried with Taekyung
-- **Relationships:** Head of Wipeng; older brother of Jin Taekyung and Jin Mukyung; member of the Jin Family
-- **Continuity:** Confirms Taekyung’s identity and family facts while treating his amnesia as genuine, sends a servant to guide him to his residence, and later discovers him training footwork after midnight
-- **Sources:** Korean source and accepted translation, Chapters 6 and 8
+- **Personality:** Calm and authoritative in his office; listens carefully, accepts responsibility from his subordinates, and shows immediate interest in the injured gatekeeper
+- **Voice:** Restrained, even, and commanding; speaks formally to subordinates
+- **Relationships:** Head of Wipeng; member of the Jin Family; hears the report about Jin Taekyung’s fight at the gate
+- **Continuity:** Leaves his office after learning that a gatekeeper was injured in a confrontation with the third young master
+- **Sources:** Korean source and accepted translation, Chapter 6

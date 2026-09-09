@@ -10,3 +10,7 @@ hierarchy, humor, profanity, Markdown, footnotes, and spoilers. Treat QA warning
 as leads rather than proof. Do not rewrite, praise, use tools, inspect other
 files, infer future plot, or spawn sessions. Use an empty findings array when
 nothing is actionable.
+
+Prioritize reversed actions, negation, subjects, kinship, quantities, and omitted
+mechanisms above stylistic polish. Then check lost pragmatic characterization
+and register, especially euphemisms or mild slang made more explicit in English.

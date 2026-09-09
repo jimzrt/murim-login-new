@@ -236,7 +236,8 @@ These are the preferred operational translations when the Korean isn't a named t
 | 기세     | **aura** / **momentum**                          | Depends on scene                                      |
 | 검기     | **Sword Energy**                                 | When functioning as projected weapon qi               |
 | 창기     | **Spear Energy**                                 | Explicit system skill for Taekyung                    |
-| 전음     | **Sound Transmission**                           | Fixed skill terminology                               |
+| 전음     | **Sound Transmission**                           | Fixed skill terminology; preserve the internal-energy mechanism when the source explains it, but do not add an explanation where it does not |
+| 삼전보    | **Three-Turn Footwork**                          | Named footwork; `보` is footwork here, not “Point”     |
 | 폐관수련   | **closed-door training**                         |                                                       |
 | 운기조식   | **circulate one's qi**                           | Usually better as a verb than a proper-name technique |
 | 비무     | **duel** / **spar**                              | Formal non-lethal martial contest                     |
@@ -288,6 +289,10 @@ Murim institutional vocabulary should remain consistent even when literal Korean
 | 사매     | **Junior Sister**                            |
 | 사숙     | **Martial Uncle**                            |
 | 사질     | **Martial Nephew**                           |
+| 큰형     | **eldest brother**                           |
+| 생도     | **cadet**                                    |
+| 전각     | **pavilion**                                 | Use “hall” only when established for a specific named building |
+| 대물남    | **Well-Endowed Man**                         | Euphemistic crude slang; do not intensify to explicit anatomical profanity |
 | 선배     | **Senior**                                   |
 | 은인     | **Benefactor**                               |
 
@@ -313,12 +318,6 @@ Avoid unnecessarily leaving Korean honorifics such as *sahyeong*, *sasuk*, *saji
 | 일격     | **One Strike**                         |
 
 The established skill index uses exactly these labels.
-
-### Other martial arts manuals
-
-| Korean | Preferred English |
-| ------ | ----------------- |
-| 삼전보 | **Three-Turn Footwork** |
 
 ### Jin Family's Spear Technique — established forms
 
@@ -505,8 +504,6 @@ Use Chinese geographical names in their established English forms rather than Ko
 | 팔천협    | **Eight Spring Gorge** |
 
 For Chapter 2's pleasure house, retain the proper name **Honghwaru**.
-
-For the clinic in Chapter 8, use **Medicine King Hall** for 약왕당.
 
 ---
 

@@ -210,6 +210,14 @@ or give praise. Check fidelity, omissions, additions, subjects, ambiguity,
 terminology, voice, hierarchy, humor, profanity, Markdown, footnotes, and spoilers.
 Treat deterministic QA warnings as leads, not proof.
 
+Audit in this order: (1) reversed or altered actions, negation, subjects, kinship,
+quantities, and causal/mechanical explanations; (2) omitted pragmatic cues and
+register shifts, including euphemisms made more explicit; (3) terminology and
+natural English. Semantic errors outrank stylistic improvements. Severity means:
+`critical` reverses or changes a scene fact, action, identity, negation, or plot
+consequence; `major` loses meaningful hierarchy, mechanism, characterization,
+or register; `minor` is localized wording or polish without changed meaning.
+
 Return exactly one JSON object and no Markdown fence:
 
 {{
@@ -277,6 +285,8 @@ def build_revision_packet(number: int, draft: str, review: dict) -> str:
 
 Revise the reviewed draft. Apply only source-supported findings, preserve meaning
 and ambiguity, and perform the required natural-English collocation pass.
+Fidelity has priority over punchier prose. Preserve exact actions, kinship,
+mechanisms, pragmatic cues, and the source's level of euphemism or profanity.
 
 Return exactly this two-part envelope with no surrounding Markdown fence. Keep
 the translation as ordinary Markdown; only dispositions are JSON:
