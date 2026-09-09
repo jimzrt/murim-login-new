@@ -1,0 +1,146 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "It wasn’t irritation. I was simply suspicious.",
+      "current": "I wasn’t merely annoyed. I was suspicious.",
+      "defect": "Negation flipped: the source denies irritation and allows only suspicion; “wasn’t merely annoyed” keeps annoyance and adds suspicion.",
+      "id": "F01",
+      "rationale": "짜증이 아니다 is a full negation, not a hedge under 단지/단지 …만이 아니다. 그저 … 뿐이다 limits the reaction to suspicion alone.",
+      "severity": "critical",
+      "source": "짜증이 아니다. 그저 의심이 들 뿐이다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "This was on an entirely different level from anything I had experienced.",
+      "current": "What I had experienced before was on an entirely different level.",
+      "defect": "Comparison subject reversed: the new killing intent, not prior monster killing intent, is the thing on another level.",
+      "id": "F02",
+      "rationale": "그것과는 marks prior experience as the baseline. The following 하급/중급 contrast treats Lee Seogeun’s killing intent as the stronger, more refined one.",
+      "severity": "major",
+      "source": "내가 겪어 온 그것과는 차원이 다르다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "At the Jin Family of Taiyuan gate guard’s tense question, the young man in the lead smiled. Hostility he could not hide seeped from his crooked, lifted lips.",
+      "current": "At the Jin Family of Taiyuan’s gate, the tense gatekeeper received an answer from the young man leading the group. His lips curled into a crooked smile, unmistakable hostility seeping through.",
+      "defect": "The narrated action is the lead youth smiling at the gate guard’s tense question, not the gatekeeper receiving an answer; location “at the gate” is also added.",
+      "id": "F03",
+      "rationale": "물음에 … 웃었다 is cause then smile. 수문위사 is the asker; 선두의 청년 is the one who smiles before “항산.”",
+      "severity": "major",
+      "source": "태원진가 수문위사의 긴장 섞인 물음에 선두의 청년이 웃었다. 비뚜름하게 올라간 입술에는 감출 수 없는 적의가 배어 있었다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "I was now a Murim martial artist who had learned a Peak cultivation technique and two First Rate martial arts.",
+      "current": "The person I was now was a Murim martial artist who had mastered a Peak cultivation technique and two First Rate martial arts.",
+      "defect": "익힌 is acquired/learned proficiency; “mastered” overstates stage and completeness.",
+      "id": "F04",
+      "rationale": "The same chapter places cultivation at the Third Stage and the two arts at the Fourth Stage, which does not support mastery.",
+      "severity": "major",
+      "source": "지금의 나는 절정 심법에 일류 무공을 두 개나 익힌 무림인이다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "had a glass of soju with the hyung from the goshiwon",
+      "current": "drank a glass of soju with the goshiwon manager",
+      "defect": "형 is an older male associate at the goshiwon; “manager” invents a role and identity the source does not state.",
+      "id": "F05",
+      "rationale": "Nothing in the chapter identifies 고시원 형 as the proprietor or manager.",
+      "severity": "major",
+      "source": "고시원 형이랑 소주 한잔 걸친 다음에"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "I was at a goshiwon, you bastard.[^1] with a first-use note that a goshiwon is a very small, cheap room-for-rent.",
+      "current": "I was at a goshiwon, you bastard.",
+      "defect": "고시원 is kept, but the binding footnote example for this living arrangement is missing.",
+      "id": "F06",
+      "rationale": "Footnote rules require a brief living-arrangement note at the first meaningful 고시원 occurrence.",
+      "severity": "minor",
+      "source": "‘고시원에 있었다. 임마.’"
+    },
+    {
+      "confidence": 0.87,
+      "correction": "That was when the rims of my eyes started to go red.",
+      "current": "That was when my eyes began to sting.",
+      "defect": "About-to-redden eye rims (onset of tears) is flattened into sting, already used for 코끝이 찡하다.",
+      "id": "F07",
+      "rationale": "눈시울이 붉어지려던 is a visible prelude to crying, not a sting.",
+      "severity": "minor",
+      "source": "눈시울이 붉어지려던 그때였다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“Just go here.”",
+      "current": "“Just take a piss here.”",
+      "defect": "싸다 is undifferentiated relief (often defecation) after 볼일; “piss” narrows and slightly sanitizes.",
+      "id": "F08",
+      "rationale": "변소/볼일 then 싸십시오 is crude permission to void on the spot, not specifically urination.",
+      "severity": "minor",
+      "source": "“그냥 싸십시오.”"
+    },
+    {
+      "confidence": 0.82,
+      "correction": "Son of a bitch.",
+      "current": "What a bastard.",
+      "defect": "개새끼 is stronger than “bastard” and is slightly sanitized.",
+      "id": "F09",
+      "rationale": "Profanity rules require matching strength; 개새끼 is a stronger insult than 새끼/bastard.",
+      "severity": "minor",
+      "source": "이런 개새끼."
+    },
+    {
+      "confidence": 0.85,
+      "correction": "Fwoosh! or a rustling scatter such as Flutter!",
+      "current": "Whoosh!",
+      "defect": "Wrong sound: 촤르륵 is papers rustling/scattering, not a whoosh.",
+      "id": "F10",
+      "rationale": "The next line is a bundle of papers hitting the face and spreading on the floor.",
+      "severity": "minor",
+      "source": "촤르륵!"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "just by dealing with idiot bandits like Cheon Ryeokbu",
+      "current": "just by dealing with idiots like Cheon Ryeokbu and his bandits",
+      "defect": "Adds “and his bandits,” turning type-comparison into that man plus his gang.",
+      "id": "F11",
+      "rationale": "같은 marks bandits of Cheon Ryeokbu’s kind, not necessarily Cheon Ryeokbu’s own band.",
+      "severity": "minor",
+      "source": "천력부 같은 얼뜨기 산적들만 처리해도"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "and now I’m working hard toward Logout",
+      "current": "now I’m working hard to log out",
+      "defect": "Glossary term Logout is rendered as the ordinary verb “log out.”",
+      "id": "F12",
+      "rationale": "Binding glossary maps 로그아웃 to Logout as the system/quest term.",
+      "severity": "minor",
+      "source": "로그아웃을 목표로 열심히 하고 있습니다"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "far more refined, more furtive, and more chilling",
+      "current": "His killing intent was far more refined, more discreet, and more chilling.",
+      "defect": "은밀하다 is covert/hidden, not socially “discreet.”",
+      "id": "F13",
+      "rationale": "The contrast is stealthy, creeping killing intent versus blunt monster malice.",
+      "severity": "minor",
+      "source": "훨씬 다듬어져 있고, 은밀하며 소름 끼친다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Hyuk Mujin, his abdomen pierced through, let out a rueful sigh.",
+      "current": "Hyuk Mujin, his abdomen pierced through, let out a groan.",
+      "defect": "탄식하다 is a rueful sigh/lament that cues his next line, not a pain-groan.",
+      "id": "F14",
+      "rationale": "탄식 matches the following appraisal “실력이 빨리도 느는군,” not an injury cry.",
+      "severity": "minor",
+      "source": "복부를 꿰뚫린 혁무진이 탄식했다."
+    }
+  ],
+  "summary": "Several semantic defects: a negated emotion is flipped, the gate youth’s smile is recast as the gatekeeper receiving an answer, killing-intent comparison is inverted in one sentence, 익히다 is overstated as mastery, and 고시원 형 is identified as a manager. Smaller register, onomatopoeia, and glossary/footnote misses remain.",
+  "version": 1
+}

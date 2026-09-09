@@ -100,8 +100,10 @@ def parse_revision_response(raw: str, review: dict) -> dict:
         return validate_revision(parse_json_object(text), review)
     translation_marker = "<<<TRANSLATION>>>"
     disposition_marker = "<<<DISPOSITIONS>>>"
-    if not text.startswith(translation_marker) or disposition_marker not in text:
+    marker_at = text.find(translation_marker)
+    if marker_at < 0 or disposition_marker not in text[marker_at:]:
         raise ValueError("revision response is missing required envelope markers")
+    text = text[marker_at:]
     translation, separator, disposition_text = text[len(translation_marker):].partition(disposition_marker)
     if not separator or not translation.strip():
         raise ValueError("revision response has an empty translation or disposition section")

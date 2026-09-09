@@ -1,0 +1,75 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored full negation: irritation is denied; only suspicion remains.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Comparison subject is Lee Seogeun’s killing intent, not prior monster experience.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Lead youth smiles at the gate guard’s tense question; hostility seeps from his lifted lips.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "익힌 rendered as learned, not mastered, matching Third/Fourth Stage.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "고시원 형 kept as the hyung from the goshiwon; no invented manager role.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "First goshiwon occurrence footnoted as a very small inexpensive room-for-rent.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "눈시울이 붉어지려던 kept as eye rims starting to go red, not sting.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "싸십시오 kept as undifferentiated voiding: Just go here.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "개새끼 matched in strength as Son of a bitch.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "촤르륵 rendered as Flutter for papers scattering, not a whoosh.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "천력부 같은 산적들 is type-comparison: idiot bandits like Cheon Ryeokbu.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F12",
+      "reason": "로그아웃 mapped to glossary term Logout.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F13",
+      "reason": "은밀하며 rendered as furtive, not socially discreet.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F14",
+      "reason": "탄식했다 rendered as a rueful sigh cueing his next line.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

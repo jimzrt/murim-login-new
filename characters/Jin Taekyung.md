@@ -1,10 +1,10 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 11
+- **Safe through:** Chapter 13
 - **Aliases:** None revealed
-- **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; newly logged into Murim as the youngest son of the Jin Family of Taiyuan
+- **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
 - **Voice:** First-person, conversational, dryly self-mocking; uses vivid trap-and-prey imagery, game jargon, and occasional profanity
 - **Relationships:** Son of a deceased father; supports his mother and younger sibling
-- **Continuity:** Reaches Second Rate Martial Artist, unlocks Jin Family’s Cultivation Technique, defeats a bandit leader during Tutorial—Stage 3, completes the final tutorial by circulating qi, gains Qi Sense, and arrives at the Jin Family of Taiyuan; after fighting Hyuk Mujin, he is taken to Medicine King Hall, feigns amnesia, discovers his residence’s martial arts library, practices footwork late at night, then enters the training hall, acquires Jin Family’s Spear Technique, combines it with the Manoeuvre Technique, completes the Unity of Self and Object achievement, and reaches Level 13
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–11
+- **Continuity:** Reaches Level 14 after three days in the training hall, raising the Jin Family’s Manoeuvre and Spear Techniques to the Fourth Stage while keeping the Cultivation Technique at the Third Stage. He exits confinement to face an accusation that his former self tried to rape a Mount Heng Sword Sect daughter, then receives a Duel Quest after Lee Seogeun confronts him with contrived witness statements.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–13
