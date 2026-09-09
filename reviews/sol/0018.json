@@ -1,0 +1,126 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "Going by the Head Elder’s expression, he looked like a muscular old man at a gym asking whether you’d eaten. But the content of his words was vicious beyond belief.",
+      "current": "Going by his expression, he looked like a muscular old man at a gym asking whether you’d eaten. But the content of his words was vicious beyond belief.",
+      "defect": "After the White Tiger Hall Leader’s line, “his” attaches to the wrong speaker. The gym-grandpa face and vicious speech are the Head Elder’s.",
+      "id": "F01",
+      "rationale": "백호당주 only says “노, 노야.” The 몸짱 할아버지 simile and 살벌한 내용 describe the Head Elder. Misassigned identity is a scene-fact error.",
+      "severity": "critical",
+      "source": "표정만 보면 밥 먹었냐 물어보는 헬스장 몸짱 할아버진데, 말하는 내용은 살벌하기 그지없다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "He wasn’t normally like this, which made him even scarier now that he was angry.",
+      "current": "He was frightening when angry. Much more frightening than usual.",
+      "defect": "Turns a man who is not usually like this into someone who is already frightening “as usual.”",
+      "id": "F02",
+      "rationale": "안 그러던 사람 marks Wikyung’s anger as uncharacteristic, not an intensification of a usual aura.",
+      "severity": "major",
+      "source": "안 그러던 사람이 화가 나니 더 무섭다."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "Fuck, I’m screwed.",
+      "current": "Fuck, this is bad.",
+      "defect": "Softens 좆 됐네 to vague disapproval.",
+      "id": "F03",
+      "rationale": "Rules require matching profanity strength. 좆 됐네 is “we’re/I’m fucked,” not “this is bad.”",
+      "severity": "major",
+      "source": "시발, 좆 됐네."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Preparing for the worst, I started edging toward the door",
+      "current": "I slowly turned toward the door, preparing for the worst",
+      "defect": "슬금슬금 is stealthy edging, not merely slow turning; the comic sneak-out beat is lost.",
+      "id": "F04",
+      "rationale": "The narrator is already sneaking for the exit when the Head Elder speaks. Slowly ≠ furtively.",
+      "severity": "major",
+      "source": "최악의 상황을 대비해 슬금슬금 문 쪽으로 몸을 돌리는"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "That bastard was bald, and he couldn’t read the room either.",
+      "current": "That bastard was bald, and he didn’t have a shred of sense, either.",
+      "defect": "눈치 is failure to read the room, the punchline after he blurts 냉큼 into Wikyung’s frost. “Sense” is generic.",
+      "id": "F05",
+      "rationale": "The joke pairs no hair with no 눈치, set up by speaking 냉큼 in a chilling atmosphere.",
+      "severity": "major",
+      "source": "저 새끼는 모발도 없는데 눈치까지 없네."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Those men not only framed a direct-line member of the family, but even argued we should hand him over to the enemy.",
+      "current": "Those men not only slandered a direct-line member of the family, but also claimed that we should hand him over to our enemies.",
+      "defect": "모함 is framing/false implication, not mere slander.",
+      "id": "F06",
+      "rationale": "The council charge is a poisoning frame-up. Slander weakens the accusation the Head Elder is pressing.",
+      "severity": "major",
+      "source": "저들은 가문의 직계를 모함하는 것으로도 모자라 적들에게 넘기자고 주장했는데"
+    },
+    {
+      "confidence": 0.87,
+      "correction": "Still, with masters like Jin Wikyung and Wipeng, it was a fight worth attempting.",
+      "current": "Still, if we had masters like Jin Wikyung and Wipeng, it was a battle we might be able to win.",
+      "defect": "해 볼 만한 싸움 is a fight worth attempting, not a fight they might win.",
+      "id": "F07",
+      "rationale": "The next Peak-count (3 vs 5) undercuts any “might win.” The source only says the fight is worth trying.",
+      "severity": "major",
+      "source": "그래도 진위경과 위팽 같은 고수들이 있다면 해 볼 만한 싸움이다."
+    },
+    {
+      "confidence": 0.85,
+      "correction": "The moment I saw the corners of Jin Wikyung’s mouth quiver and the Head Elder’s strange smile",
+      "current": "The moment I saw Jin Wikyung’s trembling smile and the Head Elder’s strange grin",
+      "defect": "Adds a smile. Source is Wikyung’s quivering mouth-corners plus the Head Elder’s odd smile.",
+      "id": "F08",
+      "rationale": "Wikyung has stayed stiff-faced. 입꼬리 떨림 is not 웃음; making him smile changes the election-stump tableau.",
+      "severity": "major",
+      "source": "파르르 떨리는 진위경의 입꼬리와 대장로의 묘한 웃음을 보는 순간"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "Was that talk or a fart?",
+      "current": "What was that supposed to be, a proposition or a fart?",
+      "defect": "말 is speech/talk, not a proposition.",
+      "id": "F09",
+      "rationale": "The insult is 말 vs 방구. “Proposition” upgrades the register and changes the joke.",
+      "severity": "minor",
+      "source": "저게 말이냐, 방구냐."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "The Head Elder laughed heartily.",
+      "current": "The Head Elder threw back his head and laughed.",
+      "defect": "Adds a head-throw the source does not have. 껄껄 is a hearty laugh only.",
+      "id": "F10",
+      "rationale": "Fidelity forbids inventing physical actions to punch up a laugh.",
+      "severity": "minor",
+      "source": "진위경의 대답에 대장로가 껄껄 웃었다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Fuck, I can’t figure him out at all.",
+      "current": "Fuck, I can’t read him at all.",
+      "defect": "도저히 모르겠다 is “I can’t figure him out.” “Can’t read him” duplicates and pre-empts the later 표정을 못 읽겠어.",
+      "id": "F11",
+      "rationale": "The chapter then lists other NPCs’ readable faces and only after that concludes he can’t read the Head Elder’s expression.",
+      "severity": "minor",
+      "source": "‘시바, 도저히 모르겠다.’"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "we are already too late to reverse it.",
+      "current": "we are too late to put it back in its sheath.",
+      "defect": "되돌리다 is reverse/undo. The sheath is an added mechanism.",
+      "id": "F12",
+      "rationale": "The sword-hilt metaphor is in 칼자루/뽑혔는지. Sheathing is not in the source.",
+      "severity": "minor",
+      "source": "우리가 되돌리기에는 늦었소."
+    }
+  ],
+  "summary": "Several character and register errors: Head Elder’s gym-grandpa aside can attach to the White Tiger Hall Leader; Wikyung’s unusual anger, Taekyung’s sneaking, 모함, and 좆 됐네 are weakened; Wikyung is given a smile the source does not state.",
+  "version": 1
+}

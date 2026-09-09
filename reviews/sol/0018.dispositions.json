@@ -1,0 +1,65 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Attached the gym-grandpa face and vicious speech to the Head Elder after the White Tiger Hall Leader’s line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored 안 그러던 사람: his anger is uncharacteristic, which is why it is scarier.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Matched 좆 됐네 to I’m screwed rather than this is bad.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "슬금슬금 is furtive edging toward the door, not a slow turn.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "눈치 is failing to read the room after he blurts into Wikyung’s frost.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "모함 is framing; also restored 모자라 as even argued we should hand him over.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "해 볼 만한 싸움 is a fight worth attempting, not one they might win.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Kept Wikyung’s quivering mouth-corners; only the Head Elder has the strange smile.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Restored 말 vs 방구 as talk or a fart.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "껄껄 is a hearty laugh; removed the invented head-throw.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "도저히 모르겠다 is I can’t figure him out, distinct from the later unread expression.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F12",
+      "reason": "되돌리다 is reverse; dropped the added sheath.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

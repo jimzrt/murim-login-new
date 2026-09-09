@@ -2,12 +2,12 @@
 
 Updated: 2026-09-09
 
-- Last completed: 17
-- Next chapter: 18
-- Current block: 15–19 (3/5)
-- Latest translation: `translations/0017.md`
-- Latest summary: `summaries/beats/0017.md`
-- Safe profiles through: chapter 17
+- Last completed: 18
+- Next chapter: 19
+- Current block: 15–19 (4/5)
+- Latest translation: `translations/0018.md`
+- Latest summary: `summaries/beats/0018.md`
+- Safe profiles through: chapter 18
 
 
 ## Current Block
@@ -33,6 +33,12 @@ but the Status Window still displays ten years. The Elder Council summons him
 to question him about Lee Seogeun’s poisoning and the Mount Heng crisis. Jin
 Wikyung guides him through Sound Transmission while the council’s senior faction
 blames Taekyung and the Head Elder observes from the seat of honor.
+
+In chapter 18, the council rejects handing Taekyung over and pivots to war
+preparation after the Head Elder publicly backs Wikyung. The Jin Family is
+badly outmatched by Mount Heng, which then declares war. Wikyung seals the
+family grounds, while the System creates the Main Quest — War, marks Taekyung
+a public enemy, and warns that fleeing will incur severe penalties.
 
 
 ## Open Questions

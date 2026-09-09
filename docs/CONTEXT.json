@@ -1,7 +1,6 @@
 {
-  "version": 1,
-  "safe_through": 17,
-  "continuity_sources": [16, 17],
+  "safe_through": 18,
+  "continuity_sources": [17, 18],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -28,8 +27,10 @@
     "An unidentified energy occupies Taekyung’s dantian. It is more powerful than his ten years of internal energy, rejects contact, and nearly consumes the energy he sends toward it.",
     "Cultivation training raises Taekyung’s internal energy slightly and increases Sinews and Bones by 1 each, but his Status Window still displays ten years of internal energy.",
     "Jin Wikyung guides Taekyung through the Lee Seogeun poisoning interrogation with Sound Transmission and remains on his side during the Elder Council’s factional pressure.",
-    "The Elder Council’s senior faction blames Taekyung for disorderly conduct, disgracing the family, and provoking the Mount Heng Sword Sect’s prized treasure; the accusation remains unresolved.",
-    "Taekyung confirms through the System that he has no poison-related martial arts, abilities, or Items."
+    "The Elder Council’s senior faction blames Taekyung for disorderly conduct, disgracing the family, and provoking the Mount Heng Sword Sect’s prized treasure; Taekyung confirms through the System that he has no poison-related martial arts, abilities, or Items.",
+    "At the council, Jin Wikyung rejects handing Taekyung over and calls for war; the Head Elder backs him, condemns the faction’s framing, and publicly rallies the family around Wikyung, though his motives remain unclear.",
+    "The Jin Family has roughly 200 martial artists, fewer than 20 First Rate masters outside the wider senior group, and three Peak masters; Mount Heng has at least 300 martial artists, more than 50 First Rate masters, and five Peak masters.",
+    "Mount Heng has declared war on the Jin Family. The System establishes a War relationship, designates Taekyung a public enemy, creates the Main Quest — War, and warns that fleeing will incur severe penalties; Wikyung seals the family grounds against entry or exit without his seal."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

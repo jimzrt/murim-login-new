@@ -1,10 +1,10 @@
 # Head Elder
 
-- **Safe through:** Chapter 17
+- **Safe through:** Chapter 18
 - **Aliases:** Name not yet revealed
 - **Role:** Head Elder of the Jin Family of Taiyuan; senior family authority
-- **Personality:** Not yet established
+- **Personality:** Inscrutable, politically shrewd, and ruthless in council; his motives remain unclear
 - **Voice:** Strange and resonant; shifts between old and young, rough and smooth
 - **Relationships:** Senior authority over the Jin Family’s family council
-- **Continuity:** After years of withdrawing from the world, he appears at Jin Wikyung’s secret late-night family-council meeting and identifies the Mount Heng Sword Sect as the subject of the summons. At the following council, he sits beside Wikyung in the seat of honor as Taekyung’s great-uncle and the Jin Family’s most senior elder, silently observing the interrogation and the factional dispute.
-- **Sources:** Korean source and accepted translation, Chapters 16–17
+- **Continuity:** After years of withdrawing from the world, he appears at Jin Wikyung’s secret late-night family-council meeting and identifies the Mount Heng Sword Sect as the subject of the summons. At the following council, he sits beside Wikyung in the seat of honor as Taekyung’s great-uncle and the Jin Family’s most senior elder, silently observing the interrogation and the factional dispute. When the senior faction proposes handing Taekyung over, he condemns the idea, suggests disciplining those who framed him, and then theatrically backs Wikyung as the family’s effective head. His public rally turns the meeting toward war preparation and leaves Taekyung suspecting an election-like power play, but the Head Elder’s purpose remains unknown.
+- **Sources:** Korean source and accepted translation, Chapters 16–18
