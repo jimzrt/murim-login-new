@@ -30,8 +30,22 @@ class ContextPacketTest(unittest.TestCase):
         self.assertNotIn("active_continuity", revision_packet)
         self.assertIn("Structured findings", revision_packet)
         self.assertIn("Semantic errors outrank stylistic improvements", review_packet)
+        self.assertLess(revision_packet.find("## Korean source"), revision_packet.find("<<<TRANSLATION>>>"))
+        self.assertIn("<<<END>>>", revision_packet)
+        self.assertIn("After <<<END>>>, stop immediately.", revision_packet)
+
+    def test_durable_context_requires_version(self):
+        problems = context.durable_context_problems(
+            {"safe_through": 18, "continuity_sources": [18]},
+            18,
+            2,
+        )
+        self.assertTrue(any("version" in item for item in problems))
+        problems = context.durable_context_problems(self.active() | {"safe_through": 5}, 5, 2)
+        self.assertEqual(problems, [])
 
     def test_confirmed_terms_are_retrieved_by_exact_source_match(self):
+
         entries = context.exact_glossary_entries("큰형 생도 삼전보 대물남 전각 전음")
         mapping = {item["korean"]: item["english"] for item in entries}
         self.assertIn("eldest brother", mapping["큰형"])

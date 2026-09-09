@@ -49,7 +49,7 @@ class WorkflowTest(unittest.TestCase):
             "# Translation State\n\n- Last completed: 1\n- Next chapter: 2\n", encoding="utf-8"
         )
         (self.root / "docs" / "CONTEXT.json").write_text(
-            '{"safe_through":1,"continuity_sources":[1]}\n', encoding="utf-8"
+            json.dumps({"version":1,"safe_through":1,"continuity_sources":[1],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n", encoding="utf-8"
         )
         with self.assertRaises(SystemExit):
             workflow.command_accept(1)
@@ -63,7 +63,37 @@ class WorkflowTest(unittest.TestCase):
         recorded = json.loads(paths["state"].read_text(encoding="utf-8"))
         self.assertEqual(recorded["stage"], "ACCEPTED")
 
+    def test_accept_rejects_context_without_version(self):
+        state, paths = workflow.load(1)
+        paths["revised"].parent.mkdir(parents=True, exist_ok=True)
+        paths["revised"].write_text("# Chapter 1\n\nFinished.\n", encoding="utf-8")
+        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
+        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
+        paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
+        paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
+        paths["beat"].parent.mkdir(parents=True, exist_ok=True)
+        paths["beat"].write_text(
+            "# Chapter 1\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
+            encoding="utf-8",
+        )
+        state["stage"] = "REVISED"
+        state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
+        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
+        state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
+        workflow.atomic_json(paths["state"], state)
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 1\n- Next chapter: 2\n", encoding="utf-8"
+        )
+        (self.root / "docs" / "CONTEXT.json").write_text(
+            '{"safe_through":1,"continuity_sources":[1]}\n', encoding="utf-8"
+        )
+        with self.assertRaises(SystemExit) as error:
+            workflow.command_accept(1)
+        self.assertIn("version", str(error.exception))
+        self.assertFalse(paths["translation"].exists())
+
     def test_existing_completed_translation_reconciles_as_accepted(self):
+
         translation = self.root / "translations" / "0000.md"
         translation.parent.mkdir()
         translation.write_text("# Chapter 0\n\nAccepted.\n", encoding="utf-8")
@@ -140,7 +170,7 @@ class WorkflowTest(unittest.TestCase):
             "# Translation State\n\n- Last completed: 4\n- Next chapter: 5\n", encoding="utf-8"
         )
         (self.root / "docs" / "CONTEXT.json").write_text(
-            '{"safe_through":4,"continuity_sources":[4]}\n', encoding="utf-8"
+            json.dumps({"version":1,"safe_through":4,"continuity_sources":[4],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n", encoding="utf-8"
         )
         exact = {
             "exact": True,

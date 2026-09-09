@@ -44,26 +44,56 @@ def estimated_tokens(text: str) -> int:
     return (len(text.encode("utf-8")) + 3) // 4
 
 
+CONTEXT_REQUIRED_KEYS = (
+    "version",
+    "safe_through",
+    "continuity_sources",
+    "active_continuity",
+    "open_questions",
+    "temporary_decisions",
+)
+
+
+def durable_context_problems(value: dict, number: int, source_limit: int, *, prior: bool = False) -> list[str]:
+    """Return schema problems for the durable context ledger at chapter `number`."""
+    problems: list[str] = []
+    missing = [key for key in CONTEXT_REQUIRED_KEYS if key not in value]
+    if missing:
+        problems.append("missing " + ", ".join(missing))
+    if value.get("version") != 1:
+        problems.append("version must be 1")
+    if prior:
+        expected = number - 1
+        if value.get("safe_through") != expected:
+            problems.append(f"safe_through must be {expected} before drafting chapter {number}")
+        upper = expected
+    else:
+        if value.get("safe_through") != number:
+            problems.append(f"safe_through must be {number}")
+        upper = number
+    sources = value.get("continuity_sources")
+    if not isinstance(sources, list) or len(sources) > source_limit:
+        problems.append("continuity_sources must be a list within the configured limit")
+    elif any(not isinstance(item, int) or item < 0 or item > upper for item in sources):
+        problems.append("continuity_sources must contain prior chapter numbers")
+    for key in ("active_continuity", "open_questions", "temporary_decisions"):
+        items = value.get(key)
+        if not isinstance(items, list) or any(not isinstance(item, str) or not item.strip() for item in items):
+            problems.append(f"{key} must be an array of nonempty strings")
+    return problems
+
+
 def load_active_context(number: int) -> dict:
     path = ROOT / "docs" / "CONTEXT.json"
     config = workflow_config()
     if path.stat().st_size > config["context_max_bytes"]:
         raise ValueError(f"{path} exceeds context_max_bytes")
     value = read_json(path)
-    required = {"version", "safe_through", "continuity_sources", "active_continuity", "open_questions", "temporary_decisions"}
-    missing = required.difference(value)
-    if missing:
-        raise ValueError("CONTEXT.json is missing: " + ", ".join(sorted(missing)))
-    if value["safe_through"] != number - 1:
-        raise ValueError(f"CONTEXT.json safe_through must be {number - 1} before drafting chapter {number}")
-    sources = value["continuity_sources"]
-    if not isinstance(sources, list) or len(sources) > config["continuity_source_limit"]:
-        raise ValueError("continuity_sources must be a list within the configured limit")
-    if any(not isinstance(item, int) or item < 0 or item >= number for item in sources):
-        raise ValueError("continuity_sources must contain prior chapter numbers")
-    for key in ("active_continuity", "open_questions", "temporary_decisions"):
-        if not isinstance(value[key], list) or any(not isinstance(item, str) or not item.strip() for item in value[key]):
-            raise ValueError(f"{key} must be an array of nonempty strings")
+    problems = durable_context_problems(
+        value, number, config["continuity_source_limit"], prior=True,
+    )
+    if problems:
+        raise ValueError("CONTEXT.json is invalid: " + "; ".join(problems))
     return value
 
 
@@ -376,22 +406,8 @@ and ambiguity, and perform the required natural-English collocation pass.
 Fidelity has priority over punchier prose. Preserve exact actions, kinship,
 mechanisms, pragmatic cues, and the source's level of euphemism or profanity.
 
-Return exactly this two-part envelope with no surrounding Markdown fence. Keep
-the translation as ordinary Markdown; only dispositions are JSON:
-
-<<<TRANSLATION>>>
-# Chapter {number}
-
-Complete revised reading copy here.
-<<<DISPOSITIONS>>>
-{{
-  "dispositions": [
-    {{"finding_id": "F01", "status": "applied|rejected|unresolved", "reason": "specific reason"}}
-  ]
-}}
-
-Include exactly one disposition for every finding. Do not put audit notes inside
-the translation section.
+Start from the reviewed draft. Change only what the findings require, plus the
+collocation pass. Do not retranslate the chapter from scratch.
 
 ## Korean source
 
@@ -422,6 +438,23 @@ the translation section.
 ## Present-character profiles
 
 {profiles_text(profiles)}
+
+## Output format
+
+Reply with only the envelope below. Keep the translation as ordinary Markdown;
+only dispositions are JSON. Do not copy the Korean source, draft, findings,
+rules, glossary, profiles, or these instructions into the output. Do not wrap
+the envelope in a Markdown fence. After <<<END>>>, stop immediately.
+
+<<<TRANSLATION>>>
+# Chapter {number}
+<complete revised reading copy>
+<<<DISPOSITIONS>>>
+{{"dispositions":[{{"finding_id":"F01","status":"applied|rejected|unresolved","reason":"specific reason"}}]}}
+<<<END>>>
+
+Include exactly one disposition for every finding. Do not put audit notes inside
+the translation section.
 """
 
 

@@ -280,7 +280,11 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
     number = state["chapter"]
     if state["stage"] == "REVISED":
         beat = p["beat"].relative_to(ROOT)
-        durable = f"update {beat}, docs/STATE.md, docs/CONTEXT.json, and profiles from this chapter only"
+        durable = (
+            f"update {beat}, docs/STATE.md, docs/CONTEXT.json "
+            "(keep version, continuity_sources, active_continuity, open_questions, "
+            "and temporary_decisions), and profiles from this chapter only"
+        )
         if interval_due(number, "summary_interval") and not checkpoint_exists(number):
             return f"{durable}, then: python tools/workflow.py summarize {number}"
         if interval_due(number, "checkpoint_review_interval"):
@@ -336,7 +340,11 @@ def command_drafted(number: int) -> None:
     save(state, p, "DRAFTED", draft_sha256=digest(p["draft"]), draft_qa_sha256=digest(p["draft_qa"]))
 
 
-def run_omp(packet: Path, model: str, timeout: int) -> tuple[str, dict]:
+def omp_log_path(number: int, phase: str) -> Path:
+    return ROOT / ".work" / f"{number:04d}" / "omp" / f"{phase}.jsonl"
+
+
+def run_omp(packet: Path, model: str, timeout: int, log_path: Path | None = None) -> tuple[str, dict]:
     try:
         from tools.omp_json import OmpJsonError, run_json_command
     except ModuleNotFoundError:
@@ -358,7 +366,9 @@ def run_omp(packet: Path, model: str, timeout: int) -> tuple[str, dict]:
         f"@{packet}",
     ]
     try:
-        output, metrics = run_json_command(command, cwd=ROOT, requested_model=model, timeout=timeout)
+        output, metrics = run_json_command(
+            command, cwd=ROOT, requested_model=model, timeout=timeout, log_path=log_path,
+        )
     except OmpJsonError as error:
         raise SystemExit(str(error)) from None
     metrics["input_bytes"] = packet.stat().st_size
@@ -370,7 +380,10 @@ def command_draft(number: int) -> None:
     require(state, "CONTEXT_READY")
     if digest(p["context"]) != state["artifacts"]["context_sha256"]:
         raise SystemExit("context packet changed after CONTEXT_READY; run prepare again")
-    output, metrics = run_omp(p["context"], project_config()["draft_model"], 960)
+    output, metrics = run_omp(
+        p["context"], project_config()["draft_model"], 960, log_path=omp_log_path(number, "draft"),
+    )
+    atomic_text(p["work"] / "draft-raw.txt", output)
     atomic_text(p["draft"], output)
     record_metric(p, "draft_model", **metrics)
     command_drafted(number)
@@ -468,7 +481,13 @@ def command_revise(number: int) -> None:
     packet = build_revision_packet(number, p["draft"].read_text(encoding="utf-8"), review)
     enforce_packet_budget("revision", packet)
     atomic_text(p["revision_context"], packet)
-    raw, metrics = run_omp(p["revision_context"], project_config()["revision_model"], 960)
+    raw, metrics = run_omp(
+        p["revision_context"],
+        project_config()["revision_model"],
+        960,
+        log_path=omp_log_path(number, "revision"),
+    )
+    atomic_text(p["work"] / "revision-raw.txt", raw)
     try:
         revision = parse_revision_response(raw, review)
     except ValueError as error:
@@ -499,7 +518,13 @@ def command_summarize(number: int) -> None:
         raise SystemExit(str(error)) from None
     packet_tokens = enforce_packet_budget("summary", packet)
     atomic_text(p["summary_packet"], packet)
-    raw, metrics = run_omp(p["summary_packet"], project_config()["summary_model"], 960)
+    raw, metrics = run_omp(
+        p["summary_packet"],
+        project_config()["summary_model"],
+        960,
+        log_path=omp_log_path(number, "summary"),
+    )
+    atomic_text(p["work"] / "summary-raw.txt", raw)
     interval = int(project_config()["summary_interval"])
     start = number - interval + 1
     try:
@@ -532,14 +557,17 @@ def context_claims_completion(number: int) -> bool:
     path = ROOT / "docs" / "CONTEXT.json"
     if not path.exists() or path.stat().st_size > project_config()["context_max_bytes"]:
         return False
-    value = json.loads(path.read_text(encoding="utf-8"))
-    sources = value.get("continuity_sources")
-    return bool(
-        value.get("safe_through") == number
-        and isinstance(sources, list)
-        and len(sources) <= project_config()["continuity_source_limit"]
-        and all(isinstance(item, int) and 0 <= item <= number for item in sources)
-    )
+    try:
+        value = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return False
+    if not isinstance(value, dict):
+        return False
+    try:
+        from tools.context import durable_context_problems
+    except ModuleNotFoundError:
+        from context import durable_context_problems
+    return not durable_context_problems(value, number, project_config()["continuity_source_limit"])
 
 
 def checkpoint_exists(number: int) -> bool:
@@ -628,7 +656,13 @@ Return this exact shape with no Markdown fence:
 """
     enforce_packet_budget("checkpoint", packet)
     atomic_text(p["checkpoint_packet"], packet)
-    raw_report, metrics = run_omp(p["checkpoint_packet"], project_config()["checkpoint_model"], 960)
+    raw_report, metrics = run_omp(
+        p["checkpoint_packet"],
+        project_config()["checkpoint_model"],
+        960,
+        log_path=omp_log_path(number, "checkpoint"),
+    )
+    atomic_text(p["work"] / "checkpoint-raw.txt", raw_report)
     try:
         from tools.model_io import parse_json_object, review_markdown, validate_review
     except ModuleNotFoundError:
@@ -721,7 +755,10 @@ def command_accept(number: int) -> None:
             f"docs/STATE.md must say '- Last completed: {number}' and '- Next chapter: {number + 1}' before acceptance"
         )
     if not context_claims_completion(number):
-        raise SystemExit(f"docs/CONTEXT.json must be bounded and safe_through must equal {number}")
+        raise SystemExit(
+            f"docs/CONTEXT.json must stay bounded, keep version and required keys, "
+            f"and set safe_through to {number}"
+        )
     if not checkpoint_exists(number):
         raise SystemExit("five-chapter summary is missing for this checkpoint chapter")
     if not p["beat"].exists():

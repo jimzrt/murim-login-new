@@ -70,6 +70,8 @@ class EventCapture:
         self.requested_model = requested_model
         self.records: list[dict] = []
         self.final_text = ""
+        self.stop_reasons: list[str] = []
+        self.used_error_text = False
 
     def consume(self, event: dict) -> None:
         if event.get("type") != "message_end":
@@ -80,14 +82,27 @@ class EventCapture:
         record = _usage_record(message)
         self.records.append(record)
         text = _message_text(message)
-        if message.get("stopReason") != "error" and text.strip():
+        stop = message.get("stopReason")
+        if isinstance(stop, str) and stop:
+            self.stop_reasons.append(stop)
+            record["stop_reason"] = stop
+        if not text.strip():
+            return
+        if stop != "error":
             self.final_text = text
+            self.used_error_text = False
+        elif not self.final_text.strip():
+            self.final_text = text
+            self.used_error_text = True
 
     def finish(self, *, require_output: bool = True) -> tuple[str, dict]:
         if not self.records:
             raise OmpJsonError("OMP JSON stream contained no assistant usage records")
         if require_output and not self.final_text.strip():
-            raise OmpJsonError("OMP JSON stream contained no final assistant text")
+            reasons = ", ".join(self.stop_reasons) or "unknown"
+            raise OmpJsonError(
+                f"OMP JSON stream contained no final assistant text (stopReason={reasons})"
+            )
         models: dict[str, dict] = {}
         for record in self.records:
             key = f"{record['provider']}/{record['model']}"
@@ -143,6 +158,10 @@ class EventCapture:
             **totals,
             "models": models,
         }
+        if self.stop_reasons:
+            metrics["stop_reasons"] = list(self.stop_reasons)
+        if self.used_error_text:
+            metrics["recovered_from_error_stop"] = True
         return self.final_text.strip() + ("\n" if self.final_text.strip() else ""), metrics
 
 
@@ -163,23 +182,58 @@ def parse_json_lines(lines: Iterable[str], requested_model: str, on_event: Calla
     return capture.finish()
 
 
+def _decode_captured(value: object) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return str(value)
+
+
+def write_model_logs(log_path: Path | None, stdout: str, stderr: str = "", parsed: str | None = None) -> None:
+    if log_path is None:
+        return
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    log_path.write_text(stdout, encoding="utf-8")
+    if stderr.strip():
+        log_path.with_name(log_path.stem + ".stderr.txt").write_text(stderr, encoding="utf-8")
+    if parsed is not None:
+        log_path.with_name(log_path.stem + ".txt").write_text(parsed, encoding="utf-8")
+
+
 def run_json_command(
     command: list[str],
     *,
     cwd: Path,
     requested_model: str,
     timeout: int,
+    log_path: Path | None = None,
 ) -> tuple[str, dict]:
     started = time.monotonic()
     try:
         result = subprocess.run(command, cwd=cwd, text=True, capture_output=True, timeout=timeout)
     except subprocess.TimeoutExpired as error:
-        raise OmpJsonError(f"model call timed out: {error}") from None
+        stdout = _decode_captured(error.stdout)
+        stderr = _decode_captured(error.stderr)
+        write_model_logs(log_path, stdout, stderr)
+        extra = f"\nevents saved: {log_path}" if log_path else ""
+        raise OmpJsonError(f"model call timed out: {error}{extra}") from None
+    stdout = result.stdout or ""
+    stderr = result.stderr or ""
+    write_model_logs(log_path, stdout, stderr)
     if result.returncode:
-        raise OmpJsonError(result.stderr.strip() or result.stdout.strip() or "model call failed")
-    output, metrics = parse_json_lines(result.stdout.splitlines(), requested_model)
+        extra = f"\nevents saved: {log_path}" if log_path else ""
+        raise OmpJsonError((stderr.strip() or stdout.strip() or "model call failed") + extra)
+    try:
+        output, metrics = parse_json_lines(stdout.splitlines(), requested_model)
+    except OmpJsonError as error:
+        extra = f"\nevents saved: {log_path}" if log_path else ""
+        raise OmpJsonError(str(error) + extra) from None
+    write_model_logs(log_path, stdout, stderr, parsed=output)
     metrics.update({
         "elapsed_seconds": round(time.monotonic() - started, 3),
         "output_bytes": len(output.encode("utf-8")),
     })
+    if log_path is not None:
+        metrics["event_log"] = str(log_path)
     return output, metrics

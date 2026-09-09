@@ -31,10 +31,11 @@ not load the bulk source, full compendium, archive directories, or
 
 ## Model-Facing Context
 
-- `docs/CONTEXT.json` is the bounded active state. Keep only active continuity,
-  unresolved questions, temporary decisions, and zero to two explicit
-  `continuity_sources`. Move stable facts to profiles/compendium and resolved
-  plot to summaries.
+- `docs/CONTEXT.json` is the bounded active state. Keep `version`, `safe_through`,
+  `continuity_sources`, `active_continuity`, `open_questions`, and
+  `temporary_decisions`. Keep only active continuity, unresolved questions,
+  temporary decisions, and zero to two explicit `continuity_sources`. Move
+  stable facts to profiles/compendium and resolved plot to summaries.
 - Draft receives the source, complete rules, exact glossary matches, matching
   profiles, bounded active state, latest summary, and only the explicitly named
   continuity reading copies.
@@ -48,9 +49,9 @@ not load the bulk source, full compendium, archive directories, or
 
 ## Gates
 
-- Luna drafts; deterministic QA must pass; Sol returns validated structured
-  findings; Luna returns the revised reading copy plus one disposition per
-  finding; final QA must pass.
+- The draft model drafts; deterministic QA must pass; the review model returns
+  validated structured findings; the revision model returns the revised reading
+  copy plus one disposition per finding; final QA must pass.
 - Unresolved critical or major findings block acceptance. Reviews and
   dispositions are durable JSON with generated Markdown reading reports.
 - At `REVISED`, update durable terminology, affected safe profiles,

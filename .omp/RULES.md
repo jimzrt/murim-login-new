@@ -16,3 +16,6 @@
 - Under `tools/run_next.py`, stop at `ACCEPTED`; the wrapper records coordinator usage and commits.
 - Stop on command failure, stale hashes, ambiguity, or `COMMITTED`.
 - For accepted-range re-audits, use `tools/audit_range.py`; never reopen normal chapter transactions.
+- docs/CONTEXT.json must keep version, safe_through, continuity_sources, active_continuity, open_questions, and temporary_decisions.
+- Always pass timeout=3600 on bash calls to workflow.py.
+

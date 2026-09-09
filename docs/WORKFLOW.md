@@ -12,7 +12,9 @@ packet-budget failures, QA failures, and unresolved major findings are stop
 conditions. `python tools/run_next.py` resumes an in-flight transaction even
 if `docs/STATE.md` already names the next chapter; do not start that later
 chapter until the current one is committed. Invalid model JSON saves the raw
-output under `.work/NNNN/` as `*-raw.txt`.
+output under `.work/NNNN/` as `*-raw.txt`. Every model call also writes its OMP
+JSON event stream under `.work/NNNN/omp/<phase>.jsonl`, with parsed text beside
+it. Use those logs when a revision aborts with `stopReason=error`.
 
 ## Bounded Context Hygiene
 

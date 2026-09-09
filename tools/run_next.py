@@ -32,6 +32,8 @@ COORDINATOR_SYSTEM = (
     "Never background a command, never use hub "
     "or task, and never start a nested agent. If status asks for checkpoint dispositions, "
     "edit the reading copies and write that JSON yourself, then run checkpointed. "
+    "When editing docs/CONTEXT.json, keep every required key: version, safe_through, "
+    "continuity_sources, active_continuity, open_questions, and temporary_decisions. "
     "Do not commit and do not run workflow.py committed."
 )
 
@@ -390,38 +392,75 @@ def print_cost_report(chapter: int) -> None:
     print(usage_line("Project total", report["totals"]), flush=True)
 
 
+def coordinator_log_path(chapter: int) -> Path:
+    return ROOT / ".work" / f"{chapter:04d}" / "omp" / "coordinator.jsonl"
+
+
+def unexpected_coordinator_commit(starting_head: str, chapter: int) -> None:
+    head = git("rev-parse", "--verify", "HEAD")
+    if head == starting_head:
+        return
+    subject = git("log", "-1", "--format=%s")
+    if subject == f"Accept Chapter {chapter}":
+        raise SystemExit(
+            "coordinator committed unexpectedly; exact coordinator usage was not checkpointed"
+        )
+    print(
+        f"HEAD moved during chapter {chapter} ({starting_head[:12]} → {head[:12]}): "
+        f"{subject}. Treating as an external commit and continuing the wrapper checkpoint.",
+        flush=True,
+    )
+
+
 def run_coordinator(chapter: int, model: str) -> dict:
     command = coordinator_command(chapter, model)
     capture = EventCapture(model)
     renderer = ProgressRenderer()
     started = time.monotonic()
+    log_path = coordinator_log_path(chapter)
+    log_path.parent.mkdir(parents=True, exist_ok=True)
     process = subprocess.Popen(command, cwd=ROOT, text=True, stdout=subprocess.PIPE)
     assert process.stdout is not None
-    try:
-        for line_number, line in enumerate(process.stdout, 1):
-            if not line.strip():
-                continue
-            try:
-                event = json.loads(line)
-            except json.JSONDecodeError as error:
-                process.terminate()
-                raise OmpJsonError(f"invalid OMP JSON event on line {line_number}: {error}") from None
-            if not isinstance(event, dict):
-                process.terminate()
-                raise OmpJsonError(f"OMP JSON event on line {line_number} is not an object")
-            capture.consume(event)
-            render_event(event, renderer)
-            reject_forbidden_tool(event)
-    except BaseException:
-        process.terminate()
-        raise
-    finally:
-        return_code = process.wait()
+    with log_path.open("w", encoding="utf-8") as log_file:
+        try:
+            for line_number, line in enumerate(process.stdout, 1):
+                log_file.write(line)
+                log_file.flush()
+                if not line.strip():
+                    continue
+                try:
+                    event = json.loads(line)
+                except json.JSONDecodeError as error:
+                    process.terminate()
+                    raise OmpJsonError(
+                        f"invalid OMP JSON event on line {line_number}: {error}\n"
+                        f"events saved: {log_path}"
+                    ) from None
+                if not isinstance(event, dict):
+                    process.terminate()
+                    raise OmpJsonError(
+                        f"OMP JSON event on line {line_number} is not an object\n"
+                        f"events saved: {log_path}"
+                    )
+                capture.consume(event)
+                render_event(event, renderer)
+                reject_forbidden_tool(event)
+        except BaseException:
+            process.terminate()
+            raise
+        finally:
+            return_code = process.wait()
     renderer.finish_text()
     if return_code:
-        raise SystemExit(f"OMP coordinator failed with exit code {return_code}")
-    _, metrics = capture.finish()
+        raise SystemExit(
+            f"OMP coordinator failed with exit code {return_code}\nevents saved: {log_path}"
+        )
+    try:
+        _, metrics = capture.finish()
+    except OmpJsonError as error:
+        raise SystemExit(f"{error}\nevents saved: {log_path}") from None
     metrics["elapsed_seconds"] = round(time.monotonic() - started, 3)
+    metrics["event_log"] = str(log_path)
     return metrics
 
 
@@ -471,8 +510,7 @@ def main() -> int:
             metrics = run_coordinator(chapter, args.model)
         except OmpJsonError as error:
             raise SystemExit(str(error)) from None
-        if git("rev-parse", "--verify", "HEAD") != starting_head:
-            raise SystemExit("coordinator committed unexpectedly; exact coordinator usage was not checkpointed")
+        unexpected_coordinator_commit(starting_head, chapter)
     commit_accepted(chapter, metrics)
     return 0
 

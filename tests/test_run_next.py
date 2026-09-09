@@ -41,6 +41,8 @@ class RunNextTest(unittest.TestCase):
         self.assertIn("--no-extensions", command)
         self.assertIn("checkpoint dispositions", run_next.COORDINATOR_SYSTEM)
         self.assertIn("timeout=3600", run_next.COORDINATOR_SYSTEM)
+        self.assertIn("keep every required key", run_next.COORDINATOR_SYSTEM)
+        self.assertIn("temporary_decisions", run_next.COORDINATOR_SYSTEM)
         overlay = run_next.COORDINATOR_OVERLAY.read_text(encoding="utf-8")
         self.assertIn("autoBackground:\n    enabled: false", overlay)
         self.assertIn("hub: deny", overlay)
@@ -191,5 +193,23 @@ class RunNextTest(unittest.TestCase):
         self.assertIn("→ bash  python tools/workflow.py draft 14\n", output)
 
 
+    def test_external_head_move_is_not_a_coordinator_commit(self):
+        calls = {"rev-parse": "bbbbbbbb", "log": "Publish the HTML reader on GitHub Pages."}
+
+        def fake_git(*args, capture=True):
+            if args[:2] == ("rev-parse", "--verify"):
+                return calls["rev-parse"]
+            if args[:2] == ("log", "-1"):
+                return calls["log"]
+            raise AssertionError(args)
+
+        with patch.object(run_next, "git", side_effect=fake_git):
+            run_next.unexpected_coordinator_commit("aaaaaaaa", 17)
+            calls["log"] = "Accept Chapter 17"
+            with self.assertRaises(SystemExit) as error:
+                run_next.unexpected_coordinator_commit("aaaaaaaa", 17)
+            self.assertIn("coordinator committed unexpectedly", str(error.exception))
+
 if __name__ == "__main__":
+
     unittest.main()

@@ -10,38 +10,35 @@ SEVERITIES = {"critical", "major", "minor"}
 DISPOSITIONS = {"applied", "rejected", "unresolved"}
 
 
-def _json_candidates(text: str) -> list[str]:
-    candidates = [text]
-    start = text.find("{")
-    end = text.rfind("}")
-    if start >= 0 and end > start:
-        span = text[start : end + 1]
-        if span != text:
-            candidates.append(span)
-    return candidates
+def _strip_json_fence(text: str) -> str:
+    fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, re.DOTALL | re.IGNORECASE)
+    if fenced:
+        return fenced.group(1).strip()
+    return text
 
 
 def parse_json_object(raw: str) -> dict:
-    text = raw.strip()
-    fenced = re.fullmatch(r"```(?:json)?\s*(.*?)\s*```", text, re.DOTALL | re.IGNORECASE)
-    if fenced:
-        text = fenced.group(1).strip()
+    """Parse the first JSON object, ignoring trailing looped or prose junk."""
+    text = _strip_json_fence(raw.strip())
     if not text:
         raise ValueError("model did not return valid JSON: empty response")
-    last_error: Exception | None = None
-    for candidate in _json_candidates(text):
-        try:
-            value = json.loads(candidate)
-        except json.JSONDecodeError as error:
-            last_error = error
-            continue
+    try:
+        value = json.loads(text)
         if isinstance(value, dict):
             return value
-        last_error = ValueError("model response must be one JSON object")
+    except json.JSONDecodeError:
+        pass
+    start = text.find("{")
     preview = repr(raw[:400])
-    if last_error is None:
+    if start < 0:
         raise ValueError(f"model did not return valid JSON: {preview}")
-    raise ValueError(f"model did not return valid JSON: {last_error}\nPreview: {preview}") from None
+    try:
+        value, _end = json.JSONDecoder().raw_decode(text, start)
+    except json.JSONDecodeError as error:
+        raise ValueError(f"model did not return valid JSON: {error}\nPreview: {preview}") from None
+    if not isinstance(value, dict):
+        raise ValueError(f"model response must be one JSON object\nPreview: {preview}")
+    return value
 
 
 def validate_review(value: dict) -> dict:
@@ -120,6 +117,7 @@ def parse_revision_response(raw: str, review: dict) -> dict:
         return validate_revision(parse_json_object(text), review)
     translation_marker = "<<<TRANSLATION>>>"
     disposition_marker = "<<<DISPOSITIONS>>>"
+    end_marker = "<<<END>>>"
     marker_at = text.find(translation_marker)
     if marker_at < 0 or disposition_marker not in text[marker_at:]:
         raise ValueError("revision response is missing required envelope markers")
@@ -127,6 +125,10 @@ def parse_revision_response(raw: str, review: dict) -> dict:
     translation, separator, disposition_text = text[len(translation_marker):].partition(disposition_marker)
     if not separator or not translation.strip():
         raise ValueError("revision response has an empty translation or disposition section")
+    if end_marker in disposition_text:
+        disposition_text = disposition_text.split(end_marker, 1)[0]
+    if translation_marker in disposition_text:
+        disposition_text = disposition_text.split(translation_marker, 1)[0]
     disposition_object = parse_json_object(disposition_text)
     normalized = validate_dispositions(disposition_object.get("dispositions"), review)
     return {"version": 1, "translation": translation.strip() + "\n", "dispositions": normalized}

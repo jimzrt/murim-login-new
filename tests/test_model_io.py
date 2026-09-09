@@ -60,7 +60,35 @@ class ModelIoTest(unittest.TestCase):
         self.assertTrue(revision["translation"].startswith("# Chapter 1"))
         self.assertEqual(revision["dispositions"][0]["status"], "applied")
 
+    def test_looped_revision_envelope_uses_the_first_copy(self):
+        review = self.review()
+        raw = """<<<TRANSLATION>>>
+# Chapter 1
+
+“Ordinary Markdown.”
+<<<DISPOSITIONS>>>
+{"dispositions":[{"finding_id":"F01","status":"applied","reason":"Corrected the subject."}]}
+<<<END>>>
+<<<TRANSLATION>>>
+# Chapter 1
+
+Repeated looping copy.
+<<<DISPOSITIONS>>>
+{"dispositions":[{"finding_id":"F01","status":"applied","reason":"looped"}]}
+"""
+        revision = parse_revision_response(raw, review)
+        self.assertIn("Ordinary Markdown", revision["translation"])
+        self.assertNotIn("Repeated looping copy", revision["translation"])
+        self.assertEqual(revision["dispositions"][0]["reason"], "Corrected the subject.")
+
+    def test_trailing_prose_after_json_is_ignored(self):
+        value = parse_json_object(
+            '{"findings": [], "summary": "No actionable findings"}\nPlease continue reviewing.\n{"findings": []}'
+        )
+        self.assertEqual(value["summary"], "No actionable findings")
+
     def test_range_review_requires_chapter_and_patch_coverage(self):
+
         value = self.review()
         value["findings"][0]["chapter"] = 3
         review = validate_range_review(value, {3, 4})
