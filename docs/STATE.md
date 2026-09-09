@@ -2,12 +2,12 @@
 
 Updated: 2026-09-09
 
-- Last completed: 16
-- Next chapter: 17
-- Current block: 15–19 (2/5)
-- Latest translation: `translations/0016.md`
-- Latest summary: `summaries/beats/0016.md`
-- Safe profiles through: chapter 16
+- Last completed: 17
+- Next chapter: 18
+- Current block: 15–19 (3/5)
+- Latest translation: `translations/0017.md`
+- Latest summary: `summaries/beats/0017.md`
+- Safe profiles through: chapter 17
 
 
 ## Current Block
@@ -25,6 +25,14 @@ internal energy as the apparent gate for martial-realm advancement. His Main
 Quest requires First Rate, Level 30, and Fame 500 for Logout. The Head Elder
 returns after years of seclusion and appears at a secret family-council meeting
 about the Mount Heng Sword Sect.
+
+In chapter 17, Taekyung discovers a powerful unidentified energy in his dantian
+that rejects his attempt to use it and nearly consumes his internal energy.
+Cultivation raises his internal energy slightly and Sinews and Bones by 1 each,
+but the Status Window still displays ten years. The Elder Council summons him
+to question him about Lee Seogeun’s poisoning and the Mount Heng crisis. Jin
+Wikyung guides him through Sound Transmission while the council’s senior faction
+blames Taekyung and the Head Elder observes from the seat of honor.
 
 
 ## Open Questions

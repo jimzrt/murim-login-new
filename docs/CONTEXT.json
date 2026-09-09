@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 16,
-  "continuity_sources": [15, 16],
+  "safe_through": 17,
+  "continuity_sources": [16, 17],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -24,7 +24,12 @@
     "Han Yeop tells Taekyung that the Jin Family believes he is the Sleeping Dragon of Shanxi; Taekyung confirms the rumor, gaining 10 Fame, with later belief producing periodic 3-Fame increases.",
     "Taekyung concludes that his ten years of internal energy are insufficient for martial-realm advancement despite strong stats; Lee Seogeun likely had twenty years.",
     "The Main Quest requires First Rate, Level 30 (17/30), and Fame 500 (70/500), rewarding Logout; two days remain in Taekyung's protective confinement.",
-    "The Head Elder returns after years of seclusion and appears at the family council to address the Mount Heng Sword Sect matter."
+    "The Head Elder is Taekyung’s great-uncle and the most senior elder in the Jin Family; he sits beside Wikyung at the family council and observes the interrogation.",
+    "An unidentified energy occupies Taekyung’s dantian. It is more powerful than his ten years of internal energy, rejects contact, and nearly consumes the energy he sends toward it.",
+    "Cultivation training raises Taekyung’s internal energy slightly and increases Sinews and Bones by 1 each, but his Status Window still displays ten years of internal energy.",
+    "Jin Wikyung guides Taekyung through the Lee Seogeun poisoning interrogation with Sound Transmission and remains on his side during the Elder Council’s factional pressure.",
+    "The Elder Council’s senior faction blames Taekyung for disorderly conduct, disgracing the family, and provoking the Mount Heng Sword Sect’s prized treasure; the accusation remains unresolved.",
+    "Taekyung confirms through the System that he has no poison-related martial arts, abilities, or Items."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
