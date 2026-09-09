@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Raised the Chapter 17 Status Window Fame from 70 to 73 to include the explicit rumor-driven increase already shown in Chapter 16.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Changed the War Quest description from two families to two factions because Mount Heng is a sect, not a family.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Changed the Chapter 19 System field label from Rank to Grade to match the established Quest panel terminology.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Recast the Han Yeop apposition as the guard’s—or rather, Han Yeop’s—face for grammatical clarity.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Removed accidental bold formatting from First Rate in the Chapter 17 narrative sentence.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Recast the Wolhwa description as my precious little finger, preserving the source’s euphemism in a grammatical possessive construction.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

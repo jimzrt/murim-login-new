@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 18,
-  "continuity_sources": [17, 18],
+  "safe_through": 19,
+  "continuity_sources": [18, 19],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -31,7 +31,9 @@
     "The Elder Council’s senior faction blames Taekyung for disorderly conduct, disgracing the family, and provoking the Mount Heng Sword Sect’s prized treasure; Taekyung confirms through the System that he has no poison-related martial arts, abilities, or Items.",
     "At the council, Jin Wikyung rejects handing Taekyung over and calls for war; the Head Elder backs him, condemns the faction’s framing, and publicly rallies the family around Wikyung, though his motives remain unclear.",
     "The Jin Family has roughly 200 martial artists, fewer than 20 First Rate masters outside the wider senior group, and three Peak masters; Mount Heng has at least 300 martial artists, more than 50 First Rate masters, and five Peak masters.",
-    "Mount Heng has declared war on the Jin Family. The System establishes a War relationship, designates Taekyung a public enemy, creates the Main Quest — War, and warns that fleeing will incur severe penalties; Wikyung seals the family grounds against entry or exit without his seal."
+    "Mount Heng has declared war on the Jin Family. The System establishes a War relationship, designates Taekyung a public enemy, creates the Main Quest — War, and warns that fleeing will incur severe penalties; Wikyung seals the family grounds against entry or exit without his seal.",
+    "Wolhwa is Eun Sowol, a Level 50 martial artist and Branch Leader of the Lower District Sect’s Shanxi branch; Honghwaru in Taiyuan serves as that branch’s establishment.",
+    "The Lower District Sect offers aid against Mount Heng in exchange for half of Mount Heng’s shops and assets, which Wikyung accepts as acting Family Head."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

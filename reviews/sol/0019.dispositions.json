@@ -1,0 +1,50 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored source order: survivors are strong, and only the strong survive.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored gate-guard focalization; omitted-subject perception is he, not Taekyung’s I.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Back-down subject is Wikyung’s side; the kill proposal was a feint toward de-escalation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored the stock 누나가 왜 거기서 나와 punchline as noona/coming-out-of-there.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "기울였다 is tilting the cup to drink, not lifting it.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "슬그머니 is furtive concealment of the failed lift, not slow tempo.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "안 들려 is failure to lift her, matching the Strength/weight beat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Level Window is a System panel, so it gets the required System blockquote heading.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "더럽게 is coarse; damn awful keeps that register without sanitizing.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

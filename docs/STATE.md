@@ -2,12 +2,12 @@
 
 Updated: 2026-09-09
 
-- Last completed: 18
-- Next chapter: 19
-- Current block: 15–19 (4/5)
-- Latest translation: `translations/0018.md`
-- Latest summary: `summaries/beats/0018.md`
-- Safe profiles through: chapter 18
+- Last completed: 19
+- Next chapter: 20
+- Current block: 15–19 (5/5)
+- Latest translation: `translations/0019.md`
+- Latest summary: `summaries/beats/0019.md`
+- Safe profiles through: chapter 19
 
 
 ## Current Block
@@ -39,6 +39,14 @@ preparation after the Head Elder publicly backs Wikyung. The Jin Family is
 badly outmatched by Mount Heng, which then declares war. Wikyung seals the
 family grounds, while the System creates the Main Quest — War, marks Taekyung
 a public enemy, and warns that fleeing will incur severe penalties.
+
+In chapter 19, Wikyung, Wipeng, and Taekyung discuss the Head Elder’s
+possible ulterior motives, the rapidly spreading Lee Seogeun poisoning rumor,
+and the failure of Shanxi sects to answer their requests for support. Wolhwa
+arrives as Eun Sowol, the Level 50 Branch Leader of the Lower District Sect’s
+Shanxi branch, and offers aid in exchange for half of Mount Heng’s shops and
+assets. Wikyung accepts as acting Family Head; Wolhwa also claims to like
+Taekyung.
 
 
 ## Open Questions

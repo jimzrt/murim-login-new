@@ -1,0 +1,96 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "Those who survive are strong, and only the strong will survive.",
+      "current": "The strong will survive, and only those who survive will be strong.",
+      "defect": "The two clauses are reversed, so the System defines strength as a consequence of surviving instead of stating that survivors are strong and only the strong survive.",
+      "id": "F01",
+      "rationale": "Source order is 살아남는 자가 강하고 then 강한 자만이 살아남을 것입니다. Swapping them changes the quest text’s causal claim.",
+      "severity": "critical",
+      "source": "살아남는 자가 강하고, 강한 자만이 살아남을 것입니다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "The question that had briefly arisen vanished the moment he saw the coachman’s sharp eyes.",
+      "current": "The question that had briefly arisen vanished the moment I saw the coachman’s sharp eyes.",
+      "defect": "Added first-person “I” in a gate-guard focalized scene, so Taekyung appears to be at the gate seeing the coachman.",
+      "id": "F02",
+      "rationale": "The surrounding beats (범상치 않다, 수문위사 swallowing, blocking the carriage) belong to the gate guard. The Korean has no 내가; Taekyung is still in the Lesser Family Head’s office.",
+      "severity": "critical",
+      "source": "잠깐 떠오른 의문은 마부의 날카로운 눈매를 보는 순간 잊혔다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "But that had merely been the Head Elder’s clever way of speaking—a suggestion that perhaps we should back down at this point.",
+      "current": "But that had merely been the Head Elder’s clever way of speaking—a suggestion that perhaps they should back down at this point.",
+      "defect": "“They” points at the rebels; the rhetoric is that the kill proposal really meant we/the family should stop here.",
+      "id": "F03",
+      "rationale": "Wipeng’s 제안 is killing the rebels; Taekyung says that speech was a feint whose real import is 이 정도에서 물러나는 게 어떻겠냐. If Wikyung had accepted 그 제안, 혈사 follows—so 물러나는 is de-escalation by Wikyung’s side, not the rebels withdrawing.",
+      "severity": "major",
+      "source": "하지만 그것은 대장로의 교묘한 화법에 불과했다. 이 정도에서 물러나는 게 어떻겠냐는."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "Why is noona coming out of there…?",
+      "current": "Why is she showing up here…?",
+      "defect": "Drops 누나, 거기서 나와, and the set comic line, turning a specific punchline into generic surprise.",
+      "id": "F04",
+      "rationale": "The Korean is the stock meme wording, used as Taekyung’s reaction, not a kinship claim and not merely “why is she here.”",
+      "severity": "major",
+      "source": "누나가 왜 거기서 나와……?"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Jin Wikyung tilted his teacup.",
+      "current": "Jin Wikyung lifted his teacup.",
+      "defect": "기울였다 is tilting/drinking, not merely lifting.",
+      "id": "F05",
+      "rationale": "찻잔을 기울이다 is the drinking gesture; lift is a different action.",
+      "severity": "minor",
+      "source": "진위경이 찻잔을 기울였다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "I furtively let go.",
+      "current": "slowly released my grip",
+      "defect": "슬그머니 is furtive/discreet, not slow.",
+      "id": "F06",
+      "rationale": "He is hiding the failed lift after ignoring Wikyung; manner is stealth, not tempo.",
+      "severity": "minor",
+      "source": "슬그머니 손을 풀었다"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "What the hell? Why won’t she lift?",
+      "current": "What the hell? Why wouldn’t she move?",
+      "defect": "안 들려 is failure to lift her, not failure to make her move.",
+      "id": "F07",
+      "rationale": "The next lines are weight, Strength, and 못 든다; the blocked action is lifting.",
+      "severity": "minor",
+      "source": "뭐야, 이거. 왜 안 들려."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "> **System**\\n>\\n> **Lv. 50 Eun Sowol**",
+      "current": "> **Lv. 50 Eun Sowol**",
+      "defect": "Game UI panel is missing the required System blockquote heading used for the quest window.",
+      "id": "F08",
+      "rationale": "Binding Markdown rule: each actual System-message panel is one blockquote headed System. This is the Level Window over her head.",
+      "severity": "minor",
+      "source": "[Lv.50 은소월]"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "The timing was damn awful, too.",
+      "current": "The timing was unbelievably terrible.",
+      "defect": "더럽게 is coarse (“damn/filthy”); “unbelievably” sanitizes it.",
+      "id": "F09",
+      "rationale": "Profanity rules: neither intensify nor sanitize; 더럽게 marks the narrator’s irritation.",
+      "severity": "minor",
+      "source": "타이밍도 참 더럽게 안 좋다."
+    }
+  ],
+  "summary": "The System maxim in the War quest is clause-reversed; the gate scene inserts Taekyung as “I” where the guard is the perceiver; Wikyung’s “back down” subject and the 누나가 왜 거기서 나와 beat are also off.",
+  "version": 1
+}
