@@ -1,16 +1,16 @@
 # Translation State
 
-- Last completed: 25
-- Next chapter: 26
-- Current block: 25–29 (1/5)
-- Latest translation: `translations/0025.md`
+- Last completed: 26
+- Next chapter: 27
+- Current block: 25–29 (2/5)
+- Latest translation: `translations/0026.md`
 - Latest summary: `summaries/beats/0025.md`
-- Safe profiles through: chapter 25
+- Safe profiles through: chapter 26
 
 
 ## Current Block
 
-Chapter 25 resolves the immediate Sakju Branch rescue: Gong Yacheong, Socheon, and Soyul are the three survivors recognized by the System, and the Survivors of the Sakju Branch Quest completes with a Chain Quest, Merit, Fame, and multiple level-ups. Taekyung lies to them under the name Hong Gil-dong, promises to kill Jopil, then tries to retreat after learning that Jopil is a Peak master; Hyuk Mujin arrives and exposes him. Jopil kills the Mount Heng Hall Master and the ten-odd overseers and guides, identifies an unknown highly skilled spearman as the killer of Black Mountain Blade and the other pursuers, and orders the pursuit toward Honju. Jin Wikyung sends Wipeng and more than twenty riders to protect Taekyung.
+Chapter 26 confirms Taekyung’s identity to Gong Yacheong after Hyuk Mujin exposes him. The reconnaissance squad travels toward the main family through a blizzard while Gong explains the experience and persistence that make Jopil’s wandering martial artists dangerous. Taekyung’s Main Quest shows First Rate incomplete, Level 30 at 24/30, and Fame at 250/500 toward Logout. He still cannot identify what enables realm advancement. Jopil’s Third Rate subordinate has Peak-level tracking skill; Jopil orders stragglers killed, follows the fugitives’ traces, and becomes interested in the mysterious master. Taekyung recognizes Gong’s worsening injuries and the children’s exhaustion, considers fleeing because the others are NPCs while he is real, but remains with the group as night falls.
 
 
 ## Open Questions

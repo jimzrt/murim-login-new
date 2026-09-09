@@ -1,0 +1,38 @@
+{
+  "chapter": 26,
+  "draft_sha256": "5e1bd93c7ee8f767e71af0749076b2e6bd01b14b8d6d44fe2f324733c8c084df",
+  "finding_count": 8,
+  "major_or_critical_count": 5,
+  "packet_sha256": "5cf17e4f4856900beb13deed3f2ff4963f2c90e190353f0ab7bb8113026fee39",
+  "qa_sha256": "6bf847c41f5cbb50686026b936714e1c5f31f0bda17fc5de1e7d7d933285a6d3",
+  "report_sha256": "3eeabf7870084c5ed9a09e3c3916e66401e41749f47b2872ebb6548f06262de7",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "cost_usd": 0,
+    "elapsed_seconds": 227.224,
+    "exact": true,
+    "input_bytes": 66127,
+    "input_tokens": 0,
+    "models": {
+      "cursor/cursor-grok-4.6": {
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "cost_usd": 0,
+        "input_tokens": 0,
+        "model": "cursor-grok-4.6",
+        "output_tokens": 4844,
+        "provider": "cursor",
+        "requests": 1,
+        "total_tokens": 4844
+      }
+    },
+    "output_bytes": 6032,
+    "output_tokens": 4844,
+    "requested_model": "cursor/cursor-grok-4.6:medium",
+    "requests": 1,
+    "total_tokens": 4844,
+    "usage_source": "omp_provider_reported"
+  },
+  "version": 2
+}

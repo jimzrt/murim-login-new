@@ -1,0 +1,94 @@
+{
+  "chapter": 26,
+  "stages": {
+    "coordinator_model": {
+      "cache_read_tokens": 1390592,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.06521224,
+      "elapsed_seconds": 1290.607,
+      "exact": true,
+      "input_tokens": 95142,
+      "models": {
+        "openai-codex/gpt-5.6-luna": {
+          "cache_read_tokens": 1390592,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.06521224,
+          "input_tokens": 95142,
+          "model": "gpt-5.6-luna",
+          "output_tokens": 15310,
+          "provider": "openai-codex",
+          "requests": 39,
+          "total_tokens": 1501044
+        }
+      },
+      "output_tokens": 15310,
+      "requested_model": "openai-codex/gpt-5.6-luna:high",
+      "requests": 39,
+      "total_tokens": 1501044,
+      "usage_source": "omp_provider_reported"
+    },
+    "review_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 227.224,
+      "exact": true,
+      "finding_count": 8,
+      "input_bytes": 66127,
+      "input_tokens": 0,
+      "major_or_critical_count": 5,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 4844,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 4844
+        }
+      },
+      "output_bytes": 6032,
+      "output_tokens": 4844,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "total_tokens": 4844,
+      "usage_source": "omp_provider_reported"
+    },
+    "revision_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 186.793,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0026/omp/revision.jsonl",
+      "exact": true,
+      "input_bytes": 58240,
+      "input_tokens": 0,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 7377,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 7377
+        }
+      },
+      "output_bytes": 15182,
+      "output_tokens": 7377,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 7377,
+      "usage_source": "omp_provider_reported"
+    }
+  },
+  "version": 2
+}

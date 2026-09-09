@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Subordinate is now the Third Rate tracker with Peak tracking; Jopil commands hunting dogs of that type.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Removed ‘him’ so the awkward smile answers Gong’s identification, not unconscious Hyuk.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Contrast is now ordinary martial artists versus wandering martial artists, matching 무인/낭인.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Dropped added ‘at last/nearing’; restored that this master is the first to interest Jopil in a long while.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "헛 rendered as a caught gasp, not added swearing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "무위 rendered as displayed martial prowess, not martial arts.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Simile now colors the black eyes as viper-like, without added coldness.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "징그러운 and 아기 천사 restored as creepy sister versus baby angel.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "Jopil nodded at his subordinate’s report. The man’s martial arts were only Third Rate, but his tracking skills were Peak. Jopil had countless hunting dogs like that under his command.",
+      "current": "Jopil nodded at his subordinate’s report. His martial arts were only Third Rate, but his tracking skills were Peak. He had countless hunting dogs like this under his command.",
+      "defect": "After Jopil nods, “His” reads as Jopil. The Third Rate martial arts and Peak tracking describe the reporting subordinate, one of many such hunting dogs under Peak-master Jopil.",
+      "id": "F01",
+      "rationale": "조필 is already established as a Peak master. 무공은 삼류지만 추종술은 절정이다 characterizes the tracker who just reported; 이런 사냥개들 points at men of that type, not at Jopil.",
+      "severity": "critical",
+      "source": "수하의 보고에 조필이 고개를 끄덕였다. 무공은 삼류지만 추종술은 절정이다. 그의 밑에는 이런 사냥개들이 수두룩했다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "I let go of the collar of Hyuk Mujin, who had passed out for the third time, and offered an awkward smile.",
+      "current": "I let go of the collar of Hyuk Mujin, who had passed out for the third time, and gave him an awkward smile.",
+      "defect": "“Gave him” attaches the awkward smile to unconscious Hyuk Mujin. The smile is Taekyung’s awkward response to Gong Yacheong’s identification.",
+      "id": "F02",
+      "rationale": "웃어 보였다 has no object. The beat is the identity reveal to Gong Yacheong after releasing Hyuk, not a smile aimed at Hyuk.",
+      "severity": "major",
+      "source": "나는 세 번째로 기절한 혁무진의 멱살을 놓고 어색하게 웃어 보였다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "The ones chasing us aren’t ordinary martial artists. They’re wandering martial artists. They may be similar, but they’re entirely different creatures.",
+      "current": "The people chasing us aren’t martial artists. They’re wandering martial artists. They may be similar, but they’re entirely different creatures.",
+      "defect": "In English, wandering martial artists are martial artists, so the contrast collapses into a contradiction instead of 무인 versus 낭인 as similar but different kinds of being.",
+      "id": "F03",
+      "rationale": "Gong’s point is category, not a denial that the pursuers practice martial arts. The following hunting-dog gloss depends on that distinction remaining intelligible.",
+      "severity": "major",
+      "source": "우리를 쫓는 건 무인이 아니라 낭인이오. 같지만 아주 다른 존재지."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "A mysterious master—the first in a long while to catch his interest.",
+      "current": "At last, he was nearing the mysterious master who had caught his interest.",
+      "defect": "Adds “at last” and “nearing,” which were already covered by 곧 만날 수 있겠군. Drops 오랜만에: this mysterious master is the first to interest Jopil in a long time.",
+      "id": "F04",
+      "rationale": "오랜만에 modifies 흥미를 끈, not the closing distance. The draft restates the previous thought and loses Jopil’s characterization.",
+      "severity": "major",
+      "source": "오랜만에 그의 흥미를 끈 수수께끼의 고수다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“Hah.”",
+      "current": "“Oh, shit.”",
+      "defect": "헛 is a caught-out gasp, not swearing. The draft adds profanity the source does not have.",
+      "id": "F05",
+      "rationale": "Hyuk’s later “마, 맞습니다……” is the confession. 헛 is the startled leak before he admits it; intensifying it to “shit” changes register.",
+      "severity": "major",
+      "source": "“헛.”"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "The martial prowess you displayed today was truly remarkable.",
+      "current": "The martial arts you displayed today were truly remarkable.",
+      "defect": "무위 is displayed martial prowess, not 무공 (“martial arts”).",
+      "id": "F06",
+      "rationale": "Gong is judging demonstrated might against the rumors that Taekyung never trained, not naming a technique.",
+      "severity": "minor",
+      "source": "오늘 공자가 보여 준 무위는 실로 대단했소."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "his black, viper-like eyes swept over the surroundings.",
+      "current": "his black eyes, cold as a venomous snake’s, swept over the surroundings.",
+      "defect": "The simile is black like a viper’s eyes. “Cold as” is added.",
+      "id": "F07",
+      "rationale": "독사처럼 modifies 까만, the color and look of the pupils, not temperature or affect.",
+      "severity": "minor",
+      "source": "독사처럼 까만 눈동자가 주위를 훑었다."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "These days she was a creepy little sister, but when she was young she had been a baby angel.",
+      "current": "These days, she was an annoying little sister, but when she was young, she had been an angel.",
+      "defect": "징그러운 is viscerally gross/creepy sibling disgust, weaker as “annoying.”",
+      "id": "F08",
+      "rationale": "The contrast is angelic child versus a sister who now makes his skin crawl, not mere annoyance. 아기 천사 is also slightly stronger than “an angel.”",
+      "severity": "minor",
+      "source": "지금이야 징그러운 여동생이지만 어릴 때는 아기 천사가 따로 없었다."
+    }
+  ],
+  "summary": "One critical subject error assigns a subordinate’s Third Rate martial arts and Peak tracking to Jopil. Several major issues alter addressee, the 무인/낭인 contrast, Jopil’s interest, and a non-profane gasp.",
+  "version": 1
+}

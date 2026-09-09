@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 25
+- **Safe through:** Chapter 26
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -12,4 +12,5 @@
 - **Chapter 23 continuity:** Taekyung imposes a two-hour travel and fifteen-minute rest schedule, equips three squad members with shields, and drills formation, dispersal, and all-out retreat. After Hyuk Mujin accuses him of causing the war, Taekyung beats him unconscious with five blows, then does so again when Hyuk charges at him after waking. A blizzard forces the squad into a hunter’s shelter, where the other members ask Taekyung to train them. He later learns that Jopil’s detachment is massacring Jin Family survivors near Jeongyang.
 - **Chapter 24 continuity:** Taekyung’s squad encounters fourteen-year-old Socheon and his younger sister Soyul while Mount Heng pursuers close in. He accepts the Sudden Quest to rescue the survivors, orders the squad into attack and defensive formations, and charges alone to claim the enemies’ EXP and Merit. He kills the pursuers, defeats Level 32 Black Mountain Blade with Cheongwan-il, completes the Survivors of the Sakju Branch Quest, receives large EXP and Merit, reaches at least Level 20, and triggers a Chain Quest.
 - **Chapter 25 continuity:** Taekyung discovers Gong Yacheong after defeating Black Mountain Blade and completes the Survivors of the Sakju Branch Quest, triggering a Chain Quest and receiving Merit, Fame, and multiple level-ups. He gives Gong and the children the false name Hong Gil-dong, promises to kill Jopil, then tries to retreat after learning Jopil is a Peak master. Hyuk Mujin arrives and exposes Taekyung’s identity to them.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–25
+- **Chapter 26 continuity:** Taekyung confirms his identity after Hyuk Mujin exposes him and travels toward the main family through a blizzard. The Main Quest displays Level 30 progress at 24/30 and Fame at 250/500 toward Logout; he distributes stat points and cultivates but still cannot identify what enables realm advancement. He recognizes Gong’s injuries and the children’s exhaustion, considers fleeing because the others are NPCs while he is real, but remains with the group as night falls.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–26

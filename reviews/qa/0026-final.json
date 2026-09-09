@@ -1,0 +1,55 @@
+{
+  "chapter": 26,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.325,
+    "source_characters": 5827,
+    "source_paragraphs": 181,
+    "translation_characters": 13547,
+    "translation_paragraphs": 191
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "경지",
+        "preferred": "realm / realm stage"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "심법",
+        "preferred": "cultivation technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "운기조식",
+        "preferred": "circulate one's qi"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀가",
+        "preferred": "your family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

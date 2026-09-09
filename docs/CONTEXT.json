@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "safe_through": 25,
-  "continuity_sources": [24, 25],
+  "safe_through": 26,
+  "continuity_sources": [25, 26],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame.",
-    "Taekyung is at least Lv. 20; his Jin Family’s Cultivation Technique is at the Fourth Stage, his Spear and Manoeuvre Techniques are at the Fifth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
+    "Taekyung is Lv. 24; the Main Quest displays Level 30 progress as 24/30 and Fame progress as 250/500, while First Rate remains incomplete. His Jin Family’s Cultivation Technique is at the Fourth Stage, his Spear and Manoeuvre Techniques are at the Fifth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
     "Hyuk Mujin is Lv. 22; earlier Training Mode can summon him and Taekyung can partially adjust a summoned opponent’s abilities.",
     "Jin Wikyung is Taekyung’s thirty-five-year-old eldest brother and the Lesser Family Head of the Jin Family of Taiyuan; Wipeng is his trusted guard.",
     "At the Medicine King Hall, Taekyung pretends to have amnesia, and Jin Wikyung believes him.",
@@ -23,7 +23,6 @@
     "After the duel, Jin Wikyung draws heroic pictures of Taekyung, receives an urgent messenger hawk, and summons a secret late-night family-council meeting.",
     "Han Yeop tells Taekyung that the Jin Family believes he is the Sleeping Dragon of Shanxi; Taekyung confirms the rumor, gaining 10 Fame, with later belief producing periodic 3-Fame increases.",
     "Taekyung concludes that his ten years of internal energy are insufficient for martial-realm advancement despite strong stats; Lee Seogeun likely had twenty years.",
-    "The Main Quest requires First Rate, Level 30, and Fame 500 (70/500), rewarding Logout; Taekyung has reached at least Level 20 toward the Level 30 requirement, and two days remain in his protective confinement.",
     "The Head Elder is Taekyung’s great-uncle and the most senior elder in the Jin Family; he sits beside Wikyung at the family council and observes the interrogation.",
     "An unidentified energy occupies Taekyung’s dantian. It is more powerful than his ten years of internal energy, rejects contact, and nearly consumes the energy he sends toward it.",
     "Cultivation training raises Taekyung’s internal energy slightly and increases Sinews and Bones by 1 each, but his Status Window still displays ten years of internal energy.",
@@ -56,10 +55,13 @@
     "Taekyung kills the pursuers with the Jin Family's Manoeuvre and Spear Techniques, using the fourth forms and finishing with Cheongwan-il, the final form of the Jin Family's Spear Technique.",
     "The final opponent is Level 32 Black Mountain Blade. Taekyung defeats him, completes the Survivors of the Sakju Branch Quest, receives large EXP and Merit, levels up to at least Level 20, and triggers a Chain Quest.",
     "Gong Yacheong, Socheon, and Soyul survive the Sakju Branch pursuit; the System recognizes them as the three survivors, completes the Survivors of the Sakju Branch Quest, creates a Chain Quest, and grants Taekyung Merit, Fame, and multiple level-ups.",
-    "Taekyung gives Gong Yacheong and the children the false name Hong Gil-dong, promises Socheon that he will kill Jopil, then tries to retreat after learning that Jopil is a Peak master; Hyuk Mujin arrives and exposes Taekyung's identity.",
+    "Taekyung gives Gong Yacheong and the children the false name Hong Gil-dong, promises Socheon that he will kill Jopil, then tries to retreat after learning Jopil is a Peak master; Hyuk Mujin arrives and exposes Taekyung's identity.",
     "Jopil, One Question, One Kill, is a Peak master. He kills the Mount Heng Sword Sect Hall Master and the ten-odd martial artists sent to oversee and guide the wandering martial artists, then decides to pursue Taekyung's group toward Honju.",
     "From the scars and footprints, Jopil identifies an unknown highly skilled spearman as the killer of Black Mountain Blade and the other pursuers; the spearman is not identified as a Peak master.",
-    "Jin Wikyung sends Wipeng with more than twenty riders to locate and protect Taekyung."
+    "Jin Wikyung sends Wipeng with more than twenty riders to locate and protect Taekyung.",
+    "After Hyuk exposes Taekyung's identity, the reconnaissance squad travels toward the main family through a blizzard; Gong warns that wandering martial artists' experience and Jopil's persistence make the pursuit especially dangerous.",
+    "Jopil's tracking subordinate is Third Rate in martial arts but has Peak-level tracking skill. Jopil orders stragglers killed, leaves twenty stripped corpses behind, finds the fugitives' traces, and remains interested in meeting the mysterious master who has caught his attention for the first time in a long while.",
+    "Gong remains pale and injured despite fasting pills and circulated qi, Socheon is exhausted but keeps pace, and Soyul longs to see her father. Taekyung considers fleeing because the others are NPCs while he is real, but an inexplicable resistance keeps him with the group; the reason remains unresolved."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
