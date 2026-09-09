@@ -1,0 +1,127 @@
+{
+  "findings": [
+    {
+      "chapter": 2,
+      "confidence": 1.0,
+      "correction": "Replace with “Tài lěng le.”",
+      "current": "“It’s so cold.”",
+      "defect": "The Chinese dialogue is translated before the Universal Language Pack is applied, contradicting the immediately following statement that Taekyung cannot understand her words and weakening the language-barrier mechanism.",
+      "id": "R0000-01",
+      "rationale": "The source presents the line phonetically and in Chinese rather than as Korean dialogue; Taekyung explicitly remains unable to understand the woman until the language pack is applied.",
+      "severity": "major",
+      "source": "“타이렁러太冷了.”"
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Change “Mount Odae” to “Mount Wutai” here and at its later occurrence in the chapter.",
+      "current": "A local born and raised near Mount Odae, he had never once left the area.",
+      "defect": "The translation uses the Korean geographic reading Mount Odae for 五臺山, misidentifying the setting’s Shanxi mountain.",
+      "id": "R0000-02",
+      "rationale": "五臺山 in Shanxi is Mount Wutai; Mount Odae denotes a different mountain in Korea.",
+      "severity": "major",
+      "source": "생전 오대산(五臺山) 인근을 벗어난 적 없는 토박이였고 약관 무렵부터 만만한 산객들을 대상으로 통행료를 뜯어내 왔다."
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Replace with “At that moment, a cold wind blew.”",
+      "current": "A cold silence fell.",
+      "defect": "A literal gust of cold wind is replaced with figurative silence.",
+      "id": "R0000-03",
+      "rationale": "The source explicitly describes cold wind blowing; it does not mention silence.",
+      "severity": "minor",
+      "source": "순간, 싸늘한 찬바람이 불었다."
+    },
+    {
+      "chapter": 4,
+      "confidence": 0.99,
+      "correction": "Retain the first spoken line, but render the second as internal thought: *Goblins?*",
+      "current": "“They’re goblins?”\n\n“Goblins?”",
+      "defect": "The second line is formatted as new spoken dialogue, apparently assigning knowledge of goblins to another character. In the source it is Taekyung’s unspoken incredulous reaction.",
+      "id": "R0000-04",
+      "rationale": "Only the first source line has quotation marks. Treating the second as dialogue invents a speaker and implies that someone in Murim recognizes a modern-world monster category.",
+      "severity": "critical",
+      "source": "“고블린이네?”\n\n고블린이여?"
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Replace with “Critical One Strike! Status effect Bleeding activated!”",
+      "current": "Critical hit! Status effect Bleeding activated!",
+      "defect": "The System notification replaces the required established term One Strike with “hit.”",
+      "id": "R0000-05",
+      "rationale": "The supplied glossary requires 일격 to be rendered as One Strike.",
+      "severity": "minor",
+      "source": "- 치명적인 일격! 상태 이상 [출혈]이 발동됩니다!"
+    },
+    {
+      "chapter": 5,
+      "confidence": 0.98,
+      "correction": "Replace with: *Where had he seen this traveler he was so grateful to before?*",
+      "current": "*Where have I seen this grateful traveler before?*",
+      "defect": "The adjective’s direction is reversed: the coachman is grateful to the traveler; the traveler is not described as feeling grateful.",
+      "id": "R0005-01",
+      "rationale": "고마운 modifies the traveler as someone for whom the coachman feels gratitude in the immediate context.",
+      "severity": "minor",
+      "source": "이 고마운 나그네를 어디서 봤더라."
+    },
+    {
+      "chapter": 6,
+      "confidence": 0.97,
+      "correction": "Replace with: “What business could a pleasure house possibly have with our family?”",
+      "current": "“What business could a pleasure house possibly have with the main family?”",
+      "defect": "본가 is rendered as the impersonal branch-hierarchy term “the main family,” contrary to the established block terminology and Hyuk Mujin’s perspective as a member of the family.",
+      "id": "R0006-01",
+      "rationale": "Here 본가 refers deictically to the Jin Family to which the speaker belongs, not specifically to a main branch contrasted with a cadet branch.",
+      "severity": "minor",
+      "source": "기루에서 본가에 무슨 용무가 있다고?"
+    },
+    {
+      "chapter": 7,
+      "confidence": 0.98,
+      "correction": "Replace “You’ve got one hell of a chin” with “You’re ridiculously tough” or “You can take one hell of a beating.”",
+      "current": "“Fuck. You’ve got one hell of a chin. Let go! I said let go!”",
+      "defect": "맷집 means overall toughness or ability to absorb punishment, not specifically having a strong chin.",
+      "id": "R0007-01",
+      "rationale": "The source characterizes Taekyung’s general durability after repeatedly getting back up; it does not single out resistance to jaw blows.",
+      "severity": "minor",
+      "source": "시발. 맷집만 더럽게 좋아 가지고. 놔! 안 놔!"
+    },
+    {
+      "chapter": 8,
+      "confidence": 1.0,
+      "correction": "Replace “older brother” with “eldest brother.”",
+      "current": "Jin Taekyung’s older brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung.",
+      "defect": "“Older brother” omits the source’s explicit eldest-brother hierarchy.",
+      "id": "R0008-01",
+      "rationale": "큰형 specifically identifies Jin Wikyung as Taekyung’s eldest brother, distinguishing him from the second brother discussed immediately afterward.",
+      "severity": "major",
+      "source": "진태경의 큰형이자 태원진가의 소가주인 진위경이다."
+    },
+    {
+      "chapter": 8,
+      "confidence": 0.99,
+      "correction": "Replace with: “Weren’t buildings like this usually called pavilions in China?” Maintain “pavilion” for later references to this residence.",
+      "current": "Weren’t buildings like this usually called halls in China?",
+      "defect": "The generic architectural term 전각 is rendered as “hall,” conflicting with the established term “pavilion.”",
+      "id": "R0008-02",
+      "rationale": "The glossary reserves “hall” for established named buildings; this is an unnamed residential pavilion.",
+      "severity": "minor",
+      "source": "보통 이런 건물을 중국에서는 전각이라고 하던가?"
+    },
+    {
+      "chapter": 8,
+      "confidence": 1.0,
+      "correction": "Replace with: **The Night King: Well-Endowed Man**",
+      "current": "**The Night King: Big-Dick Man**",
+      "defect": "The translation intensifies the euphemistic crude slang 대물남 into explicit anatomical profanity.",
+      "id": "R0008-03",
+      "rationale": "대물남 is a suggestive euphemism, and the block glossary explicitly fixes it as “Well-Endowed Man” to preserve the source’s degree of explicitness.",
+      "severity": "major",
+      "source": "[야왕 대물남]"
+    }
+  ],
+  "summary": "11 findings across 2 blocks",
+  "version": 1
+}

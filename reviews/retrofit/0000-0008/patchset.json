@@ -1,0 +1,191 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "R0000-01",
+      "reason": "Restores the source’s Chinese phonetic line so the language barrier remains meaningful until the Universal Language Pack is applied.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0000-02",
+      "reason": "五臺山 is Mount Wutai in Shanxi; both current Mount Odae references identify the wrong geographic setting.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0000-03",
+      "reason": "Restores the source’s literal cold wind and removes the unsupported silence image.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0000-04",
+      "reason": "Formats the second goblin reaction as Taekyung’s internal thought rather than invented spoken dialogue.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0000-05",
+      "reason": "Restores the established glossary term One Strike for 일격 in the System notification.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0005-01",
+      "reason": "Corrects the direction of gratitude so the traveler is the person appreciated by the coachman.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0006-01",
+      "reason": "Renders 본가 from Hyuk Mujin’s perspective as the family he and Taekyung belong to, not as an impersonal main branch.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0007-01",
+      "reason": "Renders 맷집 as general toughness and punishment tolerance rather than resistance specifically associated with the chin.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0008-01",
+      "reason": "Restores 큰형 as eldest brother, preserving the explicit sibling hierarchy.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0008-02",
+      "reason": "Uses pavilion for the unnamed residential 전각 and keeps the term consistent across its later references in the chapter.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "R0008-03",
+      "reason": "Replaces explicit anatomical profanity with the source-appropriate euphemistic glossary term Well-Endowed Man.",
+      "status": "applied"
+    }
+  ],
+  "patches": [
+    {
+      "chapter": 2,
+      "finding_ids": [
+        "R0000-01"
+      ],
+      "new": "“Tài lěng le.”",
+      "old": "“It’s so cold.”"
+    },
+    {
+      "chapter": 4,
+      "finding_ids": [
+        "R0000-02"
+      ],
+      "new": "A local born and raised near Mount Wutai, he had never once left the area.",
+      "old": "A local born and raised near Mount Odae, he had never once left the area."
+    },
+    {
+      "chapter": 4,
+      "finding_ids": [
+        "R0000-02"
+      ],
+      "new": "How long had he walked, leaving his home turf of Mount Wutai far behind?",
+      "old": "How long had he walked, leaving his home turf of Mount Odae far behind?"
+    },
+    {
+      "chapter": 4,
+      "finding_ids": [
+        "R0000-03"
+      ],
+      "new": "At that moment, a cold wind blew.",
+      "old": "A cold silence fell."
+    },
+    {
+      "chapter": 4,
+      "finding_ids": [
+        "R0000-04"
+      ],
+      "new": "“They’re goblins?”\n\n*Goblins?*",
+      "old": "“They’re goblins?”\n\n“Goblins?”"
+    },
+    {
+      "chapter": 4,
+      "finding_ids": [
+        "R0000-05"
+      ],
+      "new": "Critical One Strike! Status effect Bleeding activated!",
+      "old": "Critical hit! Status effect Bleeding activated!"
+    },
+    {
+      "chapter": 5,
+      "finding_ids": [
+        "R0005-01"
+      ],
+      "new": "*Where had he seen this traveler he was so grateful to before?*",
+      "old": "*Where have I seen this grateful traveler before?*"
+    },
+    {
+      "chapter": 6,
+      "finding_ids": [
+        "R0006-01"
+      ],
+      "new": "“What business could a pleasure house possibly have with our family?”",
+      "old": "“What business could a pleasure house possibly have with the main family?”"
+    },
+    {
+      "chapter": 7,
+      "finding_ids": [
+        "R0007-01"
+      ],
+      "new": "“Fuck. You’re ridiculously tough. Let go! I said let go!”",
+      "old": "“Fuck. You’ve got one hell of a chin. Let go! I said let go!”"
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-01"
+      ],
+      "new": "Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung.",
+      "old": "Jin Taekyung’s older brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung."
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-02"
+      ],
+      "new": "Weren’t buildings like this usually called pavilions in China?",
+      "old": "Weren’t buildings like this usually called halls in China?"
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-02"
+      ],
+      "new": "began exploring the pavilion.",
+      "old": "began exploring the hall."
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-02"
+      ],
+      "new": "His residence was a pavilion in the inner compound at the center of the Jin Family estate, and it took about a quarter hour to walk there.",
+      "old": "His residence was a hall in the inner compound at the center of the Jin Family estate, and it took about a quarter hour to walk there."
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-02"
+      ],
+      "new": "A faint light was leaking from a nearby pavilion.",
+      "old": "A faint light was leaking from a nearby hall."
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-02"
+      ],
+      "new": "The two men entered the pavilion.",
+      "old": "The two men entered the hall."
+    },
+    {
+      "chapter": 8,
+      "finding_ids": [
+        "R0008-03"
+      ],
+      "new": "**The Night King: Well-Endowed Man**",
+      "old": "**The Night King: Big-Dick Man**"
+    }
+  ],
+  "summary": "Applied 11 bounded fidelity, terminology, register, and dialogue-format patches across Chapters 2 and 4–8.",
+  "version": 1
+}

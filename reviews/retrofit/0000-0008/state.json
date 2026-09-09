@@ -1,0 +1,127 @@
+{
+  "blocks": [
+    {
+      "chapters": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "end": 4,
+      "estimated_input_tokens": 32598,
+      "packet": "packet-0000-0004.md",
+      "packet_sha256": "da807f732f21962562fb194a20cd9039cede32058a3398860af1d53450fdc68d",
+      "start": 0
+    },
+    {
+      "chapters": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "end": 8,
+      "estimated_input_tokens": 31900,
+      "packet": "packet-0005-0008.md",
+      "packet_sha256": "852ec9bd18bf18eb7057fa4b11077989ac74d5d3303872389c9c09cf021cc6f8",
+      "start": 5
+    }
+  ],
+  "changed_chapters": [
+    2,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "estimated_review_input_tokens": 64498,
+  "final_translation_sha256": {
+    "0": "f54d1635c24a497ebdb489c6f58d3cf2d5ef5e928362b31aaf1e0a1248c4b336",
+    "1": "950ab5d34ffb506f6d3aa80352d937ad6b6c5e03eaee4838ab7aab6db1da7b93",
+    "2": "6cbed99d865925c5d8deca926e11dae733b2b9463a375555b9247b2f35f7a756",
+    "3": "13d90b81ff6b23f99b02870cc9b5a4d42e0824d62627849830fef293a3932ea1",
+    "4": "8f12be0b063cd53bb2e61132eb1dfb0ec6a08872aef2743eb227dbd14bf8f6ba",
+    "5": "d3fa83115fa0f91e858353128660a871ce157c96b2ba35a6eed7e77aa6f71001",
+    "6": "b6eb26d6681157746417463a0b80e04043e413e65a077e53f393e4fc11718b57",
+    "7": "bad31c342fdb385e59d44f67e453ef303a25d1389d606466f0a38a9a5f8d131c",
+    "8": "22c57b51e815e19f67e073e6ab5eeefddcaef0564a5e4cdb695d33a4f0745741"
+  },
+  "finding_count": 11,
+  "initial": {
+    "0": {
+      "source_sha256": "a96eadb1836c4114c075fc649c93b7263e35698e7f9d2c7c5b097ac84535fe1a",
+      "translation_sha256": "f54d1635c24a497ebdb489c6f58d3cf2d5ef5e928362b31aaf1e0a1248c4b336"
+    },
+    "1": {
+      "source_sha256": "afca8005d90b28a893ddc94d4f58049f88ee7128d984e072bfeadf625d690656",
+      "translation_sha256": "950ab5d34ffb506f6d3aa80352d937ad6b6c5e03eaee4838ab7aab6db1da7b93"
+    },
+    "2": {
+      "source_sha256": "f483e29e0c9a81f15a95337f0f469dcfae40d04a4ea249edcdb742a0c42e3191",
+      "translation_sha256": "dca7719db977d6af213ff520a55fc4322043f8ae2ef4714a3e9d746f5bedf9ee"
+    },
+    "3": {
+      "source_sha256": "a5fed0f2d97f058361185baee18b1a5f3c33007ae1d9f4304bc22e2d0b074573",
+      "translation_sha256": "13d90b81ff6b23f99b02870cc9b5a4d42e0824d62627849830fef293a3932ea1"
+    },
+    "4": {
+      "source_sha256": "352f2b7247bbf6cbff2b769afdca6bf6893e04eec3555d4a976b407cc12bfac7",
+      "translation_sha256": "4bacf9729f508ed43e3d85fca898bcbbd0626614c5140bb47fc36be953a8f326"
+    },
+    "5": {
+      "source_sha256": "05e2df4d68da7fce7d0ddabf0f838a0ae295e497c891395ba4587a69c9e0f530",
+      "translation_sha256": "05af62405b684a5898afdeba96c39865a749e672c07e5308cb0968dc48514fd5"
+    },
+    "6": {
+      "source_sha256": "5dfbbb8f7568721e08ba6caf8d7a75f06a62ffd8642ed6ce99b4ef0749ede101",
+      "translation_sha256": "3b3aecb781783e61da09e043f7def80cc71936470a1aa187fd8971714a4a23af"
+    },
+    "7": {
+      "source_sha256": "ddd0b4dd99fd03760eb2326a907faa3be3559e78822a82b3cf7ba1ffb16af82f",
+      "translation_sha256": "a9ff7ef00f128184789aab19cbd11b16daa4af739599eecbfe2f073cff7e6070"
+    },
+    "8": {
+      "source_sha256": "a7693ed4f4d2d1822589683200b63af396380beaa65e4383abe7199ba5000cc5",
+      "translation_sha256": "6d5088885f847c8cf8ffbff3334e83ec88e07cbd299d6e844583c9f013db77d2"
+    }
+  },
+  "normal_workflow_untouched": true,
+  "range": [
+    0,
+    8
+  ],
+  "refine_metrics": {
+    "elapsed_seconds": 64.417,
+    "estimated_input_tokens": 44889,
+    "estimated_output_tokens": 1181,
+    "input_bytes": 179555,
+    "model": "openai-codex/gpt-5.6-luna:high",
+    "output_bytes": 4723
+  },
+  "review_metrics": [
+    {
+      "block": "0000-0004",
+      "elapsed_seconds": 205.937,
+      "estimated_input_tokens": 32598,
+      "estimated_output_tokens": 894,
+      "finding_count": 5,
+      "input_bytes": 130392,
+      "model": "openai-codex/gpt-5.6-sol:medium",
+      "output_bytes": 3576
+    },
+    {
+      "block": "0005-0008",
+      "elapsed_seconds": 122.324,
+      "estimated_input_tokens": 31900,
+      "estimated_output_tokens": 1082,
+      "finding_count": 6,
+      "input_bytes": 127600,
+      "model": "openai-codex/gpt-5.6-sol:medium",
+      "output_bytes": 4325
+    }
+  ],
+  "stage": "VERIFIED",
+  "version": 1
+}

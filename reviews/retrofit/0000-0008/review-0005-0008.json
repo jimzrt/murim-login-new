@@ -1,0 +1,72 @@
+{
+  "findings": [
+    {
+      "chapter": 5,
+      "confidence": 0.98,
+      "correction": "Replace with: *Where had he seen this traveler he was so grateful to before?*",
+      "current": "*Where have I seen this grateful traveler before?*",
+      "defect": "The adjective’s direction is reversed: the coachman is grateful to the traveler; the traveler is not described as feeling grateful.",
+      "id": "R0005-01",
+      "rationale": "고마운 modifies the traveler as someone for whom the coachman feels gratitude in the immediate context.",
+      "severity": "minor",
+      "source": "이 고마운 나그네를 어디서 봤더라."
+    },
+    {
+      "chapter": 6,
+      "confidence": 0.97,
+      "correction": "Replace with: “What business could a pleasure house possibly have with our family?”",
+      "current": "“What business could a pleasure house possibly have with the main family?”",
+      "defect": "본가 is rendered as the impersonal branch-hierarchy term “the main family,” contrary to the established block terminology and Hyuk Mujin’s perspective as a member of the family.",
+      "id": "R0006-01",
+      "rationale": "Here 본가 refers deictically to the Jin Family to which the speaker belongs, not specifically to a main branch contrasted with a cadet branch.",
+      "severity": "minor",
+      "source": "기루에서 본가에 무슨 용무가 있다고?"
+    },
+    {
+      "chapter": 7,
+      "confidence": 0.98,
+      "correction": "Replace “You’ve got one hell of a chin” with “You’re ridiculously tough” or “You can take one hell of a beating.”",
+      "current": "“Fuck. You’ve got one hell of a chin. Let go! I said let go!”",
+      "defect": "맷집 means overall toughness or ability to absorb punishment, not specifically having a strong chin.",
+      "id": "R0007-01",
+      "rationale": "The source characterizes Taekyung’s general durability after repeatedly getting back up; it does not single out resistance to jaw blows.",
+      "severity": "minor",
+      "source": "시발. 맷집만 더럽게 좋아 가지고. 놔! 안 놔!"
+    },
+    {
+      "chapter": 8,
+      "confidence": 1.0,
+      "correction": "Replace “older brother” with “eldest brother.”",
+      "current": "Jin Taekyung’s older brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung.",
+      "defect": "“Older brother” omits the source’s explicit eldest-brother hierarchy.",
+      "id": "R0008-01",
+      "rationale": "큰형 specifically identifies Jin Wikyung as Taekyung’s eldest brother, distinguishing him from the second brother discussed immediately afterward.",
+      "severity": "major",
+      "source": "진태경의 큰형이자 태원진가의 소가주인 진위경이다."
+    },
+    {
+      "chapter": 8,
+      "confidence": 0.99,
+      "correction": "Replace with: “Weren’t buildings like this usually called pavilions in China?” Maintain “pavilion” for later references to this residence.",
+      "current": "Weren’t buildings like this usually called halls in China?",
+      "defect": "The generic architectural term 전각 is rendered as “hall,” conflicting with the established term “pavilion.”",
+      "id": "R0008-02",
+      "rationale": "The glossary reserves “hall” for established named buildings; this is an unnamed residential pavilion.",
+      "severity": "minor",
+      "source": "보통 이런 건물을 중국에서는 전각이라고 하던가?"
+    },
+    {
+      "chapter": 8,
+      "confidence": 1.0,
+      "correction": "Replace with: **The Night King: Well-Endowed Man**",
+      "current": "**The Night King: Big-Dick Man**",
+      "defect": "The translation intensifies the euphemistic crude slang 대물남 into explicit anatomical profanity.",
+      "id": "R0008-03",
+      "rationale": "대물남 is a suggestive euphemism, and the block glossary explicitly fixes it as “Well-Endowed Man” to preserve the source’s degree of explicitness.",
+      "severity": "major",
+      "source": "[야왕 대물남]"
+    }
+  ],
+  "summary": "Generally faithful prose, with six actionable defects: two localized semantic shifts, one prescribed family-reference mismatch, lost eldest-brother hierarchy, an over-explicit erotic title, and inconsistent pavilion terminology.",
+  "version": 1
+}

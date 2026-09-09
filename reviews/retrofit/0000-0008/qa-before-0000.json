@@ -1,0 +1,14 @@
+{
+  "chapter": 0,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.242,
+    "source_characters": 326,
+    "source_paragraphs": 10,
+    "translation_characters": 731,
+    "translation_paragraphs": 10
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": []
+}

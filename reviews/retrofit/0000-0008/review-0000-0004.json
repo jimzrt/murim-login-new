@@ -1,0 +1,61 @@
+{
+  "findings": [
+    {
+      "chapter": 2,
+      "confidence": 1.0,
+      "correction": "Replace with “Tài lěng le.”",
+      "current": "“It’s so cold.”",
+      "defect": "The Chinese dialogue is translated before the Universal Language Pack is applied, contradicting the immediately following statement that Taekyung cannot understand her words and weakening the language-barrier mechanism.",
+      "id": "R0000-01",
+      "rationale": "The source presents the line phonetically and in Chinese rather than as Korean dialogue; Taekyung explicitly remains unable to understand the woman until the language pack is applied.",
+      "severity": "major",
+      "source": "“타이렁러太冷了.”"
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Change “Mount Odae” to “Mount Wutai” here and at its later occurrence in the chapter.",
+      "current": "A local born and raised near Mount Odae, he had never once left the area.",
+      "defect": "The translation uses the Korean geographic reading Mount Odae for 五臺山, misidentifying the setting’s Shanxi mountain.",
+      "id": "R0000-02",
+      "rationale": "五臺山 in Shanxi is Mount Wutai; Mount Odae denotes a different mountain in Korea.",
+      "severity": "major",
+      "source": "생전 오대산(五臺山) 인근을 벗어난 적 없는 토박이였고 약관 무렵부터 만만한 산객들을 대상으로 통행료를 뜯어내 왔다."
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Replace with “At that moment, a cold wind blew.”",
+      "current": "A cold silence fell.",
+      "defect": "A literal gust of cold wind is replaced with figurative silence.",
+      "id": "R0000-03",
+      "rationale": "The source explicitly describes cold wind blowing; it does not mention silence.",
+      "severity": "minor",
+      "source": "순간, 싸늘한 찬바람이 불었다."
+    },
+    {
+      "chapter": 4,
+      "confidence": 0.99,
+      "correction": "Retain the first spoken line, but render the second as internal thought: *Goblins?*",
+      "current": "“They’re goblins?”\n\n“Goblins?”",
+      "defect": "The second line is formatted as new spoken dialogue, apparently assigning knowledge of goblins to another character. In the source it is Taekyung’s unspoken incredulous reaction.",
+      "id": "R0000-04",
+      "rationale": "Only the first source line has quotation marks. Treating the second as dialogue invents a speaker and implies that someone in Murim recognizes a modern-world monster category.",
+      "severity": "critical",
+      "source": "“고블린이네?”\n\n고블린이여?"
+    },
+    {
+      "chapter": 4,
+      "confidence": 1.0,
+      "correction": "Replace with “Critical One Strike! Status effect Bleeding activated!”",
+      "current": "Critical hit! Status effect Bleeding activated!",
+      "defect": "The System notification replaces the required established term One Strike with “hit.”",
+      "id": "R0000-05",
+      "rationale": "The supplied glossary requires 일격 to be rendered as One Strike.",
+      "severity": "minor",
+      "source": "- 치명적인 일격! 상태 이상 [출혈]이 발동됩니다!"
+    }
+  ],
+  "summary": "Chapters 0, 1, and 3 are acceptable. Chapter 2 prematurely translates speech that Taekyung cannot yet understand. Chapter 4 contains a misidentified Chinese mountain, converts a physical beat into silence, assigns an internal reaction to an apparent second speaker, and misses the required One Strike terminology.",
+  "version": 1
+}
