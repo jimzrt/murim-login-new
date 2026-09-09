@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "By the time I finished reading them all and sorting through my thoughts, more than ten minutes had passed.",
+      "current": "By the time I finished reading them all and整理 my thoughts, more than ten minutes had passed.",
+      "defect": "Untranslated CJK 整理 remains in the English reading copy in place of 정리.",
+      "id": "F01",
+      "rationale": "The source is ordinary narration (organize/sort one’s thoughts after reading the messages). The draft is not English-only and leaves the verb unfinished.",
+      "severity": "major",
+      "source": "메시지를 다 읽고 생각을 정리했을 때는 십여 분이 훌쩍 흐른 뒤였다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "But if you asked whether it was enough that I’d mix it into my spear technique without realizing it, the answer was no.",
+      "current": "But was it really enough to make me unconsciously mix it into my spear technique?",
+      "defect": "The self-answered negation 물어보면 그건 아니다 is omitted, so an explicit no becomes an unanswered question.",
+      "id": "F02",
+      "rationale": "He denies that half a day of footwork would leak into the spear forms; that denial is the hinge for the next line about seven years of mixed movement.",
+      "severity": "major",
+      "source": "하지만 창법을 펼칠 때 나도 모르게 섞어 쓸 정도냐, 물어보면 그건 아니다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Three, two, one. It’s not even a countdown. What is this?",
+      "current": "Three, two, one. What is this, a countdown?",
+      "defect": "Omits the negation 카운트 세는 것도 아니고, so the joke becomes a straight identification as a countdown.",
+      "id": "F03",
+      "rationale": "The punchline is that the 3–2–1 Mastery drop looks like a countdown but isn’t one, so the situation is even more absurd.",
+      "severity": "minor",
+      "source": "삼, 이, 일. 카운트 세는 것도 아니고 뭐야, 이게?"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Goblin shit might actually taste better… but it was definitely worth a try.",
+      "current": "Actually, goblin shit might taste better…",
+      "defect": "Drops the closing judgment 확실히 시도해 볼 만한 일이다 that licenses the second pill.",
+      "id": "F04",
+      "rationale": "The source turns the gag into a decision to test stacking; the draft keeps only the taste aside.",
+      "severity": "minor",
+      "source": "왠지 고블린 똥이 더 맛있을 것 같긴 한데…… 확실히 시도해 볼 만한 일이다."
+    },
+    {
+      "confidence": 0.76,
+      "correction": "I needed to shout my head off and take a proof photo. I needed to flatten Big Brother Jinho’s nose—he used to tease me for being a rice bug.",
+      "current": "I needed to shout until my voice gave out and take a picture to prove it. I needed to make Big Brother Jinho, who used to tease me for being a rice bug, eat his words.",
+      "defect": "떠나가라 is volume, not voice failure; 쌀벌레 is an opaque leftover; 코를 납작하게 is humbling, not retracting a claim.",
+      "id": "F05",
+      "rationale": "The beat is loud bragging plus humiliating the older friend who called him a freeloading rice-eater, not making him withdraw a statement after going hoarse.",
+      "severity": "minor",
+      "source": "떠나가라 소리를 지르고, 인증 사진도 찍어야 하는데. 쌀벌레라고 놀리던 진호 형 코를 납작하게 만들어 줘야 하는데."
+    },
+    {
+      "confidence": 0.73,
+      "correction": "You have realized the connection between martial arts on your own.",
+      "current": "You have discovered the connection between martial arts on your own.",
+      "defect": "System 깨달았습니다 is insight/realization, not discovery of an object.",
+      "id": "F06",
+      "rationale": "The bound term is enlightenment/insight; later narration already uses insight for 깨달음, but the panel itself downgrades the mechanism to discovering.",
+      "severity": "minor",
+      "source": "무공의 연계를 스스로 깨달았습니다."
+    }
+  ],
+  "summary": "One major English-copy break (CJK leftover for 정리). Several omitted negations and a dropped decision beat; remaining issues are local register/idiom losses, not scene reversals.",
+  "version": 1
+}

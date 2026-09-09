@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Replaced the untranslated CJK text with natural English: “sorting through my thoughts.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the explicit negation that he would not unconsciously mix the manoeuvre technique into the spear technique.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the negation so the 3–2–1 sequence is explicitly not a countdown.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored his conclusion that testing whether the effects stack is worth trying.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored the loud shouting, proof photo, and intent to humble Jinho while rendering the rice-bug insult as a natural English equivalent.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Changed “discovered” to “realized” to preserve the insight-based mechanism in the System message.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -2,20 +2,21 @@
 
 Updated: 2026-09-09
 
-- Last completed: 10
-- Next chapter: 11
-- Current block: 10–14 (1/5)
-- Latest translation: `translations/0010.md`
+- Last completed: 11
+- Next chapter: 12
+- Current block: 10–14 (2/5)
+- Latest translation: `translations/0011.md`
 - Latest summary: `summaries/0005-0009.md`
-- Safe profiles through: chapter 10
+- Safe profiles through: chapter 11
 
 ## Current Block
 
-Chapter 10 places Taekyung in a staged confinement at the Jin Family’s
-training hall. He acquires the Jin Family’s Spear Technique, learns to use
-internal energy with a heavy sharp spear, and begins its movement sequence.
-Jin Wikyung and Wipeng continue protecting him while the Mount Heng Sword Sect
-makes contact and triggers preparations across Shanxi.
+Chapters 10–11 place Taekyung in a staged confinement at the Jin Family’s
+training hall. He acquires and masters the Jin Family’s Spear Technique,
+combines it with the Manoeuvre Technique, and reaches Level 13 after a
+breakthrough that exhausts his internal energy. Jin Wikyung and Wipeng
+continue protecting him while the Mount Heng Sword Sect makes contact and
+triggers preparations across Shanxi.
 
 ## Open Questions
 

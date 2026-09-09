@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "safe_through": 10,
-  "continuity_sources": [9, 10],
+  "safe_through": 11,
+  "continuity_sources": [10, 11],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame.",
-    "Taekyung is Lv. 11 after assigning his ten new points to Stamina; Qi Sense detects targets through Lv. 30 within ten jang.",
+    "Taekyung is Lv. 13 after gaining insight through training; Qi Sense detects targets through Lv. 30 within ten jang.",
     "Hyuk Mujin is Lv. 20; after their fight both he and Taekyung were taken to the Medicine King Hall.",
     "Jin Wikyung is Taekyung's thirty-five-year-old eldest brother and the Lesser Family Head of the Jin Family of Taiyuan; Wipeng is his trusted guard.",
     "At the Medicine King Hall, Taekyung pretends to have amnesia, and Jin Wikyung believes him.",
@@ -15,7 +15,9 @@
     "Taekyung is practicing the Jin Family's Manoeuvre Technique and earns the Novice Trainee title after completing its movement sequence one hundred times.",
     "Taekyung asks for a practice room; Jin Wikyung orders staged closed-door confinement in the training hall to shield him from the Elder Council. Wipeng negotiates the arrangement down to three days.",
     "Taekyung acquires the Jin Family's Spear Technique and begins practicing it with internal energy and a sharp iron spear after the training wooden spear proves too light to control.",
-    "The training hall contains grain-repelling pills, an underground spring, and weapons; Taekyung's current spear practice has six successful attempts out of one hundred.",
+    "The training hall contains grain-repelling pills, an underground spring, and weapons; Taekyung completed one hundred successful repetitions of the Jin Family's Spear Technique.",
+    "Taekyung combined the Jin Family's Manoeuvre and Spear Techniques, depleted his internal energy, and completed the Unity of Self and Object achievement.",
+    "The Jin Family's Manoeuvre Technique and Spear Technique reached the Third Stage, while the Jin Family's Cultivation Technique reached the Second Stage; the achievement reward remains unopened.",
     "The Mount Heng Sword Sect has contacted the Jin Family, and Jin Wikyung orders every Shanxi branch to prepare for its purpose."
   ],
   "open_questions": [
