@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "safe_through": 18,
   "continuity_sources": [17, 18],
   "active_continuity": [
