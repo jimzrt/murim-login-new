@@ -69,6 +69,17 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
         plain = re.sub(r"[*_`]", "", english).strip()
         if korean in source and plain and plain.casefold() not in translation.casefold():
             warnings.append(finding("terminology", "matched preferred term is absent", korean=korean, preferred=plain))
+    try:
+        from tools.names import novel_romanizations
+    except ModuleNotFoundError:
+        from names import novel_romanizations
+    for item in novel_romanizations(source, translation):
+        warnings.append(finding(
+            "novel_name",
+            "source term was romanized without a ledger entry; use the established English or footnote the first use",
+            korean=item["korean"],
+            romanization=item["romanization"],
+        ))
     source_paragraphs = len([part for part in re.split(r"\n\s*\n", source) if part.strip()])
     target_paragraphs = len([part for part in re.split(r"\n\s*\n", translation) if part.strip()])
     paragraph_ratio = target_paragraphs / max(1, source_paragraphs)

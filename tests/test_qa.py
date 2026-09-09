@@ -23,3 +23,19 @@ class QaTest(unittest.TestCase):
         self.assertTrue(any("nod" in message for message in messages))
         self.assertTrue(any("eldest-brother" in message for message in messages))
         self.assertTrue(any("internal energy" in message for message in messages))
+
+    def test_novel_romanization_warns_without_blocking(self):
+        source = "＃1화\n\n" + ("그는 말했다. " * 9) + "가나다라마가 나타났다.\n\n* * *\n\n100"
+        target = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” Ganadarama appeared.\n\n* * *\n\n100 remained.\n'
+        result = run_qa(1, source, target, [])
+        self.assertTrue(result["passed"], result)
+        warning = next(item for item in result["warnings"] if item["code"] == "novel_name")
+        self.assertEqual(warning["details"]["korean"], "가나다라마")
+
+    def test_ledger_term_missing_preferred_english_is_terminology(self):
+        source = "＃1화\n\n" + ("그는 말했다. " * 9) + "천력부가 나타났다.\n\n* * *\n\n100"
+        target = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” Cheonryeokbu appeared.\n\n* * *\n\n100 remained.\n'
+        result = run_qa(1, source, target, [("천력부", "**Heavenly Axe**")])
+        self.assertTrue(result["passed"], result)
+        self.assertTrue(any(item["code"] == "terminology" for item in result["warnings"]))
+        self.assertFalse(any(item["code"] == "novel_name" for item in result["warnings"]))

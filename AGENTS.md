@@ -56,10 +56,11 @@ not load the bulk source, full compendium, archive directories, or
   copy plus one disposition per finding; final QA must pass.
 - Unresolved critical or major findings block acceptance. Reviews and
   dispositions are durable JSON with generated Markdown reading reports.
-- At `REVISED`, update durable terminology, affected safe profiles,
-  `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from
-  this chapter only. Do not load other reading copies to summarize. When
-  status asks for it, run `python tools/workflow.py summarize N`.
+- At `REVISED`, update durable terminology in `docs/NAMES.md` or the
+  compendium, affected safe profiles, `docs/CONTEXT.json`, `docs/STATE.md`,
+  and `summaries/beats/NNNN.md` from this chapter only. Do not load other
+  reading copies to summarize. When status asks for it, run
+  `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
   task agent, nested session, or direct `omp` invocation. `run_next.py` must
   wait for each `workflow.py` command; do not background it.

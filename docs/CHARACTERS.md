@@ -3,6 +3,7 @@
 Do not load this file unless creating or restructuring a profile.
 
 - One chapter-safe profile per major character: `characters/<preferred-name>.md`.
+- Heading Korean and `Aliases:` Korean in parentheses join the names ledger.
 - Major means recurring, plot-bearing, or voice-sensitive; skip named extras.
 - Keep only stable role, personality, voice, relationships, and active continuity.
 - Cite source chapters and any wiki page used. The Korean and accepted translation control voice; the wiki is only a cross-check.

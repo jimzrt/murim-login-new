@@ -10,9 +10,6 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-KOREAN = re.compile(r"[가-힣]{2,}")
-TABLE_ROW = re.compile(r"^\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|.*$")
-PROFILE_NAME = re.compile(r"\(([가-힣]{2,})\)")
 SUMMARY_NAME = re.compile(r"^(\d{4})-(\d{4})\.md$")
 
 
@@ -98,18 +95,11 @@ def load_active_context(number: int) -> dict:
 
 
 def exact_glossary_entries(source: str) -> list[dict]:
-    entries: list[dict] = []
-    seen: set[str] = set()
-    for line in (ROOT / "compendium.md").read_text(encoding="utf-8").splitlines():
-        match = TABLE_ROW.match(line)
-        if not match:
-            continue
-        korean = match.group(1).strip()
-        english = match.group(2).strip()
-        if KOREAN.fullmatch(korean) and korean in source and korean not in seen:
-            entries.append({"korean": korean, "english": english, "row": line})
-            seen.add(korean)
-    return entries
+    try:
+        from tools.names import ledger_for_source
+    except ModuleNotFoundError:
+        from names import ledger_for_source
+    return ledger_for_source(source)
 
 
 def glossary_text(entries: list[dict]) -> str:
@@ -117,10 +107,14 @@ def glossary_text(entries: list[dict]) -> str:
 
 
 def profile_entries(source: str) -> list[tuple[Path, str]]:
+    try:
+        from tools.names import profile_koreans
+    except ModuleNotFoundError:
+        from names import profile_koreans
     profiles: list[tuple[Path, str]] = []
     for path in sorted((ROOT / "characters").glob("*.md")):
         body = path.read_text(encoding="utf-8")
-        if any(name in source for name in PROFILE_NAME.findall(body)):
+        if any(name in source for name in profile_koreans(body)):
             profiles.append((path, body.strip()))
     return profiles
 
@@ -307,7 +301,8 @@ ambiguity. Do not review, explain, update files, or continue to another chapter.
 
 {profiles_text(profiles)}
 """
-    used = [rules_path, context_path, source_path, compendium_path, *continuity_paths, *(path for path, _ in profiles)]
+    names_path = ROOT / "docs" / "NAMES.md"
+    used = [rules_path, context_path, source_path, compendium_path, names_path, *continuity_paths, *(path for path, _ in profiles)]
     if summary_path:
         used.append(summary_path)
     return body.replace("# Draft Task", f"<!-- packet-manifest\n{manifest(used, body)}\n-->\n\n# Draft Task", 1)

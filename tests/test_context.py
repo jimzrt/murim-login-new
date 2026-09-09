@@ -54,6 +54,12 @@ class ContextPacketTest(unittest.TestCase):
         self.assertIn("Well-Endowed Man", mapping["대물남"])
         self.assertIn("pavilion", mapping["전각"])
 
+    def test_names_ledger_aliases_are_retrieved_by_source_korean(self):
+        entries = context.exact_glossary_entries("천력부 천관일")
+        mapping = {item["korean"]: item["english"] for item in entries}
+        self.assertIn("Heavenly Axe", mapping["천력부"])
+        self.assertIn("Thrust of the Heavenly Crown", mapping["천관일"])
+
     def test_summary_packet_uses_beats_not_reading_copies(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

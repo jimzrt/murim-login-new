@@ -46,6 +46,7 @@ Use the established character spellings even where a different romanization migh
 | 백우     | **Baek Woo**       |
 | 철수     | **Cheol Soo**      |
 | 월화     | **Wolhwa**         |
+| 장삼     | **Jang Sam**       |
 
 These spellings are consistent with the established English character index, which catalogs more than 160 characters. ([Murim Login][2])
 
@@ -95,6 +96,7 @@ Treat martial epithets as proper titles and capitalize them.
 | 혈랑검    | **Blood Wolf Sword**          | Lee Cheonbaek  |
 | 항산호    | **Tiger of Mount Heng**       | Cheol Mubaek   |
 | 은비화    | **Dagger Hidden Flower**      | Ju Hwaran      |
+| 천력부    | **Heavenly Axe**              | Jang Sam       |
 
 **Sleeping Dragon of Shanxi** is explicitly tied to webtoon chapter 59. ([Murim Login][4]) **Swift Wind Sword** is the established title for Hyuk Mujin. ([Murim Login][5]) Jin Mukyung's 진천검 is represented as **Heaven Shaking Sword** in the established English terminology. ([Murim Login][6]) Jin Baekyang's webtoon title **Blade of Flowers** is traced to chapter 35. ([Murim Login][7])
 
@@ -316,6 +318,7 @@ Avoid unnecessarily leaving Korean honorifics such as *sahyeong*, *sasuk*, *saji
 | 진가창법   | **Jin Family's Spear Technique**       |
 | 진가검법   | **Jin Sword Technique**                |
 | 일격     | **One Strike**                         |
+| 천관일    | **Thrust of the Heavenly Crown**       |
 
 The established skill index uses exactly these labels.
 
