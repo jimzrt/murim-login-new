@@ -11,7 +11,8 @@
 - Deterministic QA and structured finding dispositions must pass.
 - Unresolved critical or major findings block acceptance.
 - Run chapter review only through `python tools/workflow.py review N`.
-- Never start nested agents or reviewer sessions.
+- Never start nested agents, hub, task, or reviewer sessions.
+- Wait for each `workflow.py` bash command to finish; do not background it.
 - Under `tools/run_next.py`, stop at `ACCEPTED`; the wrapper records coordinator usage and commits.
 - Stop on command failure, stale hashes, ambiguity, or `COMMITTED`.
 - For accepted-range re-audits, use `tools/audit_range.py`; never reopen normal chapter transactions.

@@ -44,10 +44,12 @@ python tools/run_next.py
 ```
 
 The wrapper reads `- Next chapter: N` from `docs/STATE.md`, displays coordinator
-text and tool arguments as they run, runs exactly that chapter through
+text and the full tool arguments as they run, runs exactly that chapter through
 `ACCEPTED`, records the coordinator's own JSON usage, prints the chapter cost
 report plus a project total, commits the accepted change set, registers the
-commit, and stops. On a checkpoint chapter, applied review patches to earlier
+commit, and stops. The coordinator session is bash-only (no hub or nested
+agents), waits for each `workflow.py` command, and uses
+`.omp/coordinator-overlay.yml` so OMP cannot auto-background those calls. On a checkpoint chapter, applied review patches to earlier
 reading copies in the same block are included in `Accept Chapter N`. The inner
 chapter calls and outer coordinator are therefore all attributed to the same
 chapter before its checkpoint is created.

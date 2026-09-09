@@ -20,8 +20,18 @@ from workflow import command_committed, interval_due, paths, project_config, rec
 
 TRANSLATION_RE = re.compile(r"^translations/(\d{4})\.md$")
 WORKFLOW_RE = re.compile(r"(?:python\s+)?tools/workflow\.py\s+(\S+)(?:\s+(\d+))?")
-DETAIL_LIMIT = 160
-HUB_LIMIT = 80
+COORDINATOR_OVERLAY = ROOT / ".omp" / "coordinator-overlay.yml"
+COORDINATOR_MAX_TIME = 7200
+COORDINATOR_TOOLS = "bash,read,write,edit"
+FORBIDDEN_TOOLS = {"hub", "task"}
+RESULT_LIMIT = 800
+GENERIC_ARG_LIMIT = 4000
+COORDINATOR_SYSTEM = (
+    "Run only the exact next python tools/workflow.py command reported by status. "
+    "Wait for each bash command to finish. Never background a command, never use hub "
+    "or task, and never start a nested agent. Do not commit and do not run "
+    "workflow.py committed."
+)
 
 
 def next_chapter() -> int:
@@ -80,8 +90,8 @@ def collapse(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def truncate(text: str, limit: int = DETAIL_LIMIT) -> str:
-    text = collapse(text)
+def truncate(text: str, limit: int) -> str:
+    text = text.strip()
     if len(text) <= limit:
         return text
     return text[: limit - 1] + "…"
@@ -95,6 +105,14 @@ def first_string(args: dict, *keys: str) -> str:
     return ""
 
 
+def event_args(event: dict) -> dict:
+    for key in ("args", "arguments", "input", "params"):
+        value = event.get(key)
+        if isinstance(value, dict):
+            return value
+    return {}
+
+
 def workflow_label(command: str) -> str | None:
     match = WORKFLOW_RE.search(command)
     if not match:
@@ -105,26 +123,70 @@ def workflow_label(command: str) -> str | None:
     return label
 
 
-def summarize_tool_args(tool: str, args: object) -> str:
-    if not isinstance(args, dict):
+def format_scalar_extras(args: dict, skip: set[str] | None = None) -> str:
+    bits: list[str] = []
+    ignored = skip or set()
+    names = (
+        ("timeout", "timeout"),
+        ("timeout_ms", "timeout_ms"),
+        ("timeoutMs", "timeout_ms"),
+        ("timeoutSeconds", "timeout_s"),
+        ("cwd", "cwd"),
+        ("working_directory", "cwd"),
+        ("background", "background"),
+        ("block_until_ms", "block_until_ms"),
+        ("wait", "wait"),
+        ("wait_ms", "wait_ms"),
+    )
+    seen: set[str] = set()
+    for key, label in names:
+        if key in ignored or key not in args or key in seen:
+            continue
+        value = args[key]
+        if value in (None, "", False):
+            continue
+        seen.add(key)
+        bits.append(f"{label}={value}")
+    return ", ".join(bits)
+
+
+def format_generic_args(args: dict) -> str:
+    parts: list[str] = []
+    for key in sorted(args):
+        value = args[key]
+        if value is None or value == "":
+            continue
+        if isinstance(value, bool):
+            parts.append(f"{key}={str(value).lower()}")
+        elif isinstance(value, (int, float)):
+            parts.append(f"{key}={value}")
+        elif isinstance(value, str):
+            text = value.strip()
+            if "\n" in text or len(text) > 160:
+                indented = "\n    ".join(text.splitlines())
+                parts.append(f"{key}:\n    {indented}")
+            else:
+                parts.append(f"{key}={collapse(text)}")
+        else:
+            parts.append(f"{key}={truncate(json.dumps(value, ensure_ascii=False, default=str), 500)}")
+    return truncate("\n  ".join(parts), GENERIC_ARG_LIMIT)
+
+
+def format_tool_detail(tool: str, args: object) -> str:
+    if not isinstance(args, dict) or not args:
         return ""
     name = (tool or "tool").lower()
     if name == "bash":
         command = first_string(args, "command")
-        return workflow_label(command) or truncate(command)
-    if name in {"read", "write", "edit"}:
-        return first_string(args, "path", "file_path", "target_notebook")
-    if name == "grep":
-        return truncate(f"{first_string(args, 'pattern')} {first_string(args, 'path')}".strip())
-    if name == "glob":
-        return first_string(args, "glob_pattern", "pattern")
-    if name == "hub":
-        return truncate(first_string(args, "description", "prompt", "task", "message", "query"), HUB_LIMIT)
-    for key in ("path", "command", "query", "pattern", "glob_pattern", "description"):
-        value = first_string(args, key)
-        if value:
-            return truncate(value)
-    return ""
+        extra = format_scalar_extras(args, skip={"command"})
+        if command and extra:
+            return f"{command}  ({extra})"
+        return command or extra
+    return format_generic_args(args)
+
+
+def summarize_tool_args(tool: str, args: object) -> str:
+    return format_tool_detail(tool, args)
 
 
 def result_text(result: object) -> str:
@@ -145,7 +207,9 @@ def result_text(result: object) -> str:
         return "".join(parts)
     if isinstance(result.get("output"), str):
         return result["output"]
-    return ""
+    if isinstance(result.get("error"), str):
+        return result["error"]
+    return truncate(json.dumps(result, ensure_ascii=False, default=str), RESULT_LIMIT)
 
 
 def format_status_result(text: str) -> str | None:
@@ -170,14 +234,61 @@ def format_elapsed(seconds: float | None) -> str:
     return f"{round(seconds)}s"
 
 
-def format_tool_start(event: dict) -> str:
-    tool = event.get("toolName") or "tool"
-    detail = summarize_tool_args(tool, event.get("args"))
-    if detail.startswith("workflow "):
-        return f"→ {detail}"
-    if detail:
-        return f"→ {tool}  {detail}"
-    return f"→ {tool}"
+def result_needs_snippet(text: str, is_error: bool) -> bool:
+    if not text.strip():
+        return False
+    if is_error:
+        return True
+    lowered = text.lower()
+    return any(token in lowered for token in ("timed out", "timeout", "background", "still running", "error"))
+
+
+def format_tool_start(tool: str, args: dict) -> str:
+    detail = format_tool_detail(tool, args)
+    if not detail:
+        return f"→ {tool}"
+    if "\n" in detail:
+        return f"→ {tool}\n  {detail}"
+    return f"→ {tool}  {detail}"
+
+
+def reject_forbidden_tool(event: dict) -> None:
+    if event.get("type") != "tool_execution_start":
+        return
+    name = str(event.get("toolName") or "").lower()
+    if name not in FORBIDDEN_TOOLS:
+        return
+    detail = format_tool_detail(name, event_args(event)) or "(no arguments)"
+    raise SystemExit(f"coordinator used forbidden tool {name}: {collapse(detail)}")
+
+
+def coordinator_command(chapter: int, model: str) -> list[str]:
+    prompt = (
+        f"Complete chapter {chapter} through ACCEPTED and then stop. "
+        "Do not commit and do not run workflow.py committed; the wrapper owns the checkpoint."
+    )
+    return [
+        "omp",
+        "--mode",
+        "json",
+        "--no-session",
+        "--no-extensions",
+        "--no-skills",
+        "--no-lsp",
+        "--no-pty",
+        "--tools",
+        COORDINATOR_TOOLS,
+        "--config",
+        str(COORDINATOR_OVERLAY),
+        "--model",
+        model,
+        "--max-time",
+        str(COORDINATOR_MAX_TIME),
+        "--auto-approve",
+        "--append-system-prompt",
+        COORDINATOR_SYSTEM,
+        prompt,
+    ]
 
 
 class ProgressRenderer:
@@ -186,59 +297,85 @@ class ProgressRenderer:
     def __init__(self, clock=time.monotonic):
         self._clock = clock
         self._started: dict[str, float] = {}
-        self._bash: dict[str, str] = {}
+        self._calls: dict[str, tuple[str, dict]] = {}
+        self._in_text = False
+
+    def write_text(self, delta: str) -> None:
+        if not delta:
+            return
+        if not self._in_text:
+            print("\n", end="", flush=True)
+            self._in_text = True
+        print(delta, end="", flush=True)
+
+    def finish_text(self) -> None:
+        if self._in_text:
+            print(flush=True)
+            self._in_text = False
 
     def line(self, event: dict) -> str | None:
         kind = event.get("type")
         if kind == "tool_execution_start":
+            self.finish_text()
             call_id = event.get("toolCallId")
-            args = event.get("args") if isinstance(event.get("args"), dict) else {}
+            args = event_args(event)
+            tool = str(event.get("toolName") or "tool")
             if isinstance(call_id, str):
                 self._started[call_id] = self._clock()
-                command = args.get("command")
-                if isinstance(command, str):
-                    self._bash[call_id] = command
-            return format_tool_start(event)
+                self._calls[call_id] = (tool, args)
+            return format_tool_start(tool, args)
         if kind == "tool_execution_end":
+            self.finish_text()
             return self._end_line(event)
         return None
 
     def _end_line(self, event: dict) -> str:
-        tool = event.get("toolName") or "tool"
-        marker = "✗" if event.get("isError") else "✓"
         call_id = event.get("toolCallId")
-        elapsed = None
-        command = ""
+        tool = str(event.get("toolName") or "tool")
+        args: dict = {}
         if isinstance(call_id, str):
             started = self._started.pop(call_id, None)
-            if started is not None:
-                elapsed = self._clock() - started
-            command = self._bash.pop(call_id, "")
-        time_bit = format_elapsed(elapsed)
+            recorded = self._calls.pop(call_id, None)
+            elapsed = None if started is None else self._clock() - started
+            if recorded:
+                tool, args = recorded
+        else:
+            elapsed = None
+        is_error = bool(event.get("isError"))
+        marker = "✗" if is_error else "✓"
+        command = first_string(args, "command")
         label = workflow_label(command)
+        time_bit = format_elapsed(elapsed)
+        result = result_text(event.get("result"))
         if label and label.split()[1] == "status":
-            status = format_status_result(result_text(event.get("result")))
+            status = format_status_result(result)
             if status:
-                return f"{marker} {status}" + (f"  {time_bit}" if time_bit else "")
-        if label:
-            return f"{marker} {time_bit}" if time_bit else f"{marker} {label}"
+                line = f"{marker} {status}"
+                return f"{line}  {time_bit}" if time_bit else line
+        detail = command or format_tool_detail(tool, args)
+        line = f"{marker} {tool}"
+        if detail:
+            line += f"  {detail}"
         if time_bit:
-            return f"{marker} {tool}  {time_bit}"
-        return f"{marker} {tool}"
+            line += f"  {time_bit}"
+        if result_needs_snippet(result, is_error):
+            snippet = truncate(result, RESULT_LIMIT)
+            indented = "\n  ".join(snippet.splitlines())
+            return f"{line}\n  {indented}"
+        return line
 
 
 def render_event(event: dict, renderer: ProgressRenderer | None = None) -> None:
+    active = renderer or ProgressRenderer()
     kind = event.get("type")
     if kind == "message_update":
         update = event.get("assistantMessageEvent", {})
         if isinstance(update, dict) and update.get("type") == "text_delta":
-            print(update.get("delta", ""), end="", flush=True)
+            active.write_text(update.get("delta", "") or "")
         return
-    active = renderer or ProgressRenderer()
     line = active.line(event)
     if line:
-        prefix = "\n" if kind == "tool_execution_start" else ""
-        print(f"{prefix}{line}", flush=True)
+        print(line, flush=True)
 
 
 def print_cost_report(chapter: int) -> None:
@@ -249,11 +386,7 @@ def print_cost_report(chapter: int) -> None:
 
 
 def run_coordinator(chapter: int, model: str) -> dict:
-    prompt = (
-        f"Complete chapter {chapter} through ACCEPTED and then stop. "
-        "Do not commit and do not run workflow.py committed; the wrapper owns the checkpoint."
-    )
-    command = ["omp", "--mode", "json", "--no-session", "--model", model, prompt]
+    command = coordinator_command(chapter, model)
     capture = EventCapture(model)
     renderer = ProgressRenderer()
     started = time.monotonic()
@@ -273,11 +406,13 @@ def run_coordinator(chapter: int, model: str) -> dict:
                 raise OmpJsonError(f"OMP JSON event on line {line_number} is not an object")
             capture.consume(event)
             render_event(event, renderer)
+            reject_forbidden_tool(event)
     except BaseException:
         process.terminate()
         raise
     finally:
         return_code = process.wait()
+    renderer.finish_text()
     if return_code:
         raise SystemExit(f"OMP coordinator failed with exit code {return_code}")
     _, metrics = capture.finish()

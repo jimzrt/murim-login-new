@@ -58,7 +58,8 @@ not load the bulk source, full compendium, archive directories, or
   this chapter only. Do not load other reading copies to summarize. When
   status asks for it, run `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
-  task agent, nested session, or direct `omp` invocation.
+  task agent, nested session, or direct `omp` invocation. `run_next.py` must
+  wait for each `workflow.py` command; do not background it.
 
 ## Acceptance
 

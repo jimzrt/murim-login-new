@@ -1,3 +1,4 @@
+import io
 import tempfile
 import unittest
 from pathlib import Path
@@ -29,47 +30,79 @@ class RunNextTest(unittest.TestCase):
         self.assertFalse(run_next.allowed_change("characters/spoilers/future.md", 9))
         self.assertFalse(run_next.allowed_change("tools/workflow.py", 9))
 
+    def test_coordinator_command_disables_hub_and_auto_background(self):
+        command = run_next.coordinator_command(14, "provider/coordinator:high")
+        self.assertEqual(command[command.index("--tools") + 1], run_next.COORDINATOR_TOOLS)
+        self.assertNotIn("hub", command[command.index("--tools") + 1])
+        self.assertNotIn("task", command[command.index("--tools") + 1])
+        self.assertEqual(command[command.index("--config") + 1], str(run_next.COORDINATOR_OVERLAY))
+        self.assertEqual(command[command.index("--max-time") + 1], str(run_next.COORDINATOR_MAX_TIME))
+        self.assertIn("--no-pty", command)
+        self.assertIn("--no-extensions", command)
+        overlay = run_next.COORDINATOR_OVERLAY.read_text(encoding="utf-8")
+        self.assertIn("autoBackground:\n    enabled: false", overlay)
+        self.assertIn("hub: deny", overlay)
+        self.assertIn("task: deny", overlay)
+        self.assertIn("async:\n  enabled: false", overlay)
+
     def test_summarizes_workflow_and_file_tool_args(self):
         self.assertEqual(
             run_next.summarize_tool_args("bash", {"command": "python tools/workflow.py status 9"}),
-            "workflow status 9",
+            "python tools/workflow.py status 9",
         )
         self.assertEqual(
-            run_next.summarize_tool_args("bash", {"command": "python tools/workflow.py draft 9"}),
-            "workflow draft 9",
+            run_next.summarize_tool_args("bash", {
+                "command": "python tools/workflow.py draft 9",
+                "timeout": 120,
+            }),
+            "python tools/workflow.py draft 9  (timeout=120)",
         )
         self.assertEqual(
             run_next.summarize_tool_args("read", {"path": ".work/0009/draft.md"}),
-            ".work/0009/draft.md",
+            "path=.work/0009/draft.md",
         )
-        self.assertEqual(
-            run_next.summarize_tool_args("grep", {"pattern": "Jin Wikyung", "path": "translations"}),
-            "Jin Wikyung translations",
-        )
-        self.assertEqual(
-            run_next.summarize_tool_args("glob", {"glob_pattern": "reviews/sol/*.json"}),
-            "reviews/sol/*.json",
-        )
-        self.assertEqual(
-            run_next.summarize_tool_args("hub", {"description": "Apply checkpoint findings"}),
-            "Apply checkpoint findings",
-        )
-        self.assertEqual(
-            run_next.format_tool_start({
-                "toolName": "bash",
-                "args": {"command": "python tools/workflow.py status 9"},
+        self.assertIn(
+            "description=Apply checkpoint findings",
+            run_next.summarize_tool_args("hub", {
+                "description": "Apply checkpoint findings",
+                "prompt": "python tools/workflow.py draft 14",
             }),
-            "→ workflow status 9",
+        )
+        self.assertIn(
+            "prompt=python tools/workflow.py draft 14",
+            run_next.summarize_tool_args("hub", {
+                "description": "Apply checkpoint findings",
+                "prompt": "python tools/workflow.py draft 14",
+            }),
         )
         self.assertEqual(
-            run_next.format_tool_start({
-                "toolName": "read",
-                "args": {"path": ".work/0009/draft.md"},
-            }),
-            "→ read  .work/0009/draft.md",
+            run_next.format_tool_start("bash", {"command": "python tools/workflow.py status 9"}),
+            "→ bash  python tools/workflow.py status 9",
+        )
+        self.assertEqual(
+            run_next.format_tool_start("read", {"path": ".work/0009/draft.md"}),
+            "→ read  path=.work/0009/draft.md",
         )
 
-    def test_progress_end_lines_include_status_and_elapsed(self):
+    def test_rejects_hub_and_task(self):
+        with self.assertRaises(SystemExit) as error:
+            run_next.reject_forbidden_tool({
+                "type": "tool_execution_start",
+                "toolName": "hub",
+                "args": {
+                    "description": "wait for draft",
+                    "prompt": "python tools/workflow.py draft 14",
+                },
+            })
+        self.assertIn("forbidden tool hub", str(error.exception))
+        self.assertIn("python tools/workflow.py draft 14", str(error.exception))
+        run_next.reject_forbidden_tool({
+            "type": "tool_execution_start",
+            "toolName": "bash",
+            "args": {"command": "python tools/workflow.py draft 14"},
+        })
+
+    def test_progress_end_lines_include_status_command_and_elapsed(self):
         times = iter([10.0, 171.2, 200.0, 200.4])
         renderer = run_next.ProgressRenderer(clock=lambda: next(times))
         self.assertEqual(
@@ -79,7 +112,7 @@ class RunNextTest(unittest.TestCase):
                 "toolName": "bash",
                 "args": {"command": "python tools/workflow.py draft 9"},
             }),
-            "→ workflow draft 9",
+            "→ bash  python tools/workflow.py draft 9",
         )
         self.assertEqual(
             renderer.line({
@@ -89,7 +122,7 @@ class RunNextTest(unittest.TestCase):
                 "isError": False,
                 "result": {"content": [{"type": "text", "text": "ok"}]},
             }),
-            "✓ 161s",
+            "✓ bash  python tools/workflow.py draft 9  161s",
         )
         self.assertEqual(
             renderer.line({
@@ -98,7 +131,7 @@ class RunNextTest(unittest.TestCase):
                 "toolName": "bash",
                 "args": {"command": "python tools/workflow.py status 9"},
             }),
-            "→ workflow status 9",
+            "→ bash  python tools/workflow.py status 9",
         )
         self.assertEqual(
             renderer.line({
@@ -113,6 +146,47 @@ class RunNextTest(unittest.TestCase):
             }),
             "✓ CONTEXT_READY; next: python tools/workflow.py draft 9",
         )
+
+    def test_timeout_results_are_logged(self):
+        times = iter([1.0, 121.0])
+        renderer = run_next.ProgressRenderer(clock=lambda: next(times))
+        renderer.line({
+            "type": "tool_execution_start",
+            "toolCallId": "hub",
+            "toolName": "hub",
+            "args": {
+                "description": "wait for draft",
+                "prompt": "python tools/workflow.py draft 14",
+            },
+        })
+        line = renderer.line({
+            "type": "tool_execution_end",
+            "toolCallId": "hub",
+            "toolName": "hub",
+            "isError": True,
+            "result": {"content": "python tools/workflow.py draft 14 timed out after 120 seconds"},
+        })
+        self.assertIn("✗ hub", line)
+        self.assertIn("timed out after 120 seconds", line)
+        self.assertIn("120s", line)
+
+    def test_assistant_text_does_not_glue_to_tool_lines(self):
+        renderer = run_next.ProgressRenderer(clock=lambda: 0.0)
+        buffer = io.StringIO()
+        with patch("sys.stdout", buffer):
+            run_next.render_event({
+                "type": "message_update",
+                "assistantMessageEvent": {"type": "text_delta", "delta": "it should wait"},
+            }, renderer)
+            run_next.render_event({
+                "type": "tool_execution_start",
+                "toolCallId": "draft",
+                "toolName": "bash",
+                "args": {"command": "python tools/workflow.py draft 14"},
+            }, renderer)
+        output = buffer.getvalue()
+        self.assertIn("\nit should wait\n", output)
+        self.assertIn("→ bash  python tools/workflow.py draft 14\n", output)
 
 
 if __name__ == "__main__":
