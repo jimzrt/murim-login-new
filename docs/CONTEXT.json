@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 9,
-  "continuity_sources": [8, 9],
+  "safe_through": 10,
+  "continuity_sources": [9, 10],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -13,8 +13,10 @@
     "Jin Mukyung is twenty-five, the Heaven Shaking Sword, and a cadet at Heaven's Gate Temple.",
     "Taekyung has three martial arts occupying slots; the System displays ten total martial-art slots, and he finds several hundred manuals in his residence.",
     "Taekyung is practicing the Jin Family's Manoeuvre Technique and earns the Novice Trainee title after completing its movement sequence one hundred times.",
-    "Taekyung asks for a practice room; Jin Wikyung orders indefinite confinement in the training hall to shield him from the Elder Council. Wipeng promises release within seven days, and Taekyung negotiates three.",
-    "Taekyung deliberately left a second mass of unassimilated internal energy untouched while circulating qi."
+    "Taekyung asks for a practice room; Jin Wikyung orders staged closed-door confinement in the training hall to shield him from the Elder Council. Wipeng negotiates the arrangement down to three days.",
+    "Taekyung acquires the Jin Family's Spear Technique and begins practicing it with internal energy and a sharp iron spear after the training wooden spear proves too light to control.",
+    "The training hall contains grain-repelling pills, an underground spring, and weapons; Taekyung's current spear practice has six successful attempts out of one hundred.",
+    "The Mount Heng Sword Sect has contacted the Jin Family, and Jin Wikyung orders every Shanxi branch to prepare for its purpose."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
@@ -23,6 +25,7 @@
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
     "Preserve brisk dark action-comedy and character hierarchy without archaic wuxia diction.",
-    "Use the accepted terms Heaven's Gate Temple, Three-Turn Footwork, Sound Transmission, Jin Family's Cultivation/Spear/Manoeuvre Techniques, and pleasure house."
+    "Use the accepted terms Heaven's Gate Temple, Three-Turn Footwork, Sound Transmission, Jin Family's Cultivation/Spear/Manoeuvre Techniques, and pleasure house.",
+    "Preserve the gold-spoon/God-Spoon wordplay and explain it briefly in a footnote."
   ]
 }

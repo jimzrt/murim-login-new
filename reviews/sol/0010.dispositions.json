@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Revised the gate-opening action so the waiting NPC pulls the protruding gate mechanism rather than appearing to lean out himself.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the named Jin Family’s Spear Technique and rendered 습득 as learning or acquiring the technique in the System prompt.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Used “gold spoon” and “God-Spoon” to preserve the source’s wealth-class wordplay, with a concise explanatory footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Removed the unsupported claim that the exhilaration had previously been denied and restored the source’s sense of being exhilarated once again.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Rendered 아오 as an exasperated reaction and retained only the source’s single strong profanity: “Ah, fuck.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Changed the training hall’s area to well over three thousand square feet, matching 백여 평.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Replaced the unnatural anatomical calque with natural whole-body wording: the energy spread through every part of his body.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Changed “threw away” to “tossed ... aside” so the action does not imply permanent disposal.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

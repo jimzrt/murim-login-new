@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "An NPC who had been waiting simply pulled the protruding gate mechanism. Even so, it was an overwhelming sight.",
+      "current": "One NPC who had been waiting nearby simply leaned out and pulled a mechanism that opened and closed the gate.",
+      "defect": "The protruding action is assigned to the NPC rather than the gate mechanism, changing the physical action and mechanism.",
+      "id": "F01",
+      "rationale": "삐죽 튀어나와 있는 modifies 개폐 장치: the opening mechanism sticks out. The NPC merely pulls it.",
+      "severity": "critical",
+      "source": "미리 대기하고 있던 NPC 한 명이 삐죽 튀어나와 있는 개폐 장치를 잡아당긴 것뿐이었지만 압도적인 광경이었다."
+    },
+    {
+      "confidence": 1.0,
+      "correction": "- Would you like to learn the Jin Family’s Spear Technique? (3 / 10)",
+      "current": "- Would you like to train in this martial art? (3 / 10)",
+      "defect": "The System notice omits the named Jin Family’s Spear Technique and changes the prompt from acquiring or learning it to training in an unspecified martial art.",
+      "id": "F02",
+      "rationale": "The source explicitly names 진가창법 and asks whether Taekyung wants to 습득 it. The technique identity and acquisition event are mechanically meaningful.",
+      "severity": "major",
+      "source": "- [진가창법]을 습득하시겠습니까? (3 / 10)"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Preserve “gold spoon” at its first occurrences and render 갓-수저 as “God-Spoon”: “So this is the life of a gold spoon.” … “Shuddering at the realistic God-Spoon System…” Add one concise footnote explaining the Korean wealth-class expression and pun if needed.",
+      "current": "“So this is what it’s like to be born with a silver spoon in your mouth.”\n\nIt wasn’t only the graphics and artificial intelligence that were realistic. The game also carried the social message that no matter how hard you struggled, being born rich was still the best.\n\nThank god I had this character. His father was the Family Head, his eldest brother was the Lesser Family Head, and his second brother was a martial arts prodigy.\n\nIt made perfect sense that he could spend all his time loafing around pleasure houses.\n\n*Jin Taekyung, you bastard…*\n\nNow that I thought about it, wasn’t he actually some great sage who had grasped the ways of the world at a young age?\n\nShuddering at the realistic born-with-a-silver-spoon System, I walked around the training hall, which was roughly three hundred square meters in size.",
+      "defect": "Localizing 금수저 as “silver spoon” erases the later 갓-수저 wordplay, so the final phrase becomes a repetition rather than the source’s “God-spoon” escalation.",
+      "id": "F03",
+      "rationale": "금수저 is the Korean “gold spoon” class label, while 갓-수저 deliberately replaces 금 with the English-derived 갓, “god.” The source’s joke depends on retaining that distinction.",
+      "severity": "major",
+      "source": "“이런 게 금수저의 삶이구나.”\n\n그래픽, 인공지능만 현실적인 게 아니다. 아무리 날고 기어도 금수저가 최고라는 사회적 메시지를 담고 있다.\n\n세상에, 이 캐릭터 아니면 어쩔 뻔했어. 아빠가 가주, 큰형이 소가주에 둘째 형은 무공의 천재다. 마음 놓고 기루 죽돌이 짓 할 만하다.\n\n‘진태경 이 새끼…….’\n\n알고 보니 어린 나이에 세상 돌아가는 이치를 깨달은 대현자가 아닌가.\n\n나는 현실적인 갓-수저 시스템에 전율하며 백여 평에 달하는 수련동을 돌아다녔다."
+    },
+    {
+      "confidence": 0.97,
+      "correction": "My vastly improved physical abilities and senses once again filled me with exhilaration after a lifetime as an F-rank Hunter.",
+      "current": "My vastly improved physical abilities and senses gave me another taste of the ecstasy I had been denied as an F-rank Hunter.",
+      "defect": "“I had been denied” is an unsupported addition and conflicts with 다시 한번, which says the enhanced abilities exhilarated him once again.",
+      "id": "F04",
+      "rationale": "The source contrasts his present physical state with his life as an F-rank Hunter but does not say this sensation had previously been denied to him.",
+      "severity": "major",
+      "source": "월등히 상향된 신체 능력과 감각은 F급 헌터로 살아온 내게 다시 한번 황홀함을 선사해 주었다."
+    },
+    {
+      "confidence": 0.96,
+      "correction": "“Ah, fuck.”",
+      "current": "“Goddammit. Fuck.”",
+      "defect": "The translation turns an exasperated grunt plus one strong curse into two explicit curses, intensifying the profanity.",
+      "id": "F05",
+      "rationale": "아오 is an irritated exclamation, while 시발 supplies the sole strong profanity.",
+      "severity": "minor",
+      "source": "“아오. 시발.”"
+    },
+    {
+      "confidence": 0.97,
+      "correction": "…I walked around the training hall, which covered well over three thousand square feet.",
+      "current": "Shuddering at the realistic born-with-a-silver-spoon System, I walked around the training hall, which was roughly three hundred square meters in size.",
+      "defect": "백여 평 is a little over one hundred pyeong, approximately 330 square meters or more, not roughly 300 square meters.",
+      "id": "F06",
+      "rationale": "One pyeong is approximately 3.3 square meters or 35.6 square feet; the conversion understates the stated area.",
+      "severity": "minor",
+      "source": "나는 현실적인 갓-수저 시스템에 전율하며 백여 평에 달하는 수련동을 돌아다녔다."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "I could feel that energy—something I could sense because this was a game and I was a martial artist—spreading through every part of my body.",
+      "current": "I could feel that energy—something I could sense because this was a game and I was a martial artist—reaching all four limbs and a hundred bones.",
+      "defect": "“All four limbs and a hundred bones” is an unnatural literal calque that obscures the idiomatic sense of qi spreading throughout the entire body.",
+      "id": "F07",
+      "rationale": "사지백해 is a conventional whole-body expression, not a literal anatomical count.",
+      "severity": "minor",
+      "source": "게임이라서, 무림인이라서 느낄 수 있는 그 기운이 사지백해로 뻗어 나가는 것이 느껴졌다."
+    },
+    {
+      "confidence": 0.99,
+      "correction": "In the end, I tossed the *Training Wooden Spear* aside and pulled a *Sharp Spear* from my inventory.",
+      "current": "In the end, I threw away the *Training Wooden Spear* and pulled a *Sharp Spear* from my inventory.",
+      "defect": "“Threw away” implies disposal, while 내던지고 only says he flung or tossed the wooden spear aside.",
+      "id": "F08",
+      "rationale": "The source describes a momentary physical action, not permanently discarding the item.",
+      "severity": "minor",
+      "source": "결국 [수련용 목창]을 내던지고 [예리한 창]을 인벤토리에서 꺼냈다."
+    }
+  ],
+  "summary": "One critical mechanical-action error, several meaningful omissions or alterations, and localized register, quantity, and prose issues.",
+  "version": 1
+}
