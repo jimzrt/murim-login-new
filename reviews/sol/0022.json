@@ -1,0 +1,96 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "Not for their sake. For my survival. Even teaching them a few tricks would make a real difference in a melee.",
+      "current": "Not for their sake.\n\nFor my survival.\n\nI worked like a dog for seven years.",
+      "defect": "Omits the mechanical reason he would drill them: even a few tricks would clearly work in a melee.",
+      "id": "F01",
+      "rationale": "The Korean states a combat-effectiveness claim between the survival motive and the seven-year thought; dropping it loses why training matters now.",
+      "severity": "major",
+      "source": "요령만 가르쳐도 난전에서는 확실한 효과를 발휘할 것이다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Everything they had learned and trained for at the Hunter training center flew off into outer space, and they were overwhelmed by the primal scent of death.",
+      "current": "Everything they had learned and trained for at the Hunter training center flew straight out into space, overwhelmed by the primal scent of death.",
+      "defect": "Makes the training the thing overwhelmed; the source’s subject of 압도되는 is the rookie Hunters.",
+      "id": "F02",
+      "rationale": "Two coordinated results: knowledge/training vanish, and the newbies are crushed by the smell of death.",
+      "severity": "major",
+      "source": "헌터 훈련소에서 배운 지식, 훈련은 우주 저 멀리 날아가고 원초적인 죽음의 냄새에 압도되는 것이다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "That was why veterans in the Guild handled the rookies’ mental care. I had been one of them.",
+      "current": "That was why veterans in the Guild helped rookies take care of their mental state. I had been one of them.",
+      "defect": "Shifts the care onto the rookies; veterans administered the rookies’ mental care.",
+      "id": "F03",
+      "rationale": "초짜의 멘탈 케어 is the veterans’ job; Taekyung’s point is he used to do that work.",
+      "severity": "major",
+      "source": "그래서 길드 내 베테랑들이 초짜의 멘탈 케어를 도왔는데, 나도 그중 하나였다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "“I thought you meant something else. That’s not it.”\n\n“It’s not?”",
+      "current": "“What are you talking about? Never mind.”\n\n“Never mind?”",
+      "defect": "Wikyung is not brushing Wipeng off; he thought the topic was something else and denies that Taekyung is the worry.",
+      "id": "F04",
+      "rationale": "난 또 뭐라고 plus 아닐세 dismisses worry about Taekyung after the identification; 아닙니까 questions that denial, which then cues the ‘don’t treat him like a child’ speech.",
+      "severity": "major",
+      "source": "난 또 뭐라고. 아닐세. / 아닙니까?"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Try slamming your head into a pool of blood and see if you still talk like that.",
+      "current": "Try burying your head in a pool of blood and see if you still say that.",
+      "defect": "‘Bury your head’ reads as hiding/ignoring; the Korean is ramming your head into a blood puddle (real killing).",
+      "id": "F05",
+      "rationale": "머리 박다 is a violent dunk into gore, the counter to their well-fed sword romanticism, not an ostrich idiom.",
+      "severity": "major",
+      "source": "피 웅덩이에 머리 박아 봐라, 저런 말이 나오나."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "Delete [^2] and the note; leave “……Jeongyang.”",
+      "current": "“……Jeongyang.”[^2]\n\n[^2]: The final repetition emphasizes Jin Wikyung’s sudden fear that Taekyung may be heading toward the danger in Jeongyang.",
+      "defect": "Adds a plot-interpretation footnote the source does not state and that English readers do not need.",
+      "id": "F06",
+      "rationale": "Footnotes are for culture/terms, not for explaining an already staged realization; this also adds motive/fear as narrator fact.",
+      "severity": "major",
+      "source": "……정양입니다."
+    },
+    {
+      "confidence": 0.87,
+      "correction": "Four hands dropped weakly.",
+      "current": "Four hands slowly dropped.",
+      "defect": "힘없이 is weak/feeble, not merely slow.",
+      "id": "F07",
+      "rationale": "The manner of lowering marks lack of kill experience, not tempo.",
+      "severity": "minor",
+      "source": "힘없이 내려가는 네 개의 손."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "You’re too well-fed. Way too well-fed.",
+      "current": "You people have lived far too comfortably.",
+      "defect": "Softens and derhetoricalizes the repeated gut idiom.",
+      "id": "F08",
+      "rationale": "배가 부르다 is colloquial ‘you’ve had it too good,’ with deliberate repetition.",
+      "severity": "minor",
+      "source": "아주 배가 불렀구먼. 배가 불렀어."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "But the silence broke after a mere two hours.",
+      "current": "But the silence was broken less than two hours later.",
+      "defect": "한 시진 is one two-hour watch, not ‘less than’ two hours.",
+      "id": "F09",
+      "rationale": "불과 한 시진 만에 measures one shichen (~2 hours), already the unit used in this setting.",
+      "severity": "minor",
+      "source": "하지만 침묵은 불과 한 시진 만에 깨졌다."
+    }
+  ],
+  "summary": "Several meaning-level defects: a dropped melee-training causal line, a misattached ‘overwhelmed’ subject, Wikyung’s dismissal of worry flattened into ‘never mind,’ and a plot-gloss footnote. No scene-identity reversal in the letter once read as an appositive.",
+  "version": 1
+}

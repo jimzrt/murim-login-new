@@ -1,0 +1,50 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the omitted melee-effectiveness line between the survival motive and the seven-year thought.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Split the result so training flies off into outer space and the rookie Hunters, not the training, are overwhelmed by the scent of death.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Made Guild veterans the agents who handled the rookies’ mental care, matching 초짜의 멘탈 케어를 도왔는데.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Replaced the brush-off ‘Never mind’ with Wikyung denying that Taekyung is the worry, and Wipeng questioning that denial.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Rendered 머리 박다 as slamming a head into a blood pool, not burying/hiding it.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Deleted the plot-interpretation footnote; left the staged ‘……Jeongyang.’ line alone.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Changed slowly to weakly to match 힘없이.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored the repeated well-fed gut idiom instead of a softened comfort paraphrase.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Set the break at a mere two hours for 불과 한 시진 만에, not less than two hours.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

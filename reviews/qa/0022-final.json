@@ -1,0 +1,31 @@
+{
+  "chapter": 22,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.31,
+    "source_characters": 4884,
+    "source_paragraphs": 152,
+    "translation_characters": 11281,
+    "translation_paragraphs": 159
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀가",
+        "preferred": "your family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
