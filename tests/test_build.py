@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import COVER, add_navigation, chapter_paths, navigation_html, pandoc_base
+from tools.build import COVER, READER, chapter_paths, pandoc_base
 
 
 class BuildToolTest(unittest.TestCase):
@@ -25,31 +25,13 @@ class BuildToolTest(unittest.TestCase):
         command = pandoc_base([Path("0001.md"), Path("0002.md")], "epub3")
         self.assertIn("--file-scope", command)
 
-    def test_html_navigation_links_previous_and_next_chapters(self):
-        paths = [Path("0001.md"), Path("0002.md"), Path("0003.md")]
-        first = navigation_html(0, paths)
-        middle = navigation_html(1, paths)
-        last = navigation_html(2, paths)
-        self.assertNotIn("Previous", first)
-        self.assertIn("Last", first)
-        self.assertIn('chapter-0002/index.html', first)
-        self.assertIn("Chapter 1 of 3", first)
-        self.assertIn('chapter-0001/index.html', middle)
-        self.assertIn('chapter-0003/index.html', middle)
-        self.assertIn("First", middle)
-        self.assertNotIn("Next", last)
-        self.assertIn("First", last)
-
     def test_cover_asset_exists(self):
         self.assertTrue(COVER.is_file())
 
-    def test_html_navigation_is_repeated_at_bottom(self):
-        with tempfile.TemporaryDirectory() as temp:
-            path = Path(temp) / "chapter.html"
-            path.write_text("<body><main>Text</main></body>", encoding="utf-8")
-            add_navigation(path, 1, [Path("0000.md"), Path("0001.md"), Path("0002.md")])
-            document = path.read_text(encoding="utf-8")
-            self.assertEqual(document.count('aria-label="Chapter navigation"'), 2)
+    def test_html_reader_scaffold_exists(self):
+        self.assertTrue((READER / "package.json").is_file())
+        self.assertTrue((READER / "astro.config.ts").is_file())
+        self.assertTrue((READER / "src" / "pages" / "chapter" / "[id].astro").is_file())
 
 
 if __name__ == "__main__":

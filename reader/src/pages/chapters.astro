@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+import { allChapters, groupedChapters, toIndex } from "../lib/chapters";
+
+const chapters = toIndex(await allChapters());
+const groups = groupedChapters(chapters);
+---
+
+<Base title="Chapters — Murim Login" chapters={chapters}>
+  <main class="wrap">
+    <header class="chapter-header">
+      <p class="eyebrow">Murim Login</p>
+      <h1>Chapters</h1>
+      <p class="reading-meta">{chapters.length} chapters</p>
+    </header>
+    <nav class="range-nav" aria-label="Chapter ranges">
+      {groups.map((group) => <a href={`#range-${group.label}`}>{group.label}</a>)}
+    </nav>
+    {groups.map((group) => (
+      <section id={`range-${group.label}`}>
+        <h2 class="chapter-group-title">{group.label}</h2>
+        <ol class="chapter-ol">
+          {group.items.map((item) => (
+            <li><a href={item.href}>{item.title}</a></li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </main>
+</Base>

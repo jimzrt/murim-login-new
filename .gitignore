@@ -1,4 +1,7 @@
 /.work/
 /build/
+/reader/node_modules/
+/reader/.astro/
+/reader/public/cover.jpg
 **/__pycache__/
 *.py[cod]

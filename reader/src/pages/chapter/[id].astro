@@ -1,0 +1,38 @@
+---
+import { render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import ChapterNav from "../../components/ChapterNav.astro";
+import { allChapters, neighbors, readingMinutes, toIndex, type ChapterEntry } from "../../lib/chapters";
+
+export async function getStaticPaths() {
+  const entries = await allChapters();
+  return entries.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry, entries },
+  }));
+}
+
+interface Props {
+  entry: ChapterEntry;
+  entries: ChapterEntry[];
+}
+
+const { entry, entries } = Astro.props;
+const { Content } = await render(entry);
+const { previous, next } = neighbors(entries, entry.data.chapter);
+---
+
+<Base title={`${entry.data.title} — Murim Login`} chapters={toIndex(entries)}>
+  <main class="wrap" data-chapter={entry.data.chapter}>
+    <header class="chapter-header">
+      <p class="eyebrow">Murim Login</p>
+      <h1 data-pagefind-body data-pagefind-meta="title">{entry.data.title}</h1>
+      <p class="reading-meta">About {readingMinutes(entry.data.wordCount)} min</p>
+    </header>
+    <ChapterNav previous={previous} next={next} />
+    <article class="prose" data-pagefind-body>
+      <Content />
+    </article>
+    <ChapterNav previous={previous} next={next} />
+  </main>
+</Base>

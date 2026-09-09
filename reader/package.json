@@ -1,0 +1,21 @@
+{
+  "name": "murim-login-reader",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "sync": "node scripts/sync-assets.mjs",
+    "dev": "npm run sync && astro dev",
+    "build": "node scripts/build.mjs",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.1",
+    "astro": "^7.3.2",
+    "pagefind": "^1.5.2",
+    "satteri": "^0.10.5",
+    "typescript": "^7.0.2"
+  }
+}

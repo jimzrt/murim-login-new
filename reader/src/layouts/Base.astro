@@ -1,0 +1,94 @@
+---
+import type { ChapterIndexItem } from "../lib/chapters";
+import { groupedChapters } from "../lib/chapters";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  chapters: ChapterIndexItem[];
+}
+
+const { title, chapters } = Astro.props;
+const groups = groupedChapters(chapters);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A translation of the web novel Murim Login." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <script is:inline>
+      (function () {
+        var mode = localStorage.getItem("murim-theme") || "system";
+        var dark = mode === "dark" || (mode !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+      })();
+    </script>
+    {
+      import.meta.env.PROD && (
+        <link rel="stylesheet" href="/pagefind/pagefind-component-ui.css" />
+      )
+    }
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Murim Login</a>
+      <label>
+        <span class="sr-only">Jump to chapter</span>
+        <select id="jump">
+          <option value="">Jump to chapter</option>
+          {
+            groups.map((group) => (
+              <optgroup label={group.label}>
+                {group.items.map((chapter) => (
+                  <option value={chapter.href}>{chapter.title}</option>
+                ))}
+              </optgroup>
+            ))
+          }
+        </select>
+      </label>
+      {import.meta.env.PROD && <pagefind-modal-trigger></pagefind-modal-trigger>}
+      <button id="theme" type="button">Theme</button>
+    </header>
+    <slot />
+    {import.meta.env.PROD && <pagefind-modal></pagefind-modal>}
+    {
+      import.meta.env.PROD && (
+        <script is:inline src="/pagefind/pagefind-component-ui.js" type="module" />
+      )
+    }
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        document.getElementById("theme")?.addEventListener("click", function () {
+          var next = root.dataset.theme === "dark" ? "light" : "dark";
+          localStorage.setItem("murim-theme", next);
+          root.dataset.theme = next;
+        });
+        document.getElementById("jump")?.addEventListener("change", function (event) {
+          var href = event.target.value;
+          if (href) location.href = href;
+        });
+        var page = document.querySelector("[data-chapter]");
+        if (page) {
+          localStorage.setItem("murim-chapter", page.getAttribute("data-chapter"));
+          document.addEventListener("keydown", function (event) {
+            if (event.target.closest("input, select, textarea")) return;
+            var key = event.key === "ArrowLeft" ? "prev" : event.key === "ArrowRight" ? "next" : "";
+            if (key) document.querySelector('[data-nav="' + key + '"]')?.click();
+          });
+        }
+        var cont = document.getElementById("continue");
+        var last = localStorage.getItem("murim-chapter");
+        if (cont && last) {
+          cont.href = "/chapter/" + last + "/";
+          cont.hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>
