@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 15,
-  "continuity_sources": [14, 15],
+  "safe_through": 16,
+  "continuity_sources": [15, 16],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -19,7 +19,12 @@
     "Taekyung accepted and completed the System’s Duel Quest, gaining the Gambler title, EXP, Fame, three levels, Fourth-Stage Cultivation, and Third-Stage Qi Sense.",
     "Lee Seogeun was Lv. 30; Taekyung defeated him with the Jin Family techniques, unarmed grappling, and concentrated internal-energy strikes.",
     "Lee Seogeun is killed in the departing Jin Family carriage by an unidentified masked assassin using Sound Transmission, paralysis or toxin, and a large blue-black needle.",
-    "Mount Beimang is a burial mountain; “going to Beimang” is an idiom for dying."
+    "Mount Beimang is a burial mountain; “going to Beimang” is an idiom for dying.",
+    "After the duel, Jin Wikyung draws heroic pictures of Taekyung, receives an urgent messenger hawk, and summons a secret late-night family-council meeting.",
+    "Han Yeop tells Taekyung that the Jin Family believes he is the Sleeping Dragon of Shanxi; Taekyung confirms the rumor, gaining 10 Fame, with later belief producing periodic 3-Fame increases.",
+    "Taekyung concludes that his ten years of internal energy are insufficient for martial-realm advancement despite strong stats; Lee Seogeun likely had twenty years.",
+    "The Main Quest requires First Rate, Level 30 (17/30), and Fame 500 (70/500), rewarding Logout; two days remain in Taekyung's protective confinement.",
+    "The Head Elder returns after years of seclusion and appears at the family council to address the Mount Heng Sword Sect matter."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

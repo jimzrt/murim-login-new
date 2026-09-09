@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.86,
+      "correction": "“Wipeng, come here. This is very important.”",
+      "current": "“Wipeng, come here. I have something very important to show you.”",
+      "defect": "Adds “to show you.” The source is only that the matter is very important, which is what makes Wipeng brace for a crisis.",
+      "id": "F01",
+      "rationale": "“아주 중요한 일이야” names a serious matter, not a reveal. “Show you” leaks that an object is coming and softens the embezzlement/Elder Council scare.",
+      "severity": "minor",
+      "source": "“위팽, 이리 와 보게. 아주 중요한 일이야.”"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "What had he been eating growing up? Even after I smashed him dozens of times with the spear shaft, and even when I beat him one-sidedly from a mount, he endured it.",
+      "current": "No matter how many times I struck him with the shaft of my spear, or how one-sidedly I beat him while mounted on top of him, he endured it.",
+      "defect": "Drops “뭘 먹고 컸는지” and the quantity “수십 번.”",
+      "id": "F02",
+      "rationale": "The aside is Taekyung’s disbelief at Lee Seogeun’s toughness; “dozens of times” is a stated count, not generic repetition.",
+      "severity": "minor",
+      "source": "뭘 먹고 컸는지 창대로 수십 번을 후려쳐도, 마운트 자세에서 일방적으로 때려도 놈은 견뎌 냈다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "That was also why mages started at D-rank at the lowest.",
+      "current": "That was also why mages started at the lowest rank, D.",
+      "defect": "Reads as if D is the system’s lowest rank. The source is that D is the floor mages start from, because their mana is already high.",
+      "id": "F03",
+      "rationale": "The next lines still have E-ranks and Taekyung as F-rank. “The lowest rank, D” can invert the Hunter ranking mechanic the paragraph is explaining.",
+      "severity": "major",
+      "source": "마법사들이 최하 D등급부터 시작하는 이유이기도 하다."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "“It’s true, isn’t it? I know it’s rude, but just between us…?”",
+      "current": "“It’s true, isn’t it? I know it’s rude, but could you tell me just a little…?”",
+      "defect": "“저한테만 살짝” is a private, hush-hush confirmation, not a request to hear a bit more of the secret.",
+      "id": "F04",
+      "rationale": "Han Yeop already asked “사실이지요?” He wants a quiet confirmation for himself, not a partial explanation.",
+      "severity": "minor",
+      "source": "“사실이지요? 실례인 줄은 알지만, 저한테만 살짝…….”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Honestly, from a modern man’s perspective, one was as bad as the other.",
+      "current": "Honestly, from a modern man’s perspective, one asshole was as bad as the other.",
+      "defect": "“그놈이 그놈이다” is “they’re the same,” without profanity. The draft adds a swear the source does not have here.",
+      "id": "F05",
+      "rationale": "Profanity should match the Korean. The following “지랄맞아” is the strong line; this idiom is not.",
+      "severity": "minor",
+      "source": "솔직히 현대인의 시선에서 바라보자면 그놈이 그놈이다."
+    },
+    {
+      "confidence": 0.96,
+      "correction": "> **System**\n>\n> Fame has risen by 3 due to the influence of the Sleeping Dragon of Shanxi rumor.",
+      "current": "> Fame has risen by 3 due to the influence of the **Sleeping Dragon of Shanxi** rumor.",
+      "defect": "This is a game System notice but has no `> **System**` heading.",
+      "id": "F06",
+      "rationale": "Each actual System panel must be a blockquote headed `> **System**`. The earlier rumor window is formatted that way; this one is not.",
+      "severity": "minor",
+      "source": "- [잠룡]에 대한 소문의 영향으로 명성이 3 상승합니다."
+    }
+  ],
+  "summary": "Mostly close, but a few lines change setup cues, a Hunter-rank mechanism, a confirmation beat, and one System window’s format.",
+  "version": 1
+}

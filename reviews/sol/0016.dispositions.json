@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored “아주 중요한 일이야” as a serious matter, without adding a reveal-cue “to show you.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the “뭘 먹고 컸는지” aside and the stated “dozens of times” spear-shaft beating, plus the mount.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Revised so D-rank is the floor mages start from, not the system’s lowest Hunter rank.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered “저한테만 살짝” as a private confirmation, not a request to hear more of the secret.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Removed the added swear; “그놈이 그놈이다” is only that they were the same.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Formatted the +3 Fame notice as a System blockquote headed `> **System**`.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
