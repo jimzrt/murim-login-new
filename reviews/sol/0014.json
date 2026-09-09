@@ -1,0 +1,116 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "To protect the tiny scrap of honor you have left and to avoid the anger of the Mount Heng Sword Sect, only one option remains.",
+      "current": "To avoid the tiny scrap of honor you have left and the anger of the Mount Heng Sword Sect, only one option remains.",
+      "defect": "The English makes the remaining honor something to avoid, inverting the quest’s reason for fighting.",
+      "id": "F01",
+      "rationale": "피하다 governs 항산검문의 분노; 쥐꼬리만큼 남은 명예 is the honor still at stake, not an object of avoidance.",
+      "severity": "critical",
+      "source": "쥐꼬리만큼 남은 명예와 항산검문의 분노를 피하기 위해서 남은 방법은 하나뿐입니다."
+    },
+    {
+      "confidence": 0.96,
+      "correction": "even if that failed, they were going to wreck me, at least",
+      "current": "even if that failed, they wanted to cripple at least one of us",
+      "defect": "나 하나 is Taekyung himself, not an unspecified family member.",
+      "id": "F02",
+      "rationale": "The narrator is the named target of the setup; “one of us” spreads the threat and changes who they mean to destroy.",
+      "severity": "major",
+      "source": "이게 실패하더라도 나 하나 정도는 작살내 버리겠다는 것 같은데"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "If it looks dangerous, this eldest brother of yours will jump in.",
+      "current": "If it looks dangerous, your big brother will jump in.",
+      "defect": "큰형님 is specifically the eldest brother, not a generic big brother.",
+      "id": "F03",
+      "rationale": "Glossary binds 큰형 to eldest brother; Wikyung’s rank in the sibling hierarchy is the point of the line.",
+      "severity": "major",
+      "source": "위험하다 싶으면 이 큰형님이."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Oh? Putting on the airs of a martial family’s son, are you?",
+      "current": "Oh? So you do have the pride of a martial artist’s son after all?",
+      "defect": "주제에 is a contemptuous “for the likes of you,” not a concession that Taekyung has pride.",
+      "id": "F04",
+      "rationale": "Lee is sneering at Taekyung’s station, not granting him martial-family pride.",
+      "severity": "major",
+      "source": "오, 주제에 무가의 자제라 이건가?"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "And that wasn’t all. He was a Young Master of the Mount Heng Sword Sect—a sect that could actually throw its weight around.",
+      "current": "He was a Young Master of the Mount Heng Sword Sect, a family that could boast of its strength.",
+      "defect": "The crude idiom is replaced with formal prestige language and the narrator’s register is lost.",
+      "id": "F05",
+      "rationale": "방귀 좀 뀐다 is slangy understatement for real clout, in Taekyung’s voice, not a polished boast.",
+      "severity": "major",
+      "source": "방귀 좀 뀐다는 항산검문의 자제다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Then, without thinking, I kicked Lee Seogeun in his unguarded chest.",
+      "current": "Then, without thinking, I kicked Lee Seogeun in his exposed chest.",
+      "defect": "텅 빈 marks an unguarded opening, not that the chest was unclothed.",
+      "id": "F06",
+      "rationale": "The kick lands because the guard is empty after the deflection; exposed describes clothing already removed earlier.",
+      "severity": "major",
+      "source": "나도 모르게 순간적으로 텅 빈 이소군의 가슴을 걷어찼다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "Lee Seogeun wiped away the blood while letting out some ridiculous yelps.",
+      "current": "Lee Seogeun wiped away the blood while making some kind of doglike grunting noise.",
+      "defect": "개 같은 intensifies 추임새 as ridiculous yelps; it is not a literal dog sound.",
+      "id": "F07",
+      "rationale": "추임새 is ad-libbed exclamations; 개 같은 is vulgar dismissal of those noises, not canine characterization.",
+      "severity": "major",
+      "source": "뭔 개 같은 추임새를 넣으며 피를 닦아 내는 이소군에게"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "With a queasy look, I raised a hand and pointed at his mouth.",
+      "current": "I raised a hand and pointed at his mouth.",
+      "defect": "The wry, distasteful expression that carries the comic beat is omitted.",
+      "id": "F08",
+      "rationale": "떨떠름한 얼굴 is the pragmatic cue for how he delivers “You’re bleeding,” not optional texture.",
+      "severity": "major",
+      "source": "나는 떨떠름한 얼굴로 손을 들어 녀석의 입을 가리켰다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "About fifty people sat some distance away, watching us.",
+      "current": "More than fifty people sat some distance away, watching us.",
+      "defect": "오십여 is about fifty, not specifically more than fifty.",
+      "id": "F09",
+      "rationale": "여 marks an approximate count around fifty, not a floor above fifty.",
+      "severity": "minor",
+      "source": "멀찍이 떨어진 오십여 명의 사람들은 자리에 앉아 우리를 바라보고 있었다."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "Kra-kra-kraang.",
+      "current": "Kraaaang!",
+      "defect": "The first clash is a grinding scrape, later contrasted with cannon-like 쾅.",
+      "id": "F10",
+      "rationale": "카가가각 is metal grinding along the spear, not the later booming impacts.",
+      "severity": "minor",
+      "source": "카가가각."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Withdraw from every commandery and county except Taiyuan.",
+      "current": "Withdraw from every commandery except Taiyuan.",
+      "defect": "군현 is the pair 郡 and 縣, not commanderies alone.",
+      "id": "F11",
+      "rationale": "The parenthetical 郡縣 names both administrative levels being demanded.",
+      "severity": "minor",
+      "source": "태원을 제외한 모든 군현(郡縣)에서 철수."
+    }
+  ],
+  "summary": "The draft reverses the Duel Quest’s honor clause, recasts the Mount Heng plan as targeting “one of us” instead of Taekyung, and several insults, kinship terms, and fight cues are softened or misread.",
+  "version": 1
+}

@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 1.0,
+      "correction": "Rename this field and its earlier occurrences to \"Successful attempts\" while preserving the displayed counts.",
+      "current": "- Remaining successful attempts: (100 / 100)",
+      "defect": "The label says the attempts are remaining even though the displayed number increases with each success and reaches 100 at completion.",
+      "id": "C01",
+      "rationale": "The current wording contradicts the counter's observable behavior and makes the completion notice read as though all one hundred attempts remain.",
+      "severity": "minor",
+      "source": "Chapters 10–11, Spear Technique training System notices"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Replace it with a clear description of the next attack or form, preserving the existing combat sequence.",
+      "current": "This form began.",
+      "defect": "The sentence has no clear referent and does not describe an intelligible transition in the exchange.",
+      "id": "C02",
+      "rationale": "The isolated demonstrative makes the action difficult to follow and reads like an incomplete or mistranscribed sentence.",
+      "severity": "minor",
+      "source": "Chapter 12, first Training Mode fight with Hyuk Mujin"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Replace \"Cheongwanil\" with \"Sky-Piercing Strike.\"",
+      "current": "It was the final form of the Jin Family’s Spear Technique: Cheongwanil.",
+      "defect": "The final form is renamed \"Cheongwanil\" after being established as \"Sky-Piercing Strike\" in Chapter 11 and in the binding terminology decisions.",
+      "id": "C03",
+      "rationale": "Using two names for the same form creates terminology drift and violates the checkpoint's explicit decision to retain \"Sky-Piercing Strike.\"",
+      "severity": "major",
+      "source": "Chapter 12, later Training Mode fight"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Render all of the illusion's spoken lines in this chapter as dialogue with curly double quotation marks, including its scream and the lines \"You’ll regret this\" and \"Crazy bastard.\"",
+      "current": "- You’ll regret this.",
+      "defect": "Hyuk Mujin's illusion speaks through line-leading hyphens, which Markdown renders as list items and which conflicts with the required curly-quote treatment for speech.",
+      "id": "C04",
+      "rationale": "The current notation is an isolated formatting convention, visually resembles a bullet list, and differs from dialogue formatting elsewhere in the reading copies.",
+      "severity": "minor",
+      "source": "Chapter 12, Training Mode illusion dialogue"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Remove the Chapter 13 footnote marker and its duplicate definition while retaining \"goshiwon\" in the prose.",
+      "current": "I was at a goshiwon, you bastard.[^1]",
+      "defect": "The goshiwon footnote is repeated immediately after the term was already defined in Chapter 12.",
+      "id": "C05",
+      "rationale": "The footnote rules require defining a term at its first meaningful occurrence and avoiding unnecessary repetition.",
+      "severity": "minor",
+      "source": "Chapter 13, Taekyung's internal reply to Lee Seogeun"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Change \"abdomen\" to \"chest\" so the reaction matches the stated point of impact.",
+      "current": "Lee Seogeun slid back five or six steps while clutching his abdomen.",
+      "defect": "Lee clutches his abdomen immediately after the preceding sentence explicitly says Taekyung kicked him in his unguarded chest; the checkpoint summary also records the blow as a kick to the chest.",
+      "id": "C06",
+      "rationale": "The mismatch creates an internal contradiction in a closely sequenced physical action and obscures where the blow landed.",
+      "severity": "major",
+      "source": "Chapter 14, duel immediately after Taekyung kicks Lee Seogeun"
+    }
+  ],
+  "summary": "The packet is broadly coherent, but it contains one binding terminology drift, one physical-action contradiction, and several localized UI, prose, dialogue-formatting, and footnote issues.",
+  "version": 1
+}

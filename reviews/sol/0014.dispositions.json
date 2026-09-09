@@ -1,0 +1,60 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored 피하다 as governing the sect’s anger and kept remaining honor as the stake to protect, not an object of avoidance.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Replaced ‘at least one of us’ with wrecking Taekyung himself, matching 나 하나.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 이 큰형님이 as eldest brother per glossary, not generic big brother.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Replaced the pride concession with a sneer at putting on martial-family airs, matching 주제에.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Kept Taekyung’s slangy clout understatement for 방귀 좀 뀐다 and named them a sect, not a family.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Rendered 텅 빈 as an unguarded opening after the deflection, not an unclothed chest.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Treated 개 같은 추임새 as ridiculous yelps, not a literal dog sound.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored 떨떠름한 얼굴 as the queasy look on the comic beat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Changed 오십여 to about fifty, an approximate count rather than a floor above fifty.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Restored the first clash as a grinding scrape, distinct from the later cannon-like 쾅.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "Rendered 군현(郡縣) as commanderies and counties, both administrative levels.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

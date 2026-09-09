@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Renamed the System field to Successful attempts in Chapters 10 and 11, keeping the displayed counts.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Replaced the unclear ‘This form began’ with ‘I launched into the form,’ matching 이 초식이 시작됐다.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Replaced Cheongwanil with the established name Sky-Piercing Strike in Chapter 12 and the chapter beat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Rendered the Training Mode illusion’s spoken lines as curly-quoted dialogue instead of hyphen list items.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Removed the duplicate goshiwon footnote in Chapter 13 after the term was already defined in Chapter 12.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Changed Lee Seogeun’s reaction so he clutches his chest, matching the kick to his unguarded chest.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

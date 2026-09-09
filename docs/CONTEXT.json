@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 13,
-  "continuity_sources": [12, 13],
+  "safe_through": 14,
+  "continuity_sources": [13, 14],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -20,7 +20,10 @@
     "Taekyung learns that his former self allegedly tried to rape a Mount Heng Sword Sect daughter; he denies it while relying on his supposed amnesia.",
     "Lee Seogeun is Lv. 30 and confronts Taekyung with intense killing intent and witness statements about the alleged Myeongwollu incident.",
     "The witness statements only claim Taekyung entered the wrong room while drunk and that someone heard screaming; Taekyung finds the evidence contrived.",
-    "Lee Seogeun challenges Taekyung, generating the System’s Duel Quest."
+    "Lee Seogeun is the Mount Heng envoy and demands that the Jin Family withdraw from every commandery and county except Taiyuan; Jin Wikyung refuses the demand and the duel.",
+    "Taekyung accepts the System’s Duel Quest to prevent the Mount Heng Sword Sect from declaring war and naming him a public enemy.",
+    "During the duel, Taekyung blocks more than twenty of Lee Seogeun’s attacks, kicks his unguarded chest, and loses the Intimidation status effect.",
+    "Jin Wikyung tries to intervene through Sound Transmission, but Wipeng restrains him."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
@@ -30,6 +33,7 @@
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
     "Preserve brisk dark action-comedy and character hierarchy without archaic wuxia diction.",
     "Use the accepted terms Heaven's Gate Temple, Three-Turn Footwork, Sound Transmission, Jin Family's Cultivation/Spear/Manoeuvre Techniques, and pleasure house.",
-    "Preserve the gold-spoon/God-Spoon wordplay and explain it briefly in a footnote."
+    "Preserve the gold-spoon/God-Spoon wordplay and explain it briefly in a footnote.",
+    "Preserve the System titles Gambler and Sex Fiend, and render the Mount Heng demand as commanderies and counties."
   ]
 }

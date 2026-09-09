@@ -1,0 +1,76 @@
+{
+  "chapter": 14,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.3,
+    "source_characters": 5523,
+    "source_paragraphs": 194,
+    "translation_characters": 12705,
+    "translation_paragraphs": 182
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "semantic_probe",
+      "details": {},
+      "message": "큰형 should preserve eldest-brother specificity"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "철수",
+        "preferred": "Cheol Soo"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "심법",
+        "preferred": "cultivation technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "비무",
+        "preferred": "duel / spar"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "큰형",
+        "preferred": "eldest brother"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "일격",
+        "preferred": "One Strike"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
