@@ -1,0 +1,60 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Shout in alarm only; he is about to stand when the trembling stops, not already on his feet.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the vulgar 썅귀 slip as Twin D-Devils so Wipeng’s correction is a name correction.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Replaced twitch with spasm/spasmed so the 경련 joke still licenses the seizure imitation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 똥칠 as smeared shit rather than a sanitized mud idiom.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Subject of 불안해하시는 is the Young Master, not a causative on the lord.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Restored the panic slip 삼공차 as a garbled Third Young Mas—.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Crowd upgrade is honorific 님, rendered as sir, not himself.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "최소 골절 is at least a fracture, not multiple fractures.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "큰 수확 rendered as haul, distinct from the earlier 대승 victory.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "겨우 is merely/only downplaying scale; take down, not barely kill.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "식솔들 rendered as the Sakju Branch’s household, not generic members.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

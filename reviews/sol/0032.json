@@ -1,0 +1,116 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "I cried out in alarm. “My God, Great Hero Wipeng!” … Just as I hurriedly tried to stand, the trembling stopped.",
+      "current": "I jumped up in alarm.\n\n“My God, Great Hero Wipeng!”\n\n*This man’s epileptic! No, how does a Peak master even have epilepsy?*\n\nJust as I hurriedly tried to stand, the trembling stopped.",
+      "defect": "He only shouts in shock, then is about to stand; the draft already has him on his feet, then trying to stand.",
+      "id": "F01",
+      "rationale": "일어나려 할 때 marks an intended rise after the shout, not a completed jump.",
+      "severity": "critical",
+      "source": "나는 깜짝 놀라 외쳤다.\n“세상에, 위 대협!”\n\n이 인간 간질 환자구나. 아니, 무슨 절정 고수씩이나 되는 양반이 간질에 걸렸대?\n\n내가 황급히 일어나려 할 때 떨림이 멈췄다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“The Mount Heng Twin D-Devils?” / “The Mount Heng Twin Devils.",
+      "current": "“The Mount Heng Twin Devils?”\n\n“The Mount Heng Twin Devils.",
+      "defect": "Taekyung’s vulgar mishearing 썅귀 is gone, so Wipeng’s correction is empty repetition.",
+      "id": "F02",
+      "rationale": "썅 is a swear-tinged distortion of 쌍; 말입니다 is a pronunciation/name correction.",
+      "severity": "major",
+      "source": "“항산썅귀요?”\n\n“항산쌍귀 말입니다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“Your eye just had a spasm.” / “That wasn’t a spasm.” / “It was a spasm. I saw it clearly.” Keep later “Your eye convulsed/spasmed.”",
+      "current": "“It just twitched.”\n“That wasn’t a twitch.”\n“It was. I saw it clearly.”",
+      "defect": "경련 is a spasm/convulsion, the same word that licenses the epilepsy imitation; twitch is too mild and unlinks the joke.",
+      "id": "F03",
+      "rationale": "Wipeng insists on 경련, then stages a seizure as that 경련.",
+      "severity": "major",
+      "source": "“방금 눈 쪽에 경련이 일어났는데요.”\n“그건 경련이 아닌데요.”\n“맞습니다, 경련. 제대로 봤습니다.”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "smeared shit all over the family’s reputation",
+      "current": "dragged the family’s reputation through the mud",
+      "defect": "똥칠 is crude shit-smearing; mud idiom sanitizes Wipeng’s insult-compliment.",
+      "id": "F04",
+      "rationale": "Fidelity rules bar softening this register; the line is meant to sting.",
+      "severity": "major",
+      "source": "가문 명성에 똥칠을 하던 삼공자께서"
+    },
+    {
+      "confidence": 0.94,
+      "correction": "Young Master seems anxious.",
+      "current": "You seem to be making Young Master anxious.",
+      "defect": "Wipeng reports that the Young Master seems anxious, not that the lord is causing it.",
+      "id": "F05",
+      "rationale": "Subject of 불안해하시는 is 공자; no causative on 주군.",
+      "severity": "major",
+      "source": "공자께서 불안해하시는 것 같은데요."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“It’s the Third Young Master! The Third Young Mas—his residence is collapsing!” (or another garbled 삼공자→삼공차)",
+      "current": "“It’s the Third Young Master! The Third Young Master’s residence is collapsing!”",
+      "defect": "Panic slip 삼공차 is flattened into a clean repeat of Third Young Master.",
+      "id": "F06",
+      "rationale": "삼공차 is a distinct comic mis-shout, not a second 삼공자.",
+      "severity": "major",
+      "source": "“삼공자다! 삼공차 처소가 무너지고 있다!”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“The Third Young Master—no, the Third Young Master, sir?”",
+      "current": "“The Third Young Master—no, the Third Young Master himself?”",
+      "defect": "The upgrade is honorific 님, not “himself.”",
+      "id": "F07",
+      "rationale": "Crowd shifts from bare 삼공자 to respectful 삼공자님.",
+      "severity": "major",
+      "source": "“삼공자, 아니 삼공자님이라고?”"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "*If I fall, I’m looking at a fracture at the very least.*",
+      "current": "*If I fall, I’ll have multiple fractures at the very least.*",
+      "defect": "최소 골절 is at least a fracture, not multiple fractures.",
+      "id": "F08",
+      "rationale": "최소 sets a floor of 골절; 복수/multiple is not in the source.",
+      "severity": "major",
+      "source": "‘떨어지면 최소 골절이다.’"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "capturing the Mount Heng Twin Devils was a major haul",
+      "current": "capturing the Mount Heng Twin Devils was a major victory",
+      "defect": "큰 수확 is a haul/gain; victory was already used for 대승.",
+      "id": "F09",
+      "rationale": "Harvest/prize vs battle-victory wording.",
+      "severity": "minor",
+      "source": "항산쌍귀(恒山雙鬼)를 잡은 건 큰 수확입니다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "all I did was take down Jopil and a few wandering martial artists",
+      "current": "all I did was barely kill Jopil and a few wandering martial artists",
+      "defect": "겨우 here is “merely/only,” not “barely managed to.”",
+      "id": "F10",
+      "rationale": "겸손 다운play of scale, not difficulty of the kill.",
+      "severity": "minor",
+      "source": "겨우 조필이랑 낭인 몇 명 잡은 게 전부인데요."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "rescued the Sakju Branch’s household",
+      "current": "rescued the members of the Sakju Branch",
+      "defect": "식솔들 are household dependents, not generic members.",
+      "id": "F11",
+      "rationale": "식솔 marks family/dependents of the branch.",
+      "severity": "minor",
+      "source": "삭주 지부의 식솔들을 구출해 낸"
+    }
+  ],
+  "summary": "Action sequence error around Wipeng’s seizure imitation; several hierarchy, register, and joke cues flattened (vulgar name slip, 경련, 똥칠, 삼공차/님, casualty quantity, anxiety cause).",
+  "version": 1
+}

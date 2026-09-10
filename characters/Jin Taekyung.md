@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 31
+- **Safe through:** Chapter 32
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -18,4 +18,5 @@
 - **Chapter 29 continuity:** Taekyung fights Jopil, relying on the Gambler Title’s one-on-one combat bonus. After Jopil’s throwing knife kills an unnamed squad member, Taekyung attacks in anger. He uses Sky-Piercing Strike, but Jopil’s faster sword wounds him repeatedly and strikes toward his chest again; the outcome is unresolved.
 - **Chapter 30 continuity:** Jopil’s Flame Divine Palm nearly kills Taekyung, who recalls his first use of the Hunter skill **Thrust with All My Might** and its warning that his body cannot safely bear its power. Taekyung tricks Jopil with daggers from his Inventory, severs both Achilles tendons, and causes qi deviation by stabbing Jopil’s dantian. When Jopil burns his life for a final attack, Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with **Thrust with All My Might** through the broken Sharp Spear. Hyuk Mujin and Han Yeop’s condition remains unclear.
 - **Chapter 31 continuity:** Taekyung remains unconscious for five days after killing Jopil, and the Medicine King Hall Leader had expected him to die within a day. He wakes from a nightmare about a disastrous modern-world Gate raid two years earlier: after he insisted on entering the boss zone, every teammate died except him. Wipeng reports that the reconnaissance squad and the Sakju Branch survivors returned safely, with two serious injuries but no lives in danger. The unnamed squad member killed by Jopil was an orphan; his body was recovered and buried, and Taekyung learns the young man’s chosen name and dream of becoming Number One of All Time. Wipeng urges Taekyung to remember the dead and live their share as well.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–31
+- **Chapter 32 continuity:** Taekyung learns that the Jin Family won a major battle at Honju, and that Wikyung and Wipeng each killed one of the Mount Heng Twin Devils. Wipeng makes him recount the fight with Jopil and acknowledges the achievement while insisting that Taekyung only won through a surprise attack. Wikyung then destroys part of Taekyung’s bedroom, carries his bandaged body before a crowd, and turns the exaggerated rumor that Taekyung led a death squad, defeated Jopil and one hundred wandering martial artists, and rescued the Sakju Branch’s household into a public celebration of the Sleeping Dragon of Shanxi.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–32
