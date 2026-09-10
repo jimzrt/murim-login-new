@@ -2,6 +2,7 @@ import unittest
 
 from tools.model_io import (
     blocking_dispositions,
+    extract_reading_copy,
     parse_json_object,
     parse_revision_response,
     validate_patchset,
@@ -98,3 +99,13 @@ Repeated looping copy.
             "dispositions": [{"finding_id": "F01", "status": "applied", "reason": "Corrected."}],
         }, review)
         self.assertEqual(patchset["patches"][0]["chapter"], 3)
+
+
+class ReadingCopyExtractTest(unittest.TestCase):
+    def test_extract_reading_copy_strips_same_line_preamble(self):
+        raw = "Checking the chapter workflow and source so the polish pass stays faithful.# Chapter 28\n\n*Hoo.*\n"
+        self.assertEqual(extract_reading_copy(raw, 28), "# Chapter 28\n\n*Hoo.*\n")
+
+    def test_extract_reading_copy_rejects_missing_heading(self):
+        with self.assertRaises(ValueError):
+            extract_reading_copy("No heading here.", 28)

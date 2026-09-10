@@ -31,6 +31,14 @@ completion, hashes, promotion, recovery, and the next action. Routine work must
 not load other chapter source files, the full compendium, archive directories, or
 `characters/spoilers/`.
 
+If draft or polish fails because the first nonblank line is not `# Chapter N`,
+do not rerun the model. The raw output is `.work/NNNN/draft-raw.txt` or
+`polish-raw.txt`. If that file contains the heading after a short preamble,
+write the text from the heading onward into `draft.md`/`polished.md` and run
+`python tools/workflow.py drafted N` or `polished N`. QA reports live at
+`reviews/qa/NNNN-draft.json`, `NNNN-polish.json`, and `NNNN-final.json`.
+`translations/NNNN.md` does not exist until `accept`.
+
 ## Model-Facing Context
 
 - `docs/CONTEXT.json` is the bounded active state. Keep `version`, `safe_through`,

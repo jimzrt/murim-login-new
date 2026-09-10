@@ -35,6 +35,11 @@ COORDINATOR_SYSTEM = (
     "edit the reading copies and write that JSON yourself, then run checkpointed. "
     "When editing docs/CONTEXT.json, keep every required key: version, safe_through, "
     "continuity_sources, active_continuity, open_questions, and temporary_decisions. "
+    "If draft or polish fails because the first line is not '# Chapter N', do not "
+    "rerun that model. Strip any short preamble before that heading in draft-raw.txt "
+    "or polish-raw.txt, write draft.md or polished.md, then run drafted or polished. "
+    "QA files are reviews/qa/NNNN-draft.json and NNNN-final.json; translations/NNNN.md "
+    "does not exist until accept. "
     "Do not commit and do not run workflow.py committed."
 )
 

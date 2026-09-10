@@ -16,6 +16,12 @@ output under `.work/NNNN/` as `*-raw.txt`. Every model call also writes its OMP
 JSON event stream under `.work/NNNN/omp/<phase>.jsonl`, with parsed text beside
 it. Use those logs when a revision aborts with `stopReason=error`.
 
+A polish or draft heading failure is usually a one-line preamble glued to
+`# Chapter N` in `polish-raw.txt` or `draft-raw.txt`. Do not rerun the model.
+Salvage from that heading, write the reading copy, and run `polished` or
+`drafted`. QA is `reviews/qa/NNNN-*.json`, not `reviews/qa/NNNN.md`. The
+accepted translation is created only by `accept`.
+
 Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
 `workflow.py` commands, and `audit_range.py` take an exclusive flock on
 `.work/run.lock` and write JSON there (pid, holder, chapter, stage). A second

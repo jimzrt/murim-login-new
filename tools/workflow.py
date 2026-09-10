@@ -420,7 +420,15 @@ def command_draft(number: int) -> None:
         p["context"], project_config()["draft_model"], 960, log_path=omp_log_path(number, "draft"),
     )
     atomic_text(p["work"] / "draft-raw.txt", output)
-    atomic_text(p["draft"], output)
+    try:
+        from tools.model_io import extract_reading_copy
+    except ModuleNotFoundError:
+        from model_io import extract_reading_copy
+    try:
+        copy = extract_reading_copy(output, number)
+    except ValueError as error:
+        record_failed_model_output(p["work"] / "draft-raw.txt", output, error)
+    atomic_text(p["draft"], copy)
     record_metric(p, "draft_model", **metrics)
     command_drafted(number)
 
@@ -586,7 +594,15 @@ def command_polish(number: int) -> None:
         log_path=omp_log_path(number, "polish"),
     )
     atomic_text(p["work"] / "polish-raw.txt", raw)
-    atomic_text(p["polished"], raw)
+    try:
+        from tools.model_io import extract_reading_copy
+    except ModuleNotFoundError:
+        from model_io import extract_reading_copy
+    try:
+        copy = extract_reading_copy(raw, number)
+    except ValueError as error:
+        record_failed_model_output(p["work"] / "polish-raw.txt", raw, error)
+    atomic_text(p["polished"], copy)
     record_metric(p, "polish_model", **metrics)
     command_polished(number)
 

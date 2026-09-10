@@ -43,6 +43,7 @@ class RunNextTest(unittest.TestCase):
         self.assertIn("timeout=3600", run_next.COORDINATOR_SYSTEM)
         self.assertIn("keep every required key", run_next.COORDINATOR_SYSTEM)
         self.assertIn("temporary_decisions", run_next.COORDINATOR_SYSTEM)
+        self.assertIn("do not rerun that model", run_next.COORDINATOR_SYSTEM)
         overlay = run_next.COORDINATOR_OVERLAY.read_text(encoding="utf-8")
         self.assertIn("autoBackground:\n    enabled: false", overlay)
         self.assertIn("hub: deny", overlay)

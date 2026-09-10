@@ -56,3 +56,8 @@ Use formal capitalization in System/UI text and normal English in prose.
 4. Source-check pass: verify idioms, jokes, metaphors, and cultural details against the original Korean.
 
 **Final test:** Would a native English writer naturally phrase this sentence this way in context, while preserving what the Korean says?
+
+## Output contract
+Return only the complete English Markdown reading copy. The first nonblank line
+must be `# Chapter N`. Do not prefix a status sentence, tool note, or thinking.
+

@@ -475,8 +475,9 @@ def build_polish_packet(number: int, revised: str) -> str:
     body = f"""# Polish Task — Chapter {number}
 
 Edit only this revised reading copy. Return only the complete English Markdown
-reading copy beginning with `# Chapter {number}`. Do not review, explain,
-update files, or continue to another chapter.
+reading copy. The first nonblank line must be exactly `# Chapter {number}`.
+Do not write a preface, status line, or thinking before that heading. Do not
+review, explain, update files, or continue to another chapter.
 
 Follow the polish brief below. Start from the revised copy; do not
 retranslate from scratch. Preserve meaning, pacing, humor, character voice,

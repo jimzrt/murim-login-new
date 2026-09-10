@@ -17,6 +17,23 @@ def _strip_json_fence(text: str) -> str:
     return text
 
 
+def extract_reading_copy(raw: str, number: int) -> str:
+    """Drop a short model preamble and return the English reading copy."""
+    text = raw.strip()
+    fenced = re.fullmatch(r"```(?:markdown|md)?\s*(.*?)\s*```", text, re.DOTALL | re.IGNORECASE)
+    if fenced:
+        text = fenced.group(1).strip()
+    heading = f"# Chapter {number}"
+    index = text.find(heading)
+    if index < 0:
+        raise ValueError(f"reading copy is missing {heading!r}")
+    prefix = text[:index]
+    if prefix.count("\n") > 2 or index > 400:
+        raise ValueError(f"preamble before {heading!r} is too long to salvage")
+    text = text[index:]
+    return text if text.endswith("\n") else text + "\n"
+
+
 def parse_json_object(raw: str) -> dict:
     """Parse the first JSON object, ignoring trailing looped or prose junk."""
     text = _strip_json_fence(raw.strip())

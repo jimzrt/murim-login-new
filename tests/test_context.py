@@ -35,6 +35,7 @@ class ContextPacketTest(unittest.TestCase):
         self.assertIn("<<<END>>>", revision_packet)
         self.assertIn("After <<<END>>>, stop immediately.", revision_packet)
         self.assertIn("Polish brief", polish_packet)
+        self.assertIn("first nonblank line must be exactly", polish_packet)
         self.assertIn("Translate the thought, not the Korean sentence structure", polish_packet)
         self.assertIn("Revised reading copy", polish_packet)
         self.assertNotIn("Structured findings", polish_packet)
