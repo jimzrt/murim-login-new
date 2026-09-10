@@ -28,7 +28,7 @@ or any failed command.
 
 The controller owns retrieval, phase-specific packets, model calls, QA, review
 completion, hashes, promotion, recovery, and the next action. Routine work must
-not load the bulk source, full compendium, archive directories, or
+not load other chapter source files, the full compendium, archive directories, or
 `characters/spoilers/`.
 
 ## Model-Facing Context

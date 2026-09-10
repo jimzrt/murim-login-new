@@ -4,7 +4,7 @@
 - Ask `python tools/workflow.py status N` what to do next.
 - Never infer, skip, combine, or reorder workflow stages.
 - Never load other chapters' reading copies to write a summary; write only the current chapter beat, then run `workflow.py summarize` when asked.
-- Never read bulk archives or `characters/spoilers/` during chapter work.
+- Never read other chapter source files, bulk archives, or `characters/spoilers/` during chapter work.
 - Never write a draft to `translations/`.
 - A review is valid only for the recorded draft SHA256.
 - Model-facing state comes only from bounded `docs/CONTEXT.json`.

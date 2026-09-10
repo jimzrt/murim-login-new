@@ -24,6 +24,14 @@ def workflow_config() -> dict:
     return read_json(ROOT / "docs" / "workflow.json")
 
 
+def chapter_source_path(number: int) -> Path:
+    try:
+        from tools.chapter import chapter_path
+    except ModuleNotFoundError:
+        from chapter import chapter_path
+    return chapter_path(number)
+
+
 def chapter_text(number: int) -> str:
     try:
         from tools.chapter import extract_chapter
@@ -256,7 +264,7 @@ def build_draft_packet(number: int) -> str:
     context = load_active_context(number)
     rules_path = ROOT / "RULES.md"
     context_path = ROOT / "docs" / "CONTEXT.json"
-    source_path = ROOT / "original 1-1104.txt"
+    source_path = chapter_source_path(number)
     compendium_path = ROOT / "compendium.md"
     rules = rules_path.read_text(encoding="utf-8").strip()
     glossary = exact_glossary_entries(source)
@@ -457,7 +465,7 @@ def build_polish_packet(number: int, revised: str) -> str:
     source = chapter_text(number)
     rules_path = ROOT / "RULES.md"
     handoff_path = ROOT / "POLISH.md"
-    source_path = ROOT / "original 1-1104.txt"
+    source_path = chapter_source_path(number)
     compendium_path = ROOT / "compendium.md"
     names_path = ROOT / "docs" / "NAMES.md"
     rules = rules_path.read_text(encoding="utf-8").strip()

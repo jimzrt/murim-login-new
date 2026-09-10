@@ -55,4 +55,4 @@ For example, render `고시원` as “goshiwon” when the setting or connotatio
 - Safe profiles contain only facts revealed through the latest completed chapter.
 - Never read `characters/spoilers/` during drafting. Reviewers may consult one relevant sealed profile only for a specific unresolved continuity issue after the draft is complete.
 - Future knowledge may prevent contradiction but may not add early names, pronouns, certainty, motives, or foreshadowing.
-- Translate exactly one requested chapter unless the user explicitly requests a batch. Never modify `original 1-1104.txt`.
+- Translate exactly one requested chapter unless the user explicitly requests a batch. Never modify Korean source files under `source/`.
