@@ -1,0 +1,55 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the line as Choi Min-su identifying himself on a call (입니다 + 다름이 아니고), not as the measured C-rank.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Replaced inverted ‘nothing to lose’ with the Guild Master’s actual incentive: major Guilds are not desperate for the recruit.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 저래 봬도 as appearance contrast (he didn’t look it), not moral faults.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Changed the rebuke to ‘that’s enough’ and ‘stay out of my business,’ dropping the false solicitous ‘stop worrying.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored 설마 했는데 as prior disbelief, not a half-expected identification.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Restored 근골 as the Sinews and Bones package transferred with Synchronization.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Kept the Guild Master’s intimate address on the established Sangshik romanization.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Formatted the Qi Sense Level Window as a System blockquote headed System, without square brackets.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Restored 빡 / 뿌우웅 as a strained bungled blast (hard! / Bwoooom), not a raspberry.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Rendered 운동장만 한 as the lobby being the size of a sports field, without ‘almost.’",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,106 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "“Yes. This is Choi Min-su from Sangdong Guild. The thing is—”",
+      "current": "“Yes. He’s Choi Min-su from Sangdong Guild. The thing is—”",
+      "defect": "Adds He is and makes Choi Min-su the measured C-rank. The Korean is self-identification (name + 입니다) plus the phone preamble 다름이 아니고, i.e. a Sangdong Guild speaker starting a call, not a report of who just tested.",
+      "id": "F01",
+      "rationale": "입니다 on a personal name is how the speaker names himself. 다름이 아니고 is the conventional ‘I’m calling because…’ opener. The next lines are lobby scouts already moving; the C-rank reveal at the elevator is Jin Taekyung. Labeling Choi the catch changes identity and the chapter’s payoff.",
+      "severity": "critical",
+      "source": "“예. 상동 길드 최민숩니다. 다름이 아니고……”"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "The major Guilds will drop out if they decide it isn’t profitable enough. It’s not like they’re desperate for him.",
+      "current": "The major Guilds will drop out if they decide it isn’t profitable enough. They have nothing to lose, after all.",
+      "defect": "아쉬울 것도 없다 means the major Guilds are not desperate / will not miss this recruit. ‘Nothing to lose’ inverts that incentive.",
+      "id": "F02",
+      "rationale": "The Guild Master’s bid strategy depends on big Guilds walking when the numbers are ugly because they do not need the recruit. ‘Nothing to lose’ implies they can afford to overpay or stay in.",
+      "severity": "major",
+      "source": "대형 길드 놈들이야 수지 좀 안 맞는다 싶으면 떨어질 거야. 그것들은 아쉬울 것도 없잖아?"
+    },
+    {
+      "confidence": 0.92,
+      "correction": "He didn’t look it, but he was one of only three D-rank Hunters in the Sopung Guild.",
+      "current": "For all his faults, he was one of only three D-rank Hunters in the Sopung Guild.",
+      "defect": "저래 봬도 concedes appearance (he doesn’t look it), not moral or professional faults.",
+      "id": "F03",
+      "rationale": "The contrast is potbelly vs D-rank strength that should manhandle an F-rank. ‘Faults’ imports a character judgment the clause does not make.",
+      "severity": "major",
+      "source": "저래 봬도 소풍 길드에서 셋밖에 없다는 D급 헌터다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "I said, that’s enough. I’ve left the Guild now, so stay out of my business.",
+      "current": "I said, let’s not overdo it. I’ve left the Guild now, so stop worrying about me and leave me alone.",
+      "defect": "신경 끄다 is ‘stay out of my business / stop paying attention to me.’ ‘Stop worrying’ assigns Kim a solicitous motive Taekyung is not granting.",
+      "id": "F04",
+      "rationale": "The rebuke is that Kim should stop needling him after the firing, not that Kim should stop being concerned. Worry vs interference changes the accusation.",
+      "severity": "major",
+      "source": "적당히 하시라고요. 이제 길드도 나갔으니 저한테 신경 끄시고."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“I didn’t think it would be, but it is.”",
+      "current": "“I thought it might be you. It is.”",
+      "defect": "설마 했는데 is prior disbelief (I didn’t think so), not ‘I thought it might be.’",
+      "id": "F05",
+      "rationale": "Kim’s line is surprise that the unlikely guess is correct. The draft makes him already half-expect Taekyung.",
+      "severity": "major",
+      "source": "“설마 했는데, 맞네.”"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "It wasn’t only the System that had synchronized. My martial arts, my stats, and even my steel-like Sinews and Bones had come along with it.",
+      "current": "It wasn’t only the System that had synchronized. My martial arts, my stats, and even my steel-like bones had come along with it.",
+      "defect": "근골 is the established Sinews and Bones package, not bones alone.",
+      "id": "F06",
+      "rationale": "The Synchronization claim is that martial arts, stats, and 근골 transferred. Dropping sinews understates what made Kim’s grip fail.",
+      "severity": "major",
+      "source": "동기화된 것은 시스템뿐만이 아니다. 무공과 능력치. 그리고 강철 같은 근골까지 포함이다."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "—Sangshik. You hold on to this guy no matter what.",
+      "current": "—Sangsik. You hold on to this guy no matter what.",
+      "defect": "The intimate 상식아 is split from the established romanization Sangshik used everywhere else for 김상식.",
+      "id": "F07",
+      "rationale": "The beat is the Guild Master switching from Team Leader Kim to the given name. Respellling the name as a new person, not a warmer address.",
+      "severity": "major",
+      "source": "- 상식아. 너 이거 꼭 붙잡아라."
+    },
+    {
+      "confidence": 0.81,
+      "correction": "> **System**\n> Lv. 24 Kim Sangshik",
+      "current": "**Lv. 24 Kim Sangshik**",
+      "defect": "This is the Level Window Taekyung reads via Qi Sense, i.e. a System panel, but it is set as bold prose rather than a System blockquote window.",
+      "id": "F08",
+      "rationale": "Binding English/Markdown rules require actual System/UI panels as one blockquote headed System, without square brackets. The waiting-room sign is not a System panel; this line is.",
+      "severity": "major",
+      "source": "[Lv.24 김상식]"
+    },
+    {
+      "confidence": 0.74,
+      "correction": "Every last scrap of strength—hard!\n\nBwoooom.",
+      "current": "Every last scrap of strength—\n\nPfffft.",
+      "defect": "뿌우웅 is a bungled blast/whoosh. Pfffft reads as a deflation or fart, especially after the earlier examiner-fart beat.",
+      "id": "F09",
+      "rationale": "The failed mana-control shot is a weak blast the examiner almost vomits at, not a raspberry. Wrong sound changes the gag.",
+      "severity": "minor",
+      "source": "젖 먹던 힘까지 빡!\n\n뿌우웅."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "The lobby was the size of a sports field and packed with people.",
+      "current": "The place was enormous, almost the size of a sports field, and packed with people.",
+      "defect": "만 한 is ‘as big as,’ not ‘almost.’",
+      "id": "F10",
+      "rationale": "Hedging shrinks the stated scale of the Association lobby.",
+      "severity": "minor",
+      "source": "운동장만 한 로비는 인파로 득실거렸다."
+    }
+  ],
+  "summary": "Critical false identification of Choi Min-su as the C-rank; several major reversals of stance, motive, appearance, and the Guild Master’s incentive, plus System-window markup and the Sangshik address.",
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 45
+- **Safe through:** Chapter 47
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -33,4 +33,5 @@
 - **Chapter 43 continuity:** Taekyung professionally butchers the defeated Hobgoblins for paid byproduct work while the party advances. In the Boss Zone, an old Hobgoblin Priest traps the party and summons a C-rank Hobgoblin Great Warrior from nearly a hundred corpses; Team Leader Choi orders the party to hold it down while he attacks the Priest.
 - **Chapter 44 continuity:** During the Boss Zone fight, Taekyung lures the Hobgoblin Great Warrior away from the unconscious party and blocks its greatsword. Character Synchronization completes in reality and all systems are inherited, restoring his System abilities; he then uses his spear to severely wound the Level 45 Great Warrior. Team Leader Choi kills the Hobgoblin Priest and witnesses Taekyung’s power, but the Great Warrior’s final fate remains unresolved.
 - **Chapter 45 continuity:** Taekyung severs both arms and kills the Level 45 Hobgoblin Great Warrior, triggering a System victory notice and level-up. His restored Status Window shows Level 33, First Rate Martial Artist, 15 years of Internal Energy, 30 Remaining Points, Fame 0, and the Novice Trainee and Gambler Titles; the Traitor Chain Quest remains incomplete. Officials investigate the two C-rank Rare Monsters in the E-rank Gate. Taekyung accepts that Murim was real and asks Team Leader Choi to keep his strength secret, but whether he can return to Murim remains unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–46
+- **Chapter 47 continuity:** Taekyung goes to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment and confronts his former boss, Kim Sangshik, over arranging his dismissal. When Kim grabs him, Taekyung catches his wrist with overwhelming synchronized strength. The measuring device detects an error while scanning Taekyung’s fifteen years of internal energy, leaving the reassessment result unresolved. He is about to meet Kim again when he emerges from the measurement-room elevator.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–47
