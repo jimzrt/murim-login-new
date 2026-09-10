@@ -1,0 +1,47 @@
+{
+  "chapter": 62,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.257,
+    "source_characters": 6552,
+    "source_paragraphs": 225,
+    "translation_characters": 14787,
+    "translation_paragraphs": 274
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "노부",
+        "preferred": "this old man / I"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀문",
+        "preferred": "your sect"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "궁귀문",
+        "romanization": "gunggwimun"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "진충",
+        "romanization": "jinchung"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

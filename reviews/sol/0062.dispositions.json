@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Kept the three Level up! lines and inserted a continuation ellipsis before the stacked-heal notice.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the Head Elder’s vulgar self-abuse as shit-fit instead of tantrum.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Kept Gunggwimun and added a first-use footnote with 弓鬼門, lit. Bow Ghost Gate.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Removed the added worthiness claim; he had never even been called an earth dragon.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Rendered 이놈 as singular You brat! aimed at the speaking martial artist.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Rendered 존명 as Yes, sir. to keep the subordinate command acknowledgment.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Kept Beware Dark Heaven and the death rattle as one broken utterance.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

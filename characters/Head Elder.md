@@ -1,7 +1,8 @@
 # Head Elder
 
-- **Safe through:** Chapter 61
-- **Aliases:** Name not yet revealed
+- **Safe through:** Chapter 62
+- **Name:** Jin Baekyang, revealed by the System in Chapter 62
+- **Aliases:** None revealed
 - **Role:** Head Elder of the Jin Family of Taiyuan; senior family authority
 - **Personality:** Inscrutable, politically shrewd, and ruthless in council; his motives remain unclear
 - **Voice:** Strange and resonant; shifts between old and young, rough and smooth
@@ -19,6 +20,7 @@
 - **Chapter 59 continuity:** The Head Elder remains the target of Jin Wikyung’s rescue charge after the First Elder reveals that Taekyung is beyond his position. Taekyung and the reconnaissance squad engage him, but the outcome and the Head Elder’s full plan remain unresolved.
 - **Chapter 60 continuity:** The Head Elder unleashes Sword Energy and the Finger-Flicking Technique, firing stone fragments that kill many martial artists. He tears through the scattered Jin Family and allied forces, evades Jin Wikyung’s Sword Energy, and remains engaged after Taekyung uses a fallen ally as cover for One Flash; the battle’s outcome and his full plan remain unresolved.
 - **Chapter 61 continuity:** Taekyung’s One Flash destroys the Head Elder’s arm, but the elder remains alive and reveals the hidden history behind his betrayal: an ambush during the Great Faction War killed almost all of the three hundred volunteers under his command while his elder brother became Family Head and turned the disaster into a victory. He identifies revenge as his motive, refuses to stop fighting, draws on innate qi, and attacks Taekyung with Sword Force; the result of Taekyung’s answering One Flash remains unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–61
+- **Chapter 62 continuity:** After Lee Cheonbaek ambushes him with a dagger, Jin Baekyang is finished by Taekyung's One Flash. The System records his defeat at Level 95. His revenge is complete only in death; the Five Gates conspiracy collapses, but Dark Heaven's larger plan continues through its concealed agents.
+- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–62
 
 

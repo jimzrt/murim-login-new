@@ -1,6 +1,6 @@
 # Lee Cheonbaek (이천백)
 
-- **Safe through:** Chapter 59
+- **Safe through:** Chapter 62
 - **Aliases:** Blood Wolf Sword
 - **Role:** Sect Leader of the Mount Heng Sword Sect; Lee Seogeun’s father
 - **Personality:** Grief-stricken, resolute, and fiercely vengeful
@@ -13,4 +13,5 @@
 - **Chapter 57 continuity:** After Taekyung interrupts his execution, Lee Cheonbaek recognizes the Head Elder's betrayal. The Head Elder keeps him alive but presses his Mute and Paralysis Acupoints, leaving him unable to speak or move while the Five Gates conspiracy erupts.
 - **Chapter 58 continuity:** Taekyung mistakenly rescues Cheonbaek instead of Jin Wikyung and carries him away from the Head Elder. Cheonbaek remains alive but unable to speak or move while Taekyung and the reconnaissance squad retreat and form an encirclement.
 - **Chapter 59 continuity:** Cheonbaek remains alive but unable to speak or move while Taekyung’s reconnaissance squad engages the Head Elder.
-- **Sources:** Korean source and accepted translation, Chapters 20, 33, and 55–59
+- **Chapter 62 continuity:** Still silenced and paralyzed, Lee Cheonbaek waits among the corpses for an opening and ambushes the Head Elder by driving a dagger into his dantian. Taekyung's spear then pierces the Head Elder, and Lee dies after enabling the victory.
+- **Sources:** Korean source and accepted translation, Chapters 20, 33, and 55–62
