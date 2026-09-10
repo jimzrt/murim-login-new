@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Changed Chapter 49’s saved contact name to Luxury Nutjob to match Chapter 48 consistently.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Changed the Chapter 49 contract sentence to describe Taekyung’s first step as a C-rank-level Hunter, preserving the pending formal registration.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Removed the repeated goshiwon definition footnote marker and definition from Chapters 48 and 49; the first meaningful definition remains in Chapter 46.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Changed Chapter 49’s unnatural “fashion person” phrase to “fashion-conscious.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Updated docs/CONTEXT.json, docs/STATE.md, and Team Leader Choi’s profile to record Choi’s cover story that he killed both Rare Monsters and removed the resolved secrecy response from open questions.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

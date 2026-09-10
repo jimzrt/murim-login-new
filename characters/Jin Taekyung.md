@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 48
+- **Safe through:** Chapter 49
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -35,4 +35,5 @@
 - **Chapter 45 continuity:** Taekyung severs both arms and kills the Level 45 Hobgoblin Great Warrior, triggering a System victory notice and level-up. His restored Status Window shows Level 33, First Rate Martial Artist, 15 years of Internal Energy, 30 Remaining Points, Fame 0, and the Novice Trainee and Gambler Titles; the Traitor Chain Quest remains incomplete. Officials investigate the two C-rank Rare Monsters in the E-rank Gate. Taekyung accepts that Murim was real and asks Team Leader Choi to keep his strength secret, but whether he can return to Murim remains unresolved.
 - **Chapter 47 continuity:** Taekyung goes to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment and confronts his former boss, Kim Sangshik, over arranging his dismissal. When Kim grabs him, Taekyung catches his wrist with overwhelming synchronized strength. The measuring device detects an error while scanning Taekyung’s fifteen years of internal energy, leaving the reassessment result unresolved. He is about to meet Kim again when he emerges from the measurement-room elevator.
 - **Chapter 48 continuity:** The Association recognizes Taekyung as C-rank-level, drawing a swarm of Guild recruiters, although formal registration takes several days. He rejects Kim Sangshik’s Sopung Guild offer unless the Guild removes one man he hates. Team Leader Choi pays him 10.3 million won so far for the raid, and Taekyung tells Seong Jinho a fabricated account of his reawakening while keeping the Ark - 2020 capsule and Murim secret. After drinking with Jinho, the System afflicts him with Dead Drunk; he dreams of unclear Murim voices telling the youngest to survive but remembers nothing after waking.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–48
+- **Chapter 49 continuity:** Taekyung wakes from the System’s Sleep Mode with a Hangover, detoxifies it through qi circulation, and finds reality’s qi weak and polluted. He signs a seven-day provisional contract with Peace Guild after declining the one-year C-rank-level offer, chooses the First Rate Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon, and enters a D-rank Gate with Team Leader Choi alone. Choi reveals he is reawakened; Taekyung infers he is at least B-rank, but the raid’s outcome remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–49

@@ -1,0 +1,39 @@
+{
+  "chapter": 49,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.125,
+    "source_characters": 5979,
+    "source_paragraphs": 232,
+    "translation_characters": 12703,
+    "translation_paragraphs": 225
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "무인",
+        "preferred": "martial artist"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "운기조식",
+        "preferred": "circulate one's qi"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가심법",
+        "preferred": "Jin Family's Cultivation Technique"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

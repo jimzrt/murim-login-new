@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "“Because they trust me.” / “What?” / “They trust my instincts, and they trust my eye for people. That’s why I want to hold on to Jin Taekyung.”",
+      "current": "“Because I trust you.” / “What?” / “I trust my instincts, and I trust my eye for people. That’s why I want to hold on to Jin Taekyung.”",
+      "defect": "저를 믿으니까요 is others trusting Choi, not Choi trusting Taekyung. The omitted subject of 제 촉을 믿고 is the same: they trust his instinct and eye for people.",
+      "id": "F01",
+      "rationale": "저 is Choi. 믿으니까요 takes 저 as object. “I trust you” reverses who is trusted and why the Guild can offer B-rank terms.",
+      "severity": "critical",
+      "source": "“저를 믿으니까요.” / “네?” / “제 촉을 믿고, 사람 보는 눈을 믿습니다. 그래서 진태경 씨를 꼭 잡고 싶어요.”"
+    },
+    {
+      "confidence": 0.93,
+      "correction": "It’s the System that’s good.",
+      "current": "The System picked it.",
+      "defect": "He corrects Choi’s praise of his eye: the System is what’s good. The draft makes the System the chooser.",
+      "id": "F02",
+      "rationale": "He used Item check, then chose. 시스템이 좋은 거다 is attribution of quality, not agency.",
+      "severity": "major",
+      "source": "시스템이 좋은 거다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Render each panel as a blockquote headed `> **System**`, no square brackets on UI terms; e.g. Exiting Sleep Mode. / Afflicted with the status ailment Hangover. / Beginning Qi Circulation. Same frame for Item Window fields.",
+      "current": "Ding. / - Exiting [Sleep Mode]. / - Status ailment: [Hangover]. / - Beginning [Qi Circulation]. / Item Window / [Lizardman Hunter’s Leather Set] …",
+      "defect": "System notices and item windows are dash lists with square-bracket UI terms, not `> **System**` blockquotes. Consecutive panel lines are not kept in one window.",
+      "id": "F03",
+      "rationale": "Binding Markdown: actual System panels use one `> **System**` blockquote; do not enclose System UI terms in square brackets.",
+      "severity": "major",
+      "source": "띠링. / - [수면 모드]를 종료합니다. / - 상태 이상, [숙취]에 걸렸습니다. / - [운기조식]을 시작합니다. / 아이템창 / [리자드맨 사냥꾼의 가죽 세트] …"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "I quietly opened my eyes.",
+      "current": "I slowly opened my eyes.",
+      "defect": "슬그머니 is quietly/furtively, not slowly.",
+      "id": "F04",
+      "rationale": "천천히 would be slowly. Manner of waking is hushed, matching sneaking out of Sleep Mode.",
+      "severity": "minor",
+      "source": "나는 슬그머니 눈을 떴다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "The Association probably didn’t disclose all of it, since it’s personal information.",
+      "current": "The Association probably didn’t open all of that since it’s personal information.",
+      "defect": "오픈 is disclose/release; “open all of that” is a loanword calque.",
+      "id": "F05",
+      "rationale": "Meaning is intact; the English collocation is not.",
+      "severity": "minor",
+      "source": "개인 정보라 협회에서도 전부 오픈하지는 않았을 텐데."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "As I conceded the point, Team Leader Choi handed me something.",
+      "current": "As I nodded in agreement, Team Leader Choi handed me something.",
+      "defect": "수긍하는 is assent, not a specified nod.",
+      "id": "F06",
+      "rationale": "Small action verbs are not to be added when the source does not specify them.",
+      "severity": "minor",
+      "source": "수긍하는 내게 최 팀장이 뭔가를 내밀었다."
+    }
+  ],
+  "summary": "Critical subject reversal in Choi’s explanation of the B-rank terms (Guild trusts him, not “I trust you”). Major: “The System picked it” replaces a self-correction about the System’s quality; System/item UI is not in required blockquote panels and keeps square brackets.",
+  "version": 1
+}

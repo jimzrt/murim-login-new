@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Reversed trust: Guild/others trust Choi’s instincts and eye for people, not Choi trusting Taekyung.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored attribution of quality (the System is what’s good) instead of making the System the chooser.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "System and item notices recast as > **System** blockquotes with unbracketed UI terms; consecutive panel lines kept in one window.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "슬그머니 rendered as quietly, not slowly.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "오픈 rendered as disclose, not the loanword calque open.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "수긍하는 rendered as conceded the point; no added nod.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

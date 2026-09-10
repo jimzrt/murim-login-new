@@ -1,0 +1,56 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "Choose the established nickname and use it consistently in both chapters.",
+      "current": "“Luxury Nutjob? Who’s that?” / “The sender was Luxury Junkie—or rather, Team Leader Choi.”",
+      "defect": "The same saved contact name changes between consecutive chapters without explanation.",
+      "id": "C01",
+      "rationale": "An unexplained contact-name change reads as terminology drift and may make readers think these are different labels or contacts.",
+      "severity": "minor",
+      "source": "Chapter 48 rooftop message and Chapter 49 opening text message"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Describe him as C-rank-level or make the sentence explicitly prospective until formal registration is complete.",
+      "current": "When we shook hands firmly, it sank in that I’d taken my first step as a C-rank Hunter.",
+      "defect": "The narration treats Taekyung as an established C-rank Hunter even though his formal reassessment registration remains pending.",
+      "id": "C02",
+      "rationale": "Chapter 48 explicitly says he is technically not yet C-rank, and the checkpoint terminology decision requires “C-rank-level” during this provisional period.",
+      "severity": "major",
+      "source": "Chapter 49, after Taekyung signs the provisional contract"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Retain the first meaningful definition in Chapter 46 and remove the repeated notes from Chapters 48 and 49.",
+      "current": "A goshiwon is a very small, inexpensive room-for-rent housing arrangement.",
+      "defect": "The same explanatory footnote is repeated in both chapters after the term was already defined in Chapter 46.",
+      "id": "C03",
+      "rationale": "The footnote rules say not to repeat a definition unnecessarily, and these repetitions add formatting clutter without new information.",
+      "severity": "minor",
+      "source": "Chapters 48 and 49, footnote 1"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Replace “fashion person” with a natural description such as “fashion-conscious” while preserving the gold-spoon observation and Taekyung’s conversational tone.",
+      "current": "Add being a fashion person who even cared about equipment design, and you couldn’t pull that off unless you were one hell of a gold spoon.",
+      "defect": "“Fashion person” is an unnatural US English collocation and causes a brief voice-quality drop.",
+      "id": "C04",
+      "rationale": "The surrounding narration is brisk and idiomatic; this phrase sounds like a literal dictionary gloss.",
+      "severity": "minor",
+      "source": "Chapter 49, equipment selection"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Record that Choi concealed Taekyung’s role by telling the officials he killed both monsters, and remove Choi’s immediate response from the open questions; keep possible later exposure by the investigation unresolved.",
+      "current": "“Taekyung accepts that Murim was real and wonders whether he can return; Choi's response to Taekyung's request for secrecy about his strength remains unclear.” / “Whether Choi keeps Taekyung's strength secret, whether the officials' investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, whether Taekyung and Choi survive the D-rank Gate, and whether Sopung Guild can recruit Choi Min-su remain unresolved.”",
+      "defect": "The active state leaves Choi’s response to the secrecy request unresolved after Chapter 46 explicitly reveals that he claimed responsibility for killing both Rare Monsters.",
+      "id": "C05",
+      "rationale": "Leaving a resolved exchange open can cause later chapters to repeat the decision or contradict Choi’s established cover story.",
+      "severity": "major",
+      "source": "Durable state, active_continuity and open_questions"
+    }
+  ],
+  "summary": "The reading copies retain the intended voice and hooks, but contain one rank-status drift, an inconsistent contact nickname, repeated footnotes, and one awkward phrase. The active state also incorrectly leaves Choi’s response to Taekyung’s secrecy request unresolved.",
+  "version": 1
+}
