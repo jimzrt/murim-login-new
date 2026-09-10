@@ -1,6 +1,6 @@
 # Team Leader Choi
 
-- **Safe through:** Chapter 51
+- **Safe through:** Chapter 53
 - **Aliases:** Choi Minwoo (최민우)
 - **Role:** Reawakened Hunter publicly classified as C-rank; leader and employer of the Peace Guild’s E-rank Gate party
 - **Personality:** Calm, observant, practical, and decisive under pressure
@@ -11,4 +11,5 @@
 - **Chapter 49 continuity:** Choi offers Taekyung a generous formal Peace Guild contract and, after Taekyung asks for time, a seven-day provisional contract. He supplies First Rate Lizardman armor and a harpoon, arranges restricted access to a D-rank Gate, and enters it with Taekyung alone. He reveals that he is a reawakened Hunter; Taekyung infers Choi is at least B-rank, while Choi’s exact current rank and the Gate’s outcome remain unresolved.
 - **Chapter 50 continuity:** Choi holds exclusive rights to the D-rank Gate and guides Taekyung through its wetlands. He deliberately leaves Taekyung to fight about twenty Level 40 swamp Lizardmen so he can assess Taekyung’s skill, endurance, and ability to work with him. After Taekyung clears the colony and levels up twice, Choi apologizes, then releases a powerful pheromone lure collected from female Lizardmen; the resulting horde and the raid’s outcome remain unresolved.
 - **Chapter 51 continuity:** Choi watches Taekyung use One Flash to kill the Level 52 Lizardman Great Chieftain and dozens of monsters, then privately considers whether Taekyung may be stronger than him. He oversees three C-rank Gates in one day, enforces weekends off under the provisional contract, and pays Taekyung 300 million won including a 270 million won bonus.
-- **Sources:** Korean source and accepted translation, Chapters 42–51
+- **Chapter 53 continuity:** Choi observes Taekyung take three injuries in one day and five by the fourth day while fighting the same Gates and monsters he had handled without injury the previous week. He orders Taekyung home and directly asks whether something is wrong.
+- **Sources:** Korean source and accepted translation, Chapters 42–51 and 53

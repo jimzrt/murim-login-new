@@ -1,0 +1,56 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "Is it someone you know? If that name is showing up in your dreams, you must be close.",
+      "current": "Is it someone you know? If she even appears in your dreams, you must be close.",
+      "defect": "English adds a female pronoun the Korean does not have and misgenders Jin Wikyung.",
+      "id": "F01",
+      "rationale": "Hayeon uses no gender. 진위경 is already established as Taekyung’s elder brother. The later girlfriend lie is Taekyung’s, not Hayeon’s assumption.",
+      "severity": "critical",
+      "source": "아는 사람이야? 꿈에도 나올 정도면 친한가 보네."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“Oppa, you’re going to miss your bus.” / “I’m taking a taxi, though?”",
+      "current": "“Oppa, you’re going to miss your taxi.”\n“I’m taking a taxi.”",
+      "defect": "Hayeon is made to name a taxi first, so Taekyung’s taxi line no longer rebuts a scheduled ride.",
+      "id": "F02",
+      "rationale": "차 시간 is a timetable. His point is there is no such deadline because he is taking a taxi; she then pivots to the night surcharge.",
+      "severity": "major",
+      "source": "“오빠, 차 시간 늦겠다.”\n“택시 타고 갈 건데?”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Keep Mom’s last words separate. Render “Survive. I’m telling you to run without looking back. That’s your mission.” as that hazy remembered voice, not as a thought.",
+      "current": "All the way back to the goshiwon in the taxi, I thought about Mom’s final words and the warmth in them.\n\n*Survive. I’m telling you to run without looking back. That’s your mission.*\n\nAnd the voice of someone in a memory that was growing increasingly hazy.",
+      "defect": "The Survive/run order is set as italic thought right after Mom’s words, so it can be read as hers or as narration; in the source it is the fading memory-voice.",
+      "id": "F03",
+      "rationale": "The quoted command is 기억 속 누군가의 목소리. Italics-for-thought plus the following “And the voice…” splits one speaker into Mom/Taekyung plus an unnamed extra voice.",
+      "severity": "critical",
+      "source": "택시를 타고 고시원으로 돌아가는 길 내내 엄마의 마지막 말과 그 온기를 떠올렸다.\n\n‘살아남아라, 뒤도 돌아보지 말고 도망치란 말이다. 그게 네 임무다.’\n\n점점 흐릿해지는 기억 속 누군가의 목소리도."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "I couldn’t believe this man was thirty. I couldn’t help but lament.",
+      "current": "I couldn’t believe this man was thirty. I was overwhelmed by despair.",
+      "defect": "Mock-classical 통탄 becomes genuine despair and kills the deadpan joke.",
+      "id": "F04",
+      "rationale": "통탄을 금치 못하겠다 is comic deploring of Jinho, not Taekyung being overwhelmed.",
+      "severity": "major",
+      "source": "저 인간이 서른이라니. 통탄을 금치 못하겠다."
+    },
+    {
+      "confidence": 0.72,
+      "correction": "“Yes, nuna.”",
+      "current": "“Yes, ma’am.”",
+      "defect": "The joke is calling his younger sister 누나; ma’am keeps mock deference but drops the inverted kinship.",
+      "id": "F05",
+      "rationale": "누나 is a role reversal at his little sister, not generic politeness.",
+      "severity": "minor",
+      "source": "“네, 누나.”"
+    }
+  ],
+  "summary": "Three meaning-level defects: Hayeon’s question genders Jin Wikyung as female; the taxi beat is broken by rendering 차 시간 as taxi; Wikyung’s remembered order is formatted as Taekyung’s thought after Mom’s words. One major humor/register miss on 통탄을 금치 못하겠다.",
+  "version": 1
+}

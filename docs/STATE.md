@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 52
-- Next chapter: 53
-- Current block: 50–54 (3/5)
-- Latest translation: `translations/0052.md`
+- Last completed: 53
+- Next chapter: 54
+- Current block: 50–54 (4/5)
+- Latest translation: `translations/0053.md`
 - Latest summary: `summaries/0045-0049.md`
-- Safe profiles through: chapter 52
+- Safe profiles through: chapter 53
 
 
 
@@ -15,13 +15,14 @@
 
 
 
-- Taekyung returns home after months with his C-rank Hunter license and 300 million won. He tells his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.
+- Taekyung returns to the goshiwon after visiting his family, but recurring nightmares of Murim destabilize him. He is repeatedly injured during Gate raids, and Team Leader Choi orders him home and asks what is wrong.
 
 ## Open Questions
-- The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.
+- The capsule's purpose and route back to Murim remain unresolved; Taekyung now suspects it may be a Gate to another dimension and Murim another reality.
 - Murim death and resurrection limits remain unresolved.
 - The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
-- Whether the officials’ investigation later exposes Taekyung despite Choi’s cover story, how the System’s return relates to Murim, whether Taekyung’s formal C-rank registration completes, Choi’s exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved.
+- The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.
+- Whether the officials' investigation later exposes Taekyung despite Choi’s cover story, how the System’s return relates to Murim, whether Choi's concern changes Taekyung's Gate work, whether Taekyung's formal C-rank registration completes, Choi’s exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved.
 
 
 ## Exceptional Decision

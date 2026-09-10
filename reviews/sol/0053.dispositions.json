@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Removed Hayeon’s female pronoun; the question is now about the name, not a woman.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Hayeon cites a scheduled bus; Taekyung rebuts that he is taking a taxi.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Mom’s words stay separate; the Survive/run order is spoken memory-voice, not thought.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored comic lament of Jinho’s age instead of genuine despair.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored the inverted kinship joke of calling his younger sister nuna.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

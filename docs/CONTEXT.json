@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "safe_through": 52,
-  "continuity_sources": [51, 52],
+  "safe_through": 53,
+  "continuity_sources": [52, 53],
   "active_continuity": [
-    "Jin Taekyung is back in reality after logging out of Murim. He has now received a C-rank Hunter license, has signed a seven-day provisional contract with Peace Guild, and is entering a D-rank Gate with Team Leader Choi.",
+    "Jin Taekyung is back in reality after logging out of Murim. He has received a C-rank Hunter license, completed the recent Lizardman Gate work, and is now back at the goshiwon after visiting his family.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "The Ark - 2020 capsule's purpose and route back to Murim remain unresolved; its manual says users are bound until death, time runs at an adjustable slow ratio, and Character Synchronization exists.",
     "Murim's death and resurrection limits remain unresolved.",
@@ -29,13 +29,17 @@
     "After the fight, Choi (Choi Minwoo) privately recognizes that Taekyung may be stronger than him. Taekyung completes three C-rank Gates in one day, receives a weekly payment of 300 million won including a 270 million won bonus, and is ordered to take weekends off under the provisional contract.",
     "Sopung Guild’s Guild Master discovers Kim Sangshik filed a false report about Taekyung and expelled him from the Guild, then expels Kim and his son Kim Sangho. The Guild begins gossiping about Taekyung’s reawakening and whereabouts.",
     "Taekyung returns home after months with his C-rank Hunter license and 300 million won. He tells his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.",
-    "Hayeon is nineteen and still a high-school senior; she is awake early for the school founding anniversary and resumes her sharp, affectionate sibling banter with Taekyung."
+    "Hayeon is nineteen and still a high-school senior; she is awake early for the school founding anniversary and resumes her sharp, affectionate sibling banter with Taekyung.",
+    "After returning to reality, Taekyung begins having increasingly vivid nightmares of Murim. Sleep Mode restores his physical condition but not his mental stability, and his mistakes and injuries increase during Gate raids.",
+    "Taekyung kills a Level 50 Lizardman Chieftain but is injured three times in one day and five times by the fourth day. Team Leader Choi orders him home and asks what is wrong.",
+    "Taekyung suspects that Murim is another reality and that the Ark - 2020 capsule may be a Gate to another dimension; the capsule’s purpose and route remain unresolved."
   ],
   "open_questions": [
-    "The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.",
+    "The capsule's purpose and route back to Murim remain unresolved; Taekyung now suspects it may be a Gate to another dimension and Murim another reality.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "Whether the officials' investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
+    "The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.",
+    "Whether the officials' investigation exposes Taekyung, whether the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -59,6 +63,7 @@
     "Use Kim Sangshik for 김상식, and preserve the distinct Hunter rank and mana-control grades in the Choi Min-su recruitment scene.",
     "Use Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon for the First Rate System items, and retain the Pocheongcheon reference with a concise footnote.",
     "Use swamp Lizardmen for 늪 리자드맨 and preserve the female-Lizardman pheromone lure and its resolution in Chapter 51.",
-    "Use Lizardman Great Chieftain for 대족장, One Flash for 일섬, and footnote *Bulgeum* as Korean slang for Friday night."
+    "Use Lizardman Great Chieftain for 대족장, One Flash for 일섬, and footnote *Bulgeum* as Korean slang for Friday night.",
+    "Use goshiwon for 고시원, with a concise first-use footnote explaining the tiny rented-room arrangement and approximate size."
   ]
 }
