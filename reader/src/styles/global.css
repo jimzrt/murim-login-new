@@ -1,10 +1,14 @@
 :root {
   color-scheme: light;
-  --paper: #f4efe6;
-  --ink: #1a1612;
-  --muted: #6d655c;
-  --rule: #e0d6c6;
-  --accent: #8b3514;
+  --paper: #f3ead4;
+  --ink: #1a2744;
+  --muted: #6a624e;
+  --rule: #e2d4b0;
+  --accent: #9a7420;
+  --gold: #d4af37;
+  --gold-bright: #f0d56a;
+  --navy: #1c4a82;
+  --navy-deep: #163968;
   --serif: "Iowan Old Style", Palatino, Charter, Georgia, serif;
   --ui: system-ui, "Segoe UI", sans-serif;
   --prose-size: 1.125rem;
@@ -14,11 +18,15 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --paper: #161310;
-  --ink: #ece5d8;
-  --muted: #b3aa9e;
-  --rule: #3a332c;
-  --accent: #e8b086;
+  --paper: #101826;
+  --ink: #ece6d4;
+  --muted: #b3aa90;
+  --rule: #3a4658;
+  --accent: #e4c56d;
+  --gold: #e6c86a;
+  --gold-bright: #f5e08a;
+  --navy: #2d6aad;
+  --navy-deep: #1c4a82;
 }
 
 html[data-size="s"] {
@@ -58,9 +66,22 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--paper);
+  background-color: var(--paper);
+  background-image: radial-gradient(
+    ellipse at 50% -10%,
+    color-mix(in srgb, var(--gold) 14%, transparent),
+    transparent 52%
+  );
   font-family: var(--ui);
   line-height: 1.5;
+}
+
+html[data-theme="dark"] body {
+  background-image: radial-gradient(
+    ellipse at 50% -10%,
+    color-mix(in srgb, var(--navy) 28%, transparent),
+    transparent 58%
+  );
 }
 
 a {
@@ -108,7 +129,8 @@ input {
   gap: 0.35rem;
   min-height: var(--header-h);
   padding: 0.3rem 0.75rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid color-mix(in srgb, var(--gold) 70%, var(--rule));
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--navy-deep) 28%, transparent);
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: blur(12px);
   transition: transform 0.22s ease;
@@ -241,7 +263,9 @@ pagefind-modal-trigger button,
 
 .cover-image {
   width: min(16rem, 62vw);
-  border-radius: 4px;
+  border-radius: 2px;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 0 1px var(--navy-deep);
 }
 
 .hero h1,
@@ -263,10 +287,11 @@ pagefind-modal-trigger button,
 }
 
 .eyebrow {
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   font-size: 0.78rem;
   margin: 0 0 0.45rem;
+  color: var(--accent);
 }
 
 .cta-row,
@@ -286,11 +311,14 @@ pagefind-modal-trigger button,
   align-items: center;
   min-height: 2.5rem;
   padding: 0 1.05rem;
-  border-radius: 999px;
+  border-radius: 0.3rem;
   text-decoration: none;
-  font-weight: 600;
-  background: var(--ink);
-  color: var(--paper);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #fff;
+  border: 2px solid var(--gold);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--gold) 55%, #8a6a1a);
 }
 
 [hidden] {
@@ -476,52 +504,115 @@ pagefind-modal-trigger button,
   border: 0;
   margin: 2.4rem 0;
   text-align: center;
+  height: 1.45rem;
+  overflow: visible;
+  line-height: 0;
 }
 
 .prose hr::before {
-  content: "*  *  *";
-  color: var(--muted);
-  letter-spacing: 0.4em;
+  content: "";
+  display: inline-block;
+  width: 1.45rem;
+  height: 1.45rem;
+  background: url("../ornaments/yin-yang.svg") center / contain no-repeat;
 }
 
 .system-window {
+  --system-blue: #1c4a82;
+  --system-blue-mid: #2d6aad;
+  --system-blue-deep: #163968;
+  --system-gold: #e6c86a;
+  --frame: 2.5rem;
   display: block;
-  margin: 1.35em 0;
-  padding: 0.95em 0.95em 0.85em;
-  background: linear-gradient(180deg, #1c4a82 0%, #2d6aad 46%, #1c4a82 100%);
-  border: 2px solid #d7b45a;
-  box-shadow:
-    0 0 0 3px #163968,
-    0 0 0 4px #e6c86a,
-    0 0 18px rgba(120, 180, 230, 0.22);
-  color: #f4f1e6;
+  position: relative;
+  margin: 2.6em 0 1.85em;
+  padding: 0.55em 0.9em 0.8em;
+  overflow: visible;
+  color: #fff;
   text-align: center;
-  font-family: ui-monospace, "Cascadia Mono", "SF Mono", "DejaVu Sans Mono", "Courier New", monospace;
-  font-size: 0.82em;
-  font-weight: 600;
-  line-height: 1.35;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.92em;
+  font-weight: 750;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  border: var(--frame) solid transparent;
+  border-image: url("../ornaments/frame.svg") 56 / var(--frame) / 0 stretch;
+  border-radius: 0;
+  background-color: var(--system-blue);
+  background-image: radial-gradient(120% 90% at 50% 0%, #3a78b8 0%, var(--system-blue-mid) 42%, var(--system-blue) 100%);
+  background-origin: border-box;
+  background-clip: border-box;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--system-blue-mid) 26%, transparent);
+  text-shadow:
+    -1.1px -1.1px 0 var(--system-blue-deep),
+    1.1px -1.1px 0 var(--system-blue-deep),
+    -1.1px 1.1px 0 var(--system-blue-deep),
+    1.1px 1.1px 0 var(--system-blue-deep);
+}
+
+html[data-theme="light"] .system-window {
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--system-blue-deep) 20%, transparent);
 }
 
 .system-window > p:first-child {
-  display: table;
-  margin: -0.15em auto 0.7em;
-  padding: 0.16em 0.8em;
-  background: #245a96;
-  border: 1px solid #d7b45a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: calc(-0.82 * var(--frame));
+  width: max-content;
+  max-width: calc(100% - 2 * var(--frame) - 3.2rem);
+  margin: 0;
+  transform: translate(-50%, -50%);
+  padding: 0.28em 2.45em 0.24em;
+  background: linear-gradient(180deg, #3a78b8 0%, var(--system-blue) 100%);
+  border: 2px solid var(--system-gold);
+  border-radius: 0.2rem;
   color: #fff;
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.22em;
   text-indent: 0.22em;
   text-transform: uppercase;
+  box-shadow:
+    0 0 0 1px var(--system-blue-deep),
+    0 1px 0 #8a6a1a;
+}
+
+.system-window > p:first-child::before,
+.system-window > p:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2.45rem;
+  height: 1.95rem;
+  background: url("../ornaments/dragon.svg") center / contain no-repeat;
+  filter: drop-shadow(0 1px 0 #8a6a1a);
+  transform: translateY(-52%);
+}
+
+.system-window > p:first-child::before {
+  left: -2.15rem;
+}
+
+.system-window > p:first-child::after {
+  right: -2.15rem;
+  transform: translateY(-52%) scaleX(-1);
 }
 
 .system-window p {
-  margin: 0.35em 0;
+  margin: 0.45em 0;
+}
+
+.system-window > :last-child {
+  margin-bottom: 0;
 }
 
 .system-window strong {
-  color: #f0d78a;
+  color: var(--gold-bright);
 }
 
 .system-window ul,
@@ -532,8 +623,31 @@ pagefind-modal-trigger button,
   text-align: left;
 }
 
-.system-window > :last-child {
-  margin-bottom: 0;
+@media (max-width: 40rem) {
+  .system-window {
+    --frame: 2.05rem;
+    padding: 1.15em 0.7em 0.8em;
+    font-size: 0.86em;
+  }
+
+  .system-window > p:first-child {
+    padding-inline: 2.1em;
+    letter-spacing: 0.16em;
+  }
+
+  .system-window > p:first-child::before,
+  .system-window > p:first-child::after {
+    width: 2.05rem;
+    height: 1.65rem;
+  }
+
+  .system-window > p:first-child::before {
+    left: -1.5rem;
+  }
+
+  .system-window > p:first-child::after {
+    right: -1.5rem;
+  }
 }
 
 .prose :is(.footnotes, [data-footnotes]) {
@@ -547,15 +661,17 @@ pagefind-modal-trigger button,
 .reader-dialog {
   width: min(24rem, calc(100vw - 2rem));
   padding: 1.05rem 1.15rem 1.2rem;
-  border: 1px solid var(--rule);
-  border-radius: 0.7rem;
+  border: 2px solid var(--gold);
+  border-radius: 0.35rem;
   background: var(--paper);
   color: var(--ink);
-  box-shadow: none;
+  box-shadow:
+    0 0 0 1px var(--navy-deep),
+    0 0 0 4px color-mix(in srgb, var(--gold) 55%, var(--paper));
 }
 
 .reader-dialog::backdrop {
-  background: color-mix(in srgb, #1a1612 42%, transparent);
+  background: color-mix(in srgb, var(--navy-deep) 48%, transparent);
 }
 
 .dialog-head {
@@ -636,8 +752,8 @@ pagefind-modal-trigger button,
 
 .choice-row {
   display: flex;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, var(--rule));
+  border-radius: 0.3rem;
   overflow: hidden;
 }
 
@@ -660,8 +776,8 @@ pagefind-modal-trigger button,
 }
 
 .choice-row label:has(input:checked) {
-  background: var(--ink);
-  color: var(--paper);
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #fff;
 }
 
 .sr-only {
