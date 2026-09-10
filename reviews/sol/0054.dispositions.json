@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Removed “their” and “flew” so the Jin banner is a separate image at keenly honed weapon-tips, not the charging Mount Heng force.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the narrator as the blood brother those someones spoke to, instead of making the remembered group blood brothers.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Replaced “certain tone” with “definitive tone” to match 확정적인 어조.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Pride now sits with the family; he becomes a son and older brother they can be proud of and treats them to a life of ease.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Replaced “false Awakener” with “illegal Awakener” for 부정 각성자.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Both 정찰조원들 mentions now use “reconnaissance squad,” matching the later line in the chapter.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Dropped added “young master”; the line is only “Yes. Please go ahead.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "System prompt now asks whether to connect to Murim; login remains the following prose verb.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

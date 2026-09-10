@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "At the tips of keenly honed weapons was another flag.\n\nJin (振).\n\nAnd hundreds of martial artists blocking the gorge.",
+      "current": "At the tips of their keenly honed weapons flew another flag.\n\nJin (振).\n\nAnd hundreds of martial artists blocking the gorge.",
+      "defect": "Added “their” ties the Jin flag to the charging Mount Heng force just described, instead of the separate blocking side.",
+      "id": "F01",
+      "rationale": "The source starts a new image: weapon-tips, the Jin banner, then the hundreds sealing the gorge. It does not make that banner belong to the pack charging with the Mount Heng flag.",
+      "severity": "critical",
+      "source": "시퍼렇게 날 선 병장기의 끝에, 또 다른 깃발이 있다.\n\n진(振).\n\n그리고 협곡을 틀어막은 수백의 무인들."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "And to someone…\n\n“I’m proud of you.”\n“Are you hurt anywhere?”\n“Survive, youngest.”\n\nI had been a blood brother, too.",
+      "current": "And to someone…\n\n“I’m proud of you.”\n“Are you hurt anywhere?”\n“Survive, youngest.”\n\nThey had been blood brothers, too.",
+      "defect": "Subject of kinship is reversed: the narrator was a blood brother to someone, not that the remembered group were blood brothers.",
+      "id": "F02",
+      "rationale": "The thread is 나는 그들에게 있어… 그리고 누군가에게는… 형제이기도 했다. The quotes are what those someones said to him. “They had been blood brothers” can also smear that bond onto Wipeng, the scouts, and the rest.",
+      "severity": "critical",
+      "source": "그리고 누군가에게는…….\n\n‘네가 자랑스럽구나.’\n‘다친 곳은 없느냐?’\n‘살아남아라, 막내야.’\n\n피를 나눈 형제이기도 했다."
+    },
+    {
+      "confidence": 0.95,
+      "correction": "Butler Kim answered in a definitive tone.",
+      "current": "Butler Kim answered in a certain tone.",
+      "defect": "“Certain tone” reads as “some tone or other,” not a conclusive delivery.",
+      "id": "F03",
+      "rationale": "확정적인 어조 is how he states that Taekyung is clean; the English wording drops that certainty.",
+      "severity": "major",
+      "source": "김 집사가 확정적인 어조로 대답했다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Becoming a son and older brother they could be proud of, and treating my family to a life of ease.",
+      "current": "Becoming a proud son and brother, and giving my family a comfortable life.",
+      "defect": "“Proud son” makes him the one feeling pride; the Korean is a son and older brother the family can be proud of.",
+      "id": "F04",
+      "rationale": "자랑스러운 아들/오빠 is the family’s pride in him, which is the dream stated in that line.",
+      "severity": "major",
+      "source": "자랑스러운 아들, 오빠가 되어 가족들을 호강시켜 주는 것."
+    },
+    {
+      "confidence": 0.72,
+      "correction": "He isn’t an illegal Awakener, nor did he deliberately approach you.",
+      "current": "He isn’t a false Awakener, nor did he deliberately approach you.",
+      "defect": "“False Awakener” sounds like a fake or not truly awakened; 부정 각성자 is an illicit/improper Awakener.",
+      "id": "F05",
+      "rationale": "김 집사 is clearing Taekyung of illicit awakening and of a calculated approach, not of being a counterfeit Awakener.",
+      "severity": "major",
+      "source": "부정 각성자도 아니고, 도련님께 계획적으로 접근한 것도 아닙니다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "*What about Hyuk Mujin? What happened to the reconnaissance squad?* / *Jin Wikyung, Wipeng, Hyuk Mujin, and the reconnaissance squad.*",
+      "current": "*What about Hyuk Mujin? What happened to the scouts?*\n\n(…)\n\n*Jin Wikyung, Wipeng, Hyuk Mujin, and the scouts.*",
+      "defect": "정찰조원들 is the reconnaissance squad, later rendered that way in the same chapter; “scouts” drops the unit name.",
+      "id": "F06",
+      "rationale": "Same Korean term as 정찰조원들을 방패막이로, which the draft already translates as reconnaissance squad.",
+      "severity": "minor",
+      "source": "‘혁무진은? 정찰조원들은 어떻게 된 거지?’\n\n(…)\n\n‘진위경, 위팽, 혁무진과 정찰조원들.’"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“Yes. Please go ahead.”",
+      "current": "“Yes, young master?”",
+      "defect": "Adds 도련님; the line is only “Yes, please speak.”",
+      "id": "F07",
+      "rationale": "Hierarchy is already marked elsewhere; this line does not address him as young master.",
+      "severity": "minor",
+      "source": "“예, 말씀하십시오.”"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "> **System**\n>\n> Would you like to connect to Murim?\n>\n> **Accept** / **Decline**",
+      "current": "> **System**\n>\n> **Murim**\n>\n> Would you like to log in?\n>\n> **Accept** / **Decline**",
+      "defect": "The prompt asks whether to connect to Murim (접속), not “log in”; 로그인 is only the next-sentence verb.",
+      "id": "F08",
+      "rationale": "접속하시겠습니까 names Murim as the destination; collapsing it into “log in” duplicates the later 로그인(Login)했다 and drops 접속.",
+      "severity": "minor",
+      "source": "[무림]에 접속하시겠습니까?\n수락   /   거절"
+    }
+  ],
+  "summary": "Several subject and sense errors: the Jin banner is attached to the charging army, kinship is reversed from “I was a brother” to “they were brothers,” and a few register/term choices change what was said.",
+  "version": 1
+}

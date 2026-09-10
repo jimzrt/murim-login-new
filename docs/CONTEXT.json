@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "safe_through": 53,
-  "continuity_sources": [52, 53],
+  "safe_through": 54,
+  "continuity_sources": [53, 54],
   "active_continuity": [
-    "Jin Taekyung is back in reality after logging out of Murim. He has received a C-rank Hunter license, completed the recent Lizardman Gate work, and is now back at the goshiwon after visiting his family.",
+    "Taekyung has reconnected to Murim after returning to reality, visiting his family, and being ordered home by Team Leader Choi; he has a C-rank Hunter license and had completed the recent Lizardman Gate work.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "The Ark - 2020 capsule's purpose and route back to Murim remain unresolved; its manual says users are bound until death, time runs at an adjustable slow ratio, and Character Synchronization exists.",
     "Murim's death and resurrection limits remain unresolved.",
@@ -13,12 +13,12 @@
     "Team Leader Choi was first measured as a C-rank Hunter and later reawakened. He uses expensive equipment, a sword, and wind-based Haste magic; Taekyung infers that Choi is at least B-rank, but his exact current rank is unknown. Choi killed the Hobgoblin Priest, witnessed Taekyung kill the Great Warrior, and later claimed he killed both monsters when questioned by officials, concealing Taekyung's role.",
     "Taekyung can butcher Hobgoblin corpses at professional speed and has done this as paid raid work for years.",
     "The Boss Zone contained an old Hobgoblin Priest and a Level 45 Hobgoblin Great Warrior summoned from nearly a hundred dead Hobgoblins; both Rare Monsters are now dead.",
-    "Character Synchronization completed in reality and all systems were inherited. Taekyung's Status Window now shows Level 33, First Rate Martial Artist, 120 Strength, 125 Stamina, 121 Agility, 20 Intelligence, 20 Charm, fifteen years of Internal Energy, and 30 Remaining Points.",
+    "Character Synchronization completed in reality and all systems were inherited. Taekyung's current post-allocation state is Level 40, First Rate Martial Artist, 180 Strength, 185 Stamina, 191 Agility, 20 Intelligence, 20 Charm, fifteen years of Internal Energy, and 0 Remaining Points.",
     "Fame is 0 and the active Titles are Novice Trainee and Gambler. The Traitor Chain Quest is active but incomplete: Taekyung must punish the traitor and lead the battle to victory; failure means death.",
     "Team Leader Choi killed the Hobgoblin Priest and witnessed Taekyung kill the Great Warrior. Officials are investigating how two C-rank Rare Monsters appeared in an E-rank Gate.",
     "Im Kkeokjeong and the other veteran E-rank Hunters survived the Boss Zone fight but were sent to the hospital for about a week.",
-    "Taekyung accepts that Murim was real and wonders whether he can return. Choi concealed Taekyung's strength by claiming responsibility for both Rare Monsters, but whether the officials' investigation later exposes the truth remains unresolved.",
-    "Choi's background check found that Taekyung was the sole survivor of the Sangdong Station Mutated Gate, returned to Gate work for a year and a half, and was fired three days ago; Choi suspects he is at least C-rank or recently reawakened.",
+    "Taekyung accepts that Murim was real and has now successfully logged back in through the Ark - 2020 capsule, but the capsule's ultimate purpose, safe operation, and long-term route remain unresolved.",
+    "Choi's background check found that Taekyung was the sole survivor of the Sangdong Station Mutated Gate, returned to Gate work for a year and a half, and was fired three days ago; Choi suspects he is at least C-rank or recently reawakened. Butler Kim's further investigation finds Taekyung clean, not an illegal Awakener and not someone who deliberately approached Choi.",
     "Seong Jinho took Taekyung's discarded Ark - 2020 capsule and returned it to his room after bargaining over a finder's fee. The manual confirms that the capsule is permanently bound to its registered user until death.",
     "The System reads ordinary objects but cannot read the capsule or its manual. Taekyung is awaiting formal Hunter registration after the Bucheon Branch reassessment.",
     "Taekyung encounters former boss Kim Sangshik at the Hunter Association and confronts him over arranging his dismissal. Kim is a Level 24 D-rank Hunter and one of Sopung Guild's team leaders; Taekyung's synchronized strength overwhelms him when he grabs Taekyung. The reassessment device malfunctions while scanning Taekyung's internal energy, but the Association recognizes Taekyung as C-rank-level. Choi Min-su of Sangdong Guild measures as C-rank with A-rank mana control, and Sopung's Guild Master orders Kim to recruit him.",
@@ -27,19 +27,20 @@
     "The Lizardman Hunter's Leather Set activates its Scale Armor effect when fully equipped, and the Lizardman Slayer's Harpoon has a high probability of causing Bleeding. A deferential middle-aged man restricts access to the Gate and addresses Choi as 'young master,' indicating Choi's wealthy background.",
     "Taekyung clears a nearby colony of about twenty Level 40 swamp Lizardmen alone with the Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon, levels up twice without injury, and survives Choi’s pheromone test. When the resulting horde arrives, Taekyung assigns all 100 Remaining Points (30 Strength, 30 Stamina, 40 Agility) and uses One Flash to kill the Level 52 Lizardman Great Chieftain and dozens of monsters.",
     "After the fight, Choi (Choi Minwoo) privately recognizes that Taekyung may be stronger than him. Taekyung completes three C-rank Gates in one day, receives a weekly payment of 300 million won including a 270 million won bonus, and is ordered to take weekends off under the provisional contract.",
-    "Sopung Guild’s Guild Master discovers Kim Sangshik filed a false report about Taekyung and expelled him from the Guild, then expels Kim and his son Kim Sangho. The Guild begins gossiping about Taekyung’s reawakening and whereabouts.",
+    "Sopung Guild’s Guild Master discovers Kim Sangshik filed a false report about Taekyung and expelled him from the Guild, then expels Kim Sangshik and orders Kim Sangho's resignation. The Guild begins gossiping about Taekyung’s reawakening and whereabouts.",
     "Taekyung returns home after months with his C-rank Hunter license and 300 million won. He tells his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.",
     "Hayeon is nineteen and still a high-school senior; she is awake early for the school founding anniversary and resumes her sharp, affectionate sibling banter with Taekyung.",
-    "After returning to reality, Taekyung begins having increasingly vivid nightmares of Murim. Sleep Mode restores his physical condition but not his mental stability, and his mistakes and injuries increase during Gate raids.",
+    "After returning to reality, Taekyung begins having increasingly vivid nightmares of Murim. Sleep Mode restores his physical condition but not his mental stability, and his mistakes and injuries increase during Gate raids. The dreams now show the Mount Heng–Jin Family battle, and he has decided to return.",
     "Taekyung kills a Level 50 Lizardman Chieftain but is injured three times in one day and five times by the fourth day. Team Leader Choi orders him home and asks what is wrong.",
-    "Taekyung suspects that Murim is another reality and that the Ark - 2020 capsule may be a Gate to another dimension; the capsule’s purpose and route remain unresolved."
+    "Taekyung suspects that Murim is another reality and that the Ark - 2020 capsule may be a Gate to another dimension; he decides to return and successfully reconnects to Murim at the end of Chapter 54, while the capsule's ultimate purpose and route remain unresolved.",
+    "Team Leader Choi privately plans to keep watching Taekyung and recruit him after Butler Kim clears him of being an illegal Awakener or deliberately approaching Choi. Taekyung rejects Choi's latest contract offer—500 million won signing bonus, 50 million won monthly salary, seventy-percent settlement split, officetel, sedan, and social insurance—because he intends to return to Murim, and schedules another meeting."
   ],
   "open_questions": [
-    "The capsule's purpose and route back to Murim remain unresolved; Taekyung now suspects it may be a Gate to another dimension and Murim another reality.",
+    "The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has reconnected to Murim, but whether it can transport him safely and reliably and what will happen after the ongoing battle remain unknown.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
-    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
+    "The identity of the Head Elder's Sound Transmission accomplice, the betrayal's outcome, and the full purpose of their plan remain unresolved.",
     "The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.",
-    "Whether the officials' investigation exposes Taekyung, whether the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
+    "Whether the officials' investigation exposes Taekyung, whether the System's restoration relates to Murim, Choi's exact current rank, whether Peace Guild can recruit Taekyung after his refusal, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -64,6 +65,7 @@
     "Use Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon for the First Rate System items, and retain the Pocheongcheon reference with a concise footnote.",
     "Use swamp Lizardmen for 늪 리자드맨 and preserve the female-Lizardman pheromone lure and its resolution in Chapter 51.",
     "Use Lizardman Great Chieftain for 대족장, One Flash for 일섬, and footnote *Bulgeum* as Korean slang for Friday night.",
-    "Use goshiwon for 고시원, with a concise first-use footnote explaining the tiny rented-room arrangement and approximate size."
+    "Use goshiwon for 고시원, with a concise first-use footnote explaining the tiny rented-room arrangement and approximate size.",
+    "Render the System prompt [무림]에 접속하시겠습니까? as “Would you like to connect to Murim?”; reserve “logged in” for 로그인했다."
   ]
 }

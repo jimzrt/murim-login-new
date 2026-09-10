@@ -1,0 +1,52 @@
+{
+  "chapter": 54,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.229,
+    "source_characters": 5487,
+    "source_paragraphs": 202,
+    "translation_characters": 12229,
+    "translation_paragraphs": 205
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "semantic_probe",
+      "details": {},
+      "message": "생도 should use the established term 'cadet'"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "절정",
+        "preferred": "Peak"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "생도",
+        "preferred": "cadet"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "등급",
+        "preferred": "Grade"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "로그인",
+        "preferred": "Login"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
