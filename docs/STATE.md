@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 54
-- Next chapter: 55
-- Current block: 50–54 (5/5)
-- Latest translation: `translations/0054.md`
+- Last completed: 55
+- Next chapter: 56
+- Current block: 55–59 (1/5)
+- Latest translation: `translations/0055.md`
 - Latest summary: `summaries/0050-0054.md`
-- Safe profiles through: chapter 54
+- Safe profiles through: chapter 55
 
 
 
@@ -15,7 +15,7 @@
 
 
 
-- Taekyung’s increasingly vivid Murim nightmares show the ongoing Mount Heng–Jin Family battle and leave him unable to treat the people he met there as NPCs. After Choi orders him home, Taekyung rejects Choi’s lucrative contract because he has decided to return to Murim, then reconnects through the capsule.
+- Taekyung reconnects to Murim and wakes during the Mount Heng–Jin Family battle. The Head Elder’s betrayal remains hidden while he positions the battle to destroy Mount Heng; Taekyung orders the reconnaissance squad to reach the gorge, and Lee Cheonbaek commits Mount Heng’s core masters to the attack.
 
 ## Open Questions
 - The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has successfully reconnected to Murim, but whether it can transport him safely and reliably and what will happen after the battle remain unknown.

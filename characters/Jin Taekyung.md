@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 54
+- **Safe through:** Chapter 55
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -41,4 +41,5 @@
 - **Chapter 52 continuity:** Taekyung returns home after months with his C-rank Hunter license and 300 million won. He gives his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.
 - **Chapter 53 continuity:** Taekyung develops increasingly vivid Murim nightmares after returning to reality; Sleep Mode restores his body but not his mental stability, and repeated mistakes leave him injured during Gate raids. He kills a Level 50 Lizardman Chieftain, is told by Team Leader Choi to go home after accumulating injuries, and suspects Murim is another reality and the Ark - 2020 capsule a possible Gate to another dimension.
 - **Chapter 54 continuity:** Taekyung dreams of the Mount Heng–Jin Family battle and worries about the people he left in Murim, realizing they are no longer NPCs to him. He decides to return despite the danger, rejects Team Leader Choi’s lucrative contract because he cannot abandon Murim, and reconnects through the Ark - 2020 capsule, logging back in.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–54
+- **Chapter 55 continuity:** Taekyung wakes in Murim after reconnecting through the Ark - 2020 capsule and learns that logging in or logging out puts the other side into a deathlike sleep. He orders the reconnaissance squad to reach the Eight Spring Gorge battle in half the remaining time. The Jin Family has trapped Mount Heng in the gorge; the Head Elder plans to use the cliff archers against Mount Heng’s command, while Lee Cheonbaek kills the Blood Rain Group’s leader and leads three Peak masters and dozens of First Rate masters into the assault. The battle’s outcome remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–55

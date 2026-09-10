@@ -1,0 +1,55 @@
+{
+  "chapter": 55,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.208,
+    "source_characters": 6041,
+    "source_paragraphs": 201,
+    "translation_characters": 13337,
+    "translation_paragraphs": 208
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "깨달음",
+        "preferred": "enlightenment / insight"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "로그인",
+        "preferred": "Login"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "로그아웃",
+        "preferred": "Logout"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
