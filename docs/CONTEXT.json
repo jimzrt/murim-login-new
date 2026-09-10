@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 30,
-  "continuity_sources": [29, 30],
+  "safe_through": 31,
+  "continuity_sources": [30, 31],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -34,13 +34,17 @@
     "Taekyung uses daggers from his Inventory to stab Jopil's foot, sever both Achilles tendons, and drive a dagger into Jopil's dantian as his internal energy peaks, causing qi deviation.",
     "Jopil is the nineteenth-generation successor of the Fire Gate Clan. He burns his life for a final attack, but Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with Thrust with All My Might through the broken Sharp Spear.",
     "Jopil is dead. The condition of Hyuk Mujin and Han Yeop after Jopil blasted them into trees remains unresolved.",
-    "Mount Beimang is a burial mountain; going or hiking there is an idiom for dying. A goshiwon is a tiny, cheap room-for-rent housing arrangement."
+    "Mount Beimang is a burial mountain; going or hiking there is an idiom for dying. A goshiwon is a tiny, cheap room-for-rent housing arrangement.",
+    "Taekyung was unconscious for five days after killing Jopil; the Medicine King Hall Leader had expected him to die within a day.",
+    "The reconnaissance squad and the Sakju Branch survivors returned safely. Two people suffered serious injuries, but no lives are in danger.",
+    "The unnamed squad member killed by Jopil was an orphan. His body was recovered and buried, and Taekyung learned the young man’s chosen name and dream of becoming Number One of All Time.",
+    "Wipeng urged Taekyung to remember the dead and live their share as well; Wipeng’s own dream is to become Number One Under Heaven.",
+    "Taekyung’s modern-world backstory includes a disastrous Gate raid two years earlier: after he insisted on entering the boss zone, every teammate died except him."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
-    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "The condition of Hyuk Mujin and Han Yeop after Jopil blasted them into trees remains unresolved."
+    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",

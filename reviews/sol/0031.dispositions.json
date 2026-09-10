@@ -1,0 +1,50 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored D-rank as the threshold that would change this life, matching D급만 되어도 and avoiding collision with the E-rank Team Leader.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Replaced henpecked with devoted husband; 애처가 is wife-loving, not 공처가, and the swamp joke depends on that contrast.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Line now comments on today being easy, matching 오늘 되게 쉬운데 rather than a habitual always.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 덤덤한 시선 as an indifferent gaze so the accusation lands as cold detachment, not composure.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "몫까지 살다 is living his remaining share of life, which the path and dream counsel continues.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "죽으라고 attaches the death-wish to Taekyung after the won’t-last-the-day verdict, not to the White Tiger Hall Leader.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Hunter-system 마력 rendered as mana and as high-dimensional energy, not generic magical power or energy sources.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Dialogue now only has sleeping while breaking into a cold sweat; soaked clothes were an addition, with the damp back left in later narration.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "이십여 is an approximate about twenty, not a count above twenty.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

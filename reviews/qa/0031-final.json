@@ -1,0 +1,48 @@
+{
+  "chapter": 31,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.039,
+    "source_characters": 7116,
+    "source_paragraphs": 223,
+    "translation_characters": 14510,
+    "translation_paragraphs": 244
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "numbers",
+      "details": {
+        "values": [
+          "2"
+        ]
+      },
+      "message": "Arabic numerals from the source are absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "대협",
+        "preferred": "Great Hero or Sir depending tone"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "천수",
+        "romanization": "cheonsu"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

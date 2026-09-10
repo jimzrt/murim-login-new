@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 30
+- **Safe through:** Chapter 31
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -17,4 +17,5 @@
 - **Chapter 28 continuity:** Taekyung’s attempt to cultivate the unidentified dantian energy still fails. A wolf pack flees from his qi, and the System creates a forced Quest to confront Jopil, a Peak master. Jopil offers to let him leave after truthful answers, then demands that Taekyung abandon Gong, the children, and the reconnaissance squad; Taekyung refuses.
 - **Chapter 29 continuity:** Taekyung fights Jopil, relying on the Gambler Title’s one-on-one combat bonus. After Jopil’s throwing knife kills an unnamed squad member, Taekyung attacks in anger. He uses Sky-Piercing Strike, but Jopil’s faster sword wounds him repeatedly and strikes toward his chest again; the outcome is unresolved.
 - **Chapter 30 continuity:** Jopil’s Flame Divine Palm nearly kills Taekyung, who recalls his first use of the Hunter skill **Thrust with All My Might** and its warning that his body cannot safely bear its power. Taekyung tricks Jopil with daggers from his Inventory, severs both Achilles tendons, and causes qi deviation by stabbing Jopil’s dantian. When Jopil burns his life for a final attack, Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with **Thrust with All My Might** through the broken Sharp Spear. Hyuk Mujin and Han Yeop’s condition remains unclear.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–30
+- **Chapter 31 continuity:** Taekyung remains unconscious for five days after killing Jopil, and the Medicine King Hall Leader had expected him to die within a day. He wakes from a nightmare about a disastrous modern-world Gate raid two years earlier: after he insisted on entering the boss zone, every teammate died except him. Wipeng reports that the reconnaissance squad and the Sakju Branch survivors returned safely, with two serious injuries but no lives in danger. The unnamed squad member killed by Jopil was an orphan; his body was recovered and buried, and Taekyung learns the young man’s chosen name and dream of becoming Number One of All Time. Wipeng urges Taekyung to remember the dead and live their share as well.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–31

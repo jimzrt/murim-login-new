@@ -1,0 +1,96 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "Even a D-rank probably wouldn’t have to live like this, but F-ranks like us had no other choice.",
+      "current": "Even an E-rank Hunter probably wouldn’t have to live like this, but people like us at F-rank had no other choice.",
+      "defect": "The cited Hunter rank is D, not E. That is a scene fact, and it also collides with the Team Leader later being an E-rank who is still broke.",
+      "id": "F01",
+      "rationale": "Source says D급만 되어도. The Team Leader is an E-rank with three kids and money trouble; D is the rank that would change that life.",
+      "severity": "critical",
+      "source": "D급만 되어도 이렇게 살지는 않을 텐데, 우리 같은 F급들은 별수 없다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "Despite saying things like that, he was a famous devoted husband and a good father.",
+      "current": "Despite saying things like that, he was a famous henpecked husband and a good father.",
+      "defect": "애처가 is a devoted, wife-loving husband. Henpecked is 공처가 and reverses the characterization under the swamp talk.",
+      "id": "F02",
+      "rationale": "The joke is that he calls marriage a swamp while being known for doting on his wife, then looking fondly at family photos.",
+      "severity": "major",
+      "source": "말은 저렇게 해도 소문난 애처가에 좋은 아빠다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“It’s pretty easy today, huh?”",
+      "current": "“Is it always this easy?”",
+      "defect": "The line comments on today being easy, not on whether raids are always easy.",
+      "id": "F03",
+      "rationale": "오늘 marks this raid; always recasts a one-day observation as a habit.",
+      "severity": "major",
+      "source": "“오늘 되게 쉬운데?”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "He looked down at me with an indifferent gaze.",
+      "current": "He looked down at me with a calm expression.",
+      "defect": "덤덤한 시선 is a detached, indifferent gaze. Calm expression loses the coldness of the accusation that follows.",
+      "id": "F04",
+      "rationale": "The betrayal beat is the lack of feeling, not composure, before “You, who ran away.”",
+      "severity": "major",
+      "source": "그가 덤덤한 시선으로 날 내려다봤다."
+    },
+    {
+      "confidence": 0.87,
+      "correction": "“Then live his share as well.”",
+      "current": "“Then live for his sake too.”",
+      "defect": "몫까지 살다 means live his share of life as well, not merely live for his sake.",
+      "id": "F05",
+      "rationale": "Wipeng’s counsel is to carry the dead man’s remaining portion of life, which the later path/dream talk continues.",
+      "severity": "major",
+      "source": "“그럼 그의 몫까지 사십시오.”"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "I remembered the old man from the meeting a few days ago, the one who had threatened to shove a giant needle into the White Tiger Hall Leader’s anus.\n\n*So he really had been praying for me to die.*",
+      "current": "I remembered the old man from the meeting a few days ago, the one who had threatened to shove a giant needle into the White Tiger Hall Leader’s anus.\n\n*He really was chanting prayers for the man to die.*",
+      "defect": "죽으라고 points at Taekyung after the “won’t last the day” diagnosis. “The man” attaches the death wish to the White Tiger Hall Leader.",
+      "id": "F06",
+      "rationale": "The medical verdict is that Taekyung would not survive the day; the meeting anecdote identifies the same old man, not a wish for the White Tiger Hall Leader’s death.",
+      "severity": "major",
+      "source": "며칠 전 회의 때 백호당주의 항문에 대침을 꽂아 넣겠다고 하던 늙은이가 생각났다. 아주 죽으라고 염불을 외웠구나."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "These clumps of mana possessed by monsters were high-dimensional energy, and the most valuable of all a monster’s byproducts.",
+      "current": "These clumps of magical power possessed by monsters were high-dimensional energy sources—and the most valuable of all a monster’s byproducts.",
+      "defect": "In the Hunter-system half of the book, 마력 is mana, not generic magical power.",
+      "id": "F07",
+      "rationale": "Binding terminology: mana for the modern Hunter system when the source uses that energy vocabulary.",
+      "severity": "minor",
+      "source": "몬스터가 지닌 이 마력 덩어리는 고차원 에너지인 동시에 몬스터의 부산물 중 가장 값진 거다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "“I saw you sleeping earlier, even breaking into a cold sweat.”",
+      "current": "“I saw you sleeping earlier. You were sweating cold enough to soak your clothes.”",
+      "defect": "Adds soaking clothes. The source only has sleeping while breaking into a cold sweat; the damp back comes later in narration.",
+      "id": "F08",
+      "rationale": "식은땀까지 흘려 가면서 자던데 does not mention soaked clothes; 등허리가 축축하다 is a later, separate observation.",
+      "severity": "minor",
+      "source": "“아까 보니까 식은땀까지 흘려 가면서 자던데.”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "About twenty goblins threw poison needles, axes, and spears",
+      "current": "More than twenty goblins threw poison needles, axes, and spears",
+      "defect": "이십여 is about twenty, not more than twenty.",
+      "id": "F09",
+      "rationale": "여 marks an approximate count, not a floor above twenty.",
+      "severity": "minor",
+      "source": "이십여 마리의 고블린이 독침과 도끼, 창을 투척했지만"
+    }
+  ],
+  "summary": "Rank, kinship-characterization, and several action/advice beats are altered; D-rank becomes E-rank, 애처가 becomes henpecked, and the Team Leader’s indifferent gaze and “live his share” counsel are softened or recast.",
+  "version": 1
+}
