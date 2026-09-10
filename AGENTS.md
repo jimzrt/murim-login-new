@@ -73,8 +73,10 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 - At `POLISHED`, or at `REVISED` when polish is skipped, update durable
   terminology in `docs/NAMES.md` or the compendium, affected safe profiles,
   `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from this
-  chapter only. Do not load other reading copies to summarize. When status
-  asks for it, run `python tools/workflow.py summarize N`.
+  chapter only. Each beat's first nonblank line must be exactly `# Chapter N`,
+  followed by `## Plot`, `## Continuity`, and `## Translation Decisions`. Do not
+  use `# Chapter N Beat`. Do not load other reading copies to summarize. When
+  status asks for it, run `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
   task agent, nested session, or direct `omp` invocation. `run_next.py` must
   wait for each `workflow.py` command; do not background it.
