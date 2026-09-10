@@ -1,6 +1,6 @@
 # Hyuk Mujin (혁무진)
 
-- **Safe through:** Chapter 55
+- **Safe through:** Chapter 58
 - **Aliases:** None revealed
 - **Role:** Captain of the Gatekeepers at the Jin Family of Taiyuan; deputy squad leader of White Tiger Hall’s reconnaissance squad
 - **Personality:** Young, disciplined, suspicious of Jin Taekyung, and openly contemptuous of the family’s disgraced third son; believes loyalty and respectable conduct matter, but is also proud and hungry for glory
@@ -16,5 +16,6 @@
 
 - **Chapter 38 continuity:** Hyuk recognizes that Gwak Jun’s group cannot be ordinary Three Paths Sect disciples and helps Taekyung infer that the infiltrators are part of a larger conspiracy. He fights beside the reconnaissance squad, confirms that more than one hundred allied martial artists came from the Three Paths Sect and Gunggwimun, and realizes that nearly half the main force belongs to the Head Elder’s faction. He identifies Gwak’s self-inflicted death as severing his heart meridian.
 - **Chapter 55 continuity:** After Taekyung reconnects to Murim, Hyuk carries him toward the main force for roughly two hours. Taekyung wakes, explains the login/logout deathlike sleep, and orders the exhausted reconnaissance squad to cover the remaining distance in one hour; Hyuk protests but obeys.
-- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–38, 55
+- **Chapter 58 continuity:** Hyuk follows Taekyung into the Head Elder's attack, helps protect him during the retreat, identifies the supposedly rescued man as the Blood Wolf Sword Lee Cheonbaek, and joins the reconnaissance squad's encircling formation.
+- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–38, 55, and 58
 

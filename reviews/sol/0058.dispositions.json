@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored passive 밀리고 있던 so the spearhead is being forced back, not pushing the narrator.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Split the throw and the sideways dive into simultaneous motions instead of one shared path.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the incomplete ‘That’s my brother…’ line; kept 손 떼 only after he pulls the spear.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "He sees the Head Elder through a clear view, not beyond his field of vision.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored meat-shield → extra-hand correction, then the second slip with 말이 자꾸 헛나오네 in place.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Rendered 십여 장 as about a hundred feet so it stays larger than the later 삼 장.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Changed short bout to a fast, heavy burst of vomiting.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored the unfinished ‘together’ request instead of supplying a hedged plan.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

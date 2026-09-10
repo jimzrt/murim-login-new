@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "the spearhead that had been slowly getting pushed back was sliced off like tofu.",
+      "current": "the spear tip that had been slowly pushing me back was sliced off like tofu.",
+      "defect": "밀리고 있던 means the spearhead was being forced back; the draft makes it the agent pushing the narrator.",
+      "id": "F01",
+      "rationale": "The bind already has Taekyung losing the press; 밀리다 is passive. Reversing it contradicts the preceding ‘why is it coming up’ beat.",
+      "severity": "critical",
+      "source": "서서히 밀리고 있던 창두가 두부처럼 잘려 나갔다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "I had already flung myself sideways at the same moment I threw it.",
+      "current": "I had already thrown myself sideways along with the iron rod.",
+      "defect": "The throw is at the Head Elder; the body goes sideways at the same time. ‘Along with the iron rod’ makes them share one path.",
+      "id": "F02",
+      "rationale": "투척과 동시에 옆으로 is simultaneous split motion: projectile forward, body aside to grab the fallen man.",
+      "severity": "major",
+      "source": "이미 투척과 동시에 옆으로 몸을 날린 후였다."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "“That’s my brother…”",
+      "current": "“Get your hands off my brother…”",
+      "defect": "The broken line is only ‘(to) my brother…’; the draft invents the later 손 떼 command and duplicates the next shout.",
+      "id": "F03",
+      "rationale": "우리 형한테 is an incomplete dative fragment. 손 떼, 이 새끼야 comes only after he pulls the planted spear.",
+      "severity": "major",
+      "source": "“우리 형한테…….”"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Through that clear view, I could see a white-haired old man.",
+      "current": "Beyond my clear field of vision, I saw a white-haired old man.",
+      "defect": "‘Beyond my field of vision’ means he cannot see the man; the source is a clear view across the distance.",
+      "id": "F04",
+      "rationale": "또렷한 시야 너머로 marks seeing the Head Elder clearly, which sets up spotting the body and blood at his feet.",
+      "severity": "major",
+      "source": "또렷한 시야 너머로 백발의 노인이 보인다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "This was a moment when even a meat shield—no, a single extra hand—was precious.\n\nBesides, apart from me, Hyuk was the strongest meat shield in the reconnaissance squad. Ah, I kept saying it wrong.",
+      "current": "This was a moment when every extra hand mattered. Every meat shie—damn it, I kept saying the wrong thing.\n\nBesides, apart from me, Hyuk was the strongest meat shield in the reconnaissance squad. No, there I went again.",
+      "defect": "First beat corrects meat shield → extra hand; the draft starts from extra hand and slips into meat shield, and it moves 말이 자꾸 헛나오네 up a paragraph.",
+      "id": "F05",
+      "rationale": "The gag is failing to stop calling him a meat shield. Reversing the first correction and relocating the slip flattens that hierarchy of insult.",
+      "severity": "major",
+      "source": "지금은 고기 방패, 아니 손 하나가 아쉬운 시점이다.\n\n더군다나 혁무진은 나를 제외하면 정찰조 중 최고의 실력을 지닌 고기 방패, 아 말이 자꾸 헛나오네."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "When we closed to within about a hundred feet of the Head Elder",
+      "current": "When we closed to within a dozen yards of the Head Elder",
+      "defect": "십여 장 is about ten jang (~30 m / ~100 ft). A dozen yards (~11 m) nearly collapses into the later 삼 장 / thirty feet.",
+      "id": "F06",
+      "rationale": "The draft already renders 일 장 as ten feet and 삼 장 as thirty feet. 십여 장 must stay an order of magnitude larger or the approach distances stop shrinking.",
+      "severity": "major",
+      "source": "대장로와의 거리가 십여 장 안으로 좁혀졌을 때"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "After a fast, heavy burst of vomiting, Hyuk",
+      "current": "After finishing his short, forceful bout of vomiting, Hyuk",
+      "defect": "빠르고 굵은 describes a fast, heavy stream, not a short bout.",
+      "id": "F07",
+      "rationale": "굵은 is volume/thickness; short is not in the source.",
+      "severity": "minor",
+      "source": "빠르고 굵은 구토를 끝낸 혁무진이"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "“Squad Leader, maybe together—huff!”",
+      "current": "“Squad Leader, we should probably—huff!”",
+      "defect": "좀 같이…… is an unfinished ‘together…’; ‘we should probably’ supplies a speech the source leaves incomplete.",
+      "id": "F08",
+      "rationale": "The interrupt is the sight of the battlefield cutting off a request to join, not a hedged plan.",
+      "severity": "minor",
+      "source": "“조장, 좀 같이…… 헉!”"
+    }
+  ],
+  "summary": "One reversed bind on the spearhead, plus several altered actions, invented/completed dialogue, a broken 장 scale, and a reversed meat-shield self-correction.",
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 57
+- **Safe through:** Chapter 58
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -18,6 +18,7 @@
 - **Chapter 55 continuity:** At Eight Spring Gorge, Wikyung sees that the Jin Family holds the terrain advantage but is troubled by the rising casualties. He accepts the Head Elder’s plan for himself, the Head Elder, and Wipeng to confront Mount Heng’s command while the cliff archers attack.
 - **Chapter 56 continuity:** Wikyung advances with the Jin Family’s masters as Lee Cheonbaek leads Mount Heng’s assault, then engages the opposing command alongside Wipeng while the Head Elder fights Cheonbaek. The battle remains unresolved when Taekyung arrives.
 - **Chapter 57 continuity:** After Taekyung publicly calls the Head Elder a traitor, Wikyung recognizes that Lee Seogeun's death may explain the accusation and orders Wipeng to cut down the First Elder. The First, Second, and Third Elders reveal hidden Peak-level martial arts, kill the White Tiger Hall Leader, and expose the Five Gates conspiracy when the First Elder signals the allied sects to turn on the battlefield.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, 10–25, 32–34, 36–37, and 55–57
+- **Chapter 58 continuity:** Taekyung intends to rescue Wikyung from the Head Elder but grabs Lee Cheonbaek instead. Wikyung's location and condition after the mistaken rescue are unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, 10–25, 32–34, 36–37, and 55–58
 
 
