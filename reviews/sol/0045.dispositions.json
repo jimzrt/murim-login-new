@@ -1,0 +1,50 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the finishing spear thrust: spoken line, piercing SFX, then death rattle and slide.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Changed firmly to gently so the foot-press stays light against three-digit Strength.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Replaced icy with stinging to match 따가운.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Unquoted the aside so the official does not hear it as speech.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored the asking verb and rendered the request as spoken dialogue.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Restored the hyperbolic earth-caving sigh.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Rendered 없어서 못 먹습니다 as scarcity, not appetite.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Replaced small steps with faltered backward for 주춤주춤.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Matched 시발 to the chapter’s hard fuck register.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,96 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "“Go now.” / Shunk. / With a death rattle, the hulking green body slid down the wall.",
+      "current": "“Go on. It’s over.” / Thud. / With a final gurgle, the hulking green body slid down the wall.",
+      "defect": "푹 is a piercing/plunge SFX for the finishing stab, not a dull impact. Thud makes the kill sound like a body blow or fall and drops the spear thrust.",
+      "id": "F01",
+      "rationale": "The kill beat is spear-in, death cry, slide. Rendering 푹 as Thud changes the mechanical action of the finishing blow.",
+      "severity": "major",
+      "source": "“가라, 이제.” / 푹. / 끄륵. 단말마와 함께 녹색 거체가 벽면을 타고 미끄러진다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "At that moment, I pressed down gently on the middle of the spear with one foot.",
+      "current": "At that moment, I pressed down firmly on the middle of my spear with one foot.",
+      "defect": "지그시 is a gentle, steady press. Firmly adds effort and kills the gag that light pressure plus a three-digit Strength stat bends the spear.",
+      "id": "F02",
+      "rationale": "The comedy is effortless strength. Changing the pressure quality alters the action and the joke.",
+      "severity": "major",
+      "source": "그 순간, 나는 한쪽 발로 창의 중앙을 지그시 눌렀다."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "That was when I felt a stinging gaze from beside me.",
+      "current": "That was when I felt an icy gaze from beside me.",
+      "defect": "따가운 is a hot, stinging glare, not a cold one.",
+      "id": "F03",
+      "rationale": "The source cue is burning/prickling scrutiny from Choi, the opposite temperature metaphor.",
+      "severity": "major",
+      "source": "그때 옆에서 따가운 시선이 느껴졌다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Hey, save the swearing. There’s one more.",
+      "current": "“Save the swearing. There’s one more.”",
+      "defect": "Unquoted first-person aside, matching narration such as 그쪽이었냐, is turned into spoken dialogue the official would hear.",
+      "id": "F04",
+      "rationale": "This chapter quotes Taekyung’s speech. This line has no quotes and functions as narrator commentary, not a spoken line.",
+      "severity": "major",
+      "source": "어, 욕 아껴 둬. 하나 더 있으니까."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "So I asked him. / “Could you keep what concerns me a secret?”",
+      "current": "*Could you keep this a secret?*",
+      "defect": "The narration that he asked Choi is omitted, and the request is italicized as thought. The Korean is a spoken request about keeping matters concerning him secret.",
+      "id": "F05",
+      "rationale": "부탁했다 frames a request to Choi, which the next paragraph treats as asking him for false testimony. Thought italics drop that speech act.",
+      "severity": "major",
+      "source": "그래서 그에게 부탁했다. / ‘저에 관해서는 비밀로 해 주실 수 있을까요?’"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "I let out a sigh as if it could cave the ground in.",
+      "current": "I let out a deep sigh.",
+      "defect": "땅이 꺼져라 is a hyperbolic sigh that could cave the earth in, echoing the fight where the ground was actually sinking. A plain deep sigh loses that comic beat.",
+      "id": "F06",
+      "rationale": "The exaggeration is the characterization and the callback, not optional intensity.",
+      "severity": "major",
+      "source": "나는 땅이 꺼져라 한숨을 내쉬었다."
+    },
+    {
+      "confidence": 0.72,
+      "correction": "And he was rich, too. / “I never get to eat it.”",
+      "current": "And he was rich, too. / “Can’t get enough of it.”",
+      "defect": "After noting Choi is rich, 없어서 못 먹습니다 is ‘I never get to eat it / I can’t eat it because I don’t have it,’ not gluttonous ‘can’t get enough.’",
+      "id": "F07",
+      "rationale": "The line answers 한우 좋아해요 against the rich-man, top-grade-Hanwoo setup. Scarcity/poverty is the point; the current English reverses it into hearty appetite.",
+      "severity": "major",
+      "source": "그리고 돈도 많은 인간이다. / “없어서 못 먹습니다.”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "the Great Warrior involuntarily faltered backward.",
+      "current": "the Great Warrior involuntarily began taking small steps backward.",
+      "defect": "주춤주춤 is faltering, hesitant retreat, not merely small steps.",
+      "id": "F08",
+      "rationale": "The source marks shock and unsteadiness after seeing the severed arm, not just reduced stride length.",
+      "severity": "minor",
+      "source": "대전사가 저도 모르게 주춤주춤 뒷걸음질 친다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "“Fuck. It really came up.”",
+      "current": "“Holy shit. It really appeared.”",
+      "defect": "시발 is the same hard swear rendered as fuck elsewhere in the chapter; Holy shit softens it.",
+      "id": "F09",
+      "rationale": "Rules require matching profanity strength. The hunters’ 시발 is already For fuck’s sake; this should not be milder.",
+      "severity": "minor",
+      "source": "“시발. 진짜 뜨네.”"
+    }
+  ],
+  "summary": "Actionable fidelity issues: the killing thrust SFX is rendered as a blunt thud; a gentle foot-press becomes firm; a stinging glare becomes icy; an unquoted aside is spoken; the secret request is demoted to thought and the asking verb is dropped; the earth-caving sigh gag is flattened; and 없어서 못 먹습니다 is read as appetite rather than scarcity.",
+  "version": 1
+}

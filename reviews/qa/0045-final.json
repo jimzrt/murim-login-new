@@ -1,0 +1,55 @@
+{
+  "chapter": 45,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.033,
+    "source_characters": 5133,
+    "source_paragraphs": 189,
+    "translation_characters": 10434,
+    "translation_paragraphs": 169
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "보법",
+        "preferred": "manoeuvre technique / footwork technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가보법",
+        "preferred": "Jin Family's Manoeuvre Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가창법",
+        "preferred": "Jin Family's Spear Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "장비",
+        "preferred": "Equipment"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "동기화",
+        "preferred": "Synchronization / Sync"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
