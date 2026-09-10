@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 55
-- Next chapter: 56
-- Current block: 55–59 (1/5)
-- Latest translation: `translations/0055.md`
+- Last completed: 56
+- Next chapter: 57
+- Current block: 55–59 (2/5)
+- Latest translation: `translations/0056.md`
 - Latest summary: `summaries/0050-0054.md`
-- Safe profiles through: chapter 55
+- Safe profiles through: chapter 56
 
 
 
@@ -15,12 +15,12 @@
 
 
 
-- Taekyung reconnects to Murim and wakes during the Mount Heng–Jin Family battle. The Head Elder’s betrayal remains hidden while he positions the battle to destroy Mount Heng; Taekyung orders the reconnaissance squad to reach the gorge, and Lee Cheonbaek commits Mount Heng’s core masters to the attack.
+- The Mount Heng–Jin Family battle remains underway at Eight Spring Gorge. Lee Cheonbaek’s assault has been checked by the Head Elder, and Taekyung has arrived at the battlefield.
 
 ## Open Questions
-- The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has successfully reconnected to Murim, but whether it can transport him safely and reliably and what will happen after the battle remain unknown.
+- The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has successfully reconnected to Murim, reached the ongoing battle, and interrupted the Head Elder's attempt to kill Lee Cheonbaek.
 - Murim death and resurrection limits remain unresolved.
-- The identity of the Head Elder's Sound Transmission accomplice, the betrayal's outcome, and the full purpose of their plan remain unresolved.
+- The identity of the Head Elder's Sound Transmission accomplice, the betrayal's outcome, and the full purpose of their plan remain unresolved; the Head Elder has only revealed that “they” killed Lee Seogeun.
 - The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.
 - Whether the officials' investigation exposes Taekyung, whether the System's return relates to Murim, whether Taekyung can return safely, Choi's exact current rank, whether Peace Guild can recruit Taekyung after his refusal, and whether Sopung Guild can recruit Choi Min-su remain unresolved.
 

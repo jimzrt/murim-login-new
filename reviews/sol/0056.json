@@ -1,0 +1,126 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "The Jin Family’s masters kicked off the ground and leaped into the air. Taking that as the signal, a single fire arrow rose high behind them.",
+      "current": "The Jin Family’s masters kicked off the ground and leaped into the air. As if signaling their charge, a single fire arrow rose high behind them.",
+      "defect": "The leap is the signal for the fire arrow; the draft makes the arrow signal the charge and adds ‘as if.’",
+      "id": "F01",
+      "rationale": "그것을 신호로 points back to the masters launching, not the arrow announcing their charge.",
+      "severity": "critical",
+      "source": "태원진가의 고수들이 땅을 박차고 날아올랐다. 그것을 신호로 등 뒤에서 불화살 하나가 높게 솟구쳤다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "If you're not Number One Under Heaven, you're nothing more than a martial brute from the frontier. Neither you nor I have the capacity to be that.",
+      "current": "If you're not Number One Under Heaven, you're nothing more than a martial brute from the frontier. Neither you nor I are cut out to be that.",
+      "defect": "‘That’ most naturally refers to ‘martial brute,’ reversing the Head Elder’s claim that neither man has the capacity to be Number One Under Heaven.",
+      "id": "F02",
+      "rationale": "그 정도 그릇 names the stature of 천하제일, not the frontier brute.",
+      "severity": "critical",
+      "source": "천하제일이 아니라면 변방의 무부(武夫)에 불과하지. 나도, 자네도 그 정도 그릇은 아니야."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "“Reputation? I'm nothing more than an old man in the back room.” “Then why leave your back room?”",
+      "current": "“Reputation? I'm nothing more than an old man put out to pasture.” “Then why leave your back room?”",
+      "defect": "뒷방 is dropped in the first line, so Cheonbaek’s ‘back room’ retort no longer answers the same image.",
+      "id": "F03",
+      "rationale": "The exchange is a 뒷방 callback; ‘put out to pasture’ breaks it.",
+      "severity": "major",
+      "source": "“위명은 무슨. 뒷방 늙은이에 불과하네.” “그럼 계속 뒷방에 있지, 뭣 하러 나온 거요?”"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Without an exceptional martial art or a respectable master, he had overcome everything entirely on his own.",
+      "current": "Without an exceptional internal art or a respectable master, he had overcome everything entirely on his own.",
+      "defect": "신공 is rendered as internal art (공력/내공), a different mechanism.",
+      "id": "F04",
+      "rationale": "The contrast is no notable art and no proper teacher, not missing internal energy training.",
+      "severity": "major",
+      "source": "뛰어난 신공, 번듯한 스승 하나 없이 오로지 홀로 모든 것을 헤쳐 나갔다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "*Sect Leader! Young Master Lee…*",
+      "current": "\" Sect Leader! Young Master Lee…\"",
+      "defect": "A recalled fragment is set as present dialogue, including a leading space.",
+      "id": "F05",
+      "rationale": "The source places this in thought/memory quotes immediately before the corpse return, not as speech on the gorge.",
+      "severity": "major",
+      "source": "‘문주! 이 공자가…….’"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "*Kh.*",
+      "current": "*Damn.*",
+      "defect": "A pain grunt is replaced with added profanity.",
+      "id": "F06",
+      "rationale": "큭 is a stifled impact sound, not a curse; the draft intensifies register.",
+      "severity": "major",
+      "source": "‘큭.’"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "A single blow snapped his wrist.",
+      "current": "His wrist bent from a single blow.",
+      "defect": "꺾였다 plus 우드득 is a snap, not a bend.",
+      "id": "F07",
+      "rationale": "The injury fact is a broken wrist, which decides the exchange.",
+      "severity": "major",
+      "source": "단 일격에 손목이 꺾였다."
+    },
+    {
+      "confidence": 0.87,
+      "correction": "Shhk. Shhk-shhk-shhk.",
+      "current": "Thud. Thud-thud-thud.",
+      "defect": "푹 is a piercing/sinking blade sound; thud reads as blunt impact.",
+      "id": "F08",
+      "rationale": "The following line is stabbing and cutting (쑤시고 베어 냈다), not blunt hits.",
+      "severity": "major",
+      "source": "푹. 푹푹푹."
+    },
+    {
+      "confidence": 0.89,
+      "correction": "“Ah, Lee Seogeun. That's right. That child was where it began.”",
+      "current": "“Ah, Young Master Lee. That's right. That child was where it began.”",
+      "defect": "Established name 이소군 is replaced with a title, unlike the Sound Transmission that correctly uses Lee Seogeun.",
+      "id": "F09",
+      "rationale": "Binding glossary maps 이소군 to Lee Seogeun; the Head Elder names the son here.",
+      "severity": "major",
+      "source": "“아, 이소군. 그렇지. 그 아이가 시작이었지.”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "He did not even know where that Family Head was or what he was doing.",
+      "current": "He did not even know where the man who called himself the Family Head was or what he was doing.",
+      "defect": "‘Called himself’ implies a false or assumed title.",
+      "id": "F10",
+      "rationale": "가주라는 인간 is contempt for the actual Family Head, not a claim that the title is fake.",
+      "severity": "minor",
+      "source": "가주라는 인간은 지금 어디서 뭘 하는지도 모르겠고"
+    },
+    {
+      "confidence": 0.85,
+      "correction": "It was true that he had been impatient.",
+      "current": "It was true that impatience had clouded his judgment.",
+      "defect": "Adds a judgment-clouding mechanism not in the source.",
+      "id": "F11",
+      "rationale": "The line only concedes haste, in parallel with 과하게 흥분한 건 맞다.",
+      "severity": "minor",
+      "source": "마음이 조급했던 것도 맞다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "After about three hundred exchanges",
+      "current": "After more than three hundred exchanges",
+      "defect": "여 is ‘about,’ not ‘more than.’",
+      "id": "F12",
+      "rationale": "Quantity is approximate, not a floor above three hundred.",
+      "severity": "minor",
+      "source": "삼백여 합을 주고받았을 때"
+    }
+  ],
+  "summary": "Signal causality is reversed at the fire arrow, and the Head Elder’s Number One Under Heaven line can be read as the opposite claim. Several fight and terminology facts are also off (back-room callback, snapped wrist, stab sounds, 이소군, 신공).",
+  "version": 1
+}

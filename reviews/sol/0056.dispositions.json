@@ -1,0 +1,65 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the masters’ leap as the signal that launches the fire arrow.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Rewrote the closing clause so ‘that’ refers to Number One Under Heaven, not the frontier brute.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the back-room image so Cheonbaek’s retort answers the same phrase.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered 신공 as martial art rather than internal art.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Set the recalled fragment as italic memory, not spoken gorge dialogue.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Replaced the added curse with a stifled impact grunt matching 큭.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Rendered 꺾였다 with 우드득 as a snapped wrist, not a bend.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Changed the onomatopoeia to a piercing blade sound matching 푹 and the following stabs.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Restored the glossary name Lee Seogeun in the Head Elder’s spoken line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Removed the implication that the Family Head title is assumed or false.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "Kept the concession to haste only, without an added judgment-clouding mechanism.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F12",
+      "reason": "Changed 삼백여 합 from more than three hundred to about three hundred.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
