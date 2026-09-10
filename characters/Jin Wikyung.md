@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 59
+- **Safe through:** Chapter 60
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -19,6 +19,7 @@
 - **Chapter 56 continuity:** Wikyung advances with the Jin Family’s masters as Lee Cheonbaek leads Mount Heng’s assault, then engages the opposing command alongside Wipeng while the Head Elder fights Cheonbaek. The battle remains unresolved when Taekyung arrives.
 - **Chapter 57 continuity:** After Taekyung publicly calls the Head Elder a traitor, Wikyung recognizes that Lee Seogeun's death may explain the accusation and orders Wipeng to cut down the First Elder. The First, Second, and Third Elders reveal hidden Peak-level martial arts, kill the White Tiger Hall Leader, and expose the Five Gates conspiracy when the First Elder signals the allied sects to turn on the battlefield.
 - **Chapter 59 continuity:** After the Second and Third Elders are killed, Wikyung orders Wipeng and ten surviving senior members to hold the First Elder. He expels the First Elder from the family, then leads several dozen guards toward the Head Elder after realizing Taekyung is in danger.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, 10–25, 32–34, 36–37, and 55–59
+- **Chapter 60 continuity:** Wikyung arrives at Taekyung’s position with several dozen guards, confirms that the Second and Third Elders are dead and the First Elder is nearly defeated, then orders the combined Jin Family and Mount Heng forces to strike the rebels. He fights the Head Elder with Sword Energy while the elder’s Finger-Flicking Technique kills many martial artists; the battle remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, 10–25, 32–34, 36–37, and 55–60
 
 

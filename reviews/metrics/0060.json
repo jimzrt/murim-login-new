@@ -1,0 +1,209 @@
+{
+  "chapter": 60,
+  "stages": {
+    "coordinator_model": {
+      "cache_read_tokens": 1240064,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.05219368,
+      "elapsed_seconds": 1099.726,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0060/omp/coordinator.jsonl",
+      "exact": true,
+      "input_tokens": 75198,
+      "models": {
+        "openai-codex/gpt-5.6-luna": {
+          "cache_read_tokens": 1240064,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.05219368,
+          "input_tokens": 75198,
+          "model": "gpt-5.6-luna",
+          "output_tokens": 10294,
+          "provider": "openai-codex",
+          "reasoning_tokens": 4636,
+          "requests": 36,
+          "total_tokens": 1325556
+        }
+      },
+      "output_tokens": 10294,
+      "reasoning_tokens": 4636,
+      "requested_model": "openai-codex/gpt-5.6-luna:high",
+      "requests": 36,
+      "stop_reasons": [
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "toolUse",
+        "stop"
+      ],
+      "total_tokens": 1325556,
+      "usage_source": "omp_provider_reported"
+    },
+    "draft_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.015529600000000001,
+      "elapsed_seconds": 146.467,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0060/omp/draft.jsonl",
+      "exact": true,
+      "input_bytes": 101714,
+      "input_tokens": 30074,
+      "models": {
+        "openai-codex/gpt-5.6-luna": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.015529600000000001,
+          "input_tokens": 30074,
+          "model": "gpt-5.6-luna",
+          "output_tokens": 7929,
+          "provider": "openai-codex",
+          "reasoning_tokens": 4933,
+          "requests": 1,
+          "total_tokens": 38003
+        }
+      },
+      "output_bytes": 13399,
+      "output_tokens": 7929,
+      "reasoning_tokens": 4933,
+      "requested_model": "openai-codex/gpt-5.6-luna:high",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 38003,
+      "usage_source": "omp_provider_reported"
+    },
+    "draft_packet": {
+      "input_bytes": 101714,
+      "packet_token_estimate": 25429
+    },
+    "polish_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 269.121,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0060/omp/polish.jsonl",
+      "exact": true,
+      "input_bytes": 75519,
+      "input_tokens": 0,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 9252,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 9252
+        }
+      },
+      "output_bytes": 12946,
+      "output_tokens": 9252,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 9252,
+      "usage_source": "omp_provider_reported"
+    },
+    "review_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 301.545,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0060/omp/review.jsonl",
+      "exact": true,
+      "finding_count": 8,
+      "input_bytes": 85179,
+      "input_tokens": 0,
+      "major_or_critical_count": 7,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 7087,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 7087
+        }
+      },
+      "output_bytes": 4011,
+      "output_tokens": 7087,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 7087,
+      "usage_source": "omp_provider_reported"
+    },
+    "revision_model": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "elapsed_seconds": 103.932,
+      "event_log": "/home/james/Documents/murim_login_new/.work/0060/omp/revision.jsonl",
+      "exact": true,
+      "input_bytes": 73703,
+      "input_tokens": 0,
+      "models": {
+        "cursor/cursor-grok-4.6": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 0,
+          "cost_usd": 0,
+          "input_tokens": 0,
+          "model": "cursor-grok-4.6",
+          "output_tokens": 4999,
+          "provider": "cursor",
+          "requests": 1,
+          "total_tokens": 4999
+        }
+      },
+      "output_bytes": 14810,
+      "output_tokens": 4999,
+      "requested_model": "cursor/cursor-grok-4.6:medium",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 4999,
+      "usage_source": "omp_provider_reported"
+    }
+  },
+  "version": 2
+}

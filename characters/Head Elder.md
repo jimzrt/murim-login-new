@@ -1,6 +1,6 @@
 # Head Elder
 
-- **Safe through:** Chapter 59
+- **Safe through:** Chapter 60
 - **Aliases:** Name not yet revealed
 - **Role:** Head Elder of the Jin Family of Taiyuan; senior family authority
 - **Personality:** Inscrutable, politically shrewd, and ruthless in council; his motives remain unclear
@@ -17,6 +17,7 @@
 - **Chapter 57 continuity:** Taekyung arrives at Eight Spring Gorge and publicly calls the Head Elder a traitor after the elder splits his thrown spear. The Head Elder confirms the hidden betrayal by keeping Lee Cheonbaek alive, silencing and paralyzing him, and acknowledging that the signal has come too early as the Five Gates forces turn on the battlefield. The full plan and accomplice remain unresolved.
 - **Chapter 58 continuity:** The Head Elder reveals enough Sword Energy to overpower Taekyung's Gambler-boosted spear and slices it down to an iron rod. He attacks again after Taekyung mistakenly rescues Lee Cheonbaek instead of Jin Wikyung; the reconnaissance squad retreats just beyond his immediate range, and the elder faces their encircling formation. His full plan and unidentified accomplice remain unresolved.
 - **Chapter 59 continuity:** The Head Elder remains the target of Jin Wikyung’s rescue charge after the First Elder reveals that Taekyung is beyond his position. Taekyung and the reconnaissance squad engage him, but the outcome and the Head Elder’s full plan remain unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–59
+- **Chapter 60 continuity:** The Head Elder unleashes Sword Energy and the Finger-Flicking Technique, firing stone fragments that kill many martial artists. He tears through the scattered Jin Family and allied forces, evades Jin Wikyung’s Sword Energy, and remains engaged after Taekyung uses a fallen ally as cover for One Flash; the battle’s outcome and his full plan remain unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–60
 
 

@@ -1,0 +1,39 @@
+{
+  "chapter": 60,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.284,
+    "source_characters": 5715,
+    "source_paragraphs": 214,
+    "translation_characters": 13053,
+    "translation_paragraphs": 259
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "일격",
+        "preferred": "One Strike"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀가",
+        "preferred": "your family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "나려타곤",
+        "romanization": "naryeotagon"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

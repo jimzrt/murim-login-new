@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the active deflection contrast: some fall, others knock the shots aside, and only the fallen stay down.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Unfolding 펼쳐 deploys the encirclement; they close in, so Form up replaces the dispersal reading.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "척 is feigned composure; narration now shows pretended calm, not genuine effort.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Kept the chili euphemism and stand/pepper punchline instead of a more direct sexual gloss.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "목덜미 is the scruff; 공포에 질린 modifies Hyuk, not his throat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Removed the added deus-ex-machina framing; he appears like a savior only.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Unpacked 따위 as contempt for the likes of Taekyung, not a plain challenge.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "혀가 짧구나 is a jab at a mouthy junior; rendered as bratty impertinence, not a literal tongue.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
