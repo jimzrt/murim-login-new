@@ -1,0 +1,60 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "일 갑자 is sixty years of internal energy, not ten.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "다섯 장 is about fifty feet, not fifteen.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Named Jin Wikyung as the subject of the scattered qi, wrenched insides, and pallor.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Sword Energy is the cutting means against whatever stood in his way.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "문주 rendered as Sect Leader per glossary.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "가차 없이 is merciless, not casual.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "자조하듯 is self-mocking, not mere private muttering.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored 시산혈해 as literal mountains of corpses and a sea of blood.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "우리는 kept as first-person we brothers.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "파리한 얼굴 is a wan face, not the voice.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "썩어도 준치 marks a prized fish that remains first-rate even in decline.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

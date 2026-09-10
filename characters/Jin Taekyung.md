@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 60
+- **Safe through:** Chapter 61
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -47,4 +47,5 @@
 - **Chapter 58 continuity:** Taekyung attacks the Head Elder with the Gambler Title active, but the elder blocks and overwhelms his spear with Sword Energy. Taekyung slices down to an iron rod, throws it, and mistakenly rescues the gravely wounded Lee Cheonbaek instead of Jin Wikyung. He retreats with Hyuk Mujin and the reconnaissance squad, then orders an encircling formation as the Head Elder attacks again.
 - **Chapter 59 continuity:** Taekyung realizes that the reconnaissance squad has no tank, healer, or balanced damage roles—only ten melee damage dealers—and orders them to keep throwing dirt while they fight the Head Elder. The battle remains unresolved.
 - **Chapter 60 continuity:** Taekyung uses dirt and rocks to keep the Head Elder occupied while protecting the reconnaissance squad. He intercepts the Sword Energy aimed at Hyuk Mujin and is cut in the side, then orders an encircling formation. After Jin Wikyung arrives with several dozen guards, Taekyung joins the assault, uses a fallen ally as cover, and attacks the Head Elder with One Flash; the result remains unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–60
+- **Chapter 61 continuity:** Taekyung’s One Flash destroys the Head Elder’s arm, and Taekyung remains conscious instead of collapsing, showing that his body can now withstand the technique’s side effects. He confronts the Head Elder over the succession motive behind the betrayal, then uses One Flash again when the elder draws on innate qi and attacks with Sword Force; the result remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–61
