@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "한 둘이냐 is a rhetorical denial that the Fame handshakes were few; restored the many-not-few count so Gwak Jun is one of a crowd.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "오태산 romanizes as Mount Otae, matching the two syllables on the page.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "허어 is impressed astonishment from the Head Elder, not a request for clarification.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "시커먼 describes the men’s looks, not dark clothing; clothing color is specified later for Gwak Jun’s group only.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored the stated total 도합 사백오십 rather than leaving the sum implicit.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "두 배에 달하는 is twice the numbers, not nearly twice.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Hyuk Mujin (혁무진)
 
-- **Safe through:** Chapter 36
+- **Safe through:** Chapter 37
 - **Aliases:** None revealed
 - **Role:** Captain of the Gatekeepers at the Jin Family of Taiyuan; deputy squad leader of White Tiger Hall’s reconnaissance squad
 - **Personality:** Young, disciplined, suspicious of Jin Taekyung, and openly contemptuous of the family’s disgraced third son; believes loyalty and respectable conduct matter, but is also proud and hungry for glory
@@ -12,4 +12,7 @@
 - **Chapter 29 continuity:** Hyuk ignores Taekyung’s order to stay back and attacks Jopil alongside Han Yeop. Jopil shatters Hyuk’s sword and blasts him into a tree; his condition is unresolved.
 - **Chapter 35 continuity:** Hyuk Mujin survives Jopil’s final attack with serious but nonfatal injuries. While recovering in Medicine King Hall, he hears Han Yeop’s vow, resolves to become even stronger, and recognizes that both men must catch up to Taekyung.
 - **Chapter 36 continuity:** Hyuk’s internal injuries have healed, but his external injuries remain serious and painful. Against the physician’s orders, he sneaks out of Medicine King Hall to join Taekyung’s rear guard for the Jin Family’s march.
-- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–36
+- **Chapter 37 continuity:** Hyuk accompanies Taekyung’s rear guard during the march and reacts to his sleepless, Fame-counting state with blunt concern. When fear spreads through the squad before the battle, Hyuk says he trusts Taekyung more than the squad leader trusts his own big brother, reinforcing the unit’s loyalty.
+
+- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–37
+

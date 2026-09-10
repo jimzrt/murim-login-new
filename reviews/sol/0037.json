@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.86,
+      "correction": "It wasn’t as if I’d shaken only one or two hands while trying to raise my Fame. He was probably one of them.",
+      "current": "How many hands had I shaken while trying to raise my Fame? One or two?\n\nHe was probably one of them.",
+      "defect": "한 둘이냐 is a rhetorical denial: the hands shaken were many, not one or two. The English reads as if the number might actually be one or two.",
+      "id": "F01",
+      "rationale": "The idiom marks quantity as more than a couple; rendering it as “One or two?” reverses that count and the joke that Gwak Jun was lost in a crowd of Fame handshakes.",
+      "severity": "critical",
+      "source": "명성치 올리려고 잡은 손이 한 둘이냐. 아마 그들 중 하나였겠지."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "It seems the enemy reinforcements crossed Mount Otae two days ago.",
+      "current": "It seems the enemy reinforcements crossed Mount Ota two days ago.",
+      "defect": "오태산 romanizes as Otae, not Ota. The place name is wrong.",
+      "id": "F02",
+      "rationale": "오태 is Otae; Ota would be 오타. An unlisted toponym still has to match the syllables on the page.",
+      "severity": "major",
+      "source": "이틀 전 적들의 원군이 오태산을 넘었다는군."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“Hoh.”",
+      "current": "“What?”",
+      "defect": "허어 is impressed astonishment, not a request for clarification or a confused “What?”",
+      "id": "F03",
+      "rationale": "The Head Elder’s first spoken reaction to the hidden bows is wonder; the tent’s uproar and Taekyung’s dropped jaw follow that beat, not puzzlement.",
+      "severity": "major",
+      "source": "“허어.”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "The tent grew hot beneath the fervent gazes of those swarthy men.",
+      "current": "The tent grew hot beneath the fervent gazes of the dark-clad men.",
+      "defect": "시커먼 describes the men as swarthy/dark-looking, not dressed in dark clothes. Clothing color is not in the source.",
+      "id": "F04",
+      "rationale": "Black martial robes are specified later for Gwak Jun’s group. Calling the council “dark-clad” adds a costume fact the Korean does not give.",
+      "severity": "major",
+      "source": "시커먼 사내놈들의 뜨거운 시선에 막사가 후끈 달아오른다."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "three hundred martial artists from the Jin Family of Taiyuan and one hundred fifty reinforcements from the small and mid-sized sects—four hundred fifty in all—departed for the gorge.",
+      "current": "three hundred martial artists from the Jin Family of Taiyuan and one hundred fifty reinforcements from the small and mid-sized sects departed for the gorge.",
+      "defect": "The explicit total of four hundred fifty is omitted.",
+      "id": "F05",
+      "rationale": "삼백 and 백오십 remain, but 도합 사백오십 is a stated headcount, not just arithmetic the reader is left to do.",
+      "severity": "minor",
+      "source": "태원진가의 무사 삼백과 중소 문파의 지원군 백오십. 도합 사백오십의 병력이 협곡을 향해 떠났다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "They had twice our numbers",
+      "current": "They had nearly twice our numbers",
+      "defect": "달하는 is “amounting to twice,” not “nearly twice.”",
+      "id": "F06",
+      "rationale": "The hedge changes the force ratio Jin Taekyung uses to explain why the enemy will choose a clash.",
+      "severity": "minor",
+      "source": "두 배에 달하는 병력"
+    }
+  ],
+  "summary": "One reversed quantity in the handshake aside, plus a wrong mountain romanization and two reaction/description shifts that change astonishment and clothing.",
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 36
+- **Safe through:** Chapter 37
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -23,4 +23,6 @@
 - **Chapter 34 continuity:** Taekyung accepts the Rear Guard Defense Quest after Jin Wikyung reports Mount Heng’s troop gathering and asks him to command the rear guard for the Jin Family’s march in two days. Wikyung tells him to believe in himself, and Taekyung realizes that he has trusted the System’s Second Rate label instead of his own achievements. He reaches First Rate; the System raises every martial art by one stage, greatly improves his Sinews and Bones and Meridians, expands his dantian, and grants two level-ups. He gains Fame from the Quest and public attention, then heads to Medicine King Hall while still short of the Logout Fame target.
 - **Chapter 35 continuity:** Taekyung visits Hyuk Mujin and Han Yeop, Gong Yacheong, Socheon, and Soyul before the Jin Family’s march, treating the visit as a possible farewell before Logout. Rumors continue to raise his Fame, but he remains about fifty short. Gong returns Jopil’s Supreme Peak Flame Divine Palm, dangerous Peak Fire Divine Elixir, and mysterious Nameless Sword; Taekyung stores all three in his Inventory and gains another Fame. The Head Elder meets an unidentified ally in the garden, and their troop deployments and other preparations are complete.
 - **Chapter 36 continuity:** Taekyung’s Fame reaches 475/500 for Logout, then ordinary family-wide gains stall. At the departure ceremony, he commands the rear guard and asks Jin Wikyung for a reconnaissance mission to gain Fame; Wikyung refuses and tells him to survive, fleeing if the Jin Family loses so he and Jin Mukyung can become the family’s roots.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–36
+- **Chapter 37 continuity:** During the march to Honju, Taekyung meets Level 40 Gwak Jun of the Three Paths Sect and observes his unsettling confidence. At the war council, he learns that Mount Heng’s exhausted reinforcements are about to join the main force; Jin Wikyung plans to draw them through Eight Spring Gorge using hidden horn bows supplied with help from Wolhwa. Taekyung’s Fame reaches 497/500, leaving him awake and counting the final three points before Logout. He jokes about Jopil’s Supreme Peak manual and dangerous thirty-year elixir, reflects on his time in Murim, and admits that the reconnaissance squad’s loyalty feels real. He tells the frightened rear guard that he trusts Jin Wikyung, and the squad affirms its trust in him.
+
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–37

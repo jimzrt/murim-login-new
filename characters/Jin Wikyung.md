@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 36
+- **Safe through:** Chapter 37
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -13,5 +13,8 @@
 - **Chapter 33 continuity:** Taekyung regards Wikyung as the best private tutor for explaining how to reach the First Rate realm and asks to speak with him.
 - **Chapter 34 continuity:** Wikyung learns that Mount Heng is gathering troops and plans to march north with all Jin Family forces in two days, before reinforcements join the Blood Wolf Sword’s main force. He asks Taekyung to command the rear guard and explains the Five Gates of Shanxi alliance’s support. When Taekyung asks how to advance realms, Wikyung tells him that martial arts begin with belief; Taekyung’s realization triggers his First Rate breakthrough, and Wikyung laughs aloud at the result.
 - **Chapter 36 continuity:** Wikyung leads the departure ceremony for more than five hundred Jin Family and allied martial artists and predicts victory within three days. He refuses Taekyung’s request for a reconnaissance mission to gain Fame, tells him to survive, and orders him to flee if the family loses so Taekyung and Jin Mukyung can become the family’s roots.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–34, and 36
+- **Chapter 37 continuity:** At Honju, Wikyung convenes the command staff after learning that Mount Heng’s reinforcements have crossed Mount Otae. He predicts the enemy will clash rather than retreat, plans to seize Jeongyang’s high ground, and uses the narrow Eight Spring Gorge as a kill zone. With help from a resourceful Lower District Sect ally, he has hidden about one hundred horn bows on the cliffs above the gorge. He sends 300 Jin Family martial artists and 150 allied reinforcements toward the gorge at dawn.
+
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–34, and 36–37
+
 

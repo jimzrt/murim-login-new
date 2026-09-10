@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "safe_through": 36,
-  "continuity_sources": [35, 36],
+  "safe_through": 37,
+  "continuity_sources": [36, 37],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
-    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 32, has fifteen years of internal energy, and is First Rate; only the Fame 500 requirement remains incomplete, with his total roughly fifty short.",
+    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 32, has fifteen years of internal energy, and is First Rate; only the Fame 500 requirement remains incomplete, with his total at 497/500.",
     "Taekyung's Jin Family's Cultivation Technique is at the Fifth Stage; his Spear and Manoeuvre Techniques are at the Sixth Stage, and his Fourth-Stage Qi Sense detects targets through Lv. 50.",
     "Taekyung has the Gambler Title, which increases combat stats by 10% in a one-on-one fight; it does not apply when allies join the fight.",
     "The hardened third internal energy came from the hundred-year snow ginseng. It awakened during the mortal danger in Chapter 30, and most of the ginseng-granted energy was consumed by Taekyung's final Skill use; his current internal-energy total is fifteen years.",
@@ -62,7 +62,12 @@
     "The Head Elder meets an unidentified ally in the garden through Sound Transmission. Their preparations, including troop deployments, are complete; the Head Elder is willing to do anything to become Family Head and Shanxi's sole hegemon.",
     "At the departure ceremony, more than five hundred Jin Family and allied martial artists assemble. The force is divided into vanguard, center, and rear guard; Taekyung commands the rear guard, which contains only a few dozen martial artists.",
     "Jin Wikyung rallies the departing force by predicting victory within three days. The war is expected to pit about fifteen hundred martial artists against one another once both sides commit their forces.",
-    "Taekyung asks Jin Wikyung for a reconnaissance mission to gain the remaining Fame, but Wikyung refuses and tells him his mission is to survive; if the family loses, Taekyung should flee so he and Jin Mukyung can become the family's roots."
+    "Taekyung asks Jin Wikyung for a reconnaissance mission to gain the remaining Fame, but Wikyung refuses and tells him his mission is to survive; if the family loses, Taekyung should flee so he and Jin Mukyung can become the family's roots.",
+    "At Honju, Level 40 Gwak Jun of the Three Paths Sect joins the rear guard; he is fearless, intensely confident, and leads the sect’s martial artists in black robes.",
+    "Mount Heng’s exhausted reinforcements have crossed Mount Otae and are low on food. Jin Wikyung plans to seize Jeongyang’s high ground and draw the enemy through narrow Eight Spring Gorge, where about one hundred horn bows are hidden on the cliffs with help from the Lower District Sect.",
+    "Taekyung’s Fame is 497/500 for Logout. He stays awake counting the remaining three points, reflects on his month in Murim, and recognizes that the reconnaissance squad’s loyalty feels real.",
+    "Taekyung tells the anxious rear guard that he trusts Jin Wikyung, and the squad affirms its trust in Taekyung."
+
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
