@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.84,
+      "correction": "“Not bad loyalty. Their ability’s pathetic, though.”",
+      "current": "“You’ve got some loyalty, I’ll give you that. Your skills are pathetic, though.”",
+      "defect": "The line is spoken while Jopil is looking back; the next sentence identifies the approaching squad as the object of that gaze. Draft assigns both 충성심 and 실력 to Taekyung via “you/your,” and 실력 becomes game-like “skills.”",
+      "id": "F01",
+      "rationale": "After 뒤를 돌아보고, 시선 끝 is the clustered reconnaissance members, then 저놈들을 찢어 죽일까. The evaluation is of the rescuers, not of Taekyung’s martial skill.",
+      "severity": "major",
+      "source": "“충성심이 제법이군. 실력은 형편없지만 말이야.” / 놈의 시선 끝에는 한 무더기가 되어 달려오는 정찰조원들이 있었다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“…ly. Fought.” / “Stupid… fought.” / “I said I’ve been fighting stupidly this whole time.”",
+      "current": "“…I fought stupidly.” / “Stupid… I fought stupidly.” / “I said I’ve been fighting stupidly.”",
+      "defect": "The first two lines are injured fragments; 멍청하게 is only complete in the third. Draft supplies “stupidly” twice early and drops 그동안.",
+      "id": "F02",
+      "rationale": "The gag and Jopil’s 말도 똑바로 못하나? depend on the meaning arriving only on the last repetition.",
+      "severity": "major",
+      "source": "“……하게 싸웠어.” / “멍청…… 싸웠어.” / “그동안 멍청하게 싸웠다고.”"
+    },
+    {
+      "confidence": 0.93,
+      "correction": "“If King Yama asks, tell him I sent you.”",
+      "current": "“If Yama asks, tell him I sent you.”",
+      "defect": "염왕 is King Yama / the King of Hell. Bare “Yama” reads as the already-established Peak master Yama Whip.",
+      "id": "F03",
+      "rationale": "Ledger/continuity already uses Yama as Yama Whip’s title; this is a mythic psychopomp, not that character.",
+      "severity": "major",
+      "source": "“염왕이 묻거든 내가 보냈다고 해라.”"
+    },
+    {
+      "confidence": 0.95,
+      "correction": "Jopil’s face lit with ecstasy as he declared it to me, limp as a corpse in his grip. “Die.”",
+      "current": "Jopil looked ecstatic as he declared it to me, hanging limp like a corpse. “Die.”",
+      "defect": "The participial phrase attaches to Jopil, so the corpse-limp body reads as his, not Taekyung’s.",
+      "id": "F04",
+      "rationale": "시체처럼 축 늘어져 있는 내게 is Taekyung; Jopil is the one declaring 죽어 before the last palm.",
+      "severity": "major",
+      "source": "말없이 시체처럼 축 늘어져 있는 내게, 조필이 환희에 찬 얼굴로 선언했다. “죽어.”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "From the neck caught in Jopil’s grip came the sound of bones slipping out of alignment.",
+      "current": "From the throat caught in Jopil’s grip came the sound of bones slipping out of alignment.",
+      "defect": "목 here is the neck being wrung; “throat” mismatches the bone-displacement sound.",
+      "id": "F05",
+      "rationale": "어긋나는 뼈 is cervical; 목 in this grip is the neck, not the throat.",
+      "severity": "minor",
+      "source": "조필의 손아귀에 잡힌 목에서 뼈가 어긋나는 소리가 들렸다."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "“I can’t die like this. This makes no sense.”",
+      "current": "“This can’t be happening. I can’t die like this. This makes no sense.”",
+      "defect": "Adds a third sentence and front-loads a line the Korean does not have.",
+      "id": "F06",
+      "rationale": "Two clauses only: refusal of this death, then 말도 안 돼.",
+      "severity": "minor",
+      "source": "“이렇게 죽을 수는 없어. 이건 말도 안 돼.”"
+    },
+    {
+      "confidence": 0.97,
+      "correction": "Me and Jopil. / Jopil and me.",
+      "current": "Jopil and me. / Me and Jopil.",
+      "defect": "The chiastic pair is reversed.",
+      "id": "F07",
+      "rationale": "Source order is 나와 조필 then 조필과 나.",
+      "severity": "minor",
+      "source": "나와 조필. 조필과 나."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "the nineteenth-generation successor of the Fire Gate Clan",
+      "current": "The nineteenth successor of the Fire Gate Clan",
+      "defect": "십구 대 marks generation, not merely the nineteenth person to succeed.",
+      "id": "F08",
+      "rationale": "대 in 십구 대 계승자 is generational lineage, not a simple successor count.",
+      "severity": "minor",
+      "source": "열화문의 십구 대 계승자"
+    }
+  ],
+  "summary": "Subject errors and over-completed broken speech distort who Jopil is mocking and how the blood-spit beat lands; 염왕 as bare “Yama” collides with Yama Whip.",
+  "version": 1
+}

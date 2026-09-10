@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 29
+- **Safe through:** Chapter 30
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -16,4 +16,5 @@
 - **Chapter 27 continuity:** Taekyung learns that Gong Yacheong was poisoned and accepts Gong’s no-reward Last Request Quest to return Socheon and Soyul alive. He initially orders the squad to leave Gong behind, but turns back when Soyul feels real enough to trigger guilt over abandoning an NPC; he finds Han Yeop carrying the unconscious Gong and helps him.
 - **Chapter 28 continuity:** Taekyung’s attempt to cultivate the unidentified dantian energy still fails. A wolf pack flees from his qi, and the System creates a forced Quest to confront Jopil, a Peak master. Jopil offers to let him leave after truthful answers, then demands that Taekyung abandon Gong, the children, and the reconnaissance squad; Taekyung refuses.
 - **Chapter 29 continuity:** Taekyung fights Jopil, relying on the Gambler Title’s one-on-one combat bonus. After Jopil’s throwing knife kills an unnamed squad member, Taekyung attacks in anger. He uses Sky-Piercing Strike, but Jopil’s faster sword wounds him repeatedly and strikes toward his chest again; the outcome is unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–29
+- **Chapter 30 continuity:** Jopil’s Flame Divine Palm nearly kills Taekyung, who recalls his first use of the Hunter skill **Thrust with All My Might** and its warning that his body cannot safely bear its power. Taekyung tricks Jopil with daggers from his Inventory, severs both Achilles tendons, and causes qi deviation by stabbing Jopil’s dantian. When Jopil burns his life for a final attack, Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with **Thrust with All My Might** through the broken Sharp Spear. Hyuk Mujin and Han Yeop’s condition remains unclear.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–30

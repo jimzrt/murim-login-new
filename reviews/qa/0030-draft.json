@@ -1,0 +1,39 @@
+{
+  "chapter": 30,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.177,
+    "source_characters": 5781,
+    "source_paragraphs": 188,
+    "translation_characters": 12585,
+    "translation_paragraphs": 211
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "무공",
+        "preferred": "martial arts"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "경기",
+        "romanization": "gyeonggi"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

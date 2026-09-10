@@ -1,23 +1,23 @@
 # Translation State
 
-- Last completed: 29
-- Next chapter: 30
-- Current block: 25–29 (5/5)
-- Latest translation: `translations/0029.md`
+- Last completed: 30
+- Next chapter: 31
+- Current block: 30–34 (1/5)
+- Latest translation: `translations/0030.md`
 - Latest summary: `summaries/0025-0029.md`
-- Safe profiles through: chapter 29
+- Safe profiles through: chapter 30
 
 
 ## Current Block
 
-Jopil attacks Taekyung and overwhelms him as a Peak master. A throwing knife kills one reconnaissance-squad member, and Taekyung’s anger drives him to fight. Jopil enters Berserk after Taekyung cuts his clothes, while Taekyung relies on the Gambler Title’s one-on-one bonus and orders the squad to stay back. Hyuk Mujin and Han Yeop attack anyway; Jopil destroys Hyuk’s sword and Han Yeop’s spearhead, then blasts both into trees. Taekyung’s Sky-Piercing Strike fails, and Jopil wounds him repeatedly before striking toward his chest again.
+Taekyung survives Jopil’s Flame Divine Palm, recalls the Hunter skill Thrust with All My Might, and cripples Jopil with daggers from his Inventory. Jopil causes his own qi deviation by burning his life for one final attack, but Taekyung awakens the hardened third internal energy in his dantian and kills him with Thrust with All My Might through the broken Sharp Spear.
 
 ## Open Questions
 
 - The capsule's purpose and route home remain unresolved.
 - Murim death and resurrection limits remain unresolved.
 - The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
-- The immediate outcome of Jopil's attack remains unresolved.
+- The condition of Hyuk Mujin and Han Yeop after Jopil blasted them into trees remains unresolved.
 
 
 ## Exceptional Decision

@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "safe_through": 29,
-  "continuity_sources": [28, 29],
+  "safe_through": 30,
+  "continuity_sources": [29, 30],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 24 with progress 24/30 and 250/500; First Rate remains incomplete.",
     "Taekyung's Jin Family's Cultivation Technique remains at the Fourth Stage; his Spear and Manoeuvre Techniques are at the Fifth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
     "Taekyung has the Gambler Title, which increases combat stats by 10% in a one-on-one fight; it does not apply when allies join the fight.",
-    "Taekyung's unidentified dantian energy is stronger than his ten years of internal energy, rejects contact, and remains immovable despite cultivation; training raised Sinews and Bones by 1 each while the Status Window still displayed ten years.",
+    "Taekyung's unidentified dantian energy is stronger than his ten years of internal energy, rejects contact during ordinary cultivation, and remained immovable until the mortal danger in Chapter 30 awakened it; training raised Sinews and Bones by 1 each while the Status Window still displayed ten years.",
     "Jin Wikyung is Taekyung's thirty-five-year-old eldest brother and the Lesser Family Head of the Jin Family of Taiyuan; Wipeng is his trusted guard. The Head Elder is Taekyung's great-uncle and the family's most senior elder.",
     "Jin Mukyung is twenty-five, the Heaven Shaking Sword, and a cadet at Heaven's Gate Temple.",
     "The Mount Heng Sword Sect and the Jin Family of Taiyuan are sworn enemies. Mount Heng has declared war, made Taekyung a public enemy, and triggered the Main Quest — War; fleeing incurs severe penalties. Wikyung sealed the family grounds against entry or exit without his seal.",
@@ -30,16 +30,17 @@
     "Jopil's System Berserk effect increases Strength and Agility, making his attacks larger and less precise; it wore off during the fight in Chapter 29.",
     "One unnamed reconnaissance-squad member died from Jopil's throwing knives. Taekyung had trained him but could not remember his name, and the death made Taekyung angry enough to attack.",
     "Hyuk Mujin and Han Yeop attacked Jopil despite Taekyung's order to stay back. Jopil shattered Hyuk's sword, sliced the head from Han Yeop's spear, and blasted both into trees.",
-    "Taekyung's Sky-Piercing Strike failed against Jopil's faster sword. Jopil cut Taekyung's chest, shoulder, knee, and side, then struck toward his chest again; the immediate outcome is unresolved.",
-    "Mount Beimang is a burial mountain; going or hiking there is an idiom for dying. A goshiwon is a tiny, cheap room-for-rent housing arrangement.",
-    "The capsule's purpose and route home remain unresolved.",
-    "Murim death and resurrection limits remain unresolved."
+    "Taekyung survives Jopil's Flame Divine Palm and remembers his first use of the Hunter skill Thrust with All My Might, whose destructive power exceeds his body's limits and normally incapacitates him.",
+    "Taekyung uses daggers from his Inventory to stab Jopil's foot, sever both Achilles tendons, and drive a dagger into Jopil's dantian as his internal energy peaks, causing qi deviation.",
+    "Jopil is the nineteenth-generation successor of the Fire Gate Clan. He burns his life for a final attack, but Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with Thrust with All My Might through the broken Sharp Spear.",
+    "Jopil is dead. The condition of Hyuk Mujin and Han Yeop after Jopil blasted them into trees remains unresolved.",
+    "Mount Beimang is a burial mountain; going or hiking there is an idiom for dying. A goshiwon is a tiny, cheap room-for-rent housing arrangement."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "The immediate outcome of Jopil's attack on Taekyung, Hyuk Mujin, and Han Yeop remains unresolved."
+    "The condition of Hyuk Mujin and Han Yeop after Jopil blasted them into trees remains unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",

@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Jopil is looking back at the approaching squad; loyalty and ability refer to them, not Taekyung.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Kept the first two lines as injured fragments and restored 그동안 only on the completed third line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "염왕 is the King of Hell; bare Yama would collide with Yama Whip.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "시체처럼 축 늘어져 있는 내게 is Taekyung; the corpse-limp modifier now attaches to me, not Jopil.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "목 with 뼈가 어긋나는 is the neck being wrung, not the throat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Removed the added third sentence; only the two source clauses remain.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Restored source chiastic order: 나와 조필, then 조필과 나.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "십구 대 is nineteenth-generation successor, not a simple count of successors.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
