@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import COVER, READER, chapter_paths, pandoc_base
+from tools.build import BOOK_TYP, COVER, READER, TYPST_TEMPLATE, chapter_paths, pandoc_base
 
 
 class BuildToolTest(unittest.TestCase):
@@ -39,6 +39,20 @@ class BuildToolTest(unittest.TestCase):
         lua = (READER.parent / "tools" / "system-window.lua").read_text(encoding="utf-8")
         self.assertIn("ornament(\"corner.svg\")", lua)
         self.assertIn("ornament(\"dragon.svg\")", lua)
+        self.assertIn("murim-plaque", lua)
+        self.assertTrue(BOOK_TYP.is_file())
+        book = BOOK_TYP.read_text(encoding="utf-8")
+        self.assertIn("#let murim-plaque", book)
+        self.assertIn("Noto Sans Mono", book)
+        self.assertIn("text(style: \"italic\"", book)
+        self.assertIn("pagebreak(weak: true)", book)
+        self.assertIn('paper: "a4"', book)
+        self.assertIn("pad(x: 8%", book)
+        self.assertTrue(TYPST_TEMPLATE.is_file())
+        template = TYPST_TEMPLATE.read_text(encoding="utf-8")
+        self.assertNotIn("  title: [$title$],", template)
+        self.assertIn("#set document(title: [$title$])", template)
+        self.assertIn("title: [Contents]", template)
 
 
 if __name__ == "__main__":

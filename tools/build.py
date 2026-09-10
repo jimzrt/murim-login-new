@@ -19,6 +19,8 @@ DEFAULT_SOURCE = ROOT / "translations"
 DEFAULT_OUTPUT = ROOT / "build"
 FILTER = ROOT / "tools" / "system-window.lua"
 STYLESHEET = ROOT / "tools" / "book.css"
+BOOK_TYP = ROOT / "tools" / "book.typ"
+TYPST_TEMPLATE = ROOT / "tools" / "typst-template.typ"
 COVER = ROOT / "cover.jpg"
 READER = ROOT / "reader"
 TITLE = "Murim Login"
@@ -63,6 +65,7 @@ def run_pandoc(
     epub_cover: Path | None = None,
     title: str = TITLE,
     pdf: bool = False,
+    include_before: list[Path] | None = None,
 ) -> None:
     command = pandoc_base(paths, output_format)
     command.append(f"--metadata=title={title}")
@@ -70,16 +73,23 @@ def run_pandoc(
         command.append(f"--css={css_ref or css.name}")
     if epub_cover is not None:
         command.append(f"--epub-cover-image={epub_cover.resolve()}")
+    for prelude in include_before or ():
+        command.append(f"--include-before-body={prelude.resolve()}")
     if pdf:
         command.extend(
             [
                 "--pdf-engine=typst",
                 "--pdf-engine-opt=--root=/",
-                "--variable=papersize:a5",
-                "--variable=margin-left:18mm",
-                "--variable=margin-right:16mm",
-                "--variable=margin-top:18mm",
-                "--variable=margin-bottom:20mm",
+                f"--template={TYPST_TEMPLATE}",
+                "--toc",
+                "--toc-depth=1",
+                "--variable=papersize:a4",
+                "--variable=fontsize:11.5pt",
+                "--variable=mainfont:Noto Serif",
+                "--variable=margin-left:26mm",
+                "--variable=margin-right:24mm",
+                "--variable=margin-top:26mm",
+                "--variable=margin-bottom:24mm",
             ]
         )
     output = output.resolve()
@@ -111,28 +121,33 @@ def build_html(output: Path, selected: list[int] | None) -> list[Path]:
 
 
 def write_pdf_cover(output: Path) -> Path:
-    cover_markdown = output / ".cover.md"
-    image = "cover.jpg"
-    cover_markdown.write_text(
-        f"""```{{=typst}}
-#page(paper: "a5", margin: 0pt)[
-  #image("{image}", width: 100%, height: 100%, fit: "cover")
-]
+    cover_image = (output / "cover.jpg").resolve()
+    cover_typ = output / ".cover.typ"
+    cover_typ.write_text(
+        f"""#set page(paper: "a4", margin: 0pt, header: none, footer: none, numbering: none, fill: black)
+#image("{cover_image}", width: 100%, height: 100%, fit: "cover")
 #pagebreak()
-```
+#counter(page).update(1)
 """,
         encoding="utf-8",
     )
-    return cover_markdown
+    return cover_typ
 
 
 def build_pdf(paths: list[Path], output: Path) -> Path:
     target = output / "murim-login.pdf"
-    cover_markdown = write_pdf_cover(output)
+    cover_typ = write_pdf_cover(output)
     try:
-        run_pandoc([cover_markdown, *paths], target, "pdf", title=TITLE, pdf=True)
+        run_pandoc(
+            paths,
+            target,
+            "pdf",
+            title=TITLE,
+            pdf=True,
+            include_before=[cover_typ, BOOK_TYP],
+        )
     finally:
-        cover_markdown.unlink(missing_ok=True)
+        cover_typ.unlink(missing_ok=True)
     return target
 
 
