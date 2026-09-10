@@ -1,17 +1,16 @@
 # Translation State
 
-- Last completed: 27
-- Next chapter: 28
-- Current block: 25–29 (3/5)
-- Latest translation: `translations/0027.md`
-- Latest summary: `summaries/beats/0027.md`
-- Safe profiles through: chapter 27
+- Last completed: 28
+- Next chapter: 29
+- Current block: 25–29 (4/5)
+- Latest translation: `translations/0028.md`
+- Latest summary: `summaries/beats/0028.md`
+- Safe profiles through: chapter 28
 
 
 ## Current Block
 
-Chapter 27 reveals that Gong Yacheong was poisoned and is rapidly deteriorating. He asks Taekyung to return Socheon and Soyul alive, prompting Taekyung to accept a no-reward quest. Taekyung orders the squad to leave Gong behind, but Han Yeop disobeys and carries the unconscious man; Taekyung turns back to help. Taekyung’s guilt over abandoning an NPC gives way to action. In a secret Sound Transmission conversation, the Head Elder confirms that he sent Jopil and expects Taekyung’s death to change Jin Wikyung’s mind, while also planning to drive out the Lower District Sect.
-
+Chapter 28 leaves Taekyung’s unidentified dantian energy immovable. A wolf pack flees when his qi overwhelms it, triggering a forced System Quest to confront Jopil, One Question, One Kill, a Peak master. Jopil has killed Black Mountain Blade and the other pursuers, recognizes Taekyung as the Jin Family’s third Young Master and the Sleeping Dragon, and offers to let him leave if he answers truthfully. Jopil then reveals he is employed to complete a mission and permits only Taekyung to leave, demanding that Gong Yacheong, Socheon, Soyul, and the reconnaissance squad remain behind. Taekyung refuses, provoking Jopil’s savage laughter.
 
 ## Open Questions
 

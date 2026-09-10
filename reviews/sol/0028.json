@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "What difference would it make if you told them who I am?",
+      "current": "What difference would it make if I told them who I am?",
+      "defect": "Reversed subject. After Taekyung shouts Jopil’s name and the squad behind him freezes, Jopil is saying that Taekyung outing him to those men changes nothing—not that Jopil might tell them himself.",
+      "id": "F01",
+      "rationale": "The omitted subject of 알린다고 is the addressee; 저들에게 is the squad, and the preceding beat is Taekyung exposing the name.",
+      "severity": "critical",
+      "source": "내 정체를 저들에게 알린다고 뭐가 달라지겠나."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "I only gave permission for you. Alone.",
+      "current": "I only gave permission for you to leave.",
+      "defect": "Drops 혼자. English ‘only’ attaches to the permission to leave, not to the exclusive subject ‘you alone,’ which is the line’s twist.",
+      "id": "F02",
+      "rationale": "The next demand that the survivors and squad stay behind depends on 혼자 as the restriction, not on leave versus stay in the abstract.",
+      "severity": "major",
+      "source": "내가 허락한 건 자네 혼자야."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "Determined not to lose the clash of qi, I put force into my eyes and lowered my voice.",
+      "current": "Determined not to lose the battle of wills, I narrowed my eyes and lowered my voice.",
+      "defect": "Replaces a qi-pressure contest with willpower and changes the eye action from forcing strength into the gaze to narrowing the eyes.",
+      "id": "F03",
+      "rationale": "기 싸움 is a qi/aura contest, and 눈에 힘을 빡 주고 is an intensified stare, not a squint; both set up the wolves breaking from his 기운.",
+      "severity": "major",
+      "source": "기 싸움에서 밀리면 안 된다는 생각에 눈에 힘을 빡 주고 목소리를 깔았다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "One System blockquote containing the creation line, the Quest fields, and the forced-accept lines; title as bold text without brackets.",
+      "current": "> **System**\n>\n> A Quest has been created.\n\n> **System**\n>\n> **Quest**\n>\n> **[Jopil, One Question, One Kill]**",
+      "defect": "Consecutive System notices are split into two windows, and the quest title is wrapped in square brackets.",
+      "id": "F04",
+      "rationale": "Binding System-Markdown rules require a single window when no prose intervenes and forbid square brackets around panel UI.",
+      "severity": "minor",
+      "source": "- 퀘스트가 생성되었습니다.\n\n퀘스트\n\n[일문일살 조필]"
+    }
+  ],
+  "summary": "Critical subject reversal in Jopil’s line about revealing his identity; major loss of the exclusive ‘you alone’ condition and of the qi-clash beat; System panel splits and keeps square brackets.",
+  "version": 1
+}

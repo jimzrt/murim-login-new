@@ -1,0 +1,25 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored addressee subject: outing Jopil to the squad changes nothing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restriction is you alone, not permission to leave in the abstract.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored qi-clash and forcing strength into the eyes, not a squint or battle of wills.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Merged consecutive System notices into one window and dropped square brackets on the quest title.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

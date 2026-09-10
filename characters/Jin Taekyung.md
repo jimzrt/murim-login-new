@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 27
+- **Safe through:** Chapter 28
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -14,4 +14,5 @@
 - **Chapter 25 continuity:** Taekyung discovers Gong Yacheong after defeating Black Mountain Blade and completes the Survivors of the Sakju Branch Quest, triggering a Chain Quest and receiving Merit, Fame, and multiple level-ups. He gives Gong and the children the false name Hong Gil-dong, promises to kill Jopil, then tries to retreat after learning Jopil is a Peak master. Hyuk Mujin arrives and exposes Taekyung’s identity to them.
 - **Chapter 26 continuity:** Taekyung confirms his identity after Hyuk Mujin exposes him and travels toward the main family through a blizzard. The Main Quest displays Level 30 progress at 24/30 and Fame at 250/500 toward Logout; he distributes stat points and cultivates but still cannot identify what enables realm advancement. He recognizes Gong’s injuries and the children’s exhaustion, considers fleeing because the others are NPCs while he is real, but remains with the group as night falls.
 - **Chapter 27 continuity:** Taekyung learns that Gong Yacheong was poisoned and accepts Gong’s no-reward Last Request Quest to return Socheon and Soyul alive. He initially orders the squad to leave Gong behind, but turns back when Soyul feels real enough to trigger guilt over abandoning an NPC; he finds Han Yeop carrying the unconscious Gong and helps him.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–27
+- **Chapter 28 continuity:** Taekyung’s attempt to cultivate the unidentified dantian energy still fails. A wolf pack flees from his qi, and the System creates a forced Quest to confront Jopil, a Peak master. Jopil offers to let him leave after truthful answers, then demands that Taekyung abandon Gong, the children, and the reconnaissance squad; Taekyung refuses.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–28
