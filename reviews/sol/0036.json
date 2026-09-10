@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "At that moment, the manly Hyuk Mujin’s eyes bulged wide and he sank to the ground.",
+      "current": "At that moment, the manly Hyuk Mujin rolled his eyes wide and collapsed to the ground.",
+      "defect": "부릅뜨다 is eyes flaring/bulging open (pain, strain), not rolling the eyes; 주저앉다 is sinking into a sit as his body gives out. The draft turns a physical failure into sarcasm.",
+      "id": "F01",
+      "rationale": "Same verb is later rendered correctly as eyes flying open when he sees Wikyung. Here it must stay a pain/shock flare, or the 사나이 혁무진 punchline (boast, then body fails) is a different joke.",
+      "severity": "major",
+      "source": "그 순간, 사나이 혁무진이 눈을 부릅뜨며 주저앉았다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "They are nothing but jackals with numbers on their side. That man’s rabble—wandering martial artists blinded by gold and a pack of mounted bandits who have plundered the common people!",
+      "current": "They are nothing but jackals with numbers on their side. A pack of ruffians—wandering martial artists blinded by gold and mounted bandits who have plundered the common people!",
+      "defect": "저자의 is omitted. 저자 is a singular, contemptuous ‘that man’; the force is named as his rabble, not a generic pack.",
+      "id": "F02",
+      "rationale": "The speech first concedes numbers and Peak masters, then recasts the enemy as that opponent’s hired thugs (wanderers and mounted bandits). Losing 저자 strips the personal indictment.",
+      "severity": "major",
+      "source": "머릿수만 많은 승냥이에 불과하다. 저자의 무뢰배, 황금에 눈이 먼 낭인과 양민을 약탈하던 마적 떼!"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "The five hundred troops were divided into the vanguard, the center, and the rear guard.",
+      "current": "The five hundred troops were divided into the vanguard, the main force, and the rear guard.",
+      "defect": "중앙 is the center. The next sentence already uses “the center” for the same word; “main force” is a different unit concept.",
+      "id": "F03",
+      "rationale": "선두 / 중앙 / 후미 is a three-part front–center–rear split. Rendering 중앙 two ways in adjacent sentences is inconsistent and slightly mislabels the middle body.",
+      "severity": "minor",
+      "source": "오백의 병력은 선두, 중앙, 후미로 나뉘었다."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "No, it was going up. Really, by about a rat dropping. Little by little. Very, very little.",
+      "current": "No, it was going up. Just barely. Little by little. Very, very little.",
+      "defect": "쥐똥만큼 is a comic unit of measure (a rat dropping’s worth), collapsed into generic scarcity already covered by 조금씩.",
+      "id": "F04",
+      "rationale": "Taekyung’s voice uses the crude image to mock the trickle of Fame; “just barely” keeps quantity but drops the joke.",
+      "severity": "minor",
+      "source": "아니, 오르긴 오른다. 정말 쥐똥만큼. 조금씩, 아주 조금씩."
+    }
+  ],
+  "summary": "Mostly faithful, but Wikyung’s war speech drops the attribution of the rabble to ‘that man,’ and Hyuk’s comic collapse is mistranslated as an eye-roll.",
+  "version": 1
+}

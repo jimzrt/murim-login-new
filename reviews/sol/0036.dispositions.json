@@ -1,0 +1,25 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored 부릅뜨다 as a pain-flare of bulging eyes and 주저앉다 as sinking down, keeping the boast-then-body-fails punchline.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored 저자의 as a contemptuous ‘that man’s rabble,’ naming the enemy as his hired thugs rather than a generic pack.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 중앙 as ‘the center’ in the three-part split so it matches the following sentence.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 쥐똥만큼 as a comic unit of measure instead of generic scarcity.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
