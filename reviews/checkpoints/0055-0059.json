@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "State that the signal prompts the embedded Five Gates forces to attack their supposed allies.",
+      "current": "A signal flare summons the Three Paths Sect, Byeokdo Sect, Gunggwimun, and other Five Gates of Shanxi forces, exposing a decades-old conspiracy.",
+      "defect": "“Summons” incorrectly implies that the signal brings these forces to the battlefield, although they are already present and turn on their supposed allies when it appears.",
+      "id": "C01",
+      "rationale": "Chapter 57 and the durable state both establish that the signal activates forces already participating in the battle.",
+      "severity": "minor",
+      "source": "checkpoint summary, Plot"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Use “Peak master” in both Chapter 56 occurrences.",
+      "current": "Enemy or not, there was no denying he was a Peak martial artist of the highest caliber.",
+      "defect": "“Peak martial artist” drifts from the packet’s established rank term “Peak master.” The same drift recurs in “At thirty, the Head Elder had already been a Peak martial artist.”",
+      "id": "C02",
+      "rationale": "The binding translation decisions explicitly preserve “Peak master,” and the other chapters use that term consistently.",
+      "severity": "minor",
+      "source": "Chapter 56, description of Lee Cheonbaek"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Recast both occurrences in natural English while preserving the specific yellowing of Hyuk’s vision.",
+      "current": "Hyuk Mujin felt the world go yellow before his eyes.",
+      "defect": "The construction sounds like a Korean syntax calque rather than natural contemporary English; it recurs after Hyuk carries Taekyung.",
+      "id": "C03",
+      "rationale": "The image can be retained without the unnatural “felt the world go … before his eyes” construction.",
+      "severity": "minor",
+      "source": "Chapter 55, opening Hyuk Mujin narration"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Replace “won” with a verb such as “accumulated” or “cultivated,” preserving the contrast between his acquired power and physical aging.",
+      "current": "He had won profound internal energy, but even that could not stop his body from aging.",
+      "defect": "“Won profound internal energy” is an unnatural English collocation.",
+      "id": "C04",
+      "rationale": "Internal energy is accumulated or cultivated, not ordinarily “won,” and the current wording disrupts an otherwise serious reflective passage.",
+      "severity": "minor",
+      "source": "Chapter 59, First Elder’s reflection on aging"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Recast the sentence so that the feelings they had set aside come boiling back.",
+      "current": "But the Discipline Hall Master’s dignified end brought boiling back feelings they had set aside.",
+      "defect": "The modifier order is unidiomatic and momentarily obscures the intended resurgence of suppressed shame and anger.",
+      "id": "C05",
+      "rationale": "The following fragment identifies the feelings clearly, but the current syntax weakens the emotional turn that rallies the senior members.",
+      "severity": "minor",
+      "source": "Chapter 59, reaction to the Discipline Hall Master’s death"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Use a natural construction such as “Once he grasped the whole situation” or “Once he understood the situation.”",
+      "current": "Once he had the whole situation, a voice like frost burst from Jin Wikyung’s mouth.",
+      "defect": "“Had the whole situation” is an incomplete, unnatural idiom for understanding what is happening.",
+      "id": "C06",
+      "rationale": "The current phrasing reads like a dropped verb and interrupts the urgency of Jin Wikyung’s response.",
+      "severity": "minor",
+      "source": "Chapter 59, Jin Wikyung realizing Taekyung’s danger"
+    }
+  ],
+  "summary": "The packet is internally coherent and preserves the unresolved battle and conspiracy hooks without spoilers. Actionable issues are one summary-level mechanism error, isolated terminology drift, and several awkward English constructions.",
+  "version": 1
+}

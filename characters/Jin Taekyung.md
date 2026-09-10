@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 58
+- **Safe through:** Chapter 59
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -45,4 +45,5 @@
 - **Chapter 56 continuity:** Taekyung reaches Eight Spring Gorge as the Head Elder is about to execute a defeated Lee Cheonbaek. He splits a spear flying at the Head Elder’s back with Sword Energy and confronts him, leaving the battle’s outcome unresolved.
 - **Chapter 57 continuity:** Taekyung reaches the Eight Spring Gorge battlefield with the reconnaissance squad and throws a spear at the Head Elder to protect Jin Wikyung. When the Head Elder splits it, Taekyung publicly curses him and calls him a traitor; after the First Elder's signal exposes the Five Gates conspiracy, Taekyung charges the Head Elder while he keeps Lee Cheonbaek alive and immobilized.
 - **Chapter 58 continuity:** Taekyung attacks the Head Elder with the Gambler Title active, but the elder blocks and overwhelms his spear with Sword Energy. Taekyung slices down to an iron rod, throws it, and mistakenly rescues the gravely wounded Lee Cheonbaek instead of Jin Wikyung. He retreats with Hyuk Mujin and the reconnaissance squad, then orders an encircling formation as the Head Elder attacks again.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–58
+- **Chapter 59 continuity:** Taekyung realizes that the reconnaissance squad has no tank, healer, or balanced damage roles—only ten melee damage dealers—and orders them to keep throwing dirt while they fight the Head Elder. The battle remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–59

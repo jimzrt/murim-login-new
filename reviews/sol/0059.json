@@ -1,0 +1,116 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "Jin Wikyung’s face darkened. It was then that the First Elder’s Sword Energy, rushing forward without pause, suddenly changed direction.",
+      "current": "It was then that the First Elder’s Sword Energy, advancing without resistance, suddenly changed direction.",
+      "defect": "Omits Jin Wikyung’s darkened expression, the timing beat that frames the redirected strike.",
+      "id": "F01",
+      "rationale": "The source times the next attack to Wikyung’s darkened look, not only to the Sword Energy’s turn.",
+      "severity": "major",
+      "source": "진위경의 안색이 어두워진 그때였다."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "His youngest brother—so precious he could put him in his eye and feel no pain—was blocking the Head Elder.",
+      "current": "His youngest brother—the brother so precious that he could put him in his eye without feeling pain—was facing the Head Elder.",
+      "defect": "막고 있다 is blocking/intercepting the Head Elder, not merely facing him.",
+      "id": "F02",
+      "rationale": "Wikyung’s panic is that Taekyung is standing in the Head Elder’s way, which is why delay is fatal.",
+      "severity": "major",
+      "source": "눈에 넣어도 아프지 않을 막냇동생이 대장로를 막고 있다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "The First Elder was a despicable old monster who had lived more than sixty years while concealing his dark intent.",
+      "current": "The First Elder was a despicable old monster who had lived for more than sixty years while concealing his true ambition.",
+      "defect": "흑심 is hidden malice or a black heart, not ambition; this chapter later rejects wealth, glory, and rule as the motive.",
+      "id": "F03",
+      "rationale": "Ambition prejudges the later exchange in which Wikyung denies that the plan was for wealth, glory, or becoming a provincial ruler.",
+      "severity": "major",
+      "source": "일장로는 일 갑자를 넘게 살아오며 흑심을 감춰 왔던 비열한 노괴(老怪)다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "What does age matter when it comes to life and death? Anyone who stands at the tip of a blade is a person of Murim.",
+      "current": "A martial artist stands at the tip of a blade.",
+      "defect": "무림인 is a person of Murim; 무인 is the glossary default for martial artist. The bound term Murim is missing.",
+      "id": "F04",
+      "rationale": "Exact glossary match requires Murim for 무림; the line’s point is Murim identity at the blade’s tip, not generic martial-artist status.",
+      "severity": "major",
+      "source": "칼끝에 선 것이 무림인이거늘."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "“F-First Elder…”",
+      "current": "“E-Elder…”",
+      "defect": "The stammer is 일장로, the First Elder’s title, not a generic Elder.",
+      "id": "F05",
+      "rationale": "He is naming the man who just cut him, the First Elder, while his voice fails.",
+      "severity": "major",
+      "source": "“일, 장로.”"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "And in that interval, two people did not miss the opening.",
+      "current": "And in that opening, two people did not hesitate.",
+      "defect": "빈틈을 놓치지 않는 means they did not miss the gap; hesitation is not the source verb.",
+      "id": "F06",
+      "rationale": "The next beats are Wipeng’s side cut and the three-sword follow-up; the mechanism is exploiting the Elders’ fluster, not generic resolve.",
+      "severity": "major",
+      "source": "그리고 그사이, 빈틈을 놓치지 않는 두 사람이 있었다."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "After living so many years, they had achieved much, and they had much they needed to protect.",
+      "current": "After living for so many years, they had built things and found things they needed to protect.",
+      "defect": "이뤄 온 것 is what they had achieved; 지켜야 할 것 is what they had to protect. “Found things” is not in the source.",
+      "id": "F07",
+      "rationale": "The fear of a dog’s death is grounded in accomplishments and duties already held, not in things they happened to find.",
+      "severity": "major",
+      "source": "적지 않은 세월을 살아온 만큼 이뤄 온 것도, 지켜야 할 것도 많았다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "What are you doing? Those Jin Family bastards are right in front of us—",
+      "current": "What are you doing? The Jin Family’s right in front of us—",
+      "defect": "놈들 is a slur; the Mount Heng speaker is cursing the Jin Family, not naming them neutrally.",
+      "id": "F08",
+      "rationale": "The reply about “those black bastards” is answering a contemptuous line; dropping 놈들 flattens the speaker’s register.",
+      "severity": "major",
+      "source": "자네 뭐 하고 있나! 태원진가 놈들이 코앞에 있는데……."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "They had just fought the Peak masters of the Mount Heng Sword Sect, and that made it even worse.",
+      "current": "They had just fought the Peak masters of the Mount Heng Sword Sect, and the exhaustion was taking its toll.",
+      "defect": "The source only says the retreat was worse because the Peak fight had just happened; it does not name exhaustion.",
+      "id": "F09",
+      "rationale": "Adding exhaustion inserts a cause the Korean leaves implicit.",
+      "severity": "minor",
+      "source": "앞서 항산검문의 절정 고수들을 상대한 직후인지라 더더욱 그랬다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Shhk!",
+      "current": "Thud!",
+      "defect": "푹 is a piercing/stabbing sound, not a blunt impact.",
+      "id": "F10",
+      "rationale": "The following line is Sword Energy driving through flesh, bone, and blood vessels from the back.",
+      "severity": "minor",
+      "source": "푹!"
+    },
+    {
+      "confidence": 0.82,
+      "correction": "What is this…",
+      "current": "What the hell…",
+      "defect": "The thought has no curse; 무슨 is “what is this,” and “hell” adds profanity.",
+      "id": "F11",
+      "rationale": "Wikyung’s earlier “what the hell kind of internal energy” is backed by 놈; this beat is not.",
+      "severity": "minor",
+      "source": "이게 무슨……."
+    }
+  ],
+  "summary": "The draft tracks the fight and raid turn, but several action, motive, address, and terminology errors are actionable; the largest are the omitted darkened-face beat, Taekyung merely “facing” the Head Elder, and 흑심 rendered as ambition.",
+  "version": 1
+}

@@ -1,6 +1,6 @@
 # Wipeng (위팽)
 
-- **Safe through:** Chapter 57
+- **Safe through:** Chapter 59
 - **Aliases:** None revealed
 - **Role:** Jin Wikyung’s personal guard
 - **Personality:** Loyal, observant, teasing, and resigned to his master’s impulsive departures
@@ -13,4 +13,5 @@
 - **Chapter 34 continuity:** Wipeng arrives late at the main assembly hall, bewildered by Jin Wikyung’s laughter after Taekyung reaches the First Rate realm.
 - **Chapter 56 continuity:** Wipeng fights beside Jin Wikyung as the Jin Family’s masters engage Mount Heng’s command at Eight Spring Gorge. He remains in the unresolved battle when Taekyung intervenes in the Head Elder’s attempted execution of Lee Cheonbaek.
 - **Chapter 57 continuity:** At Eight Spring Gorge, Wipeng attacks the First Elder on Jin Wikyung's order, but the First Elder reveals concealed Peak-level martial arts and knocks him away. The First Elder then signals the Five Gates forces to turn on the battlefield.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–34, and 56–57
+- **Chapter 59 continuity:** Wipeng wounds the Third Elder, then takes his head after Jin Wikyung and the surrounding fighters kill the Second Elder. He remains with ten surviving senior members to encircle the First Elder after Wikyung orders him to hold the traitor.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–34, and 56–59

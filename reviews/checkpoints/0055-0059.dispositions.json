@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Updated summaries/0055-0059.md to state that the signal prompts the embedded Five Gates forces already present to attack their supposed allies.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "This terminology issue is in previously accepted Chapter 56 output; the Chapter 59 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "This phrasing issue is in previously accepted Chapter 55 output; the Chapter 59 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Changed the Chapter 59 polished reading copy to 'accumulated profound internal energy.'",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Changed the Chapter 59 polished reading copy so the suppressed feelings come boiling back in natural English.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Changed the Chapter 59 polished reading copy to 'Once he grasped the whole situation.'",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

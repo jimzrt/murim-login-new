@@ -1,0 +1,60 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Wikyung’s darkened face as the timing beat and rendered the Sword Energy as rushing forward without pause.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Taekyung is blocking the Head Elder, not merely facing him; kept the eye-pain idiom.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "흑심 is hidden malice/dark intent, not ambition, which would prejudge the later motive exchange.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered 무림인 as a person of Murim per the glossary, not generic martial artist.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "The stammer names the First Elder, not a generic Elder.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "They did not miss the opening in that interval; the source verb is exploiting the gap, not hesitation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Restored achieved much and much they needed to protect; removed the unsupported ‘found things.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored 놈들 as bastards in the Mount Heng speaker’s contemptuous line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "The Peak fight made the retreat worse; exhaustion is not named.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "푹 is a piercing sound, so Shhk! replaces Thud!",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "이게 무슨 has no curse; dropped the added hell.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,39 @@
+{
+  "chapter": 59,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.353,
+    "source_characters": 5445,
+    "source_paragraphs": 169,
+    "translation_characters": 12810,
+    "translation_paragraphs": 178
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "무림",
+        "preferred": "Murim"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "일격",
+        "preferred": "One Strike"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
