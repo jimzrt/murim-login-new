@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 41
+- **Safe through:** Chapter 42
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -29,4 +29,5 @@
 - **Chapter 39 continuity:** Taekyung successfully logs out after thirty days in Murim, discovering that only three hours passed in reality. The System is unavailable, and Seong Jinho dismisses his account after finding the capsule unplugged. The product manual identifies the device as an Ark - 2020 made by H Soft on January 1, 2020, and reveals permanent user binding until death, a slow and reversible time ratio, and Character Synchronization; the capsule's purpose and synchronization remain unexplained.
 - **Chapter 40 continuity:** Taekyung confirms that the Ark - 2020 manual's text is visible only to him. He rejects the leading virtual-reality game as too artificial to resemble Murim, reconnects with his sister Hayeon, and decides to live in reality; Jinho remains skeptical but starts investigating H Soft after Taekyung discards the capsule.
 - **Chapter 41 continuity:** After Sopung Guild fires him, Taekyung registers at the Hunter Manpower Office and signs with Peace Guild as a porter for an E-rank Gate. He reunites with his old acquaintance Im Kkeokjeong, now the E-rank Hunter Im Hyeokjun, who recommends him to Team Leader Choi. Taekyung travels to the Gate with Im and three veteran E-rank Hunters; it is his first raid since returning to reality.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–41
+- **Chapter 42 continuity:** Taekyung begins his first raid since returning to reality as a porter for Peace Guild at an E-rank Gate. Im Kkeokjeong and three veteran E-rank Hunters accompany him under Team Leader Choi, a C-rank Hunter. After watching Choi and the veterans clear a Hobgoblin group, Taekyung recognizes that he would be stronger than Choi in Murim but is only an F-rank porter in reality.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–42

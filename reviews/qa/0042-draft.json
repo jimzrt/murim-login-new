@@ -1,0 +1,31 @@
+{
+  "chapter": 42,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.233,
+    "source_characters": 5797,
+    "source_paragraphs": 200,
+    "translation_characters": 12944,
+    "translation_paragraphs": 209
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "동대문",
+        "romanization": "dongdaemun"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

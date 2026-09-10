@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Im’s line now has Choi liking being recognized for his gear, not lecturing about it.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "인원이 없어 rendered as understaffed/short on people, matching the three-person guild joke.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "고생하셨습니다 is subordinate thanks to Choi, not a superior’s ‘Good work.’",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Hunter 급 set to rank throughout (mid-rank / lowest-rank), consistent with low-rank.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Dongdaemun kept on first use with a brief wholesale-market footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "기세를 탄 restored as riding the momentum after the shield hits.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "웃어? restored as a second-person challenge to Im.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

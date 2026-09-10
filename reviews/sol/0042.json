@@ -1,0 +1,76 @@
+{
+  "findings": [
+    {
+      "confidence": 0.88,
+      "correction": "That guy really loves it when people recognize his equipment.",
+      "current": "That guy really loves telling people about his equipment.",
+      "defect": "알아봐 주다 is other people recognizing/identifying his gear, not Choi explaining it.",
+      "id": "F01",
+      "rationale": "The beat is Taekyung naming the Red Drake set; Im explains Choi likes being made much of for that, not that he loves giving lectures.",
+      "severity": "major",
+      "source": "저 친구 장비 알아봐 주는 거 엄청 좋아해."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "The Peace Guild is new, so it’s short on people. There are only three of us, including the Guild Master.",
+      "current": "The Peace Guild is new, so it doesn’t have any members. There are only three of us, including the Guild Master.",
+      "defect": "인원이 없어 means they are understaffed, not that they have no members; ‘any members’ contradicts the next clause.",
+      "id": "F02",
+      "rationale": "The joke is a three-person guild, not a guild with zero members that somehow also has three people.",
+      "severity": "major",
+      "source": "평화 길드, 신생이라 인원이 없어. 길드장 포함 세 명이 전부지."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "…Thank you for your hard work.",
+      "current": "…Good work.",
+      "defect": "고생하셨습니다 is deferential thanks for Choi’s labor; English ‘Good work’ is typically a superior’s appraisal and flips the porter-to-Team-Leader hierarchy.",
+      "id": "F03",
+      "rationale": "F-rank porter to C-rank Team Leader after the massacre; the line is subordinate courtesy, not a pat on the head.",
+      "severity": "major",
+      "source": "……고생하셨습니다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "He was a mid-rank Hunter, someone in a completely different league from a low-rank Hunter like me. / A mid-rank Hunter and the lowest-rank Hunter.",
+      "current": "He was a mid-level Hunter, someone in a completely different league from a low-rank Hunter like me. / A mid-level Hunter and the lowest-level Hunter.",
+      "defect": "Hunter 급 is rank; ‘level’ collides with System Lv. and is inconsistent with ‘low-rank’ in the same sentence.",
+      "id": "F04",
+      "rationale": "Binding: rank for Hunter classifications; Grade/Level are other systems.",
+      "severity": "minor",
+      "source": "그는 나 같은 하급 헌터와 격이 다른 ‘중급 헌터’니까. / 중급 헌터와 최하급 헌터."
+    },
+    {
+      "confidence": 0.77,
+      "correction": "Keep Dongdaemun and add a brief first-use footnote that it is Seoul’s major wholesale-market district.",
+      "current": "When I was a rookie, I’d splurged on it at an underground shop in Dongdaemun.",
+      "defect": "동대문 is a first-use Korean place name with no ledger gloss or footnote.",
+      "id": "F05",
+      "rationale": "QA novel_name warning; rules require a footnote or established English on first unlisted local name.",
+      "severity": "minor",
+      "source": "초짜 시절, 동대문 지하 매장에서 큰맘 먹고 질렀더랬다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Riding that momentum, Im Kkeokjeong swung his mace like a flyswatter, smashing limbs and crushing heads.",
+      "current": "Every time Im Kkeokjeong swung his mace like a flyswatter, limbs were smashed and heads were crushed.",
+      "defect": "Omits 기세를 탄 (riding the momentum after the shield hits).",
+      "id": "F06",
+      "rationale": "기세 here is combat momentum, the listed aura/momentum sense, not disposable color.",
+      "severity": "minor",
+      "source": "기세를 탄 임꺽정이 철퇴를 파리채처럼 휘두를 때마다 팔다리가 아작 나고 머리통이 박살 난다."
+    },
+    {
+      "confidence": 0.81,
+      "correction": "…You’re laughing?",
+      "current": "…He was laughing?",
+      "defect": "웃어? is a second-person challenge to Im, not a third-person observation.",
+      "id": "F07",
+      "rationale": "Pragmatic cue: Taekyung is incredulous at Im, which sets up 알아, 인마.",
+      "severity": "minor",
+      "source": "……웃어?"
+    }
+  ],
+  "summary": "Major fidelity hits: Im’s line on Choi liking equipment recognition is reversed into Choi lecturing; 인원이 없어 is rendered as zero members; 고생하셨습니다 is boss-to-subordinate ‘Good work.’ Minors: Dongdaemun lacks a first-use note, 기세를 탄 is dropped, and 웃어? is recast as third-person narration.",
+  "version": 1
+}

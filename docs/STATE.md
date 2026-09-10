@@ -1,11 +1,12 @@
 # Translation State
 
-- Last completed: 41
-- Next chapter: 42
-- Current block: 40–44 (2/5)
-- Latest translation: `translations/0041.md`
-- Latest summary: `summaries/beats/0041.md`
-- Safe profiles through: chapter 41
+- Last completed: 42
+- Next chapter: 43
+- Current block: 40–44 (3/5)
+- Latest translation: `translations/0042.md`
+- Latest summary: `summaries/beats/0042.md`
+- Safe profiles through: chapter 42
+
 
 
 
@@ -13,7 +14,7 @@
 
 
 
-Taekyung returns to the Hunter Manpower Office after being fired from Sopung Guild and signs with Peace Guild as a porter for an E-rank Gate. He reunites with his old acquaintance Im Kkeokjeong, who has advanced from F-rank to E-rank and recommends him to Team Leader Choi. Taekyung rides to the Gate with Im and three veteran E-rank Hunters.
+Taekyung begins his first raid since returning to reality as a porter for Peace Guild at an E-rank Gate. He joins Im Kkeokjeong and three veteran E-rank Hunters under Team Leader Choi, a C-rank Hunter whose expensive Red Drake gear reflects his equipment obsession. The party clears a Hobgoblin group; Taekyung realizes that although he would be stronger than Choi in Murim, in reality he is an F-rank porter.
 
 
 
