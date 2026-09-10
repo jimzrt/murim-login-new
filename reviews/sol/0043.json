@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "“Damn, have you been doing nothing but this?”",
+      "current": "“Damn, did you do nothing but this after you ate?”",
+      "defect": "밥 먹고 ~만 하다 is an idiom for doing nothing else with one’s life, not an action after a meal.",
+      "id": "F01",
+      "rationale": "The line praises obsessive specialization. Post-meal wording invents a lunch break the source does not mention.",
+      "severity": "major",
+      "source": "“이야, 넌 밥 먹고 이것만 했냐?”"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Im Kkeokjeong was blown away.",
+      "current": "Im Kkeokjeong clicked his tongue.",
+      "defect": "혀를 내두르다 is astonishment; tongue-clicking is 혀를 차다 and reads as disapproval.",
+      "id": "F02",
+      "rationale": "He is reacting to Taekyung’s nonstop butchering, then calling him a tough bastard. A click reverses the affect.",
+      "severity": "major",
+      "source": "임꺽정이 혀를 내둘렀다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Team Leader Choi was sent flying back. With a twisted expression, he said,",
+      "current": "Team Leader Choi was knocked back. He landed quickly and spoke with a twisted expression.",
+      "defect": "빠르게 modifies being flung back. “Landed quickly” is added and reassigns the adverb.",
+      "id": "F03",
+      "rationale": "The black mass slams his side; the next beat is the grim line to stop it, not a controlled quick landing.",
+      "severity": "major",
+      "source": "빠르게 튕겨 나온 최 팀장이 일그러진 얼굴로 말했다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“If we take out the Priest first, there’s hope. In exchange…”",
+      "current": "“If we take out the Priest first, there’s hope. But…”",
+      "defect": "그 대신 signals a tradeoff/cost, not a generic contrast.",
+      "id": "F04",
+      "rationale": "The interrupted catch is the price of hope; the next lines assign the party to hold the Great Warrior while Choi moves.",
+      "severity": "major",
+      "source": "“제사장을 먼저 처리한다면 희망이 있습니다. 그 대신…….”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“No. All of you.”",
+      "current": "“No. You.”",
+      "defect": "여러분들이 is plural and excludes Choi. Bare You can read as Im alone.",
+      "id": "F05",
+      "rationale": "Choi answers 우리가요? by pushing the hold onto the rest of the party, then recasts Haste himself.",
+      "severity": "major",
+      "source": "“아뇨. 여러분들이.”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Im Kkeokjeong, who had sidled over at that speed, even dropped his mouth open.",
+      "current": "Im Kkeokjeong, who had quietly approached at my speed, even gaped.",
+      "defect": "빠른 속도에 is why he sidles over, not the speed of his approach.",
+      "id": "F06",
+      "rationale": "He is drawn by the butchering pace; “at my speed” can mean he himself moved that fast.",
+      "severity": "minor",
+      "source": "빠른 속도에 슬쩍 다가온 임꺽정도 입을 벌렸다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "“Everyone, out of the way!”",
+      "current": "“Everyone, move!”",
+      "defect": "비켜 is clear the path for a charge, not a generic relocate.",
+      "id": "F07",
+      "rationale": "Im is about to rush the restored gate with the tower shield; the command is to make space.",
+      "severity": "minor",
+      "source": "“모두 비켜!”"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Zoning out in the middle of a raid.",
+      "current": "Who was I to let my mind wander during a raid?",
+      "defect": "Adds the English idiom “who was I to,” which frames unworthiness rather than the source’s “I’ve lost it / I zoned out.”",
+      "id": "F08",
+      "rationale": "The preceding line is 내가 단단히 미쳤구나; this fragment continues that self-rebuke, not a rights claim.",
+      "severity": "minor",
+      "source": "레이드 중에 한눈을 팔다니."
+    }
+  ],
+  "summary": "Several semantic mismatches: a meal-time calque for 밥 먹고 ~만, 혀를 내두르다 rendered as a tongue-click, knockback speed reattached to landing, 그 대신 reduced to a generic But, and 여러분들이 flattened to ambiguous You.",
+  "version": 1
+}

@@ -1,22 +1,26 @@
 {
   "version": 1,
-  "safe_through": 42,
-  "continuity_sources": [41, 42],
+  "safe_through": 43,
+  "continuity_sources": [42, 43],
   "active_continuity": [
-    "Jin Taekyung is back in reality after logging out of Murim. He is an F-rank Hunter and has returned to work as a porter for an E-rank Gate.",
+    "Jin Taekyung is back in reality after logging out of Murim. He is an F-rank Hunter and works as a porter for an E-rank Gate.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "The Ark - 2020 capsule's purpose and route to Murim remain unresolved; its manual says users are bound until death, time runs at an adjustable slow ratio, and Character Synchronization exists.",
     "Murim's death and resurrection limits remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "Im Kkeokjeong is Taekyung's old acquaintance, now E-rank Hunter Im Hyeokjun. He is a veteran Peace Guild member, calls Taekyung his little brother, and serves as a main tank with a tower shield.",
+    "Im Kkeokjeong is Taekyung's old acquaintance, now E-rank Hunter Im Hyeokjun. He is a veteran Peace Guild member, calls Taekyung his little brother, and serves as a main tank with a tower shield and mace.",
     "Peace Guild is new and has only three people including its Guild Master. Taekyung's E-rank Gate party consists of Team Leader Choi, Im, two other veteran E-rank Hunters, and Taekyung as porter.",
-    "Team Leader Choi is a C-rank Hunter who leads the Gate party and is obsessed with his expensive Red Drake equipment.",
-    "The party cleared a Hobgoblin group in the cave Gate. Taekyung recognizes that he would be stronger than Choi in Murim but is only an F-rank porter in reality."
+    "Team Leader Choi is a C-rank Hunter who leads the Gate party, uses expensive equipment, and fights with a sword and wind-based Haste magic.",
+    "Taekyung can butcher Hobgoblin corpses at professional speed and has done this as paid raid work for years.",
+    "The Boss Zone contains an old Hobgoblin Priest and nearly a hundred dead Hobgoblins. The Priest uses the corpses to block the passage and summon a C-rank Hobgoblin Great Warrior.",
+    "Team Leader Choi identifies both the Priest and Great Warrior as C-rank Rare Monsters, attacks the Priest, and orders the rest of the party to hold the Great Warrior down.",
+    "Whether the trapped party can survive the Priest and Great Warrior remains unresolved."
   ],
   "open_questions": [
-    "The capsule's purpose and the route home remain unresolved.",
+    "The capsule's purpose and route home remain unresolved.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
-    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved."
+    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
+    "Whether the trapped party can survive the Hobgoblin Priest and Great Warrior remains unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -31,6 +35,8 @@
     "Keep Taekyung’s staged title delivery as “Yama. Whip. Great Hero!” rather than treating Yama Whip as a personal name.",
     "Keep the fixed Tutorial wording “Check and Distribute Skill Window Points” in both the objective and completion notice; use “Redistribute” only when previously assigned points are actually reallocated.",
     "Use tone-marked pinyin for Chinese dialogue such as “Tài lěng le” and “Zhōngguó rén ma?”; keep “Shenme” unmarked in Chapter 2 because it supports Taekyung’s “Ms. Sunmi” mishearing joke.",
-    "Use Three Paths Sect for 三道問, retaining the Chapter 34 note that the given final character is 問 rather than the usual 門."
+    "Use Three Paths Sect for 三道問, retaining the Chapter 34 note that the given final character is 問 rather than the usual 門.",
+    "Use gukbap with a first-use footnote identifying it as soup served with rice.",
+    "Use Hobgoblin Priest and Hobgoblin Great Warrior for the two C-rank Rare Monsters in the Boss Zone."
   ]
 }

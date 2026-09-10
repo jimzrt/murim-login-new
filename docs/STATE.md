@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 42
-- Next chapter: 43
-- Current block: 40–44 (3/5)
-- Latest translation: `translations/0042.md`
-- Latest summary: `summaries/beats/0042.md`
-- Safe profiles through: chapter 42
+- Last completed: 43
+- Next chapter: 44
+- Current block: 40–44 (4/5)
+- Latest translation: `translations/0043.md`
+- Latest summary: `summaries/beats/0043.md`
+- Safe profiles through: chapter 43
 
 
 
@@ -14,15 +14,15 @@
 
 
 
-Taekyung begins his first raid since returning to reality as a porter for Peace Guild at an E-rank Gate. He joins Im Kkeokjeong and three veteran E-rank Hunters under Team Leader Choi, a C-rank Hunter whose expensive Red Drake gear reflects his equipment obsession. The party clears a Hobgoblin group; Taekyung realizes that although he would be stronger than Choi in Murim, in reality he is an F-rank porter.
 
-
+Taekyung processes the Hobgoblins with professional speed while the Peace Guild party advances through the E-rank Gate. At the Boss Zone, an old Hobgoblin Priest uses the corpses of nearly a hundred Hobgoblins to trap the party and summon a C-rank Hobgoblin Great Warrior. Team Leader Choi identifies both rare monsters, attacks the Priest, and orders the others to hold the Great Warrior down.
 
 ## Open Questions
 
 - The capsule's purpose and route home remain unresolved.
 - Murim death and resurrection limits remain unresolved.
 - The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
+- Whether the trapped party can survive the Hobgoblin Priest and Great Warrior remains unresolved.
 
 
 ## Exceptional Decision

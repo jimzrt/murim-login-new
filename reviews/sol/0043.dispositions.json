@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Rendered 밥 먹고 이것만 했냐 as lifelong specialization, not a post-meal action.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "혀를 내두르다 is astonishment; replaced the tongue-click with blown away.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "빠르게 modifies the knockback; removed the invented quick landing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "그 대신 is a tradeoff, so In exchange… not a generic But.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "여러분들이 is the rest of the party, not a singular You.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "빠른 속도에 is why he sidled over; kept sidled and dropped his mouth open without attaching the speed to his approach.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "비켜 is clear the path for the charge: Everyone, out of the way!",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Kept the self-rebuke as zoning out; dropped the added who was I to.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
