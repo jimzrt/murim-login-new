@@ -1,0 +1,76 @@
+{
+  "findings": [
+    {
+      "confidence": 0.84,
+      "correction": "Keep the three Level up! lines, then a continuation mark (ellipsis or extra Level up! lines) before the cumulative-heal notice.",
+      "current": "- Level up!\n> - Level up!\n> - Level up!\n> - All status ailments have been cured by the cumulative effect of the level-ups!",
+      "defect": "The source’s `. .` after three notices marks further consecutive level-ups before the stack-heal line; the draft presents exactly three.",
+      "id": "F01",
+      "rationale": "Quantity and System presentation: 중첩 효과 follows an indicated run of additional level-ups, not a closed set of three.",
+      "severity": "major",
+      "source": "- 레벨 업!\n- 레벨 업!\n- 레벨 업!\n.\n.\n- 레벨 업의 중첩 효과로 모든 상태 이상이 회복됩니다!"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Just think of it as a senile old man’s shit-fit.",
+      "current": "Just think of it as a senile old man’s tantrum.",
+      "defect": "지랄 is vulgar self-abuse; tantrum sanitizes the Head Elder’s register.",
+      "id": "F02",
+      "rationale": "Profanity should match source strength; the dying elder is crude, not merely peevish.",
+      "severity": "major",
+      "source": "노망난 늙은이의 지랄이라고 생각하거라."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Keep Gunggwimun and add a first-use footnote: 弓鬼門, lit. Bow Ghost Gate.",
+      "current": "The Sect Leader of Gunggwimun, Jin Chung",
+      "defect": "First appearance of an unlisted sect name with explanatory hanja, romanized with no footnote.",
+      "id": "F03",
+      "rationale": "Binding terminology: first unlisted name/title almost always needs a footnote or mapped term; 진충 as Jin Chung is fine.",
+      "severity": "minor",
+      "source": "궁귀문(弓鬼門)의 문주, 진충"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "He was the wastrel Third Young Master who had never even been called an earth dragon.",
+      "current": "He was the wastrel Third Young Master who had never even been worthy of being called an earth dragon.",
+      "defect": "소리도 못 듣던 is that he never even heard himself called 토룡; worthy of is an added judgment.",
+      "id": "F04",
+      "rationale": "Adds a worthiness claim the Korean does not make; the contrast is epithet never applied, not desert.",
+      "severity": "minor",
+      "source": "토룡(土龍) 소리도 못 듣던 망나니 삼공자다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "You brat!",
+      "current": "You fools!",
+      "defect": "Singular address to the speaking martial artist is rendered as plural fools.",
+      "id": "F05",
+      "rationale": "Subject/number: 이놈 targets the one disciple, not the group.",
+      "severity": "minor",
+      "source": "이놈!"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Yes, sir.",
+      "current": "Understood.",
+      "defect": "Subordinate command-acknowledgment flattened to a peer-neutral reply.",
+      "id": "F06",
+      "rationale": "존명 marks hierarchy to the disguised martial artist; Understood loses that cue.",
+      "severity": "minor",
+      "source": "존명."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "“Beware Dark Heaven… Grrk.”",
+      "current": "“Beware Dark Heaven…”\n\n“Grrk.”",
+      "defect": "The death rattle is split into a second spoken line.",
+      "id": "F07",
+      "rationale": "One broken utterance, not a new line of dialogue.",
+      "severity": "minor",
+      "source": "암천(暗天)을 조심…… 크륵."
+    }
+  ],
+  "summary": "Major register softening of 지랄 and omitted stacked level-up continuation understate quantity/tone; first-use 궁귀문 lacks a footnote; a few subject, judgment, and hierarchy nits.",
+  "version": 1
+}
