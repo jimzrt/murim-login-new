@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the drink box as the hugged object; the blue truck is only watched until it leaves sight.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Honorific marks Mom as the cook; Hayeon is asking Taekyung about her.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Removed the added countless-count; he barely made it back after life-or-death crises.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 겨우 as the comedown contrast against the cash and license.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "날백수 is total bum/slacker aura, not lifelong unemployment.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Kept gukbap and added a first-use footnote identifying it as soup served with rice.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

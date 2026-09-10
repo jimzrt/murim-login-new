@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.99,
+      "correction": "The young man hugged the drink box until the blue truck disappeared from view. As if someone might snatch it away.",
+      "current": "The young man hugged the blue truck until it disappeared from view. As if someone might snatch it away.",
+      "defect": "The hugged object is the drink box; the blue truck is only what he watches until it leaves sight. Hugging the truck reverses the action and makes the snatching simile incoherent.",
+      "id": "F01",
+      "rationale": "The Korean subject-object split is explicit: 파란 트럭 is the disappearing thing, 드링크 박스를 꼭 껴안고 is the continuing action from the earlier sniffing beat.",
+      "severity": "critical",
+      "source": "청년은 파란 트럭이 시야에서 사라질 때까지 드링크 박스를 꼭 껴안고 있었다. 마치 누군가가 뺏어 가기라도 할 것처럼."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“Is she making a lot?”",
+      "current": "“Are you making a lot?”",
+      "defect": "Honorific 계셔 marks Mom in the kitchen as the cook. English “Are you making a lot?” makes Hayeon the cook, though she has just sat down and is on her phone.",
+      "id": "F02",
+      "rationale": "Mom is already 부엌에서 아침 준비로 한창이다; Hayeon only answers about the feast with her eyes glued to the phone.",
+      "severity": "major",
+      "source": "“요리 많이 준비하고 계셔?”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "I mean, I’d barely made it back after brushing past death!",
+      "current": "I mean, I’d crossed death’s door more times than I could count and barely made it back!",
+      "defect": "Adds a quantity the source does not state. The line is that he barely made it back after surviving life-or-death crises, not that the close calls were countless.",
+      "id": "F03",
+      "rationale": "죽을 고비 넘겨 가면서 겨우 돌아왔는데 names the ordeal and the barely-returned result; 가면서 is not a count.",
+      "severity": "major",
+      "source": "나는, 어? 그렇게 죽을 고비 넘겨 가면서 겨우 돌아왔는데!"
+    },
+    {
+      "confidence": 0.92,
+      "correction": "Just pork belly.",
+      "current": "Pork belly.",
+      "defect": "겨우 is the point: pork belly is a comedown relative to the cash and C-rank license. Dropping it removes the narrator’s dissatisfaction.",
+      "id": "F04",
+      "rationale": "The next sentences contrast the cheap plan with the license and the bag of cash; 겨우 is that contrast, not a bare food label.",
+      "severity": "major",
+      "source": "겨우 삼겹살."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Even from a distance, she radiated total bum energy.",
+      "current": "Even from a distance, she radiated the energy of a lifelong unemployed person.",
+      "defect": "날백수 is total bum/slacker aura. “Lifelong unemployed” overstates 날 and sits badly on a high-school sister.",
+      "id": "F05",
+      "rationale": "날 intensifies 백수 as utter idleness, not duration of unemployment.",
+      "severity": "minor",
+      "source": "멀리서도 느껴지는 날백수 포스."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "Keep gukbap and add a first-use footnote: soup served with rice.",
+      "current": "For someone like me, who had only ever visited gukbap restaurants, it was a massive cultural shock.",
+      "defect": "First use of gukbap has no footnote, against the standing instruction to identify it as soup served with rice.",
+      "id": "F06",
+      "rationale": "Binding continuity says to use gukbap with a first-use footnote; the draft keeps the term but omits the note.",
+      "severity": "minor",
+      "source": "국밥집만 드나들었던 내게는 엄청난 문화 충격이다."
+    }
+  ],
+  "summary": "One critical subject swap has the passenger hugging the blue truck instead of the drink box; several major lines also change who is cooking, how much danger is claimed, and the ‘mere pork belly’ beat.",
+  "version": 1
+}

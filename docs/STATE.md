@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 51
-- Next chapter: 52
-- Current block: 50–54 (2/5)
-- Latest translation: `translations/0051.md`
+- Last completed: 52
+- Next chapter: 53
+- Current block: 50–54 (3/5)
+- Latest translation: `translations/0052.md`
 - Latest summary: `summaries/0045-0049.md`
-- Safe profiles through: chapter 51
+- Safe profiles through: chapter 52
 
 
 
@@ -15,7 +15,7 @@
 
 
 
-- Taekyung spends all 100 Remaining Points, then uses One Flash to kill the Level 52 Lizardman Great Chieftain and dozens of monsters from the pheromone-attracted horde. Choi Minwoo realizes Taekyung may be stronger than him. Taekyung completes three C-rank Gates in one day, receives 300 million won including a 270 million won bonus, and is ordered to take weekends off.
+- Taekyung returns home after months with his C-rank Hunter license and 300 million won. He tells his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.
 
 ## Open Questions
 - The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.
