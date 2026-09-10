@@ -1,0 +1,39 @@
+{
+  "chapter": 50,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.201,
+    "source_characters": 6414,
+    "source_paragraphs": 236,
+    "translation_characters": 14117,
+    "translation_paragraphs": 249
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가창법",
+        "preferred": "Jin Family's Spear Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "소풍",
+        "romanization": "sopung"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "상동",
+        "romanization": "sangdong"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

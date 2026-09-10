@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 49
+- **Safe through:** Chapter 50
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -36,4 +36,5 @@
 - **Chapter 47 continuity:** Taekyung goes to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment and confronts his former boss, Kim Sangshik, over arranging his dismissal. When Kim grabs him, Taekyung catches his wrist with overwhelming synchronized strength. The measuring device detects an error while scanning Taekyung’s fifteen years of internal energy, leaving the reassessment result unresolved. He is about to meet Kim again when he emerges from the measurement-room elevator.
 - **Chapter 48 continuity:** The Association recognizes Taekyung as C-rank-level, drawing a swarm of Guild recruiters, although formal registration takes several days. He rejects Kim Sangshik’s Sopung Guild offer unless the Guild removes one man he hates. Team Leader Choi pays him 10.3 million won so far for the raid, and Taekyung tells Seong Jinho a fabricated account of his reawakening while keeping the Ark - 2020 capsule and Murim secret. After drinking with Jinho, the System afflicts him with Dead Drunk; he dreams of unclear Murim voices telling the youngest to survive but remembers nothing after waking.
 - **Chapter 49 continuity:** Taekyung wakes from the System’s Sleep Mode with a Hangover, detoxifies it through qi circulation, and finds reality’s qi weak and polluted. He signs a seven-day provisional contract with Peace Guild after declining the one-year C-rank-level offer, chooses the First Rate Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon, and enters a D-rank Gate with Team Leader Choi alone. Choi reveals he is reawakened; Taekyung infers he is at least B-rank, but the raid’s outcome remains unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–49
+- **Chapter 50 continuity:** Taekyung learns that Team Leader Choi holds exclusive rights to the D-rank Gate and clears a nearby colony of about twenty Level 40 swamp Lizardmen alone using the Lizardman gear, leveling up twice without injury. Choi says the encounter tested Taekyung’s skill, endurance, and ability to work with him, then releases a powerful pheromone lure collected from female Lizardmen; the resulting horde and the raid’s outcome remain unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–50

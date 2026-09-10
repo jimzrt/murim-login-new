@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "You’re curious, aren’t you? Figuring I called you in first thing this morning to raise hell? / That’s right. / I called you to raise hell.",
+      "current": "You’re curious, aren’t you? Wondering what the hell I called you in first thing this morning to do? / That’s right. / I called you to raise hell.",
+      "defect": "The first line never mentions raising hell, so 맞아 has nothing specific to confirm and the repeated 지랄 punchline is lost.",
+      "id": "F01",
+      "rationale": "The joke is that Kim’s guessed 지랄 is exactly why he was summoned; both halves have to name that fit.",
+      "severity": "major",
+      "source": "궁금하지? 이 인간이 또 뭔 지랄을 떨려고 아침부터 불렀나, 싶지? / 맞아. / 지랄 떨려고 부른 거라고."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "The reptiles’ yellow eyes slowly closed.",
+      "current": "The yellow reptiles’ eyes slowly closed.",
+      "defect": "노란 is attached to the reptiles, making the Lizardmen yellow despite their green scales.",
+      "id": "F02",
+      "rationale": "녹색 비늘 already colors the bodies green; the dying detail is the yellow eyes shutting.",
+      "severity": "major",
+      "source": "노란 파충류의 눈이 스르륵 감긴다. / 사방에서 녹색 비늘이 번뜩이며"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "I even told you to make sure you recruited him, but if you told the truth I’d obviously raise hell.",
+      "current": "The Guild Master specifically told you to recruit him, but if you told the truth, he’d obviously raise hell.",
+      "defect": "The speaker is the Guild Master; third-person 길드장이/he can be read as some other Guild Master’s order.",
+      "id": "F03",
+      "rationale": "This is hierarchical self-reference by the man speaking, then the fit he would throw at an honest report.",
+      "severity": "major",
+      "source": "길드장이 꼭 영입하라고 신신당부까지 했는데 사실대로 말하면 지랄 떨 게 뻔하고"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Yeah, you. That.",
+      "current": "Yeah, that.",
+      "defect": "The irritated vocative 인마 is dropped from the thought.",
+      "id": "F04",
+      "rationale": "인마 is the blunt poke that marks how he hears Choi, not a throwaway filler.",
+      "severity": "minor",
+      "source": "그래, 인마. 그거."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "What the hell is this bullshit.",
+      "current": "What the hell was this supposed to mean?",
+      "defect": "개소리 is reduced to puzzled hell rather than calling the plan bullshit.",
+      "id": "F05",
+      "rationale": "The line is a profane rejection of Choi’s raid plan, not a request for clarification.",
+      "severity": "minor",
+      "source": "이게 뭔 개소리야."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Team Leader Three.",
+      "current": "Third Team Leader.",
+      "defect": "Same 3팀장 is Third Team Leader here and Team Leader Three later; the 아 vocative is gone.",
+      "id": "F06",
+      "rationale": "Keep the address aligned with 3팀장도/3팀장 마음 알아 later in the scene.",
+      "severity": "minor",
+      "source": "3팀장아."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "that Sangdong Guild Master bastard told me something interesting.",
+      "current": "that bastard from Sangdong Guild told me something interesting.",
+      "defect": "The speaker is specifically Sangdong’s Guild Master, not an unspecified Sangdong bastard.",
+      "id": "F07",
+      "rationale": "The next lines keep attacking 상동 길드장; the first mention should already be him.",
+      "severity": "minor",
+      "source": "상동 길드장 그 새끼가 재미있는 얘기를 하더라."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "I asked, quietly hopeful.",
+      "current": "I asked, unable to hide my expectations.",
+      "defect": "은근히 is quiet/inward expectation, not openly unconcealed eagerness.",
+      "id": "F08",
+      "rationale": "The manner of the question is a pragmatic cue, not generic excitement.",
+      "severity": "minor",
+      "source": "나는 은근히 기대하며 물었다."
+    }
+  ],
+  "summary": "The D-rank Gate raid is mostly faithful, but a Guild Master callback joke is broken, lizardman eye color is misparsed, and the Guild Master’s self-reference reads as a third person.",
+  "version": 1
+}

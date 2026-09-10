@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Both halves of the callback now name raising hell so 맞아 confirms the guessed 지랄.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "노란 modifies the eyes; bodies stay green-scaled.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Speaker is the Guild Master; first-person self-reference restores who would raise hell.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored the irritated vocative 인마 as Yeah, you.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "개소리 is a profane rejection of the plan, not a request for meaning.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Opening address now matches later 3팀장 as Team Leader Three.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "First mention is Sangdong’s Guild Master, not an unspecified Guild member.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "은근히 is quiet inward hope, not unconcealed eagerness.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

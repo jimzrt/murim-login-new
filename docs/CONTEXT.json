@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 49,
-  "continuity_sources": [48, 49],
+  "safe_through": 50,
+  "continuity_sources": [49, 50],
   "active_continuity": [
     "Jin Taekyung is back in reality after logging out of Murim. He remains formally an F-rank Hunter pending registration of his C-rank-level reassessment, has signed a seven-day provisional contract with Peace Guild, and is entering a D-rank Gate with Team Leader Choi.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -24,13 +24,15 @@
     "Taekyung encounters former boss Kim Sangshik at the Hunter Association and confronts him over arranging his dismissal. Kim is a Level 24 D-rank Hunter and one of Sopung Guild's team leaders; Taekyung's synchronized strength overwhelms him when he grabs Taekyung. The reassessment device malfunctions while scanning Taekyung's internal energy, but the Association recognizes Taekyung as C-rank-level. Choi Min-su of Sangdong Guild measures as C-rank with A-rank mana control, and Sopung's Guild Master orders Kim to recruit him.",
     "Guild scouts immediately compete to recruit Taekyung after the reassessment. Kim apologizes for his past conduct and offers Sopung Guild's recruitment package, but Taekyung tells him to say he will consider it only if Sopung gets rid of one man he cannot stand—the obvious target being Kim.",
     "Taekyung wakes from the System's Sleep Mode with a Hangover, detoxifies it through qi circulation, and finds reality's qi weak and polluted. He declines Choi's one-year contract, signs a seven-day provisional contract, chooses the First Rate Lizardman Hunter's Leather Set and Lizardman Slayer's Harpoon, and enters a D-rank Gate with Choi alone.",
-    "The Lizardman Hunter's Leather Set activates its Scale Armor effect when fully equipped, and the Lizardman Slayer's Harpoon has a high probability of causing Bleeding. A deferential middle-aged man restricts access to the Gate and addresses Choi as 'young master,' indicating Choi's wealthy background."
+    "The Lizardman Hunter's Leather Set activates its Scale Armor effect when fully equipped, and the Lizardman Slayer's Harpoon has a high probability of causing Bleeding. A deferential middle-aged man restricts access to the Gate and addresses Choi as 'young master,' indicating Choi's wealthy background.",
+    "Taekyung clears a nearby colony of about twenty Level 40 swamp Lizardmen alone with the Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon, levels up twice, and remains uninjured. Choi says the encounter was a test, then releases a powerful pheromone lure collected from female Lizardmen; the resulting horde and the raid’s outcome remain unresolved.",
+    "Sopung Guild’s Guild Master discovers Kim Sangshik filed a false report about Taekyung and expelled him from the Guild, then expels Kim and his son Kim Sangho. The Guild begins gossiping about Taekyung’s reawakening and whereabouts."
   ],
   "open_questions": [
     "The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "Whether the officials' investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, whether Taekyung and Choi survive the D-rank Gate, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
+    "Whether the officials' investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, Choi's exact current rank, what the pheromone-attracted horde contains, whether Taekyung and Choi survive the D-rank Gate, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -52,6 +54,7 @@
     "Preserve the *sip-pal* (“eighteen”) finder’s-fee pun and explain the abrupt formal delivery in a footnote.",
     "Keep the exact unreadable-item notification “This Item cannot be read.” and the capsule manual’s permanent user-binding rule.",
     "Use Kim Sangshik for 김상식, and preserve the distinct Hunter rank and mana-control grades in the Choi Min-su recruitment scene.",
-    "Use Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon for the First Rate System items, and retain the Pocheongcheon reference with a concise footnote."
+    "Use Lizardman Hunter’s Leather Set and Lizardman Slayer’s Harpoon for the First Rate System items, and retain the Pocheongcheon reference with a concise footnote.",
+    "Use swamp Lizardmen for 늪 리자드맨 and preserve the female-Lizardman pheromone lure as the unresolved cliffhanger in Chapter 50."
   ]
 }
