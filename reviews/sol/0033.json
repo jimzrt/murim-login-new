@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.93,
+      "correction": "“Intelligence—I obtained intelligence.”",
+      "current": "“I received intelligence. We received intelligence.”",
+      "defect": "The repeated 정보를 is a stammer with one omitted subject; the draft invents a shift from I to We.",
+      "id": "F01",
+      "rationale": "Nothing in the line changes the actor. Seogwang is forcing out the same report twice, not correcting I to We.",
+      "severity": "major",
+      "source": "“정보를, 정보를 입수했습니다.”"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“He must have said he was being pursued by the Jin Family of Taiyuan’s pursuit party and asked you to help him.”",
+      "current": "“He must have said he was being pursued by the Jin Family of Taiyuan and asked you to help him.”",
+      "defect": "추격대 is omitted; the supposed plea is pursuit by a chase unit, not the family in general.",
+      "id": "F02",
+      "rationale": "이천백 specifies 추격대 as the content of the false request for aid.",
+      "severity": "minor",
+      "source": "“태원진가의 추격대에 쫓기고 있으니 도와 달라고 했겠지.”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "If we hire people like that, our sect’s reputation will suffer afterward…",
+      "current": "If we hire people like that, the sect’s reputation will suffer afterward…",
+      "defect": "본문 is the in-group term our/this sect, not a detached the sect.",
+      "id": "F03",
+      "rationale": "Binding glossary: 본문 → our sect / this sect. The speaker is a Mount Heng senior referring to their own sect.",
+      "severity": "minor",
+      "source": "그런 놈들을 고용했다가는 차후에도 본문의 평판이……."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "The physician was astounded.",
+      "current": "The physician clicked his tongue in amazement.",
+      "defect": "혀를 내두르다 is astonishment, not the tongue-click of 혀를 차다.",
+      "id": "F04",
+      "rationale": "Clicking the tongue is a different pragmatic cue, usually disapproval; the source is marveling at the recovery.",
+      "severity": "minor",
+      "source": "의원이 혀를 내둘렀다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "The chain of debts and grudges would not be broken until one of the two sides fell.",
+      "current": "The chain of vengeance would not be broken until one of the two sides fell.",
+      "defect": "은원 is debts and grudges (恩怨); vengeance alone drops 은.",
+      "id": "F05",
+      "rationale": "The preceding sentence already renders 은원 as debts and grudges; the 고리 is that same bond, not vengeance only.",
+      "severity": "minor",
+      "source": "둘 중 하나가 쓰러지기 전까지 은원의 고리는 끊어지지 않는다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "I lay still and fidgeted with my fingers.",
+      "current": "I lay still and flexed my fingers.",
+      "defect": "꼼지락거리다 is fidgeting/wriggling, not a deliberate flex.",
+      "id": "F06",
+      "rationale": "Small hand motion is characterization: idle wriggling while he looks at the calluses, not a muscle flex.",
+      "severity": "minor",
+      "source": "나는 가만히 누운 채로 손을 꼼지락거렸다."
+    }
+  ],
+  "summary": "One major subject split in Seogwang’s stammer (I vs We); otherwise localized omissions, a wrong astonishment gesture, and a glossary miss on 본문.",
+  "version": 1
+}

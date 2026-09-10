@@ -1,17 +1,17 @@
 # Translation State
 
-- Last completed: 32
-- Next chapter: 33
-- Current block: 30–34 (3/5)
-- Latest translation: `translations/0032.md`
-- Latest summary: `summaries/beats/0032.md`
-- Safe profiles through: chapter 32
+- Last completed: 33
+- Next chapter: 34
+- Current block: 30–34 (4/5)
+- Latest translation: `translations/0033.md`
+- Latest summary: `summaries/beats/0033.md`
+- Safe profiles through: chapter 33
 
 
 ## Current Block
 
 
-Taekyung survives Jopil’s Flame Divine Palm, recalls the Hunter skill Thrust with All My Might, and cripples Jopil with daggers from his Inventory. Jopil causes his own qi deviation by burning his life for one final attack, but Taekyung awakens the hardened third internal energy in his dantian and kills him with Thrust with All My Might through the broken Sharp Spear. Taekyung remains unconscious for five days, then wakes after a nightmare about the modern-world Gate raid where his greed led to his team’s deaths. Wipeng reports that the reconnaissance squad and Sakju Branch survivors returned safely; two are seriously injured, but no lives are in danger. He urges Taekyung to remember the dead and live their share as well. The Jin Family wins a major battle at Honju, and Wipeng and Jin Wikyung each kill one of the Mount Heng Twin Devils. Wikyung celebrates Taekyung publicly as the Sleeping Dragon of Shanxi based on an exaggerated rumor of his victory over Jopil and one hundred wandering martial artists.
+Lee Seogwang returns from Honju with only twenty-three Mount Heng survivors, including himself. Lee Cheonbaek orders him back to the sect, then decides to replace the three lost Peak masters by hiring wandering martial artists, black-market fighters, and mounted bandits. With five hundred men assembled, Mount Heng plans to march on Taiyuan in three days. Taekyung wakes on his second day of recovery with every injury healed, learns that most of the twenty years of internal energy from a hundred-year snow ginseng was consumed in his final Skill use, and checks his Status Window: he is Level 30, has 410 Fame and fifteen years of internal energy, and remains Second Rate. Thrust with All My Might has become the adjustable Peak Skill One Flash. Taekyung reflects on enjoying life in Murim while still wanting to return to his family and true self, then checks the Logout Main Quest and learns that First Rate and Fame 500 remain; Jin Wikyung is the person he intends to ask about reaching First Rate.
 ## Open Questions
 
 - The capsule's purpose and route home remain unresolved.

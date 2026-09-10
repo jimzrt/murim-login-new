@@ -1,0 +1,48 @@
+{
+  "chapter": 33,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.318,
+    "source_characters": 5605,
+    "source_paragraphs": 169,
+    "translation_characters": 12993,
+    "translation_paragraphs": 152
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "numbers",
+      "details": {
+        "values": [
+          "2"
+        ]
+      },
+      "message": "Arabic numerals from the source are absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "경지",
+        "preferred": "realm / realm stage"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "일격",
+        "preferred": "One Strike"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본문",
+        "preferred": "our sect / this sect"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

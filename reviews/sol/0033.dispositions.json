@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Seogwang’s stammer as the same actor repeating 정보를, without an invented I-to-We shift.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored 추격대 as the Jin Family of Taiyuan’s pursuit party in Cheonbaek’s line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 본문 as our sect, the in-group term from a Mount Heng senior.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Replaced tongue-clicking with astonishment for 혀를 내두르다.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Kept 은원의 고리 as the chain of debts and grudges, matching the preceding 은원 rendering.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Rendered 손을 꼼지락거렸다 as fidgeting with his fingers, not a deliberate flex.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

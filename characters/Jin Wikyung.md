@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 32
+- **Safe through:** Chapter 33
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -10,5 +10,6 @@
 - **Chapter 21 continuity:** When Mount Heng’s war begins with the murder of twenty-five children from Jin Family branches, Wikyung is shaken and blames himself. The Head Elder’s cold argument about wartime sacrifice restores his composure, though the two remain politically opposed over Taekyung’s assignment.
 - **Chapter 22 continuity:** After Taekyung’s reconnaissance squad leaves, Wikyung admits that he had been worrying about his youngest brother but insists Taekyung is grown and can manage without being coddled. A Lower District Sect messenger hawk then reports that Jopil, One Question, One Kill, and twenty special-detachment members have appeared in Jeongyang. Wikyung orders fifty martial artists to retrieve Jin Family members safely and becomes alarmed when he learns Taekyung is also in Jeongyang.
 - **Chapter 32 continuity:** Wikyung reports that the Jin Family’s one hundred elites defeated two hundred Mount Heng vanguard troops at Honju; fewer than thirty Mount Heng fighters escaped, and the Jin Family’s casualties were similar. He and Wipeng each killed one of the Mount Heng Twin Devils, both Peak masters. Overcome with affection and pride after hearing Taekyung’s account of Jopil’s defeat, Wikyung wrecks part of Taekyung’s bedroom, carries him to the opening, and publicly celebrates him before a crowd as the Sleeping Dragon of Shanxi.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32
+- **Chapter 33 continuity:** Taekyung regards Wikyung as the best private tutor for explaining how to reach the First Rate realm and asks to speak with him.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–33
 
