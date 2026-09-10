@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored 일등 공신 as the war’s foremost meritorious contributor instead of the person responsible for causing it.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the Three Paths Sect as a three-sect union, Gunggwimun’s ongoing cliff archery, and the small and mid-sized Five Gates turning at once.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 웬 놈이냐 as rude identification in both the spoken line and the later overheard quotation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Kept the joke on the curse itself being new to the Head Elder, separate from the family-hierarchy shock.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Named the Mute Acupoint and Paralysis Acupoint as the mechanisms for silence and lockup.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

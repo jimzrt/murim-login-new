@@ -1,0 +1,56 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "If they had to name the person who had contributed most to this war, it was unquestionably the Head Elder.",
+      "current": "If they had to name the person most responsible for the war, the answer was obviously the Head Elder.",
+      "defect": "일등 공신 is the war’s top meritorious contributor, not the person responsible for causing the war. English “responsible for the war” flips credit into blame and undercuts why the traitor shout sounds insane.",
+      "id": "F01",
+      "rationale": "The next lines list gathering the family’s strength and defeating Lee Cheonbaek as merit. The scene’s logic is that everyone sees him as the war’s greatest hero; the draft’s wording makes him sound like the war’s instigator.",
+      "severity": "critical",
+      "source": "이 전쟁의 일등 공신을 꼽으라면 단연 대장로다."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "The Three Paths Sect, a union of three sects; the Tao-centered Byeokdo Sect; and Gunggwimun, which had been pouring arrows from the cliffs without pause—the small and mid-sized sects known as the Five Gates of Shanxi—turned in an instant.",
+      "current": "The Three Paths Sect, the Tao-centered Byeokdo Sect, and Gunggwimun—the minor sects known collectively as the Five Gates of Shanxi—changed in an instant.",
+      "defect": "Omits that the Three Paths Sect is a union of three sects, which is why these groups are the Five Gates, and omits that Gunggwimun had been loosing arrows nonstop from the cliffs.",
+      "id": "F02",
+      "rationale": "The source names three components that add up to five only if 삼도문 remains a three-sect union, and it identifies Gunggwimun by their ongoing cliff-archer role in this battle.",
+      "severity": "major",
+      "source": "세 개의 문파 연합체인 삼도문, 도를 중심으로 수련하는 벽도문, 절벽에서 쉴 새 없이 화살을 쏘아 대던 궁귀문까지. 이른바 산서오문이라 불리는 중소 문파의 무인들이 한순간에 돌변했다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“Who the hell are you?”",
+      "current": "“Who are you?”",
+      "defect": "웬 놈이냐 is contemptuous (“what bastard / who the hell”); “Who are you?” is a polite identification question.",
+      "id": "F03",
+      "rationale": "The Head Elder is barking at an unknown attacker who just threw a spear at his back; the register should stay rude.",
+      "severity": "minor",
+      "source": "“웬 놈이냐!”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "It was probably a curse the Head Elder had never heard in his life.",
+      "current": "I was probably the first person in the Head Elder’s life to speak to him that way.",
+      "defect": "The joke is that this curse itself is something he has never heard, not merely that no one has ever addressed him rudely.",
+      "id": "F04",
+      "rationale": "The following sentence adds the separate shock of family hierarchy and generational rank; this line is specifically about the obscenity.",
+      "severity": "minor",
+      "source": "아마 대장로 평생 들어 본 적 없는 욕일 것이다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "The Head Elder pressed the Mute Acupoint, taking away his voice. Then his hand brushed the Paralysis Acupoint, and Lee Cheonbaek’s body went rigid.",
+      "current": "The Head Elder had pressed an acupoint that silenced him. Then his hand brushed another acupoint, and Lee Cheonbaek’s body stiffened rigidly.",
+      "defect": "The source names Mute Acupoint (아혈) and Numbness/Paralysis Acupoint (마혈); the draft keeps the effects but drops the terms.",
+      "id": "F05",
+      "rationale": "The hanja-glossed point names are the mechanical explanation for silence then lockup, not generic “an acupoint / another acupoint.”",
+      "severity": "minor",
+      "source": "아혈(啞穴)이 짚여 말을 할 수 없게 되었고, 이어 대장로의 손이 마혈(痲穴)을 스치자 몸이 딱딱하게 굳었다."
+    }
+  ],
+  "summary": "The draft reverses the Head Elder’s public role from the war’s foremost meritorious hero to the person “responsible for the war,” and it collapses the Five Gates of Shanxi so the five-sect structure and Gunggwimun’s cliff archery disappear.",
+  "version": 1
+}

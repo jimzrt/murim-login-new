@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 56
+- **Safe through:** Chapter 57
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -43,4 +43,5 @@
 - **Chapter 54 continuity:** Taekyung dreams of the Mount Heng–Jin Family battle and worries about the people he left in Murim, realizing they are no longer NPCs to him. He decides to return despite the danger, rejects Team Leader Choi’s lucrative contract because he cannot abandon Murim, and reconnects through the Ark - 2020 capsule, logging back in.
 - **Chapter 55 continuity:** Taekyung wakes in Murim after reconnecting through the Ark - 2020 capsule and learns that logging in or logging out puts the other side into a deathlike sleep. He orders the reconnaissance squad to reach the Eight Spring Gorge battle in half the remaining time. The Jin Family has trapped Mount Heng in the gorge; the Head Elder plans to use the cliff archers against Mount Heng’s command, while Lee Cheonbaek kills the Blood Rain Group’s leader and leads three Peak masters and dozens of First Rate masters into the assault. The battle’s outcome remains unresolved.
 - **Chapter 56 continuity:** Taekyung reaches Eight Spring Gorge as the Head Elder is about to execute a defeated Lee Cheonbaek. He splits a spear flying at the Head Elder’s back with Sword Energy and confronts him, leaving the battle’s outcome unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–56
+- **Chapter 57 continuity:** Taekyung reaches the Eight Spring Gorge battlefield with the reconnaissance squad and throws a spear at the Head Elder to protect Jin Wikyung. When the Head Elder splits it, Taekyung publicly curses him and calls him a traitor; after the First Elder's signal exposes the Five Gates conspiracy, Taekyung charges the Head Elder while he keeps Lee Cheonbaek alive and immobilized.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–57

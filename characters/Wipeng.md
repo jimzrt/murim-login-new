@@ -1,6 +1,6 @@
 # Wipeng (위팽)
 
-- **Safe through:** Chapter 56
+- **Safe through:** Chapter 57
 - **Aliases:** None revealed
 - **Role:** Jin Wikyung’s personal guard
 - **Personality:** Loyal, observant, teasing, and resigned to his master’s impulsive departures
@@ -12,4 +12,5 @@
 - **Chapter 32 continuity:** Wipeng reports the Jin Family’s victory at Honju and explains that he and Wikyung each killed one of the Mount Heng Twin Devils, both Peak masters. He recounts Taekyung’s fight with Jopil, sincerely acknowledges Taekyung’s achievement while warning that Taekyung was not actually stronger than Jopil, and teases him by imitating his eye spasm. He witnesses Wikyung’s destructive, overly affectionate public celebration of Taekyung as the Sleeping Dragon of Shanxi.
 - **Chapter 34 continuity:** Wipeng arrives late at the main assembly hall, bewildered by Jin Wikyung’s laughter after Taekyung reaches the First Rate realm.
 - **Chapter 56 continuity:** Wipeng fights beside Jin Wikyung as the Jin Family’s masters engage Mount Heng’s command at Eight Spring Gorge. He remains in the unresolved battle when Taekyung intervenes in the Head Elder’s attempted execution of Lee Cheonbaek.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–34, and 56
+- **Chapter 57 continuity:** At Eight Spring Gorge, Wipeng attacks the First Elder on Jin Wikyung's order, but the First Elder reveals concealed Peak-level martial arts and knocks him away. The First Elder then signals the Five Gates forces to turn on the battlefield.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–34, and 56–57

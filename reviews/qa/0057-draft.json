@@ -1,0 +1,39 @@
+{
+  "chapter": 57,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.346,
+    "source_characters": 5640,
+    "source_paragraphs": 189,
+    "translation_characters": 13229,
+    "translation_paragraphs": 213
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "혈도",
+        "preferred": "acupoint / vital point"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀문",
+        "preferred": "your sect"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "궁귀문",
+        "romanization": "gunggwimun"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}

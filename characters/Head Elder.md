@@ -1,6 +1,6 @@
 # Head Elder
 
-- **Safe through:** Chapter 56
+- **Safe through:** Chapter 57
 - **Aliases:** Name not yet revealed
 - **Role:** Head Elder of the Jin Family of Taiyuan; senior family authority
 - **Personality:** Inscrutable, politically shrewd, and ruthless in council; his motives remain unclear
@@ -14,6 +14,7 @@
 - **Chapter 38 continuity:** Gwak Jun reveals that the Three Paths Sect was established thirty years earlier according to “that person’s” will. Taekyung and Hyuk Mujin infer that more than one hundred martial artists from the Three Paths Sect and Gunggwimun joined the Jin Family’s force, while nearly half the main force belongs to the Head Elder’s faction. Taekyung therefore strongly suspects that the Head Elder is a traitor who united the family’s strength to seize Shanxi, but the full plan and the Head Elder’s unidentified accomplice remain unresolved.
 - **Chapter 55 continuity:** At Eight Spring Gorge, the Head Elder explains to Jin Wikyung that Mount Heng’s impatience must be allowed to break its morale before the strike. He plans for himself, Wikyung, and Wipeng to engage the enemy command while the cliff archers rain arrows; he privately recognizes Wikyung as capable of raising the family, but his betrayal remains unresolved.
 - **Chapter 56 continuity:** The Head Elder intercepts Lee Cheonbaek and demonstrates that he is a master far beyond the Blood Wolf Sword, defeating him after a prolonged duel. He demands the total annihilation of Mount Heng, reveals through Sound Transmission that “they” killed Lee Seogeun, and prepares to execute Cheonbaek before Taekyung intervenes. His betrayal and the identity of the group or accomplice remain unresolved.
-- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–56
+- **Chapter 57 continuity:** Taekyung arrives at Eight Spring Gorge and publicly calls the Head Elder a traitor after the elder splits his thrown spear. The Head Elder confirms the hidden betrayal by keeping Lee Cheonbaek alive, silencing and paralyzing him, and acknowledging that the signal has come too early as the Five Gates forces turn on the battlefield. The full plan and accomplice remain unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, 37–38, and 55–57
 
 
