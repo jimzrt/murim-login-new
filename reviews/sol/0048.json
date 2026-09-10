@@ -1,0 +1,106 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "If you only heard that, you’d think he was the prime minister, not a goshiwon manager.",
+      "current": "At a glance, anyone would think he was the prime minister instead of a goshiwon manager.",
+      "defect": "The joke is auditory (총무 vs 국무총리) and cued by 들으면; “at a glance” makes it visual and drops the mechanism.",
+      "id": "F01",
+      "rationale": "얼핏 들으면 names hearing as the basis for mistaking 총무 for 국무총리.",
+      "severity": "major",
+      "source": "얼핏 들으면 고시원 총무가 아니라 국무총리인 줄 알겠다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "“Youngest, survive.”",
+      "current": "“Kid, survive.”",
+      "defect": "막내야 is a youngest-child/youngest-member address, not a generic “kid.”",
+      "id": "F02",
+      "rationale": "막내 is kinship/hierarchy, not age-slang; “Kid” erases that cue.",
+      "severity": "major",
+      "source": "막내야, 살아남아라."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "I figured it was better if, for Jinho hyung, it just stayed an absurd lie.",
+      "current": "It seemed better to let Jinho hyung believe some absurd lie.",
+      "defect": "The capsule story is to remain an absurd lie; the draft reads as a decision to feed him a new lie.",
+      "id": "F03",
+      "rationale": "남는 게 marks leaving the prior capsule account as a lie, not inventing one.",
+      "severity": "major",
+      "source": "진호 형에게는 허무맹랑한 거짓말로 남는 게 좋을 것 같다는 판단이었다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“A little more came in, but that’s for now.”",
+      "current": "“I got a little more, but that’s the basic amount.”",
+      "defect": "일단은 is a hedge (“for now”), not a statement that ten million is the base pay; the contract base is later 300,000 won.",
+      "id": "F04",
+      "rationale": "일단은 is temporal withholding, not a quantity label.",
+      "severity": "major",
+      "source": "“좀 더 들어오긴 했는데 일단은.”"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“Y-you? What are you doing there?”",
+      "current": "“Y-you? What are you doing here?”",
+      "defect": "Kim asks 거기 (“there”); only the reply uses 여기 (“here”).",
+      "id": "F05",
+      "rationale": "The 거기/여기 shift is in the source pair and should be kept.",
+      "severity": "minor",
+      "source": "“네, 네가 왜 거기 있어?”"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "I took a step forward, and Kim Sangshik backed away weakly.",
+      "current": "I took a step forward, and Kim Sangshik stumbled backward.",
+      "defect": "힘없이 뒷걸음질 is a feeble retreat, not a stumble.",
+      "id": "F06",
+      "rationale": "뒷걸음질 친다 is stepping back; 힘없이 is lack of strength, not loss of footing.",
+      "severity": "minor",
+      "source": "내가 한 걸음 내딛자 김상식이 힘없이 뒷걸음질 친다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Given the situation, the Guild Master seemed scared shitless.",
+      "current": "Given the situation, the Guild Master seemed to be getting pretty desperate.",
+      "defect": "똥줄이 탄 is crude panic; “pretty desperate” softens register.",
+      "id": "F07",
+      "rationale": "똥줄이 타다 is vulgar fear, matching the chapter’s scatological register.",
+      "severity": "minor",
+      "source": "그런 상황이니 길드장도 어지간히 똥줄이 탄 모양이다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "“The fuck I am. What kind of bullshit is that?”",
+      "current": "“The hell I am. What kind of bullshit is that?”",
+      "defect": "시발 is stronger than “the hell.”",
+      "id": "F08",
+      "rationale": "시발 is strong profanity; 개소리 is already rendered as “bullshit.”",
+      "severity": "minor",
+      "source": "“울기는 시발. 뭔 개소리야.”"
+    },
+    {
+      "confidence": 0.87,
+      "correction": "**Status Effect:** Dead Drunk. / *Oh, right. I was dead drunk.*",
+      "current": "**Status Effect:** Drunkenness. / *Oh, right. I’m drunk.*",
+      "defect": "만취 is dead-drunk / fully intoxicated, not generic drunkenness.",
+      "id": "F09",
+      "rationale": "만취 names a complete-intoxication status, then is echoed in thought.",
+      "severity": "minor",
+      "source": "상태 이상, [만취]에 걸렸습니다. / ‘아, 맞다. 나 만취 상태였지.’"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "His face was dazed, and his voice was badly hoarse.",
+      "current": "His face was blank, and his voice was hoarse from drink.",
+      "defect": "“from drink” is not in the source.",
+      "id": "F10",
+      "rationale": "잔뜩 쉰 목소리 states degree of hoarseness only; the cause is added.",
+      "severity": "minor",
+      "source": "넋 나간 얼굴, 잔뜩 쉰 목소리."
+    }
+  ],
+  "summary": "Several meaning-level defects: the 총무/국무총리 joke is turned visual, 막내야 is stripped of kinship, the capsule is recast as a fresh lie rather than a lie left in place, and 일단은 is rewritten as a base pay figure.",
+  "version": 1
+}

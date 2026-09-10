@@ -1,0 +1,55 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the auditory 총무/국무총리 joke; the mix-up is from hearing, not looking.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "막내야 is youngest-member address, not generic kid.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Capsule story is left as an existing absurd lie, not a new one fed to him.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "일단은 is a for-now hedge, not a claim that ten million is base pay.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Kim’s line uses 거기 (there); only the reply uses 여기 (here).",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "힘없이 뒷걸음질 is a feeble step back, not a stumble.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "똥줄이 탄 is crude panic, matching the chapter’s register.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "시발 is stronger than the hell; kept bullshit for 개소리.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "만취 is dead-drunk status and is echoed in the later thought.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "넋 나간 and 잔뜩 쉰 only; dropped the unsourced from drink.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

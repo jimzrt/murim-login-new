@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "safe_through": 47,
+  "safe_through": 48,
   "continuity_sources": [46, 47],
   "active_continuity": [
     "Jin Taekyung is back in reality after logging out of Murim. He is an F-rank Hunter and works as a porter for the Peace Guild on an E-rank Gate raid.",
@@ -22,13 +22,14 @@
     "Choi's background check found that Taekyung was the sole survivor of the Sangdong Station Mutated Gate, returned to Gate work for a year and a half, and was fired three days ago; Choi suspects he is at least C-rank or recently reawakened.",
     "Seong Jinho took Taekyung's discarded Ark - 2020 capsule and returned it to his room after bargaining over a finder's fee. The manual confirms that the capsule is permanently bound to its registered user until death.",
     "The System reads ordinary objects but cannot read the capsule or its manual. Taekyung is going to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment.",
-    "Taekyung encounters former boss Kim Sangshik at the Hunter Association and confronts him over arranging his dismissal. Kim is a Level 24 D-rank Hunter and one of Sopung Guild's team leaders; Taekyung's synchronized strength overwhelms him when he grabs Taekyung. The reassessment device malfunctions while scanning Taekyung's internal energy, leaving the result unresolved. Choi Min-su of Sangdong Guild measures as C-rank with A-rank mana control, and Sopung's Guild Master orders Kim to recruit him."
+    "Taekyung encounters former boss Kim Sangshik at the Hunter Association and confronts him over arranging his dismissal. Kim is a Level 24 D-rank Hunter and one of Sopung Guild's team leaders; Taekyung's synchronized strength overwhelms him when he grabs Taekyung. The reassessment device malfunctions while scanning Taekyung's internal energy, but the Association recognizes Taekyung as C-rank-level; formal registration remains pending for several days. Choi Min-su of Sangdong Guild measures as C-rank with A-rank mana control, and Sopung's Guild Master orders Kim to recruit him.",
+    "Guild scouts immediately compete to recruit Taekyung after the reassessment. Kim apologizes for his past conduct and offers Sopung Guild's recruitment package, but Taekyung tells him to say he will consider it only if Sopung gets rid of one man he cannot stand—the obvious target being Kim."
   ],
   "open_questions": [
     "The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "Whether Choi keeps Taekyung's strength secret, whether the officials' investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, what Taekyung's Hunter reassessment will show, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
+    "Whether Choi keeps Taekyung’s strength secret, whether the officials’ investigation exposes Taekyung, how the System's restoration relates to Murim and a possible return, whether Taekyung's formal C-rank registration completes, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
