@@ -1,6 +1,6 @@
 # Jopil (조필)
 
-- **Safe through:** Chapter 30
+- **Safe through:** Chapter 35
 - **Aliases:** One Question, One Kill
 - **Role:** Wandering martial artist and leader of a special detachment attacking the Jin Family of Taiyuan
 - **Personality:** Cruel, amused by violence, and motivated by both payment and the pleasure of hunting his targets
@@ -10,4 +10,5 @@
 - **Chapter 28 continuity:** Jopil’s presence drives a wolf pack away. He admits he is employed to complete a mission, offers to let Taekyung go after truthful answers, and then clarifies that only Taekyung may leave, demanding that the survivors and reconnaissance squad remain. Taekyung refuses.
 - **Chapter 29 continuity:** Jopil overwhelms Taekyung with Peak-level speed and strength, kills an unnamed reconnaissance-squad member with a throwing knife, and enters a System Berserk state after Taekyung cuts his clothes. He shatters Hyuk Mujin’s sword and Han Yeop’s spearhead when they intervene, then wounds Taekyung repeatedly with his sword; the fight ends as he strikes toward Taekyung’s chest.
 - **Chapter 30 continuity:** Jopil is revealed as the nineteenth-generation successor of the Fire Gate Clan. After Taekyung’s dagger causes qi deviation in his dantian, he burns his life to launch one final attack. Taekyung’s awakened third internal energy overpowers him through the broken Sharp Spear, killing Jopil and evaporating half of his upper body.
-- **Sources:** Korean source and accepted translation, Chapters 23–30
+- **Chapter 35 continuity:** After his death, Jopil’s possessions reach Taekyung through Gong Yacheong: the Supreme Peak Flame Divine Palm manual, the dangerous Peak Fire Divine Elixir, and the Nameless Sword made of ten-thousand-year cold iron.
+- **Sources:** Korean source and accepted translation, Chapters 23–30 and 35

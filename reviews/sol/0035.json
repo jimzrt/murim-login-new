@@ -1,0 +1,116 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "I’ll become stronger. As strong as Jopil. No—far stronger than Jopil.",
+      "current": "I’ll become stronger. As strong as Jopil. No—as strong as or stronger than Jopil.",
+      "defect": "The self-correction 훨씬 (‘far more’) is reduced to a hedge, ‘as strong as or stronger.’",
+      "id": "F01",
+      "rationale": "한엽 first matches Jopil, then raises the target well beyond him; the draft’s ‘or stronger’ undoes that escalation.",
+      "severity": "major",
+      "source": "강해질 겁니다. 조필만큼. 아니, 조필보다 훨씬."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "I’ll become even stronger.",
+      "current": "I’ll become stronger too.",
+      "defect": "더 marks a comparative ‘even more,’ not additive ‘also/too.’",
+      "id": "F02",
+      "rationale": "After 한엽’s vow, 혁무진 answers with 더, a competitive raise, not 나도.",
+      "severity": "major",
+      "source": "내가 더 강해질 거다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "Even the timid Second Rate martial artist had, before anyone noticed, joined that current.",
+      "current": "Even the timid Second Rate martial artist had been swept up in the current.",
+      "defect": "동참했다 is active joining; ‘swept up’ makes 한엽 a passive object of the current.",
+      "id": "F03",
+      "rationale": "어느새 동참했다 is his participation in the changed flow, matching the ‘this guy changed too’ beat.",
+      "severity": "major",
+      "source": "소심하던 이류 무사도 어느새 그 흐름에 동참했다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "I’d stood there quietly listening to see what they were saying, and it was quite a scene—a real spectacle.",
+      "current": "I’d stood there listening to them for a while, and it had been absolutely unbearable.",
+      "defect": "가관이다 is a derisive ‘what a spectacle,’ not endurance-breaking ‘unbearable.’",
+      "id": "F04",
+      "rationale": "The gag is secondhand cringe at the earnest talk, not that he could not bear to hear it.",
+      "severity": "major",
+      "source": "무슨 얘길 하나 가만히 듣고 있었는데 아주 가관이다, 가관."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "Still, I have to admit it’s kind of admirable.",
+      "current": "Still, I have to admit it’s kind of touching.",
+      "defect": "기특하다 is patronizing approval (‘good for them’), not sentimental ‘touching.’",
+      "id": "F05",
+      "rationale": "진태경’s beat is grudging pride in subordinates, then 정나미; ‘touching’ shifts him into softness the source withholds until the next lines.",
+      "severity": "major",
+      "source": "그래도 좀 기특하긴 하네."
+    },
+    {
+      "confidence": 0.92,
+      "correction": "Gambling my life for a mere NPC in a game.",
+      "current": "I had risked my life for a couple of NPCs in a game.",
+      "defect": "NPC is singular (공야청) with 고작; 목숨을 건 도박 is a life-stakes gamble, and ‘a couple’ invents a count.",
+      "id": "F06",
+      "rationale": "The self-reproach is the insane bet for one game NPC; plurality and loss of 도박 change the causal self-explanation.",
+      "severity": "major",
+      "source": "고작 게임 속 NPC를 위해서 목숨을 건 도박을 하다니."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "To someone in Murim, the value of these things was beyond any golden calf.",
+      "current": "To a martial artist, the value of these things couldn’t be compared to a golden calf.",
+      "defect": "무림인 is a Murim person; the bound term 무림 is dropped.",
+      "id": "F07",
+      "rationale": "Glossary maps 무림 to Murim; ‘martial artist’ is generic and loses the setting term present in the source.",
+      "severity": "major",
+      "source": "무림인에게 이 물건들의 가치는 금송아지에 비할 바가 아니다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Keep the scene as dash/Sound Transmission lines, not spoken quotes: — The moon is very bright. — So it is.",
+      "current": "“Moon’s very bright tonight.”\n\n“It is.”",
+      "defect": "The garden exchange is dash-marked throughout, unlike quoted speech in the rest of the chapter; regular quotes make it ordinary audible talk.",
+      "id": "F08",
+      "rationale": "The source isolates this meeting from voiced dialogue; quoting it in a moonlit garden implies they are speaking aloud.",
+      "severity": "major",
+      "source": "- 달이 참 밝군요.\n- 그렇군."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Behind the two men, lost in thought, the door that had been slightly ajar slid shut.",
+      "current": "The door that had been left slightly open behind the two men slid shut.",
+      "defect": "Omits 생각에 잠긴, the cue that they are too absorbed to notice the door.",
+      "id": "F09",
+      "rationale": "Their absorption explains why the eavesdropper can close the door unseen.",
+      "severity": "minor",
+      "source": "생각에 잠긴 두 사람의 등 뒤로 빠끔히 열려 있던 문이 스르륵 닫혔다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "“Ugh, shit.”",
+      "current": "“Oh, for fuck’s sake.”",
+      "defect": "씨 is milder than fuck; the chapter’s strong curse is the later 시바.",
+      "id": "F10",
+      "rationale": "Profanity should not be stepped up; 어후, 씨 is exasperated and light next to 시바.",
+      "severity": "minor",
+      "source": "“어후, 씨.”"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "**Effect:** Acquired Flame Divine Palm",
+      "current": "**Effect:** Acquire Flame Divine Palm",
+      "defect": "Bound rendering of 습득 is Acquired, not the imperative Acquire.",
+      "id": "F11",
+      "rationale": "The glossary maps 습득 to Acquired for System/UI wording.",
+      "severity": "minor",
+      "source": "효과 : [화염신장]의 습득"
+    }
+  ],
+  "summary": "Major fidelity misses: Han Yeop’s ‘far stronger than Jopil’ correction is hedged; Hyuk’s 더 is rendered as ‘too’; 가관/기특/동참 shift humor, attitude, and agency; NPC quantity and the life-gamble are altered; 무림인 drops Murim; garden dash-speech is recast as ordinary dialogue.",
+  "version": 1
+}

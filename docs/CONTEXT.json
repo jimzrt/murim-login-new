@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 34,
-  "continuity_sources": [33, 34],
+  "safe_through": 35,
+  "continuity_sources": [34, 35],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -55,7 +55,12 @@
     "Taekyung accepts the Rear Guard Defense short-term Quest after Jin Wikyung asks him to command the rear guard; the System rewards Fame for acceptance and penalizes refusal.",
     "Jin Wikyung tells Taekyung that martial arts begin with belief. Taekyung realizes he has trusted the System's Second Rate label instead of his own achievements and recognizes that he is already First Rate.",
     "Reaching First Rate raises every martial art by one stage, greatly improves Taekyung's Sinews and Bones and Meridians, expands his dantian, and grants two level-ups.",
-    "Taekyung gains Fame from the accepted Quest and public awe and rumors, but remains roughly fifty short of the Logout target. He goes to Medicine King Hall, where entry is restricted to authorized personnel."
+    "Taekyung gains Fame from the accepted Quest and public awe and rumors, but remains roughly fifty short of the Logout target. He goes to Medicine King Hall, where entry is restricted to authorized personnel.",
+    "Hyuk Mujin and Han Yeop recover in Medicine King Hall from serious but nonfatal injuries and resolve to become stronger than Jopil and catch up to Taekyung.",
+    "Taekyung visits the injured squad members, Gong Yacheong, Socheon, and Soyul before the Jin Family's march; rumors and public attention continue to raise his Fame, but he remains about fifty short of Logout.",
+    "Gong Yacheong returns Jopil's Flame Divine Palm manual, Fire Divine Elixir, and Nameless Sword to Taekyung. The manual is Supreme Peak and restricted to a holder of Scorching Yang Qi; the Peak elixir grants thirty years of internal energy but contains dangerous fire qi; the ten-thousand-year cold-iron sword's special power is unknown.",
+    "Taekyung stores Jopil's recovered items in his Inventory and gains another point of Fame.",
+    "The Head Elder meets an unidentified ally in the garden through Sound Transmission. Their preparations, including troop deployments, are complete; the Head Elder is willing to do anything to become Family Head and Shanxi's sole hegemon."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",

@@ -1,0 +1,72 @@
+{
+  "chapter": 35,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.225,
+    "source_characters": 5841,
+    "source_paragraphs": 198,
+    "translation_characters": 12994,
+    "translation_paragraphs": 182
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "numbers",
+      "details": {
+        "values": [
+          "50"
+        ]
+      },
+      "message": "Arabic numerals from the source are absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "삼류",
+        "preferred": "Third Rate"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "이류",
+        "preferred": "Second Rate"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "경지",
+        "preferred": "realm / realm stage"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "심법",
+        "preferred": "cultivation technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

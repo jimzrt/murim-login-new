@@ -1,6 +1,6 @@
 # Socheon (소천)
 
-- **Safe through:** Chapter 28
+- **Safe through:** Chapter 35
 - **Aliases:** None revealed
 - **Role:** Fourteen-year-old survivor of the Sakju Branch; older brother and protector of Soyul
 - **Personality:** Watchful, frightened, and determined to survive and protect his sister after witnessing the massacre of his home
@@ -9,4 +9,5 @@
 - **Continuity:** Flees the destroyed Sakju Branch with Soyul. He is carried first by Gong Yacheong and then carries Soyul as the pursuers close in, reaching Taekyung’s reconnaissance squad and surviving the rescue. Taekyung gives the siblings the false name Hong Gil-dong, but Hyuk Mujin exposes his identity; Socheon learns that Taekyung intends to kill Jopil. In Chapter 26, Socheon travels with the squad, remains exhausted but refuses to fall behind, and comforts Soyul with the lie that their parents went out together.
 - **Chapter 27 continuity:** Socheon remains exhausted but keeps pace, carries the sleeping Soyul during a rest, and accepts Gong Yacheong’s apparent departure without learning the full truth.
 - **Chapter 28 continuity:** Socheon remains with the reconnaissance squad as Jopil demands that the survivors be left behind.
-- **Sources:** Korean source and accepted translation, Chapters 23–28
+- **Chapter 35 continuity:** Socheon recovers in Medicine King Hall with Gong Yacheong and Soyul. He thanks Taekyung for saving them, bows despite Taekyung’s protest, and is disappointed when Taekyung leaves.
+- **Sources:** Korean source and accepted translation, Chapters 23–28 and 35

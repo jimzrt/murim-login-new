@@ -1,0 +1,72 @@
+{
+  "chapter": 35,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.289,
+    "source_characters": 5841,
+    "source_paragraphs": 198,
+    "translation_characters": 13371,
+    "translation_paragraphs": 184
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "numbers",
+      "details": {
+        "values": [
+          "50"
+        ]
+      },
+      "message": "Arabic numerals from the source are absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "무림",
+        "preferred": "Murim"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "경지",
+        "preferred": "realm / realm stage"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "심법",
+        "preferred": "cultivation technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "습득",
+        "preferred": "Acquired"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}
