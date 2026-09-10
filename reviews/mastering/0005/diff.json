@@ -1,0 +1,2765 @@
+{
+  "baseline_blocks": 210,
+  "baseline_sha256": "f3665521b21359405bfda03239ed6c79853e5a9144c7f2a863e64e390d3df44e",
+  "global_terminology_alerts": [],
+  "hunk_count": 144,
+  "hunks": [
+    {
+      "baseline": "“One, be good. Two, live. Come on, one.”",
+      "baseline_range": [
+        1,
+        2
+      ],
+      "context_after_baseline": "“Be good!”",
+      "context_after_sol": "“Be good!”",
+      "context_before_baseline": "# Chapter 5",
+      "context_before_sol": "# Chapter 5",
+      "hunk_id": "H001",
+      "sol": "“One, be good. Two, stay alive. Come on, one.”",
+      "sol_range": [
+        1,
+        2
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Live!”",
+      "baseline_range": [
+        4,
+        5
+      ],
+      "context_after_baseline": "“Louder.”",
+      "context_after_sol": "“Louder.”",
+      "context_before_baseline": "“Two.”",
+      "context_before_sol": "“Two.”",
+      "hunk_id": "H002",
+      "sol": "“Stay alive!”",
+      "sol_range": [
+        4,
+        5
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was the first thought the coachman had when he came to. His body was as heavy as waterlogged cotton, and his head spun. Somewhere in the distance, a scream-like cry went on without pause.",
+      "baseline_range": [
+        8,
+        9
+      ],
+      "context_after_baseline": "“Liiive!”",
+      "context_after_sol": "“Stay aliiive!”",
+      "context_before_baseline": "*Is this hell?*",
+      "context_before_sol": "*Is this hell?*",
+      "hunk_id": "H003",
+      "sol": "That was the coachman’s first thought when he came to. His body felt as heavy as waterlogged cotton, and his head was spinning. All the while, scream-like cries continued in the distance.",
+      "sol_range": [
+        8,
+        9
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Liiive!”",
+      "baseline_range": [
+        9,
+        10
+      ],
+      "context_after_baseline": "“Louder!”",
+      "context_after_sol": "“Louder!”",
+      "context_before_baseline": "That was the first thought the coachman had when he came to. His body was as heavy as waterlogged cotton, and his head spun. Somewhere in the distance, a scream-like cry went on without pause.",
+      "context_before_sol": "That was the coachman’s first thought when he came to. His body felt as heavy as waterlogged cotton, and his head was spinning. All the while, scream-like cries continued in the distance.",
+      "hunk_id": "H004",
+      "sol": "“Stay aliiive!”",
+      "sol_range": [
+        9,
+        10
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*…It has to be hell.* Whenever the merciless voice of a grim reaper rang out, the screams of the dead followed without fail.",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "context_after_baseline": "“Be gooood!”",
+      "context_after_sol": "“Be gooood!”",
+      "context_before_baseline": "“Louder!”",
+      "context_before_sol": "“Louder!”",
+      "hunk_id": "H005",
+      "sol": "*…This has to be hell.* Every time the grim reaper’s merciless voice rang out, the screams of the dead followed.",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With his eyes closed, he shed tears of bitter regret. He had ended up in hell. If he’d known he would die such an untimely death, he would at least have donated more to a temple.",
+      "baseline_range": [
+        13,
+        14
+      ],
+      "context_after_baseline": "*Oh, Mother!*",
+      "context_after_sol": "*Oh, Mother!*",
+      "context_before_baseline": "“Be gooood!”",
+      "context_before_sol": "“Be gooood!”",
+      "hunk_id": "H006",
+      "sol": "Eyes closed, he wept bitter tears of regret. To think he had ended up in hell. If he’d known he would meet such an untimely death, he would at least have made more donations to a temple.",
+      "sol_range": [
+        13,
+        14
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman began to sob. He was so absorbed in his grief that he failed to notice someone quietly looking down at him.",
+      "baseline_range": [
+        15,
+        16
+      ],
+      "context_after_baseline": "“Excuse me.”",
+      "context_after_sol": "“Excuse me.”",
+      "context_before_baseline": "*Oh, Mother!*",
+      "context_before_sol": "*Oh, Mother!*",
+      "hunk_id": "H007",
+      "sol": "The coachman began to sob, too consumed by grief to notice someone quietly looking down at him.",
+      "sol_range": [
+        15,
+        16
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "For one brief instant, the coachman’s heart stopped. Then it began pounding again. Clutching his chest, he shouted in alarm.",
+      "baseline_range": [
+        17,
+        18
+      ],
+      "context_after_baseline": "“You nearly scared me to death!”",
+      "context_after_sol": "“You nearly scared me to death!”",
+      "context_before_baseline": "“Excuse me.”",
+      "context_before_sol": "“Excuse me.”",
+      "hunk_id": "H008",
+      "sol": "The coachman’s heart stopped for a split second, then started pounding again. Clutching his chest, he shrieked.",
+      "sol_range": [
+        17,
+        18
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“……”",
+      "baseline_range": [
+        19,
+        20
+      ],
+      "context_after_baseline": "“…?”",
+      "context_after_sol": "“…?”",
+      "context_before_baseline": "“You nearly scared me to death!”",
+      "context_before_sol": "“You nearly scared me to death!”",
+      "hunk_id": "H009",
+      "sol": "“…”",
+      "sol_range": [
+        19,
+        20
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Now that he’d said it, something seemed off. The coachman stared blankly down at his chest and placed a hand over it. It was beating. His heart was beating.",
+      "baseline_range": [
+        21,
+        22
+      ],
+      "context_after_baseline": "And that wasn’t all. There were horses. There was a carriage. The cold wind of early winter made his body shiver.",
+      "context_after_sol": "It was beating. His heart was beating.",
+      "context_before_baseline": "“…?”",
+      "context_before_sol": "“…?”",
+      "hunk_id": "H010",
+      "sol": "Now that he’d said it, something seemed off. The coachman stared blankly down at his chest and placed a hand over it.",
+      "sol_range": [
+        21,
+        22
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        22,
+        22
+      ],
+      "context_after_baseline": "And that wasn’t all. There were horses. There was a carriage. The cold wind of early winter made his body shiver.",
+      "context_after_sol": "And that wasn’t all. The horses were there. So was the carriage. The cold early-winter wind made him shiver.",
+      "context_before_baseline": "Now that he’d said it, something seemed off. The coachman stared blankly down at his chest and placed a hand over it. It was beating. His heart was beating.",
+      "context_before_sol": "Now that he’d said it, something seemed off. The coachman stared blankly down at his chest and placed a hand over it.",
+      "hunk_id": "H011",
+      "sol": "It was beating. His heart was beating.",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "And that wasn’t all. There were horses. There was a carriage. The cold wind of early winter made his body shiver.",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "context_after_baseline": "“I’m alive?”",
+      "context_after_sol": "“I’m alive?”",
+      "context_before_baseline": "Now that he’d said it, something seemed off. The coachman stared blankly down at his chest and placed a hand over it. It was beating. His heart was beating.",
+      "context_before_sol": "It was beating. His heart was beating.",
+      "hunk_id": "H012",
+      "sol": "And that wasn’t all. The horses were there. So was the carriage. The cold early-winter wind made him shiver.",
+      "sol_range": [
+        23,
+        24
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He turned around, scarcely daring to believe it, and saw a man standing there with one eye swollen a deep purple. His expression was strange, but there was no doubt about it. He was alive.",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "context_after_baseline": "*I’m alive!*",
+      "context_after_sol": "He was alive.",
+      "context_before_baseline": "“I’m alive?”",
+      "context_before_sol": "“I’m alive?”",
+      "hunk_id": "H013",
+      "sol": "Hardly daring to believe it, he turned around and saw a man with one eye bruised deep purple. The man’s expression was rather strange, but there was no doubt about it.",
+      "sol_range": [
+        25,
+        26
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        25,
+        25
+      ],
+      "context_after_baseline": "*I’m alive!*",
+      "context_after_sol": "*I’m alive!*",
+      "context_before_baseline": "He turned around, scarcely daring to believe it, and saw a man standing there with one eye swollen a deep purple. His expression was strange, but there was no doubt about it. He was alive.",
+      "context_before_sol": "Hardly daring to believe it, he turned around and saw a man with one eye bruised deep purple. The man’s expression was rather strange, but there was no doubt about it.",
+      "hunk_id": "H014",
+      "sol": "He was alive.",
+      "sol_range": [
+        26,
+        27
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The man pushed the coachman away from his exuberant embrace and answered awkwardly.",
+      "baseline_range": [
+        27,
+        28
+      ],
+      "context_after_baseline": "“Congratulations.”",
+      "context_after_sol": "“Congratulations.”",
+      "context_before_baseline": "“I survived! I’m alive!”",
+      "context_before_sol": "“I survived! I’m alive!”",
+      "hunk_id": "H015",
+      "sol": "The man pushed the coachman away from his exuberant embrace and replied awkwardly.",
+      "sol_range": [
+        29,
+        30
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Sniff. Sob. Thank you, truly. But who are you…?”",
+      "baseline_range": [
+        29,
+        30
+      ],
+      "context_after_baseline": "“Ah, that. We met briefly earlier.”",
+      "context_after_sol": "“Ah, well. We met briefly earlier.”",
+      "context_before_baseline": "“Congratulations.”",
+      "context_before_sol": "“Congratulations.”",
+      "hunk_id": "H016",
+      "sol": "“Sniff. Sob. Thank you. Thank you so much. But who are you…?”",
+      "sol_range": [
+        31,
+        32
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Ah, that. We met briefly earlier.”",
+      "baseline_range": [
+        30,
+        31
+      ],
+      "context_after_baseline": "*Earlier? Who was he talking about?* The coachman knew everyone from Honghwaru by sight, and today’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "context_after_sol": "*Earlier? Who did I meet earlier?* The coachman knew everyone at Honghwaru by sight, and the day’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "context_before_baseline": "“Sniff. Sob. Thank you, truly. But who are you…?”",
+      "context_before_sol": "“Sniff. Sob. Thank you. Thank you so much. But who are you…?”",
+      "hunk_id": "H017",
+      "sol": "“Ah, well. We met briefly earlier.”",
+      "sol_range": [
+        32,
+        33
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Earlier? Who was he talking about?* The coachman knew everyone from Honghwaru by sight, and today’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "baseline_range": [
+        31,
+        32
+      ],
+      "context_after_baseline": "*Where had he seen this traveler he was so grateful to before?* The coachman stared intently at his face, then suddenly sucked in a breath.",
+      "context_after_sol": "*Where had he seen this kindly traveler before?*",
+      "context_before_baseline": "“Ah, that. We met briefly earlier.”",
+      "context_before_sol": "“Ah, well. We met briefly earlier.”",
+      "hunk_id": "H018",
+      "sol": "*Earlier? Who did I meet earlier?* The coachman knew everyone at Honghwaru by sight, and the day’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "sol_range": [
+        33,
+        34
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        32,
+        32
+      ],
+      "context_after_baseline": "*Where had he seen this traveler he was so grateful to before?* The coachman stared intently at his face, then suddenly sucked in a breath.",
+      "context_after_sol": "The coachman stared hard at his face, then suddenly sucked in a breath.",
+      "context_before_baseline": "*Earlier? Who was he talking about?* The coachman knew everyone from Honghwaru by sight, and today’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "context_before_sol": "*Earlier? Who did I meet earlier?* The coachman knew everyone at Honghwaru by sight, and the day’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "hunk_id": "H019",
+      "sol": "*Where had he seen this kindly traveler before?*",
+      "sol_range": [
+        34,
+        35
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Where had he seen this traveler he was so grateful to before?* The coachman stared intently at his face, then suddenly sucked in a breath.",
+      "baseline_range": [
+        32,
+        33
+      ],
+      "context_after_baseline": "“That bandit from earlier!”",
+      "context_after_sol": "“That bandit from earlier!”",
+      "context_before_baseline": "*Earlier? Who was he talking about?* The coachman knew everyone from Honghwaru by sight, and today’s first guest had been the wastrel of the Jin Family of Taiyuan.",
+      "context_before_sol": "*Where had he seen this kindly traveler before?*",
+      "hunk_id": "H020",
+      "sol": "The coachman stared hard at his face, then suddenly sucked in a breath.",
+      "sol_range": [
+        35,
+        36
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The one standing next to the big guy! Those five idiots who look like morons!”",
+      "baseline_range": [
+        35,
+        36
+      ],
+      "context_after_baseline": "“…That’s right.”",
+      "context_after_sol": "“…That’s right.”",
+      "context_before_baseline": "“Yes. That was me—”",
+      "context_before_sol": "“Yes. That was me—”",
+      "hunk_id": "H021",
+      "sol": "“The one standing next to the big guy! One of those five idiots who looked like morons!”",
+      "sol_range": [
+        38,
+        39
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The shortest one of them!”",
+      "baseline_range": [
+        37,
+        38
+      ],
+      "context_after_baseline": "“……”",
+      "context_after_sol": "“…”",
+      "context_before_baseline": "“…That’s right.”",
+      "context_before_sol": "“…That’s right.”",
+      "hunk_id": "H022",
+      "sol": "“The shortest one!”",
+      "sol_range": [
+        40,
+        41
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“……”",
+      "baseline_range": [
+        38,
+        39
+      ],
+      "context_after_baseline": "“The ugliest one!”",
+      "context_after_sol": "“The ugliest one!”",
+      "context_before_baseline": "“The shortest one of them!”",
+      "context_before_sol": "“The shortest one!”",
+      "hunk_id": "H023",
+      "sol": "“…”",
+      "sol_range": [
+        41,
+        42
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“……”",
+      "baseline_range": [
+        40,
+        41
+      ],
+      "context_after_baseline": "“And the one with the smallest package!”",
+      "context_after_sol": "“And the one with the smallest package!”",
+      "context_before_baseline": "“The ugliest one!”",
+      "context_before_sol": "“The ugliest one!”",
+      "hunk_id": "H024",
+      "sol": "“…”",
+      "sol_range": [
+        43,
+        44
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        43,
+        43
+      ],
+      "context_after_baseline": "The bandit’s shout finally brought the coachman to his senses. *What did I just say?* Regret and despair soon surged over him like a rising tide.",
+      "context_after_sol": "*What did I just say?*",
+      "context_before_baseline": "“No, I’m not!”",
+      "context_before_sol": "“No, I’m not!”",
+      "hunk_id": "H025",
+      "sol": "The bandit’s shout brought the coachman to his senses.",
+      "sol_range": [
+        46,
+        47
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        43,
+        43
+      ],
+      "context_after_baseline": "The bandit’s shout finally brought the coachman to his senses. *What did I just say?* Regret and despair soon surged over him like a rising tide.",
+      "context_after_sol": "Regret and despair surged over him like a rising tide.",
+      "context_before_baseline": "“No, I’m not!”",
+      "context_before_sol": "The bandit’s shout brought the coachman to his senses.",
+      "hunk_id": "H026",
+      "sol": "*What did I just say?*",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The bandit’s shout finally brought the coachman to his senses. *What did I just say?* Regret and despair soon surged over him like a rising tide.",
+      "baseline_range": [
+        43,
+        44
+      ],
+      "context_after_baseline": "*I’m really dead this time.*",
+      "context_after_sol": "*Now I’m really dead.*",
+      "context_before_baseline": "“No, I’m not!”",
+      "context_before_sol": "*What did I just say?*",
+      "hunk_id": "H027",
+      "sol": "Regret and despair surged over him like a rising tide.",
+      "sol_range": [
+        48,
+        49
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I’m really dead this time.*",
+      "baseline_range": [
+        44,
+        45
+      ],
+      "context_after_baseline": "He almost wished he had already died. At least then he wouldn’t have to suffer.",
+      "context_after_sol": "He almost wished he were already dead. At least then there wouldn’t be any pain.",
+      "context_before_baseline": "The bandit’s shout finally brought the coachman to his senses. *What did I just say?* Regret and despair soon surged over him like a rising tide.",
+      "context_before_sol": "Regret and despair surged over him like a rising tide.",
+      "hunk_id": "H028",
+      "sol": "*Now I’m really dead.*",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He almost wished he had already died. At least then he wouldn’t have to suffer.",
+      "baseline_range": [
+        45,
+        46
+      ],
+      "context_after_baseline": "But then—",
+      "context_after_sol": "But then—",
+      "context_before_baseline": "*I’m really dead this time.*",
+      "context_before_sol": "*Now I’m really dead.*",
+      "hunk_id": "H029",
+      "sol": "He almost wished he were already dead. At least then there wouldn’t be any pain.",
+      "sol_range": [
+        50,
+        51
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Ha. Enough nonsense. Just follow me.”",
+      "baseline_range": [
+        47,
+        48
+      ],
+      "context_after_baseline": "The bandit, who had looked like a ferocious demon, calmed down in an instant and strode ahead. The coachman followed before he knew what he was doing, seized by a strange sense of déjà vu.",
+      "context_after_sol": "The bandit, who looked like a ferocious demon, calmed down in an instant and started walking ahead. The coachman found himself following and was struck by a strange sense of déjà vu.",
+      "context_before_baseline": "But then—",
+      "context_before_sol": "But then—",
+      "hunk_id": "H030",
+      "sol": "“Whew. Enough nonsense. Just follow me.”",
+      "sol_range": [
+        52,
+        53
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The bandit, who had looked like a ferocious demon, calmed down in an instant and strode ahead. The coachman followed before he knew what he was doing, seized by a strange sense of déjà vu.",
+      "baseline_range": [
+        48,
+        49
+      ],
+      "context_after_baseline": "*This feels like I’m being shown around.*",
+      "context_after_sol": "*It almost feels like he’s escorting me.*",
+      "context_before_baseline": "“Ha. Enough nonsense. Just follow me.”",
+      "context_before_sol": "“Whew. Enough nonsense. Just follow me.”",
+      "hunk_id": "H031",
+      "sol": "The bandit, who looked like a ferocious demon, calmed down in an instant and started walking ahead. The coachman found himself following and was struck by a strange sense of déjà vu.",
+      "sol_range": [
+        53,
+        54
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*This feels like I’m being shown around.*",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "context_after_baseline": "Compared to before he passed out, the bandit’s attitude was not merely subdued—it was downright polite. Mustering all his courage, the coachman opened his mouth.",
+      "context_after_sol": "Compared to before the coachman had passed out, the bandit’s manner wasn’t merely subdued—it was downright polite. Mustering every ounce of courage he had, the coachman spoke.",
+      "context_before_baseline": "The bandit, who had looked like a ferocious demon, calmed down in an instant and strode ahead. The coachman followed before he knew what he was doing, seized by a strange sense of déjà vu.",
+      "context_before_sol": "The bandit, who looked like a ferocious demon, calmed down in an instant and started walking ahead. The coachman found himself following and was struck by a strange sense of déjà vu.",
+      "hunk_id": "H032",
+      "sol": "*It almost feels like he’s escorting me.*",
+      "sol_range": [
+        54,
+        55
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Compared to before he passed out, the bandit’s attitude was not merely subdued—it was downright polite. Mustering all his courage, the coachman opened his mouth.",
+      "baseline_range": [
+        50,
+        51
+      ],
+      "context_after_baseline": "“Um, where are we going?”",
+      "context_after_sol": "“Um, where are we going?”",
+      "context_before_baseline": "*This feels like I’m being shown around.*",
+      "context_before_sol": "*It almost feels like he’s escorting me.*",
+      "hunk_id": "H033",
+      "sol": "Compared to before the coachman had passed out, the bandit’s manner wasn’t merely subdued—it was downright polite. Mustering every ounce of courage he had, the coachman spoke.",
+      "sol_range": [
+        55,
+        56
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman’s face went white. He remembered what he had said to the Heavenly Axe. *I’ll gouge out your eyes, grind your limbs to powder in a mortar…*",
+      "baseline_range": [
+        53,
+        54
+      ],
+      "context_after_baseline": "*I need to run. Right now.*",
+      "context_after_sol": "*I need to run. Right now.*",
+      "context_before_baseline": "“To the boss.”",
+      "context_before_sol": "“To the boss.”",
+      "hunk_id": "H034",
+      "sol": "The coachman’s face went white. He remembered what he had said to the Heavenly Axe. Gouge out his eyes, grind his limbs to paste in a mortar…",
+      "sol_range": [
+        58,
+        59
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But the next moment, his legs began to tremble, and cold sweat poured down him like rain. He couldn’t move even one step.",
+      "baseline_range": [
+        55,
+        56
+      ],
+      "context_after_baseline": "Dark red blood splattered in every direction. A leg that looked like it belonged to a corpse jutted out from the grass beside the road.",
+      "context_after_sol": "Dark red blood was splattered everywhere. A leg that seemed to belong to a corpse jutted from the bushes beside the road.",
+      "context_before_baseline": "*I need to run. Right now.*",
+      "context_before_sol": "*I need to run. Right now.*",
+      "hunk_id": "H035",
+      "sol": "But the next moment, his legs began to tremble, and cold sweat poured off him like rain. He couldn’t take a single step.",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Dark red blood splattered in every direction. A leg that looked like it belonged to a corpse jutted out from the grass beside the road.",
+      "baseline_range": [
+        56,
+        57
+      ],
+      "context_after_baseline": "*These lunatics.*",
+      "context_after_sol": "*These lunatics.*",
+      "context_before_baseline": "But the next moment, his legs began to tremble, and cold sweat poured down him like rain. He couldn’t move even one step.",
+      "context_before_sol": "But the next moment, his legs began to tremble, and cold sweat poured off him like rain. He couldn’t take a single step.",
+      "hunk_id": "H036",
+      "sol": "Dark red blood was splattered everywhere. A leg that seemed to belong to a corpse jutted from the bushes beside the road.",
+      "sol_range": [
+        61,
+        62
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He had feared as much, but they had actually killed someone in broad daylight—and not just anyone, but a young master of the Jin Family of Taiyuan. The coachman could feel death closing in.",
+      "baseline_range": [
+        58,
+        59
+      ],
+      "context_after_baseline": "Until someone emerged from the grass.",
+      "context_after_sol": "The coachman knew he was going to die.",
+      "context_before_baseline": "*These lunatics.*",
+      "context_before_sol": "*These lunatics.*",
+      "hunk_id": "H037",
+      "sol": "He had feared as much, but they had actually killed someone in broad daylight—and not just anyone, but a young master of the Jin Family of Taiyuan.",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        59,
+        59
+      ],
+      "context_after_baseline": "Until someone emerged from the grass.",
+      "context_after_sol": "Then someone emerged from the bushes.",
+      "context_before_baseline": "He had feared as much, but they had actually killed someone in broad daylight—and not just anyone, but a young master of the Jin Family of Taiyuan. The coachman could feel death closing in.",
+      "context_before_sol": "He had feared as much, but they had actually killed someone in broad daylight—and not just anyone, but a young master of the Jin Family of Taiyuan.",
+      "hunk_id": "H038",
+      "sol": "The coachman knew he was going to die.",
+      "sol_range": [
+        64,
+        65
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Until someone emerged from the grass.",
+      "baseline_range": [
+        59,
+        60
+      ],
+      "context_after_baseline": "“Oh, you’re awake?”",
+      "context_after_sol": "“Oh, you’re awake?”",
+      "context_before_baseline": "He had feared as much, but they had actually killed someone in broad daylight—and not just anyone, but a young master of the Jin Family of Taiyuan. The coachman could feel death closing in.",
+      "context_before_sol": "The coachman knew he was going to die.",
+      "hunk_id": "H039",
+      "sol": "Then someone emerged from the bushes.",
+      "sol_range": [
+        65,
+        66
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“What are you doing, punk? Can’t you see your comrades are working themselves to death? Get over here.”",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "context_after_baseline": "“Yes, Boss.”",
+      "context_after_sol": "“Yes, Boss.”",
+      "context_before_baseline": "Each of them sported a matching bruise around one eye.",
+      "context_before_sol": "Each of them sported a matching bruise around one eye.",
+      "hunk_id": "H040",
+      "sol": "“What are you doing, punk? Can’t you see your comrades busting their asses? Get over here and help.”",
+      "sol_range": [
+        69,
+        70
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman’s eyes lit up like flashlights as he listened to the story.",
+      "baseline_range": [
+        70,
+        71
+      ],
+      "context_after_baseline": "*Ow. That glare. I can barely look him in the face.*",
+      "context_after_sol": "*Ow, my eyes. He’s blinding me. I can barely look at him.*",
+      "context_before_baseline": "“So that’s what happened.”",
+      "context_before_sol": "“So that’s what happened.”",
+      "hunk_id": "H041",
+      "sol": "The coachman’s eyes lit up like flashlights as he listened.",
+      "sol_range": [
+        76,
+        77
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Ow. That glare. I can barely look him in the face.*",
+      "baseline_range": [
+        71,
+        72
+      ],
+      "context_after_baseline": "“Um, excuse me.”",
+      "context_after_sol": "“Um, excuse me.”",
+      "context_before_baseline": "The coachman’s eyes lit up like flashlights as he listened to the story.",
+      "context_before_sol": "The coachman’s eyes lit up like flashlights as he listened.",
+      "hunk_id": "H042",
+      "sol": "*Ow, my eyes. He’s blinding me. I can barely look at him.*",
+      "sol_range": [
+        77,
+        78
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Are you really Young Master Jin Mukyung?”",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "context_after_baseline": "“…Please, stop.”",
+      "context_after_sol": "“…Please, just stop.”",
+      "context_before_baseline": "*What now?*",
+      "context_before_sol": "*What now?*",
+      "hunk_id": "H043",
+      "sol": "“Are you sure you aren’t Young Master Jin Mukyung?”",
+      "sol_range": [
+        80,
+        81
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“…Please, stop.”",
+      "baseline_range": [
+        75,
+        76
+      ],
+      "context_after_baseline": "*How many times do I have to tell him? I’m Jin Taekyung.*",
+      "context_after_sol": "*How many times do I have to tell him? I’m Jin Taekyung.*",
+      "context_before_baseline": "“Are you really Young Master Jin Mukyung?”",
+      "context_before_sol": "“Are you sure you aren’t Young Master Jin Mukyung?”",
+      "hunk_id": "H044",
+      "sol": "“…Please, just stop.”",
+      "sol_range": [
+        81,
+        82
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He was an NPC who drove me insane in every possible way. I couldn’t decide whether to call it a triumph of artificial intelligence or a failure.",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "context_after_baseline": "*If I’d known how to drive a carriage, I would have ditched him ages ago.*",
+      "context_after_sol": "*If I knew how to drive a carriage, I would’ve ditched him ages ago.*",
+      "context_before_baseline": "*How many times do I have to tell him? I’m Jin Taekyung.*",
+      "context_before_sol": "*How many times do I have to tell him? I’m Jin Taekyung.*",
+      "hunk_id": "H045",
+      "sol": "This NPC was driving me insane in every possible way. I couldn’t decide whether he represented a triumph of artificial intelligence or its utter failure.",
+      "sol_range": [
+        83,
+        84
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*If I’d known how to drive a carriage, I would have ditched him ages ago.*",
+      "baseline_range": [
+        78,
+        79
+      ],
+      "context_after_baseline": "“Are you all set?”",
+      "context_after_sol": "“Are you finished?”",
+      "context_before_baseline": "He was an NPC who drove me insane in every possible way. I couldn’t decide whether to call it a triumph of artificial intelligence or a failure.",
+      "context_before_sol": "This NPC was driving me insane in every possible way. I couldn’t decide whether he represented a triumph of artificial intelligence or its utter failure.",
+      "hunk_id": "H046",
+      "sol": "*If I knew how to drive a carriage, I would’ve ditched him ages ago.*",
+      "sol_range": [
+        84,
+        85
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Are you all set?”",
+      "baseline_range": [
+        79,
+        80
+      ],
+      "context_after_baseline": "The coachman answered as he tied the final knot.",
+      "context_after_sol": "The coachman answered as he tied the final knot.",
+      "context_before_baseline": "*If I’d known how to drive a carriage, I would have ditched him ages ago.*",
+      "context_before_sol": "*If I knew how to drive a carriage, I would’ve ditched him ages ago.*",
+      "hunk_id": "H047",
+      "sol": "“Are you finished?”",
+      "sol_range": [
+        85,
+        86
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Yes. Everything is ready.”",
+      "baseline_range": [
+        81,
+        82
+      ],
+      "context_after_baseline": "What knot, you ask? The rope binding the hands and feet of the five bandits. It had been tied so tightly that their mournful groans never stopped.",
+      "context_after_sol": "What knot, you ask? The knots in the ropes binding the five bandits hand and foot. He had tied them so tightly that their pitiful groans never stopped.",
+      "context_before_baseline": "The coachman answered as he tied the final knot.",
+      "context_before_sol": "The coachman answered as he tied the final knot.",
+      "hunk_id": "H048",
+      "sol": "“Yes. It’s all done.”",
+      "sol_range": [
+        87,
+        88
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "What knot, you ask? The rope binding the hands and feet of the five bandits. It had been tied so tightly that their mournful groans never stopped.",
+      "baseline_range": [
+        82,
+        83
+      ],
+      "context_after_baseline": "“Boss. Could you loosen it just a little?”",
+      "context_after_sol": "“Boss. Could you loosen them just a little?”",
+      "context_before_baseline": "“Yes. Everything is ready.”",
+      "context_before_sol": "“Yes. It’s all done.”",
+      "hunk_id": "H049",
+      "sol": "What knot, you ask? The knots in the ropes binding the five bandits hand and foot. He had tied them so tightly that their pitiful groans never stopped.",
+      "sol_range": [
+        88,
+        89
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Boss. Could you loosen it just a little?”",
+      "baseline_range": [
+        83,
+        84
+      ],
+      "context_after_baseline": "“Nope. Not happening. I’m not loosening them. Stay right there.”",
+      "context_after_sol": "“Nope. Can’t do that. No exchanges, either. You’re staying right here.”",
+      "context_before_baseline": "What knot, you ask? The rope binding the hands and feet of the five bandits. It had been tied so tightly that their mournful groans never stopped.",
+      "context_before_sol": "What knot, you ask? The knots in the ropes binding the five bandits hand and foot. He had tied them so tightly that their pitiful groans never stopped.",
+      "hunk_id": "H050",
+      "sol": "“Boss. Could you loosen them just a little?”",
+      "sol_range": [
+        89,
+        90
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Nope. Not happening. I’m not loosening them. Stay right there.”",
+      "baseline_range": [
+        84,
+        85
+      ],
+      "context_after_baseline": "“Please, Boss. Give your little brothers the chance to serve you—”",
+      "context_after_sol": "“Please, Boss. Give your little brothers a chance to serve you—”",
+      "context_before_baseline": "“Boss. Could you loosen it just a little?”",
+      "context_before_sol": "“Boss. Could you loosen them just a little?”",
+      "hunk_id": "H051",
+      "sol": "“Nope. Can’t do that. No exchanges, either. You’re staying right here.”",
+      "sol_range": [
+        90,
+        91
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Please, Boss. Give your little brothers the chance to serve you—”",
+      "baseline_range": [
+        85,
+        86
+      ],
+      "context_after_baseline": "“Call me Boss one more time, and I’ll give you the chance to serve the King of the Underworld.”",
+      "context_after_sol": "“Call me Boss one more time, and I’ll give you a chance to serve the King of the Underworld.”",
+      "context_before_baseline": "“Nope. Not happening. I’m not loosening them. Stay right there.”",
+      "context_before_sol": "“Nope. Can’t do that. No exchanges, either. You’re staying right here.”",
+      "hunk_id": "H052",
+      "sol": "“Please, Boss. Give your little brothers a chance to serve you—”",
+      "sol_range": [
+        91,
+        92
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Call me Boss one more time, and I’ll give you the chance to serve the King of the Underworld.”",
+      "baseline_range": [
+        86,
+        87
+      ],
+      "context_after_baseline": "Leaving their silence behind, I climbed into the carriage.",
+      "context_after_sol": "Leaving them in silence, I climbed into the carriage.",
+      "context_before_baseline": "“Please, Boss. Give your little brothers the chance to serve you—”",
+      "context_before_sol": "“Please, Boss. Give your little brothers a chance to serve you—”",
+      "hunk_id": "H053",
+      "sol": "“Call me Boss one more time, and I’ll give you a chance to serve the King of the Underworld.”",
+      "sol_range": [
+        92,
+        93
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Leaving their silence behind, I climbed into the carriage.",
+      "baseline_range": [
+        87,
+        88
+      ],
+      "context_after_baseline": "I had confiscated the bandits’ weapons long ago and placed them in my Inventory, and the level-up effect had restored me to perfect condition.",
+      "context_after_sol": "I had already confiscated their weapons and stored them in my Inventory, and the level-up effect had left me in perfect condition.",
+      "context_before_baseline": "“Call me Boss one more time, and I’ll give you the chance to serve the King of the Underworld.”",
+      "context_before_sol": "“Call me Boss one more time, and I’ll give you a chance to serve the King of the Underworld.”",
+      "hunk_id": "H054",
+      "sol": "Leaving them in silence, I climbed into the carriage.",
+      "sol_range": [
+        93,
+        94
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had confiscated the bandits’ weapons long ago and placed them in my Inventory, and the level-up effect had restored me to perfect condition.",
+      "baseline_range": [
+        88,
+        89
+      ],
+      "context_after_baseline": "“We’re leaving.”",
+      "context_after_sol": "“We’re leaving.”",
+      "context_before_baseline": "Leaving their silence behind, I climbed into the carriage.",
+      "context_before_sol": "Leaving them in silence, I climbed into the carriage.",
+      "hunk_id": "H055",
+      "sol": "I had already confiscated their weapons and stored them in my Inventory, and the level-up effect had left me in perfect condition.",
+      "sol_range": [
+        94,
+        95
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman took up the reins, and the four-horse carriage began to move.",
+      "baseline_range": [
+        90,
+        91
+      ],
+      "context_after_baseline": "The mountain road was no better than a hiking trail. Cool air and the scent of the forest drifted in through the carriage window.",
+      "context_after_sol": "The mountain road was as well maintained as the hiking trails behind town. Cool wind and mountain air flowed in through the carriage window.",
+      "context_before_baseline": "“We’re leaving.”",
+      "context_before_sol": "“We’re leaving.”",
+      "hunk_id": "H056",
+      "sol": "The coachman took the reins, and the four-horse carriage began to move.",
+      "sol_range": [
+        96,
+        97
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The mountain road was no better than a hiking trail. Cool air and the scent of the forest drifted in through the carriage window.",
+      "baseline_range": [
+        91,
+        92
+      ],
+      "context_after_baseline": "*It’s incredible, no matter how I look at it.*",
+      "context_after_sol": "*It’s incredible no matter how I look at it.*",
+      "context_before_baseline": "The coachman took up the reins, and the four-horse carriage began to move.",
+      "context_before_sol": "The coachman took the reins, and the four-horse carriage began to move.",
+      "hunk_id": "H057",
+      "sol": "The mountain road was as well maintained as the hiking trails behind town. Cool wind and mountain air flowed in through the carriage window.",
+      "sol_range": [
+        97,
+        98
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*It’s incredible, no matter how I look at it.*",
+      "baseline_range": [
+        92,
+        93
+      ],
+      "context_after_baseline": "I shook my head.",
+      "context_after_sol": "I shook my head.",
+      "context_before_baseline": "The mountain road was no better than a hiking trail. Cool air and the scent of the forest drifted in through the carriage window.",
+      "context_before_sol": "The mountain road was as well maintained as the hiking trails behind town. Cool wind and mountain air flowed in through the carriage window.",
+      "hunk_id": "H058",
+      "sol": "*It’s incredible no matter how I look at it.*",
+      "sol_range": [
+        98,
+        99
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Science. Technology. Whatever you wanted to call it, it was beyond my comprehension.",
+      "baseline_range": [
+        94,
+        95
+      ],
+      "context_after_baseline": "Besides, worrying about that was a luxury in my current situation.",
+      "context_after_sol": "Besides, in my current situation, even thinking about that was a luxury.",
+      "context_before_baseline": "I shook my head.",
+      "context_before_sol": "I shook my head.",
+      "hunk_id": "H059",
+      "sol": "Science. Technology. Whatever you called it, it was beyond my comprehension.",
+      "sol_range": [
+        100,
+        101
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Besides, worrying about that was a luxury in my current situation.",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "*Damn it. What kind of time ratio does this game have?*",
+      "context_after_sol": "*Damn it. What the hell is the time ratio in this game?*",
+      "context_before_baseline": "Science. Technology. Whatever you wanted to call it, it was beyond my comprehension.",
+      "context_before_sol": "Science. Technology. Whatever you called it, it was beyond my comprehension.",
+      "hunk_id": "H060",
+      "sol": "Besides, in my current situation, even thinking about that was a luxury.",
+      "sol_range": [
+        101,
+        102
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Damn it. What kind of time ratio does this game have?*",
+      "baseline_range": [
+        96,
+        97
+      ],
+      "context_after_baseline": "Virtual-reality games had something called a time ratio. If the ratio between reality and virtual reality was one to three, three hours in virtual reality would mean only one hour had passed in the real world.",
+      "context_after_sol": "Virtual-reality games had something called a time ratio. If the ratio between reality and virtual reality was one to three, three hours in virtual reality meant only one hour had passed in the real world.",
+      "context_before_baseline": "Besides, worrying about that was a luxury in my current situation.",
+      "context_before_sol": "Besides, in my current situation, even thinking about that was a luxury.",
+      "hunk_id": "H061",
+      "sol": "*Damn it. What the hell is the time ratio in this game?*",
+      "sol_range": [
+        102,
+        103
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Virtual-reality games had something called a time ratio. If the ratio between reality and virtual reality was one to three, three hours in virtual reality would mean only one hour had passed in the real world.",
+      "baseline_range": [
+        97,
+        98
+      ],
+      "context_after_baseline": "That was why I had forced myself to hold out at Honghwaru for three days.",
+      "context_after_sol": "That was why I had forced myself to hold out at Honghwaru for three days.",
+      "context_before_baseline": "*Damn it. What kind of time ratio does this game have?*",
+      "context_before_sol": "*Damn it. What the hell is the time ratio in this game?*",
+      "hunk_id": "H062",
+      "sol": "Virtual-reality games had something called a time ratio. If the ratio between reality and virtual reality was one to three, three hours in virtual reality meant only one hour had passed in the real world.",
+      "sol_range": [
+        103,
+        104
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Someone will come get me by then.* That was the hope I’d been clinging to.",
+      "baseline_range": [
+        99,
+        100
+      ],
+      "context_after_baseline": "*What the hell is Seong Jinho doing?*",
+      "context_after_sol": "*What the hell is Seong Jinho doing?*",
+      "context_before_baseline": "That was why I had forced myself to hold out at Honghwaru for three days.",
+      "context_before_sol": "That was why I had forced myself to hold out at Honghwaru for three days.",
+      "hunk_id": "H063",
+      "sol": "I had been clinging to the hope that someone would get me out by then.",
+      "sol_range": [
+        105,
+        106
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A deep sigh escaped me. At the same time, a sliver of unease began to surface.",
+      "baseline_range": [
+        101,
+        102
+      ],
+      "context_after_baseline": "*What if the time ratio is wildly different?*",
+      "context_after_sol": "*What if the time ratio is ridiculously skewed?*",
+      "context_before_baseline": "*What the hell is Seong Jinho doing?*",
+      "context_before_sol": "*What the hell is Seong Jinho doing?*",
+      "hunk_id": "H064",
+      "sol": "A deep sigh escaped me. At the same time, a sliver of unease began to creep in.",
+      "sol_range": [
+        107,
+        108
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*What if the time ratio is wildly different?*",
+      "baseline_range": [
+        102,
+        103
+      ],
+      "context_after_baseline": "*No way.*",
+      "context_after_sol": "*No way.*",
+      "context_before_baseline": "A deep sigh escaped me. At the same time, a sliver of unease began to surface.",
+      "context_before_sol": "A deep sigh escaped me. At the same time, a sliver of unease began to creep in.",
+      "hunk_id": "H065",
+      "sol": "*What if the time ratio is ridiculously skewed?*",
+      "sol_range": [
+        108,
+        109
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It couldn’t be. Jinho had once told me that a capsule’s time ratio was proportional to its performance and price. A piece of junk like this had no chance of having an extreme ratio.",
+      "baseline_range": [
+        104,
+        105
+      ],
+      "context_after_baseline": "Though it was performing better than I’d expected.",
+      "context_after_sol": "Though it was performing better than I’d expected.",
+      "context_before_baseline": "*No way.*",
+      "context_before_sol": "*No way.*",
+      "hunk_id": "H066",
+      "sol": "That couldn’t be it. Jinho had once told me that a capsule’s time ratio depended on its performance and price. A piece of junk like this couldn’t possibly manage anything extreme.",
+      "sol_range": [
+        110,
+        111
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*No. For a piece of junk, it’s performing unbelievably well.*",
+      "baseline_range": [
+        106,
+        107
+      ],
+      "context_after_baseline": "I hadn’t played a game in years, but I wasn’t so clueless that I couldn’t recognize that. *Murim* was clearly a high-spec game, yet this old capsule was running it without any trouble.",
+      "context_after_sol": "I hadn’t touched a game in years, but I wasn’t completely clueless. *Murim* was clearly a demanding, high-spec game, yet this ancient capsule was running it without a hitch.",
+      "context_before_baseline": "Though it was performing better than I’d expected.",
+      "context_before_sol": "Though it was performing better than I’d expected.",
+      "hunk_id": "H067",
+      "sol": "*No. It’s performing unbelievably well.*",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I hadn’t played a game in years, but I wasn’t so clueless that I couldn’t recognize that. *Murim* was clearly a high-spec game, yet this old capsule was running it without any trouble.",
+      "baseline_range": [
+        107,
+        108
+      ],
+      "context_after_baseline": "That alone was astonishing. Which meant—",
+      "context_after_sol": "That alone was astonishing. So—",
+      "context_before_baseline": "*No. For a piece of junk, it’s performing unbelievably well.*",
+      "context_before_sol": "*No. It’s performing unbelievably well.*",
+      "hunk_id": "H068",
+      "sol": "I hadn’t touched a game in years, but I wasn’t completely clueless. *Murim* was clearly a demanding, high-spec game, yet this ancient capsule was running it without a hitch.",
+      "sol_range": [
+        113,
+        114
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That alone was astonishing. Which meant—",
+      "baseline_range": [
+        108,
+        109
+      ],
+      "context_after_baseline": "*Stop giving me new things to be astonished by.*",
+      "context_after_sol": "*Please stop giving me new things to be astonished by.*",
+      "context_before_baseline": "I hadn’t played a game in years, but I wasn’t so clueless that I couldn’t recognize that. *Murim* was clearly a high-spec game, yet this old capsule was running it without any trouble.",
+      "context_before_sol": "I hadn’t touched a game in years, but I wasn’t completely clueless. *Murim* was clearly a demanding, high-spec game, yet this ancient capsule was running it without a hitch.",
+      "hunk_id": "H069",
+      "sol": "That alone was astonishing. So—",
+      "sol_range": [
+        114,
+        115
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Stop giving me new things to be astonished by.*",
+      "baseline_range": [
+        109,
+        110
+      ],
+      "context_after_baseline": "Please. I muttered the word like a spell, then opened my Skill Window.",
+      "context_after_sol": "Please. I muttered the word like a spell and opened my Skill Window.",
+      "context_before_baseline": "That alone was astonishing. Which meant—",
+      "context_before_sol": "That alone was astonishing. So—",
+      "hunk_id": "H070",
+      "sol": "*Please stop giving me new things to be astonished by.*",
+      "sol_range": [
+        115,
+        116
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Please. I muttered the word like a spell, then opened my Skill Window.",
+      "baseline_range": [
+        110,
+        111
+      ],
+      "context_after_baseline": "> **System**\n>\n> Skill Window\n>\n> LV. 11 Jin Taekyung\n>\n> Cultivation Technique: Jin Family’s Cultivation Technique\n>\n> Martial Arts: Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> Bones: 70\n>\n> Sinews: 50\n>\n> Remaining Points: 10\n>\n> - Distribute your remaining points.\n>\n> - You have forgotten the formulas because you have not trained in martial arts for a long time.\n>\n> - You can view information about your acquired skills.",
+      "context_after_sol": "> **System**\n>\n> Skill Window\n>\n> LV. 11 Jin Taekyung\n>\n> Cultivation Technique: Jin Family’s Cultivation Technique\n>\n> Martial Arts: Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> Bones: 70\n>\n> Sinews: 50\n>\n> Remaining Points: 10\n>\n> Distribute your remaining points.\n>\n> You have forgotten the formulas because you have not trained in martial arts for a long time.\n>\n> You can view information about your acquired skills.",
+      "context_before_baseline": "*Stop giving me new things to be astonished by.*",
+      "context_before_sol": "*Please stop giving me new things to be astonished by.*",
+      "hunk_id": "H071",
+      "sol": "Please. I muttered the word like a spell and opened my Skill Window.",
+      "sol_range": [
+        116,
+        117
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Skill Window\n>\n> LV. 11 Jin Taekyung\n>\n> Cultivation Technique: Jin Family’s Cultivation Technique\n>\n> Martial Arts: Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> Bones: 70\n>\n> Sinews: 50\n>\n> Remaining Points: 10\n>\n> - Distribute your remaining points.\n>\n> - You have forgotten the formulas because you have not trained in martial arts for a long time.\n>\n> - You can view information about your acquired skills.",
+      "baseline_range": [
+        111,
+        112
+      ],
+      "context_after_baseline": "It was astonishing even the second time I saw it. I couldn’t use my martial arts because I hadn’t trained?",
+      "context_after_sol": "It was astonishing even the second time I saw it. I couldn’t use my martial arts because I hadn’t trained?",
+      "context_before_baseline": "Please. I muttered the word like a spell, then opened my Skill Window.",
+      "context_before_sol": "Please. I muttered the word like a spell and opened my Skill Window.",
+      "hunk_id": "H072",
+      "sol": "> **System**\n>\n> Skill Window\n>\n> LV. 11 Jin Taekyung\n>\n> Cultivation Technique: Jin Family’s Cultivation Technique\n>\n> Martial Arts: Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> Bones: 70\n>\n> Sinews: 50\n>\n> Remaining Points: 10\n>\n> Distribute your remaining points.\n>\n> You have forgotten the formulas because you have not trained in martial arts for a long time.\n>\n> You can view information about your acquired skills.",
+      "sol_range": [
+        117,
+        118
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With a sigh, I moved on. The first thing was the remaining points.",
+      "baseline_range": [
+        114,
+        115
+      ],
+      "context_after_baseline": "It seemed I received ten points every time my Level increased by one. The Status Window probably worked the same way.",
+      "context_after_sol": "It seemed I received ten points each time I gained a Level. The Status Window probably worked the same way.",
+      "context_before_baseline": "*How much had this guy slacked off?*",
+      "context_before_sol": "*How much had this guy slacked off?*",
+      "hunk_id": "H073",
+      "sol": "With a sigh, I moved on. First were the remaining points.",
+      "sol_range": [
+        120,
+        121
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It seemed I received ten points every time my Level increased by one. The Status Window probably worked the same way.",
+      "baseline_range": [
+        115,
+        116
+      ],
+      "context_after_baseline": "*If I combine the Skill Window and Status Window, do I get twenty points every time I level up?*",
+      "context_after_sol": "*Does that mean I get twenty points per level between the Skill Window and Status Window?*",
+      "context_before_baseline": "With a sigh, I moved on. The first thing was the remaining points.",
+      "context_before_sol": "With a sigh, I moved on. First were the remaining points.",
+      "hunk_id": "H074",
+      "sol": "It seemed I received ten points each time I gained a Level. The Status Window probably worked the same way.",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*If I combine the Skill Window and Status Window, do I get twenty points every time I level up?*",
+      "baseline_range": [
+        116,
+        117
+      ],
+      "context_after_baseline": "The number felt oddly ambiguous. I put off distributing my points and touched the final sentence.",
+      "context_after_sol": "That felt like an oddly arbitrary number. I decided to put off distributing my points and touched the final line.",
+      "context_before_baseline": "It seemed I received ten points every time my Level increased by one. The Status Window probably worked the same way.",
+      "context_before_sol": "It seemed I received ten points each time I gained a Level. The Status Window probably worked the same way.",
+      "hunk_id": "H075",
+      "sol": "*Does that mean I get twenty points per level between the Skill Window and Status Window?*",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The number felt oddly ambiguous. I put off distributing my points and touched the final sentence.",
+      "baseline_range": [
+        117,
+        118
+      ],
+      "context_after_baseline": "> **System**\n>\n> Would you like to view information about your acquired skills?",
+      "context_after_sol": "> **System**\n>\n> Would you like to view your acquired skills?",
+      "context_before_baseline": "*If I combine the Skill Window and Status Window, do I get twenty points every time I level up?*",
+      "context_before_sol": "*Does that mean I get twenty points per level between the Skill Window and Status Window?*",
+      "hunk_id": "H076",
+      "sol": "That felt like an oddly arbitrary number. I decided to put off distributing my points and touched the final line.",
+      "sol_range": [
+        123,
+        124
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Would you like to view information about your acquired skills?",
+      "baseline_range": [
+        118,
+        119
+      ],
+      "context_after_baseline": "*View all.*",
+      "context_after_sol": "*View all.*",
+      "context_before_baseline": "The number felt oddly ambiguous. I put off distributing my points and touched the final sentence.",
+      "context_before_sol": "That felt like an oddly arbitrary number. I decided to put off distributing my points and touched the final line.",
+      "hunk_id": "H077",
+      "sol": "> **System**\n>\n> Would you like to view your acquired skills?",
+      "sol_range": [
+        124,
+        125
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Skill Window\n>\n> Jin Family’s Spear Technique\n>\n> **Grade:** First Rate\n>\n> **Restriction:** Those who have learned Jin Family’s Cultivation Technique\n>\n> **Realm:** Unknown\n>\n> **Effects:** Unknown\n>\n> **Description:** The Jin Family of Taiyuan’s hereditary martial art. Can be learned through a martial arts manual. The formula has currently been forgotten, so it cannot be used.\n>\n> Skill Window\n>\n> Jin Family’s Manoeuvre Technique\n>\n> **Grade:** First Rate\n>\n> **Restriction:** Those who have learned Jin Family’s Cultivation Technique\n>\n> **Realm:** Unknown\n>\n> **Effects:** Unknown\n>\n> **Description:** The Jin Family of Taiyuan’s hereditary martial art. Can be learned through a martial arts manual. The formula has currently been forgotten, so it cannot be used.\n>\n> Skill Window\n>\n> Jin Family’s Cultivation Technique\n>\n> **Grade:** Peak\n>\n> **Restriction:** Direct descendants of the Jin Family of Taiyuan\n>\n> **Realm:** 2nd Mastery\n>\n> **Effect:** Allows you to circulate and accumulate internal energy through Circulate Qi.\n>\n> **Description:** Exceptionally stable, but slow to accumulate internal energy.",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "context_after_baseline": "*Hmm.*",
+      "context_after_sol": "*Hmm.*",
+      "context_before_baseline": "Ding.",
+      "context_before_sol": "Ding.",
+      "hunk_id": "H078",
+      "sol": "> **System**\n>\n> Skill Window\n>\n> Jin Family’s Spear Technique\n>\n> **Grade:** First Rate\n>\n> **Restriction:** Must have learned Jin Family’s Cultivation Technique\n>\n> **Realm:** Unknown\n>\n> **Effect:** Unknown\n>\n> **Description:** A hereditary martial art of the Jin Family of Taiyuan. Can be learned through a martial arts manual. Currently unavailable because you have forgotten the formula.\n>\n> Skill Window\n>\n> Jin Family’s Manoeuvre Technique\n>\n> **Grade:** First Rate\n>\n> **Restriction:** Must have learned Jin Family’s Cultivation Technique\n>\n> **Realm:** Unknown\n>\n> **Effect:** Unknown\n>\n> **Description:** A hereditary martial art of the Jin Family of Taiyuan. Can be learned through a martial arts manual. Currently unavailable because you have forgotten the formula.\n>\n> Skill Window\n>\n> Jin Family’s Cultivation Technique\n>\n> **Grade:** Peak\n>\n> **Restriction:** Direct descendant of the Jin Family of Taiyuan\n>\n> **Realm:** Second Stage\n>\n> **Effect:** Allows you to circulate and accumulate internal energy by circulating your qi.\n>\n> **Description:** Exceptionally stable, but slow to accumulate internal energy.",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "고수",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "master"
+        }
+      ]
+    },
+    {
+      "baseline": "The Spear Technique and Manoeuvre Technique were first-rate. Only the Jin Family’s Cultivation Technique was peak. It was also the only one with a clearly listed realm and effect.",
+      "baseline_range": [
+        124,
+        125
+      ],
+      "context_after_baseline": "*I haven’t even tried the Spear Technique or Manoeuvre Technique. And the Cultivation Technique…this is pretty good.*",
+      "context_after_sol": "*I haven’t even been able to try the Spear Technique or Manoeuvre Technique. As for the Cultivation Technique…not bad.*",
+      "context_before_baseline": "The first thing that caught my eye was the grade.",
+      "context_before_sol": "The first thing that caught my eye was the grade.",
+      "hunk_id": "H079",
+      "sol": "The Spear Technique and Manoeuvre Technique were First Rate. Only the Jin Family’s Cultivation Technique was Peak. It was also the only one with a clearly listed realm and effect.",
+      "sol_range": [
+        130,
+        131
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I haven’t even tried the Spear Technique or Manoeuvre Technique. And the Cultivation Technique…this is pretty good.*",
+      "baseline_range": [
+        125,
+        126
+      ],
+      "context_after_baseline": "Who cared how fast my internal energy accumulated? Exceptionally stable—that was all I needed. My motto in life was to keep my head down and live a long time.",
+      "context_after_sol": "Who cared how slowly it accumulated internal energy? Exceptionally stable. That was all I needed. My motto in life was to keep my head down and live a long time.",
+      "context_before_baseline": "The Spear Technique and Manoeuvre Technique were first-rate. Only the Jin Family’s Cultivation Technique was peak. It was also the only one with a clearly listed realm and effect.",
+      "context_before_sol": "The Spear Technique and Manoeuvre Technique were First Rate. Only the Jin Family’s Cultivation Technique was Peak. It was also the only one with a clearly listed realm and effect.",
+      "hunk_id": "H080",
+      "sol": "*I haven’t even been able to try the Spear Technique or Manoeuvre Technique. As for the Cultivation Technique…not bad.*",
+      "sol_range": [
+        131,
+        132
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Who cared how fast my internal energy accumulated? Exceptionally stable—that was all I needed. My motto in life was to keep my head down and live a long time.",
+      "baseline_range": [
+        126,
+        127
+      ],
+      "context_after_baseline": "That was when—",
+      "context_after_sol": "That was when—",
+      "context_before_baseline": "*I haven’t even tried the Spear Technique or Manoeuvre Technique. And the Cultivation Technique…this is pretty good.*",
+      "context_before_sol": "*I haven’t even been able to try the Spear Technique or Manoeuvre Technique. As for the Cultivation Technique…not bad.*",
+      "hunk_id": "H081",
+      "sol": "Who cared how slowly it accumulated internal energy? Exceptionally stable. That was all I needed. My motto in life was to keep my head down and live a long time.",
+      "sol_range": [
+        132,
+        133
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 4\n>\n> You can now use Circulate Qi to control internal energy.\n>\n> However, uncontrolled internal energy is a double-edged sword.\n>\n> Do not let your guard down until the very end!\n>\n> **Grade:** Tutorial (Final)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Circulate Qi (Incomplete)\n>\n> **Reward:** Item Chest\n>\n> Qi Sense acquired\n>\n> Main Quest unlocked\n>\n> **Failure:** Status Effect Qi Deviation or Death\n>\n> Would you like to accept the Quest?\n>\n> Accept / Decline",
+      "baseline_range": [
+        128,
+        129
+      ],
+      "context_after_baseline": "I answered without hesitation.",
+      "context_after_sol": "I answered without hesitation.",
+      "context_before_baseline": "That was when—",
+      "context_before_sol": "That was when—",
+      "hunk_id": "H082",
+      "sol": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 4\n>\n> You can now control your internal energy by circulating your qi.\n>\n> However, uncontrolled internal energy is a double-edged sword.\n>\n> Do not let your guard down until the very end!\n>\n> **Grade:** Tutorial (Final)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Circulate Your Qi (Incomplete)\n>\n> **Reward:** Item Chest\n>\n> Acquire Qi Sense\n>\n> Unlock Main Quest\n>\n> **Failure:** Status Effect: Qi Deviation or Death\n>\n> Would you like to accept the Quest?\n>\n> Accept / Decline",
+      "sol_range": [
+        134,
+        135
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "습득",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "Acquired"
+        }
+      ]
+    },
+    {
+      "baseline": "*Nope. I’m not doing it.*",
+      "baseline_range": [
+        130,
+        131
+      ],
+      "context_after_baseline": "A reward? I didn’t need some lousy reward. There had to be a limit to this kind of bullshit. Were they seriously trying to bargain with my life over some game items?",
+      "context_after_sol": "A reward? I didn’t need one. There had to be a limit to this bullshit. Were these lunatics really trying to bargain with me, putting game items on one side and my life on the other?",
+      "context_before_baseline": "I answered without hesitation.",
+      "context_before_sol": "I answered without hesitation.",
+      "hunk_id": "H083",
+      "sol": "*Nope. Not doing it.*",
+      "sol_range": [
+        136,
+        137
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A reward? I didn’t need some lousy reward. There had to be a limit to this kind of bullshit. Were they seriously trying to bargain with my life over some game items?",
+      "baseline_range": [
+        131,
+        132
+      ],
+      "context_after_baseline": "> **System**\n>\n> - Your response is being delayed.",
+      "context_after_sol": "> **System**\n>\n> Your response is being delayed.",
+      "context_before_baseline": "*Nope. I’m not doing it.*",
+      "context_before_sol": "*Nope. Not doing it.*",
+      "hunk_id": "H084",
+      "sol": "A reward? I didn’t need one. There had to be a limit to this bullshit. Were these lunatics really trying to bargain with me, putting game items on one side and my life on the other?",
+      "sol_range": [
+        137,
+        138
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Your response is being delayed.",
+      "baseline_range": [
+        132,
+        133
+      ],
+      "context_after_baseline": "*Look at it trying to pull a cheap trick.* I ignored the coachman’s stare and enunciated each word.",
+      "context_after_sol": "*Look at it trying to pull a cheap trick.*",
+      "context_before_baseline": "A reward? I didn’t need some lousy reward. There had to be a limit to this kind of bullshit. Were they seriously trying to bargain with my life over some game items?",
+      "context_before_sol": "A reward? I didn’t need one. There had to be a limit to this bullshit. Were these lunatics really trying to bargain with me, putting game items on one side and my life on the other?",
+      "hunk_id": "H085",
+      "sol": "> **System**\n>\n> Your response is being delayed.",
+      "sol_range": [
+        138,
+        139
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Look at it trying to pull a cheap trick.* I ignored the coachman’s stare and enunciated each word.",
+      "baseline_range": [
+        133,
+        134
+      ],
+      "context_after_baseline": "“De-cline.”",
+      "context_after_sol": "Ignoring the coachman’s stare, I enunciated each syllable.",
+      "context_before_baseline": "> **System**\n>\n> - Your response is being delayed.",
+      "context_before_sol": "> **System**\n>\n> Your response is being delayed.",
+      "hunk_id": "H086",
+      "sol": "*Look at it trying to pull a cheap trick.*",
+      "sol_range": [
+        139,
+        140
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        134,
+        134
+      ],
+      "context_after_baseline": "“De-cline.”",
+      "context_after_sol": "“De-cline.”",
+      "context_before_baseline": "*Look at it trying to pull a cheap trick.* I ignored the coachman’s stare and enunciated each word.",
+      "context_before_sol": "*Look at it trying to pull a cheap trick.*",
+      "hunk_id": "H087",
+      "sol": "Ignoring the coachman’s stare, I enunciated each syllable.",
+      "sol_range": [
+        140,
+        141
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Tutorial Quests cannot be declined.",
+      "baseline_range": [
+        135,
+        136
+      ],
+      "context_after_baseline": "“…?”",
+      "context_after_sol": "“…?”",
+      "context_before_baseline": "“De-cline.”",
+      "context_before_sol": "“De-cline.”",
+      "hunk_id": "H088",
+      "sol": "> **System**\n>\n> Tutorial Quests cannot be declined.",
+      "sol_range": [
+        142,
+        143
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I said decline! Why are both options Accept?”",
+      "baseline_range": [
+        138,
+        139
+      ],
+      "context_after_baseline": "> **System**\n>\n> - Quest forcibly accepted!",
+      "context_after_sol": "> **System**\n>\n> Quest forcibly accepted!",
+      "context_before_baseline": "> **System**\n>\n> Would you like to accept the Quest?\n>\n> Accept / Accept",
+      "context_before_sol": "> **System**\n>\n> Would you like to accept the Quest?\n>\n> Accept / Accept",
+      "hunk_id": "H089",
+      "sol": "“I said decline! Why do both options say Accept?”",
+      "sol_range": [
+        145,
+        146
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Quest forcibly accepted!",
+      "baseline_range": [
+        139,
+        140
+      ],
+      "context_after_baseline": "“Hey! You sons of bitches!”",
+      "context_after_sol": "“Hey! You sons of bitches!”",
+      "context_before_baseline": "“I said decline! Why are both options Accept?”",
+      "context_before_sol": "“I said decline! Why do both options say Accept?”",
+      "hunk_id": "H090",
+      "sol": "> **System**\n>\n> Quest forcibly accepted!",
+      "sol_range": [
+        146,
+        147
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The profanity I had been holding back finally exploded out of me.",
+      "baseline_range": [
+        141,
+        142
+      ],
+      "context_after_baseline": "* * *",
+      "context_after_sol": "* * *",
+      "context_before_baseline": "“Hey! You sons of bitches!”",
+      "context_before_sol": "“Hey! You sons of bitches!”",
+      "hunk_id": "H091",
+      "sol": "The string of curses I had been holding back finally burst out.",
+      "sol_range": [
+        148,
+        149
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Starting Circulate Qi.\n>\n> - The effect of Jin Family’s Cultivation Technique greatly increases stability.",
+      "baseline_range": [
+        143,
+        144
+      ],
+      "context_after_baseline": "I had never missed my family as much as I did then. My beloved mother. My adorable little sister…or rather, my pain-in-the-ass little sister, Hayeon.",
+      "context_after_sol": "I had never missed my family more than I did then. My beloved mother. My adorable little sister…or rather, my pain-in-the-ass little sister, Hayeon.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H092",
+      "sol": "> **System**\n>\n> Beginning qi circulation.\n>\n> The effect of Jin Family’s Cultivation Technique greatly increases stability.",
+      "sol_range": [
+        150,
+        151
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had never missed my family as much as I did then. My beloved mother. My adorable little sister…or rather, my pain-in-the-ass little sister, Hayeon.",
+      "baseline_range": [
+        144,
+        145
+      ],
+      "context_after_baseline": "*When I get out, your big brother will buy you enough fried chicken to make your stomach burst.*",
+      "context_after_sol": "*When I get out, your big brother will buy you enough fried chicken to make your stomach burst.*",
+      "context_before_baseline": "> **System**\n>\n> - Starting Circulate Qi.\n>\n> - The effect of Jin Family’s Cultivation Technique greatly increases stability.",
+      "context_before_sol": "> **System**\n>\n> Beginning qi circulation.\n>\n> The effect of Jin Family’s Cultivation Technique greatly increases stability.",
+      "hunk_id": "H093",
+      "sol": "I had never missed my family more than I did then. My beloved mother. My adorable little sister…or rather, my pain-in-the-ass little sister, Hayeon.",
+      "sol_range": [
+        151,
+        152
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - The Circulate Qi Helper will run for the first time only.",
+      "baseline_range": [
+        147,
+        148
+      ],
+      "context_after_baseline": "This wasn’t a case of stabbing someone and then applying medicine to the wound…",
+      "context_after_sol": "This was like stabbing someone and then putting medicine on the wound…",
+      "context_before_baseline": "*If I ever get out.*",
+      "context_before_sol": "*If I ever get out.*",
+      "hunk_id": "H094",
+      "sol": "> **System**\n>\n> The Qi Circulation Helper will run for the first session only.",
+      "sol_range": [
+        154,
+        155
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This wasn’t a case of stabbing someone and then applying medicine to the wound…",
+      "baseline_range": [
+        148,
+        149
+      ],
+      "context_after_baseline": "> **System**\n>\n> Would you like to skip the Helper System?\n>\n> Accept / Decline",
+      "context_after_sol": "> **System**\n>\n> Would you like to skip the Helper System?\n>\n> Accept / Decline",
+      "context_before_baseline": "> **System**\n>\n> - The Circulate Qi Helper will run for the first time only.",
+      "context_before_sol": "> **System**\n>\n> The Qi Circulation Helper will run for the first session only.",
+      "hunk_id": "H095",
+      "sol": "This was like stabbing someone and then putting medicine on the wound…",
+      "sol_range": [
+        155,
+        156
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Continuing execution.",
+      "baseline_range": [
+        152,
+        153
+      ],
+      "context_after_baseline": "*That was a coincidence, right? Yeah. It had to be.*",
+      "context_after_sol": "*That was a coincidence, right? Yeah. It had to be.*",
+      "context_before_baseline": "“D-Decline.”",
+      "context_before_sol": "“D-Decline.”",
+      "hunk_id": "H096",
+      "sol": "> **System**\n>\n> Continuing.",
+      "sol_range": [
+        159,
+        160
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Before my uneasy feeling had even faded, my vision flipped upside down.",
+      "baseline_range": [
+        154,
+        155
+      ],
+      "context_after_baseline": "And when I came to, I was in an unfamiliar gray space.",
+      "context_after_sol": "When I came to, I was in an unfamiliar gray space.",
+      "context_before_baseline": "*That was a coincidence, right? Yeah. It had to be.*",
+      "context_before_sol": "*That was a coincidence, right? Yeah. It had to be.*",
+      "hunk_id": "H097",
+      "sol": "Before the uneasy feeling had even faded, my vision flipped upside down.",
+      "sol_range": [
+        161,
+        162
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "And when I came to, I was in an unfamiliar gray space.",
+      "baseline_range": [
+        155,
+        156
+      ],
+      "context_after_baseline": "“Over here.”",
+      "context_after_sol": "“Over here.”",
+      "context_before_baseline": "Before my uneasy feeling had even faded, my vision flipped upside down.",
+      "context_before_sol": "Before the uneasy feeling had even faded, my vision flipped upside down.",
+      "hunk_id": "H098",
+      "sol": "When I came to, I was in an unfamiliar gray space.",
+      "sol_range": [
+        162,
+        163
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I whipped my head around in surprise and saw an old man beckoning me.",
+      "baseline_range": [
+        157,
+        158
+      ],
+      "context_after_baseline": "*If an old man like that called me over in a dream, I’d turn around and run for my life. But this was a game.*",
+      "context_after_sol": "*If an old man who looked like that called me over in a dream, I’d turn around and run for my life. But this was a game.*",
+      "context_before_baseline": "“Over here.”",
+      "context_before_sol": "“Over here.”",
+      "hunk_id": "H099",
+      "sol": "I whipped my head around and saw an old man beckoning to me.",
+      "sol_range": [
+        164,
+        165
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*If an old man like that called me over in a dream, I’d turn around and run for my life. But this was a game.*",
+      "baseline_range": [
+        158,
+        159
+      ],
+      "context_after_baseline": "*So he’s the helper.*",
+      "context_after_sol": "*So he’s the helper.*",
+      "context_before_baseline": "I whipped my head around in surprise and saw an old man beckoning me.",
+      "context_before_sol": "I whipped my head around and saw an old man beckoning to me.",
+      "hunk_id": "H100",
+      "sol": "*If an old man who looked like that called me over in a dream, I’d turn around and run for my life. But this was a game.*",
+      "sol_range": [
+        165,
+        166
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Even if I hadn’t reasoned it out, I would have followed him without much suspicion.",
+      "baseline_range": [
+        160,
+        161
+      ],
+      "context_after_baseline": "It was strange, even to me, but that was how I felt. An inexplicable sense of familiarity. And trust.",
+      "context_after_sol": "It was strange even to me, but that was how I felt. An inexplicable sense of familiarity—and trust.",
+      "context_before_baseline": "*So he’s the helper.*",
+      "context_before_sol": "*So he’s the helper.*",
+      "hunk_id": "H101",
+      "sol": "Even if I hadn’t figured that out, I probably would have followed him without much suspicion.",
+      "sol_range": [
+        167,
+        168
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was strange, even to me, but that was how I felt. An inexplicable sense of familiarity. And trust.",
+      "baseline_range": [
+        161,
+        162
+      ],
+      "context_after_baseline": "“Take the most comfortable position.”",
+      "context_after_sol": "“Take whatever position feels most comfortable.”",
+      "context_before_baseline": "Even if I hadn’t reasoned it out, I would have followed him without much suspicion.",
+      "context_before_sol": "Even if I hadn’t figured that out, I probably would have followed him without much suspicion.",
+      "hunk_id": "H102",
+      "sol": "It was strange even to me, but that was how I felt. An inexplicable sense of familiarity—and trust.",
+      "sol_range": [
+        168,
+        169
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Take the most comfortable position.”",
+      "baseline_range": [
+        162,
+        163
+      ],
+      "context_after_baseline": "*Huh? Isn’t circulating qi supposed to be done sitting cross-legged?*",
+      "context_after_sol": "*Huh? Aren’t you supposed to sit cross-legged when circulating qi?*",
+      "context_before_baseline": "It was strange, even to me, but that was how I felt. An inexplicable sense of familiarity. And trust.",
+      "context_before_sol": "It was strange even to me, but that was how I felt. An inexplicable sense of familiarity—and trust.",
+      "hunk_id": "H103",
+      "sol": "“Take whatever position feels most comfortable.”",
+      "sol_range": [
+        169,
+        170
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Huh? Isn’t circulating qi supposed to be done sitting cross-legged?*",
+      "baseline_range": [
+        163,
+        164
+      ],
+      "context_after_baseline": "As if he had read my thoughts, the old man answered.",
+      "context_after_sol": "As if he had read my thoughts, the old man replied.",
+      "context_before_baseline": "“Take the most comfortable position.”",
+      "context_before_sol": "“Take whatever position feels most comfortable.”",
+      "hunk_id": "H104",
+      "sol": "*Huh? Aren’t you supposed to sit cross-legged when circulating qi?*",
+      "sol_range": [
+        170,
+        171
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As if he had read my thoughts, the old man answered.",
+      "baseline_range": [
+        164,
+        165
+      ],
+      "context_after_baseline": "“Weaklings fuss over things like that. Masters don’t need to.”",
+      "context_after_sol": "“Weaklings are the ones who fuss over details. Masters don’t need to.”",
+      "context_before_baseline": "*Huh? Isn’t circulating qi supposed to be done sitting cross-legged?*",
+      "context_before_sol": "*Huh? Aren’t you supposed to sit cross-legged when circulating qi?*",
+      "hunk_id": "H105",
+      "sol": "As if he had read my thoughts, the old man replied.",
+      "sol_range": [
+        171,
+        172
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Weaklings fuss over things like that. Masters don’t need to.”",
+      "baseline_range": [
+        165,
+        166
+      ],
+      "context_after_baseline": "I could smell it in his calm voice. I could smell it.",
+      "context_after_sol": "I could smell it in his calm voice. There was definitely a scent.",
+      "context_before_baseline": "As if he had read my thoughts, the old man answered.",
+      "context_before_sol": "As if he had read my thoughts, the old man replied.",
+      "hunk_id": "H106",
+      "sol": "“Weaklings are the ones who fuss over details. Masters don’t need to.”",
+      "sol_range": [
+        172,
+        173
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could smell it in his calm voice. I could smell it.",
+      "baseline_range": [
+        166,
+        167
+      ],
+      "context_after_baseline": "*This was the scent of a master. The real deal had finally appeared!*",
+      "context_after_sol": "*The scent of a master. The real deal had finally appeared!*",
+      "context_before_baseline": "“Weaklings fuss over things like that. Masters don’t need to.”",
+      "context_before_sol": "“Weaklings are the ones who fuss over details. Masters don’t need to.”",
+      "hunk_id": "H107",
+      "sol": "I could smell it in his calm voice. There was definitely a scent.",
+      "sol_range": [
+        173,
+        174
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*This was the scent of a master. The real deal had finally appeared!*",
+      "baseline_range": [
+        167,
+        168
+      ],
+      "context_after_baseline": "“Good grief. What a handful.”",
+      "context_after_sol": "“Good grief. What a character.”",
+      "context_before_baseline": "I could smell it in his calm voice. I could smell it.",
+      "context_before_sol": "I could smell it in his calm voice. There was definitely a scent.",
+      "hunk_id": "H108",
+      "sol": "*The scent of a master. The real deal had finally appeared!*",
+      "sol_range": [
+        174,
+        175
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Good grief. What a handful.”",
+      "baseline_range": [
+        168,
+        169
+      ],
+      "context_after_baseline": "His wrinkled hand seemed to reach toward me, then vanished in a blur. Huh?",
+      "context_after_sol": "His wrinkled hand reached toward me, then vanished in a blur.",
+      "context_before_baseline": "*This was the scent of a master. The real deal had finally appeared!*",
+      "context_before_sol": "*The scent of a master. The real deal had finally appeared!*",
+      "hunk_id": "H109",
+      "sol": "“Good grief. What a character.”",
+      "sol_range": [
+        175,
+        176
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "His wrinkled hand seemed to reach toward me, then vanished in a blur. Huh?",
+      "baseline_range": [
+        169,
+        170
+      ],
+      "context_after_baseline": "Tap. Tap-tap.",
+      "context_after_sol": "*Huh?*",
+      "context_before_baseline": "“Good grief. What a handful.”",
+      "context_before_sol": "“Good grief. What a character.”",
+      "hunk_id": "H110",
+      "sol": "His wrinkled hand reached toward me, then vanished in a blur.",
+      "sol_range": [
+        176,
+        177
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        170,
+        170
+      ],
+      "context_after_baseline": "Tap. Tap-tap.",
+      "context_after_sol": "Tap. Tap-tap.",
+      "context_before_baseline": "His wrinkled hand seemed to reach toward me, then vanished in a blur. Huh?",
+      "context_before_sol": "His wrinkled hand reached toward me, then vanished in a blur.",
+      "hunk_id": "H111",
+      "sol": "*Huh?*",
+      "sol_range": [
+        177,
+        178
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The next thing I knew, I was frozen in place.",
+      "baseline_range": [
+        171,
+        172
+      ],
+      "context_after_baseline": "*Was this what a corpse felt like with its eyes still open?* I couldn’t move a muscle.",
+      "context_after_sol": "*Was this what it felt like to be a corpse with its eyes still open?*",
+      "context_before_baseline": "Tap. Tap-tap.",
+      "context_before_sol": "Tap. Tap-tap.",
+      "hunk_id": "H112",
+      "sol": "Something flashed past, and the next moment, I was frozen stiff.",
+      "sol_range": [
+        179,
+        180
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Was this what a corpse felt like with its eyes still open?* I couldn’t move a muscle.",
+      "baseline_range": [
+        172,
+        173
+      ],
+      "context_after_baseline": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. Focus from this point on.”",
+      "context_after_sol": "I couldn’t move a muscle.",
+      "context_before_baseline": "The next thing I knew, I was frozen in place.",
+      "context_before_sol": "Something flashed past, and the next moment, I was frozen stiff.",
+      "hunk_id": "H113",
+      "sol": "*Was this what it felt like to be a corpse with its eyes still open?*",
+      "sol_range": [
+        180,
+        181
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        173,
+        173
+      ],
+      "context_after_baseline": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. Focus from this point on.”",
+      "context_after_sol": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. From this moment on, focus.”",
+      "context_before_baseline": "*Was this what a corpse felt like with its eyes still open?* I couldn’t move a muscle.",
+      "context_before_sol": "*Was this what it felt like to be a corpse with its eyes still open?*",
+      "hunk_id": "H114",
+      "sol": "I couldn’t move a muscle.",
+      "sol_range": [
+        181,
+        182
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. Focus from this point on.”",
+      "baseline_range": [
+        173,
+        174
+      ],
+      "context_after_baseline": "As he spoke, the old man placed a hand on my back. Then he rapidly rattled off words in a low voice.",
+      "context_after_sol": "As he spoke, the old man placed a hand against my back. Then he began rattling off words in a low voice.",
+      "context_before_baseline": "*Was this what a corpse felt like with its eyes still open?* I couldn’t move a muscle.",
+      "context_before_sol": "I couldn’t move a muscle.",
+      "hunk_id": "H115",
+      "sol": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. From this moment on, focus.”",
+      "sol_range": [
+        182,
+        183
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As he spoke, the old man placed a hand on my back. Then he rapidly rattled off words in a low voice.",
+      "baseline_range": [
+        174,
+        175
+      ],
+      "context_after_baseline": "“Circulating qi is the most important training for a martial artist. It allows you to advance to a higher realm not only by accumulating internal energy, but also by honing essence, qi, and spirit. Therefore…”",
+      "context_after_sol": "“Circulating qi is the most important training for a martial artist. It not only allows you to accumulate internal energy, but also refines essence, qi, and spirit, enabling you to advance to a higher realm. Therefore…”",
+      "context_before_baseline": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. Focus from this point on.”",
+      "context_before_sol": "“It’s only a simple acupoint-sealing technique, so don’t be alarmed. From this moment on, focus.”",
+      "hunk_id": "H116",
+      "sol": "As he spoke, the old man placed a hand against my back. Then he began rattling off words in a low voice.",
+      "sol_range": [
+        183,
+        184
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Circulating qi is the most important training for a martial artist. It allows you to advance to a higher realm not only by accumulating internal energy, but also by honing essence, qi, and spirit. Therefore…”",
+      "baseline_range": [
+        175,
+        176
+      ],
+      "context_after_baseline": "I listened closely, but I couldn’t understand a word of what came after that. I only understood that circulating qi was extremely important.",
+      "context_after_sol": "I listened closely, but after that, I couldn’t understand a single thing he said. All I gathered was that circulating qi was extremely important.",
+      "context_before_baseline": "As he spoke, the old man placed a hand on my back. Then he rapidly rattled off words in a low voice.",
+      "context_before_sol": "As he spoke, the old man placed a hand against my back. Then he began rattling off words in a low voice.",
+      "hunk_id": "H117",
+      "sol": "“Circulating qi is the most important training for a martial artist. It not only allows you to accumulate internal energy, but also refines essence, qi, and spirit, enabling you to advance to a higher realm. Therefore…”",
+      "sol_range": [
+        184,
+        185
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I listened closely, but I couldn’t understand a word of what came after that. I only understood that circulating qi was extremely important.",
+      "baseline_range": [
+        176,
+        177
+      ],
+      "context_after_baseline": "“Clear your mind like a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "context_after_sol": "“Keep your mind clear as a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "context_before_baseline": "“Circulating qi is the most important training for a martial artist. It allows you to advance to a higher realm not only by accumulating internal energy, but also by honing essence, qi, and spirit. Therefore…”",
+      "context_before_sol": "“Circulating qi is the most important training for a martial artist. It not only allows you to accumulate internal energy, but also refines essence, qi, and spirit, enabling you to advance to a higher realm. Therefore…”",
+      "hunk_id": "H118",
+      "sol": "I listened closely, but after that, I couldn’t understand a single thing he said. All I gathered was that circulating qi was extremely important.",
+      "sol_range": [
+        185,
+        186
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Clear your mind like a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "baseline_range": [
+        177,
+        178
+      ],
+      "context_after_baseline": "Without giving me time to stop him, he rattled off the formula at breakneck speed—like beans popping in a pan—but I could hear it all. It felt as though words in a foreign language were being translated automatically inside my head.",
+      "context_after_sol": "Without giving me a chance to stop him, he rattled off the formula as fast as beans popping in a pan…and yet I understood every word. It felt like hearing a foreign language being translated automatically inside my head.",
+      "context_before_baseline": "I listened closely, but I couldn’t understand a word of what came after that. I only understood that circulating qi was extremely important.",
+      "context_before_sol": "I listened closely, but after that, I couldn’t understand a single thing he said. All I gathered was that circulating qi was extremely important.",
+      "hunk_id": "H119",
+      "sol": "“Keep your mind clear as a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "sol_range": [
+        186,
+        187
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Without giving me time to stop him, he rattled off the formula at breakneck speed—like beans popping in a pan—but I could hear it all. It felt as though words in a foreign language were being translated automatically inside my head.",
+      "baseline_range": [
+        178,
+        179
+      ],
+      "context_after_baseline": "*What is this?*",
+      "context_after_sol": "*What is this?*",
+      "context_before_baseline": "“Clear your mind like a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "context_before_sol": "“Keep your mind clear as a stream, maintain your focus, and draw out the flow. Now I will recite the formula of the Jin Family’s Cultivation Technique.”",
+      "hunk_id": "H120",
+      "sol": "Without giving me a chance to stop him, he rattled off the formula as fast as beans popping in a pan…and yet I understood every word. It felt like hearing a foreign language being translated automatically inside my head.",
+      "sol_range": [
+        187,
+        188
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was a formula of exactly 318 characters. The moment I felt the formula of the Jin Family’s Cultivation Technique become perfectly etched into my mind, a change occurred.",
+      "baseline_range": [
+        180,
+        181
+      ],
+      "context_after_baseline": "“Descend.”",
+      "context_after_sol": "“Descend.”",
+      "context_before_baseline": "*What is this?*",
+      "context_before_sol": "*What is this?*",
+      "hunk_id": "H121",
+      "sol": "The formula was exactly 318 characters long. The moment I felt it become perfectly engraved in my mind, something changed.",
+      "sol_range": [
+        189,
+        190
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "심법",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "cultivation technique"
+        }
+      ]
+    },
+    {
+      "baseline": "One word from the old man.",
+      "baseline_range": [
+        182,
+        183
+      ],
+      "context_after_baseline": "*Where to?*",
+      "context_after_sol": "*Where?*",
+      "context_before_baseline": "“Descend.”",
+      "context_before_sol": "“Descend.”",
+      "hunk_id": "H122",
+      "sol": "A single word from the old man.",
+      "sol_range": [
+        191,
+        192
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Where to?*",
+      "baseline_range": [
+        183,
+        184
+      ],
+      "context_after_baseline": "Before the question had even faded, I felt myself being sucked into somewhere deep. No—I was being sucked in.",
+      "context_after_sol": "Before the question could fade, I felt myself being drawn somewhere deep.",
+      "context_before_baseline": "One word from the old man.",
+      "context_before_sol": "A single word from the old man.",
+      "hunk_id": "H123",
+      "sol": "*Where?*",
+      "sol_range": [
+        192,
+        193
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Before the question had even faded, I felt myself being sucked into somewhere deep. No—I was being sucked in.",
+      "baseline_range": [
+        184,
+        185
+      ],
+      "context_after_baseline": "My eyes were definitely closed, but I could see. I could feel.",
+      "context_after_sol": "No—it only felt as though I was being drawn in.",
+      "context_before_baseline": "*Where to?*",
+      "context_before_sol": "*Where?*",
+      "hunk_id": "H124",
+      "sol": "Before the question could fade, I felt myself being drawn somewhere deep.",
+      "sol_range": [
+        193,
+        194
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        185,
+        185
+      ],
+      "context_after_baseline": "My eyes were definitely closed, but I could see. I could feel.",
+      "context_after_sol": "My eyes were definitely closed, yet I could see. I could feel.",
+      "context_before_baseline": "Before the question had even faded, I felt myself being sucked into somewhere deep. No—I was being sucked in.",
+      "context_before_sol": "Before the question could fade, I felt myself being drawn somewhere deep.",
+      "hunk_id": "H125",
+      "sol": "No—it only felt as though I was being drawn in.",
+      "sol_range": [
+        194,
+        195
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My eyes were definitely closed, but I could see. I could feel.",
+      "baseline_range": [
+        185,
+        186
+      ],
+      "context_after_baseline": "The breeze that gently blew in before scattering. Sunlight. The coachman’s breathing and the horses’ snorts…",
+      "context_after_sol": "A breeze blowing gently before scattering. Sunlight. The coachman’s breathing and the horses snorting…",
+      "context_before_baseline": "Before the question had even faded, I felt myself being sucked into somewhere deep. No—I was being sucked in.",
+      "context_before_sol": "No—it only felt as though I was being drawn in.",
+      "hunk_id": "H126",
+      "sol": "My eyes were definitely closed, yet I could see. I could feel.",
+      "sol_range": [
+        195,
+        196
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The breeze that gently blew in before scattering. Sunlight. The coachman’s breathing and the horses’ snorts…",
+      "baseline_range": [
+        186,
+        187
+      ],
+      "context_after_baseline": "I pushed all of it away. There was only one place to focus on: my body.",
+      "context_after_sol": "I pushed all of it away.",
+      "context_before_baseline": "My eyes were definitely closed, but I could see. I could feel.",
+      "context_before_sol": "My eyes were definitely closed, yet I could see. I could feel.",
+      "hunk_id": "H127",
+      "sol": "A breeze blowing gently before scattering. Sunlight. The coachman’s breathing and the horses snorting…",
+      "sol_range": [
+        196,
+        197
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        187,
+        187
+      ],
+      "context_after_baseline": "I pushed all of it away. There was only one place to focus on: my body.",
+      "context_after_sol": "There was only one place to focus on: my body.",
+      "context_before_baseline": "The breeze that gently blew in before scattering. Sunlight. The coachman’s breathing and the horses’ snorts…",
+      "context_before_sol": "A breeze blowing gently before scattering. Sunlight. The coachman’s breathing and the horses snorting…",
+      "hunk_id": "H128",
+      "sol": "I pushed all of it away.",
+      "sol_range": [
+        197,
+        198
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I pushed all of it away. There was only one place to focus on: my body.",
+      "baseline_range": [
+        187,
+        188
+      ],
+      "context_after_baseline": "> **System**\n>\n> - Beginning circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "context_after_sol": "> **System**\n>\n> Beginning the circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "context_before_baseline": "The breeze that gently blew in before scattering. Sunlight. The coachman’s breathing and the horses’ snorts…",
+      "context_before_sol": "I pushed all of it away.",
+      "hunk_id": "H129",
+      "sol": "There was only one place to focus on: my body.",
+      "sol_range": [
+        198,
+        199
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Beginning circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "baseline_range": [
+        188,
+        189
+      ],
+      "context_after_baseline": "By then, I could no longer sense the old man’s disappearance or the System voice ringing out.",
+      "context_after_sol": "I didn’t notice the old man disappear. I didn’t even hear the System’s voice.",
+      "context_before_baseline": "I pushed all of it away. There was only one place to focus on: my body.",
+      "context_before_sol": "There was only one place to focus on: my body.",
+      "hunk_id": "H130",
+      "sol": "> **System**\n>\n> Beginning the circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "sol_range": [
+        199,
+        200
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "By then, I could no longer sense the old man’s disappearance or the System voice ringing out.",
+      "baseline_range": [
+        189,
+        190
+      ],
+      "context_after_baseline": "My consciousness descended from my head. I didn’t know that the points shining like stars were acupoints. Everything simply felt familiar, as if it had always been this way.",
+      "context_after_sol": "My consciousness, awakened in my head, slid downward. I didn’t know the points shining like stars were acupoints. Everything simply felt familiar, as though I had done this all my life.",
+      "context_before_baseline": "> **System**\n>\n> - Beginning circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "context_before_sol": "> **System**\n>\n> Beginning the circulation of Jin Family’s Cultivation Technique. Follow the glowing acupoints.",
+      "hunk_id": "H131",
+      "sol": "I didn’t notice the old man disappear. I didn’t even hear the System’s voice.",
+      "sol_range": [
+        200,
+        201
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My consciousness descended from my head. I didn’t know that the points shining like stars were acupoints. Everything simply felt familiar, as if it had always been this way.",
+      "baseline_range": [
+        190,
+        191
+      ],
+      "context_after_baseline": "At last, I reached my dantian.",
+      "context_after_sol": "At last, I reached my dantian.",
+      "context_before_baseline": "By then, I could no longer sense the old man’s disappearance or the System voice ringing out.",
+      "context_before_sol": "I didn’t notice the old man disappear. I didn’t even hear the System’s voice.",
+      "hunk_id": "H132",
+      "sol": "My consciousness, awakened in my head, slid downward. I didn’t know the points shining like stars were acupoints. Everything simply felt familiar, as though I had done this all my life.",
+      "sol_range": [
+        201,
+        202
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        192,
+        192
+      ],
+      "context_after_baseline": "A small but pure energy. Ten years of internal energy.",
+      "context_after_sol": "Ten years of internal energy.",
+      "context_before_baseline": "At last, I reached my dantian.",
+      "context_before_sol": "At last, I reached my dantian.",
+      "hunk_id": "H133",
+      "sol": "A small but pure energy.",
+      "sol_range": [
+        203,
+        204
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A small but pure energy. Ten years of internal energy.",
+      "baseline_range": [
+        192,
+        193
+      ],
+      "context_after_baseline": "*But what’s that?*",
+      "context_after_sol": "*But what’s that?*",
+      "context_before_baseline": "At last, I reached my dantian.",
+      "context_before_sol": "A small but pure energy.",
+      "hunk_id": "H134",
+      "sol": "Ten years of internal energy.",
+      "sol_range": [
+        204,
+        205
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In one corner of my dantian was something else, as large and hard as a boulder.",
+      "baseline_range": [
+        194,
+        195
+      ],
+      "context_after_baseline": "I understood instinctively.",
+      "context_after_sol": "I understood instinctively.",
+      "context_before_baseline": "*But what’s that?*",
+      "context_before_sol": "*But what’s that?*",
+      "hunk_id": "H135",
+      "sol": "In one corner of my dantian was something else, large and solid as a boulder.",
+      "sol_range": [
+        206,
+        207
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was energy that I—Jin Taekyung—had not yet assimilated and made my own. It was almost as vast as the internal energy I already possessed.",
+      "baseline_range": [
+        197,
+        198
+      ],
+      "context_after_baseline": "*What if I absorb it?*",
+      "context_after_sol": "*What if I absorb it?*",
+      "context_before_baseline": "*More internal energy.*",
+      "context_before_sol": "*More internal energy.*",
+      "hunk_id": "H136",
+      "sol": "It was energy that I—Jin Taekyung—had not yet absorbed and made my own. It was almost as vast as the internal energy I already possessed.",
+      "sol_range": [
+        209,
+        210
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There was no question that I would become stronger.",
+      "baseline_range": [
+        199,
+        200
+      ],
+      "context_after_baseline": "But for me, right now, it would be a reckless challenge. An adventure without a purpose.",
+      "context_after_sol": "But right now, it would be a reckless challenge. A pointless gamble.",
+      "context_before_baseline": "*What if I absorb it?*",
+      "context_before_sol": "*What if I absorb it?*",
+      "hunk_id": "H137",
+      "sol": "There was no question that it would make me stronger.",
+      "sol_range": [
+        211,
+        212
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But for me, right now, it would be a reckless challenge. An adventure without a purpose.",
+      "baseline_range": [
+        200,
+        201
+      ],
+      "context_after_baseline": "*I can’t make a reckless move and die out here.*",
+      "context_after_sol": "*I can’t push my luck and die out here.*",
+      "context_before_baseline": "There was no question that I would become stronger.",
+      "context_before_sol": "There was no question that it would make me stronger.",
+      "hunk_id": "H138",
+      "sol": "But right now, it would be a reckless challenge. A pointless gamble.",
+      "sol_range": [
+        212,
+        213
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I can’t make a reckless move and die out here.*",
+      "baseline_range": [
+        201,
+        202
+      ],
+      "context_after_baseline": "I steadied my mind and stirred my internal energy. Following the path the System voice had shown me, I slowly guided it along.",
+      "context_after_sol": "I steadied my mind and stirred my internal energy. Following the path the System’s voice had shown me, I slowly guided it onward.",
+      "context_before_baseline": "But for me, right now, it would be a reckless challenge. An adventure without a purpose.",
+      "context_before_sol": "But right now, it would be a reckless challenge. A pointless gamble.",
+      "hunk_id": "H139",
+      "sol": "*I can’t push my luck and die out here.*",
+      "sol_range": [
+        213,
+        214
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I steadied my mind and stirred my internal energy. Following the path the System voice had shown me, I slowly guided it along.",
+      "baseline_range": [
+        202,
+        203
+      ],
+      "context_after_baseline": "At some point, I thought I faintly heard someone’s voice.",
+      "context_after_sol": "Somewhere along the way, I thought I faintly heard someone speak.",
+      "context_before_baseline": "*I can’t make a reckless move and die out here.*",
+      "context_before_sol": "*I can’t push my luck and die out here.*",
+      "hunk_id": "H140",
+      "sol": "I steadied my mind and stirred my internal energy. Following the path the System’s voice had shown me, I slowly guided it onward.",
+      "sol_range": [
+        214,
+        215
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "At some point, I thought I faintly heard someone’s voice.",
+      "baseline_range": [
+        203,
+        204
+      ],
+      "context_after_baseline": "“Good judgment.”",
+      "context_after_sol": "“Good judgment.”",
+      "context_before_baseline": "I steadied my mind and stirred my internal energy. Following the path the System voice had shown me, I slowly guided it along.",
+      "context_before_sol": "I steadied my mind and stirred my internal energy. Following the path the System’s voice had shown me, I slowly guided it onward.",
+      "hunk_id": "H141",
+      "sol": "Somewhere along the way, I thought I faintly heard someone speak.",
+      "sol_range": [
+        215,
+        216
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Circulate Qi complete.\n>\n> - Tutorial—Stage 4 complete. Rewards have been issued!\n>\n> - You have gained insight into the skill Qi Sense. You can now manipulate qi more freely and sense the energy of others.\n>\n> - A small amount of turbid qi has been expelled.\n>\n> .\n>\n> .\n>\n> .\n>\n> - You have completed all Tutorials.\n>\n> - Main Quest created.",
+      "baseline_range": [
+        206,
+        207
+      ],
+      "context_after_baseline": "With the System’s final voice, the coachman spoke.",
+      "context_after_sol": "As the System’s final message sounded, the coachman spoke.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H142",
+      "sol": "> **System**\n>\n> Qi circulation complete.\n>\n> Tutorial—Stage 4 complete. Rewards will be distributed!\n>\n> You have gained insight into the Skill Qi Sense. You can now manipulate qi more freely and sense the energy of others.\n>\n> A small amount of turbid qi has been expelled.\n>\n> .\n>\n> .\n>\n> .\n>\n> You have completed all Tutorial stages.\n>\n> Main Quest created.",
+      "sol_range": [
+        218,
+        219
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With the System’s final voice, the coachman spoke.",
+      "baseline_range": [
+        207,
+        208
+      ],
+      "context_after_baseline": "“We’ve arrived. This is the Jin Family of Taiyuan.”",
+      "context_after_sol": "“We’ve arrived. This is the Jin Family of Taiyuan.”",
+      "context_before_baseline": "> **System**\n>\n> - Circulate Qi complete.\n>\n> - Tutorial—Stage 4 complete. Rewards have been issued!\n>\n> - You have gained insight into the skill Qi Sense. You can now manipulate qi more freely and sense the energy of others.\n>\n> - A small amount of turbid qi has been expelled.\n>\n> .\n>\n> .\n>\n> .\n>\n> - You have completed all Tutorials.\n>\n> - Main Quest created.",
+      "context_before_sol": "> **System**\n>\n> Qi circulation complete.\n>\n> Tutorial—Stage 4 complete. Rewards will be distributed!\n>\n> You have gained insight into the Skill Qi Sense. You can now manipulate qi more freely and sense the energy of others.\n>\n> A small amount of turbid qi has been expelled.\n>\n> .\n>\n> .\n>\n> .\n>\n> You have completed all Tutorial stages.\n>\n> Main Quest created.",
+      "hunk_id": "H143",
+      "sol": "As the System’s final message sounded, the coachman spoke.",
+      "sol_range": [
+        219,
+        220
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Yeah. At last.*",
+      "baseline_range": [
+        209,
+        210
+      ],
+      "context_after_baseline": "",
+      "context_after_sol": "",
+      "context_before_baseline": "“We’ve arrived. This is the Jin Family of Taiyuan.”",
+      "context_before_sol": "“We’ve arrived. This is the Jin Family of Taiyuan.”",
+      "hunk_id": "H144",
+      "sol": "*Yeah. Finally.*",
+      "sol_range": [
+        221,
+        222
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 222,
+  "sol_sha256": "b369850881d05b49d7e445308b4b091858db9fda71454ecd7329a56f1003e006",
+  "version": 1
+}

@@ -1,0 +1,10 @@
+Copy the CONTENTS of this directory into the root of your existing murim-login-new repository.
+
+Then:
+  python tools/mastering.py doctor
+  python tools/mastering.py run 1-10
+  python tools/mastering.py status 1-10
+  python tools/mastering.py report 1-10
+
+Do not run `promote` during the test.
+See README_MASTERING.md for details.

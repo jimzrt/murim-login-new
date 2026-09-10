@@ -1,0 +1,225 @@
+{
+  "chapter": 2,
+  "decisions": [
+    {
+      "hunk_id": "H001",
+      "decision": "SOL",
+      "reason": "“Who had opened the window, then?” naturalizes 그럼 (‘then’) without BASE’s fronted “So who,” reading smoother."
+    },
+    {
+      "hunk_id": "H002",
+      "decision": "BASE",
+      "reason": "“small whine” and “soft whine” both render 작게 칭얼거렸다 equally well; no real gain."
+    },
+    {
+      "hunk_id": "H003",
+      "decision": "BASE",
+      "reason": "Korean 여자 누구? asks “which woman”; “What woman?” shifts the question form."
+    },
+    {
+      "hunk_id": "H004",
+      "decision": "SOL",
+      "reason": "“like a private hearing reveille” tracks 기상나팔 소리를 들은 이등병; BASE adds “startled awake,” not in source."
+    },
+    {
+      "hunk_id": "H005",
+      "decision": "SOL",
+      "reason": "“stunned twice over” reads more naturally than “startled twice” while keeping 두 번 놀랐다."
+    },
+    {
+      "hunk_id": "H006",
+      "decision": "BASE",
+      "reason": "SOL’s “heart pounding” collides with the later 쿵쾅거린다 rendering; BASE’s “heart skip” keeps 떨리다 distinct."
+    },
+    {
+      "hunk_id": "H007",
+      "decision": "SOL",
+      "reason": "Korean 벗은 몸 (naked body) is explicit; BASE censors it to “herself.” SOL also “provocative” for 자극적인."
+    },
+    {
+      "hunk_id": "H008",
+      "decision": "SOL",
+      "reason": "“heard plenty about” is more concise and idiomatic than “heard about plenty of times,” same meaning."
+    },
+    {
+      "hunk_id": "H009",
+      "decision": "SOL",
+      "reason": "“situation was becoming more and more baffling” captures 점점 미궁으로 빠지는; “After staring… I grabbed” flows better."
+    },
+    {
+      "hunk_id": "H010",
+      "decision": "SOL",
+      "reason": "“shimmered dark blue” is cleaner than “shimmered a dark blue”; “peered” fits bleary 게슴츠레한 eyes."
+    },
+    {
+      "hunk_id": "H011",
+      "decision": "SOL",
+      "reason": "“released spring” better describes the upward pop of 용수철처럼 튀어 올랐다 than the static “compressed spring.”"
+    },
+    {
+      "hunk_id": "H012",
+      "decision": "SOL",
+      "reason": "“prickled across my skin” renders the spread of 소름이 쫙 끼쳤다 more vividly than “broke out in goose bumps.”"
+    },
+    {
+      "hunk_id": "H013",
+      "decision": "SOL",
+      "reason": "“will be granted” matches ~됩니다 phrasing used elsewhere; “The player’s current language can be changed” is less clunky than BASE."
+    },
+    {
+      "hunk_id": "H014",
+      "decision": "SOL",
+      "reason": "“marveled at her all over again” is more natural than “admired her once again” for 다시 한번 감탄했다."
+    },
+    {
+      "hunk_id": "H015",
+      "decision": "SOL",
+      "reason": "“By then” supplies the temporal connective of 끝난 후였다 and reads more smoothly."
+    },
+    {
+      "hunk_id": "H016",
+      "decision": "SOL",
+      "reason": "“issue commands aloud or in my head” fixes BASE’s awkward “think my commands,” matching 속으로 생각해도 된다."
+    },
+    {
+      "hunk_id": "H017",
+      "decision": "SOL",
+      "reason": "게임을 하고 있다 means “playing a game”; BASE’s “inside a game” alters the phrasing."
+    },
+    {
+      "hunk_id": "H018",
+      "decision": "BASE",
+      "reason": "떠올리려는 찰나 is progressive “was trying to recall”; SOL’s simple “tried” loses that nuance."
+    },
+    {
+      "hunk_id": "H019",
+      "decision": "SOL",
+      "reason": "힐끔거리면서 is repeated furtive glancing; “stole glances” preserves the iteration BASE’s “glanced” drops."
+    },
+    {
+      "hunk_id": "H020",
+      "decision": "SOL",
+      "reason": "“cooling me all the way to my stomach” tracks 식도를 타고 배 속까지 시원해지는; BASE adds “wave of coolness.”"
+    },
+    {
+      "hunk_id": "H021",
+      "decision": "BASE",
+      "reason": "“never imagined” vs “I’d never imagined” are equally natural; no meaningful gain."
+    },
+    {
+      "hunk_id": "H022",
+      "decision": "SOL",
+      "reason": "“everyone goes on about virtual reality” captures the reduplication 가상현실, 가상현실 하는구나; BASE flattens it."
+    },
+    {
+      "hunk_id": "H023",
+      "decision": "SOL",
+      "reason": "어느새 곰방대를 문 attaches “already” to the pipe (as SOL does); BASE misattaches it to “watching.”"
+    },
+    {
+      "hunk_id": "H024",
+      "decision": "BASE",
+      "reason": "보고 싶어서? is “wanted to see you?”; “look at you” drifts from the standard rendering."
+    },
+    {
+      "hunk_id": "H025",
+      "decision": "SOL",
+      "reason": "Present 알아요 is “do you know”; BASE’s “did you know” shifts tense."
+    },
+    {
+      "hunk_id": "H026",
+      "decision": "BASE",
+      "reason": "Both render 게임 진행 방식이 참신하다 equivalently; “game’s progression” is no worse for concision."
+    },
+    {
+      "hunk_id": "H027",
+      "decision": "SOL",
+      "reason": "Title-casing quest objective and reward labels (“Gather Information,” “Sturdy Martial Uniform Set”) matches game-UI field style consistently."
+    },
+    {
+      "hunk_id": "H028",
+      "decision": "SOL",
+      "reason": "단도직입적 already conveys directness; “tobacco smoke” is more concise than “smoke from her pipe.”"
+    },
+    {
+      "hunk_id": "H029",
+      "decision": "SOL",
+      "reason": "“choked in the middle of exhaling smoke” captures 연기를 내뱉다 말고 사레가 들렸다; BASE’s “choked on the smoke” misframes it."
+    },
+    {
+      "hunk_id": "H030",
+      "decision": "SOL",
+      "reason": "관아 is the magistrate’s office, fitting the murim setting better than generic “local government”; “distribute” fine for 풀다."
+    },
+    {
+      "hunk_id": "H031",
+      "decision": "SOL",
+      "reason": "Preserves the 거목 tree metaphor of 뿌리 깊은 거목이랄까; BASE replaces it with generic “powers.”"
+    },
+    {
+      "hunk_id": "H032",
+      "decision": "SOL",
+      "reason": "맹주 is alliance overlord; “hegemon” conveys the political rank better than generic “leader.”"
+    },
+    {
+      "hunk_id": "H033",
+      "decision": "BASE",
+      "reason": "Source says 이상한 (strange); SOL narrows it to “uneasy” without support."
+    },
+    {
+      "hunk_id": "H034",
+      "decision": "SOL",
+      "reason": "장난삼아 묻는 건데 is “asking in jest”; “I’m only asking as a joke” is more accurate than BASE’s “This is just a joke.”"
+    },
+    {
+      "hunk_id": "H035",
+      "decision": "SOL",
+      "reason": "“I couldn’t decide whether to laugh or cry” reads more naturally than “Whether I should laugh or cry, I had no idea.”"
+    },
+    {
+      "hunk_id": "H036",
+      "decision": "SOL",
+      "reason": "상당히 높은 직급 = “fairly/considerably high-ranking”; BASE drops the modifier entirely."
+    },
+    {
+      "hunk_id": "H037",
+      "decision": "BASE",
+      "reason": "별의별 이야기가 다 나왔음에도 = “all the various things”; SOL drops the 별의별 emphasis."
+    },
+    {
+      "hunk_id": "H038",
+      "decision": "SOL",
+      "reason": "“I’m sorry to say this” is the standard idiom for 이런 말 해서 미안한데; “put it this way” is looser."
+    },
+    {
+      "hunk_id": "H039",
+      "decision": "SOL",
+      "reason": "“Yeah.” matches 그러게 (‘right/yeah’); BASE’s “Well” changes the agreement tone."
+    },
+    {
+      "hunk_id": "H040",
+      "decision": "BASE",
+      "reason": "“being stuck at” and “getting stuck on” the tutorial are equivalent; no meaningful improvement."
+    },
+    {
+      "hunk_id": "H041",
+      "decision": "SOL",
+      "reason": "“hadn’t been bad for the little while I’d played it” tracks 잠깐 플레이한 것치곤 나쁘지 않았다; BASE’s “had been fun” overstates."
+    },
+    {
+      "hunk_id": "H042",
+      "decision": "BASE",
+      "reason": "눈인사 is an eye-greeting/farewell nod; BASE’s “nod” keeps the greeting sense that “glance” loses."
+    },
+    {
+      "hunk_id": "H043",
+      "decision": "SOL",
+      "reason": "Removing the comma after “at least” corrects punctuation; no meaning change."
+    },
+    {
+      "hunk_id": "H044",
+      "decision": "SOL",
+      "reason": "These lines are the manual’s 주의 사항 (read precautions), not System messages, so labeling them System violates the manual/warning rule; SOL’s “Warning” heading is correct."
+    }
+  ]
+}

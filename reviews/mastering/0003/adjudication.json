@@ -1,0 +1,316 @@
+{
+  "chapter": 3,
+  "decisions": [
+    {
+      "decision": "BASE",
+      "hunk_id": "H001",
+      "reason": "Both render 수면 위로 equally naturally; 'across the surface' is as idiomatic as 'on the surface.' No meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H002",
+      "reason": "BASE preserves the source's clause order (lift mouth → dimples) and the image 씻은 듯이 ('as if washed away'); SOL drops that image."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "'Hurled' matches the force of 내던지다 better than 'threw,' which weakens the action."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H004",
+      "reason": "BASE adds 'thought this was a good thing' (unsupported); SOL renders 만들 생각을 하다니 as 'would make something like this' more faithfully."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H005",
+      "reason": "Both faithful for 쉬지 않고 욕설을 퍼부으며; equally vivid, no net improvement."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H006",
+      "reason": "These recalled 주의 사항 cautions are not System panels; labeling them 'Warning' complies with the rule against framing non-System material as System."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H007",
+      "reason": "Dropping the redundant 'genre' yields natural English; 장르 adds nothing over 'martial-arts' here."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H008",
+      "reason": "Both faithfully render 밖에서 구조해 주기를 and the death-caution; no meaningful difference."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H009",
+      "reason": "BASE preserves the Korean's emphasis by leading with the quoted clause (…라는 말은), matching source word order."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H010",
+      "reason": "'answer I'd deduced' tracks 유추해 낸 답; 'reached that conclusion' is fine but loses 'answer' with no offsetting gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H011",
+      "reason": "'Completing Tutorial—Stage 1' replaces a stiff nominal ('The completion of') with direct verbal phrasing, same meaning."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H012",
+      "reason": "Both natural for 사흘간의 고민; 'thinking' and 'thought' are equivalent here."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H013",
+      "reason": "활동해야 한다 means 'must operate/be active'; BASE's 'stay' drifts, SOL's 'operate' is more faithful."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H014",
+      "reason": "BASE's 'exactly the right place' tracks 딱 알맞은; SOL's 'just the place' is idiomatic but no better."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H015",
+      "reason": "Both render 데려다줄 마차 naturally; indistinguishable quality."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H016",
+      "reason": "SOL preserves 말 한마디 ('didn't say a word'), which BASE paraphrases away as 'never tried to make conversation.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H017",
+      "reason": "Both faithful; SOL's reordering is stylistic and adds no clarity gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H018",
+      "reason": "'the only power unique to you' tracks 당신만이 가진 유일한 힘 more closely than 'your only unique power'; capitalized objective matches System notice style."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H019",
+      "reason": "BASE drops 어쩌면 ('maybe') and adds 'really'; SOL keeps the source's uncertainty."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H020",
+      "reason": "SOL renders 과거 가뭄에 콩 나듯 as the idiom 'once in a blue moon' without BASE's redundant 'in the past.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H021",
+      "reason": "BASE's 'from a prestigious Murim family' matches 출신; 'member of' paraphrases without gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H022",
+      "reason": "특이 사항 is 'special notes'; BASE preserves 특이, SOL flattens to 'the notes.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H023",
+      "reason": "Both adequately render 괜히 가문의 수치가 아니다 and the wastrel description; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H024",
+      "reason": "원하는 능력치 rendered equally well; 'whichever' adds no fidelity or notable clarity."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H025",
+      "reason": "'treat as' is more standard than 'treat like'; equal faithfulness."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H026",
+      "reason": "BASE's appositive construction ('qi—mana or aura—that Hunters used') tracks 마나, 오러 같은 기 more closely than SOL's rephrasing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H027",
+      "reason": "Em-dash vs comma is purely punctuation; both faithful and equal."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H028",
+      "reason": "Both render 제외하다; 'exclude' and 'rule out' are equivalent here."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H029",
+      "reason": "Both render 어떤 것들이 필요한지; 'what was needed' and 'what it took' are equal."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H030",
+      "reason": "Korean uses 회피 ('evasion'), not 민첩; SOL's 'evasiveness' is faithful, while BASE substitutes the stat name 'Agility' into prose."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H031",
+      "reason": "SOL's staccato verbs match the Korean's terse present-tense 잇는다/뭉치고/풀어낸다, and 'unseen depths' preserves 몸속 깊은 곳."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H032",
+      "reason": "'swept through my body' matches 몸을 휩쓸었다; dropping 'body' is a stylistic wash, not an improvement."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H033",
+      "reason": "경악했다 is 'was stunned/shocked'; SOL's 'froze' adds a physical beat the source doesn't give."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H034",
+      "reason": "SOL's 'Not from…, but because…' matches the Korean's 아니다…때문이었다 causal structure and keeps 느꼈던/떠올랐다."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H035",
+      "reason": "BASE preserves the source's deliberate split and dangling object ('How could I forget? That day, seven years ago.'); SOL flattens it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H036",
+      "reason": "BASE keeps the appositive fragment 'The chosen 0.1 percent.' matching 선택받은 0.1%; SOL's 'One of' alters the beat."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H037",
+      "reason": "환희 is 'exhilaration/rapture'; SOL preserves 느꼈던 ('felt') and 지금 ('now'), while BASE's 'how happy' softens."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H038",
+      "reason": "SOL's 'parched lips' captures 바짝 마른 better than BASE's 'already dry.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H039",
+      "reason": "BASE preserves 우선 ('for now'), which SOL omits."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H040",
+      "reason": "Source 구결을 잊은 is singular and glossary term is 'formula'; SOL's plural 'formulas' violates the term and source number."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H041",
+      "reason": "'widened my eyes' is the more idiomatic rendering of 눈을 부릅뜨고 than 'opened my eyes wide.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H042",
+      "reason": "BASE preserves the deliberate odd repetition 'and three' (그리고 셋); SOL replaces the joke with 'and that was it.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H043",
+      "reason": "가진 스킬 rendered naturally as 'had'; 'possessed' is stiffer with no gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H044",
+      "reason": "SOL preserves 많이 ('more'); BASE drops it, losing the source's 'learn plenty later.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H045",
+      "reason": "Source 단어 is singular ('one word'); SOL's 'two terms' adds specificity not in the Korean."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H046",
+      "reason": "핏줄 = blood vessels; SOL corrects BASE's narrower 'veins.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H047",
+      "reason": "Comma vs 'and' in the parallel list is trivial; both faithful."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H048",
+      "reason": "SOL conveys the idiom 고기도 먹어 본 놈이 잘 먹지 (experience helps) better than BASE's 'only handle what you've tried.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H049",
+      "reason": "SOL's word order mirrors 몸 깊은 곳에서 뼈가 뒤틀리는 more directly and reads naturally."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H050",
+      "reason": "SOL preserves 자리에는 ('all that remained was…') and 헐떡이는 숨소리 ('ragged breathing'), which BASE restructures away."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H051",
+      "reason": "BASE keeps 앞뒤 ('front and back') and 단단 ('hardened'); SOL narrows to 'chest and back' and adds 'covered.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H052",
+      "reason": "느낄 수 없었던 is 'couldn't sense'; BASE preserves the perception framing, while SOL's 'hadn't been there' shifts to existence."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H053",
+      "reason": "Both render 끝이 어딘지 adequately; 'endpoint' and 'limit' are equal here."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H054",
+      "reason": "BASE's comma form matches the Korean's '더, 더, 더' structure; SOL's periods change the punctuation without clear gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H055",
+      "reason": "BASE's 'found myself' captures 어느새…발견했다; SOL's 'suddenly I was dressed' loses that beat. Roughly equal otherwise."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H056",
+      "reason": "BASE's 'was wearing… instead of' matches 신었다; SOL's 'had replaced' personifies with no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H057",
+      "reason": "BASE includes both 벗겨진 ('I'd taken off') and 손 ('from my hands'); SOL drops 'taken off.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H058",
+      "reason": "Both render 어떻게 쓰느냐에 따라 전투에 응용할 수도; word-order swap yields no meaningful improvement."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H059",
+      "reason": "세우다 = build/put up; SOL's 'buy a whole building' is a mistranslation."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H060",
+      "reason": "BASE's terse 'be careful when handling it' suits the System description register; SOL's 'exercise caution' is stiffer."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H061",
+      "reason": "Both render 창자루 ('spear shaft') naturally; no meaningful difference."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H062",
+      "reason": "배움에는 결과가 있어야 is 'learning must have results'; SOL's 'produce results' tracks 결과, whereas BASE's 'put into practice' substitutes a different idea."
+    }
+  ],
+  "version": 1
+}

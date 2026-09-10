@@ -1,0 +1,545 @@
+{
+  "chapter": 6,
+  "decisions": [
+    {
+      "decision": "SOL",
+      "hunk_id": "H001",
+      "reason": "Fronted adverbial and \"village unto itself\" render 하나의 마을 more naturally than \"an entire village from the hill above it.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H002",
+      "reason": "SOL drops 빈틈없이 by replacing \"without leaving a single gap\" with the vaguer \"enclosed on every side.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H003",
+      "reason": "SOL drops the connective 그뿐인가 and the family name, and adds \"sheer,\" which 절벽 alone does not state."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H004",
+      "reason": "SOL's \"nestled\" softens 웅크린 (crouched/huddled), changing the crouching image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H005",
+      "reason": "SOL drops 상당한 (\"deeply\"), weakening the stated degree of imposition."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H006",
+      "reason": "\"Wait, hold on\" and \"Wait a second\" are equally natural; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H007",
+      "reason": "SOL drops 자주 (\"often\") by reducing the question to \"before.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H008",
+      "reason": "\"How long have you been working?\" is cleaner and loses nothing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H009",
+      "reason": "Keeps past-tense continuity with the surrounding past-tense narration; no gain in SOL."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "Preserves the 문지방 (threshold) image that BASE replaces with \"worn a path to… door.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H011",
+      "reason": "The redundant perceived slowing is naturally omitted; meaning and result preserved."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H012",
+      "reason": "SOL drops 문득 (\"suddenly\"), losing the abruptness of the realization."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H013",
+      "reason": "SOL weakens 수치화 (\"quantified\") to \"measured\" and changes 어떨지 (\"be like\") to \"work.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H014",
+      "reason": "Both phrasings of \"call to mind\" are equally idiomatic; no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H015",
+      "reason": "\"The moment I hesitated\" matches 그 순간 more tightly and reads more economically."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H016",
+      "reason": "Removing the stray \"-\" list marker reads cleaner; the System heading already frames the notice."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H017",
+      "reason": "\"thirty meters\" reads as better prose than the bare numeral in running text."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H018",
+      "reason": "Standalone \"Whoosh.\" matches the source's isolated 솨아악 line and gives the beat emphasis."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H019",
+      "reason": "\"Concentric rings\" is closer to 동심원 than \"wave,\" and \"popped up\" fits 솟아오른다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H020",
+      "reason": "Same stray-dash cleanup as H016; consistent with the notice formatting."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H021",
+      "reason": "\"most of all\" and \"most importantly\" are equivalent; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H022",
+      "reason": "Keeps 스킬 (\"skill\") and 적 (\"enemy\"), both of which SOL drops."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H023",
+      "reason": "\"picked up\" is more idiomatic for 건지다 than \"got.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H024",
+      "reason": "SOL drops 나도 모르게 (\"before I knew it\"), losing the involuntary quality."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H025",
+      "reason": "Keeps 한 줄기 빛 (\"ray of light\") and the 눈앞 framing dropped by BASE."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H026",
+      "reason": "\"The one word\" preserves the singularity of 네 글자 better than \"The word.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H027",
+      "reason": "\"trapped here forever\" is the natural idiom for 영영 나가지 못하는 and reads better."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H028",
+      "reason": "확신 (\"certainty\") is captured by \"I was certain\"; SOL's \"knew\" is weaker."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H029",
+      "reason": "\"It's only a game\" renders 기껏해야 concisely; BASE is wordier."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H030",
+      "reason": "Capitalizing Quest matches the glossary's System-term convention."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H031",
+      "reason": "SOL's \"survival instincts\" shifts 생존력 (survival ability) to a different concept."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H032",
+      "reason": "\"felt real\" is cleaner than the odd hedge \"felt real enough.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H033",
+      "reason": "\"there was no doubt about it\" is more natural for 확실했다 than \"it was definite.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H034",
+      "reason": "\"All of it came from the System\" is cleaner; meaning preserved."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H035",
+      "reason": "SOL drops 족친다 (\"beat up\"), reducing the retaliatory violence to \"start with.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H036",
+      "reason": "No insert; keeping BASE avoids duplicating the shout sentence already retained in H035."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H037",
+      "reason": "통일된 means \"matching\"; \"Matching uniforms\" is more precise than bare \"Uniforms.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H038",
+      "reason": "Keeps the 무림인/무사 distinction (Murim vs martial artists) that BASE collapses to one term."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H039",
+      "reason": "Preserves the source's 이라면…해야 하나 conditional structure and \"regulars\" for 정규군."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H040",
+      "reason": "\"a young martial artist\" is more natural than the calqued \"a martial artist with a young face.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H041",
+      "reason": "\"I am\" matches the stiff formal register of a gatekeeper's declaration."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H042",
+      "reason": "\"sash\" fits 띠 and the clause is tightened without loss."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H043",
+      "reason": "Both render 장땡; phrasing is equivalent with no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H044",
+      "reason": "말투 is \"tone,\" and \"Hyuk Mujin's\" avoids repeating \"face\" twice."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H045",
+      "reason": "\"possibly\" adds emphasis/doubt not present in the plain 무슨 용무가 있다고."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H046",
+      "reason": "BASE drops 따로 있는 (\"someone else\") nuance; SOL drops 어딜 가나 (\"wherever you go\"). Combined keeps both.",
+      "replacement": "No matter where you went, there were always people like that—the kind who worked for a conglomerate and thought that made them a chaebol, when the real chaebol was someone else entirely."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H047",
+      "reason": "기침 is \"coughed\"; \"cleared my throat\" changes the action verb."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H048",
+      "reason": "\"very deliberate\" matches 다분히 의도된; BASE adds unsupported \"conspicuous.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H049",
+      "reason": "\"gave him a mild smile and spoke\" naturalizes the literal 입을 열었다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H050",
+      "reason": "Keeps 폭넓게 (\"widely\"), which BASE drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H051",
+      "reason": "Preserves the source's trailing ellipsis before the sound effect."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H052",
+      "reason": "\"caught the window\" and \"caught it\" are equivalent; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H053",
+      "reason": "\"I saw his face, stiff as a board\" is clearer than SOL's \"His face was rigid through the window.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H054",
+      "reason": "내리다 for a carriage is well served by \"get down.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H055",
+      "reason": "Keeps the ~군 realization nuance (\"after all\") that SOL drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H056",
+      "reason": "\"generous\" avoids the ornate Latinate \"magnanimous\" in a brisk comic beat."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H057",
+      "reason": "\"live in this house\" and \"live here\" are equally natural; no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H058",
+      "reason": "Adds \"You're,\" resolving the omitted subject into a complete, natural sentence."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H059",
+      "reason": "\"Exactly right\" is terse and matches the narrator's clipped register better than the idiom."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H060",
+      "reason": "Keeps 내리다 as \"get down\" consistently with H054/H061."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H061",
+      "reason": "Keeps 내리다 as \"climbed down\" consistently with the carriage context."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H062",
+      "reason": "\"such a bad feeling\" fits the colloquial 쎄한데 more than literary \"ominous.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H063",
+      "reason": "Preserves the binding term \"Jin Family of Taiyuan\"; SOL truncates to \"Jin Family.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H064",
+      "reason": "\"foul mood\" preserves 기분이 더러웠다; SOL's \"pissed\" shifts to anger."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H065",
+      "reason": "Keeps the \"if I said\" quote framing and the glossary's \"Second Rate\" capitalization."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H066",
+      "reason": "Removes the mechanical body-part phrasing (\"Hyuk Mujin's face\"); the pronoun is not a terminology issue."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H067",
+      "reason": "\"if you insist\" matches 정 그렇다면 and tightens the exchange."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H068",
+      "reason": "BASE drops 비싸다는 (\"famously expensive\"); SOL drops the exclamation 이야 (\"Wow\"). Combined keeps both.",
+      "replacement": "Wow, several days at the famously expensive Honghwaru? Must have been nice. You must have spent a fortune. Or did you skim the family funds again?"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H069",
+      "reason": "Keeps the binding 공자 → \"Young Master\" address that SOL reduces to \"you've.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H070",
+      "reason": "\"something\" reads more naturally than the stilted \"one fact.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H071",
+      "reason": "\"what kind of person… was\" is smoother than \"what the character… was.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H072",
+      "reason": "Preserves the binding term \"Jin Family of Taiyuan\"; SOL truncates to \"Jin Family.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H073",
+      "reason": "\"my way\" is idiomatic for 내 뜻대로 and tightens the line."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H074",
+      "reason": "\"my eyes grew hot\" matches 눈이 뜨겁게 다아오른다 more closely."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H075",
+      "reason": "\"let me say one thing\" is equally faithful and more natural than \"allow me.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H076",
+      "reason": "Punchy short sentence preserves the interposed expression beat before the dialogue."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H077",
+      "reason": "The standalone italic cleanly renders the expression's content; consistent with H076."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H078",
+      "reason": "\"tarnishing… reputation\" collocates better than \"disgracing the family's reputation.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H079",
+      "reason": "\"that one remark\" preserves 한마디 (\"one remark\") better than \"those words.\""
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H080",
+      "reason": "\"who knew nothing\" is tighter than \"who didn't know anything\"; equivalent otherwise."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H081",
+      "reason": "\"not to me\" and \"not me\" are equivalent; no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H082",
+      "reason": "SOL changes 생각하지 않기로 했다 (\"decided not to think\") to the different \"decided it didn't matter.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H083",
+      "reason": "\"erupted, shattering\" conveys 터져 나오면서…허물어졌다 vividly and faithfully."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H084",
+      "reason": "Keeps 거기 (\"You\"), preserving the three-beat bark of 야. 거기 딱 서."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H085",
+      "reason": "\"irritation written all over his face\" is idiomatic and avoids \"on his face\" phrasing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H086",
+      "reason": "날렸다 means \"sent flying\"; SOL's \"drove toward\" loses that force."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H087",
+      "reason": "SOL reads well but drops 높게 (\"high\") and 주인의 곁 (\"beside his master\"); restored while keeping the better phrasing.",
+      "replacement": "The air hung heavy. A pile of documents towered over the desk. And, as always, a cold-looking escort stood beside his master like a shadow."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H088",
+      "reason": "Both orderings are equally natural; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H089",
+      "reason": "\"Tell me\" and \"Speak\" both fit 말해 보게; no gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H090",
+      "reason": "Drops the unsupported motion in \"drifting\"; 들리는 adds no movement."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H091",
+      "reason": "\"managed to speak\" is more natural than \"managed to open his mouth.\""
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H092",
+      "reason": "SOL adds unsupported \"young\" (revealed only later); BASE deviates from the glossary's 본가 → \"our family.\"",
+      "replacement": "There is a promising fellow among my subordinates. He's quite loyal to our family, and he has considerable martial talent, but…"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H093",
+      "reason": "\"never thinks before he acts\" is idiomatic for 앞뒤 재는 법을 모른다."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H094",
+      "reason": "Keeps the 답니다 hearsay reporting (\"I hear\") that SOL drops."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H095",
+      "reason": "Pronoun reference is clear and avoids repeating \"the youngest\" already in the question."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H096",
+      "reason": "Keeps the self-blame reading of 속하의 잘못 (\"my fault\"); SOL's \"this subordinate's fault\" reads as blaming another."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H097",
+      "reason": "\"A long while\" and \"A long time\" are equivalent; no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H098",
+      "reason": "\"That's enough\" and \"That will do\" both render 그만하면 되었네; no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H099",
+      "reason": "\"as if\" and \"as though\" are equivalent; no gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H100",
+      "reason": "Keeps the humble \"command\" sense of 하명하십시오."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H101",
+      "reason": "그 친구 is \"that fellow\"; SOL adds unsupported \"young.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H102",
+      "reason": "\"forgive me for saying so\" matches the deferential 송구스럽지만."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H103",
+      "reason": "Both render 뼈에 금이 갔다; phrasing is equivalent."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H104",
+      "reason": "\"Is that so?\" matches the questioning 그런가? better than \"I see.\""
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H105",
+      "reason": "Keeps 후에도 (\"even after\"), which BASE drops."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H106",
+      "reason": "Name-first appositive construction reads more naturally than BASE's heavy pre-modifier."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H107",
+      "reason": "\"step out for a while\" fits 자리를 비우다 better than \"going out\"; both natural."
+    }
+  ],
+  "version": 1
+}

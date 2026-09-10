@@ -1,0 +1,853 @@
+{
+  "baseline_blocks": 203,
+  "baseline_sha256": "6b16e91be37bced8aa8ebccd39c22704f297378549c2cf62c0c9c1d9c9a177fd",
+  "global_terminology_alerts": [],
+  "hunk_count": 44,
+  "hunks": [
+    {
+      "baseline": "I’d been sensitive to the cold since I was a kid, so I kept my windows closed all year round. So who had opened the window?",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "context_after_baseline": "*Obviously.*",
+      "context_after_sol": "*Obviously.*",
+      "context_before_baseline": "A cold wind brushed my face.",
+      "context_before_sol": "A cold wind brushed my face.",
+      "hunk_id": "H001",
+      "sol": "I’d been sensitive to the cold since I was a kid, so I kept my windows closed all year round. Who had opened the window, then?",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Grumbling, I pulled the blanket up to my neck. The woman lying beside me let out a small whine.",
+      "baseline_range": [
+        5,
+        6
+      ],
+      "context_after_baseline": "“…Huh?”",
+      "context_after_sol": "“…Huh?”",
+      "context_before_baseline": "Seong Jinho, that miserable excuse for a human being.",
+      "context_before_sol": "Seong Jinho, that miserable excuse for a human being.",
+      "hunk_id": "H002",
+      "sol": "Grumbling, I pulled the blanket up to my neck. The woman lying beside me let out a soft whine.",
+      "sol_range": [
+        5,
+        6
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*A woman? Which woman?*",
+      "baseline_range": [
+        7,
+        8
+      ],
+      "context_after_baseline": "I woke up in an instant and shot upright, like a private startled awake by reveille. Then I slowly turned my head.",
+      "context_after_sol": "I woke in an instant and shot upright like a private hearing reveille. Then I slowly turned my head.",
+      "context_before_baseline": "“…Huh?”",
+      "context_before_sol": "“…Huh?”",
+      "hunk_id": "H003",
+      "sol": "*A woman? What woman?*",
+      "sol_range": [
+        7,
+        8
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I woke up in an instant and shot upright, like a private startled awake by reveille. Then I slowly turned my head.",
+      "baseline_range": [
+        8,
+        9
+      ],
+      "context_after_baseline": "“Tài lěng le.”",
+      "context_after_sol": "“Tài lěng le.”",
+      "context_before_baseline": "*A woman? Which woman?*",
+      "context_before_sol": "*A woman? What woman?*",
+      "hunk_id": "H004",
+      "sol": "I woke in an instant and shot upright like a private hearing reveille. Then I slowly turned my head.",
+      "sol_range": [
+        8,
+        9
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Good heavens. I was startled twice. First, because I couldn’t make sense of the situation. Second, because the woman lying beside me was unbelievably beautiful.",
+      "baseline_range": [
+        10,
+        11
+      ],
+      "context_after_baseline": "She kept muttering words I couldn’t understand and burrowed deeper beneath the blanket. Even in my dazed state, she was beautiful enough to make my heart skip.",
+      "context_after_sol": "She kept muttering words I couldn’t understand as she burrowed deeper beneath the blanket. Even in my dazed state, she was beautiful enough to set my heart pounding.",
+      "context_before_baseline": "“Tài lěng le.”",
+      "context_before_sol": "“Tài lěng le.”",
+      "hunk_id": "H005",
+      "sol": "Good heavens. I was stunned twice over. First, because I couldn’t make sense of the situation. Second, because the woman lying beside me was unbelievably beautiful.",
+      "sol_range": [
+        10,
+        11
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "She kept muttering words I couldn’t understand and burrowed deeper beneath the blanket. Even in my dazed state, she was beautiful enough to make my heart skip.",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "context_after_baseline": "If that cold wind hadn’t blown in right then, I might have stared at her for quite a while.",
+      "context_after_sol": "If that cold wind hadn’t blown in right then, I might have stared at her for quite a while.",
+      "context_before_baseline": "Good heavens. I was startled twice. First, because I couldn’t make sense of the situation. Second, because the woman lying beside me was unbelievably beautiful.",
+      "context_before_sol": "Good heavens. I was stunned twice over. First, because I couldn’t make sense of the situation. Second, because the woman lying beside me was unbelievably beautiful.",
+      "hunk_id": "H006",
+      "sol": "She kept muttering words I couldn’t understand as she burrowed deeper beneath the blanket. Even in my dazed state, she was beautiful enough to set my heart pounding.",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I looked around. Red candlelight glowed softly around the room. A strangely stimulating fragrance filled the air, and a beautiful woman lay beside me, covering herself with a blanket.",
+      "baseline_range": [
+        14,
+        15
+      ],
+      "context_after_baseline": "A place I’d never visited but had heard about plenty of times.",
+      "context_after_sol": "A place I’d never visited but had heard plenty about.",
+      "context_before_baseline": "*But where am I?*",
+      "context_before_sol": "*But where am I?*",
+      "hunk_id": "H007",
+      "sol": "I looked around. Red candlelight glowed softly through the room. A strangely provocative fragrance filled the air, and a beautiful woman lay beside me, covering her naked body with a blanket.",
+      "sol_range": [
+        14,
+        15
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A place I’d never visited but had heard about plenty of times.",
+      "baseline_range": [
+        15,
+        16
+      ],
+      "context_after_baseline": "*A room salon?[^1]*",
+      "context_after_sol": "*A room salon?[^1]*",
+      "context_before_baseline": "I looked around. Red candlelight glowed softly around the room. A strangely stimulating fragrance filled the air, and a beautiful woman lay beside me, covering herself with a blanket.",
+      "context_before_sol": "I looked around. Red candlelight glowed softly through the room. A strangely provocative fragrance filled the air, and a beautiful woman lay beside me, covering her naked body with a blanket.",
+      "hunk_id": "H008",
+      "sol": "A place I’d never visited but had heard plenty about.",
+      "sol_range": [
+        15,
+        16
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The mystery deepened. I stared blankly around the room, then grabbed the woman by the shoulder and shook her.",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "context_after_baseline": "“Excuse me?”",
+      "context_after_sol": "“Excuse me?”",
+      "context_before_baseline": "I pinched my forearm hard. It hurt. This wasn’t a dream.",
+      "context_before_sol": "I pinched my forearm hard. It hurt. This wasn’t a dream.",
+      "hunk_id": "H009",
+      "sol": "The situation was becoming more and more baffling. After staring blankly around the room, I grabbed the woman by the shoulder and shook her.",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The woman looked at me through half-lidded eyes. Her irises shimmered a dark blue, and my heart began pounding again.",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "context_after_baseline": "“Who are you?”",
+      "context_after_sol": "“Who are you?”",
+      "context_before_baseline": "“Excuse me?”",
+      "context_before_sol": "“Excuse me?”",
+      "hunk_id": "H010",
+      "sol": "The woman peered at me through half-lidded eyes. Her irises shimmered dark blue, and my heart began pounding again.",
+      "sol_range": [
+        24,
+        25
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I scratched vigorously at the back of my head in frustration. The next moment, I sprang up like a compressed spring.",
+      "baseline_range": [
+        36,
+        37
+      ],
+      "context_after_baseline": "Ding.",
+      "context_after_sol": "Ding.",
+      "context_before_baseline": "*This is useless. We can’t communicate at all.*",
+      "context_before_sol": "*This is useless. We can’t communicate at all.*",
+      "hunk_id": "H011",
+      "sol": "I scratched vigorously at the back of my head in frustration. The next moment, I sprang up like a released spring.",
+      "sol_range": [
+        36,
+        37
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had no idea where it had come from—or, more importantly, why I could see something like this. I broke out in goose bumps.",
+      "baseline_range": [
+        41,
+        42
+      ],
+      "context_after_baseline": "“What the fuck is this?”",
+      "context_after_sol": "“What the fuck is this?”",
+      "context_before_baseline": "A square window floated in midair like a ghost.",
+      "context_before_sol": "A square window floated in midair like a ghost.",
+      "hunk_id": "H012",
+      "sol": "I had no idea where it had come from—or, more importantly, why I could see something like this. Goose bumps prickled across my skin.",
+      "sol_range": [
+        41,
+        42
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> No response for an extended period. Randomly selecting a character.\n>\n> Searching Murim… Starting play as character Jin Taekyung!\n>\n> Logged in to Murim.\n>\n> First-login rewards granted.\n>\n> You can change the language of the player currently in use. Apply the Universal Language Pack?",
+      "baseline_range": [
+        46,
+        47
+      ],
+      "context_after_baseline": "*A character? Murim? Login?*",
+      "context_after_sol": "*A character? Murim? Login?*",
+      "context_before_baseline": "Ding.",
+      "context_before_sol": "Ding.",
+      "hunk_id": "H013",
+      "sol": "> **System**\n>\n> No response for an extended period. Randomly selecting a character.\n>\n> Searching Murim… Starting play as character Jin Taekyung!\n>\n> Logged in to Murim.\n>\n> First-login rewards will be granted.\n>\n> The player’s current language can be changed. Apply the Universal Language Pack?",
+      "sol_range": [
+        46,
+        47
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I admired her once again.",
+      "baseline_range": [
+        58,
+        59
+      ],
+      "context_after_baseline": "*The graphics are incredible.*",
+      "context_after_sol": "*The graphics are incredible.*",
+      "context_before_baseline": "She had smooth, pale skin and a face the size of my fist. Her delicate features were perfectly arranged, and her eyes were so large and clear that she could have put a celebrity to shame.",
+      "context_before_sol": "She had smooth, pale skin and a face the size of my fist. Her delicate features were perfectly arranged, and her eyes were so large and clear that she could have put a celebrity to shame.",
+      "hunk_id": "H014",
+      "sol": "I marveled at her all over again.",
+      "sol_range": [
+        58,
+        59
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I’d already worked out the general situation. Once I put a few things together, the truth was simple.",
+      "baseline_range": [
+        60,
+        61
+      ],
+      "context_after_baseline": "Murim. Character. Login. Play. The last place I’d fallen asleep was inside a game capsule. And most importantly—",
+      "context_after_sol": "Murim. Character. Login. Play. The last place I’d fallen asleep was inside a game capsule. And most importantly—",
+      "context_before_baseline": "*The graphics are incredible.*",
+      "context_before_sol": "*The graphics are incredible.*",
+      "hunk_id": "H015",
+      "sol": "By then, I’d already worked out the general situation. Once I put a few things together, the truth was simple.",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There was a System window. I could speak aloud or think my commands. Scratching my head acted as a kind of shortcut. I could even click the options I wanted in midair.",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "context_after_baseline": "*The more I see, the more amazing this gets.*",
+      "context_after_sol": "*The more I see, the more amazing this gets.*",
+      "context_before_baseline": "> **System**\n>\n> Would you like to open the message window?\n>\n> Accept / Decline",
+      "context_before_sol": "> **System**\n>\n> Would you like to open the message window?\n>\n> Accept / Decline",
+      "hunk_id": "H016",
+      "sol": "There was a System window. I could issue commands aloud or in my head. Scratching my head acted as a kind of shortcut. I could even click the options I wanted in midair.",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was a far cry from the last game I’d played, but this was a game. I was inside a game right now.",
+      "baseline_range": [
+        65,
+        66
+      ],
+      "context_after_baseline": "*But when did I log in?*",
+      "context_after_sol": "*But when did I log in?*",
+      "context_before_baseline": "*The more I see, the more amazing this gets.*",
+      "context_before_sol": "*The more I see, the more amazing this gets.*",
+      "hunk_id": "H017",
+      "sol": "It was a far cry from the last game I’d played, but this was a game. I was playing a game right now.",
+      "sol_range": [
+        65,
+        66
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I didn’t remember plugging anything in. Just as I was trying to recall what had happened the night before, Wolhwa suddenly held out a bowl of water in both hands.",
+      "baseline_range": [
+        67,
+        68
+      ],
+      "context_after_baseline": "“Drink. You don’t seem fully awake yet.”",
+      "context_after_sol": "“Drink. You don’t seem fully awake yet.”",
+      "context_before_baseline": "*But when did I log in?*",
+      "context_before_sol": "*But when did I log in?*",
+      "hunk_id": "H018",
+      "sol": "I didn’t remember plugging anything in. Just as I tried to recall what had happened the night before, Wolhwa suddenly held out a bowl of water in both hands.",
+      "sol_range": [
+        67,
+        68
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I glanced at Wolhwa’s face as I drank the water, then nearly jumped out of my skin.",
+      "baseline_range": [
+        70,
+        71
+      ],
+      "context_after_baseline": "*What the hell?*",
+      "context_after_sol": "*What the hell?*",
+      "context_before_baseline": "*The AI is incredible, too.*",
+      "context_before_sol": "*The AI is incredible, too.*",
+      "hunk_id": "H019",
+      "sol": "I stole glances at Wolhwa’s face as I drank the water, then nearly jumped out of my skin.",
+      "sol_range": [
+        70,
+        71
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Cold water slid down my throat, then spread through my stomach in a wave of coolness. The sensation was so vivid that goose bumps rose on my forearms.",
+      "baseline_range": [
+        72,
+        73
+      ],
+      "context_after_baseline": "The lifelike graphics and the NPC’s artificial intelligence were one thing, but even a sip of cold water felt too real for this to be a game.",
+      "context_after_sol": "The lifelike graphics and the NPC’s artificial intelligence were one thing, but even a sip of cold water felt too real for this to be a game.",
+      "context_before_baseline": "*What the hell?*",
+      "context_before_sol": "*What the hell?*",
+      "hunk_id": "H020",
+      "sol": "The cold water slid down my throat, cooling me all the way to my stomach. The sensation was so vivid that goose bumps rose on my forearms.",
+      "sol_range": [
+        72,
+        73
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wow. I’d heard that technology had advanced by leaps and bounds, but I never imagined it had come this far. Now I understood why people became gaming addicts.",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "context_after_baseline": "*So this is why they call it virtual reality.*",
+      "context_after_sol": "*So this is why everyone goes on about virtual reality.*",
+      "context_before_baseline": "The lifelike graphics and the NPC’s artificial intelligence were one thing, but even a sip of cold water felt too real for this to be a game.",
+      "context_before_sol": "The lifelike graphics and the NPC’s artificial intelligence were one thing, but even a sip of cold water felt too real for this to be a game.",
+      "hunk_id": "H021",
+      "sol": "Wow. I’d heard that technology had advanced by leaps and bounds, but I’d never imagined it had come this far. Now I understood why people became gaming addicts.",
+      "sol_range": [
+        74,
+        75
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*So this is why they call it virtual reality.*",
+      "baseline_range": [
+        75,
+        76
+      ],
+      "context_after_baseline": "I looked around with my mouth hanging open like a kindergartener at an amusement park. Then acrid smoke rose from somewhere and obscured my view.",
+      "context_after_sol": "I looked around with my mouth hanging open like a kindergartener at an amusement park. Then acrid smoke rose from somewhere and obscured my view.",
+      "context_before_baseline": "Wow. I’d heard that technology had advanced by leaps and bounds, but I never imagined it had come this far. Now I understood why people became gaming addicts.",
+      "context_before_sol": "Wow. I’d heard that technology had advanced by leaps and bounds, but I’d never imagined it had come this far. Now I understood why people became gaming addicts.",
+      "hunk_id": "H022",
+      "sol": "*So this is why everyone goes on about virtual reality.*",
+      "sol_range": [
+        75,
+        76
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I turned my head. Wolhwa was already watching me intently, a long-stemmed tobacco pipe between her lips.",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "context_after_baseline": "“Why…?”",
+      "context_after_sol": "“Why…?”",
+      "context_before_baseline": "I looked around with my mouth hanging open like a kindergartener at an amusement park. Then acrid smoke rose from somewhere and obscured my view.",
+      "context_before_sol": "I looked around with my mouth hanging open like a kindergartener at an amusement park. Then acrid smoke rose from somewhere and obscured my view.",
+      "hunk_id": "H023",
+      "sol": "I turned my head. Wolhwa was watching me intently, a long-stemmed tobacco pipe already between her lips.",
+      "sol_range": [
+        77,
+        78
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Just because. I wanted to see you?”",
+      "baseline_range": [
+        81,
+        82
+      ],
+      "context_after_baseline": "*I thought she was just a pretty face, but she had one hell of a presence, too.*",
+      "context_after_sol": "*I thought she was just a pretty face, but she had one hell of a presence, too.*",
+      "context_before_baseline": "Wolhwa exhaled a stream of smoke and answered.",
+      "context_before_sol": "Wolhwa exhaled a stream of smoke and answered.",
+      "hunk_id": "H024",
+      "sol": "“Just because. I wanted to look at you?”",
+      "sol_range": [
+        81,
+        82
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Young Master Jin, did you know you’ve been acting strange today?”",
+      "baseline_range": [
+        86,
+        87
+      ],
+      "context_after_baseline": "*Young Master Jin? What an embarrassing way to be addressed.*",
+      "context_after_sol": "*Young Master Jin? What an embarrassing way to be addressed.*",
+      "context_before_baseline": "*They really nailed her character concept. Plenty of players probably start the game just for Wolhwa.*",
+      "context_before_sol": "*They really nailed her character concept. Plenty of players probably start the game just for Wolhwa.*",
+      "hunk_id": "H025",
+      "sol": "“Young Master Jin, do you know you’ve been acting strange today?”",
+      "sol_range": [
+        86,
+        87
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*The game’s progression is pretty innovative.*",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "Usually, games started with something like, “At last, you’re awake,” before immediately handing out a tutorial quest.",
+      "context_after_sol": "Usually, games started with something like, “At last, you’re awake,” before immediately handing out a tutorial quest.",
+      "context_before_baseline": "> **System**\n>\n> Tutorial Quest created.",
+      "context_before_sol": "> **System**\n>\n> Tutorial Quest created.",
+      "hunk_id": "H026",
+      "sol": "*The way this game progresses is pretty innovative.*",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 1\n>\n> You are now taking your first step into Murim.\n>\n> Gather basic information and understand the situation.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time players\n>\n> **Missions:** Gather information (Incomplete)\n>\n> Understand the situation (Incomplete)\n>\n> **Rewards:** Sturdy martial uniform set\n>\n> Character Status Window unlocked\n>\n> Inventory function unlocked\n>\n> Skill Window function unlocked\n>\n> Chain Quest",
+      "baseline_range": [
+        100,
+        101
+      ],
+      "context_after_baseline": "*Gather information? Understand the situation?*",
+      "context_after_sol": "*Gather information? Understand the situation?*",
+      "context_before_baseline": "Even as I said it, I wasn’t sure whether that was the right command. But with the familiar sound effect, a quest window appeared at once.",
+      "context_before_sol": "Even as I said it, I wasn’t sure whether that was the right command. But with the familiar sound effect, a quest window appeared at once.",
+      "hunk_id": "H027",
+      "sol": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 1\n>\n> You are now taking your first step into Murim.\n>\n> Gather basic information and understand the situation.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time players\n>\n> **Missions:** Gather Information (Incomplete)\n>\n> Understand the Situation (Incomplete)\n>\n> **Rewards:** Sturdy Martial Uniform Set\n>\n> Character Status Window unlocked\n>\n> Inventory function unlocked\n>\n> Skill Window function unlocked\n>\n> Chain Quest",
+      "sol_range": [
+        100,
+        101
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Even I thought it was a very blunt question. I could see Wolhwa smiling through the smoke from her pipe.",
+      "baseline_range": [
+        106,
+        107
+      ],
+      "context_after_baseline": "“That’s an interesting question. Should I say you’re just like the rumors?”",
+      "context_after_sol": "“That’s an interesting question. Should I say you’re just like the rumors?”",
+      "context_before_baseline": "“How much do you know about me?”",
+      "context_before_sol": "“How much do you know about me?”",
+      "hunk_id": "H028",
+      "sol": "Even I thought it was a blunt question. I could see Wolhwa smiling through the tobacco smoke.",
+      "sol_range": [
+        106,
+        107
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "At my confident reply, Wolhwa choked on the smoke she was exhaling.",
+      "baseline_range": [
+        122,
+        123
+      ],
+      "context_after_baseline": "“Second. What kind of place is the Jin Family of Taiyuan?”",
+      "context_after_sol": "“Second. What kind of place is the Jin Family of Taiyuan?”",
+      "context_before_baseline": "*My name is Jin Taekyung. I’m the youngest son of the Jin Family of Taiyuan.*",
+      "context_before_sol": "*My name is Jin Taekyung. I’m the youngest son of the Jin Family of Taiyuan.*",
+      "hunk_id": "H029",
+      "sol": "At my confident reply, Wolhwa choked in the middle of exhaling smoke.",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“They have a good reputation among the public. From time to time, they wipe out bands of mounted bandits, and when droughts come, they release relief grain before even the local government does.”",
+      "baseline_range": [
+        125,
+        126
+      ],
+      "context_after_baseline": "*That’s it?*",
+      "context_after_sol": "*That’s it?*",
+      "context_before_baseline": "After barely managing to stop coughing, Wolhwa answered.",
+      "context_before_sol": "After barely managing to stop coughing, Wolhwa answered.",
+      "hunk_id": "H030",
+      "sol": "“They have a good reputation among the public. From time to time, they wipe out bands of mounted bandits, and when droughts come, they distribute relief grain before even the magistrate’s office does.”",
+      "sol_range": [
+        125,
+        126
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“More than anything, they’re a prestigious family representing Shanxi. You could say they’re one of the region’s old, deeply rooted powers.”",
+      "baseline_range": [
+        128,
+        129
+      ],
+      "context_after_baseline": "“Oh!”",
+      "context_after_sol": "“Oh!”",
+      "context_before_baseline": "As if she had noticed my disappointment, Wolhwa continued.",
+      "context_before_sol": "As if she had noticed my disappointment, Wolhwa continued.",
+      "hunk_id": "H031",
+      "sol": "“More than anything, they’re a prestigious family representing Shanxi. You could call them a deeply rooted old tree.”",
+      "sol_range": [
+        128,
+        129
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Externally, there’s the conflict with the Mount Heng Sword Sect, which is constantly eyeing the position of Shanxi’s leader. Internally…”",
+      "baseline_range": [
+        142,
+        143
+      ],
+      "context_after_baseline": "Wolhwa leisurely tapped the ash from her pipe.",
+      "context_after_sol": "Wolhwa leisurely tapped the ash from her pipe.",
+      "context_before_baseline": "Come to think of it, the quest window’s information-gathering mission was still marked *Incomplete*. That meant there was more information to collect.",
+      "context_before_sol": "Come to think of it, the quest window’s information-gathering mission was still marked *Incomplete*. That meant there was more information to collect.",
+      "hunk_id": "H032",
+      "sol": "“Externally, there’s the conflict with the Mount Heng Sword Sect, which is constantly eyeing the position of Shanxi’s hegemon. Internally…”",
+      "sol_range": [
+        142,
+        143
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I nodded unconsciously, then was seized by a strange feeling.",
+      "baseline_range": [
+        146,
+        147
+      ],
+      "context_after_baseline": "“Excuse me.”",
+      "context_after_sol": "“Excuse me.”",
+      "context_before_baseline": "“Ah. There’s always one of those wherever you go.”",
+      "context_before_sol": "“Ah. There’s always one of those wherever you go.”",
+      "hunk_id": "H033",
+      "sol": "I nodded unconsciously, then an uneasy feeling came over me.",
+      "sol_range": [
+        146,
+        147
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“This is just a joke, but how many sons does the Jin Family of Taiyuan have?”",
+      "baseline_range": [
+        149,
+        150
+      ],
+      "context_after_baseline": "She answered with a sunny smile.",
+      "context_after_sol": "She answered with a sunny smile.",
+      "context_before_baseline": "“Yes?”",
+      "context_before_sol": "“Yes?”",
+      "hunk_id": "H034",
+      "sol": "“I’m only asking as a joke, but how many sons does the Jin Family of Taiyuan have?”",
+      "sol_range": [
+        149,
+        150
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Whether I should laugh or cry, I had no idea. When I saw Wolhwa snickering, I let out a hollow laugh too.",
+      "baseline_range": [
+        156,
+        157
+      ],
+      "context_after_baseline": "*Well, better to look on the bright side. So what if I’m the shame of the family? It’s only a game, anyway.*",
+      "context_after_sol": "*Well, better to look on the bright side. So what if I’m the shame of the family? It’s only a game, anyway.*",
+      "context_before_baseline": "> **System**\n>\n> Title Shame of the Family acquired. Check it later through the Status Window.\n>\n> Gather Information complete.",
+      "context_before_sol": "> **System**\n>\n> Title Shame of the Family acquired. Check it later through the Status Window.\n>\n> Gather Information complete.",
+      "hunk_id": "H035",
+      "sol": "I couldn’t decide whether to laugh or cry. Then I saw Wolhwa snickering and let out a hollow laugh myself.",
+      "sol_range": [
+        156,
+        157
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "We were in Honghwaru, located in the center of Taiyuan. Wolhwa was a high-ranking courtesan, and I had spent the night with her… Ahem.",
+      "baseline_range": [
+        164,
+        165
+      ],
+      "context_after_baseline": "Despite all the various things we discussed, no System notification appeared. Eventually, I ran out of questions to ask.",
+      "context_after_sol": "Despite all the things we discussed, no System notification appeared. Eventually, I ran out of questions to ask.",
+      "context_before_baseline": "Through our conversation, I learned a few more miscellaneous facts.",
+      "context_before_sol": "Through our conversation, I learned a few more miscellaneous facts.",
+      "hunk_id": "H036",
+      "sol": "We were in Honghwaru, located in the heart of Taiyuan. Wolhwa was a fairly high-ranking courtesan, and I had spent the night with her… Ahem.",
+      "sol_range": [
+        164,
+        165
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Despite all the various things we discussed, no System notification appeared. Eventually, I ran out of questions to ask.",
+      "baseline_range": [
+        165,
+        166
+      ],
+      "context_after_baseline": "At the very end, I was reduced to asking this:",
+      "context_after_sol": "At the very end, I was reduced to asking this:",
+      "context_before_baseline": "We were in Honghwaru, located in the center of Taiyuan. Wolhwa was a high-ranking courtesan, and I had spent the night with her… Ahem.",
+      "context_before_sol": "We were in Honghwaru, located in the heart of Taiyuan. Wolhwa was a fairly high-ranking courtesan, and I had spent the night with her… Ahem.",
+      "hunk_id": "H037",
+      "sol": "Despite all the things we discussed, no System notification appeared. Eventually, I ran out of questions to ask.",
+      "sol_range": [
+        165,
+        166
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Young Master Jin, I’m sorry to put it this way, but you seem a little crazy right now. How about getting some rest?”",
+      "baseline_range": [
+        169,
+        170
+      ],
+      "context_after_baseline": "*Well, I feel like I’m going crazy, too.*",
+      "context_after_sol": "*Yeah. I feel like I’m going crazy, too.*",
+      "context_before_baseline": "Wolhwa sighed.",
+      "context_before_sol": "Wolhwa sighed.",
+      "hunk_id": "H038",
+      "sol": "“Young Master Jin, I’m sorry to say this, but you seem a little crazy right now. How about getting some rest?”",
+      "sol_range": [
+        169,
+        170
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Well, I feel like I’m going crazy, too.*",
+      "baseline_range": [
+        170,
+        171
+      ],
+      "context_after_baseline": "As sunlight streamed through the window, I began to wonder what on earth I was doing.",
+      "context_after_sol": "As sunlight streamed through the window, I began to wonder what on earth I was doing.",
+      "context_before_baseline": "“Young Master Jin, I’m sorry to put it this way, but you seem a little crazy right now. How about getting some rest?”",
+      "context_before_sol": "“Young Master Jin, I’m sorry to say this, but you seem a little crazy right now. How about getting some rest?”",
+      "hunk_id": "H039",
+      "sol": "*Yeah. I feel like I’m going crazy, too.*",
+      "sol_range": [
+        170,
+        171
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The graphics and artificial intelligence were all great, but being stuck at the tutorial had completely drained the fun out of it. If there was one thing I’d learned, it was that the capsule I’d found yesterday was a much better piece of equipment than it looked.",
+      "baseline_range": [
+        173,
+        174
+      ],
+      "context_after_baseline": "A game this advanced had to require serious hardware, yet I hadn’t experienced a single bit of lag. It should sell for a decent price on the used market.",
+      "context_after_sol": "A game this advanced had to require serious hardware, yet I hadn’t experienced a single bit of lag. It should sell for a decent price on the used market.",
+      "context_before_baseline": "*This isn’t some kind of mystery game.*",
+      "context_before_sol": "*This isn’t some kind of mystery game.*",
+      "hunk_id": "H040",
+      "sol": "The graphics and artificial intelligence were all great, but getting stuck on the tutorial had completely drained the fun out of it. If there was one thing I’d learned, it was that the capsule I’d found yesterday was a much better piece of equipment than it looked.",
+      "sol_range": [
+        173,
+        174
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Still, the game had been fun for a little while.",
+      "baseline_range": [
+        176,
+        177
+      ],
+      "context_after_baseline": "I gave Wolhwa a final nod and shouted:",
+      "context_after_sol": "I gave Wolhwa a final glance and shouted:",
+      "context_before_baseline": "*I need to start looking for a new job today, too.*",
+      "context_before_sol": "*I need to start looking for a new job today, too.*",
+      "hunk_id": "H041",
+      "sol": "Still, the game hadn’t been bad for the little while I’d played it.",
+      "sol_range": [
+        176,
+        177
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gave Wolhwa a final nod and shouted:",
+      "baseline_range": [
+        177,
+        178
+      ],
+      "context_after_baseline": "“Log out!”",
+      "context_after_sol": "“Log out!”",
+      "context_before_baseline": "Still, the game had been fun for a little while.",
+      "context_before_sol": "Still, the game hadn’t been bad for the little while I’d played it.",
+      "hunk_id": "H042",
+      "sol": "I gave Wolhwa a final glance and shouted:",
+      "sol_range": [
+        177,
+        178
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I shouldn’t have picked it up just because it was free. I should have thrown it away the moment Jinho called it garbage. Or at least, the moment I read that insane instruction manual…*",
+      "baseline_range": [
+        190,
+        191
+      ],
+      "context_after_baseline": "*No. Wait.*",
+      "context_after_sol": "*No. Wait.*",
+      "context_before_baseline": "*Is something bad going to happen to me?*",
+      "context_before_sol": "*Is something bad going to happen to me?*",
+      "hunk_id": "H043",
+      "sol": "*I shouldn’t have picked it up just because it was free. I should have thrown it away the moment Jinho called it garbage. Or at least the moment I read that insane instruction manual…*",
+      "sol_range": [
+        190,
+        191
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> The player cannot log out at will.\n>\n> If the player dies during gameplay, resurrection is impossible.",
+      "baseline_range": [
+        195,
+        196
+      ],
+      "context_after_baseline": "*I’m trapped inside the game? Me?*",
+      "context_after_sol": "*I’m trapped inside the game? Me?*",
+      "context_before_baseline": "The moment I finally remembered every warning I’d managed to read, a chill ran through my entire body.",
+      "context_before_sol": "The moment I finally remembered every warning I’d managed to read, a chill ran through my entire body.",
+      "hunk_id": "H044",
+      "sol": "> **Warning**\n>\n> - The player cannot log out at will.\n> - If the player dies during gameplay, resurrection is impossible.",
+      "sol_range": [
+        195,
+        196
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "시스템",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "System"
+        }
+      ]
+    }
+  ],
+  "sol_blocks": 203,
+  "sol_sha256": "ee766e47cf60512eb6c2a3ba8127734c006fcb906b0a1efa7e32cde54917772a",
+  "version": 1
+}

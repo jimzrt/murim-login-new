@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "models": {
+    "master": "openrouter/openai/gpt-5.6-sol:low",
+    "adjudicator": "openrouter/deepseek/deepseek-v4.1-flash:low"
+  },
+  "omp_config": ".omp/review-overlay.yml",
+  "timeouts": {
+    "master": 900,
+    "adjudicator": 900
+  },
+  "packet_token_limit": 90000,
+  "continuity_previous_chapters": 2,
+  "continuity_tail_words": 900,
+  "include_safe_profiles": true,
+  "continuity_prefer_verified_mastered": true
+}

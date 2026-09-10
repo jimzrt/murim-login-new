@@ -1,0 +1,1733 @@
+{
+  "baseline_blocks": 162,
+  "baseline_sha256": "a59222abe3df19888fa1fc82604d822a92f216d27730df3d4262daf5b90ea9a9",
+  "global_terminology_alerts": [],
+  "hunk_count": 90,
+  "hunks": [
+    {
+      "baseline": "“There are no abnormalities.”",
+      "baseline_range": [
+        1,
+        2
+      ],
+      "context_after_baseline": "That was the physician’s conclusion. I nodded inwardly at his confident tone. He was telling the truth.",
+      "context_after_sol": "That was the physician’s conclusion. Hearing the certainty in his voice, I nodded to myself. He was right.",
+      "context_before_baseline": "# Chapter 8",
+      "context_before_sol": "# Chapter 8",
+      "hunk_id": "H001",
+      "sol": "“There’s nothing wrong with him.”",
+      "sol_range": [
+        1,
+        2
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was the physician’s conclusion. I nodded inwardly at his confident tone. He was telling the truth.",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "context_after_baseline": "*There’s nothing wrong with my brain.*",
+      "context_after_sol": "*There’s nothing wrong with my brain.*",
+      "context_before_baseline": "“There are no abnormalities.”",
+      "context_before_sol": "“There’s nothing wrong with him.”",
+      "hunk_id": "H002",
+      "sol": "That was the physician’s conclusion. Hearing the certainty in his voice, I nodded to myself. He was right.",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Then why can’t he remember?”",
+      "baseline_range": [
+        6,
+        7
+      ],
+      "context_after_baseline": "The dignified atmosphere. The commanding voice. I knew his name now.",
+      "context_after_sol": "A dignified air and a commanding voice. I knew his name now.",
+      "context_before_baseline": "But someone didn’t seem satisfied with the diagnosis.",
+      "context_before_sol": "But someone didn’t seem satisfied with the diagnosis.",
+      "hunk_id": "H003",
+      "sol": "“Then why can’t he remember anything?”",
+      "sol_range": [
+        6,
+        7
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The dignified atmosphere. The commanding voice. I knew his name now.",
+      "baseline_range": [
+        7,
+        8
+      ],
+      "context_after_baseline": "*Jin Wikyung.*",
+      "context_after_sol": "*Jin Wikyung.*",
+      "context_before_baseline": "“Then why can’t he remember?”",
+      "context_before_sol": "“Then why can’t he remember anything?”",
+      "hunk_id": "H004",
+      "sol": "A dignified air and a commanding voice. I knew his name now.",
+      "sol_range": [
+        7,
+        8
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung. Right. He really wasn’t my father.",
+      "baseline_range": [
+        9,
+        10
+      ],
+      "context_after_baseline": "*That guy was practically tearing up earlier.*",
+      "context_after_sol": "*This guy was practically in tears earlier.*",
+      "context_before_baseline": "*Jin Wikyung.*",
+      "context_before_sol": "*Jin Wikyung.*",
+      "hunk_id": "H005",
+      "sol": "Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan. Right. He really wasn’t my father.",
+      "sol_range": [
+        9,
+        10
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "진위경",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "Jin Wikyung"
+        }
+      ]
+    },
+    {
+      "baseline": "*That guy was practically tearing up earlier.*",
+      "baseline_range": [
+        10,
+        11
+      ],
+      "context_after_baseline": "Now he had put on a mask of stern solemnity and seriousness, acting as if nothing had happened.",
+      "context_after_sol": "Now he was pretending nothing had happened, his stern, solemn, serious mask firmly back in place.",
+      "context_before_baseline": "Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung. Right. He really wasn’t my father.",
+      "context_before_sol": "Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan. Right. He really wasn’t my father.",
+      "hunk_id": "H006",
+      "sol": "*This guy was practically in tears earlier.*",
+      "sol_range": [
+        10,
+        11
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Now he had put on a mask of stern solemnity and seriousness, acting as if nothing had happened.",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "context_after_baseline": "The innocent physician fumbled for an answer.",
+      "context_after_sol": "The poor physician fumbled for an answer.",
+      "context_before_baseline": "*That guy was practically tearing up earlier.*",
+      "context_before_sol": "*This guy was practically in tears earlier.*",
+      "hunk_id": "H007",
+      "sol": "Now he was pretending nothing had happened, his stern, solemn, serious mask firmly back in place.",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The innocent physician fumbled for an answer.",
+      "baseline_range": [
+        12,
+        13
+      ],
+      "context_after_baseline": "“Well, that is certainly my assessment, but there can occasionally be exceptions…”",
+      "context_after_sol": "“Well, that is certainly my diagnosis, but there can occasionally be exceptions…”",
+      "context_before_baseline": "Now he had put on a mask of stern solemnity and seriousness, acting as if nothing had happened.",
+      "context_before_sol": "Now he was pretending nothing had happened, his stern, solemn, serious mask firmly back in place.",
+      "hunk_id": "H008",
+      "sol": "The poor physician fumbled for an answer.",
+      "sol_range": [
+        12,
+        13
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Well, that is certainly my assessment, but there can occasionally be exceptions…”",
+      "baseline_range": [
+        13,
+        14
+      ],
+      "context_after_baseline": "“That will do. You may leave.”",
+      "context_after_sol": "“That will do. You may leave.”",
+      "context_before_baseline": "The innocent physician fumbled for an answer.",
+      "context_before_sol": "The poor physician fumbled for an answer.",
+      "hunk_id": "H009",
+      "sol": "“Well, that is certainly my diagnosis, but there can occasionally be exceptions…”",
+      "sol_range": [
+        13,
+        14
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The physician left with a wounded expression, and Jin Wikyung immediately moved close to me as if he had been waiting for the chance. His voice overflowed with affection and concern.",
+      "baseline_range": [
+        15,
+        16
+      ],
+      "context_after_baseline": "“You truly don’t remember?”",
+      "context_after_sol": "“You truly don’t remember?”",
+      "context_before_baseline": "“That will do. You may leave.”",
+      "context_before_sol": "“That will do. You may leave.”",
+      "hunk_id": "H010",
+      "sol": "The physician left looking wounded. As if he had been waiting for the chance, Jin Wikyung immediately moved closer. His voice overflowed with affection and concern.",
+      "sol_range": [
+        15,
+        16
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I quietly nodded. I had already finished calculating how I was going to act.",
+      "baseline_range": [
+        19,
+        20
+      ],
+      "context_after_baseline": "*Let’s keep going like this.*",
+      "context_after_sol": "*Let’s keep this going.*",
+      "context_before_baseline": "“Not a thing?”",
+      "context_before_sol": "“Not a thing?”",
+      "hunk_id": "H011",
+      "sol": "I quietly nodded. I had already worked out how I was going to play this.",
+      "sol_range": [
+        19,
+        20
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Let’s keep going like this.*",
+      "baseline_range": [
+        20,
+        21
+      ],
+      "context_after_baseline": "An amnesiac patient—the kind I had only ever seen in dramas. There was no better situation for me. I didn’t need to make an effort to fit into the game’s circumstances, and I didn’t even need to gather information.",
+      "context_after_sol": "Amnesia—the kind I had only ever seen in dramas. Nothing could have been more convenient in my current situation. I didn’t have to struggle to fit into the game’s setting or even gather information.",
+      "context_before_baseline": "I quietly nodded. I had already finished calculating how I was going to act.",
+      "context_before_sol": "I quietly nodded. I had already worked out how I was going to play this.",
+      "hunk_id": "H012",
+      "sol": "*Let’s keep this going.*",
+      "sol_range": [
+        20,
+        21
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "An amnesiac patient—the kind I had only ever seen in dramas. There was no better situation for me. I didn’t need to make an effort to fit into the game’s circumstances, and I didn’t even need to gather information.",
+      "baseline_range": [
+        21,
+        22
+      ],
+      "context_after_baseline": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation unfold on its own. Just like now.",
+      "context_after_sol": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation take care of itself. Just like now.",
+      "context_before_baseline": "*Let’s keep going like this.*",
+      "context_before_sol": "*Let’s keep this going.*",
+      "hunk_id": "H013",
+      "sol": "Amnesia—the kind I had only ever seen in dramas. Nothing could have been more convenient in my current situation. I didn’t have to struggle to fit into the game’s setting or even gather information.",
+      "sol_range": [
+        21,
+        22
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation unfold on its own. Just like now.",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "context_after_baseline": "“Do you remember what you said a moment ago?”",
+      "context_after_sol": "“Do you remember what you just said?”",
+      "context_before_baseline": "An amnesiac patient—the kind I had only ever seen in dramas. There was no better situation for me. I didn’t need to make an effort to fit into the game’s circumstances, and I didn’t even need to gather information.",
+      "context_before_sol": "Amnesia—the kind I had only ever seen in dramas. Nothing could have been more convenient in my current situation. I didn’t have to struggle to fit into the game’s setting or even gather information.",
+      "hunk_id": "H014",
+      "sol": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation take care of itself. Just like now.",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Do you remember what you said a moment ago?”",
+      "baseline_range": [
+        23,
+        24
+      ],
+      "context_after_baseline": "“What did I say?”",
+      "context_after_sol": "“What did I say?”",
+      "context_before_baseline": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation unfold on its own. Just like now.",
+      "context_before_sol": "All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation take care of itself. Just like now.",
+      "hunk_id": "H015",
+      "sol": "“Do you remember what you just said?”",
+      "sol_range": [
+        23,
+        24
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Thinking that I had lost my memory, Jin Wikyung told me a few basic facts. That was how I learned his identity.",
+      "baseline_range": [
+        25,
+        26
+      ],
+      "context_after_baseline": "“Tell me my name.”",
+      "context_after_sol": "“Tell me my name.”",
+      "context_before_baseline": "“What did I say?”",
+      "context_before_sol": "“What did I say?”",
+      "hunk_id": "H016",
+      "sol": "Believing that I had lost my memory, Jin Wikyung had told me a few basic facts. That was how I had learned who he was.",
+      "sol_range": [
+        25,
+        26
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Age?”",
+      "baseline_range": [
+        28,
+        29
+      ],
+      "context_after_baseline": "“Thirty-five.”",
+      "context_after_sol": "“Thirty-five.”",
+      "context_before_baseline": "“Jin Wikyung. The Lesser Family Head of the Jin Family of Taiyuan.”",
+      "context_before_sol": "“Jin Wikyung. The Lesser Family Head of the Jin Family of Taiyuan.”",
+      "hunk_id": "H017",
+      "sol": "“How old am I?”",
+      "sol_range": [
+        28,
+        29
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Good grief. He was in his thirties with that face? And apparently, he was still an unmarried bachelor.",
+      "baseline_range": [
+        30,
+        31
+      ],
+      "context_after_baseline": "“What about our parents?”",
+      "context_after_sol": "“What about our parents?”",
+      "context_before_baseline": "“Thirty-five.”",
+      "context_before_sol": "“Thirty-five.”",
+      "hunk_id": "H018",
+      "sol": "Good grief. He was in his thirties with that face? Apparently, he was still a bachelor too.",
+      "sol_range": [
+        30,
+        31
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Jin Mukyung, the Heaven Shaking Sword. Twenty-five years old. Currently a cadet at Heaven’s Gate Temple.”",
+      "baseline_range": [
+        34,
+        35
+      ],
+      "context_after_baseline": "I had no idea where Heaven’s Gate Temple was located. I was simply parroting back everything I had heard.",
+      "context_after_sol": "I had no idea where Heaven’s Gate Temple was. I was simply parroting back what I had heard.",
+      "context_before_baseline": "“Correct. And your second brother?”",
+      "context_before_sol": "“Correct. And your second brother?”",
+      "hunk_id": "H019",
+      "sol": "“Jin Mukyung, the Heaven Shaking Sword. Twenty-five. Currently a cadet at Heaven’s Gate Temple.”",
+      "sol_range": [
+        34,
+        35
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had no idea where Heaven’s Gate Temple was located. I was simply parroting back everything I had heard.",
+      "baseline_range": [
+        35,
+        36
+      ],
+      "context_after_baseline": "Jin Wikyung mechanically repeated “Correct, correct” to each of my answers, then tilted his head.",
+      "context_after_sol": "Jin Wikyung had been mechanically saying, “Correct, correct,” after each answer, but now he tilted his head.",
+      "context_before_baseline": "“Jin Mukyung, the Heaven Shaking Sword. Twenty-five years old. Currently a cadet at Heaven’s Gate Temple.”",
+      "context_before_sol": "“Jin Mukyung, the Heaven Shaking Sword. Twenty-five. Currently a cadet at Heaven’s Gate Temple.”",
+      "hunk_id": "H020",
+      "sol": "I had no idea where Heaven’s Gate Temple was. I was simply parroting back what I had heard.",
+      "sol_range": [
+        35,
+        36
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung mechanically repeated “Correct, correct” to each of my answers, then tilted his head.",
+      "baseline_range": [
+        36,
+        37
+      ],
+      "context_after_baseline": "“The Heaven Shaking Sword? Did I tell you his sobriquet too?”",
+      "context_after_sol": "“The Heaven Shaking Sword? Did I tell you his sobriquet too?”",
+      "context_before_baseline": "I had no idea where Heaven’s Gate Temple was located. I was simply parroting back everything I had heard.",
+      "context_before_sol": "I had no idea where Heaven’s Gate Temple was. I was simply parroting back what I had heard.",
+      "hunk_id": "H021",
+      "sol": "Jin Wikyung had been mechanically saying, “Correct, correct,” after each answer, but now he tilted his head.",
+      "sol_range": [
+        36,
+        37
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The moment our eyes met, I grabbed my forehead.",
+      "baseline_range": [
+        39,
+        40
+      ],
+      "context_after_baseline": "“Ah, my head! My head hurts!”",
+      "context_after_sol": "“Ah, my head! My head hurts!”",
+      "context_before_baseline": "No. The coachman had told me that.",
+      "context_before_sol": "No. The coachman had told me that.",
+      "hunk_id": "H022",
+      "sol": "The moment our eyes met, I clutched my forehead.",
+      "sol_range": [
+        39,
+        40
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“It’s only a simple contusion. The swelling and bruises should be completely gone within three days at most.”",
+      "baseline_range": [
+        44,
+        45
+      ],
+      "context_after_baseline": "Leaving the physician’s final words behind, I walked out of Medicine King Hall. A servant with a plain, friendly face was waiting for me at the entrance.",
+      "context_after_sol": "Leaving the physician’s final words behind, I walked out of Medicine King Hall. A servant with a plain, friendly face was waiting for me at the entrance.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H023",
+      "sol": "“It’s only bruising. The swelling and discoloration should be completely gone within three days at most.”",
+      "sol_range": [
+        44,
+        45
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I’ll guide you to your quarters, Young Master.”",
+      "baseline_range": [
+        46,
+        47
+      ],
+      "context_after_baseline": "The servant walked ahead without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he quietly explained what they were.",
+      "context_after_sol": "The servant set off without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he would explain who or what they were in a quiet voice.",
+      "context_before_baseline": "Leaving the physician’s final words behind, I walked out of Medicine King Hall. A servant with a plain, friendly face was waiting for me at the entrance.",
+      "context_before_sol": "Leaving the physician’s final words behind, I walked out of Medicine King Hall. A servant with a plain, friendly face was waiting for me at the entrance.",
+      "hunk_id": "H024",
+      "sol": "“I’ll show you to your quarters, Young Master.”",
+      "sol_range": [
+        46,
+        47
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The servant walked ahead without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he quietly explained what they were.",
+      "baseline_range": [
+        47,
+        48
+      ],
+      "context_after_baseline": "*A guide, an errand boy, and an encyclopedia.*",
+      "context_after_sol": "*A guide, an errand boy, and an encyclopedia.*",
+      "context_before_baseline": "“I’ll guide you to your quarters, Young Master.”",
+      "context_before_sol": "“I’ll show you to your quarters, Young Master.”",
+      "hunk_id": "H025",
+      "sol": "The servant set off without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he would explain who or what they were in a quiet voice.",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could roughly guess why Jin Wikyung had sent him.",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "context_after_baseline": "He was busy with his duties, so this was probably his way of looking after me.",
+      "context_after_sol": "He was too busy with work to look after me himself, so this was his way of doing it.",
+      "context_before_baseline": "*A guide, an errand boy, and an encyclopedia.*",
+      "context_before_sol": "*A guide, an errand boy, and an encyclopedia.*",
+      "hunk_id": "H026",
+      "sol": "I could more or less guess why Jin Wikyung had sent him.",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He was busy with his duties, so this was probably his way of looking after me.",
+      "baseline_range": [
+        50,
+        51
+      ],
+      "context_after_baseline": "“We’ve arrived.”",
+      "context_after_sol": "“We’ve arrived.”",
+      "context_before_baseline": "I could roughly guess why Jin Wikyung had sent him.",
+      "context_before_sol": "I could more or less guess why Jin Wikyung had sent him.",
+      "hunk_id": "H027",
+      "sol": "He was too busy with work to look after me himself, so this was his way of doing it.",
+      "sol_range": [
+        50,
+        51
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Weren’t buildings like this usually called pavilions in China? It had a rather impressive old-fashioned charm.",
+      "baseline_range": [
+        53,
+        54
+      ],
+      "context_after_baseline": "“Wow.”",
+      "context_after_sol": "“Wow.”",
+      "context_before_baseline": "At last, we stopped in front of a two-story wooden building.",
+      "context_before_sol": "At last, we stopped in front of a two-story wooden building.",
+      "hunk_id": "H028",
+      "sol": "Wasn’t this kind of building called a pavilion in China? It had a distinctly old-fashioned charm.",
+      "sol_range": [
+        53,
+        54
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was unbelievably spacious, too. The moment the servant opened the door, my jaw dropped.",
+      "baseline_range": [
+        55,
+        56
+      ],
+      "context_after_baseline": "“The second floor contains your bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "context_after_sol": "“Your bedroom is on the second floor. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "context_before_baseline": "“Wow.”",
+      "context_before_sol": "“Wow.”",
+      "hunk_id": "H029",
+      "sol": "It was unbelievably spacious too. The moment the servant opened the door, my jaw dropped.",
+      "sol_range": [
+        55,
+        56
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The second floor contains your bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "baseline_range": [
+        56,
+        57
+      ],
+      "context_after_baseline": "After the servant left, I came to my senses and began exploring the pavilion. The first floor alone looked to be more than three hundred square meters.",
+      "context_after_sol": "Once the servant left, I collected myself and began exploring the pavilion. The first floor alone looked to be well over three hundred square meters.",
+      "context_before_baseline": "It was unbelievably spacious, too. The moment the servant opened the door, my jaw dropped.",
+      "context_before_sol": "It was unbelievably spacious too. The moment the servant opened the door, my jaw dropped.",
+      "hunk_id": "H030",
+      "sol": "“Your bedroom is on the second floor. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "sol_range": [
+        56,
+        57
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "After the servant left, I came to my senses and began exploring the pavilion. The first floor alone looked to be more than three hundred square meters.",
+      "baseline_range": [
+        57,
+        58
+      ],
+      "context_after_baseline": "To someone who had lived in a goshiwon room measuring barely seven square meters,[^1] this was no different from an Olympic stadium.",
+      "context_after_sol": "To someone who had lived in a goshiwon room barely seven square meters in size,[^1] it might as well have been an Olympic stadium.",
+      "context_before_baseline": "“The second floor contains your bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "context_before_sol": "“Your bedroom is on the second floor. Bells have been installed throughout the building, so please ring one if you need anything.”",
+      "hunk_id": "H031",
+      "sol": "Once the servant left, I collected myself and began exploring the pavilion. The first floor alone looked to be well over three hundred square meters.",
+      "sol_range": [
+        57,
+        58
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "To someone who had lived in a goshiwon room measuring barely seven square meters,[^1] this was no different from an Olympic stadium.",
+      "baseline_range": [
+        58,
+        59
+      ],
+      "context_after_baseline": "*This is the first time I’ve ever envied an NPC.*",
+      "context_after_sol": "*This is the first time I’ve ever envied an NPC.*",
+      "context_before_baseline": "After the servant left, I came to my senses and began exploring the pavilion. The first floor alone looked to be more than three hundred square meters.",
+      "context_before_sol": "Once the servant left, I collected myself and began exploring the pavilion. The first floor alone looked to be well over three hundred square meters.",
+      "hunk_id": "H032",
+      "sol": "To someone who had lived in a goshiwon room barely seven square meters in size,[^1] it might as well have been an Olympic stadium.",
+      "sol_range": [
+        58,
+        59
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There were six rooms on the first floor alone. A sudden wave of curiosity rose in me.",
+      "baseline_range": [
+        60,
+        61
+      ],
+      "context_after_baseline": "*What could be inside?*",
+      "context_after_sol": "*What could be inside?*",
+      "context_before_baseline": "*This is the first time I’ve ever envied an NPC.*",
+      "context_before_sol": "*This is the first time I’ve ever envied an NPC.*",
+      "hunk_id": "H033",
+      "sol": "There were six rooms on the first floor alone. Curiosity suddenly got the better of me.",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Treasures? Martial arts manuals? Amazing items?",
+      "baseline_range": [
+        62,
+        63
+      ],
+      "context_after_baseline": "I didn’t care what it was. I opened the nearest door.",
+      "context_after_sol": "I didn’t care what it was. I flung open the nearest door.",
+      "context_before_baseline": "*What could be inside?*",
+      "context_before_sol": "*What could be inside?*",
+      "hunk_id": "H034",
+      "sol": "Treasure? Martial arts manuals? Maybe some incredible items?",
+      "sol_range": [
+        62,
+        63
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I didn’t care what it was. I opened the nearest door.",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "context_after_baseline": "“Whoa.”",
+      "context_after_sol": "“Whoa.”",
+      "context_before_baseline": "Treasures? Martial arts manuals? Amazing items?",
+      "context_before_sol": "Treasure? Martial arts manuals? Maybe some incredible items?",
+      "hunk_id": "H035",
+      "sol": "I didn’t care what it was. I flung open the nearest door.",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A gasp escaped me the moment I opened it. The room was bright despite having no fluorescent lights. Silk clothes filled the shelves lining the walls. There were an astonishing number of them, even at a glance.",
+      "baseline_range": [
+        65,
+        66
+      ],
+      "context_after_baseline": "Of course, it wasn’t what I was looking for.",
+      "context_after_sol": "Of course, they weren’t what I was looking for.",
+      "context_before_baseline": "“Whoa.”",
+      "context_before_sol": "“Whoa.”",
+      "hunk_id": "H036",
+      "sol": "The exclamation slipped out the moment the door opened. The room was bright despite having no fluorescent lights, thanks to all the silk clothes filling the shelves along the walls. There was an astonishing amount of them.",
+      "sol_range": [
+        65,
+        66
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Of course, it wasn’t what I was looking for.",
+      "baseline_range": [
+        66,
+        67
+      ],
+      "context_after_baseline": "*This bastard has a lot of clothes.*",
+      "context_after_sol": "*This bastard has a lot of clothes.*",
+      "context_before_baseline": "A gasp escaped me the moment I opened it. The room was bright despite having no fluorescent lights. Silk clothes filled the shelves lining the walls. There were an astonishing number of them, even at a glance.",
+      "context_before_sol": "The exclamation slipped out the moment the door opened. The room was bright despite having no fluorescent lights, thanks to all the silk clothes filling the shelves along the walls. There was an astonishing amount of them.",
+      "hunk_id": "H037",
+      "sol": "Of course, they weren’t what I was looking for.",
+      "sol_range": [
+        66,
+        67
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A club rat—no, a pleasure-house regular. I clicked my tongue and closed the door. Then I went straight to the second room and threw that door open, too.",
+      "baseline_range": [
+        68,
+        69
+      ],
+      "context_after_baseline": "“More clothes?”",
+      "context_after_sol": "“More clothes?”",
+      "context_before_baseline": "*This bastard has a lot of clothes.*",
+      "context_before_sol": "*This bastard has a lot of clothes.*",
+      "hunk_id": "H038",
+      "sol": "A club rat—no, a pleasure-house regular through and through. I clicked my tongue, closed the door, and went straight to the second room. Then I threw that door open too.",
+      "sol_range": [
+        68,
+        69
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had underestimated Jin Taekyung. At this point, wasn’t he practically the fashion icon of his era?",
+      "baseline_range": [
+        70,
+        71
+      ],
+      "context_after_baseline": "I forced myself to ignore the unease slowly crawling up my spine and moved to the third room.",
+      "context_after_sol": "Trying to ignore the unease creeping over me, I moved on to the third room.",
+      "context_before_baseline": "“More clothes?”",
+      "context_before_sol": "“More clothes?”",
+      "hunk_id": "H039",
+      "sol": "I had underestimated Jin Taekyung. At this point, he had to be the fashion icon of his era.",
+      "sol_range": [
+        70,
+        71
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I forced myself to ignore the unease slowly crawling up my spine and moved to the third room.",
+      "baseline_range": [
+        71,
+        72
+      ],
+      "context_after_baseline": "The door flew open.",
+      "context_after_sol": "I yanked the door open.",
+      "context_before_baseline": "I had underestimated Jin Taekyung. At this point, wasn’t he practically the fashion icon of his era?",
+      "context_before_sol": "I had underestimated Jin Taekyung. At this point, he had to be the fashion icon of his era.",
+      "hunk_id": "H040",
+      "sol": "Trying to ignore the unease creeping over me, I moved on to the third room.",
+      "sol_range": [
+        71,
+        72
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The door flew open.",
+      "baseline_range": [
+        72,
+        73
+      ],
+      "context_after_baseline": "“…What kind of shopping-addicted bastard is this?”",
+      "context_after_sol": "“…You goddamn shopaholic.”",
+      "context_before_baseline": "I forced myself to ignore the unease slowly crawling up my spine and moved to the third room.",
+      "context_before_sol": "Trying to ignore the unease creeping over me, I moved on to the third room.",
+      "hunk_id": "H041",
+      "sol": "I yanked the door open.",
+      "sol_range": [
+        72,
+        73
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“…What kind of shopping-addicted bastard is this?”",
+      "baseline_range": [
+        73,
+        74
+      ],
+      "context_after_baseline": "Seriously, what kind of person was he? Seeing three rooms packed completely full of clothes made my throat close up, as if I had swallowed a sweet potato.",
+      "context_after_sol": "Seriously, what was wrong with this guy? Seeing three whole rooms packed with clothes made my throat clog up as though I had swallowed a sweet potato.",
+      "context_before_baseline": "The door flew open.",
+      "context_before_sol": "I yanked the door open.",
+      "hunk_id": "H042",
+      "sol": "“…You goddamn shopaholic.”",
+      "sol_range": [
+        73,
+        74
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Seriously, what kind of person was he? Seeing three rooms packed completely full of clothes made my throat close up, as if I had swallowed a sweet potato.",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "context_after_baseline": "*Could this possibly mean…*",
+      "context_after_sol": "*Could it be…*",
+      "context_before_baseline": "“…What kind of shopping-addicted bastard is this?”",
+      "context_before_sol": "“…You goddamn shopaholic.”",
+      "hunk_id": "H043",
+      "sol": "Seriously, what was wrong with this guy? Seeing three whole rooms packed with clothes made my throat clog up as though I had swallowed a sweet potato.",
+      "sol_range": [
+        74,
+        75
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Could this possibly mean…*",
+      "baseline_range": [
+        75,
+        76
+      ],
+      "context_after_baseline": "My unease gradually took shape and pressed down on my body. With heavy steps, I stood before the next room. Unlike the others, it clearly hadn’t been used in a long time. I grabbed the rusty handle and slowly pushed.",
+      "context_after_sol": "My unease was taking shape, growing heavier by the second. I trudged to the final room. Unlike the others, it clearly hadn’t been used in a long time. I took hold of the rusty handle and slowly pushed.",
+      "context_before_baseline": "Seriously, what kind of person was he? Seeing three rooms packed completely full of clothes made my throat close up, as if I had swallowed a sweet potato.",
+      "context_before_sol": "Seriously, what was wrong with this guy? Seeing three whole rooms packed with clothes made my throat clog up as though I had swallowed a sweet potato.",
+      "hunk_id": "H044",
+      "sol": "*Could it be…*",
+      "sol_range": [
+        75,
+        76
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My unease gradually took shape and pressed down on my body. With heavy steps, I stood before the next room. Unlike the others, it clearly hadn’t been used in a long time. I grabbed the rusty handle and slowly pushed.",
+      "baseline_range": [
+        76,
+        77
+      ],
+      "context_after_baseline": "Creeeak.",
+      "context_after_sol": "Creeeak.",
+      "context_before_baseline": "*Could this possibly mean…*",
+      "context_before_sol": "*Could it be…*",
+      "hunk_id": "H045",
+      "sol": "My unease was taking shape, growing heavier by the second. I trudged to the final room. Unlike the others, it clearly hadn’t been used in a long time. I took hold of the rusty handle and slowly pushed.",
+      "sol_range": [
+        76,
+        77
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The final room revealed itself with an irritating groan.",
+      "baseline_range": [
+        78,
+        79
+      ],
+      "context_after_baseline": "Sunlight filtered through a small window. Dust rose with every step. And beyond it stood several bookshelves.",
+      "context_after_sol": "Sunlight filtered through a small window. Dust rose with every step. Beyond it stood several bookshelves.",
+      "context_before_baseline": "Creeeak.",
+      "context_before_sol": "Creeeak.",
+      "hunk_id": "H046",
+      "sol": "With an irritating groan, the final room revealed what lay inside.",
+      "sol_range": [
+        78,
+        79
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Sunlight filtered through a small window. Dust rose with every step. And beyond it stood several bookshelves.",
+      "baseline_range": [
+        79,
+        80
+      ],
+      "context_after_baseline": "“Found it.”",
+      "context_after_sol": "“Found it.”",
+      "context_before_baseline": "The final room revealed itself with an irritating groan.",
+      "context_before_sol": "With an irritating groan, the final room revealed what lay inside.",
+      "hunk_id": "H047",
+      "sol": "Sunlight filtered through a small window. Dust rose with every step. Beyond it stood several bookshelves.",
+      "sol_range": [
+        79,
+        80
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A smile spread across my face before I even realized it.",
+      "baseline_range": [
+        81,
+        82
+      ],
+      "context_after_baseline": "* * *",
+      "context_after_sol": "* * *",
+      "context_before_baseline": "“Found it.”",
+      "context_before_sol": "“Found it.”",
+      "hunk_id": "H048",
+      "sol": "A smile spread across my face before I knew it.",
+      "sol_range": [
+        81,
+        82
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There were five bookshelves in total. I approached the nearest one and pulled out a book. When I shook off the thick layer of dust, the writing on its cover appeared.",
+      "baseline_range": [
+        83,
+        84
+      ],
+      "context_after_baseline": "This was why the System was so convenient. Thanks to Synchronization, I could read and pronounce even writing that looked like an alien language as naturally as my mother tongue.",
+      "context_after_sol": "This was why the System was so convenient. Thanks to Synchronization, I could read and pronounce even writing that looked like an alien language as naturally as my mother tongue.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H049",
+      "sol": "There were five bookshelves in total. I approached the nearest one and pulled out a book. When I brushed off the thick layer of dust, the writing on the cover appeared.",
+      "sol_range": [
+        83,
+        84
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I read through the System window with a pounding heart.",
+      "baseline_range": [
+        89,
+        90
+      ],
+      "context_after_baseline": "Three-Turn Footwork. The most basic third-rate footwork technique. This was the kind of martial arts manual I had only ever seen in novels.",
+      "context_after_sol": "Three-Turn Footwork. The most basic third-rate footwork technique. This was it—the kind of martial arts manual I had only ever seen in novels.",
+      "context_before_baseline": "Jackpot!",
+      "context_before_sol": "Jackpot!",
+      "hunk_id": "H050",
+      "sol": "My heart pounded as I read through the System window.",
+      "sol_range": [
+        89,
+        90
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Three-Turn Footwork. The most basic third-rate footwork technique. This was the kind of martial arts manual I had only ever seen in novels.",
+      "baseline_range": [
+        90,
+        91
+      ],
+      "context_after_baseline": "My first plan was to learn martial arts.",
+      "context_after_sol": "My first plan was to learn martial arts.",
+      "context_before_baseline": "I read through the System window with a pounding heart.",
+      "context_before_sol": "My heart pounded as I read through the System window.",
+      "hunk_id": "H051",
+      "sol": "Three-Turn Footwork. The most basic third-rate footwork technique. This was it—the kind of martial arts manual I had only ever seen in novels.",
+      "sol_range": [
+        90,
+        91
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The suspicion I had formed after completing the Quest to circulate my qi, just before coming to the Jin Family of Taiyuan, had now become certainty.",
+      "baseline_range": [
+        93,
+        94
+      ],
+      "context_after_baseline": "*Thank goodness.*",
+      "context_after_sol": "*Thank goodness.*",
+      "context_before_baseline": "*So the System applies to martial arts training too.*",
+      "context_before_sol": "*So the System applies to martial arts training too.*",
+      "hunk_id": "H052",
+      "sol": "The suspicion I had formed after completing the Quest to circulate my qi, just before arriving at the Jin Family of Taiyuan, had become a certainty.",
+      "sol_range": [
+        93,
+        94
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had been worried that I might have to learn martial arts one step at a time, like the protagonists and NPCs in novels. Fortunately, that fear had been unfounded.",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "*Even a trash game is still a game.*",
+      "context_after_sol": "*Even a trash game is still a game.*",
+      "context_before_baseline": "*Thank goodness.*",
+      "context_before_sol": "*Thank goodness.*",
+      "hunk_id": "H053",
+      "sol": "I had been worried that I might have to learn everything step by step, like the protagonists and NPCs in novels. Fortunately, that fear had proved unfounded.",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "무공",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "martial arts"
+        }
+      ]
+    },
+    {
+      "baseline": "If the System applied to ordinary martial arts the same way it had to circulating qi, rapid growth would be a piece of cake.",
+      "baseline_range": [
+        97,
+        98
+      ],
+      "context_after_baseline": "I was about to shout, “I accept!”—but stopped.",
+      "context_after_sol": "I was about to shout, “I accept!”—but stopped.",
+      "context_before_baseline": "*Even a trash game is still a game.*",
+      "context_before_sol": "*Even a trash game is still a game.*",
+      "hunk_id": "H054",
+      "sol": "If the System applied to ordinary martial arts the same way it had when I circulated my qi, rapid growth would be a piece of cake.",
+      "sol_range": [
+        97,
+        98
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "If that suspicion was true, now was not the time to learn a third-rate martial art like Three-Turn Footwork. I needed to find a higher-grade martial art—one that could keep me alive until Logout and help me raise my Level and Fame quickly.",
+      "baseline_range": [
+        103,
+        104
+      ],
+      "context_after_baseline": "The good news was that this room contained several hundred martial arts manuals, give or take.",
+      "context_after_sol": "Fortunately, this room contained several hundred martial arts manuals, give or take.",
+      "context_before_baseline": "*Is there a limit to how many martial arts I can learn?*",
+      "context_before_sol": "*Is there a limit to how many martial arts I can learn?*",
+      "hunk_id": "H055",
+      "sol": "If that suspicion was correct, now was not the time to learn a third-rate martial art like Three-Turn Footwork. I needed to find a higher-grade martial art—one that could keep me alive until Logout and help me raise my Level and Fame quickly.",
+      "sol_range": [
+        103,
+        104
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The good news was that this room contained several hundred martial arts manuals, give or take.",
+      "baseline_range": [
+        104,
+        105
+      ],
+      "context_after_baseline": "“Good. Good.”",
+      "context_after_sol": "“Good. Good.”",
+      "context_before_baseline": "If that suspicion was true, now was not the time to learn a third-rate martial art like Three-Turn Footwork. I needed to find a higher-grade martial art—one that could keep me alive until Logout and help me raise my Level and Fame quickly.",
+      "context_before_sol": "If that suspicion was correct, now was not the time to learn a third-rate martial art like Three-Turn Footwork. I needed to find a higher-grade martial art—one that could keep me alive until Logout and help me raise my Level and Fame quickly.",
+      "hunk_id": "H056",
+      "sol": "Fortunately, this room contained several hundred martial arts manuals, give or take.",
+      "sol_range": [
+        104,
+        105
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That meant I could learn seven more martial arts. If I filled those slots with nothing but the best techniques, Logout would only be a matter of time.",
+      "baseline_range": [
+        106,
+        107
+      ],
+      "context_after_baseline": "With a satisfied smile, I pulled out the next book.",
+      "context_after_sol": "I pulled out the next book with a satisfied smile.",
+      "context_before_baseline": "“Good. Good.”",
+      "context_before_sol": "“Good. Good.”",
+      "hunk_id": "H057",
+      "sol": "I could learn seven more martial arts. If I filled every remaining slot with the best techniques I could find, Logout would only be a matter of time.",
+      "sol_range": [
+        106,
+        107
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With a satisfied smile, I pulled out the next book.",
+      "baseline_range": [
+        107,
+        108
+      ],
+      "context_after_baseline": "Ding.",
+      "context_after_sol": "Ding.",
+      "context_before_baseline": "That meant I could learn seven more martial arts. If I filled those slots with nothing but the best techniques, Logout would only be a matter of time.",
+      "context_before_sol": "I could learn seven more martial arts. If I filled every remaining slot with the best techniques I could find, Logout would only be a matter of time.",
+      "hunk_id": "H058",
+      "sol": "I pulled out the next book with a satisfied smile.",
+      "sol_range": [
+        107,
+        108
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Work had been another fierce battle today. I hadn’t been able to leave the office from morning until nearly midnight. It had already been two months of this grueling pace.",
+      "baseline_range": [
+        112,
+        113
+      ],
+      "context_after_baseline": "“You’ve worked hard.”",
+      "context_after_sol": "“You’ve worked hard.”",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H059",
+      "sol": "Today’s battle against work had been fierce. Jin Wikyung had not left the office once between morning and the present hour, which was approaching midnight. This grueling pace had already continued for two months.",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was Wipeng’s signal that the day’s work was over.",
+      "baseline_range": [
+        114,
+        115
+      ],
+      "context_after_baseline": "Jin Wikyung rose, his body stiff, and left the office. The owner of this place was his father, who had vanished one day—not Jin Wikyung himself.",
+      "context_after_sol": "Jin Wikyung rose, stretching his stiff body, and left the office. After all, the owner of that room was not Jin Wikyung, but his father, who had vanished without warning one day.",
+      "context_before_baseline": "“You’ve worked hard.”",
+      "context_before_sol": "“You’ve worked hard.”",
+      "hunk_id": "H060",
+      "sol": "Wipeng’s words signaled the end of the day’s work.",
+      "sol_range": [
+        114,
+        115
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung rose, his body stiff, and left the office. The owner of this place was his father, who had vanished one day—not Jin Wikyung himself.",
+      "baseline_range": [
+        115,
+        116
+      ],
+      "context_after_baseline": "His residence was a pavilion in the inner compound at the center of the Jin Family estate, and it took about a quarter hour to walk there.",
+      "context_after_sol": "Jin Wikyung lived in a pavilion in the inner compound at the center of the Jin Family estate. It was about a quarter hour’s walk away.",
+      "context_before_baseline": "That was Wipeng’s signal that the day’s work was over.",
+      "context_before_sol": "Wipeng’s words signaled the end of the day’s work.",
+      "hunk_id": "H061",
+      "sol": "Jin Wikyung rose, stretching his stiff body, and left the office. After all, the owner of that room was not Jin Wikyung, but his father, who had vanished without warning one day.",
+      "sol_range": [
+        115,
+        116
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "His residence was a pavilion in the inner compound at the center of the Jin Family estate, and it took about a quarter hour to walk there.",
+      "baseline_range": [
+        116,
+        117
+      ],
+      "context_after_baseline": "“It’s cold tonight.”",
+      "context_after_sol": "“It’s cold tonight.”",
+      "context_before_baseline": "Jin Wikyung rose, his body stiff, and left the office. The owner of this place was his father, who had vanished one day—not Jin Wikyung himself.",
+      "context_before_sol": "Jin Wikyung rose, stretching his stiff body, and left the office. After all, the owner of that room was not Jin Wikyung, but his father, who had vanished without warning one day.",
+      "hunk_id": "H062",
+      "sol": "Jin Wikyung lived in a pavilion in the inner compound at the center of the Jin Family estate. It was about a quarter hour’s walk away.",
+      "sol_range": [
+        116,
+        117
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng, who had followed him like a shadow, draped a thick fur cloak over his shoulders. Jin Wikyung smiled tiredly.",
+      "baseline_range": [
+        118,
+        119
+      ],
+      "context_after_baseline": "“Thank you. If I didn’t have you, I might have collapsed long ago.”",
+      "context_after_sol": "“Thank you. Without you, I might have collapsed long ago.”",
+      "context_before_baseline": "“It’s cold tonight.”",
+      "context_before_sol": "“It’s cold tonight.”",
+      "hunk_id": "H063",
+      "sol": "Wipeng followed like a shadow and draped a thick fur cloak over his shoulders. Jin Wikyung gave him a weary smile.",
+      "sol_range": [
+        118,
+        119
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Thank you. If I didn’t have you, I might have collapsed long ago.”",
+      "baseline_range": [
+        119,
+        120
+      ],
+      "context_after_baseline": "“What else could I do? Someone has to play the lady of the house.”",
+      "context_after_sol": "“What else can I do? Someone has to play the lady of the house.”",
+      "context_before_baseline": "Wipeng, who had followed him like a shadow, draped a thick fur cloak over his shoulders. Jin Wikyung smiled tiredly.",
+      "context_before_sol": "Wipeng followed like a shadow and draped a thick fur cloak over his shoulders. Jin Wikyung gave him a weary smile.",
+      "hunk_id": "H064",
+      "sol": "“Thank you. Without you, I might have collapsed long ago.”",
+      "sol_range": [
+        119,
+        120
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“What else could I do? Someone has to play the lady of the house.”",
+      "baseline_range": [
+        120,
+        121
+      ],
+      "context_after_baseline": "“Forget it. The old men are already hounding me enough as it is.”",
+      "context_after_sol": "“Enough. The old men already hound me about it.”",
+      "context_before_baseline": "“Thank you. If I didn’t have you, I might have collapsed long ago.”",
+      "context_before_sol": "“Thank you. Without you, I might have collapsed long ago.”",
+      "hunk_id": "H065",
+      "sol": "“What else can I do? Someone has to play the lady of the house.”",
+      "sol_range": [
+        120,
+        121
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Forget it. The old men are already hounding me enough as it is.”",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "context_after_baseline": "Jin Wikyung rubbed his stiff eyes. He was in his mid-thirties, but still unmarried. He had kept putting it off under the excuse of being young, and more than a decade had passed in those delays.",
+      "context_after_sol": "Jin Wikyung rubbed his dry, aching eyes. Though he was in his mid-thirties, he remained unmarried. He had kept putting marriage off on the grounds that he was still young, and those delays had added up to more than a decade.",
+      "context_before_baseline": "“What else could I do? Someone has to play the lady of the house.”",
+      "context_before_sol": "“What else can I do? Someone has to play the lady of the house.”",
+      "hunk_id": "H066",
+      "sol": "“Enough. The old men already hound me about it.”",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung rubbed his stiff eyes. He was in his mid-thirties, but still unmarried. He had kept putting it off under the excuse of being young, and more than a decade had passed in those delays.",
+      "baseline_range": [
+        122,
+        123
+      ],
+      "context_after_baseline": "*I suppose I’ll have to do it eventually. For the family’s sake.*",
+      "context_after_sol": "*I suppose I’ll have to do it eventually. For the family’s sake.*",
+      "context_before_baseline": "“Forget it. The old men are already hounding me enough as it is.”",
+      "context_before_sol": "“Enough. The old men already hound me about it.”",
+      "hunk_id": "H067",
+      "sol": "Jin Wikyung rubbed his dry, aching eyes. Though he was in his mid-thirties, he remained unmarried. He had kept putting marriage off on the grounds that he was still young, and those delays had added up to more than a decade.",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "If someone asked whether he had never experienced love, the answer would be no.",
+      "baseline_range": [
+        124,
+        125
+      ],
+      "context_after_baseline": "But Jin Wikyung was not an immature child. One day, he would become the Family Head and take responsibility for everyone in the household. If a political marriage could strengthen the family, it would be a small price to pay as far as he was concerned.",
+      "context_after_sol": "But Jin Wikyung was no immature child. One day, he would become the Family Head and bear responsibility for everyone in the household. If a political marriage could strengthen the family, he considered it a small price to pay.",
+      "context_before_baseline": "*I suppose I’ll have to do it eventually. For the family’s sake.*",
+      "context_before_sol": "*I suppose I’ll have to do it eventually. For the family’s sake.*",
+      "hunk_id": "H068",
+      "sol": "Had he ever been in love? Yes.",
+      "sol_range": [
+        124,
+        125
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But Jin Wikyung was not an immature child. One day, he would become the Family Head and take responsibility for everyone in the household. If a political marriage could strengthen the family, it would be a small price to pay as far as he was concerned.",
+      "baseline_range": [
+        125,
+        126
+      ],
+      "context_after_baseline": "“The stars are bright. We almost wouldn’t need torches.”",
+      "context_after_sol": "“The stars are bright tonight. We could almost do without torches.”",
+      "context_before_baseline": "If someone asked whether he had never experienced love, the answer would be no.",
+      "context_before_sol": "Had he ever been in love? Yes.",
+      "hunk_id": "H069",
+      "sol": "But Jin Wikyung was no immature child. One day, he would become the Family Head and bear responsibility for everyone in the household. If a political marriage could strengthen the family, he considered it a small price to pay.",
+      "sol_range": [
+        125,
+        126
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The stars are bright. We almost wouldn’t need torches.”",
+      "baseline_range": [
+        126,
+        127
+      ],
+      "context_after_baseline": "Sensing the mood, Wipeng changed the subject. Jin Wikyung shook his head. His residence had come into view.",
+      "context_after_sol": "Sensing his mood, Wipeng changed the subject. Jin Wikyung shook his head. His residence had already come into view.",
+      "context_before_baseline": "But Jin Wikyung was not an immature child. One day, he would become the Family Head and take responsibility for everyone in the household. If a political marriage could strengthen the family, it would be a small price to pay as far as he was concerned.",
+      "context_before_sol": "But Jin Wikyung was no immature child. One day, he would become the Family Head and bear responsibility for everyone in the household. If a political marriage could strengthen the family, he considered it a small price to pay.",
+      "hunk_id": "H070",
+      "sol": "“The stars are bright tonight. We could almost do without torches.”",
+      "sol_range": [
+        126,
+        127
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Sensing the mood, Wipeng changed the subject. Jin Wikyung shook his head. His residence had come into view.",
+      "baseline_range": [
+        127,
+        128
+      ],
+      "context_after_baseline": "“Hmm?”",
+      "context_after_sol": "“Hmm?”",
+      "context_before_baseline": "“The stars are bright. We almost wouldn’t need torches.”",
+      "context_before_sol": "“The stars are bright tonight. We could almost do without torches.”",
+      "hunk_id": "H071",
+      "sol": "Sensing his mood, Wipeng changed the subject. Jin Wikyung shook his head. His residence had already come into view.",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Following Jin Wikyung’s gaze, Wipeng tilted his head. A faint light was leaking from a nearby pavilion.",
+      "baseline_range": [
+        130,
+        131
+      ],
+      "context_after_baseline": "“Isn’t that the Third Young Master’s residence?”",
+      "context_after_sol": "“Isn’t that the Third Young Master’s residence?”",
+      "context_before_baseline": "“What is it?”",
+      "context_before_sol": "“What is it?”",
+      "hunk_id": "H072",
+      "sol": "Wipeng followed Jin Wikyung’s gaze and tilted his head. Faint light was leaking from a nearby pavilion.",
+      "sol_range": [
+        130,
+        131
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As he spoke, Jin Wikyung strode forward. Wipeng had no choice but to follow.",
+      "baseline_range": [
+        133,
+        134
+      ],
+      "context_after_baseline": "“My lord, why don’t we come back another time? The memory loss is just an excuse. He’s obviously drinking.”",
+      "context_after_sol": "“My lord, why don’t we come back another time? His memory loss is obviously an excuse. He’s probably drinking.”",
+      "context_before_baseline": "“It is. It’s late, but the lights are still on.”",
+      "context_before_sol": "“It is. It’s late, but the lights are still on.”",
+      "hunk_id": "H073",
+      "sol": "Jin Wikyung strode toward it as he spoke. Wipeng had no choice but to follow.",
+      "sol_range": [
+        133,
+        134
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“My lord, why don’t we come back another time? The memory loss is just an excuse. He’s obviously drinking.”",
+      "baseline_range": [
+        134,
+        135
+      ],
+      "context_after_baseline": "“Shh.”",
+      "context_after_sol": "“Shh.”",
+      "context_before_baseline": "As he spoke, Jin Wikyung strode forward. Wipeng had no choice but to follow.",
+      "context_before_sol": "Jin Wikyung strode toward it as he spoke. Wipeng had no choice but to follow.",
+      "hunk_id": "H074",
+      "sol": "“My lord, why don’t we come back another time? His memory loss is obviously an excuse. He’s probably drinking.”",
+      "sol_range": [
+        134,
+        135
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The two men entered the pavilion. The light was coming from the old room on the far left. The constant creaking made it clear that someone was moving around inside.",
+      "baseline_range": [
+        136,
+        137
+      ],
+      "context_after_baseline": "“I underestimated the Third Young Master. It sounds like he even brought a woman with him. Listen to that. I’ll bet my salary for this month.”",
+      "context_after_sol": "“I underestimated the Third Young Master. It sounds like he even brought a woman in. Listen to that. I’ll bet this month’s salary on it.”",
+      "context_before_baseline": "“Shh.”",
+      "context_before_sol": "“Shh.”",
+      "hunk_id": "H075",
+      "sol": "The two men entered the pavilion. The light came from the old room on the far left. Constant creaking sounded from within, as if someone were moving around without pause.",
+      "sol_range": [
+        136,
+        137
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I underestimated the Third Young Master. It sounds like he even brought a woman with him. Listen to that. I’ll bet my salary for this month.”",
+      "baseline_range": [
+        137,
+        138
+      ],
+      "context_after_baseline": "Wipeng’s lips moved. He was using Sound Transmission, sending his voice through internal energy.",
+      "context_after_sol": "Wipeng’s lips moved. He was using Sound Transmission, carrying his voice with internal energy.",
+      "context_before_baseline": "The two men entered the pavilion. The light was coming from the old room on the far left. The constant creaking made it clear that someone was moving around inside.",
+      "context_before_sol": "The two men entered the pavilion. The light came from the old room on the far left. Constant creaking sounded from within, as if someone were moving around without pause.",
+      "hunk_id": "H076",
+      "sol": "“I underestimated the Third Young Master. It sounds like he even brought a woman in. Listen to that. I’ll bet this month’s salary on it.”",
+      "sol_range": [
+        137,
+        138
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng’s lips moved. He was using Sound Transmission, sending his voice through internal energy.",
+      "baseline_range": [
+        138,
+        139
+      ],
+      "context_after_baseline": "“Wipeng.”",
+      "context_after_sol": "“Wipeng.”",
+      "context_before_baseline": "“I underestimated the Third Young Master. It sounds like he even brought a woman with him. Listen to that. I’ll bet my salary for this month.”",
+      "context_before_sol": "“I underestimated the Third Young Master. It sounds like he even brought a woman in. Listen to that. I’ll bet this month’s salary on it.”",
+      "hunk_id": "H077",
+      "sol": "Wipeng’s lips moved. He was using Sound Transmission, carrying his voice with internal energy.",
+      "sol_range": [
+        138,
+        139
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung sent the short, heavy response through Sound Transmission, then moved right up to the door. Through the narrow gap, he could see what was happening inside.",
+      "baseline_range": [
+        142,
+        143
+      ],
+      "context_after_baseline": "Wipeng cut in again with a wounded expression.",
+      "context_after_sol": "Wipeng squeezed in beside him with a wounded expression.",
+      "context_before_baseline": "“Shut your mouth.”",
+      "context_before_sol": "“Shut your mouth.”",
+      "hunk_id": "H078",
+      "sol": "Jin Wikyung sent the short, heavy reply through Sound Transmission, then moved right up to the door. Through the open crack, he could see what was happening inside.",
+      "sol_range": [
+        142,
+        143
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng cut in again with a wounded expression.",
+      "baseline_range": [
+        143,
+        144
+      ],
+      "context_after_baseline": "“I never took you for this sort of person, my lord, but your tastes are rather unusual…”",
+      "context_after_sol": "“I never took you for this sort of man, my lord. Your tastes are rather unusual—”",
+      "context_before_baseline": "Jin Wikyung sent the short, heavy response through Sound Transmission, then moved right up to the door. Through the narrow gap, he could see what was happening inside.",
+      "context_before_sol": "Jin Wikyung sent the short, heavy reply through Sound Transmission, then moved right up to the door. Through the open crack, he could see what was happening inside.",
+      "hunk_id": "H079",
+      "sol": "Wipeng squeezed in beside him with a wounded expression.",
+      "sol_range": [
+        143,
+        144
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I never took you for this sort of person, my lord, but your tastes are rather unusual…”",
+      "baseline_range": [
+        144,
+        145
+      ],
+      "context_after_baseline": "He gasped.",
+      "context_after_sol": "He gasped.",
+      "context_before_baseline": "Wipeng cut in again with a wounded expression.",
+      "context_before_sol": "Wipeng squeezed in beside him with a wounded expression.",
+      "hunk_id": "H080",
+      "sol": "“I never took you for this sort of man, my lord. Your tastes are rather unusual—”",
+      "sol_range": [
+        144,
+        145
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Was I seeing things because I’ve been feeling weak lately?*",
+      "baseline_range": [
+        148,
+        149
+      ],
+      "context_after_baseline": "He rubbed his eyes with his sleeve, but all five senses continued to take in the scene before him exactly as it was.",
+      "context_after_sol": "He rubbed his eyes with his sleeve, but his senses continued to report the scene before him exactly as it was.",
+      "context_before_baseline": "*What did I just see?*",
+      "context_before_sol": "*What did I just see?*",
+      "hunk_id": "H081",
+      "sol": "*Am I seeing things because I’ve been feeling weak lately?*",
+      "sol_range": [
+        148,
+        149
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He rubbed his eyes with his sleeve, but all five senses continued to take in the scene before him exactly as it was.",
+      "baseline_range": [
+        149,
+        150
+      ],
+      "context_after_baseline": "“Now, take two steps diagonally…”",
+      "context_after_sol": "“Now, two steps diagonally…”",
+      "context_before_baseline": "*Was I seeing things because I’ve been feeling weak lately?*",
+      "context_before_sol": "*Am I seeing things because I’ve been feeling weak lately?*",
+      "hunk_id": "H082",
+      "sol": "He rubbed his eyes with his sleeve, but his senses continued to report the scene before him exactly as it was.",
+      "sol_range": [
+        149,
+        150
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Now, take two steps diagonally…”",
+      "baseline_range": [
+        150,
+        151
+      ],
+      "context_after_baseline": "It was a young man with a sturdy build. He muttered continuously while moving his body without pause. Countless footprints covered the dusty floor, and more were being added even now.",
+      "context_after_sol": "A sturdy young man muttered continuously as he moved without pause. Countless footprints covered the dusty floor, and more were appearing by the second.",
+      "context_before_baseline": "He rubbed his eyes with his sleeve, but all five senses continued to take in the scene before him exactly as it was.",
+      "context_before_sol": "He rubbed his eyes with his sleeve, but his senses continued to report the scene before him exactly as it was.",
+      "hunk_id": "H083",
+      "sol": "“Now, two steps diagonally…”",
+      "sol_range": [
+        150,
+        151
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was a young man with a sturdy build. He muttered continuously while moving his body without pause. Countless footprints covered the dusty floor, and more were being added even now.",
+      "baseline_range": [
+        151,
+        152
+      ],
+      "context_after_baseline": "Swish. Stumble.",
+      "context_after_sol": "Swish. Stumble.",
+      "context_before_baseline": "“Now, take two steps diagonally…”",
+      "context_before_sol": "“Now, two steps diagonally…”",
+      "hunk_id": "H084",
+      "sol": "A sturdy young man muttered continuously as he moved without pause. Countless footprints covered the dusty floor, and more were appearing by the second.",
+      "sol_range": [
+        151,
+        152
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Fuck, they made this martial art like shit—aaagh!”",
+      "baseline_range": [
+        153,
+        154
+      ],
+      "context_after_baseline": "It was the Third Young Master. That foul personality and that foul mouth. There was no doubt that he was Jin Taekyung.",
+      "context_after_sol": "It was the Third Young Master. That god-awful temper and filthy mouth could only belong to the Third Young Master, Jin Taekyung.",
+      "context_before_baseline": "Swish. Stumble.",
+      "context_before_sol": "Swish. Stumble.",
+      "hunk_id": "H085",
+      "sol": "“Fuck, who designed this shitty martial art—aaagh!”",
+      "sol_range": [
+        153,
+        154
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was the Third Young Master. That foul personality and that foul mouth. There was no doubt that he was Jin Taekyung.",
+      "baseline_range": [
+        154,
+        155
+      ],
+      "context_after_baseline": "He hadn’t trained in martial arts since the age of twelve, yet he was practicing past midnight, drenched in dust and sweat!",
+      "context_after_sol": "He had not trained in martial arts since he was twelve, yet here he was, practicing past midnight until he was drenched in dust and sweat.",
+      "context_before_baseline": "“Fuck, they made this martial art like shit—aaagh!”",
+      "context_before_sol": "“Fuck, who designed this shitty martial art—aaagh!”",
+      "hunk_id": "H086",
+      "sol": "It was the Third Young Master. That god-awful temper and filthy mouth could only belong to the Third Young Master, Jin Taekyung.",
+      "sol_range": [
+        154,
+        155
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He hadn’t trained in martial arts since the age of twelve, yet he was practicing past midnight, drenched in dust and sweat!",
+      "baseline_range": [
+        155,
+        156
+      ],
+      "context_after_baseline": "“Wipeng.”",
+      "context_after_sol": "“Wipeng.”",
+      "context_before_baseline": "It was the Third Young Master. That foul personality and that foul mouth. There was no doubt that he was Jin Taekyung.",
+      "context_before_sol": "It was the Third Young Master. That god-awful temper and filthy mouth could only belong to the Third Young Master, Jin Taekyung.",
+      "hunk_id": "H087",
+      "sol": "He had not trained in martial arts since he was twelve, yet here he was, practicing past midnight until he was drenched in dust and sweat.",
+      "sol_range": [
+        155,
+        156
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng, who had been staring blankly, suddenly snapped back to reality.",
+      "baseline_range": [
+        157,
+        158
+      ],
+      "context_after_baseline": "“Yes, yes?”",
+      "context_after_sol": "“Y-Yes?”",
+      "context_before_baseline": "“Wipeng.”",
+      "context_before_sol": "“Wipeng.”",
+      "hunk_id": "H088",
+      "sol": "Wipeng, who had been staring blankly, snapped back to his senses.",
+      "sol_range": [
+        157,
+        158
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Yes, yes?”",
+      "baseline_range": [
+        158,
+        159
+      ],
+      "context_after_baseline": "Jin Wikyung gazed into the room with dazed eyes. Jin Taekyung had fallen over and was hurling vicious curses at the ceiling, but he soon got back up and resumed practicing his footwork.",
+      "context_after_sol": "Jin Wikyung gazed into the room with dazed eyes. Jin Taekyung had fallen and was hurling vicious curses at the ceiling, but he soon got back up and resumed practicing his footwork.",
+      "context_before_baseline": "Wipeng, who had been staring blankly, suddenly snapped back to reality.",
+      "context_before_sol": "Wipeng, who had been staring blankly, snapped back to his senses.",
+      "hunk_id": "H089",
+      "sol": "“Y-Yes?”",
+      "sol_range": [
+        158,
+        159
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung gazed into the room with dazed eyes. Jin Taekyung had fallen over and was hurling vicious curses at the ceiling, but he soon got back up and resumed practicing his footwork.",
+      "baseline_range": [
+        159,
+        160
+      ],
+      "context_after_baseline": "“As promised, you won’t be getting paid this month.”",
+      "context_after_sol": "“As promised, you won’t be getting paid this month.”",
+      "context_before_baseline": "“Yes, yes?”",
+      "context_before_sol": "“Y-Yes?”",
+      "hunk_id": "H090",
+      "sol": "Jin Wikyung gazed into the room with dazed eyes. Jin Taekyung had fallen and was hurling vicious curses at the ceiling, but he soon got back up and resumed practicing his footwork.",
+      "sol_range": [
+        159,
+        160
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 162,
+  "sol_sha256": "8bf88d6af37a11d43c887691edbabe0f8fd9f5eaac4e6bf6d03687d3795ed5ec",
+  "version": 1
+}

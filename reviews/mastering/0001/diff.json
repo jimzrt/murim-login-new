@@ -1,0 +1,1512 @@
+{
+  "baseline_blocks": 134,
+  "baseline_sha256": "b735125c89cd134627bede36ebd5dd01879b8074f30b558d3d88e892af09102c",
+  "global_terminology_alerts": [],
+  "hunk_count": 79,
+  "hunks": [
+    {
+      "baseline": "Jinho delivered the verdict with the solemnity of a judge. He was the manager of the goshiwon[^1] where I lived, a thirty-year-old exam candidate.",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "context_after_baseline": "We were fairly close, only three years apart, and I remembered how he was always going on about how much he knew about IT. That was why I showed him the capsule I’d picked up, but…",
+      "context_after_sol": "We were fairly close, being only three years apart. He was always bragging about how much he knew about IT, so I’d shown him the capsule I’d picked up, but…",
+      "context_before_baseline": "“It’s garbage.”",
+      "context_before_sol": "“It’s garbage.”",
+      "hunk_id": "H001",
+      "sol": "Jinho delivered the verdict with the solemnity of a judge. He was the manager of the goshiwon[^1] where I lived and a thirty-year-old preparing for the civil service exam.",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "We were fairly close, only three years apart, and I remembered how he was always going on about how much he knew about IT. That was why I showed him the capsule I’d picked up, but…",
+      "baseline_range": [
+        3,
+        4
+      ],
+      "context_after_baseline": "“Is it really that bad?”",
+      "context_after_sol": "“Is it really that bad?”",
+      "context_before_baseline": "Jinho delivered the verdict with the solemnity of a judge. He was the manager of the goshiwon[^1] where I lived, a thirty-year-old exam candidate.",
+      "context_before_sol": "Jinho delivered the verdict with the solemnity of a judge. He was the manager of the goshiwon[^1] where I lived and a thirty-year-old preparing for the civil service exam.",
+      "hunk_id": "H002",
+      "sol": "We were fairly close, being only three years apart. He was always bragging about how much he knew about IT, so I’d shown him the capsule I’d picked up, but…",
+      "sol_range": [
+        3,
+        4
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“No. I said it’s garbage.”",
+      "baseline_range": [
+        5,
+        6
+      ],
+      "context_after_baseline": "Wow. Not even a hint of hesitation. For some reason, I felt personally insulted.",
+      "context_after_sol": "Wow. Not even a moment’s hesitation. For some reason, I felt personally insulted.",
+      "context_before_baseline": "“Is it really that bad?”",
+      "context_before_sol": "“Is it really that bad?”",
+      "hunk_id": "H003",
+      "sol": "“No. I’m telling you, it’s garbage.”",
+      "sol_range": [
+        5,
+        6
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wow. Not even a hint of hesitation. For some reason, I felt personally insulted.",
+      "baseline_range": [
+        6,
+        7
+      ],
+      "context_after_baseline": "“You didn’t even look at it properly.”",
+      "context_after_sol": "“You didn’t even look at it properly.”",
+      "context_before_baseline": "“No. I said it’s garbage.”",
+      "context_before_sol": "“No. I’m telling you, it’s garbage.”",
+      "hunk_id": "H004",
+      "sol": "Wow. Not even a moment’s hesitation. For some reason, I felt personally insulted.",
+      "sol_range": [
+        6,
+        7
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Just as I’d said, he hadn’t even looked inside. He’d merely given it a quick once-over, top to bottom, before declaring it garbage. Since I’d been thinking about how much I could get for it secondhand, the blow hit me hard.",
+      "baseline_range": [
+        8,
+        9
+      ],
+      "context_after_baseline": "“Taekyung. Taekyung. Jin Taekyung. You’re laboring under a serious misunderstanding.”",
+      "context_after_sol": "“Taekyung. Taekyung. Jin Taekyung. You’re laboring under a grave misunderstanding.”",
+      "context_before_baseline": "“You didn’t even look at it properly.”",
+      "context_before_sol": "“You didn’t even look at it properly.”",
+      "hunk_id": "H005",
+      "sol": "Just as I’d said, he hadn’t even looked inside. He’d merely given it a quick once-over from top to bottom before declaring it garbage. Since I’d been wondering how much I could get for it secondhand, the verdict came as a serious blow.",
+      "sol_range": [
+        8,
+        9
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Taekyung. Taekyung. Jin Taekyung. You’re laboring under a serious misunderstanding.”",
+      "baseline_range": [
+        9,
+        10
+      ],
+      "context_after_baseline": "“…?”",
+      "context_after_sol": "“…?”",
+      "context_before_baseline": "Just as I’d said, he hadn’t even looked inside. He’d merely given it a quick once-over, top to bottom, before declaring it garbage. Since I’d been thinking about how much I could get for it secondhand, the blow hit me hard.",
+      "context_before_sol": "Just as I’d said, he hadn’t even looked inside. He’d merely given it a quick once-over from top to bottom before declaring it garbage. Since I’d been wondering how much I could get for it secondhand, the verdict came as a serious blow.",
+      "hunk_id": "H006",
+      "sol": "“Taekyung. Taekyung. Jin Taekyung. You’re laboring under a grave misunderstanding.”",
+      "sol_range": [
+        9,
+        10
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Shit is shit. You don’t have to dig through it to check for yesterday’s bean sprouts. You can tell it’s shit just by looking at it.”",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "context_after_baseline": "“Oh.”",
+      "context_after_sol": "“Oh.”",
+      "context_before_baseline": "“…?”",
+      "context_before_sol": "“…?”",
+      "hunk_id": "H007",
+      "sol": "“Shit is shit. You don’t need to dig through it to check for the bean sprouts you ate yesterday. One look is enough to tell it’s shit.”",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Shh. Don’t say anything more. I wasn’t fishing for praise.”",
+      "baseline_range": [
+        13,
+        14
+      ],
+      "context_after_baseline": "“Jinho…”",
+      "context_after_sol": "“Jinho…”",
+      "context_before_baseline": "“Oh.”",
+      "context_before_sol": "“Oh.”",
+      "hunk_id": "H008",
+      "sol": "“Shh. Don’t say another word. I didn’t say it because I wanted your praise.”",
+      "sol_range": [
+        13,
+        14
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I wanted to kill him. My fist trembled with the urge, and Jinho flinched. Unlike him, who had spent his entire life hunched over a desk, I had a fairly intimidating build.",
+      "baseline_range": [
+        15,
+        16
+      ],
+      "context_after_baseline": "“Taekyung. Let’s recall Article 1, Clause 12 of the Awakened Persons Special Act. What you’re about to do falls under assault of a civilian by an Awakened…”",
+      "context_after_sol": "“Taekyung. Let’s reflect on Article 1, Clause 12 of the Awakened Persons Special Act. What you’re about to do constitutes assault on a civilian by an Awakened…”",
+      "context_before_baseline": "“Jinho…”",
+      "context_before_sol": "“Jinho…”",
+      "hunk_id": "H009",
+      "sol": "I wanted to kill him. My fist trembled with the urge, making Jinho flinch. Unlike him, who had spent his entire life behind a desk, I had a fairly intimidating build.",
+      "sol_range": [
+        15,
+        16
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Taekyung. Let’s recall Article 1, Clause 12 of the Awakened Persons Special Act. What you’re about to do falls under assault of a civilian by an Awakened…”",
+      "baseline_range": [
+        16,
+        17
+      ],
+      "context_after_baseline": "“I thought you said an F-rank Hunter like me didn’t even count as an Awakened?”",
+      "context_after_sol": "“I thought you said an F-rank Hunter like me didn’t even count as an Awakened?”",
+      "context_before_baseline": "I wanted to kill him. My fist trembled with the urge, and Jinho flinched. Unlike him, who had spent his entire life hunched over a desk, I had a fairly intimidating build.",
+      "context_before_sol": "I wanted to kill him. My fist trembled with the urge, making Jinho flinch. Unlike him, who had spent his entire life behind a desk, I had a fairly intimidating build.",
+      "hunk_id": "H010",
+      "sol": "“Taekyung. Let’s reflect on Article 1, Clause 12 of the Awakened Persons Special Act. What you’re about to do constitutes assault on a civilian by an Awakened…”",
+      "sol_range": [
+        16,
+        17
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Watching him make such a fuss, I could only sigh.",
+      "baseline_range": [
+        19,
+        20
+      ],
+      "context_after_baseline": "My fist slowly dropped.",
+      "context_after_sol": "My fist slowly lowered.",
+      "context_before_baseline": "“I did? When? Was I blackout drunk?”",
+      "context_before_sol": "“I did? When? Was I blackout drunk?”",
+      "hunk_id": "H011",
+      "sol": "His theatrics drew a sigh from me.",
+      "sol_range": [
+        19,
+        20
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My fist slowly dropped.",
+      "baseline_range": [
+        20,
+        21
+      ],
+      "context_after_baseline": "“That’s right. Good thinking. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "context_after_sol": "“That’s right. Good decision. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "context_before_baseline": "Watching him make such a fuss, I could only sigh.",
+      "context_before_sol": "His theatrics drew a sigh from me.",
+      "hunk_id": "H012",
+      "sol": "My fist slowly lowered.",
+      "sol_range": [
+        20,
+        21
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“That’s right. Good thinking. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "baseline_range": [
+        21,
+        22
+      ],
+      "context_after_baseline": "“I already got fired.”",
+      "context_after_sol": "“I already did.”",
+      "context_before_baseline": "My fist slowly dropped.",
+      "context_before_sol": "My fist slowly lowered.",
+      "hunk_id": "H013",
+      "sol": "“That’s right. Good decision. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "sol_range": [
+        21,
+        22
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I already got fired.”",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "context_after_baseline": "“Huh?”",
+      "context_after_sol": "“Huh?”",
+      "context_before_baseline": "“That’s right. Good thinking. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "context_before_sol": "“That’s right. Good decision. This field is small enough as it is. If word got around that you assaulted a civilian, you’d get fired from your Guild too…”",
+      "hunk_id": "H014",
+      "sol": "“I already did.”",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The moment I showed up, my Team Leader thanked me for all my hard work.”",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "context_after_baseline": "I’d started that job at twenty. I’d needed to support my family in place of my late father, which was why I’d chosen to become a Hunter.",
+      "context_after_sol": "I’d started the job at twenty. With my father gone, I’d needed to support my family, so I’d become a Hunter.",
+      "context_before_baseline": "“Huh?”",
+      "context_before_sol": "“Huh?”",
+      "hunk_id": "H015",
+      "sol": "“My Team Leader told me as soon as I got to work. Thanked me for all my hard work.”",
+      "sol_range": [
+        24,
+        25
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I’d started that job at twenty. I’d needed to support my family in place of my late father, which was why I’d chosen to become a Hunter.",
+      "baseline_range": [
+        25,
+        26
+      ],
+      "context_after_baseline": "F-rank. The lowest possible grade, with no particular talent to speak of, but I prided myself on having worked hard. With what I earned, I paid for my mother’s medical treatment and supported my only younger sibling.",
+      "context_after_sol": "F-rank. The lowest of the low, without any particular talent to speak of, but I prided myself on how hard I’d worked. The money I earned had paid for my mother’s treatment and supported my only younger sibling.",
+      "context_before_baseline": "“The moment I showed up, my Team Leader thanked me for all my hard work.”",
+      "context_before_sol": "“My Team Leader told me as soon as I got to work. Thanked me for all my hard work.”",
+      "hunk_id": "H016",
+      "sol": "I’d started the job at twenty. With my father gone, I’d needed to support my family, so I’d become a Hunter.",
+      "sol_range": [
+        25,
+        26
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "F-rank. The lowest possible grade, with no particular talent to speak of, but I prided myself on having worked hard. With what I earned, I paid for my mother’s medical treatment and supported my only younger sibling.",
+      "baseline_range": [
+        26,
+        27
+      ],
+      "context_after_baseline": "But now… it felt as though the past seven years had vanished all at once. I remembered the Team Leader’s impassive face as he informed me of my dismissal a few hours earlier, and my chest tightened.",
+      "context_after_sol": "But now… it felt as though the past seven years had been wiped away. I remembered my Team Leader’s impassive face as he told me I was fired a few hours earlier, and my chest tightened.",
+      "context_before_baseline": "I’d started that job at twenty. I’d needed to support my family in place of my late father, which was why I’d chosen to become a Hunter.",
+      "context_before_sol": "I’d started the job at twenty. With my father gone, I’d needed to support my family, so I’d become a Hunter.",
+      "hunk_id": "H017",
+      "sol": "F-rank. The lowest of the low, without any particular talent to speak of, but I prided myself on how hard I’d worked. The money I earned had paid for my mother’s treatment and supported my only younger sibling.",
+      "sol_range": [
+        26,
+        27
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But now… it felt as though the past seven years had vanished all at once. I remembered the Team Leader’s impassive face as he informed me of my dismissal a few hours earlier, and my chest tightened.",
+      "baseline_range": [
+        27,
+        28
+      ],
+      "context_after_baseline": "“Uh… well.”",
+      "context_after_sol": "“Uh… well.”",
+      "context_before_baseline": "F-rank. The lowest possible grade, with no particular talent to speak of, but I prided myself on having worked hard. With what I earned, I paid for my mother’s medical treatment and supported my only younger sibling.",
+      "context_before_sol": "F-rank. The lowest of the low, without any particular talent to speak of, but I prided myself on how hard I’d worked. The money I earned had paid for my mother’s treatment and supported my only younger sibling.",
+      "hunk_id": "H018",
+      "sol": "But now… it felt as though the past seven years had been wiped away. I remembered my Team Leader’s impassive face as he told me I was fired a few hours earlier, and my chest tightened.",
+      "sol_range": [
+        27,
+        28
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gave a short laugh at Jinho’s flustered expression.",
+      "baseline_range": [
+        29,
+        30
+      ],
+      "context_after_baseline": "“You feel bad, don’t you?”",
+      "context_after_sol": "“You feel bad, don’t you?”",
+      "context_before_baseline": "“Uh… well.”",
+      "context_before_sol": "“Uh… well.”",
+      "hunk_id": "H019",
+      "sol": "Jinho’s flustered expression made me snort.",
+      "sol_range": [
+        29,
+        30
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Honestly… kind of.”",
+      "baseline_range": [
+        31,
+        32
+      ],
+      "context_after_baseline": "This guy. A serious expression really didn’t suit him.",
+      "context_after_sol": "This guy. A serious expression really didn’t suit him.",
+      "context_before_baseline": "“You feel bad, don’t you?”",
+      "context_before_sol": "“You feel bad, don’t you?”",
+      "hunk_id": "H020",
+      "sol": "“Honestly… a little.”",
+      "sol_range": [
+        31,
+        32
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Listen to the disrespect on you. Try treating me like your big brother before you say something like that.”",
+      "baseline_range": [
+        34,
+        35
+      ],
+      "context_after_baseline": "He said that, but still jerked his chin for me to follow. From his expression, we were going to drink until one of us fell over tonight.",
+      "context_after_sol": "Despite his words, he jerked his chin for me to follow him out. Judging by his expression, we were going to drink ourselves senseless tonight.",
+      "context_before_baseline": "“Then buy me a drink. This is when you’re supposed to act like my big brother.”",
+      "context_before_sol": "“Then buy me a drink. This is when you’re supposed to act like my big brother.”",
+      "hunk_id": "H021",
+      "sol": "“Listen to that mouth. Try treating me like your big brother before you say something like that.”",
+      "sol_range": [
+        34,
+        35
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He said that, but still jerked his chin for me to follow. From his expression, we were going to drink until one of us fell over tonight.",
+      "baseline_range": [
+        35,
+        36
+      ],
+      "context_after_baseline": "* * *",
+      "context_after_sol": "* * *",
+      "context_before_baseline": "“Listen to the disrespect on you. Try treating me like your big brother before you say something like that.”",
+      "context_before_sol": "“Listen to that mouth. Try treating me like your big brother before you say something like that.”",
+      "hunk_id": "H022",
+      "sol": "Despite his words, he jerked his chin for me to follow him out. Judging by his expression, we were going to drink ourselves senseless tonight.",
+      "sol_range": [
+        35,
+        36
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A Gate marks the boundary of the world. Outside it—in other words, in the modern world—is the civilized society we know. Go inside, though, and it’s crawling with monsters no one has ever seen or heard of.",
+      "baseline_range": [
+        37,
+        38
+      ],
+      "context_after_baseline": "The weakest and most common of them were goblins—even an F-rank Hunter like me could handle one.",
+      "context_after_sol": "The weakest and most common of them are goblins—even an F-rank Hunter like me can handle one.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H023",
+      "sol": "A Gate marks the boundary between worlds. Outside it—in other words, in the modern world—is the civilized society we know. Step inside, though, and you’ll find it crawling with monsters no one has ever seen or heard of.",
+      "sol_range": [
+        37,
+        38
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The weakest and most common of them were goblins—even an F-rank Hunter like me could handle one.",
+      "baseline_range": [
+        38,
+        39
+      ],
+      "context_after_baseline": "The reason I’m bringing this up now is…",
+      "context_after_sol": "The reason I’m bringing this up now is…",
+      "context_before_baseline": "A Gate marks the boundary of the world. Outside it—in other words, in the modern world—is the civilized society we know. Go inside, though, and it’s crawling with monsters no one has ever seen or heard of.",
+      "context_before_sol": "A Gate marks the boundary between worlds. Outside it—in other words, in the modern world—is the civilized society we know. Step inside, though, and you’ll find it crawling with monsters no one has ever seen or heard of.",
+      "hunk_id": "H024",
+      "sol": "The weakest and most common of them are goblins—even an F-rank Hunter like me can handle one.",
+      "sol_range": [
+        38,
+        39
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Was that thing human or a monster? Leaning against a utility pole and vomiting, Jinho looked just like a goblin that had taken a hard blow to the solar plexus.",
+      "baseline_range": [
+        42,
+        43
+      ],
+      "context_after_baseline": "“Hey, Jinho. Mr. Seong Jinho. Try to come to your senses.”",
+      "context_after_sol": "“Hey. Jinho. Mr. Seong Jinho. Try to get a grip.”",
+      "context_before_baseline": "*How can a person even do that?*",
+      "context_before_sol": "*How can a person even do that?*",
+      "hunk_id": "H025",
+      "sol": "Was that thing human or a monster? Leaning against a utility pole and puking his guts out, Jinho looked exactly like a goblin that had taken a hard blow to the solar plexus.",
+      "sol_range": [
+        42,
+        43
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Hey, Jinho. Mr. Seong Jinho. Try to come to your senses.”",
+      "baseline_range": [
+        43,
+        44
+      ],
+      "context_after_baseline": "“Gwaah?”",
+      "context_after_sol": "“Gwaah?”",
+      "context_before_baseline": "Was that thing human or a monster? Leaning against a utility pole and vomiting, Jinho looked just like a goblin that had taken a hard blow to the solar plexus.",
+      "context_before_sol": "Was that thing human or a monster? Leaning against a utility pole and puking his guts out, Jinho looked exactly like a goblin that had taken a hard blow to the solar plexus.",
+      "hunk_id": "H026",
+      "sol": "“Hey. Jinho. Mr. Seong Jinho. Try to get a grip.”",
+      "sol_range": [
+        43,
+        44
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "…Just carry on.",
+      "baseline_range": [
+        45,
+        46
+      ],
+      "context_after_baseline": "*I told you to drink slowly.*",
+      "context_after_sol": "*I told you to drink slowly.*",
+      "context_before_baseline": "“Gwaah?”",
+      "context_before_sol": "“Gwaah?”",
+      "hunk_id": "H027",
+      "sol": "…Never mind. Carry on.",
+      "sol_range": [
+        45,
+        46
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He had been pounding drinks like a lunatic from the very first round, and this was how he’d ended up. Never mind that I’d had to pay the bill—I was soaked through after carrying the dead-drunk man all the way back to the goshiwon.",
+      "baseline_range": [
+        47,
+        48
+      ],
+      "context_after_baseline": "Sweat was a given. Vomit was extra. It was obvious whose it was.",
+      "context_after_sol": "Sweat came standard. Vomit was the optional extra. There was no question whose mouth it had come from.",
+      "context_before_baseline": "*I told you to drink slowly.*",
+      "context_before_sol": "*I told you to drink slowly.*",
+      "hunk_id": "H028",
+      "sol": "He’d been pounding drinks like a lunatic from the very first round, and this was the result. Never mind that I’d ended up paying the bill—I was drenched from carrying him all the way back to the goshiwon after he passed out.",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Sweat was a given. Vomit was extra. It was obvious whose it was.",
+      "baseline_range": [
+        48,
+        49
+      ],
+      "context_after_baseline": "While he retched intermittently in the background, I watched the sun sink toward the horizon.",
+      "context_after_sol": "With his intermittent retching as background music, I watched the sun sink toward the horizon.",
+      "context_before_baseline": "He had been pounding drinks like a lunatic from the very first round, and this was how he’d ended up. Never mind that I’d had to pay the bill—I was soaked through after carrying the dead-drunk man all the way back to the goshiwon.",
+      "context_before_sol": "He’d been pounding drinks like a lunatic from the very first round, and this was the result. Never mind that I’d ended up paying the bill—I was drenched from carrying him all the way back to the goshiwon after he passed out.",
+      "hunk_id": "H029",
+      "sol": "Sweat came standard. Vomit was the optional extra. There was no question whose mouth it had come from.",
+      "sol_range": [
+        48,
+        49
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "While he retched intermittently in the background, I watched the sun sink toward the horizon.",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "context_after_baseline": "*Getting fired wasn’t bad enough. Fuck.*",
+      "context_after_sol": "*Getting fired wasn’t bad enough. Fuck.*",
+      "context_before_baseline": "Sweat was a given. Vomit was extra. It was obvious whose it was.",
+      "context_before_sol": "Sweat came standard. Vomit was the optional extra. There was no question whose mouth it had come from.",
+      "hunk_id": "H030",
+      "sol": "With his intermittent retching as background music, I watched the sun sink toward the horizon.",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The memories of the day flashed through my mind like a panorama.",
+      "baseline_range": [
+        51,
+        52
+      ],
+      "context_after_baseline": "*What a day this is turning out to be.*",
+      "context_after_sol": "*What a fantastic day.*",
+      "context_before_baseline": "*Getting fired wasn’t bad enough. Fuck.*",
+      "context_before_sol": "*Getting fired wasn’t bad enough. Fuck.*",
+      "hunk_id": "H031",
+      "sol": "The day’s events flashed through my mind like a panorama.",
+      "sol_range": [
+        51,
+        52
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*What a day this is turning out to be.*",
+      "baseline_range": [
+        52,
+        53
+      ],
+      "context_after_baseline": "“Urp. Urrrgh. Where are we, driver? Huh?”",
+      "context_after_sol": "“Urp. Urrrgh. Where are we, driver? Huh?”",
+      "context_before_baseline": "The memories of the day flashed through my mind like a panorama.",
+      "context_before_sol": "The day’s events flashed through my mind like a panorama.",
+      "hunk_id": "H032",
+      "sol": "*What a fantastic day.*",
+      "sol_range": [
+        52,
+        53
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "You were the highlight of it all.",
+      "baseline_range": [
+        54,
+        55
+      ],
+      "context_after_baseline": "“We’re home. We’re here, so try to wake up.”",
+      "context_after_sol": "“We’re home. We’re here, so try to wake up.”",
+      "context_before_baseline": "“Urp. Urrrgh. Where are we, driver? Huh?”",
+      "context_before_sol": "“Urp. Urrrgh. Where are we, driver? Huh?”",
+      "hunk_id": "H033",
+      "sol": "And you were the crowning achievement.",
+      "sol_range": [
+        54,
+        55
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Home? My home’s in Gangwon Province. Oh, Mom. Mom! I want some of my mom’s doenjang stew[^2].”",
+      "baseline_range": [
+        56,
+        57
+      ],
+      "context_after_baseline": "“Oh, for crying out loud. It’s the goshiwon, Jinho.”",
+      "context_after_sol": "“Oh, for crying out loud. We’re at the goshiwon, Jinho.”",
+      "context_before_baseline": "“We’re home. We’re here, so try to wake up.”",
+      "context_before_sol": "“We’re home. We’re here, so try to wake up.”",
+      "hunk_id": "H034",
+      "sol": "“Home? My home’s in Gangwon Province. Oh, Mom. Mom! I want some of my mom’s doenjang stew.[^2]”",
+      "sol_range": [
+        56,
+        57
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Oh, for crying out loud. It’s the goshiwon, Jinho.”",
+      "baseline_range": [
+        57,
+        58
+      ],
+      "context_after_baseline": "“The goshiwon? Hope Goshiwon?”",
+      "context_after_sol": "“The goshiwon? Hope Goshiwon?”",
+      "context_before_baseline": "“Home? My home’s in Gangwon Province. Oh, Mom. Mom! I want some of my mom’s doenjang stew[^2].”",
+      "context_before_sol": "“Home? My home’s in Gangwon Province. Oh, Mom. Mom! I want some of my mom’s doenjang stew.[^2]”",
+      "hunk_id": "H035",
+      "sol": "“Oh, for crying out loud. We’re at the goshiwon, Jinho.”",
+      "sol_range": [
+        57,
+        58
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Hope… Right. Hope can’t be bought with money. My mom always said it was in everyone’s heart. She makes incredible doenjang stew.”",
+      "baseline_range": [
+        60,
+        61
+      ],
+      "context_after_baseline": "I waited patiently until he reached the part about doenjang stew, then punched him in the gut.",
+      "context_after_sol": "I waited patiently until he got to the part about doenjang stew, then punched him in the gut.",
+      "context_before_baseline": "“Yeah. So try to wake up.”",
+      "context_before_sol": "“Yeah. So try to wake up.”",
+      "hunk_id": "H036",
+      "sol": "“Hope… Right. Hope can’t be bought with money. My mom said it lives in everyone’s heart. She makes incredible doenjang stew.”",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I waited patiently until he reached the part about doenjang stew, then punched him in the gut.",
+      "baseline_range": [
+        61,
+        62
+      ],
+      "context_after_baseline": "Even while vomiting, he mumbled Article 1, Clause 12 of the Awakened Persons Special Act, proving that he was, in fact, an exam candidate.",
+      "context_after_sol": "Even while vomiting, he mumbled Article 1, Clause 12 of the Awakened Persons Special Act, proving that he was, in fact, an exam candidate.",
+      "context_before_baseline": "“Hope… Right. Hope can’t be bought with money. My mom always said it was in everyone’s heart. She makes incredible doenjang stew.”",
+      "context_before_sol": "“Hope… Right. Hope can’t be bought with money. My mom said it lives in everyone’s heart. She makes incredible doenjang stew.”",
+      "hunk_id": "H037",
+      "sol": "I waited patiently until he got to the part about doenjang stew, then punched him in the gut.",
+      "sol_range": [
+        61,
+        62
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I feel gross.”",
+      "baseline_range": [
+        64,
+        65
+      ],
+      "context_after_baseline": "I went straight to the shower room in the goshiwon and showered for thirty minutes, but I still felt as if the smell of vomit were clinging to the tip of my nose.",
+      "context_after_sol": "I’d gone straight to the goshiwon’s shower room and washed for thirty minutes, but the smell of vomit still seemed to linger beneath my nose.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H038",
+      "sol": "“I still feel filthy.”",
+      "sol_range": [
+        64,
+        65
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I went straight to the shower room in the goshiwon and showered for thirty minutes, but I still felt as if the smell of vomit were clinging to the tip of my nose.",
+      "baseline_range": [
+        65,
+        66
+      ],
+      "context_after_baseline": "When I returned, sniffing all the way, two nuisances were waiting in my room.",
+      "context_after_sol": "When I returned to my room, sniffing as I went, two nuisances were waiting for me.",
+      "context_before_baseline": "“I feel gross.”",
+      "context_before_sol": "“I still feel filthy.”",
+      "hunk_id": "H039",
+      "sol": "I’d gone straight to the goshiwon’s shower room and washed for thirty minutes, but the smell of vomit still seemed to linger beneath my nose.",
+      "sol_range": [
+        65,
+        66
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "When I returned, sniffing all the way, two nuisances were waiting in my room.",
+      "baseline_range": [
+        66,
+        67
+      ],
+      "context_after_baseline": "“Gwaah…”",
+      "context_after_sol": "“Gwaah…”",
+      "context_before_baseline": "I went straight to the shower room in the goshiwon and showered for thirty minutes, but I still felt as if the smell of vomit were clinging to the tip of my nose.",
+      "context_before_sol": "I’d gone straight to the goshiwon’s shower room and washed for thirty minutes, but the smell of vomit still seemed to linger beneath my nose.",
+      "hunk_id": "H040",
+      "sol": "When I returned to my room, sniffing as I went, two nuisances were waiting for me.",
+      "sol_range": [
+        66,
+        67
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "One was Jinho, dead drunk, and the other was…",
+      "baseline_range": [
+        68,
+        69
+      ],
+      "context_after_baseline": "“Oh, I forgot about this.”",
+      "context_after_sol": "“Oh, I forgot about this.”",
+      "context_before_baseline": "“Gwaah…”",
+      "context_before_sol": "“Gwaah…”",
+      "hunk_id": "H041",
+      "sol": "One was Jinho, dead drunk. The other was…",
+      "sol_range": [
+        68,
+        69
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The capsule. I’d left the refrigerator-sized thing in my room, barely ten square meters, and it felt as if it had filled the entire space. I retreated onto the bed and began wondering what to do with it.",
+      "baseline_range": [
+        70,
+        71
+      ],
+      "context_after_baseline": "*Should I take it back where I found it?*",
+      "context_after_sol": "*Should I take it out and throw it away?*",
+      "context_before_baseline": "“Oh, I forgot about this.”",
+      "context_before_sol": "“Oh, I forgot about this.”",
+      "hunk_id": "H042",
+      "sol": "The capsule. With that refrigerator-sized thing sitting in my room, which was barely ten square meters, the place felt completely full. I retreated onto the bed and began wondering what to do with it.",
+      "sol_range": [
+        70,
+        71
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Should I take it back where I found it?*",
+      "baseline_range": [
+        71,
+        72
+      ],
+      "context_after_baseline": "I could hand it over to a scrap dealer instead. What were scrap-metal prices like these days? It weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "context_after_sol": "Or I could hand it over to a scrap dealer. What were scrap-metal prices like these days? The thing weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "context_before_baseline": "The capsule. I’d left the refrigerator-sized thing in my room, barely ten square meters, and it felt as if it had filled the entire space. I retreated onto the bed and began wondering what to do with it.",
+      "context_before_sol": "The capsule. With that refrigerator-sized thing sitting in my room, which was barely ten square meters, the place felt completely full. I retreated onto the bed and began wondering what to do with it.",
+      "hunk_id": "H043",
+      "sol": "*Should I take it out and throw it away?*",
+      "sol_range": [
+        71,
+        72
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could hand it over to a scrap dealer instead. What were scrap-metal prices like these days? It weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "baseline_range": [
+        72,
+        73
+      ],
+      "context_after_baseline": "*I thought it was a fairly useful piece of equipment.*",
+      "context_after_sol": "*I thought it might actually be worth something.*",
+      "context_before_baseline": "*Should I take it back where I found it?*",
+      "context_before_sol": "*Should I take it out and throw it away?*",
+      "hunk_id": "H044",
+      "sol": "Or I could hand it over to a scrap dealer. What were scrap-metal prices like these days? The thing weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "sol_range": [
+        72,
+        73
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I thought it was a fairly useful piece of equipment.*",
+      "baseline_range": [
+        73,
+        74
+      ],
+      "context_after_baseline": "Shit, huh? Was it really that much of a piece of junk?",
+      "context_after_sol": "Garbage, huh? Was it really that worthless?",
+      "context_before_baseline": "I could hand it over to a scrap dealer instead. What were scrap-metal prices like these days? It weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "context_before_sol": "Or I could hand it over to a scrap dealer. What were scrap-metal prices like these days? The thing weighed at least fifty kilograms, so I could probably get enough for a few snacks.",
+      "hunk_id": "H045",
+      "sol": "*I thought it might actually be worth something.*",
+      "sol_range": [
+        73,
+        74
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Shit, huh? Was it really that much of a piece of junk?",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "context_after_baseline": "Come to think of it, I hadn’t even looked inside. Curiosity got the better of me, and I examined the capsule.",
+      "context_after_sol": "Come to think of it, I hadn’t even looked inside. A sudden flicker of curiosity made me examine the capsule more closely.",
+      "context_before_baseline": "*I thought it was a fairly useful piece of equipment.*",
+      "context_before_sol": "*I thought it might actually be worth something.*",
+      "hunk_id": "H046",
+      "sol": "Garbage, huh? Was it really that worthless?",
+      "sol_range": [
+        74,
+        75
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Come to think of it, I hadn’t even looked inside. Curiosity got the better of me, and I examined the capsule.",
+      "baseline_range": [
+        75,
+        76
+      ],
+      "context_after_baseline": "“First, the exterior is… not great.”",
+      "context_after_sol": "“First, the exterior is… not great.”",
+      "context_before_baseline": "Shit, huh? Was it really that much of a piece of junk?",
+      "context_before_sol": "Garbage, huh? Was it really that worthless?",
+      "hunk_id": "H047",
+      "sol": "Come to think of it, I hadn’t even looked inside. A sudden flicker of curiosity made me examine the capsule more closely.",
+      "sol_range": [
+        75,
+        76
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The capsule’s surface was yellowed with nicotine or something, and rust seemed to have formed in places. Once I let go of my attachment and took a proper look, I understood what Jinho had meant.",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "context_after_baseline": "“Is this how you open it?”",
+      "context_after_sol": "“Is this how you open it?”",
+      "context_before_baseline": "“First, the exterior is… not great.”",
+      "context_before_sol": "“First, the exterior is… not great.”",
+      "hunk_id": "H048",
+      "sol": "The surface was stained yellow with nicotine or something, and there seemed to be rust in places. Once I let go of my lingering hopes and took a proper look, I could see why Jinho had called it garbage.",
+      "sol_range": [
+        77,
+        78
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I pressed the lone button sticking out, and the lid opened to reveal the interior. I had expected something impressive, but there was nothing much to see after all.",
+      "baseline_range": [
+        79,
+        80
+      ],
+      "context_after_baseline": "There was only an ergonomically designed chair for extended play and a VR helmet that enclosed the entire head… Huh?",
+      "context_after_sol": "Just an ergonomically designed chair for extended play and a VR helmet that enclosed the entire head… Huh?",
+      "context_before_baseline": "“Is this how you open it?”",
+      "context_before_sol": "“Is this how you open it?”",
+      "hunk_id": "H049",
+      "sol": "I pressed the single protruding button. The lid opened, revealing the interior. I’d been expecting something impressive, but there wasn’t much to see.",
+      "sol_range": [
+        79,
+        80
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There was only an ergonomically designed chair for extended play and a VR helmet that enclosed the entire head… Huh?",
+      "baseline_range": [
+        80,
+        81
+      ],
+      "context_after_baseline": "“What’s this? An instruction manual?”",
+      "context_after_sol": "“What’s this? An instruction manual?”",
+      "context_before_baseline": "I pressed the lone button sticking out, and the lid opened to reveal the interior. I had expected something impressive, but there was nothing much to see after all.",
+      "context_before_sol": "I pressed the single protruding button. The lid opened, revealing the interior. I’d been expecting something impressive, but there wasn’t much to see.",
+      "hunk_id": "H050",
+      "sol": "Just an ergonomically designed chair for extended play and a VR helmet that enclosed the entire head… Huh?",
+      "sol_range": [
+        80,
+        81
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Did people really leave instruction manuals inside things they were throwing away? Especially in a piece of junk like this?",
+      "baseline_range": [
+        83,
+        84
+      ],
+      "context_after_baseline": "Curious, I opened to the first page.",
+      "context_after_sol": "Curious, I opened it to the first page.",
+      "context_before_baseline": "More precisely, it was a small booklet labeled *Product User Manual*.",
+      "context_before_sol": "More precisely, it was a small booklet labeled *Product User Manual*.",
+      "hunk_id": "H051",
+      "sol": "Did people really leave instruction manuals inside things they were throwing away? Especially junk like this?",
+      "sol_range": [
+        83,
+        84
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Curious, I opened to the first page.",
+      "baseline_range": [
+        84,
+        85
+      ],
+      "context_after_baseline": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** ARK-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "context_after_sol": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** Ark-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "context_before_baseline": "Did people really leave instruction manuals inside things they were throwing away? Especially in a piece of junk like this?",
+      "context_before_sol": "Did people really leave instruction manuals inside things they were throwing away? Especially junk like this?",
+      "hunk_id": "H052",
+      "sol": "Curious, I opened it to the first page.",
+      "sol_range": [
+        84,
+        85
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** ARK-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "baseline_range": [
+        85,
+        86
+      ],
+      "context_after_baseline": "I skimmed the print without much thought until the manufacturing date stopped me.",
+      "context_after_sol": "I skimmed the text without much thought until my eyes stopped on the manufacturing date.",
+      "context_before_baseline": "Curious, I opened to the first page.",
+      "context_before_sol": "Curious, I opened it to the first page.",
+      "hunk_id": "H053",
+      "sol": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** Ark-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "sol_range": [
+        85,
+        86
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I skimmed the print without much thought until the manufacturing date stopped me.",
+      "baseline_range": [
+        86,
+        87
+      ],
+      "context_after_baseline": "January 1, 2020. It had to be a printing error. Surely.",
+      "context_after_sol": "January 1, 2020. It had to be a printing error. Surely.",
+      "context_before_baseline": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** ARK-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "context_before_sol": "> **Product User Manual**\n>\n> **Product name:** Virtual Reality Interface  \n> **Model:** Ark-2020  \n> **Manufacturer:** H Soft  \n> **Manufacturing date:** January 1, 2020",
+      "hunk_id": "H054",
+      "sol": "I skimmed the text without much thought until my eyes stopped on the manufacturing date.",
+      "sol_range": [
+        86,
+        87
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*What kind of lunatic would have made a game machine on that day—no, during that period?*",
+      "baseline_range": [
+        88,
+        89
+      ],
+      "context_after_baseline": "That period was the Great Cataclysm.",
+      "context_after_sol": "That period was the Great Cataclysm.",
+      "context_before_baseline": "January 1, 2020. It had to be a printing error. Surely.",
+      "context_before_sol": "January 1, 2020. It had to be a printing error. Surely.",
+      "hunk_id": "H055",
+      "sol": "*What kind of lunatic would have been making a game machine on that day—no, during that whole period?*",
+      "sol_range": [
+        88,
+        89
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "January 1, 2015. Humanity received more than a New Year’s sunrise.",
+      "baseline_range": [
+        90,
+        91
+      ],
+      "context_after_baseline": "Gates—or dungeons, as they were also called—began appearing all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "context_after_sol": "Gates—or dungeons, as they were also called—appeared all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "context_before_baseline": "That period was the Great Cataclysm.",
+      "context_before_sol": "That period was the Great Cataclysm.",
+      "hunk_id": "H056",
+      "sol": "On January 1, 2015, humanity received more than a New Year’s sunrise.",
+      "sol_range": [
+        90,
+        91
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Gates—or dungeons, as they were also called—began appearing all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "baseline_range": [
+        91,
+        92
+      ],
+      "context_after_baseline": "Monsters and Awakened. War and destruction…",
+      "context_after_sol": "Monsters and the Awakened. War and destruction…",
+      "context_before_baseline": "January 1, 2015. Humanity received more than a New Year’s sunrise.",
+      "context_before_sol": "On January 1, 2015, humanity received more than a New Year’s sunrise.",
+      "hunk_id": "H057",
+      "sol": "Gates—or dungeons, as they were also called—appeared all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "sol_range": [
+        91,
+        92
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Monsters and Awakened. War and destruction…",
+      "baseline_range": [
+        92,
+        93
+      ],
+      "context_after_baseline": "The unreal invaded reality, and the greatest war in Earth’s history ended only with the death of the monsters’ lord, the Demon King Asmodeus.",
+      "context_after_sol": "The unreal invaded reality, and the greatest war in Earth’s history ended only with the death of the monsters’ lord, the Demon King Asmodeus.",
+      "context_before_baseline": "Gates—or dungeons, as they were also called—began appearing all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "context_before_sol": "Gates—or dungeons, as they were also called—appeared all over the world, and monsters no one had ever seen or heard of poured through them.",
+      "hunk_id": "H058",
+      "sol": "Monsters and the Awakened. War and destruction…",
+      "sol_range": [
+        92,
+        93
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That day was January 1, 2020. It was known as Victory Day.",
+      "baseline_range": [
+        94,
+        95
+      ],
+      "context_after_baseline": "*So that’s impossible.*",
+      "context_after_sol": "*So this is impossible.*",
+      "context_before_baseline": "The unreal invaded reality, and the greatest war in Earth’s history ended only with the death of the monsters’ lord, the Demon King Asmodeus.",
+      "context_before_sol": "The unreal invaded reality, and the greatest war in Earth’s history ended only with the death of the monsters’ lord, the Demon King Asmodeus.",
+      "hunk_id": "H059",
+      "sol": "That day was January 1, 2020—the so-called Victory Day.",
+      "sol_range": [
+        94,
+        95
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*So that’s impossible.*",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "I clicked my tongue and turned the page.",
+      "context_after_sol": "I clicked my tongue and turned the page.",
+      "context_before_baseline": "That day was January 1, 2020. It was known as Victory Day.",
+      "context_before_sol": "That day was January 1, 2020—the so-called Victory Day.",
+      "hunk_id": "H060",
+      "sol": "*So this is impossible.*",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Rather than read an instruction manual written by a lunatic, I might as well sleep. I pushed Jinho into a corner and closed my eyes.",
+      "baseline_range": [
+        101,
+        102
+      ],
+      "context_after_baseline": "“Gwaah. Gwaah.”",
+      "context_after_sol": "“Gwaah. Gwaah.”",
+      "context_before_baseline": "“I should get some sleep.”",
+      "context_before_sol": "“I should get some sleep.”",
+      "hunk_id": "H061",
+      "sol": "Sleeping was better than reading an instruction manual written by a lunatic. I shoved Jinho into a corner and closed my eyes.",
+      "sol_range": [
+        101,
+        102
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The chair was hard. It had been made in 2020, so it was the same age as me. A twenty-seven-year-old chair. Its cushion had gone flat long ago.",
+      "baseline_range": [
+        108,
+        109
+      ],
+      "context_after_baseline": "I took comfort in the fact that it didn’t smell and pulled the blanket up to my neck.",
+      "context_after_sol": "I took comfort in the fact that it didn’t smell and pulled the blanket up to my neck.",
+      "context_before_baseline": "* * *",
+      "context_before_sol": "* * *",
+      "hunk_id": "H062",
+      "sol": "The chair was hard. It had been made in 2020, which made it the same age as me. A chair in the bloom of youth at twenty-seven. Its cushion had gone flat long ago.",
+      "sol_range": [
+        108,
+        109
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Wearing something like this is going to make my neck hurt.*",
+      "baseline_range": [
+        112,
+        113
+      ],
+      "context_after_baseline": "That minor complaint vanished the moment I put on the helmet. A world of complete silence. A stillness without so much as a whisper of noise.",
+      "context_after_sol": "That minor complaint vanished the moment I put on the helmet. Complete silence. A stillness without so much as a whisper of noise.",
+      "context_before_baseline": "…I even put on the VR helmet.",
+      "context_before_sol": "…I even put on the VR helmet.",
+      "hunk_id": "H063",
+      "sol": "*Sleeping in this thing is going to make my neck hurt.*",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That minor complaint vanished the moment I put on the helmet. A world of complete silence. A stillness without so much as a whisper of noise.",
+      "baseline_range": [
+        113,
+        114
+      ],
+      "context_after_baseline": "But instead of sleep, my thoughts began to stir.",
+      "context_after_sol": "But instead of sleep, thoughts came flooding in.",
+      "context_before_baseline": "*Wearing something like this is going to make my neck hurt.*",
+      "context_before_sol": "*Sleeping in this thing is going to make my neck hurt.*",
+      "hunk_id": "H064",
+      "sol": "That minor complaint vanished the moment I put on the helmet. Complete silence. A stillness without so much as a whisper of noise.",
+      "sol_range": [
+        113,
+        114
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But instead of sleep, my thoughts began to stir.",
+      "baseline_range": [
+        114,
+        115
+      ],
+      "context_after_baseline": "*What am I going to do tomorrow?*",
+      "context_after_sol": "*What am I going to do tomorrow?*",
+      "context_before_baseline": "That minor complaint vanished the moment I put on the helmet. A world of complete silence. A stillness without so much as a whisper of noise.",
+      "context_before_sol": "That minor complaint vanished the moment I put on the helmet. Complete silence. A stillness without so much as a whisper of noise.",
+      "hunk_id": "H065",
+      "sol": "But instead of sleep, thoughts came flooding in.",
+      "sol_range": [
+        114,
+        115
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Hunters were certainly a highly paid profession, but that depended on your rank.",
+      "baseline_range": [
+        116,
+        117
+      ],
+      "context_after_baseline": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to show up at a day-labor agency before dawn.",
+      "context_after_sol": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to report to a day-labor agency before the crack of dawn.",
+      "context_before_baseline": "*What am I going to do tomorrow?*",
+      "context_before_sol": "*What am I going to do tomorrow?*",
+      "hunk_id": "H066",
+      "sol": "Hunters were certainly well paid, but that depended on their rank.",
+      "sol_range": [
+        116,
+        117
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to show up at a day-labor agency before dawn.",
+      "baseline_range": [
+        117,
+        118
+      ],
+      "context_after_baseline": "Being unaffiliated was miserable. Government policy was never kind to unaffiliated Hunters, and the punishing tax rates imposed on Hunters were enough to take your breath away just hearing about them.",
+      "context_after_sol": "Being an unaffiliated Hunter was miserable. Government policy was never kind to unaffiliated Hunters, and the crushing tax rates imposed on Hunters were enough to leave you short of breath just hearing about them.",
+      "context_before_baseline": "Hunters were certainly a highly paid profession, but that depended on your rank.",
+      "context_before_sol": "Hunters were certainly well paid, but that depended on their rank.",
+      "hunk_id": "H067",
+      "sol": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to report to a day-labor agency before the crack of dawn.",
+      "sol_range": [
+        117,
+        118
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Being unaffiliated was miserable. Government policy was never kind to unaffiliated Hunters, and the punishing tax rates imposed on Hunters were enough to take your breath away just hearing about them.",
+      "baseline_range": [
+        118,
+        119
+      ],
+      "context_after_baseline": "*So now I’m one of them.*",
+      "context_after_sol": "*And now I’m one of them.*",
+      "context_before_baseline": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to show up at a day-labor agency before dawn.",
+      "context_before_sol": "F-rank Hunters like me were a dime a dozen, and unless you belonged to a Guild, you had to report to a day-labor agency before the crack of dawn.",
+      "hunk_id": "H068",
+      "sol": "Being an unaffiliated Hunter was miserable. Government policy was never kind to unaffiliated Hunters, and the crushing tax rates imposed on Hunters were enough to leave you short of breath just hearing about them.",
+      "sol_range": [
+        118,
+        119
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*So now I’m one of them.*",
+      "baseline_range": [
+        119,
+        120
+      ],
+      "context_after_baseline": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense for an F-rank Hunter, but nothing mattered more to me than my family’s safety.",
+      "context_after_sol": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense on an F-rank Hunter’s income, but nothing mattered more to me than my family’s safety.",
+      "context_before_baseline": "Being unaffiliated was miserable. Government policy was never kind to unaffiliated Hunters, and the punishing tax rates imposed on Hunters were enough to take your breath away just hearing about them.",
+      "context_before_sol": "Being an unaffiliated Hunter was miserable. Government policy was never kind to unaffiliated Hunters, and the crushing tax rates imposed on Hunters were enough to leave you short of breath just hearing about them.",
+      "hunk_id": "H069",
+      "sol": "*And now I’m one of them.*",
+      "sol_range": [
+        119,
+        120
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense for an F-rank Hunter, but nothing mattered more to me than my family’s safety.",
+      "baseline_range": [
+        120,
+        121
+      ],
+      "context_after_baseline": "Until now, I had barely managed to come up with enough money to renew their jeonse lease each year.[^3] But from now on… who knew?",
+      "context_after_sol": "Until now, I’d barely managed to scrape together enough money each year to renew their jeonse lease.[^3] But from now on… who knew?",
+      "context_before_baseline": "*So now I’m one of them.*",
+      "context_before_sol": "*And now I’m one of them.*",
+      "hunk_id": "H070",
+      "sol": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense on an F-rank Hunter’s income, but nothing mattered more to me than my family’s safety.",
+      "sol_range": [
+        120,
+        121
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Until now, I had barely managed to come up with enough money to renew their jeonse lease each year.[^3] But from now on… who knew?",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "context_after_baseline": "*Fuck. I don’t know.*",
+      "context_after_sol": "*Fuck. I don’t know.*",
+      "context_before_baseline": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense for an F-rank Hunter, but nothing mattered more to me than my family’s safety.",
+      "context_before_sol": "Unlike me, my mother and younger sister lived in an apartment in a Safety Sector. It was an extravagant expense on an F-rank Hunter’s income, but nothing mattered more to me than my family’s safety.",
+      "hunk_id": "H071",
+      "sol": "Until now, I’d barely managed to scrape together enough money each year to renew their jeonse lease.[^3] But from now on… who knew?",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I suddenly thought of my late father.",
+      "baseline_range": [
+        123,
+        124
+      ],
+      "context_after_baseline": "He had devoted himself to his family and was respected by society, but he died when I was seven.",
+      "context_after_sol": "He had devoted himself to his family and earned the respect of those around him, but he died when I was seven.",
+      "context_before_baseline": "*Fuck. I don’t know.*",
+      "context_before_sol": "*Fuck. I don’t know.*",
+      "hunk_id": "H072",
+      "sol": "My late father suddenly came to mind.",
+      "sol_range": [
+        123,
+        124
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He had devoted himself to his family and was respected by society, but he died when I was seven.",
+      "baseline_range": [
+        124,
+        125
+      ],
+      "context_after_baseline": "A monster attack caused by a Gate breach. As an ordinary office worker, he probably never had a chance.",
+      "context_after_sol": "Monsters had attacked after a Gate breach. As an ordinary office worker, he probably hadn’t stood a chance.",
+      "context_before_baseline": "I suddenly thought of my late father.",
+      "context_before_sol": "My late father suddenly came to mind.",
+      "hunk_id": "H073",
+      "sol": "He had devoted himself to his family and earned the respect of those around him, but he died when I was seven.",
+      "sol_range": [
+        124,
+        125
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A monster attack caused by a Gate breach. As an ordinary office worker, he probably never had a chance.",
+      "baseline_range": [
+        125,
+        126
+      ],
+      "context_after_baseline": "If my father were still by my side, could he have shown his son which way to go?",
+      "context_after_sol": "If my father were still by my side, could he have shown his son which way to go?",
+      "context_before_baseline": "He had devoted himself to his family and was respected by society, but he died when I was seven.",
+      "context_before_sol": "He had devoted himself to his family and earned the respect of those around him, but he died when I was seven.",
+      "hunk_id": "H074",
+      "sol": "Monsters had attacked after a Gate breach. As an ordinary office worker, he probably hadn’t stood a chance.",
+      "sol_range": [
+        125,
+        126
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I’ve still done my best all this time. Please believe in me.*",
+      "baseline_range": [
+        127,
+        128
+      ],
+      "context_after_baseline": "Maybe it was the alcohol finally catching up with me. Maybe it was thinking about the past. Without realizing it, I went slack and my eyes began to close.",
+      "context_after_sol": "Maybe the alcohol was finally catching up with me, or maybe it was the memories. Either way, my body went slack, and my eyes began to close.",
+      "context_before_baseline": "If my father were still by my side, could he have shown his son which way to go?",
+      "context_before_sol": "If my father were still by my side, could he have shown his son which way to go?",
+      "hunk_id": "H075",
+      "sol": "*I’ve done my best all this time. Please believe me.*",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Maybe it was the alcohol finally catching up with me. Maybe it was thinking about the past. Without realizing it, I went slack and my eyes began to close.",
+      "baseline_range": [
+        128,
+        129
+      ],
+      "context_after_baseline": "As I surrendered to the wave of sleep pouring over me, I thought:",
+      "context_after_sol": "As I surrendered to the wave of drowsiness, I thought:",
+      "context_before_baseline": "*I’ve still done my best all this time. Please believe in me.*",
+      "context_before_sol": "*I’ve done my best all this time. Please believe me.*",
+      "hunk_id": "H076",
+      "sol": "Maybe the alcohol was finally catching up with me, or maybe it was the memories. Either way, my body went slack, and my eyes began to close.",
+      "sol_range": [
+        128,
+        129
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As I surrendered to the wave of sleep pouring over me, I thought:",
+      "baseline_range": [
+        129,
+        130
+      ],
+      "context_after_baseline": "*I hope things will be a little better when I open my eyes.*",
+      "context_after_sol": "*I hope things will be a little better when I open my eyes.*",
+      "context_before_baseline": "Maybe it was the alcohol finally catching up with me. Maybe it was thinking about the past. Without realizing it, I went slack and my eyes began to close.",
+      "context_before_sol": "Maybe the alcohol was finally catching up with me, or maybe it was the memories. Either way, my body went slack, and my eyes began to close.",
+      "hunk_id": "H077",
+      "sol": "As I surrendered to the wave of drowsiness, I thought:",
+      "sol_range": [
+        129,
+        130
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Someone’s voice pierced my ears, but I didn’t care anymore. I slipped gently into sleep.",
+      "baseline_range": [
+        131,
+        132
+      ],
+      "context_after_baseline": "> **System**\n>\n> Player detected. …Unregistered player. Register as a new player?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> 1%… 27%… 94%… Complete.\n>\n> Player Jin Taekyung registered to the device.\n>\n> Proceeding to selection. Would you like to log in to Murim?\n>\n> No response for an extended period. Proceeding automatically.\n> …May fortune favor you in battle!",
+      "context_after_sol": "> **System**\n>\n> Player detected. …Unregistered player. Register as a new player?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> 1%… 27%… 94%… Complete.\n>\n> Player Jin Taekyung registered to the device.\n>\n> Proceeding to selection. Would you like to log in to Murim?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> …May fortune favor you in battle!",
+      "context_before_baseline": "*I hope things will be a little better when I open my eyes.*",
+      "context_before_sol": "*I hope things will be a little better when I open my eyes.*",
+      "hunk_id": "H078",
+      "sol": "Someone’s voice reached my ears, but I no longer cared. I slipped gently into sleep.",
+      "sol_range": [
+        131,
+        132
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Player detected. …Unregistered player. Register as a new player?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> 1%… 27%… 94%… Complete.\n>\n> Player Jin Taekyung registered to the device.\n>\n> Proceeding to selection. Would you like to log in to Murim?\n>\n> No response for an extended period. Proceeding automatically.\n> …May fortune favor you in battle!",
+      "baseline_range": [
+        132,
+        133
+      ],
+      "context_after_baseline": "[^1]: A goshiwon is a very small, inexpensive room-for-rent housing arrangement, often with shared facilities.\n[^2]: Doenjang is a fermented Korean soybean paste commonly used as the base of a savory stew.\n[^3]: A Korean jeonse lease is secured by a large refundable deposit in place of monthly rent.",
+      "context_after_sol": "[^1]: A goshiwon is a very small, inexpensive room-for-rent housing arrangement, often with shared facilities.\n[^2]: Doenjang is a fermented Korean soybean paste commonly used as the base of a savory stew.\n[^3]: A Korean jeonse lease is secured by a large refundable deposit in place of monthly rent.",
+      "context_before_baseline": "Someone’s voice pierced my ears, but I didn’t care anymore. I slipped gently into sleep.",
+      "context_before_sol": "Someone’s voice reached my ears, but I no longer cared. I slipped gently into sleep.",
+      "hunk_id": "H079",
+      "sol": "> **System**\n>\n> Player detected. …Unregistered player. Register as a new player?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> 1%… 27%… 94%… Complete.\n>\n> Player Jin Taekyung registered to the device.\n>\n> Proceeding to selection. Would you like to log in to Murim?\n>\n> No response for an extended period. Proceeding automatically.\n>\n> …May fortune favor you in battle!",
+      "sol_range": [
+        132,
+        133
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 134,
+  "sol_sha256": "4a8a6296c3d1e581554c405d148b54fcc6579f7e89154a65885a4417967c4214",
+  "version": 1
+}

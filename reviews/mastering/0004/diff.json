@@ -1,0 +1,1746 @@
+{
+  "baseline_blocks": 193,
+  "baseline_sha256": "664deb757ae5618a00865c1b3cf1466329e00737d5562fc813bade9447fc1da0",
+  "global_terminology_alerts": [],
+  "hunk_count": 91,
+  "hunks": [
+    {
+      "baseline": "A local born and raised near Mount Wutai, he had never once left the area. Since around the age of twenty, he had made a living extorting tolls from travelers who looked easy to bully.",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "context_after_baseline": "Perhaps thanks to his diligent round-the-clock operation, Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "context_after_sol": "Perhaps thanks to his diligent round-the-clock operation, the name Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "context_before_baseline": "Jang Sam was a bandit.",
+      "context_before_sol": "Jang Sam was a bandit.",
+      "hunk_id": "H001",
+      "sol": "Born and raised near Mount Wutai, he had never ventured beyond the surrounding area in his life. Since around the age of twenty, he had made a living extorting tolls from travelers who looked like easy marks.",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Perhaps thanks to his diligent round-the-clock operation, Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "baseline_range": [
+        3,
+        4
+      ],
+      "context_after_baseline": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet refused to stop.",
+      "context_after_sol": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet simply refused to stop.",
+      "context_before_baseline": "A local born and raised near Mount Wutai, he had never once left the area. Since around the age of twenty, he had made a living extorting tolls from travelers who looked easy to bully.",
+      "context_before_sol": "Born and raised near Mount Wutai, he had never ventured beyond the surrounding area in his life. Since around the age of twenty, he had made a living extorting tolls from travelers who looked like easy marks.",
+      "hunk_id": "H002",
+      "sol": "Perhaps thanks to his diligent round-the-clock operation, the name Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "sol_range": [
+        3,
+        4
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet refused to stop.",
+      "baseline_range": [
+        4,
+        5
+      ],
+      "context_after_baseline": "How long had he walked, leaving his home turf of Mount Wutai far behind? At last, when his feet finally stopped, he saw a carriage approaching in the distance.",
+      "context_after_sol": "How long had he been walking since leaving his home turf of Mount Wutai far behind? When his feet finally came to a halt, he saw a carriage approaching in the distance.",
+      "context_before_baseline": "Perhaps thanks to his diligent round-the-clock operation, Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "context_before_sol": "Perhaps thanks to his diligent round-the-clock operation, the name Jang Sam the Heavenly Axe had eventually become fairly well known.",
+      "hunk_id": "H003",
+      "sol": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet simply refused to stop.",
+      "sol_range": [
+        4,
+        5
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "How long had he walked, leaving his home turf of Mount Wutai far behind? At last, when his feet finally stopped, he saw a carriage approaching in the distance.",
+      "baseline_range": [
+        5,
+        6
+      ],
+      "context_after_baseline": "*How did I get all the way here?*",
+      "context_after_sol": "*How did I get all the way out here?*",
+      "context_before_baseline": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet refused to stop.",
+      "context_before_sol": "Today was no different. He had risen before dawn and set out to work with his five loyal underlings, the Five-Colored Ghosts… but for some reason, his feet simply refused to stop.",
+      "hunk_id": "H004",
+      "sol": "How long had he been walking since leaving his home turf of Mount Wutai far behind? When his feet finally came to a halt, he saw a carriage approaching in the distance.",
+      "sol_range": [
+        5,
+        6
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*How did I get all the way here?*",
+      "baseline_range": [
+        6,
+        7
+      ],
+      "context_after_baseline": "Had a ghost possessed him? Jang Sam was bewildered, but the moment he saw the luxurious four-horse carriage, his professional instincts came roaring back to life.",
+      "context_after_sol": "Had a ghost led him astray? Jang Sam was bewildered, but the moment he saw the luxurious four-horse carriage, his professional instincts came roaring back to life.",
+      "context_before_baseline": "How long had he walked, leaving his home turf of Mount Wutai far behind? At last, when his feet finally stopped, he saw a carriage approaching in the distance.",
+      "context_before_sol": "How long had he been walking since leaving his home turf of Mount Wutai far behind? When his feet finally came to a halt, he saw a carriage approaching in the distance.",
+      "hunk_id": "H005",
+      "sol": "*How did I get all the way out here?*",
+      "sol_range": [
+        6,
+        7
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Had a ghost possessed him? Jang Sam was bewildered, but the moment he saw the luxurious four-horse carriage, his professional instincts came roaring back to life.",
+      "baseline_range": [
+        7,
+        8
+      ],
+      "context_after_baseline": "*I have to take that.*",
+      "context_after_sol": "*I have to take that.*",
+      "context_before_baseline": "*How did I get all the way here?*",
+      "context_before_sol": "*How did I get all the way out here?*",
+      "hunk_id": "H006",
+      "sol": "Had a ghost led him astray? Jang Sam was bewildered, but the moment he saw the luxurious four-horse carriage, his professional instincts came roaring back to life.",
+      "sol_range": [
+        7,
+        8
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Four fine steeds, their coats gleaming, snorted clouds of vapor as they came to a halt. At a glance, each one looked worth a thousand nyang at least.",
+      "baseline_range": [
+        10,
+        11
+      ],
+      "context_after_baseline": "*Today’s my lucky day.*",
+      "context_after_sol": "*Today’s my lucky day.*",
+      "context_before_baseline": "When Jang Sam and the Five-Colored Ghosts blocked the road, the coachman pulled on the reins.",
+      "context_before_sol": "When Jang Sam and the Five-Colored Ghosts blocked the road, the coachman pulled on the reins.",
+      "hunk_id": "H007",
+      "sol": "Four fine steeds, their coats gleaming, snorted clouds of vapor as they came to a halt. At a glance, each one looked worth at least a thousand nyang.",
+      "sol_range": [
+        10,
+        11
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jang Sam smiled contentedly and adjusted his grip on his axe. Now, tighten the muscles in the dantian. One, two—",
+      "baseline_range": [
+        12,
+        13
+      ],
+      "context_after_baseline": "“Hand over your money!”",
+      "context_after_sol": "“Hand over your money!”",
+      "context_before_baseline": "*Today’s my lucky day.*",
+      "context_before_sol": "*Today’s my lucky day.*",
+      "hunk_id": "H008",
+      "sol": "Jang Sam smiled contentedly and adjusted his grip on his axe. Now, put some power into the dantian. One, two—",
+      "sol_range": [
+        12,
+        13
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But it would take more than that to make me blink. I’d spent seven years as a Hunter and been through every kind of hell imaginable—even aerial combat.",
+      "baseline_range": [
+        16,
+        17
+      ],
+      "context_after_baseline": "…Still, he was kind of scary.",
+      "context_after_sol": "…Still, he was kind of scary.",
+      "context_before_baseline": "*What was that voice? Is he an opera singer?*",
+      "context_before_sol": "*What was that voice? Is he an opera singer?*",
+      "hunk_id": "H009",
+      "sol": "But it would take more than that to make me blink. I’d spent seven years as a Hunter and been through every kind of battle imaginable—even aerial combat.",
+      "sol_range": [
+        16,
+        17
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Does this guy have some kind of hidden ace? Why is he so relaxed?*",
+      "baseline_range": [
+        20,
+        21
+      ],
+      "context_after_baseline": "When I stared at him, he scratched his head.",
+      "context_after_sol": "When I stared at him, he scratched his head.",
+      "context_before_baseline": "The coachman reported the situation in a voice as calm as a secret agent’s.",
+      "context_before_sol": "The coachman reported the situation in a voice as calm as a secret agent’s.",
+      "hunk_id": "H010",
+      "sol": "*Does this guy have some kind of ace up his sleeve? Why is he so relaxed?*",
+      "sol_range": [
+        20,
+        21
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Why? Unless it’s a sizable mountain stronghold, attacking a martial family is practically suicide. I wonder what kind of reckless fools would try robbing people in the Jin Family of Taiyuan’s own backyard.”",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "context_after_baseline": "*Who else? Tutorial NPCs.*",
+      "context_after_sol": "*Who else? Tutorial NPCs.*",
+      "context_before_baseline": "“Why?”",
+      "context_before_sol": "“Why?”",
+      "hunk_id": "H011",
+      "sol": "“Why? Unless they belong to a sizable mountain stronghold, attacking a martial family is practically suicide. Robbing people in the Jin Family of Taiyuan’s own backyard… I wonder what kind of reckless fools they are.”",
+      "sol_range": [
+        24,
+        25
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Judging by the way he kept calling it the Jin Family’s backyard, we must have been fairly close.",
+      "baseline_range": [
+        26,
+        27
+      ],
+      "context_after_baseline": "*Should I stall for time?*",
+      "context_after_sol": "*Should I stall for time?*",
+      "context_before_baseline": "*Who else? Tutorial NPCs.*",
+      "context_before_sol": "*Who else? Tutorial NPCs.*",
+      "hunk_id": "H012",
+      "sol": "Judging by the way he called this the Jin Family’s backyard, we must have been fairly close.",
+      "sol_range": [
+        26,
+        27
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The way my body felt after distributing my stats was beyond what I’d experienced as an F-rank Hunter, but I had no idea whether it was enough to hold its own in Murim.",
+      "baseline_range": [
+        29,
+        30
+      ],
+      "context_after_baseline": "Six against one. Six against two, if I counted the coachman.",
+      "context_after_sol": "Six against one. Six against two, if I counted the coachman.",
+      "context_before_baseline": "My current realm was second-rate.",
+      "context_before_sol": "My current realm was second-rate.",
+      "hunk_id": "H013",
+      "sol": "The way my body felt after distributing my stats was beyond anything I’d experienced as an F-rank Hunter, but I had no idea whether that would be enough in Murim.",
+      "sol_range": [
+        29,
+        30
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Could I do it?*",
+      "baseline_range": [
+        31,
+        32
+      ],
+      "context_after_baseline": "There was a reason people said numbers could overcome skill. The moment my hands and feet were tied, I’d be finished.",
+      "context_after_sol": "There was a reason people said no one could stand against overwhelming numbers. The moment they tied up my hands and feet, I was done for.",
+      "context_before_baseline": "Six against one. Six against two, if I counted the coachman.",
+      "context_before_sol": "Six against one. Six against two, if I counted the coachman.",
+      "hunk_id": "H014",
+      "sol": "*Can we do it?*",
+      "sol_range": [
+        31,
+        32
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "There was a reason people said numbers could overcome skill. The moment my hands and feet were tied, I’d be finished.",
+      "baseline_range": [
+        32,
+        33
+      ],
+      "context_after_baseline": "“How much farther to our destination?”",
+      "context_after_sol": "“How much farther is it to our destination?”",
+      "context_before_baseline": "*Could I do it?*",
+      "context_before_sol": "*Can we do it?*",
+      "hunk_id": "H015",
+      "sol": "There was a reason people said no one could stand against overwhelming numbers. The moment they tied up my hands and feet, I was done for.",
+      "sol_range": [
+        32,
+        33
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "스킬",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "Skill"
+        }
+      ]
+    },
+    {
+      "baseline": "“How much farther to our destination?”",
+      "baseline_range": [
+        33,
+        34
+      ],
+      "context_after_baseline": "“We’re nearly there. Another hour should be enough.”",
+      "context_after_sol": "“We’re nearly there. Another hour should be enough.”",
+      "context_before_baseline": "There was a reason people said numbers could overcome skill. The moment my hands and feet were tied, I’d be finished.",
+      "context_before_sol": "There was a reason people said no one could stand against overwhelming numbers. The moment they tied up my hands and feet, I was done for.",
+      "hunk_id": "H016",
+      "sol": "“How much farther is it to our destination?”",
+      "sol_range": [
+        33,
+        34
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I’d suspected it, but apparently, the coachman and I had very different definitions of *nearby*.",
+      "baseline_range": [
+        36,
+        37
+      ],
+      "context_after_baseline": "*What do you mean, nearly there?*",
+      "context_after_sol": "*Nearly there, my ass.*",
+      "context_before_baseline": "*Another hour…?*",
+      "context_before_sol": "*Another hour…?*",
+      "hunk_id": "H017",
+      "sol": "I’d suspected as much, but apparently the coachman and I had very different definitions of *nearly there*.",
+      "sol_range": [
+        36,
+        37
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*What do you mean, nearly there?*",
+      "baseline_range": [
+        37,
+        38
+      ],
+      "context_after_baseline": "Maybe it was because this was a continent-sized setting. The scale was different. The scale.",
+      "context_after_sol": "Maybe it was because this world was modeled after a continent. The scale was different. The scale.",
+      "context_before_baseline": "I’d suspected it, but apparently, the coachman and I had very different definitions of *nearby*.",
+      "context_before_sol": "I’d suspected as much, but apparently the coachman and I had very different definitions of *nearly there*.",
+      "hunk_id": "H018",
+      "sol": "*Nearly there, my ass.*",
+      "sol_range": [
+        37,
+        38
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Maybe it was because this was a continent-sized setting. The scale was different. The scale.",
+      "baseline_range": [
+        38,
+        39
+      ],
+      "context_after_baseline": "Either way, I had to assume no reinforcements were coming. At least I wasn’t alone.",
+      "context_after_sol": "Either way, I had to assume no reinforcements were coming. At least I wasn’t alone.",
+      "context_before_baseline": "*What do you mean, nearly there?*",
+      "context_before_sol": "*Nearly there, my ass.*",
+      "hunk_id": "H019",
+      "sol": "Maybe it was because this world was modeled after a continent. The scale was different. The scale.",
+      "sol_range": [
+        38,
+        39
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman’s unflappable attitude practically screamed that he was a master.",
+      "baseline_range": [
+        40,
+        41
+      ],
+      "context_after_baseline": "“Shall I handle this?”",
+      "context_after_sol": "“Shall I handle this?”",
+      "context_before_baseline": "Either way, I had to assume no reinforcements were coming. At least I wasn’t alone.",
+      "context_before_sol": "Either way, I had to assume no reinforcements were coming. At least I wasn’t alone.",
+      "hunk_id": "H020",
+      "sol": "The coachman’s unflappable attitude practically screamed that he was a master. Especially when he said:",
+      "sol_range": [
+        40,
+        41
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As he said it, he coiled the whip in his hand with enough force to suggest that one crack would separate the bandits’ bones from their flesh.",
+      "baseline_range": [
+        42,
+        43
+      ],
+      "context_after_baseline": "*He’s a master!*",
+      "context_after_sol": "*He’s a master!*",
+      "context_before_baseline": "“Shall I handle this?”",
+      "context_before_sol": "“Shall I handle this?”",
+      "hunk_id": "H021",
+      "sol": "He coiled the horsewhip in his hand as if one crack would separate the bandits’ flesh from their bones.",
+      "sol_range": [
+        42,
+        43
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Of course. I was a scion of a prestigious martial family and a VIP customer of Honghwaru. There was no way they would have sent an ordinary coachman with me.",
+      "baseline_range": [
+        44,
+        45
+      ],
+      "context_after_baseline": "*Wolhwa must have arranged this. She isn’t just beautiful—she’s kind, too.*",
+      "context_after_sol": "*Wolhwa must have arranged this. She isn’t just beautiful—she’s kind, too.*",
+      "context_before_baseline": "*He’s a master!*",
+      "context_before_sol": "*He’s a master!*",
+      "hunk_id": "H022",
+      "sol": "Of course. I was the heir of a prestigious martial family and a VIP customer of Honghwaru. There was no way they would have sent an ordinary coachman with me.",
+      "sol_range": [
+        44,
+        45
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My anxiety vanished, replaced by a pleased smile. The coachman must have taken it as my permission, because the moment he turned away, a second shout rang out.",
+      "baseline_range": [
+        46,
+        47
+      ],
+      "context_after_baseline": "“You bastards! Can’t you hear what the Heavenly Axe is saying?”",
+      "context_after_sol": "“You bastards! Can’t you hear the Heavenly Axe?”",
+      "context_before_baseline": "*Wolhwa must have arranged this. She isn’t just beautiful—she’s kind, too.*",
+      "context_before_sol": "*Wolhwa must have arranged this. She isn’t just beautiful—she’s kind, too.*",
+      "hunk_id": "H023",
+      "sol": "My anxiety vanished, replaced by a pleased smile. The coachman must have taken it as permission, because the moment he turned away, a second shout rang out.",
+      "sol_range": [
+        46,
+        47
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“You bastards! Can’t you hear what the Heavenly Axe is saying?”",
+      "baseline_range": [
+        47,
+        48
+      ],
+      "context_after_baseline": "I leaned out past the carriage window and saw a hairy man shouting while holding an enormous double-bladed axe. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "context_after_sol": "I peered through the carriage window and saw a hairy man shouting with an enormous double-bladed axe in his hands. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "context_before_baseline": "My anxiety vanished, replaced by a pleased smile. The coachman must have taken it as my permission, because the moment he turned away, a second shout rang out.",
+      "context_before_sol": "My anxiety vanished, replaced by a pleased smile. The coachman must have taken it as permission, because the moment he turned away, a second shout rang out.",
+      "hunk_id": "H024",
+      "sol": "“You bastards! Can’t you hear the Heavenly Axe?”",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I leaned out past the carriage window and saw a hairy man shouting while holding an enormous double-bladed axe. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "baseline_range": [
+        48,
+        49
+      ],
+      "context_after_baseline": "But the coachman muttered as if the sight were laughable.",
+      "context_after_sol": "But the coachman merely muttered as though the sight were laughable.",
+      "context_before_baseline": "“You bastards! Can’t you hear what the Heavenly Axe is saying?”",
+      "context_before_sol": "“You bastards! Can’t you hear the Heavenly Axe?”",
+      "hunk_id": "H025",
+      "sol": "I peered through the carriage window and saw a hairy man shouting with an enormous double-bladed axe in his hands. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "sol_range": [
+        48,
+        49
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But the coachman muttered as if the sight were laughable.",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "context_after_baseline": "“Where do these little pups get off blocking our way?”",
+      "context_after_sol": "“Where do these little pups get off?”",
+      "context_before_baseline": "I leaned out past the carriage window and saw a hairy man shouting while holding an enormous double-bladed axe. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "context_before_sol": "I peered through the carriage window and saw a hairy man shouting with an enormous double-bladed axe in his hands. His upper body was massive, and his arms and legs were as thick as pillars.",
+      "hunk_id": "H026",
+      "sol": "But the coachman merely muttered as though the sight were laughable.",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Where do these little pups get off blocking our way?”",
+      "baseline_range": [
+        50,
+        51
+      ],
+      "context_after_baseline": "*Damn, that aura.*",
+      "context_after_sol": "*Damn, that aura.*",
+      "context_before_baseline": "But the coachman muttered as if the sight were laughable.",
+      "context_before_sol": "But the coachman merely muttered as though the sight were laughable.",
+      "hunk_id": "H027",
+      "sol": "“Where do these little pups get off?”",
+      "sol_range": [
+        50,
+        51
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Then the coachman laid into them.",
+      "baseline_range": [
+        52,
+        53
+      ],
+      "context_after_baseline": "“How dare bandits who suck the blood from innocent civilians block the road before us! I will have you dragged to the authorities and subjected to the full severity of the law!”",
+      "context_after_sol": "“How dare bandits who suck the lifeblood of innocent civilians block our path! I will have you dragged before the authorities and punished to the fullest extent of the law!”",
+      "context_before_baseline": "*Damn, that aura.*",
+      "context_before_sol": "*Damn, that aura.*",
+      "hunk_id": "H028",
+      "sol": "Then the coachman launched into a stern denunciation.",
+      "sol_range": [
+        52,
+        53
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“How dare bandits who suck the blood from innocent civilians block the road before us! I will have you dragged to the authorities and subjected to the full severity of the law!”",
+      "baseline_range": [
+        53,
+        54
+      ],
+      "context_after_baseline": "It was a speech worthy of Judge Bao, but the hairy man—the Heavenly Axe—and his underlings didn’t seem particularly moved.",
+      "context_after_sol": "It was a speech worthy of Judge Bao, but the hairy man—the Heavenly Axe—and his underlings didn’t seem particularly moved.",
+      "context_before_baseline": "Then the coachman laid into them.",
+      "context_before_sol": "Then the coachman launched into a stern denunciation.",
+      "hunk_id": "H029",
+      "sol": "“How dare bandits who suck the lifeblood of innocent civilians block our path! I will have you dragged before the authorities and punished to the fullest extent of the law!”",
+      "sol_range": [
+        53,
+        54
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I will gouge out your eyes, grind your limbs to powder in a mortar, and scatter them across the Nine Provinces! I will also exterminate all nine degrees of your kin—”",
+      "baseline_range": [
+        56,
+        57
+      ],
+      "context_after_baseline": "*…Those punishments are getting a little extreme. That’s practically treason.*",
+      "context_after_sol": "*…Those punishments are no joke. That’s practically treason.*",
+      "context_before_baseline": "“Yeah, we blocked the road. What are you going to do about it?”",
+      "context_before_sol": "“Yeah, we blocked the road. What are you going to do about it?”",
+      "hunk_id": "H030",
+      "sol": "“I will gouge out your eyes, grind your limbs to powder in a mortar, and scatter the dust across the Nine Provinces! I will also exterminate all nine degrees of your kin—”",
+      "sol_range": [
+        56,
+        57
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*…Those punishments are getting a little extreme. That’s practically treason.*",
+      "baseline_range": [
+        57,
+        58
+      ],
+      "context_after_baseline": "As if he had read my thoughts, the Heavenly Axe spoke up.",
+      "context_after_sol": "As if he had read my thoughts, the Heavenly Axe spoke up.",
+      "context_before_baseline": "“I will gouge out your eyes, grind your limbs to powder in a mortar, and scatter them across the Nine Provinces! I will also exterminate all nine degrees of your kin—”",
+      "context_before_sol": "“I will gouge out your eyes, grind your limbs to powder in a mortar, and scatter the dust across the Nine Provinces! I will also exterminate all nine degrees of your kin—”",
+      "hunk_id": "H031",
+      "sol": "*…Those punishments are no joke. That’s practically treason.*",
+      "sol_range": [
+        57,
+        58
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Hey, is there an imperial prince riding inside? Listening to you is making my knees shake. Why don’t you show us that precious face of yours?”",
+      "baseline_range": [
+        59,
+        60
+      ],
+      "context_after_baseline": "“You will regret not retreating now once you learn this man’s identity!”",
+      "context_after_sol": "“You will regret not retreating once you learn this man’s identity!”",
+      "context_before_baseline": "As if he had read my thoughts, the Heavenly Axe spoke up.",
+      "context_before_sol": "As if he had read my thoughts, the Heavenly Axe spoke up.",
+      "hunk_id": "H032",
+      "sol": "“Hey, is there some member of the imperial family riding inside? Listening to you has my knees shaking. Why don’t you let us see that precious face?”",
+      "sol_range": [
+        59,
+        60
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“You will regret not retreating now once you learn this man’s identity!”",
+      "baseline_range": [
+        60,
+        61
+      ],
+      "context_after_baseline": "“Okay, okay. We get it. Now come out already.”",
+      "context_after_sol": "“Okay, okay. We get it. Now come out already.”",
+      "context_before_baseline": "“Hey, is there an imperial prince riding inside? Listening to you is making my knees shake. Why don’t you show us that precious face of yours?”",
+      "context_before_sol": "“Hey, is there some member of the imperial family riding inside? Listening to you has my knees shaking. Why don’t you let us see that precious face?”",
+      "hunk_id": "H033",
+      "sol": "“You will regret not retreating once you learn this man’s identity!”",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman clicked his tongue and turned toward me. My heart began to race. Was I finally about to see a true Murim master in action?",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "context_after_baseline": "“Young Master, I believe you’ll have to come out.”",
+      "context_after_sol": "“Young Master, I believe you’ll have to come out.”",
+      "context_before_baseline": "“You fools…!”",
+      "context_before_sol": "“You fools…!”",
+      "hunk_id": "H034",
+      "sol": "The coachman clicked his tongue and turned toward me. My heart began to race. Was I finally about to witness a true Murim master in action?",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“They won’t shed tears until they see the coffin. Blocking your path so brazenly—they’ll pay dearly for failing to recognize a master.”",
+      "baseline_range": [
+        67,
+        68
+      ],
+      "context_after_baseline": "With a determined look, he opened the carriage door for me.",
+      "context_after_sol": "With a determined look, he opened the carriage door for me.",
+      "context_before_baseline": "*Me? Why me?*",
+      "context_before_sol": "*Me? Why me?*",
+      "hunk_id": "H035",
+      "sol": "“They won’t shed tears until they see the coffin. To think they would dare block your path! They’ll pay dearly for failing to recognize a master.”",
+      "sol_range": [
+        67,
+        68
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*You said you’d handle it. Aren’t you a master?*",
+      "baseline_range": [
+        72,
+        73
+      ],
+      "context_after_baseline": "“You bastards! Do you know who this man is?”",
+      "context_after_sol": "“You bastards! Do you know who this man is?”",
+      "context_before_baseline": "My thoughts tangled together. Who was the Heaven Shaking Sword? Who was this genius swordsman who had reached the Peak realm? And what the hell was this coachman playing at?",
+      "context_before_sol": "My thoughts tangled together. Who was the Heaven Shaking Sword? Who was this genius swordsman who had reached the Peak realm? And what the hell was this coachman playing at?",
+      "hunk_id": "H036",
+      "sol": "*You said you’d handle it. Weren’t you a master?*",
+      "sol_range": [
+        72,
+        73
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He smiled as if he knew everything. His eyes shone with boundless trust.",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "context_after_baseline": "“W-wait. I’m Jin—”",
+      "context_after_sol": "“W-wait. I’m Jin—”",
+      "context_before_baseline": "I grabbed his wrist tightly, and he turned to look at me.",
+      "context_before_sol": "I grabbed his wrist tightly, and he turned to look at me.",
+      "hunk_id": "H037",
+      "sol": "He smiled as if he understood everything. His eyes shone with boundless trust.",
+      "sol_range": [
+        77,
+        78
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I’m Jin…Taekyung.”",
+      "baseline_range": [
+        81,
+        82
+      ],
+      "context_after_baseline": "At that moment, a cold wind blew.",
+      "context_after_sol": "At that moment, a cold wind blew.",
+      "context_before_baseline": "“He is the Second Young Master of the Jin Family of Taiyuan, the Peak master whose name resounds throughout Shanxi! The Heaven Shaking Sword, Young Master Jin Mukyung!”",
+      "context_before_sol": "“He is the Second Young Master of the Jin Family of Taiyuan, the Peak master whose name resounds throughout Shanxi! The Heaven Shaking Sword, Young Master Jin Mukyung!”",
+      "hunk_id": "H038",
+      "sol": "“I’m Jin… Taekyung.”",
+      "sol_range": [
+        81,
+        82
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“…The Third Young Master? That Third Young Master?”",
+      "baseline_range": [
+        85,
+        86
+      ],
+      "context_after_baseline": "*Yes, you idiot.*",
+      "context_after_sol": "*Yes, you idiot.*",
+      "context_before_baseline": "“I mean, I’m Jin Taekyung, not Jin Mukyung. And I’m the Third Young Master, not the Second…”",
+      "context_before_sol": "“I mean, I’m Jin Taekyung, not Jin Mukyung. And I’m the Third Young Master, not the Second…”",
+      "hunk_id": "H039",
+      "sol": "“…The Third Young Master? *That* Third Young Master?”",
+      "sol_range": [
+        85,
+        86
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*He’s probably sleeping right now.*",
+      "baseline_range": [
+        90,
+        91
+      ],
+      "context_after_baseline": "The coachman stared at me with the expression of a man who had lost his country, then collapsed like an inflatable toy with the air let out of it.",
+      "context_after_sol": "The coachman stared at me like a man who had lost his country, then collapsed like an inflatable tube man with the air let out of it.",
+      "context_before_baseline": "“How should I know?”",
+      "context_before_sol": "“How should I know?”",
+      "hunk_id": "H040",
+      "sol": "*He’s probably sleeping at this hour.*",
+      "sol_range": [
+        90,
+        91
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman stared at me with the expression of a man who had lost his country, then collapsed like an inflatable toy with the air let out of it.",
+      "baseline_range": [
+        91,
+        92
+      ],
+      "context_after_baseline": "He had fainted.",
+      "context_after_sol": "He had fainted.",
+      "context_before_baseline": "*He’s probably sleeping right now.*",
+      "context_before_sol": "*He’s probably sleeping at this hour.*",
+      "hunk_id": "H041",
+      "sol": "The coachman stared at me like a man who had lost his country, then collapsed like an inflatable tube man with the air let out of it.",
+      "sol_range": [
+        91,
+        92
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "His wrist was as thin as a chicken bone. Something had felt off from the moment I grabbed it. He had put on quite a show, only to turn out to be an ordinary civilian.",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "“Ha-ha! Ha-ha-ha!”",
+      "context_after_sol": "“Ha! Ha-ha-ha-ha!”",
+      "context_before_baseline": "I released his wrist.",
+      "context_before_sol": "I released his wrist.",
+      "hunk_id": "H042",
+      "sol": "It was as thin as a chicken bone. Something had felt off from the moment I grabbed it. After putting on that whole show, he turned out to be an ordinary civilian.",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Ha-ha! Ha-ha-ha!”",
+      "baseline_range": [
+        96,
+        97
+      ],
+      "context_after_baseline": "The bandits shrieked with laughter. My back was already damp with cold sweat, and I hadn’t even noticed when it started.",
+      "context_after_sol": "The bandits doubled over with laughter. My back was already drenched in cold sweat, though I hadn’t even noticed when it started.",
+      "context_before_baseline": "His wrist was as thin as a chicken bone. Something had felt off from the moment I grabbed it. He had put on quite a show, only to turn out to be an ordinary civilian.",
+      "context_before_sol": "It was as thin as a chicken bone. Something had felt off from the moment I grabbed it. After putting on that whole show, he turned out to be an ordinary civilian.",
+      "hunk_id": "H043",
+      "sol": "“Ha! Ha-ha-ha-ha!”",
+      "sol_range": [
+        96,
+        97
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The bandits shrieked with laughter. My back was already damp with cold sweat, and I hadn’t even noticed when it started.",
+      "baseline_range": [
+        97,
+        98
+      ],
+      "context_after_baseline": "*If things go really badly…*",
+      "context_after_sol": "*If I’m really unlucky here…*",
+      "context_before_baseline": "“Ha-ha! Ha-ha-ha!”",
+      "context_before_sol": "“Ha! Ha-ha-ha-ha!”",
+      "hunk_id": "H044",
+      "sol": "The bandits doubled over with laughter. My back was already drenched in cold sweat, though I hadn’t even noticed when it started.",
+      "sol_range": [
+        97,
+        98
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*If things go really badly…*",
+      "baseline_range": [
+        98,
+        99
+      ],
+      "context_after_baseline": "I couldn’t bring myself to say the word *death*. I swallowed it instead.",
+      "context_after_sol": "I couldn’t bring myself to say the word *death*. I swallowed it instead.",
+      "context_before_baseline": "The bandits shrieked with laughter. My back was already damp with cold sweat, and I hadn’t even noticed when it started.",
+      "context_before_sol": "The bandits doubled over with laughter. My back was already drenched in cold sweat, though I hadn’t even noticed when it started.",
+      "hunk_id": "H045",
+      "sol": "*If I’m really unlucky here…*",
+      "sol_range": [
+        98,
+        99
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I swept my tense gaze over the bandits.",
+      "baseline_range": [
+        100,
+        101
+      ],
+      "context_after_baseline": "*Fuck. I’d rather fight six goblins than deal with this. How am I supposed to beat bodies that huge…?*",
+      "context_after_sol": "*Fuck. I’d rather fight six goblins than deal with this. How am I supposed to beat guys that huge…?*",
+      "context_before_baseline": "I couldn’t bring myself to say the word *death*. I swallowed it instead.",
+      "context_before_sol": "I couldn’t bring myself to say the word *death*. I swallowed it instead.",
+      "hunk_id": "H046",
+      "sol": "I swept a tense gaze over the bandits.",
+      "sol_range": [
+        100,
+        101
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Fuck. I’d rather fight six goblins than deal with this. How am I supposed to beat bodies that huge…?*",
+      "baseline_range": [
+        101,
+        102
+      ],
+      "context_after_baseline": "Wait.",
+      "context_after_sol": "Wait.",
+      "context_before_baseline": "I swept my tense gaze over the bandits.",
+      "context_before_sol": "I swept a tense gaze over the bandits.",
+      "hunk_id": "H047",
+      "sol": "*Fuck. I’d rather fight six goblins than deal with this. How am I supposed to beat guys that huge…?*",
+      "sol_range": [
+        101,
+        102
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Was it my imagination? No matter how I looked at them, it wasn’t.",
+      "baseline_range": [
+        104,
+        105
+      ],
+      "context_after_baseline": "Massive upper bodies. Thick arms and legs. And…short.",
+      "context_after_sol": "Massive upper bodies. Thick arms and legs. And… short.",
+      "context_before_baseline": "“Huh?”",
+      "context_before_sol": "“Huh?”",
+      "hunk_id": "H048",
+      "sol": "Was it my imagination? No. No matter how I looked at them, it wasn’t.",
+      "sol_range": [
+        104,
+        105
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Massive upper bodies. Thick arms and legs. And…short.",
+      "baseline_range": [
+        105,
+        106
+      ],
+      "context_after_baseline": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but these guys were five hundred light-years away from anything you could call “well-built.”",
+      "context_after_sol": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but the rest were about five hundred light-years away from anything you could call “well-built.”",
+      "context_before_baseline": "Was it my imagination? No matter how I looked at them, it wasn’t.",
+      "context_before_sol": "Was it my imagination? No. No matter how I looked at them, it wasn’t.",
+      "hunk_id": "H049",
+      "sol": "Massive upper bodies. Thick arms and legs. And… short.",
+      "sol_range": [
+        105,
+        106
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but these guys were five hundred light-years away from anything you could call “well-built.”",
+      "baseline_range": [
+        106,
+        107
+      ],
+      "context_after_baseline": "In other words, the bandits’ physiques looked a lot like—",
+      "context_after_sol": "In other words, the bandits were built exactly like…",
+      "context_before_baseline": "Massive upper bodies. Thick arms and legs. And…short.",
+      "context_before_sol": "Massive upper bodies. Thick arms and legs. And… short.",
+      "hunk_id": "H050",
+      "sol": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but the rest were about five hundred light-years away from anything you could call “well-built.”",
+      "sol_range": [
+        106,
+        107
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In other words, the bandits’ physiques looked a lot like—",
+      "baseline_range": [
+        107,
+        108
+      ],
+      "context_after_baseline": "“They’re goblins?”",
+      "context_after_sol": "“They’re goblins?”",
+      "context_before_baseline": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but these guys were five hundred light-years away from anything you could call “well-built.”",
+      "context_before_sol": "The other five weren’t much different. The Heavenly Axe at least had a decent physique, but the rest were about five hundred light-years away from anything you could call “well-built.”",
+      "hunk_id": "H051",
+      "sol": "In other words, the bandits were built exactly like…",
+      "sol_range": [
+        107,
+        108
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I stood there dazed for a moment, but a flying axe snapped me back to reality. They had the numbers and they were launching a preemptive attack, too?",
+      "baseline_range": [
+        110,
+        111
+      ],
+      "context_after_baseline": "“Hey, hey! Wait a second!”",
+      "context_after_sol": "“Hey, hey! Time out!”",
+      "context_before_baseline": "*Goblins?*",
+      "context_before_sol": "*Goblins?*",
+      "hunk_id": "H052",
+      "sol": "I stood there dazed for a moment, until an axe came flying at me and snapped me back to reality. They had the numbers, and they were launching a preemptive attack too?",
+      "sol_range": [
+        110,
+        111
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Hey, hey! Wait a second!”",
+      "baseline_range": [
+        111,
+        112
+      ],
+      "context_after_baseline": "The axe slammed into the ground ten meters ahead of me. No—it toppled over. The bandit who had thrown it scratched the back of his head sheepishly.",
+      "context_after_sol": "The axe slammed into the ground ten meters in front of me. No—it flopped over. The bandit who had thrown it scratched the back of his head sheepishly.",
+      "context_before_baseline": "I stood there dazed for a moment, but a flying axe snapped me back to reality. They had the numbers and they were launching a preemptive attack, too?",
+      "context_before_sol": "I stood there dazed for a moment, until an axe came flying at me and snapped me back to reality. They had the numbers, and they were launching a preemptive attack too?",
+      "hunk_id": "H053",
+      "sol": "“Hey, hey! Time out!”",
+      "sol_range": [
+        111,
+        112
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The axe slammed into the ground ten meters ahead of me. No—it toppled over. The bandit who had thrown it scratched the back of his head sheepishly.",
+      "baseline_range": [
+        112,
+        113
+      ],
+      "context_after_baseline": "“Should I have thrown it a little higher?”",
+      "context_after_sol": "“Should I have thrown it a little higher?”",
+      "context_before_baseline": "“Hey, hey! Wait a second!”",
+      "context_before_sol": "“Hey, hey! Time out!”",
+      "hunk_id": "H054",
+      "sol": "The axe slammed into the ground ten meters in front of me. No—it flopped over. The bandit who had thrown it scratched the back of his head sheepishly.",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Could I actually survive this?*",
+      "baseline_range": [
+        115,
+        116
+      ],
+      "context_after_baseline": "The monster I had fought more than any other over the past seven years was the goblin.",
+      "context_after_sol": "The monster I had fought more than any other over the past seven years was the goblin.",
+      "context_before_baseline": "*…Maybe.*",
+      "context_before_sol": "*…Maybe.*",
+      "hunk_id": "H055",
+      "sol": "*I might actually survive this.*",
+      "sol_range": [
+        115,
+        116
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Naturally, I knew everything there was to know about them. It was even why I had chosen a spear as my primary weapon when I was a novice Hunter. A spear gave me an enormous advantage in attack range.",
+      "baseline_range": [
+        117,
+        118
+      ],
+      "context_after_baseline": "And these bandits were exactly that size. To me, they didn’t look like bandits at all. They looked like six goblins. The Heavenly Axe was the goblin chieftain.",
+      "context_after_sol": "And these bandits were exactly that size. To me, they no longer looked like bandits. They looked like six goblins. The Heavenly Axe was about the size of a goblin chieftain.",
+      "context_before_baseline": "The monster I had fought more than any other over the past seven years was the goblin.",
+      "context_before_sol": "The monster I had fought more than any other over the past seven years was the goblin.",
+      "hunk_id": "H056",
+      "sol": "Naturally, I knew them inside and out. They were even the reason I had chosen a spear as my primary weapon when I was a novice Hunter. Its reach gave me an overwhelming advantage.",
+      "sol_range": [
+        117,
+        118
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "And these bandits were exactly that size. To me, they didn’t look like bandits at all. They looked like six goblins. The Heavenly Axe was the goblin chieftain.",
+      "baseline_range": [
+        118,
+        119
+      ],
+      "context_after_baseline": "*The other five might be even weaker than goblins.*",
+      "context_after_sol": "*The other five might be even weaker than goblins.*",
+      "context_before_baseline": "Naturally, I knew everything there was to know about them. It was even why I had chosen a spear as my primary weapon when I was a novice Hunter. A spear gave me an enormous advantage in attack range.",
+      "context_before_sol": "Naturally, I knew them inside and out. They were even the reason I had chosen a spear as my primary weapon when I was a novice Hunter. Its reach gave me an overwhelming advantage.",
+      "hunk_id": "H057",
+      "sol": "And these bandits were exactly that size. To me, they no longer looked like bandits. They looked like six goblins. The Heavenly Axe was about the size of a goblin chieftain.",
+      "sol_range": [
+        118,
+        119
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "At least goblins could shoot poison darts. Judging by the way this one had thrown that axe, I had a hunch. A very strong hunch.",
+      "baseline_range": [
+        120,
+        121
+      ],
+      "context_after_baseline": "I licked my dry lips, then raised both hands high.",
+      "context_after_sol": "I licked my parched lips, then raised both hands high.",
+      "context_before_baseline": "*The other five might be even weaker than goblins.*",
+      "context_before_sol": "*The other five might be even weaker than goblins.*",
+      "hunk_id": "H058",
+      "sol": "At least goblins were good with poison darts. Judging by that axe throw, I had a hunch. A very strong hunch.",
+      "sol_range": [
+        120,
+        121
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I licked my dry lips, then raised both hands high.",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "context_after_baseline": "A few of them looked confused at my gesture of surrender, while the Heavenly Axe smiled proudly, like a father looking at a son freshly discharged from the military.",
+      "context_after_sol": "A few of them looked confused by my gesture of surrender, while the Heavenly Axe smiled proudly, like a father watching his son return from military service.",
+      "context_before_baseline": "At least goblins could shoot poison darts. Judging by the way this one had thrown that axe, I had a hunch. A very strong hunch.",
+      "context_before_sol": "At least goblins were good with poison darts. Judging by that axe throw, I had a hunch. A very strong hunch.",
+      "hunk_id": "H059",
+      "sol": "I licked my parched lips, then raised both hands high.",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A few of them looked confused at my gesture of surrender, while the Heavenly Axe smiled proudly, like a father looking at a son freshly discharged from the military.",
+      "baseline_range": [
+        122,
+        123
+      ],
+      "context_after_baseline": "“Good lad.”",
+      "context_after_sol": "“Good lad.”",
+      "context_before_baseline": "I licked my dry lips, then raised both hands high.",
+      "context_before_sol": "I licked my parched lips, then raised both hands high.",
+      "hunk_id": "H060",
+      "sol": "A few of them looked confused by my gesture of surrender, while the Heavenly Axe smiled proudly, like a father watching his son return from military service.",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Yeah. Enjoy your laugh while it lasts.*",
+      "baseline_range": [
+        124,
+        125
+      ],
+      "context_after_baseline": "One step, two. I slowly closed the thirty-meter distance between us.",
+      "context_after_sol": "One step, two. I slowly closed the thirty-meter distance between us.",
+      "context_before_baseline": "“Good lad.”",
+      "context_before_sol": "“Good lad.”",
+      "hunk_id": "H061",
+      "sol": "*Yeah. Laugh while you can.*",
+      "sol_range": [
+        124,
+        125
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With a steady stride and balanced posture. One breath per step. My breath escaped my mouth in white clouds that pierced the dawn air.",
+      "baseline_range": [
+        126,
+        127
+      ],
+      "context_after_baseline": "I could feel it from the simple act of putting one foot in front of the other.",
+      "context_after_sol": "I could feel it just from putting one foot in front of the other.",
+      "context_before_baseline": "One step, two. I slowly closed the thirty-meter distance between us.",
+      "context_before_sol": "One step, two. I slowly closed the thirty-meter distance between us.",
+      "hunk_id": "H062",
+      "sol": "My stride steady, my posture balanced. One breath per step. White vapor streamed from my mouth through the dawn air.",
+      "sol_range": [
+        126,
+        127
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could feel it from the simple act of putting one foot in front of the other.",
+      "baseline_range": [
+        127,
+        128
+      ],
+      "context_after_baseline": "*It’s different!*",
+      "context_after_sol": "*It’s different!*",
+      "context_before_baseline": "With a steady stride and balanced posture. One breath per step. My breath escaped my mouth in white clouds that pierced the dawn air.",
+      "context_before_sol": "My stride steady, my posture balanced. One breath per step. White vapor streamed from my mouth through the dawn air.",
+      "hunk_id": "H063",
+      "sol": "I could feel it just from putting one foot in front of the other.",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I realized it once more.",
+      "baseline_range": [
+        129,
+        130
+      ],
+      "context_after_baseline": "The version of me inside this game was stronger than the real me.",
+      "context_after_sol": "The version of me inside this game was stronger than the real me.",
+      "context_before_baseline": "*It’s different!*",
+      "context_before_sol": "*It’s different!*",
+      "hunk_id": "H064",
+      "sol": "I realized it once again.",
+      "sol_range": [
+        129,
+        130
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I heard the Jin Family had a son they’d given up on. third-rate at martial arts, first-rate with women. Looks like you’ve got decent instincts, too.”",
+      "baseline_range": [
+        133,
+        134
+      ],
+      "context_after_baseline": "The Heavenly Axe spoke with the hand holding his axe hanging loose at his side.",
+      "context_after_sol": "The Heavenly Axe spoke with the hand holding his axe hanging loosely at his side.",
+      "context_before_baseline": "I had to stay focused until the very last moment.",
+      "context_before_sol": "I had to stay focused until the very last moment.",
+      "hunk_id": "H065",
+      "sol": "“I heard the Jin Family had a son they’d given up on. Third-rate at martial arts, first-rate with women. Now that I see you, you’ve got pretty good instincts too.”",
+      "sol_range": [
+        133,
+        134
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The Heavenly Axe spoke with the hand holding his axe hanging loose at his side.",
+      "baseline_range": [
+        134,
+        135
+      ],
+      "context_after_baseline": "I knew exactly how I looked to them.",
+      "context_after_sol": "I knew exactly how I looked to them.",
+      "context_before_baseline": "“I heard the Jin Family had a son they’d given up on. third-rate at martial arts, first-rate with women. Looks like you’ve got decent instincts, too.”",
+      "context_before_sol": "“I heard the Jin Family had a son they’d given up on. Third-rate at martial arts, first-rate with women. Now that I see you, you’ve got pretty good instincts too.”",
+      "hunk_id": "H066",
+      "sol": "The Heavenly Axe spoke with the hand holding his axe hanging loosely at his side.",
+      "sol_range": [
+        134,
+        135
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A useless playboy with a good family name. Empty hands.",
+      "baseline_range": [
+        136,
+        137
+      ],
+      "context_after_baseline": "The Heavenly Axe had let his guard down.",
+      "context_after_sol": "The Heavenly Axe had let his guard down.",
+      "context_before_baseline": "I knew exactly how I looked to them.",
+      "context_before_sol": "I knew exactly how I looked to them.",
+      "hunk_id": "H067",
+      "sol": "A useless playboy with nothing but a good family name. Empty hands.",
+      "sol_range": [
+        136,
+        137
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I was a fighter who had battled every day for seven years without missing one, a martial artist in all but name.",
+      "baseline_range": [
+        141,
+        142
+      ],
+      "context_after_baseline": "So I knew.",
+      "context_after_sol": "So I knew.",
+      "context_before_baseline": "Even an F-rank Hunter risked his life fighting inside Gates. No—an F-rank Hunter had to risk his life precisely because he was only F-rank.",
+      "context_before_sol": "Even an F-rank Hunter risked his life fighting inside Gates. No—an F-rank Hunter had to risk his life precisely because he was only F-rank.",
+      "hunk_id": "H068",
+      "sol": "For seven years, I had fought every single day. I was a competitor—and a martial artist called a Hunter.",
+      "sol_range": [
+        141,
+        142
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Life and death were separated by a hair’s breadth. Letting your guard down was the same as dying.",
+      "baseline_range": [
+        143,
+        144
+      ],
+      "context_after_baseline": "The distance had been cut in half. My steps gradually quickened.",
+      "context_after_sol": "Half the distance was gone. My steps gradually quickened.",
+      "context_before_baseline": "So I knew.",
+      "context_before_sol": "So I knew.",
+      "hunk_id": "H069",
+      "sol": "Life and death were separated by a hair’s breadth. Letting your guard down meant death.",
+      "sol_range": [
+        143,
+        144
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The distance had been cut in half. My steps gradually quickened.",
+      "baseline_range": [
+        144,
+        145
+      ],
+      "context_after_baseline": "The Heavenly Axe beckoned me over.",
+      "context_after_sol": "The Heavenly Axe beckoned me over.",
+      "context_before_baseline": "Life and death were separated by a hair’s breadth. Letting your guard down was the same as dying.",
+      "context_before_sol": "Life and death were separated by a hair’s breadth. Letting your guard down meant death.",
+      "hunk_id": "H070",
+      "sol": "Half the distance was gone. My steps gradually quickened.",
+      "sol_range": [
+        144,
+        145
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Now, now. Take your time. Don’t lower your price by tripping on the way.”",
+      "baseline_range": [
+        146,
+        147
+      ],
+      "context_after_baseline": "Twenty meters.",
+      "context_after_sol": "Twenty meters.",
+      "context_before_baseline": "The Heavenly Axe beckoned me over.",
+      "context_before_sol": "The Heavenly Axe beckoned me over.",
+      "hunk_id": "H071",
+      "sol": "“Now, now. Take your time. If you trip on the way over, you’ll lower your ransom.”",
+      "sol_range": [
+        146,
+        147
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The moment I took my next step, something hot began to churn in my stomach.",
+      "baseline_range": [
+        152,
+        153
+      ],
+      "context_after_baseline": "It was a sensation I had never experienced before, yet somehow, it felt strangely familiar. What was it?",
+      "context_after_sol": "It was a sensation I had never experienced before, yet somehow it felt strangely familiar. What was it?",
+      "context_before_baseline": "Ten meters.",
+      "context_before_sol": "Ten meters.",
+      "hunk_id": "H072",
+      "sol": "The moment I took my next step, heat began to churn in my stomach.",
+      "sol_range": [
+        152,
+        153
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was a sensation I had never experienced before, yet somehow, it felt strangely familiar. What was it?",
+      "baseline_range": [
+        153,
+        154
+      ],
+      "context_after_baseline": "*Could it be…internal energy?*",
+      "context_after_sol": "*Could it be… internal energy?*",
+      "context_before_baseline": "The moment I took my next step, something hot began to churn in my stomach.",
+      "context_before_sol": "The moment I took my next step, heat began to churn in my stomach.",
+      "hunk_id": "H073",
+      "sol": "It was a sensation I had never experienced before, yet somehow it felt strangely familiar. What was it?",
+      "sol_range": [
+        153,
+        154
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Could it be…internal energy?*",
+      "baseline_range": [
+        154,
+        155
+      ],
+      "context_after_baseline": "The heat flowing from my dantian raced toward my lower body.",
+      "context_after_sol": "The heat flowing from my dantian raced toward my lower body.",
+      "context_before_baseline": "It was a sensation I had never experienced before, yet somehow, it felt strangely familiar. What was it?",
+      "context_before_sol": "It was a sensation I had never experienced before, yet somehow it felt strangely familiar. What was it?",
+      "hunk_id": "H074",
+      "sol": "*Could it be… internal energy?*",
+      "sol_range": [
+        154,
+        155
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It had only one purpose: to make me faster, lighter, stronger!",
+      "baseline_range": [
+        156,
+        157
+      ],
+      "context_after_baseline": "Whoosh. I drew in a long breath. Every muscle in my body drew taut like a bowstring. Then came the final step.",
+      "context_after_sol": "Whoosh. I drew a long breath. Every muscle in my body pulled taut like a bowstring.",
+      "context_before_baseline": "The heat flowing from my dantian raced toward my lower body.",
+      "context_before_sol": "The heat flowing from my dantian raced toward my lower body.",
+      "hunk_id": "H075",
+      "sol": "It had only one purpose: faster, lighter, stronger!",
+      "sol_range": [
+        156,
+        157
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Whoosh. I drew in a long breath. Every muscle in my body drew taut like a bowstring. Then came the final step.",
+      "baseline_range": [
+        157,
+        158
+      ],
+      "context_after_baseline": "Boom!",
+      "context_after_sol": "Then came the final step.",
+      "context_before_baseline": "It had only one purpose: to make me faster, lighter, stronger!",
+      "context_before_sol": "It had only one purpose: faster, lighter, stronger!",
+      "hunk_id": "H076",
+      "sol": "Whoosh. I drew a long breath. Every muscle in my body pulled taut like a bowstring.",
+      "sol_range": [
+        157,
+        158
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_range": [
+        158,
+        158
+      ],
+      "context_after_baseline": "Boom!",
+      "context_after_sol": "Boom!",
+      "context_before_baseline": "Whoosh. I drew in a long breath. Every muscle in my body drew taut like a bowstring. Then came the final step.",
+      "context_before_sol": "Whoosh. I drew a long breath. Every muscle in my body pulled taut like a bowstring.",
+      "hunk_id": "H077",
+      "sol": "Then came the final step.",
+      "sol_range": [
+        158,
+        159
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I shot straight forward. The ground sank beneath my foot, and the sound followed after me. In frozen time, the Heavenly Axe’s mouth slowly fell open.",
+      "baseline_range": [
+        159,
+        160
+      ],
+      "context_after_baseline": "“No way…”",
+      "context_after_sol": "“No… way…”",
+      "context_before_baseline": "Boom!",
+      "context_before_sol": "Boom!",
+      "hunk_id": "H078",
+      "sol": "I shot straight forward. The ground sank beneath my foot, and the sound followed after me. In that frozen moment, the Heavenly Axe’s mouth slowly fell open.",
+      "sol_range": [
+        160,
+        161
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“No way…”",
+      "baseline_range": [
+        160,
+        161
+      ],
+      "context_after_baseline": "The Heavenly Axe and his underlings stared at me in disbelief.",
+      "context_after_sol": "The Heavenly Axe and his underlings stared at me in disbelief.",
+      "context_before_baseline": "I shot straight forward. The ground sank beneath my foot, and the sound followed after me. In frozen time, the Heavenly Axe’s mouth slowly fell open.",
+      "context_before_sol": "I shot straight forward. The ground sank beneath my foot, and the sound followed after me. In that frozen moment, the Heavenly Axe’s mouth slowly fell open.",
+      "hunk_id": "H079",
+      "sol": "“No… way…”",
+      "sol_range": [
+        161,
+        162
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Their stiff, greasy hair. Their cracked lips, like a rice paddy in a drought. Their teeth that reeked just from looking at them…",
+      "baseline_range": [
+        163,
+        164
+      ],
+      "context_after_baseline": "I could see all of it.",
+      "context_after_sol": "All of it.",
+      "context_before_baseline": "I could see everything about them now. Feel it.",
+      "context_before_sol": "I could see everything about them now. Feel it.",
+      "hunk_id": "H080",
+      "sol": "Their stiff, greasy hair. Their lips cracked like rice paddies in a drought. Their teeth, which looked foul enough to stink from here…",
+      "sol_range": [
+        164,
+        165
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could see all of it.",
+      "baseline_range": [
+        164,
+        165
+      ],
+      "context_after_baseline": "The corners of my mouth lifted before I knew it.",
+      "context_after_sol": "The corners of my mouth lifted before I knew it.",
+      "context_before_baseline": "Their stiff, greasy hair. Their cracked lips, like a rice paddy in a drought. Their teeth that reeked just from looking at them…",
+      "context_before_sol": "Their stiff, greasy hair. Their lips cracked like rice paddies in a drought. Their teeth, which looked foul enough to stink from here…",
+      "hunk_id": "H081",
+      "sol": "All of it.",
+      "sol_range": [
+        165,
+        166
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Open Inventory. Equip [Sharp Spear].*",
+      "baseline_range": [
+        166,
+        167
+      ],
+      "context_after_baseline": "A cold spear shaft appeared in the hand I had thrust into empty air.",
+      "context_after_sol": "A cold spear shaft appeared in the hand I thrust into empty air.",
+      "context_before_baseline": "The corners of my mouth lifted before I knew it.",
+      "context_before_sol": "The corners of my mouth lifted before I knew it.",
+      "hunk_id": "H082",
+      "sol": "*Open Inventory. Equip Sharp Spear.*",
+      "sol_range": [
+        167,
+        168
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A cold spear shaft appeared in the hand I had thrust into empty air.",
+      "baseline_range": [
+        167,
+        168
+      ],
+      "context_after_baseline": "I drove it forward with all my strength. The Heavenly Axe hastily raised his axe to block, but the sharp spearhead shattered the axe blade and punched straight through his chest.",
+      "context_after_sol": "I drove it forward with all my strength. The Heavenly Axe hastily raised his axe to block, but the sharp spearhead shattered the axe blade and punched straight through his chest.",
+      "context_before_baseline": "*Open Inventory. Equip [Sharp Spear].*",
+      "context_before_sol": "*Open Inventory. Equip Sharp Spear.*",
+      "hunk_id": "H083",
+      "sol": "A cold spear shaft appeared in the hand I thrust into empty air.",
+      "sol_range": [
+        168,
+        169
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A fountain of blood erupted. The Heavenly Axe’s eyes flickered once, then went dark.",
+      "baseline_range": [
+        172,
+        173
+      ],
+      "context_after_baseline": "> **System**\n>\n> Lv. 10 Jang Sam defeated.\n>\n> Level up!\n>\n> You received 10 Stat Points as a level-up reward.\n>\n> You received 10 Skill Points as a level-up reward.\n>\n> Jin Family’s Cultivation Technique unlocked.",
+      "context_after_sol": "> **System**\n>\n> Lv. 10 Jang Sam defeated.\n>\n> Level up!\n>\n> You received 10 Stat Points as a level-up reward.\n>\n> You received 10 Skill Points as a level-up reward.\n>\n> Jin Family’s Cultivation Technique unlocked.",
+      "context_before_baseline": "“Ghk!”",
+      "context_before_sol": "“Ghk!”",
+      "hunk_id": "H084",
+      "sol": "A fountain of blood erupted. The Heavenly Axe’s eyes trembled once, then went dark.",
+      "sol_range": [
+        173,
+        174
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I let out a long breath. A notification had sounded, but all I could hear was my own pounding heart.",
+      "baseline_range": [
+        175,
+        176
+      ],
+      "context_after_baseline": "One breath. Everything had happened in a single breath. I pulled the spear from the Heavenly Axe’s lifeless chest.",
+      "context_after_sol": "One breath. Everything had happened in a single breath. I pulled the spear from the Heavenly Axe’s lifeless chest.",
+      "context_before_baseline": "*Whew.*",
+      "context_before_sol": "*Whew.*",
+      "hunk_id": "H085",
+      "sol": "I let out a long breath. Notifications had sounded, but all I could hear was my own pounding heart.",
+      "sol_range": [
+        176,
+        177
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Raise my abilities with points, reinforce them with internal energy, and chain them together with skills. This was the power of the System—the one power that belonged to me alone.",
+      "baseline_range": [
+        178,
+        179
+      ],
+      "context_after_baseline": "A power F-rank Hunter Jin Taekyung could never have dreamed of.",
+      "context_after_sol": "A power F-rank Hunter Jin Taekyung could never have dreamed of.",
+      "context_before_baseline": "*So this is possible.*",
+      "context_before_sol": "*So this is possible.*",
+      "hunk_id": "H086",
+      "sol": "Raise my abilities with points, enhance them with internal energy, and link them together with skills. This was the power of the System—the power that belonged to me alone.",
+      "sol_range": [
+        179,
+        180
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The road home suddenly looked brighter and wider.",
+      "baseline_range": [
+        181,
+        182
+      ],
+      "context_after_baseline": "I gripped the spear shaft and turned around.",
+      "context_after_sol": "I gripped the spear shaft and turned around.",
+      "context_before_baseline": "*I can do this. I will.*",
+      "context_before_sol": "*I can do this. I will.*",
+      "hunk_id": "H087",
+      "sol": "The road home was beginning to look brighter and wider.",
+      "sol_range": [
+        182,
+        183
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The five pairs of eyes fixed on me wavered uncertainly.",
+      "baseline_range": [
+        184,
+        185
+      ],
+      "context_after_baseline": "“Who else wants to try me?”",
+      "context_after_sol": "“Anyone else want to try?”",
+      "context_before_baseline": "“So…”",
+      "context_before_sol": "“So…”",
+      "hunk_id": "H088",
+      "sol": "The five pairs of eyes fixed on me wavered.",
+      "sol_range": [
+        185,
+        186
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Who else wants to try me?”",
+      "baseline_range": [
+        185,
+        186
+      ],
+      "context_after_baseline": "*Start with the bastard who threw that axe.*",
+      "context_after_sol": "*The bastard who threw that axe can go first.*",
+      "context_before_baseline": "The five pairs of eyes fixed on me wavered uncertainly.",
+      "context_before_sol": "The five pairs of eyes fixed on me wavered.",
+      "hunk_id": "H089",
+      "sol": "“Anyone else want to try?”",
+      "sol_range": [
+        186,
+        187
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Start with the bastard who threw that axe.*",
+      "baseline_range": [
+        186,
+        187
+      ],
+      "context_after_baseline": "“…”",
+      "context_after_sol": "“…”",
+      "context_before_baseline": "“Who else wants to try me?”",
+      "context_before_sol": "“Anyone else want to try?”",
+      "hunk_id": "H090",
+      "sol": "*The bastard who threw that axe can go first.*",
+      "sol_range": [
+        187,
+        188
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The five bandits exchanged glances, then dropped their weapons and prostrated themselves.",
+      "baseline_range": [
+        189,
+        190
+      ],
+      "context_after_baseline": "“Please forgive us, Great Hero!”",
+      "context_after_sol": "“Please forgive us, Great Hero!”",
+      "context_before_baseline": "Thud. Thud. Clatter.",
+      "context_before_sol": "Thud. Thud. Clatter.",
+      "hunk_id": "H091",
+      "sol": "The five bandits exchanged glances, dropped their weapons, and threw themselves flat on the ground.",
+      "sol_range": [
+        190,
+        191
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 194,
+  "sol_sha256": "d248794fa66843f157c07704226b0fcb6fb09ff281f794e1e143b789456d0435",
+  "version": 1
+}

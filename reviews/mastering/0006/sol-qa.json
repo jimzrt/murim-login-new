@@ -1,0 +1,47 @@
+{
+  "chapter": 6,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.119,
+    "source_characters": 5597,
+    "source_paragraphs": 197,
+    "translation_characters": 11858,
+    "translation_paragraphs": 185
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "경지",
+        "preferred": "realm / realm stage"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "대사",
+        "preferred": "Master for a senior Buddhist monk"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

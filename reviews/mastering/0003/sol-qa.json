@@ -1,0 +1,58 @@
+{
+  "chapter": 3,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.251,
+    "source_characters": 6587,
+    "source_paragraphs": 238,
+    "translation_characters": 14826,
+    "translation_paragraphs": 184
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "numbers",
+      "details": {
+        "values": [
+          "30",
+          "40",
+          "60"
+        ]
+      },
+      "message": "Arabic numerals from the source are absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "보법",
+        "preferred": "manoeuvre technique / footwork technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가심법",
+        "preferred": "Jin Family's Cultivation Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가보법",
+        "preferred": "Jin Family's Manoeuvre Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "진가창법",
+        "preferred": "Jin Family's Spear Technique"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

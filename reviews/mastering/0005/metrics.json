@@ -1,0 +1,75 @@
+{
+  "chapter": 5,
+  "stages": {
+    "adjudicator": {
+      "cache_read_tokens": 8832,
+      "cache_write_tokens": 0,
+      "cost_usd": 0.126965592,
+      "elapsed_seconds": 438.543,
+      "event_log": "/home/james/Documents/murim_login_new/reviews/mastering/0005/omp/adjudicator.jsonl",
+      "exact": true,
+      "input_tokens": 35798,
+      "models": {
+        "openrouter/deepseek/deepseek-v4.1-flash": {
+          "cache_read_tokens": 8832,
+          "cache_write_tokens": 0,
+          "cost_usd": 0.126965592,
+          "input_tokens": 35798,
+          "model": "deepseek/deepseek-v4.1-flash",
+          "output_tokens": 96811,
+          "provider": "openrouter",
+          "requests": 2,
+          "total_tokens": 141441
+        }
+      },
+      "output_bytes": 16530,
+      "output_tokens": 96811,
+      "packet_bytes": 145953,
+      "packet_token_estimate": 36489,
+      "requested_model": "openrouter/deepseek/deepseek-v4.1-flash:low",
+      "requests": 2,
+      "stop_reasons": [
+        "error",
+        "stop"
+      ],
+      "total_tokens": 141441,
+      "usage_source": "omp_provider_reported"
+    },
+    "master": {
+      "cache_read_tokens": 0,
+      "cache_write_tokens": 21254,
+      "cost_usd": 0.092021,
+      "elapsed_seconds": 61.634,
+      "event_log": "/home/james/Documents/murim_login_new/reviews/mastering/0005/omp/master.jsonl",
+      "exact": true,
+      "input_tokens": 3,
+      "models": {
+        "openrouter/openai/gpt-5.6-sol": {
+          "cache_read_tokens": 0,
+          "cache_write_tokens": 21254,
+          "cost_usd": 0.092021,
+          "input_tokens": 3,
+          "model": "openai/gpt-5.6-sol",
+          "output_tokens": 3888,
+          "provider": "openrouter",
+          "reasoning_tokens": 87,
+          "requests": 1,
+          "total_tokens": 25145
+        }
+      },
+      "output_bytes": 16609,
+      "output_tokens": 3888,
+      "packet_bytes": 63719,
+      "packet_token_estimate": 15930,
+      "reasoning_tokens": 87,
+      "requested_model": "openrouter/openai/gpt-5.6-sol:low",
+      "requests": 1,
+      "stop_reasons": [
+        "stop"
+      ],
+      "total_tokens": 25145,
+      "usage_source": "omp_provider_reported"
+    }
+  },
+  "version": 1
+}

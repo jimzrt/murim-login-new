@@ -1,0 +1,404 @@
+{
+  "chapter": 1,
+  "decisions": [
+    {
+      "decision": "SOL",
+      "hunk_id": "H001",
+      "reason": "고시생 denotes a state-exam aspirant; 'preparing for the civil service exam' renders it plainly and reads better than the vague, stiff 'exam candidate.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H002",
+      "reason": "Splits the run-on into two natural sentences; 'always bragging about how much he knew about IT' conveys 입버릇처럼 말하던 without the clunky 'I remembered how he was always going on.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "'I'm telling you' captures the emphasis of 쓰레기라니까 and makes the retort more colloquial than 'I said it's garbage.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H004",
+      "reason": "'Not even a moment's hesitation' is the idiomatic phrasing; 'a hint of hesitation' is flatter."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H005",
+      "reason": "'wondering how much I could get' and 'verdict came as a serious blow' read more naturally than 'thinking about how much I could get' / 'the blow hit me hard,' with no meaning change."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H006",
+      "reason": "'grave misunderstanding' fits Jinho's mock-solemn register better than 'serious misunderstanding'; both render 큰 오해 faithfully."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H007",
+      "reason": "'One look is enough to tell it's shit' is a punchier equivalent of 딱 보기에도 똥이거든, matching the joke's timing better than the trailing clause."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H008",
+      "reason": "'I wasn't fishing for praise' is idiomatic and concise; SOL's 'I didn't say it because I wanted your praise' is wordier with no fidelity gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H009",
+      "reason": "'making Jinho flinch' preserves the causal 려자 link, and 'behind a desk' avoids BASE's unsupported 'hunched over.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "'constitutes assault on a civilian' fixes BASE's ungrammatical 'falls under assault of a civilian'; 되새기다 is acceptably rendered by 'reflect on.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H011",
+      "reason": "'Watching him make such a fuss, I could only sigh' is more direct than SOL's abstract, noun-heavy 'His theatrics drew a sigh from me' and avoids adding performative nuance to 호들갑."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H012",
+      "reason": "'lowered' better matches 스르륵 내려갔다 (a smooth, gradual descent) than 'dropped,' which implies suddenness."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H013",
+      "reason": "'Good thinking' is closer to 잘 생각했다 and equally natural; 'Good decision' adds a choice framing the Korean does not."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H014",
+      "reason": "잘렸어 states the firing explicitly; BASE's blunt 'I already got fired' is faithful, while SOL's elided 'I already did' is vaguer than the source."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H015",
+      "reason": "'as soon as I got to work' matches 출근하자마자 more precisely than 'the moment I showed up,' and the two-beat delivery suits the beat."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H016",
+      "reason": "BASE preserves 선택한 (chosen) and 아버지 대신 (in place of my late father); SOL drops 'chosen' and shifts 대신 to unsupported 'With my father gone.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H017",
+      "reason": "'how hard I'd worked' and 'The money I earned had paid for' flow better than the stiffer 'having worked hard' / 'With what I earned,' with identical meaning."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H018",
+      "reason": "'told me I was fired' suits the conversational narration better than 'informed me of my dismissal,' which is stiffly formal for this voice."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H019",
+      "reason": "피식 웃음 is a short, stifled laugh, not a snort (코웃음); BASE's 'short laugh' is the accurate rendering."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H020",
+      "reason": "'kind of' is the natural spoken equivalent of 좀 그렇지; 'a little' is equivalent but no improvement."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H021",
+      "reason": "'Listen to that mouth' is idiomatic and captures 말하는 싸가지, whereas BASE's 'the disrespect on you' is awkward Korean-shaped English."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H022",
+      "reason": "'Despite his words' and 'follow him out' read more smoothly and track 말은 그렇게 하면서도 / 나오라며 more closely."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H023",
+      "reason": "'boundary between worlds' and 'Step inside, though, and you'll find it' are idiomatic and match the two-world framing the next sentences establish."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H024",
+      "reason": "고블린이다 is present-tense general truth; SOL's 'are/can' matches the source's tense while BASE's past tense drifts."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H025",
+      "reason": "'puking his guts out' captures the violent, comic force of 토악질을 해 대는 better than the neutral 'vomiting.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H026",
+      "reason": "'get a grip' is the natural spoken form of 정신 좀 차려, and the period after 'Hey' suits the exasperated beat."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H027",
+      "reason": "SOL's 'Never mind' is an addition not in 그냥 하시던 일 계속 하세요; BASE's '…Just carry on' stays faithful."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H028",
+      "reason": "'this was the result' and 'drenched' read more naturally than the awkward 'dead-drunk man' / 'soaked through,' with the same content."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H029",
+      "reason": "'came standard / the optional extra' sharply renders 기본이요, 옵션이다, and 'whose mouth it had come from' matches 누구 입에서 흐른 것인지."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H030",
+      "reason": "'background music' preserves the deliberate comic metaphor 배경음, which BASE flattens to 'in the background.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H031",
+      "reason": "오늘 하루의 기억들 is 'memories'; BASE's 'memories of the day' is closer than SOL's 'day's events.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H032",
+      "reason": "끝내주는구나 is sarcasm; SOL's '*What a fantastic day.*' lands that irony better than BASE's more neutral 'turning out to be.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H033",
+      "reason": "'the crowning achievement' carries the sarcastic superlative of 압권이야 more pointedly than 'the highlight of it all.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H034",
+      "reason": "Footnote reference correctly follows the sentence period ('stew.[^2]'); BASE misplaces it inside the punctuation."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H035",
+      "reason": "고시원이라고 is 'It's the goshiwon'; SOL's 'We're at the goshiwon' is a paraphrase."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H036",
+      "reason": "모두의 가슴속에 있는 거 = 'is in everyone's heart'; BASE keeps that, while SOL adds an unsupported 'lives' metaphor."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H037",
+      "reason": "Both render 된장찌개 부분에서 adequately; 'reached the part' is no worse than 'got to the part,' so no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H038",
+      "reason": "더럽게 찝찝하네 has no 'still'; SOL adds that and shifts 찝찝 to 'filthy,' while BASE's 'gross' is accurate."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H039",
+      "reason": "코끝 is 'tip of my nose'; SOL's 'beneath my nose' misplaces the source image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H040",
+      "reason": "방에는 = 'in my room'; BASE matches, while SOL's 'for me' shifts the location phrasing without gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H041",
+      "reason": "Comma-joined clause matches the source's single sentence; SOL's split is a stylistic wash."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H042",
+      "reason": "Both render 방이 꽉 찬 것 같다 adequately; SOL's rephrasing offers no concrete improvement."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H043",
+      "reason": "도로 갖다 버려 = 'take it back and throw it away'; BASE drops 'throw away' and adds 'where I found it,' SOL drops 도로('back').",
+      "replacement": "*Should I take it back and throw it away?*"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H044",
+      "reason": "'Or I could' matches 아니면; BASE's 'instead' follows from the previous line rather than the source connective."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H045",
+      "reason": "꽤 쓸 만한 물건 = 'fairly useful thing'; SOL shifts to monetary worth and adds unsupported 'might actually.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H046",
+      "reason": "똥 is 'shit' (distinct from earlier 쓰레기/'garbage'), and 고물 is 'junk'; BASE preserves both, SOL blurs them."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H047",
+      "reason": "'sudden flicker of curiosity' tracks 갑자기 드는 호기심, whereas BASE's 'got the better of me' overstates it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H048",
+      "reason": "미련 is lingering attachment, not 'lingering hopes,' and 진호 형의 말 = 'what Jinho had meant,' not the narrower 'why he called it garbage.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H049",
+      "reason": "'after all' preserves 역시나, which SOL drops; otherwise equivalent."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H050",
+      "reason": "'There was only' captures 이 전부 as faithfully as 'Just an,' with no meaningful gain in SOL."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H051",
+      "reason": "Both render 이런 고물을 adequately; SOL's shortening is neutral churn."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H052",
+      "reason": "'opened it to the first page' is clearer and less ambiguous than BASE's 'opened to the first page.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H053",
+      "reason": "Source reads 'Ark - 2020'; SOL's 'Ark-2020' matches its capitalization, while BASE's all-caps 'ARK-2020' is unsupported stylization."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H054",
+      "reason": "'my eyes stopped on the manufacturing date' matches 눈동자가 멈춘 곳은 제조일이었다 better than BASE's personified 'the manufacturing date stopped me.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H055",
+      "reason": "'would have been making' preserves the progressive 만들고 있었겠어 that BASE's 'would have made' loses."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H056",
+      "reason": "The standalone date line is a deliberate beat in the Korean; BASE preserves it while SOL folds it into the following sentence."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H057",
+      "reason": "Both render 생성되었고 adequately; SOL's 'appeared' is no improvement."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H058",
+      "reason": "'the Awakened' as a class is better English and matches 각성자's collective use than the bare 'Awakened.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H059",
+      "reason": "Both convey 이른바; BASE's two-sentence form is as faithful as SOL's em-dash compression, with no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H060",
+      "reason": "그러니까 말도 안 되는 거지 is neutral on proximity; BASE's 'that's impossible' is as faithful as SOL's 'this is.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H061",
+      "reason": "'Sleeping was better than reading' matches 잠이라도 자는 게 낫다 more closely than BASE's 'I might as well sleep.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H062",
+      "reason": "'in the bloom of youth at twenty-seven' preserves the humorous 방년 27세 wordplay that BASE flattens to 'a twenty-seven-year-old chair.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H063",
+      "reason": "'Sleeping in this thing' retains the 자면 (if I sleep) that BASE's 'Wearing something like this' drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H064",
+      "reason": "완전한 무음의 세계 is 'a world of complete silence'; BASE keeps the 'world' metaphor SOL drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H065",
+      "reason": "생각이었다 simply states 'were thoughts'; SOL's 'came flooding in' adds unsupported intensity."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H066",
+      "reason": "고액 연봉 직종 = 'highly paid profession,' which BASE matches; SOL's 'well paid' weakens 고액."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H067",
+      "reason": "'before the crack of dawn' matches 꼭두새벽 better than BASE's plain 'before dawn.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H068",
+      "reason": "'leave you short of breath' matches 숨이 턱턱 막힐 (suffocating); BASE's 'take your breath away' wrongly imports the positive English idiom."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H069",
+      "reason": "'So now I'm one of them' renders 이제 내가 그 꼴이 됐군 as faithfully as SOL's 'And now.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H070",
+      "reason": "'on an F-rank Hunter's income' matches F급 헌터의 수입으로는, which BASE's 'for an F-rank Hunter' drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H071",
+      "reason": "Both render 금액을 맞춰 왔지만 adequately; SOL's 'scrape together' is neutral churn."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H072",
+      "reason": "'My late father suddenly came to mind' matches 문득 …생각났다 more closely than BASE's 'I suddenly thought of.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H073",
+      "reason": "사회적으로 인정받다 is social recognition; SOL's 'those around him' narrows it away from the source."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H074",
+      "reason": "게이트 균열로 인한 몬스터들의 습격 is a noun phrase 'attack caused by a Gate breach'; SOL turns it active and adds 'after.'"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H075",
+      "reason": "BASE keeps 그래도 ('even so') but adds 'believe in me'; SOL fixes the verb but drops 그래도—the repair preserves both.",
+      "replacement": "*Even so, I've done my best all this time. Please believe me.*"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H076",
+      "reason": "BASE keeps 나도 모르게 but drops 몸; SOL keeps 'my body' but drops 나도 모르게—the repair retains both.",
+      "replacement": "Maybe the alcohol was finally catching up with me, or maybe it was the memories. Without realizing it, my body went slack and my eyes began to close."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H077",
+      "reason": "쏟아져 내리는 is pouring; BASE's 'wave of sleep pouring over me' keeps that, while SOL's 'drowsiness' drops the image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H078",
+      "reason": "파고들다 is 'pierce/penetrate'; BASE's 'pierced my ears' is closer than SOL's neutral 'reached my ears.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H079",
+      "reason": "SOL adds the blockquote paragraph break so '…May fortune favor you in battle!' stands as its own line, matching the source's separation; BASE runs it into the previous notice."
+    }
+  ],
+  "version": 1
+}

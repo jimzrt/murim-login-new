@@ -1,0 +1,1201 @@
+{
+  "baseline_blocks": 184,
+  "baseline_sha256": "5f886ae13cc624d9172f09d0f4e8d906408b7c139cb3357c79f2740f92c0fde0",
+  "global_terminology_alerts": [],
+  "hunk_count": 62,
+  "hunks": [
+    {
+      "baseline": "A young man’s reflection shimmered across the calm surface of the water.",
+      "baseline_range": [
+        1,
+        2
+      ],
+      "context_after_baseline": "Dark eyebrows. Sharp, well-defined features. When he lifted the corners of his mouth, deep dimples appeared. But the forced smile vanished as if washed away the very next moment.",
+      "context_after_sol": "Dark eyebrows. Sharp, well-defined features. Deep dimples appeared when he lifted the corners of his mouth. But the forced smile vanished the next instant.",
+      "context_before_baseline": "# Chapter 3",
+      "context_before_sol": "# Chapter 3",
+      "hunk_id": "H001",
+      "sol": "A young man’s reflection shimmered on the calm surface of the water.",
+      "sol_range": [
+        1,
+        2
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Dark eyebrows. Sharp, well-defined features. When he lifted the corners of his mouth, deep dimples appeared. But the forced smile vanished as if washed away the very next moment.",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "context_after_baseline": "Crash.",
+      "context_after_sol": "Crash.",
+      "context_before_baseline": "A young man’s reflection shimmered across the calm surface of the water.",
+      "context_before_sol": "A young man’s reflection shimmered on the calm surface of the water.",
+      "hunk_id": "H002",
+      "sol": "Dark eyebrows. Sharp, well-defined features. Deep dimples appeared when he lifted the corners of his mouth. But the forced smile vanished the next instant.",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I threw the basin of wash water to the floor, sending shards flying in every direction.",
+      "baseline_range": [
+        4,
+        5
+      ],
+      "context_after_baseline": "“Fuck! Fuuuck!”",
+      "context_after_sol": "“Fuck! Fuuuck!”",
+      "context_before_baseline": "Crash.",
+      "context_before_sol": "Crash.",
+      "hunk_id": "H003",
+      "sol": "I hurled the basin of wash water to the floor, sending shards flying in every direction.",
+      "sol_range": [
+        4,
+        5
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*What kind of lunatics thought this was a good thing to make?*",
+      "baseline_range": [
+        9,
+        10
+      ],
+      "context_after_baseline": "As I continued hurling curses, I remembered the warnings.",
+      "context_after_sol": "Still spewing curses, I recalled the warnings.",
+      "context_before_baseline": "> **System**\n>\n> Logout is impossible.",
+      "context_before_sol": "> **System**\n>\n> Logout is impossible.",
+      "hunk_id": "H004",
+      "sol": "*What kind of lunatics would make something like this?*",
+      "sol_range": [
+        9,
+        10
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "As I continued hurling curses, I remembered the warnings.",
+      "baseline_range": [
+        10,
+        11
+      ],
+      "context_after_baseline": "> **System**\n>\n> The player cannot log out at will.\n>\n> If the player dies during gameplay, resurrection is impossible.",
+      "context_after_sol": "> **Warning**\n>\n> - The player cannot log out at will.\n> - If the player dies during gameplay, resurrection is impossible.",
+      "context_before_baseline": "*What kind of lunatics thought this was a good thing to make?*",
+      "context_before_sol": "*What kind of lunatics would make something like this?*",
+      "hunk_id": "H005",
+      "sol": "Still spewing curses, I recalled the warnings.",
+      "sol_range": [
+        10,
+        11
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> The player cannot log out at will.\n>\n> If the player dies during gameplay, resurrection is impossible.",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "context_after_baseline": "In short, it was simple.",
+      "context_after_sol": "In short, it was simple.",
+      "context_before_baseline": "As I continued hurling curses, I remembered the warnings.",
+      "context_before_sol": "Still spewing curses, I recalled the warnings.",
+      "hunk_id": "H006",
+      "sol": "> **Warning**\n>\n> - The player cannot log out at will.\n> - If the player dies during gameplay, resurrection is impossible.",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "시스템",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "System"
+        }
+      ]
+    },
+    {
+      "baseline": "I was playing a martial-arts genre game called *Murim*, but I couldn’t log out whenever I wanted—and if my character died, so would I.",
+      "baseline_range": [
+        13,
+        14
+      ],
+      "context_after_baseline": "Ha. Ha. Ha.",
+      "context_after_sol": "Ha. Ha. Ha.",
+      "context_before_baseline": "In short, it was simple.",
+      "context_before_sol": "In short, it was simple.",
+      "hunk_id": "H007",
+      "sol": "I was playing a martial-arts game called *Murim*, but I couldn’t log out whenever I wanted—and if my character died, so would I.",
+      "sol_range": [
+        13,
+        14
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I couldn’t log out. I’d spent three days waiting for someone outside to come rescue me, but nothing had happened. I hadn’t tested the death part, but judging by the circumstances, there was a good chance it was true too.",
+      "baseline_range": [
+        17,
+        18
+      ],
+      "context_after_baseline": "*But there is a way.*",
+      "context_after_sol": "*But there is a way.*",
+      "context_before_baseline": "And yet, it was really happening.",
+      "context_before_sol": "And yet, it was really happening.",
+      "hunk_id": "H008",
+      "sol": "I couldn’t log out. I’d spent three days waiting for someone outside to rescue me, but nothing had happened. I hadn’t tested the part about dying, but judging by the circumstances, there was a good chance that was true too.",
+      "sol_range": [
+        17,
+        18
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "If “the player cannot log out at will” was the wording, that implied logging out might become possible after meeting certain conditions.",
+      "baseline_range": [
+        19,
+        20
+      ],
+      "context_after_baseline": "*For example, completing a quest or leveling up.*",
+      "context_after_sol": "*For example, completing a quest or leveling up.*",
+      "context_before_baseline": "*But there is a way.*",
+      "context_before_sol": "*But there is a way.*",
+      "hunk_id": "H009",
+      "sol": "If the wording was “the player cannot log out at will,” that implied logging out might become possible after meeting certain conditions.",
+      "sol_range": [
+        19,
+        20
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was the answer I’d deduced because this place, *Murim*, was a game.",
+      "baseline_range": [
+        21,
+        22
+      ],
+      "context_after_baseline": "In games, you received rewards whenever you completed a quest or leveled up. The completion of Tutorial—Stage 1 had already proved that much.",
+      "context_after_sol": "In games, you received rewards whenever you completed a quest or leveled up. Completing Tutorial—Stage 1 had already proved that much.",
+      "context_before_baseline": "*For example, completing a quest or leveling up.*",
+      "context_before_sol": "*For example, completing a quest or leveling up.*",
+      "hunk_id": "H010",
+      "sol": "I’d reached that conclusion because this place, *Murim*, was a game.",
+      "sol_range": [
+        21,
+        22
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In games, you received rewards whenever you completed a quest or leveled up. The completion of Tutorial—Stage 1 had already proved that much.",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "context_after_baseline": "*For now, I’ll focus on quests and leveling up.*",
+      "context_after_sol": "*For now, I’ll focus on quests and leveling up.*",
+      "context_before_baseline": "That was the answer I’d deduced because this place, *Murim*, was a game.",
+      "context_before_sol": "I’d reached that conclusion because this place, *Murim*, was a game.",
+      "hunk_id": "H011",
+      "sol": "In games, you received rewards whenever you completed a quest or leveled up. Completing Tutorial—Stage 1 had already proved that much.",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was the conclusion I’d reached after three days of thinking. And it came with one essential requirement: survival.",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "context_after_baseline": "I had to stay somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "context_after_sol": "I had to operate somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "context_before_baseline": "*For now, I’ll focus on quests and leveling up.*",
+      "context_before_sol": "*For now, I’ll focus on quests and leveling up.*",
+      "hunk_id": "H012",
+      "sol": "That was the conclusion I’d reached after three days of thought. And it came with one essential requirement: survival.",
+      "sol_range": [
+        24,
+        25
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had to stay somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "baseline_range": [
+        25,
+        26
+      ],
+      "context_after_baseline": "*As it happens, I know exactly the right place.*",
+      "context_after_sol": "*As it happens, I know just the place.*",
+      "context_before_baseline": "That was the conclusion I’d reached after three days of thinking. And it came with one essential requirement: survival.",
+      "context_before_sol": "That was the conclusion I’d reached after three days of thought. And it came with one essential requirement: survival.",
+      "hunk_id": "H013",
+      "sol": "I had to operate somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "sol_range": [
+        25,
+        26
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*As it happens, I know exactly the right place.*",
+      "baseline_range": [
+        26,
+        27
+      ],
+      "context_after_baseline": "Just then, Wolhwa’s voice drifted in from outside the door.",
+      "context_after_sol": "Just then, Wolhwa’s voice drifted in from outside the door.",
+      "context_before_baseline": "I had to stay somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "context_before_sol": "I had to operate somewhere my life wouldn’t be in danger. If I could get someone’s help too, even better.",
+      "hunk_id": "H014",
+      "sol": "*As it happens, I know just the place.*",
+      "sol_range": [
+        26,
+        27
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was a carriage to take Jin Taekyung of the Jin Family of Taiyuan home—not F-rank Hunter Jin Taekyung.",
+      "baseline_range": [
+        29,
+        30
+      ],
+      "context_after_baseline": "* * *",
+      "context_after_sol": "* * *",
+      "context_before_baseline": "“Young Master Jin, the carriage is ready.”",
+      "context_before_sol": "“Young Master Jin, the carriage is ready.”",
+      "hunk_id": "H015",
+      "sol": "The carriage would take Jin Taekyung of the Jin Family of Taiyuan home—not F-rank Hunter Jin Taekyung.",
+      "sol_range": [
+        29,
+        30
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The coachman was a taciturn man who never tried to make conversation, and I found that perfectly convenient.",
+      "baseline_range": [
+        32,
+        33
+      ],
+      "context_after_baseline": "I didn’t want anyone bothering me right now.",
+      "context_after_sol": "I didn’t want anyone bothering me right now.",
+      "context_before_baseline": "The four-horse carriage Wolhwa—or rather, Honghwaru—had provided was large and extravagant.",
+      "context_before_sol": "The four-horse carriage Wolhwa—or rather, Honghwaru—had provided was large and extravagant.",
+      "hunk_id": "H016",
+      "sol": "The coachman was a taciturn man who didn’t say a word to me, which suited me perfectly.",
+      "sol_range": [
+        32,
+        33
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This was the quest window I’d opened dozens of times over the past three days, only to close it again. I’d been afraid of the unknown. But I wasn’t hesitating anymore.",
+      "baseline_range": [
+        36,
+        37
+      ],
+      "context_after_baseline": "*Accept.*",
+      "context_after_sol": "*Accept.*",
+      "context_before_baseline": "> **System**\n>\n> Would you like to begin Tutorial—Stage 2?\n>\n> Accept / Decline",
+      "context_before_sol": "> **System**\n>\n> Would you like to begin Tutorial—Stage 2?\n>\n> Accept / Decline",
+      "hunk_id": "H017",
+      "sol": "I’d opened this quest window dozens of times over the past three days, only to close it again. I’d been afraid of the unknown. But I wasn’t hesitating anymore.",
+      "sol_range": [
+        36,
+        37
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 2\n>\n> You have familiarized yourself with the basic information and situation.\n>\n> But Murim is an unpredictable place. From this point on, use your only unique power: the System.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Check and distribute Status Window points (Incomplete)\n>\n> Check and distribute Skill Window points (Incomplete)\n>\n> Check and equip Inventory items (Incomplete)\n>\n> **Reward:** Sharp Spear\n>\n> Chain Quest",
+      "baseline_range": [
+        39,
+        40
+      ],
+      "context_after_baseline": "*If that was all it wanted, I could have finished it ages ago.* It was the obvious next step, really.",
+      "context_after_sol": "*If that was all it wanted, I could have finished it ages ago.* Then again, maybe this was the obvious next step.",
+      "context_before_baseline": "Ding.",
+      "context_before_sol": "Ding.",
+      "hunk_id": "H018",
+      "sol": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 2\n>\n> You have familiarized yourself with the basic information and situation.\n>\n> But Murim is an unpredictable place. From this point on, use the only power unique to you: the System.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Check and Distribute Status Window Points (Incomplete)\n>\n> Check and Distribute Skill Window Points (Incomplete)\n>\n> Check and Equip Inventory Items (Incomplete)\n>\n> **Reward:** Sharp Spear\n>\n> Chain Quest",
+      "sol_range": [
+        39,
+        40
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*If that was all it wanted, I could have finished it ages ago.* It was the obvious next step, really.",
+      "baseline_range": [
+        40,
+        41
+      ],
+      "context_after_baseline": "No matter how strange things were, this place was still a game at its core.",
+      "context_after_sol": "No matter how strange things were, this place was still a game at its core.",
+      "context_before_baseline": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 2\n>\n> You have familiarized yourself with the basic information and situation.\n>\n> But Murim is an unpredictable place. From this point on, use your only unique power: the System.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Check and distribute Status Window points (Incomplete)\n>\n> Check and distribute Skill Window points (Incomplete)\n>\n> Check and equip Inventory items (Incomplete)\n>\n> **Reward:** Sharp Spear\n>\n> Chain Quest",
+      "context_before_sol": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 2\n>\n> You have familiarized yourself with the basic information and situation.\n>\n> But Murim is an unpredictable place. From this point on, use the only power unique to you: the System.\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Check and Distribute Status Window Points (Incomplete)\n>\n> Check and Distribute Skill Window Points (Incomplete)\n>\n> Check and Equip Inventory Items (Incomplete)\n>\n> **Reward:** Sharp Spear\n>\n> Chain Quest",
+      "hunk_id": "H019",
+      "sol": "*If that was all it wanted, I could have finished it ages ago.* Then again, maybe this was the obvious next step.",
+      "sol_range": [
+        40,
+        41
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I thought back to the online games I’d played every once in a blue moon in the past.",
+      "baseline_range": [
+        42,
+        43
+      ],
+      "context_after_baseline": "*Check the Status Window.*",
+      "context_after_sol": "*Check the Status Window.*",
+      "context_before_baseline": "No matter how strange things were, this place was still a game at its core.",
+      "context_before_sol": "No matter how strange things were, this place was still a game at its core.",
+      "hunk_id": "H020",
+      "sol": "I thought back to the online games I’d played once in a blue moon.",
+      "sol_range": [
+        42,
+        43
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The Jin Family of Taiyuan was a big deal in the area. And this guy was even from a prestigious Murim family…but he was only Level 10, a third-rate martial artist?",
+      "baseline_range": [
+        47,
+        48
+      ],
+      "context_after_baseline": "*Is this for real?*",
+      "context_after_sol": "*Is this for real?*",
+      "context_before_baseline": "I blinked. I felt completely blindsided.",
+      "context_before_sol": "I blinked. I felt completely blindsided.",
+      "hunk_id": "H021",
+      "sol": "The Jin Family of Taiyuan was a big deal in the area. And this guy was even a member of a prestigious Murim family…but he was only Level 10 and a third-rate martial artist?",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My neck grew stiff as I read the special notes.",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "context_after_baseline": "The effect of the Scion of a Prestigious Family title was completely canceled out by Shame of the Family.",
+      "context_after_sol": "The effect of the Scion of a Prestigious Family title was completely canceled out by Shame of the Family.",
+      "context_before_baseline": "*Is this for real?*",
+      "context_before_sol": "*Is this for real?*",
+      "hunk_id": "H022",
+      "sol": "My neck grew stiff as I read the notes.",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A rich wastrel born into a good family, neglecting martial arts training while drowning in women and alcohol. No wonder they called him the shame of the family.",
+      "baseline_range": [
+        52,
+        53
+      ],
+      "context_after_baseline": "*I’m screwed.*",
+      "context_after_sol": "*I’m screwed.*",
+      "context_before_baseline": "*I was an idiot for getting my hopes up.*",
+      "context_before_sol": "*I was an idiot for getting my hopes up.*",
+      "hunk_id": "H023",
+      "sol": "A rich wastrel born into a good family, neglecting his martial arts training while drowning in women and alcohol. No wonder he was called the shame of the family.",
+      "sol_range": [
+        52,
+        53
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The one silver lining was that all my stats had been reset. Being able to raise the stats I wanted was a huge advantage.",
+      "baseline_range": [
+        55,
+        56
+      ],
+      "context_after_baseline": "I scrutinized the Status Window.",
+      "context_after_sol": "I scrutinized the Status Window.",
+      "context_before_baseline": "But there were no take-backs. I’d just have to suck it up and move on.",
+      "context_before_sol": "But there were no take-backs. I’d just have to suck it up and move on.",
+      "hunk_id": "H024",
+      "sol": "The one silver lining was that all my stats had been reset. Being able to raise whichever stats I wanted was a huge advantage.",
+      "sol_range": [
+        55,
+        56
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I couldn’t treat this place as an ordinary game.",
+      "baseline_range": [
+        58,
+        59
+      ],
+      "context_after_baseline": "My life was on the line. If I dumped everything into Strength or Agility like I had in the RPGs I played as a student, I’d be dead in no time.",
+      "context_after_sol": "My life was on the line. If I dumped everything into Strength or Agility like I had in the RPGs I played as a student, I’d be dead in no time.",
+      "context_before_baseline": "*This isn’t just a game. Think. Think, think…*",
+      "context_before_sol": "*This isn’t just a game. Think. Think, think…*",
+      "hunk_id": "H025",
+      "sol": "I couldn’t treat this place like an ordinary game.",
+      "sol_range": [
+        58,
+        59
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was another name for the kind of qi—mana or aura—that high-ranking Hunters used in the real world.",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "context_after_baseline": "In most martial-arts novels, old geezers with one foot in the grave could chew up vigorous young masters and toy with them however they pleased—all because they possessed enormous internal energy.",
+      "context_after_sol": "In most martial-arts novels, old geezers with one foot in the grave could chew up vigorous young masters and toy with them however they pleased, all because they possessed enormous internal energy.",
+      "context_before_baseline": "Internal energy, or inner power.",
+      "context_before_sol": "Internal energy, or inner power.",
+      "hunk_id": "H026",
+      "sol": "It was another name for qi—the sort of thing high-ranking Hunters in the real world called mana or aura.",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In most martial-arts novels, old geezers with one foot in the grave could chew up vigorous young masters and toy with them however they pleased—all because they possessed enormous internal energy.",
+      "baseline_range": [
+        64,
+        65
+      ],
+      "context_after_baseline": "Martial arts meant internal energy. And when you thought of a master, you thought of a master of internal energy. There was a reason people called internal energy the yardstick of a martial artist’s strength.",
+      "context_after_sol": "Martial arts meant internal energy. And when you thought of a master, you thought of a master of internal energy. There was a reason people called internal energy the yardstick of a martial artist’s strength.",
+      "context_before_baseline": "It was another name for the kind of qi—mana or aura—that high-ranking Hunters used in the real world.",
+      "context_before_sol": "It was another name for qi—the sort of thing high-ranking Hunters in the real world called mana or aura.",
+      "hunk_id": "H027",
+      "sol": "In most martial-arts novels, old geezers with one foot in the grave could chew up vigorous young masters and toy with them however they pleased, all because they possessed enormous internal energy.",
+      "sol_range": [
+        64,
+        65
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I decided to exclude Intelligence and Charm.",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "context_after_baseline": "*They won’t help me.*",
+      "context_after_sol": "*They won’t help me.*",
+      "context_before_baseline": "Strength, Stamina, Agility, Intelligence, and Charm.",
+      "context_before_sol": "Strength, Stamina, Agility, Intelligence, and Charm.",
+      "hunk_id": "H028",
+      "sol": "I decided to rule out Intelligence and Charm.",
+      "sol_range": [
+        74,
+        75
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Fortunately, I was a professional Hunter with seven years of experience, and I knew exactly what was needed to stay alive.",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "context_after_baseline": "*Thirty points each into Strength and Stamina. Forty into Agility.*",
+      "context_after_sol": "*Thirty points each into Strength and Stamina. Forty into Agility.*",
+      "context_before_baseline": "My goal was survival and logging out—not taking the college entrance exam or dating.",
+      "context_before_sol": "My goal was survival and logging out—not taking the college entrance exam or dating.",
+      "hunk_id": "H029",
+      "sol": "Fortunately, I was a professional Hunter with seven years of experience, and I knew exactly what it took to stay alive.",
+      "sol_range": [
+        77,
+        78
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That gave me decent power and endurance, with Agility as my strongest stat. It was also the fighting style I’d grown accustomed to over seven years.",
+      "baseline_range": [
+        79,
+        80
+      ],
+      "context_after_baseline": "> **System**\n>\n> Apply these settings?",
+      "context_after_sol": "> **System**\n>\n> Apply these settings?",
+      "context_before_baseline": "*Thirty points each into Strength and Stamina. Forty into Agility.*",
+      "context_before_sol": "*Thirty points each into Strength and Stamina. Forty into Agility.*",
+      "hunk_id": "H030",
+      "sol": "That gave me decent strength and stamina, along with excellent evasiveness. It was also the fighting style I’d grown accustomed to over the past seven years.",
+      "sol_range": [
+        79,
+        80
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "민첩",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "Agility"
+        }
+      ]
+    },
+    {
+      "baseline": "As the number of unassigned points vanished, I felt the System’s power seep through me from head to toe, reaching even the parts of my body I couldn’t see. It connected, gathered, and dispersed.",
+      "baseline_range": [
+        86,
+        87
+      ],
+      "context_after_baseline": "For an instant, heat swept through my body as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "context_after_sol": "For an instant, heat swept through me as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "context_before_baseline": "One hundred points in total.",
+      "context_before_sol": "One hundred points in total.",
+      "hunk_id": "H031",
+      "sol": "As the number of unassigned points vanished, I felt the System’s power seep through me from head to toe, reaching even the unseen depths of my body. It connected. Gathered. Loosened.",
+      "sol_range": [
+        86,
+        87
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "For an instant, heat swept through my body as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "baseline_range": [
+        87,
+        88
+      ],
+      "context_after_baseline": "And then I was stunned.",
+      "context_after_sol": "And then I froze in shock.",
+      "context_before_baseline": "As the number of unassigned points vanished, I felt the System’s power seep through me from head to toe, reaching even the parts of my body I couldn’t see. It connected, gathered, and dispersed.",
+      "context_before_sol": "As the number of unassigned points vanished, I felt the System’s power seep through me from head to toe, reaching even the unseen depths of my body. It connected. Gathered. Loosened.",
+      "hunk_id": "H032",
+      "sol": "For an instant, heat swept through me as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "sol_range": [
+        87,
+        88
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "And then I was stunned.",
+      "baseline_range": [
+        88,
+        89
+      ],
+      "context_after_baseline": "“Th-this…”",
+      "context_after_sol": "“Th-this…”",
+      "context_before_baseline": "For an instant, heat swept through my body as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "context_before_sol": "For an instant, heat swept through me as if I’d swallowed the sun. Only after the lingering warmth faded could I finally open my eyes.",
+      "hunk_id": "H033",
+      "sol": "And then I froze in shock.",
+      "sol_range": [
+        88,
+        89
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My voice trembled despite myself. It wasn’t the shock of an unfamiliar sensation. It was a feeling I’d experienced only once long ago—but could never forget—coming rushing back to me.",
+      "baseline_range": [
+        90,
+        91
+      ],
+      "context_after_baseline": "How could I forget? That day, seven years ago.",
+      "context_after_sol": "How could I forget that day seven years ago?",
+      "context_before_baseline": "“Th-this…”",
+      "context_before_sol": "“Th-this…”",
+      "hunk_id": "H034",
+      "sol": "My voice trembled despite myself. Not from the shock of an unfamiliar sensation, but because a feeling I’d experienced only once long ago—one I could never forget—had come rushing back.",
+      "sol_range": [
+        90,
+        91
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "How could I forget? That day, seven years ago.",
+      "baseline_range": [
+        91,
+        92
+      ],
+      "context_after_baseline": "*Awakening…!*",
+      "context_after_sol": "*Awakening…!*",
+      "context_before_baseline": "My voice trembled despite myself. It wasn’t the shock of an unfamiliar sensation. It was a feeling I’d experienced only once long ago—but could never forget—coming rushing back to me.",
+      "context_before_sol": "My voice trembled despite myself. Not from the shock of an unfamiliar sensation, but because a feeling I’d experienced only once long ago—one I could never forget—had come rushing back.",
+      "hunk_id": "H035",
+      "sol": "How could I forget that day seven years ago?",
+      "sol_range": [
+        91,
+        92
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "When I opened my eyes again, I realized that I had been chosen. The chosen 0.1 percent. I had become an Awakened.",
+      "baseline_range": [
+        94,
+        95
+      ],
+      "context_after_baseline": "Remembering how happy I’d been that day only made me more confused.",
+      "context_after_sol": "Remembering the exhilaration I’d felt that day only made me more confused now.",
+      "context_before_baseline": "The sensation had come without warning, leaving my twenty-year-old self completely helpless.",
+      "context_before_sol": "The sensation had come without warning, leaving my twenty-year-old self completely helpless.",
+      "hunk_id": "H036",
+      "sol": "When I opened my eyes again, I realized I had been chosen. One of the chosen 0.1 percent. I had become an Awakened.",
+      "sol_range": [
+        94,
+        95
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Remembering how happy I’d been that day only made me more confused.",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "context_after_baseline": "“Why is this happening here?”",
+      "context_after_sol": "“Why is this happening here?”",
+      "context_before_baseline": "When I opened my eyes again, I realized that I had been chosen. The chosen 0.1 percent. I had become an Awakened.",
+      "context_before_sol": "When I opened my eyes again, I realized I had been chosen. One of the chosen 0.1 percent. I had become an Awakened.",
+      "hunk_id": "H037",
+      "sol": "Remembering the exhilaration I’d felt that day only made me more confused now.",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I licked my lips, already dry, and thought.",
+      "baseline_range": [
+        100,
+        101
+      ],
+      "context_after_baseline": "*Right. Focus on the present for now. There are only two things left before Tutorial—Stage 2 is complete.*",
+      "context_after_sol": "*Right. Focus on the present. There are only two things left before Tutorial—Stage 2 is complete.*",
+      "context_before_baseline": "> **System**\n>\n> Check and Distribute Status Window Points complete.",
+      "context_before_sol": "> **System**\n>\n> Check and Distribute Status Window Points complete.",
+      "hunk_id": "H038",
+      "sol": "I licked my parched lips and thought.",
+      "sol_range": [
+        100,
+        101
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Right. Focus on the present for now. There are only two things left before Tutorial—Stage 2 is complete.*",
+      "baseline_range": [
+        101,
+        102
+      ],
+      "context_after_baseline": "*Check the Skill Window.*",
+      "context_after_sol": "*Check the Skill Window.*",
+      "context_before_baseline": "I licked my lips, already dry, and thought.",
+      "context_before_sol": "I licked my parched lips and thought.",
+      "hunk_id": "H039",
+      "sol": "*Right. Focus on the present. There are only two things left before Tutorial—Stage 2 is complete.*",
+      "sol_range": [
+        101,
+        102
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Skill Window\n>\n> LV. 10 Jin Taekyung\n>\n> **Cultivation Technique:** Jin Family’s Cultivation Technique (Unavailable)\n>\n> **Martial Arts:** Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> **Sinews:** 10\n>\n> **Bones:** 10\n>\n> **Unassigned Points:** 100\n>\n> - Distribute your unassigned points.\n> - Martial arts cannot be used.\n> - You have forgotten the formula because you have not trained in martial arts for a long time.",
+      "baseline_range": [
+        103,
+        104
+      ],
+      "context_after_baseline": "Opening the Skill Window had been a good idea. The moment I saw it, every stray thought vanished and post-nut clarity hit me.",
+      "context_after_sol": "Opening the Skill Window had been a good idea. The moment I saw it, every stray thought vanished and post-nut clarity hit me.",
+      "context_before_baseline": "*Check the Skill Window.*",
+      "context_before_sol": "*Check the Skill Window.*",
+      "hunk_id": "H040",
+      "sol": "> **System**\n>\n> Skill Window\n>\n> LV. 10 Jin Taekyung\n>\n> **Cultivation Technique:** Jin Family’s Cultivation Technique (Unavailable)\n>\n> **Martial Arts:** Jin Family’s Spear Technique / Jin Family’s Manoeuvre Technique (Unavailable)\n>\n> **Sinews:** 10\n>\n> **Bones:** 10\n>\n> **Unassigned Points:** 100\n>\n> - Distribute your unassigned points.\n> - Martial arts cannot be used.\n> - You have forgotten the formulas because you have not trained in martial arts for a long time.",
+      "sol_range": [
+        103,
+        104
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Had I counted wrong? Or were the letters too small for me to see? I widened my eyes and stared at the Skill Window.",
+      "baseline_range": [
+        106,
+        107
+      ],
+      "context_after_baseline": "One, two, three…and three.",
+      "context_after_sol": "One, two, three…and that was it.",
+      "context_before_baseline": "*One, two, three.*",
+      "context_before_sol": "*One, two, three.*",
+      "hunk_id": "H041",
+      "sol": "Had I counted wrong? Or were the letters too small for me to see? I opened my eyes wide and stared at the Skill Window.",
+      "sol_range": [
+        106,
+        107
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "One, two, three…and three.",
+      "baseline_range": [
+        107,
+        108
+      ],
+      "context_after_baseline": "The Jin Family’s Cultivation Technique, the Jin Family’s Spear Technique, and the Jin Family’s Manoeuvre Technique. Those were all the skills Jin Taekyung—or rather, I—had. And apparently, I’d forgotten every one of them.",
+      "context_after_sol": "The Jin Family’s Cultivation Technique, the Jin Family’s Spear Technique, and the Jin Family’s Manoeuvre Technique. Those were all the skills Jin Taekyung—or rather, I—possessed. And apparently, I’d forgotten every one of them.",
+      "context_before_baseline": "Had I counted wrong? Or were the letters too small for me to see? I widened my eyes and stared at the Skill Window.",
+      "context_before_sol": "Had I counted wrong? Or were the letters too small for me to see? I opened my eyes wide and stared at the Skill Window.",
+      "hunk_id": "H042",
+      "sol": "One, two, three…and that was it.",
+      "sol_range": [
+        107,
+        108
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The Jin Family’s Cultivation Technique, the Jin Family’s Spear Technique, and the Jin Family’s Manoeuvre Technique. Those were all the skills Jin Taekyung—or rather, I—had. And apparently, I’d forgotten every one of them.",
+      "baseline_range": [
+        108,
+        109
+      ],
+      "context_after_baseline": "*This is driving me insane.*",
+      "context_after_sol": "*This is driving me insane.*",
+      "context_before_baseline": "One, two, three…and three.",
+      "context_before_sol": "One, two, three…and that was it.",
+      "hunk_id": "H043",
+      "sol": "The Jin Family’s Cultivation Technique, the Jin Family’s Spear Technique, and the Jin Family’s Manoeuvre Technique. Those were all the skills Jin Taekyung—or rather, I—possessed. And apparently, I’d forgotten every one of them.",
+      "sol_range": [
+        108,
+        109
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Right. I could learn martial arts later.",
+      "baseline_range": [
+        112,
+        113
+      ],
+      "context_after_baseline": "*At least I have unassigned points.*",
+      "context_after_sol": "*At least I have unassigned points.*",
+      "context_before_baseline": "Only after calming down somewhat could I look at the Skill Window with a clear head.",
+      "context_before_sol": "Only after calming down somewhat could I look at the Skill Window with a clear head.",
+      "hunk_id": "H044",
+      "sol": "Right. I could always learn more martial arts later.",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Trying to comfort myself with that thought, I looked at the Skill Window again. Maybe because it was so empty, one word immediately caught my eye.",
+      "baseline_range": [
+        114,
+        115
+      ],
+      "context_after_baseline": "*Sinews and Bones. I’ve seen those a lot in martial-arts novels.*",
+      "context_after_sol": "*Sinews and Bones. I’ve seen those a lot in martial-arts novels.*",
+      "context_before_baseline": "*At least I have unassigned points.*",
+      "context_before_sol": "*At least I have unassigned points.*",
+      "hunk_id": "H045",
+      "sol": "Trying to console myself with that thought, I looked at the Skill Window again. Maybe because it was so empty, two terms immediately caught my eye.",
+      "sol_range": [
+        114,
+        115
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Sinews referred to tendons and veins, while bones meant muscles and the skeletal frame.",
+      "baseline_range": [
+        116,
+        117
+      ],
+      "context_after_baseline": "In other words, Sinews were for an internal-energy-focused build, while Bones were for external martial arts. I decided to lean a little more toward Bones.",
+      "context_after_sol": "In other words, Sinews were for an internal-energy-focused build, while Bones were for external martial arts. I decided to lean a little more toward Bones.",
+      "context_before_baseline": "*Sinews and Bones. I’ve seen those a lot in martial-arts novels.*",
+      "context_before_sol": "*Sinews and Bones. I’ve seen those a lot in martial-arts novels.*",
+      "hunk_id": "H046",
+      "sol": "Sinews referred to tendons and blood vessels, while Bones meant muscles and the skeletal frame.",
+      "sol_range": [
+        116,
+        117
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Magic and aura… I’d seen them with my own eyes, but using them myself was out of the question. I couldn’t even dream of it.",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "context_after_baseline": "*You can only handle what you’ve tried before.*",
+      "context_after_sol": "*You’re always better at something you’ve done before.*",
+      "context_before_baseline": "In the real world, I was an F-rank Hunter. In Murim terms, I was a third-rate martial artist, or maybe even worse.",
+      "context_before_sol": "In the real world, I was an F-rank Hunter. In Murim terms, I was a third-rate martial artist, or maybe even worse.",
+      "hunk_id": "H047",
+      "sol": "Magic, aura… I’d seen them with my own eyes, but using them myself was out of the question. I couldn’t even dream of it.",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*You can only handle what you’ve tried before.*",
+      "baseline_range": [
+        122,
+        123
+      ],
+      "context_after_baseline": "You had to have used internal energy before to know how to use it. The way I’d fought over the past seven years was closer to that of an external martial artist.",
+      "context_after_sol": "You had to have used internal energy before to know how to use it. The way I’d fought over the past seven years was closer to that of an external martial artist.",
+      "context_before_baseline": "Magic and aura… I’d seen them with my own eyes, but using them myself was out of the question. I couldn’t even dream of it.",
+      "context_before_sol": "Magic, aura… I’d seen them with my own eyes, but using them myself was out of the question. I couldn’t even dream of it.",
+      "hunk_id": "H048",
+      "sol": "*You’re always better at something you’ve done before.*",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This time, what swept through me was nothing like the exhilaration I’d felt from the Status Window. If anything, it was pain. I could hear the bones in my body twisting deep inside.",
+      "baseline_range": [
+        127,
+        128
+      ],
+      "context_after_baseline": "*Urgh.*",
+      "context_after_sol": "*Urgh.*",
+      "context_before_baseline": "*Yes. Apply.*",
+      "context_before_sol": "*Yes. Apply.*",
+      "hunk_id": "H049",
+      "sol": "This time, what swept through me was nothing like the exhilaration I’d felt from the Status Window. If anything, it was pain. I could hear the bones deep inside my body twisting.",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Was it seconds? Minutes? I had no idea. When the pain passed, I was left panting—and rewarded for my endurance.",
+      "baseline_range": [
+        129,
+        130
+      ],
+      "context_after_baseline": "*My build…*",
+      "context_after_sol": "*My build…*",
+      "context_before_baseline": "*Urgh.*",
+      "context_before_sol": "*Urgh.*",
+      "hunk_id": "H050",
+      "sol": "Seconds? Minutes? I had no idea. When the pain passed, all that remained was my ragged breathing—and the reward for enduring it.",
+      "sol_range": [
+        129,
+        130
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It had changed. My shoulders had broadened by half a span, and muscle had hardened across my front and back. The silk clothes that had felt a little loose now felt constricting.",
+      "baseline_range": [
+        131,
+        132
+      ],
+      "context_after_baseline": "When I clenched my fists, I felt strength and springiness I hadn’t been able to sense before. I’d grown stronger. It was an experience I’d never had in the real world.",
+      "context_after_sol": "When I clenched my fists, I felt strength and springiness that hadn’t been there before. I’d grown stronger. It was something I’d never experienced in the real world.",
+      "context_before_baseline": "*My build…*",
+      "context_before_sol": "*My build…*",
+      "hunk_id": "H051",
+      "sol": "It had changed. My shoulders had broadened by half a span, and solid muscle covered my chest and back. The silk clothes that had been slightly loose now felt constricting.",
+      "sol_range": [
+        131,
+        132
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "When I clenched my fists, I felt strength and springiness I hadn’t been able to sense before. I’d grown stronger. It was an experience I’d never had in the real world.",
+      "baseline_range": [
+        132,
+        133
+      ],
+      "context_after_baseline": "*Because there’s no System there.*",
+      "context_after_sol": "*Because there’s no System there.*",
+      "context_before_baseline": "It had changed. My shoulders had broadened by half a span, and muscle had hardened across my front and back. The silk clothes that had felt a little loose now felt constricting.",
+      "context_before_sol": "It had changed. My shoulders had broadened by half a span, and solid muscle covered my chest and back. The silk clothes that had been slightly loose now felt constricting.",
+      "hunk_id": "H052",
+      "sol": "When I clenched my fists, I felt strength and springiness that hadn’t been there before. I’d grown stronger. It was something I’d never experienced in the real world.",
+      "sol_range": [
+        132,
+        133
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I could see my abilities through the Status Window and improve the ones I needed. I didn’t know where the endpoint was, but I could keep moving forward.",
+      "baseline_range": [
+        136,
+        137
+      ],
+      "context_after_baseline": "*I’ll get stronger. And I’ll survive.*",
+      "context_after_sol": "*I’ll get stronger. And I’ll survive.*",
+      "context_before_baseline": "But Murim was different.",
+      "context_before_sol": "But Murim was different.",
+      "hunk_id": "H053",
+      "sol": "I could see my abilities through the Status Window and improve the ones I needed. I didn’t know where the limit was, but I could keep moving forward.",
+      "sol_range": [
+        136,
+        137
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Stronger, stronger, stronger. And survive.",
+      "baseline_range": [
+        140,
+        141
+      ],
+      "context_after_baseline": "Just as I clenched my fist and made that vow, another notification rang out.",
+      "context_after_sol": "Just as I clenched my fist and made that vow, another notification rang out.",
+      "context_before_baseline": "F-rank Hunter Jin Taekyung had something Murim’s Jin Taekyung didn’t: experience. And desire.",
+      "context_before_sol": "F-rank Hunter Jin Taekyung had something Murim’s Jin Taekyung didn’t: experience. And desire.",
+      "hunk_id": "H054",
+      "sol": "Stronger. Stronger. Stronger. And survive.",
+      "sol_range": [
+        140,
+        141
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A refreshing sensation swept over me, and I found myself dressed in a black martial uniform.",
+      "baseline_range": [
+        150,
+        151
+      ],
+      "context_after_baseline": "It wasn’t just my clothes that had changed. A headband—commonly called a hero’s headband in martial-arts novels—was tied firmly around my forehead, and I was wearing leather shoes instead of silk ones.",
+      "context_after_sol": "It wasn’t just my clothes that had changed. A headband—commonly called a hero’s headband in martial-arts novels—was tied firmly around my forehead, and leather shoes had replaced my silk ones.",
+      "context_before_baseline": "*Equip item.*",
+      "context_before_sol": "*Equip item.*",
+      "hunk_id": "H055",
+      "sol": "A cool sensation swept over my body, and suddenly I was dressed in a black martial uniform.",
+      "sol_range": [
+        150,
+        151
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It wasn’t just my clothes that had changed. A headband—commonly called a hero’s headband in martial-arts novels—was tied firmly around my forehead, and I was wearing leather shoes instead of silk ones.",
+      "baseline_range": [
+        151,
+        152
+      ],
+      "context_after_baseline": "Did I at least look like a run-of-the-mill martial artist now?",
+      "context_after_sol": "Did I at least look like a run-of-the-mill martial artist now?",
+      "context_before_baseline": "A refreshing sensation swept over me, and I found myself dressed in a black martial uniform.",
+      "context_before_sol": "A cool sensation swept over my body, and suddenly I was dressed in a black martial uniform.",
+      "hunk_id": "H056",
+      "sol": "It wasn’t just my clothes that had changed. A headband—commonly called a hero’s headband in martial-arts novels—was tied firmly around my forehead, and leather shoes had replaced my silk ones.",
+      "sol_range": [
+        151,
+        152
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The moment I thought about storing the silk clothes I’d taken off, they vanished from my hands.",
+      "baseline_range": [
+        154,
+        155
+      ],
+      "context_after_baseline": "*An Inventory. This is incredibly convenient.* It might even be useful in combat, depending on how I used it.",
+      "context_after_sol": "*An Inventory. This is incredibly convenient.* Depending on how I used it, it might even come in handy during combat.",
+      "context_before_baseline": "*Store item.*",
+      "context_before_sol": "*Store item.*",
+      "hunk_id": "H057",
+      "sol": "The moment I thought about storing the silk clothes in my hands, they vanished.",
+      "sol_range": [
+        154,
+        155
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*An Inventory. This is incredibly convenient.* It might even be useful in combat, depending on how I used it.",
+      "baseline_range": [
+        155,
+        156
+      ],
+      "context_after_baseline": "*Having an Inventory would make raids so much easier.*",
+      "context_after_sol": "*Having an Inventory would make raids so much easier.*",
+      "context_before_baseline": "The moment I thought about storing the silk clothes I’d taken off, they vanished from my hands.",
+      "context_before_sol": "The moment I thought about storing the silk clothes in my hands, they vanished.",
+      "hunk_id": "H058",
+      "sol": "*An Inventory. This is incredibly convenient.* Depending on how I used it, it might even come in handy during combat.",
+      "sol_range": [
+        155,
+        156
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With one of these, I could hang back and collect Magic Gems without even fighting the monsters. I’d make enough in a year to put up a whole building.",
+      "baseline_range": [
+        157,
+        158
+      ],
+      "context_after_baseline": "*But that’s not going to happen.*",
+      "context_after_sol": "*But that’s not going to happen.*",
+      "context_before_baseline": "*Having an Inventory would make raids so much easier.*",
+      "context_before_sol": "*Having an Inventory would make raids so much easier.*",
+      "hunk_id": "H059",
+      "sol": "With one of these, I could hang back and collect Magic Gems without even fighting the monsters. I’d make enough in a year to buy a whole building.",
+      "sol_range": [
+        157,
+        158
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Inventory\n>\n> Sharp Spear\n>\n> **Grade:** Second Rate\n>\n> **Restriction:** None\n>\n> **Effect:** 5% chance to inflict Bleeding on hit\n>\n> **Description:** A reasonably usable spear. It’s sharp, so be careful when handling it.",
+      "baseline_range": [
+        165,
+        166
+      ],
+      "context_after_baseline": "“…”",
+      "context_after_sol": "“…”",
+      "context_before_baseline": "I immediately opened the Inventory to check the new item.",
+      "context_before_sol": "I immediately opened the Inventory to check the new item.",
+      "hunk_id": "H060",
+      "sol": "> **System**\n>\n> Inventory\n>\n> Sharp Spear\n>\n> **Grade:** Second Rate\n>\n> **Restriction:** None\n>\n> **Effect:** 5% chance to inflict Bleeding on hit\n>\n> **Description:** A reasonably serviceable spear. It is sharp, so exercise caution when handling it.",
+      "sol_range": [
+        165,
+        166
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The moment the shaft of the spear appeared in my grasp—",
+      "baseline_range": [
+        169,
+        170
+      ],
+      "context_after_baseline": "Ding.",
+      "context_after_sol": "Ding.",
+      "context_before_baseline": "*Equip item.*",
+      "context_before_sol": "*Equip item.*",
+      "hunk_id": "H061",
+      "sol": "The moment the spear shaft appeared in my grasp—",
+      "sol_range": [
+        169,
+        170
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 3\n>\n> You have learned how to grow stronger through the System.\n>\n> What you learn must be put into practice.\n>\n> Defeat the bandits who have appeared without warning!\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Defeat the bandits (Incomplete)\n>\n> **Reward:** Recover from all injuries\n>\n> Chain Quest\n>\n> **Failure:** Death",
+      "baseline_range": [
+        182,
+        183
+      ],
+      "context_after_baseline": "*Some minor problem.* My ass.",
+      "context_after_sol": "*Some minor problem.* My ass.",
+      "context_before_baseline": "Ding.",
+      "context_before_sol": "Ding.",
+      "hunk_id": "H062",
+      "sol": "> **System**\n>\n> Quest\n>\n> Tutorial—Stage 3\n>\n> You have learned how to grow stronger through the System.\n>\n> What you learn must produce results.\n>\n> Defeat the bandits who have appeared without warning!\n>\n> **Grade:** Tutorial (Chain Quest)\n>\n> **Restriction:** First-time player\n>\n> **Objective:** Defeat the bandits (Incomplete)\n>\n> **Reward:** Recover from all injuries\n>\n> Chain Quest\n>\n> **Failure:** Death",
+      "sol_range": [
+        182,
+        183
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 184,
+  "sol_sha256": "70b7514800909e44969daa4f535819ce016f6e05bc2af8cfc2b2fc7f5b94d5bb",
+  "version": 1
+}

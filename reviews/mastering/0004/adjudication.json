@@ -1,0 +1,462 @@
+{
+  "chapter": 4,
+  "decisions": [
+    {
+      "decision": "SOL",
+      "hunk_id": "H001",
+      "reason": "Captures 생전 ('in his life') and uses idiomatic 'easy marks'; faithful and more natural."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H002",
+      "reason": "'the name Jang Sam the Heavenly Axe' renders the 하면 ('when one says') framing naturally."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "'simply refused to stop' reads more naturally than bare 'refused' without changing meaning."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H004",
+      "reason": "'had been walking since leaving' is smoother than 'had he walked, leaving'; same content."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H005",
+      "reason": "'out here' adds a remoteness not present in 여기까지 (just 'here'); BASE stays precise."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H006",
+      "reason": "홀리다 = possessed/bewitched; 'led him astray' changes the image."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H007",
+      "reason": "'worth at least a thousand nyang' is the more natural word order."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H008",
+      "reason": "Source says put power into the dantian, not 'tighten the muscles in'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H009",
+      "reason": "'battle' coheres with the 'even aerial combat' extension; 'hell' is off-metaphor."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "'ace up his sleeve' is the standard idiom for 믿는 구석."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H011",
+      "reason": "'unless they belong to…' corrects the vague subject and flows more naturally; faithful."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H012",
+      "reason": "'kept calling' preserves the repetition of 운운; SOL drops it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H013",
+      "reason": "Terser; 'beyond anything' is cleaner than 'beyond what' with no loss."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H014",
+      "reason": "될까? is subjectless/self-directed; 'we' adds an unstated subject the following singular sentence undercuts."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H015",
+      "reason": "중과부적 concerns being outnumbered; BASE's 'skill' is unsupported by the source."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H016",
+      "reason": "Full 'is it' reads more naturally in dialogue."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H017",
+      "reason": "Source quotes '가깝다' (close) → 'nearby'; SOL substitutes the coachman's phrase."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H018",
+      "reason": "무슨 is a mild scoff; 'my ass' is cruder than the Korean."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H019",
+      "reason": "대륙 배경 = continent setting; 'modeled after a continent' adds unsupported specificity."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H020",
+      "reason": "BASE omits 지금처럼; SOL's 'Especially when he said' over-interprets. Minimal fragment restores it.",
+      "replacement": "The coachman's unflappable attitude practically screamed that he was a master. Just like now."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H021",
+      "reason": "'horsewhip' matches 말채찍 and reads more concisely."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H022",
+      "reason": "후계자 = heir; 'scion' (merely a descendant) is less precise."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H023",
+      "reason": "'taken it as permission' is cleaner than 'as my permission'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H024",
+      "reason": "'hear what the Heavenly Axe is saying' preserves 말 (words); SOL drops it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H025",
+      "reason": "넘겨다보다 = peer through, not 'lean out'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H026",
+      "reason": "'merely' is an added emphasis not in 가소롭다는 듯이."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H027",
+      "reason": "'blocking our way' is not in the source; SOL stays faithful."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H028",
+      "reason": "Style guide prefers 'laid into them' over stiff 'launched into a stern denunciation'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H029",
+      "reason": "고혈 = lifeblood, and the phrasing is smoother."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H030",
+      "reason": "가루 = 'dust/powder', not 'them'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H031",
+      "reason": "장난이 아니 = 'no joke'; BASE softens to 'a little extreme'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H032",
+      "reason": "황족 = imperial family member, not specifically a 'prince'; 'let us see' also flows better."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H033",
+      "reason": "SOL drops 지금 ('now') from 'not retreating now'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H034",
+      "reason": "'see … in action' matches the conversational narrator better than 'witness'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H035",
+      "reason": "'To think they would dare…' matches the coachman's outraged register."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H036",
+      "reason": "아니었어 is past tense → 'Weren't you'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H037",
+      "reason": "'understood everything' reads more naturally than 'knew everything'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H038",
+      "reason": "Space after ellipsis normalized."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H039",
+      "reason": "Italic 'That' renders the 바로 그 emphasis."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H040",
+      "reason": "이 시간이면 = 'at this hour', more precise than 'right now'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H041",
+      "reason": "Preserves 표정 ('expression') and avoids unsupported 'inflatable tube man' specificity."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H042",
+      "reason": "'only to turn out' preserves the irony of 이라니; SOL flattens it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H043",
+      "reason": "Two-burst laugh matches 으하, 으하하하; SOL's pattern differs without gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H044",
+      "reason": "축축하다 = damp; 'drenched' intensifies."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H045",
+      "reason": "재수 없다 = unlucky; SOL keeps the ill-luck subject."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H046",
+      "reason": "'my tense gaze' vs 'a tense gaze' — no meaningful difference."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H047",
+      "reason": "'beat guys that huge' is natural English; 'beat bodies' is awkward."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H048",
+      "reason": "Standalone 'No.' gives the reversal its punch; faithful to the rhetoric."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H049",
+      "reason": "Space after ellipsis normalized."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H050",
+      "reason": "쯤 = 'about'; SOL preserves the approximation."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H051",
+      "reason": "꼭 = 'exactly' (BASE's 'a lot like' weakens); ellipsis matches source."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H052",
+      "reason": "날아오는 = flying toward; 'until … came flying at me' is accurate and clearer."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H053",
+      "reason": "Korean uses '타임' (time out); SOL preserves the term."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H054",
+      "reason": "고꾸라지다 = flop/keel over; 'flopped' captures the comic clumsiness."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H055",
+      "reason": "어쩌면 = 'might'; the dawning realization lands well."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H056",
+      "reason": "'inside and out' and terser phrasing; faithful."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H057",
+      "reason": "정도 (approximate level) → 'about the size of'; BASE is too definite."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H058",
+      "reason": "'good with poison darts' captures 잘 쏘지; more concise."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H059",
+      "reason": "바짝 마른 = parched; stronger than 'dry'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H060",
+      "reason": "'return from military service' reads more naturally."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H061",
+      "reason": "'Laugh while you can' matches 웃어 둬라; more concise."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H062",
+      "reason": "Preserves 뚫고 ('pierced'); SOL softens it to 'through'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H063",
+      "reason": "'just from' is more economical than 'from the simple act of'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H064",
+      "reason": "'once more' vs 'once again' — indistinguishable."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H065",
+      "reason": "Fixes BASE's lowercase sentence start; 'Now that I see you' renders 오늘 보니."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H066",
+      "reason": "느슨하게 is adverbial → 'loosely'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H067",
+      "reason": "'nothing but' renders the -만 ('only')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H068",
+      "reason": "헌터라는 이름의 무림인 = 'a martial artist called a Hunter'; BASE's 'in all but name' reverses the sense."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H069",
+      "reason": "곧 = 'meant'; terser and precise."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H070",
+      "reason": "'cut in half' vs 'half the distance was gone' — no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H071",
+      "reason": "몸값 = ransom; more precise than 'price'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H072",
+      "reason": "뜨겁게 = heat; direct noun beats vague 'something hot'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H073",
+      "reason": "Comma placement only; no meaningful difference."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H074",
+      "reason": "Space after ellipsis normalized."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H075",
+      "reason": "Punchy 'faster, lighter, stronger!' matches the Korean without added 'to make me'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H076",
+      "reason": "'pulled taut like a bowstring' is the more idiomatic collocation."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H077",
+      "reason": "Source keeps 'Then came the final step' with the prior paragraph; splitting it adds an unsupported pause."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H078",
+      "reason": "'in that frozen moment' reads more naturally than 'in frozen time'."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H079",
+      "reason": "'No way…' is the natural rendering of 말도 안……; SOL's internal pause is unsupported."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H080",
+      "reason": "Preserves 'reeked just from looking at them'; SOL adds 'from here' and mutates the construction."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H081",
+      "reason": "Source is a bare fragment (그 모든 것들이); SOL keeps it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H082",
+      "reason": "Project style forbids square brackets for UI terms."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H083",
+      "reason": "'had thrust' vs 'thrust' — no meaningful difference."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H084",
+      "reason": "떨리다 = tremble; BASE substitutes 'flickered'."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H085",
+      "reason": "Multiple System notices popped, so plural 'Notifications' fits the scene."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H086",
+      "reason": "'enhance' is the natural collocation for powering up abilities."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H087",
+      "reason": "점점 = 'beginning to'; BASE's 'suddenly' mistranslates."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H088",
+      "reason": "SOL drops 위태롭게; BASE retains an adverb rendering it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H089",
+      "reason": "'Anyone else want to try?' matches 더 덤빌 사람? colloquially."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H090",
+      "reason": "'can go first' fits the internal challenge; 'Start with' reads like an external command."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H091",
+      "reason": "'threw themselves flat on the ground' is vivid and natural for 넙죽 엎드렸다."
+    }
+  ],
+  "version": 1
+}

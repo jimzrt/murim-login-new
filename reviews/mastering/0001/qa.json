@@ -1,0 +1,31 @@
+{
+  "chapter": 1,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.234,
+    "source_characters": 4961,
+    "source_paragraphs": 143,
+    "translation_characters": 11081,
+    "translation_paragraphs": 134
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "로그아웃",
+        "preferred": "Logout"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

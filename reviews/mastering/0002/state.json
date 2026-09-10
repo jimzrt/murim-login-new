@@ -1,0 +1,16 @@
+{
+  "baseline_sha256": "6b16e91be37bced8aa8ebccd39c22704f297378549c2cf62c0c9c1d9c9a177fd",
+  "chapter": 2,
+  "decisions": {
+    "BASE": 11,
+    "REPAIR": 0,
+    "SOL": 33
+  },
+  "final_sha256": "88f139bba2ce6260cc9ddf43f9424d7cdc62300b8936c635fe04767bc22a5484",
+  "hunk_count": 44,
+  "qa_passed": true,
+  "sol_sha256": "ee766e47cf60512eb6c2a3ba8127734c006fcb906b0a1efa7e32cde54917772a",
+  "source_sha256": "f483e29e0c9a81f15a95337f0f469dcfae40d04a4ea249edcdb742a0c42e3191",
+  "stage": "VERIFIED",
+  "version": 1
+}

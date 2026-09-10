@@ -1,0 +1,460 @@
+{
+  "chapter": 8,
+  "decisions": [
+    {
+      "decision": "SOL",
+      "hunk_id": "H001",
+      "reason": "SOL renders the physician's spoken conclusion naturally; BASE's 'There are no abnormalities' is clinical, translated-sounding dialogue."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H002",
+      "reason": "'Hearing the certainty in his voice, I nodded to myself' reads more naturally than the stiff 'I nodded inwardly at his confident tone.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "'remember anything' is the natural English completion of the question; no new information added."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H004",
+      "reason": "Cleaner clause structure; 'air' correctly renders 분위기 better than 'atmosphere.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H005",
+      "reason": "Omits the redundant repeat of the name already supplied in the immediately preceding thought line; no terminology lost from the passage."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H006",
+      "reason": "'tearing up' matches 글썽이더니, and 'That guy' (저 양반) preserves the demonstrative better than SOL's 'This guy.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H007",
+      "reason": "Preserves the source's triple 엄격 근엄 진지 as 'stern, solemn, serious' and follows the Korean order pretense-then-mask."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H008",
+      "reason": "'poor physician' is the idiomatic sense of 죄 없는; 'innocent' is literal."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H009",
+      "reason": "'diagnosis' fits a physician's 판단 better than 'assessment.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "Splitting into two sentences is smoother and more novelistic than BASE's joined clause."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H011",
+      "reason": "'worked out how I was going to play this' is more spoken-natural; equally faithful to 계산이 끝난 상태."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H012",
+      "reason": "'keep going like this' preserves 이대로; SOL drops it and offers no clear gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H013",
+      "reason": "'convenient' matches 편하다 and the phrasing is more direct than BASE's 'no better situation for me.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H014",
+      "reason": "'take care of itself' is the idiomatic rendering of 알아서 흘러가다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H015",
+      "reason": "'what you just said' is more natural spoken English."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H016",
+      "reason": "Past perfect fits the retrospective framing of the recollection."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H017",
+      "reason": "Full-question form matches the established quiz register (cf. 'What about our parents?')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H018",
+      "reason": "Removes the redundant 'unmarried bachelor.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H019",
+      "reason": "Terse 'Twenty-five' matches the clipped interrogation style."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H020",
+      "reason": "More concise and idiomatic without losing meaning."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H021",
+      "reason": "'had been ... but now he tilted' captures the 반복하던 ... 갸웃거렸다 progression."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H022",
+      "reason": "'clutched my forehead' is the natural pain gesture."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H023",
+      "reason": "Preserves 타박상=contusion and 멍=bruises; SOL's 'bruising/discoloration' blurs the two source terms."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H024",
+      "reason": "'show you to your quarters' is the idiomatic English for 안내해 드리다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H025",
+      "reason": "'would explain' captures the habitual 하고는 했다 and 'who or what' correctly splits 사람/건물."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H026",
+      "reason": "'roughly guess' is the standard collocation; SOL's 'more or less guess' offers no gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H027",
+      "reason": "BASE preserves the hedge 거겠지 ('probably'); SOL drops it and adds an unsupported inference."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H028",
+      "reason": "Avoids the unsupported 'impressive'; cleaner phrasing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H029",
+      "reason": "Difference is only a comma before 'too'; no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H030",
+      "reason": "'Your bedroom is on the second floor' is more natural than 'contains your bedroom.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H031",
+      "reason": "'collected myself' fits 정신을 차리다 better than 'came to my senses' (which implies waking)."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H032",
+      "reason": "'might as well have been an Olympic stadium' is idiomatic and faithful to 다름없다."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H033",
+      "reason": "'rose in me' matches 치솟았다; SOL's 'got the better of me' shifts the nuance to being overcome."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H034",
+      "reason": "SOL adds unsupported 'Maybe some.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H035",
+      "reason": "'flung open' captures the force of 열어젖혔다."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H036",
+      "reason": "SOL correctly restores the causal 때문이다 link but drops 언뜻 봐도; keep both.",
+      "replacement": "The exclamation slipped out the moment the door opened. There were no fluorescent lights, yet the room was bright—thanks to the silk clothes packed onto the shelves along the walls. There was an astonishing amount of them, even at a glance."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H037",
+      "reason": "Korean 물건 is singular; 'it wasn't' is more faithful than SOL's 'they weren't.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H038",
+      "reason": "More natural rhythm and clause flow."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H039",
+      "reason": "Preserves the rhetorical question form 되지 않을까; SOL flattens it to an assertion."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H040",
+      "reason": "Avoids BASE's unsupported additions 'up my spine' and 'slowly.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H041",
+      "reason": "벌컥 is an impersonal abrupt sound; BASE keeps it, while SOL adds the agent and the specific verb 'yanked.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H042",
+      "reason": "Keeps 새끼 ('bastard'); SOL sanitizes to 'shopaholic' and adds 'goddamn.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H043",
+      "reason": "'what kind of person' matches 뭐 이런 놈이 다 있지; SOL's 'what was wrong with this guy' changes the idiom."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H044",
+      "reason": "Preserves the dangling 'Could it be…' matching the unfinished 이거 어쩌면; BASE adds 'mean.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H045",
+      "reason": "Corrects BASE's error 'the next room' for 마지막 방 (the final room) and drops the body-part phrasing."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H046",
+      "reason": "'revealed what lay inside' captures 속살을 드러냈다 better than 'revealed itself.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H047",
+      "reason": "Keeps the conjunction 'And' corresponding to 그리고; no gain from dropping it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H048",
+      "reason": "'before I even realized it' matches 나도 모르게 (involuntary) better than 'before I knew it.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H049",
+      "reason": "'brushed off' is the correct collocation for dust."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H050",
+      "reason": "'My heart pounded as I read' is more natural than 'with a pounding heart.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H051",
+      "reason": "'This was it' captures the emphasis of 바로 그."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H052",
+      "reason": "Versions are equivalent; no meaningful gain from SOL's rephrasing."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H053",
+      "reason": "Korean omits the object here; 'everything' avoids inserting unsupported 'martial arts.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H054",
+      "reason": "'when I circulated my qi' fixes BASE's awkward 'applied to circulating qi.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H055",
+      "reason": "'true' is closer to 사실 than 'correct.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H056",
+      "reason": "'The good news was' matches the 그나마 다행인 건 construction."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H057",
+      "reason": "'nothing but the best' matches 알짜배기; SOL adds 'I could find.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H058",
+      "reason": "Equivalent options; no gain from reordering."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H059",
+      "reason": "Fixes a real POV error: BASE's 'I hadn't been able to leave the office' breaks the third-person Jin Wikyung scene."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H060",
+      "reason": "More direct phrasing of 알리는 한마디였다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H061",
+      "reason": "Captures 홀연히 ('without warning') that BASE drops, plus the explanatory 때문이다."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H062",
+      "reason": "Pronoun 'his residence' is faithful and natural; SOL's renaming adds nothing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H063",
+      "reason": "Avoids SOL's added object 'gave him a smile,' not present in the Korean."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H064",
+      "reason": "'Without you' is the idiomatic rendering."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H065",
+      "reason": "Present tense 'can' matches the spoken 어쩌겠습니까."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H066",
+      "reason": "'Forget it' matches 관두세 better than SOL's 'Enough.'"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H067",
+      "reason": "BASE's 'stiff eyes' is unnatural, but SOL adds unsupported 'aching' (뻑뻑한 = dry/stiff only).",
+      "replacement": "Jin Wikyung rubbed his dry eyes. Though he was in his mid-thirties, he remained unmarried. He had kept putting marriage off on the grounds that he was still young, and those delays had added up to more than a decade."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H068",
+      "reason": "Resolves the Korean double negative into clear, natural 'Had he ever been in love? Yes.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H069",
+      "reason": "More direct: 'he considered it a small price to pay' vs BASE's wordier clause."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H070",
+      "reason": "Avoids SOL's added 'tonight,' not present in the Korean."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H071",
+      "reason": "'the mood' renders 분위기 without adding an unsupported possessive."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H072",
+      "reason": "Equivalent phrasing; no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H073",
+      "reason": "'strode forward' matches 앞서 나갔다; SOL adds 'toward it.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H074",
+      "reason": "Preserves the certainty of 뻔합니다 ('obviously drinking'); SOL weakens it to 'probably.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H075",
+      "reason": "'Constant creaking ... without pause' preserves 쉴 새 없이 and reads more cleanly."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H076",
+      "reason": "'brought a woman in' matches 부르다 (summoned) better than 'with him,' and 'on it' completes the bet idiom."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H077",
+      "reason": "Equivalent; 'through internal energy' conveys the 공력 mechanism as well as SOL's 'carrying ... with.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H078",
+      "reason": "'open crack' matches 열린 문틈; BASE's 'narrow gap' drops 'open.'"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H079",
+      "reason": "이어 means 'then,' not 'again' (BASE's error); 끼어들다 is butting in, so SOL's physical 'squeezed in beside him' adds an unsupported action.",
+      "replacement": "Then Wipeng cut in with a wounded expression."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H080",
+      "reason": "Ellipsis matches the source ……, and 'but' preserves the 는데 connective; SOL's em dash changes the trailing-off."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H081",
+      "reason": "Present tense 'Am I seeing things' matches 보이나."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H082",
+      "reason": "Preserves 오감 (all five senses); SOL generalizes to 'his senses.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H083",
+      "reason": "Keeps the stepping verb 내딛으면서, giving the clearer self-mutter."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H084",
+      "reason": "Keep SOL's removal of the translationese 'body,' but restore 지금도 ('even now') over SOL's added 'by the second.'",
+      "replacement": "A sturdy young man muttered continuously as he moved without pause. Countless footprints covered the dusty floor, and more were appearing even now."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H085",
+      "reason": "만들었네 = 'made,' so BASE's 'they made' is faithful; SOL changes to 'designed' and adds 'who.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H086",
+      "reason": "SOL redundantly repeats 'Third Young Master' in adjacent sentences; BASE keeps 분명히 ... 맞다 as a separate certainty."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H087",
+      "reason": "'here he was' captures the incredulity of the exclamatory 그가 ... 수련을 하고 있다!"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H088",
+      "reason": "'snapped back to his senses' matches 정신을 차렸다 better than 'reality.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H089",
+      "reason": "Preserves the repeated word 예, 예?; SOL's 'Y-Yes?' introduces a different stutter pattern."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H090",
+      "reason": "Only difference is 'fallen over' vs 'fallen'; equivalent quality."
+    }
+  ],
+  "version": 1
+}
