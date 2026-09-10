@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "Jinho hyung was crazy about electronic devices, especially capsules.",
+      "current": "Jinho hyung was helpless when it came to electronic devices, especially capsules.",
+      "defect": "사족을 못 쓰다 marks irresistible enthusiasm, not incompetence. “Helpless when it came to electronic devices” commonly reads as unskilled, reversing the characterization the next lines confirm.",
+      "id": "F01",
+      "rationale": "The following beats (named user, IT blog, 빠삭하잖아, knowing every domestic model) require an enthusiast reading.",
+      "severity": "major",
+      "source": "전자 기기, 그중에서도 캡슐이라면 사족을 못 쓰는 그다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "*Damn brat…* / *That damn girl…*",
+      "current": "*Damn it…*",
+      "defect": "A vocative slur aimed at Hayeon is replaced by a generic curse, softening the line and dropping the target.",
+      "id": "F02",
+      "rationale": "망할 년 is sibling-directed profanity, parallel to later 똑똑한 년 and 잔인한 년; the rules forbid sanitizing that register.",
+      "severity": "major",
+      "source": "망할 년……."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "That look. That tone. He meant it. The writing I could see was invisible to Jinho hyung.",
+      "current": "He was serious. The writing I could see was invisible to Jinho hyung.",
+      "defect": "The narrator’s evidence—Jinho’s expression and speaking manner—is omitted, leaving only a summary that he was serious.",
+      "id": "F03",
+      "rationale": "The staccato cues are how Taekyung concludes the blank-page claim is genuine, not a joke.",
+      "severity": "major",
+      "source": "저 표정. 말투. 진심이다. 내게 보이는 이 글씨가, 진호 형에게는 보이지 않는다."
+    },
+    {
+      "confidence": 0.82,
+      "correction": "The metal hunk was the junk capsule Taekyung had picked up the day before.",
+      "current": "The metal hunk was the old capsule he had picked up the day before.",
+      "defect": "Unresolved “he” can attach to Seong Jinho in this POV, changing who salvaged the capsule.",
+      "id": "F04",
+      "rationale": "The next sentence treats the prank and the discarding as Taekyung’s; the Korean omitted subject should not be reassigned to Jinho.",
+      "severity": "major",
+      "source": "쇳덩어리의 정체는 전날 주워 온 고물 캡슐이었다."
+    },
+    {
+      "confidence": 0.74,
+      "correction": "That still puts you in Grade 1. / There were so many Grade 7s I thought it was a slot machine that had hit the jackpot.",
+      "current": "That still puts you in the top grade. / There were so many Grade 7s, I thought it was a slot machine that had hit the jackpot.",
+      "defect": "1등급 is paraphrased as “top grade” while 7등급 is “Grade 7s,” hiding the 1–9 exam band and inviting a school-year reading of 7.",
+      "id": "F05",
+      "rationale": "The mock-exam joke depends on the numbered 등급 scale (1 best, 7 poor, sevens like a jackpot), which the draft splits and partially blurs.",
+      "severity": "minor",
+      "source": "그 정도면 1등급이잖아. / 7등급이 하도 많아서 무슨 잭팟 터진 슬롯머신인 줄."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "The broth made spicy with Cheongyang peppers sliced and added separately.",
+      "current": "The broth made spicy with hot green chilies sliced and added separately.",
+      "defect": "청양고추 is a specific Korean pepper, not generic hot green chilies.",
+      "id": "F06",
+      "rationale": "The named ingredient is the source of the broth’s heat; a generic chili loses that food term.",
+      "severity": "minor",
+      "source": "따로 썰어 넣은 청양고추로 매콤하게 끓여진 국물."
+    }
+  ],
+  "summary": "Several semantic defects: Jinho’s capsule obsession is rendered as possible incompetence; a sister-directed slur is genericized; Jinho’s face/tone evidence is collapsed; the junk capsule’s picker-up is ambiguous.",
+  "version": 1
+}

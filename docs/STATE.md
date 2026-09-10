@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 39
-- Next chapter: 40
-- Current block: 35–39 (5/5)
-- Latest translation: `translations/0038.md`
-- Latest summary: `summaries/beats/0039.md`
-- Safe profiles through: chapter 39
+- Last completed: 40
+- Next chapter: 41
+- Current block: 40–44 (1/5)
+- Latest translation: `translations/0040.md`
+- Latest summary: `summaries/beats/0040.md`
+- Safe profiles through: chapter 40
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-At Honju, Gwak Jun reveals that the twenty supposed Three Paths Sect martial artists in the rear guard are assassins, all First Rate, ordered to eliminate everyone and join the main force. A herd of water deer breaks the hidden ambush. Taekyung and the reconnaissance squad defeat the assassins through coordinated formations, Inventory weapons, and One Flash. Gwak dies after severing his own heart meridian, while his revelations make Taekyung suspect that the Head Elder united the Jin Family’s strength to seize Shanxi. The Slay the Assassins Quest completes, granting 50 Fame and a level-up; Taekyung reaches the Logout threshold and enters a three-second countdown before losing consciousness.
+Taekyung returns to reality after exactly thirty days in Murim and only three hours outside. The Ark - 2020 manual is visible only to him; he rejects the leading VR game as unreal, reconnects with Hayeon, and decides to live in reality. Jinho remains skeptical but begins investigating H Soft after seeing the discarded capsule.
 
 
 

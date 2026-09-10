@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored 사족을 못 쓰다 as enthusiasm for electronics/capsules, matching the named-user and model-expertise beats.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored 망할 년 as sister-directed profanity (*That damn girl…*), parallel to later 년 lines.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the staccato 표정/말투/진심이다 cues before concluding Jinho cannot see the writing.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Named Taekyung as the one who picked up the junk capsule so the omitted subject cannot attach to Jinho.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Rendered 1등급 as Grade 1 with a scale footnote and kept Grade 7s so the 1–9 band joke is visible.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Restored 청양고추 as Cheongyang peppers instead of generic hot green chilies.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
