@@ -33,6 +33,13 @@ class BuildToolTest(unittest.TestCase):
         self.assertTrue((READER / "astro.config.ts").is_file())
         self.assertTrue((READER / "src" / "pages" / "chapter" / "[id].astro").is_file())
 
+    def test_pdf_system_ornaments_exist(self):
+        self.assertTrue((READER / "src" / "ornaments" / "corner.svg").is_file())
+        self.assertTrue((READER / "src" / "ornaments" / "dragon.svg").is_file())
+        lua = (READER.parent / "tools" / "system-window.lua").read_text(encoding="utf-8")
+        self.assertIn("ornament(\"corner.svg\")", lua)
+        self.assertIn("ornament(\"dragon.svg\")", lua)
+
 
 if __name__ == "__main__":
     unittest.main()

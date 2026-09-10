@@ -74,6 +74,7 @@ def run_pandoc(
         command.extend(
             [
                 "--pdf-engine=typst",
+                "--pdf-engine-opt=--root=/",
                 "--variable=papersize:a5",
                 "--variable=margin-left:18mm",
                 "--variable=margin-right:16mm",
