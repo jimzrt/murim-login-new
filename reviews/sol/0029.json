@@ -1,0 +1,146 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "Keep the hike wording and add a brief footnote that Mount Beimang is a burial mountain and ‘hiking it’ means being dead.",
+      "current": "If my reaction had been even a moment slower, I would have been hiking up Mount Beimang by now.",
+      "defect": "Death idiom is left as a literal mountain hike with no cue or footnote, so the meaning (he would already be dead) is not recoverable.",
+      "id": "F01",
+      "rationale": "Binding footnote rules cover this historical/idiom image; continuity already treats Beimang as a death expression.",
+      "severity": "major",
+      "source": "잠깐이라도 반응이 늦었다면 지금쯤 북망산을 등산하고 있었을 거다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "Keep goshiwon and footnote it as a tiny, cheap room-for-rent.",
+      "current": "I didn’t even know the names of all the people living in my goshiwon.",
+      "defect": "고시원 is kept untranslated with no footnote.",
+      "id": "F02",
+      "rationale": "The translation rules explicitly require a goshiwon footnote at first meaningful use.",
+      "severity": "major",
+      "source": "같은 고시원 주민들 이름도 다 모르는데 고작 며칠 본 NPC 따위."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "Even rotten, it’s still a junichi, I suppose—with a short footnote that a decayed quality fish is still a quality fish.",
+      "current": "*The Jin Family of Taiyuan… Even a fallen tree can still bear fruit, I suppose.*",
+      "defect": "Replaces the fish proverb (even rotten, still a junichi: fallen stock still shows quality) with a different tree/fruit proverb.",
+      "id": "F03",
+      "rationale": "Semantic fidelity forbids swapping the source’s proverb image for a neater English one.",
+      "severity": "major",
+      "source": "‘태원진가…… 썩어도 준치라 이건가?’"
+    },
+    {
+      "confidence": 0.94,
+      "correction": "Watching Jin Taekyung smack his lips in regret",
+      "current": "Watching Jin Taekyung click his tongue in regret, Jopil felt a surge of fury.",
+      "defect": "입맛을 다시다 (smacking his lips over the missed finish) is changed to clicking his tongue, a different gesture already used for Jopil earlier.",
+      "id": "F04",
+      "rationale": "Altered physical action and insolent characterization before Jopil’s rage.",
+      "severity": "major",
+      "source": "입맛을 다시는 진태경을 보며 조필은 극렬한 분노를 느꼈다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "But I was a step too late. Hyuk Mujin and Han Yeop, who had come running with everything they had, thrust their weapons at Jopil, who was distracted by me.",
+      "current": "But they were too late. Hyuk Mujin and Han Yeop had charged forward with all their strength and thrust their weapons at Jopil, who was distracted by me.",
+      "defect": "Subject of 한발 늦었다 is shifted onto Hyuk and Han Yeop, who do land the attack; the late party is Taekyung’s failed stop.",
+      "id": "F05",
+      "rationale": "Category-1 subject/causal error: they are not the ones who arrived too late.",
+      "severity": "major",
+      "source": "그러나 한발 늦었다. 온 힘을 다해 달려온 혁무진과 한엽이 … 병장기를 찔러 넣었다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“Go back, you little shits!”",
+      "current": "“Go back, you idiots!”",
+      "defect": "이 새끼들아 is panicked vulgar abuse of subordinates, softened to ‘idiots’.",
+      "id": "F06",
+      "rationale": "Rules forbid sanitizing profanity; this is a register drop, not a gloss.",
+      "severity": "major",
+      "source": "“돌아가라고 이 새끼들아!”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "Lightning crossed my whole body. The blade stabbed my shoulder, slashed my knee, and pierced my flank before coming back out with a spray of blood.",
+      "current": "The blade stabbed my shoulder and knee, slashed my flank, and pierced through my body before emerging with a spray of blood.",
+      "defect": "Maps two stabs onto shoulder and knee, then adds a through-body pierce beyond the three named sites; also drops 번갯불이 전신을 가로질렀다.",
+      "id": "F07",
+      "rationale": "Changes the injury pattern from three sites to an extra impalement.",
+      "severity": "major",
+      "source": "어깨와 무릎, 옆구리를 쑤시고 베고 꿰뚫은 검신은 핏물과 함께 빠져나왔다."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "*Skrrrng.* Jopil’s sword was faster than my spear. The blood-slick crimson blade pushed my spear shaft aside and slipped inward.",
+      "current": "*Kaaang!* Jopil’s sword was faster than my spear. The blood-red blade pushed my spear shaft aside and slipped inward.",
+      "defect": "카가가각 is a grind/scrape along the shaft, rendered as a ringing clash; 피를 머금은 (blood-laden) becomes mere color.",
+      "id": "F08",
+      "rationale": "The sound and blood on the blade are the mechanics of the parry that lets the cut in.",
+      "severity": "major",
+      "source": "카가가각. 내 창보다 조필의 검이 더 빨랐다. 피를 머금은 붉은 칼날이 창대를 밀어 내며 안쪽으로 파고든다."
+    },
+    {
+      "confidence": 0.81,
+      "correction": "“If you can take this, too.”",
+      "current": "“Let’s see if you can withstand this, too.”",
+      "defect": "Completes an intentionally unfinished conditional threat.",
+      "id": "F09",
+      "rationale": "Preserve the dangling 버티면; do not add ‘let’s see’.",
+      "severity": "major",
+      "source": "“이것도 버티면.”"
+    },
+    {
+      "confidence": 0.87,
+      "correction": "a rootless wandering martial artist like that Mount Heng Sword Sect brat or Black Mountain Blade",
+      "current": "a rootless wandering martial artist like the Mount Heng brat or Black Mountain Blade",
+      "defect": "Established organization name 항산검문 is cut down to ‘Mount Heng’.",
+      "id": "F10",
+      "rationale": "Glossary binds 항산검문 to Mount Heng Sword Sect.",
+      "severity": "major",
+      "source": "항산검문의 애새끼나 흑산도처럼 근본 없는 낭인"
+    },
+    {
+      "confidence": 0.78,
+      "correction": "Ten-odd zhang vanished in two steps.",
+      "current": "More than ten zhang vanished in two steps.",
+      "defect": "십여 is ten-odd/about ten, not ‘more than ten’.",
+      "id": "F11",
+      "rationale": "Quantity wording is overstated.",
+      "severity": "minor",
+      "source": "십여 장의 거리가 두 걸음 만에 사라진다."
+    },
+    {
+      "confidence": 0.85,
+      "correction": "…Would I be all right?",
+      "current": "…I looked all right?",
+      "defect": "Sarcastic ‘would I be all right?’ is changed into a question about appearance.",
+      "id": "F12",
+      "rationale": "괜찮겠냐 answers 괜찮으십니까, not how he looked.",
+      "severity": "minor",
+      "source": "……괜찮겠냐."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "*Splat.* He planted his face in the ground, which had only just begun to thaw.",
+      "current": "*Splurt.* He planted his face in the ground, which had only just begun to thaw.",
+      "defect": "철퍽 is the wet thud of a face hitting thawing earth, not a blood splurt.",
+      "id": "F13",
+      "rationale": "Wrong SFX type beside an intact action.",
+      "severity": "minor",
+      "source": "철퍽. 이제 막 녹기 시작한 땅에 그가 얼굴을 박았다."
+    },
+    {
+      "confidence": 0.77,
+      "correction": "They crashed into trees, fountains of blood bursting from them.",
+      "current": "They crashed into trees, fountains of blood bursting from their mouths.",
+      "defect": "Adds ‘from their mouths’; source only has blood fountaining after chest blows.",
+      "id": "F14",
+      "rationale": "Do not specify an unstated bleed site.",
+      "severity": "minor",
+      "source": "그들은 피 분수를 뿜으며 나무에 처박혔다."
+    }
+  ],
+  "summary": "Action, subject, injury, proverb, and register errors, plus missing required cultural notes; System/glossary hits in QA are mostly false leads.",
+  "version": 1
+}

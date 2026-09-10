@@ -1,21 +1,24 @@
 # Translation State
 
-- Last completed: 28
-- Next chapter: 29
-- Current block: 25–29 (4/5)
-- Latest translation: `translations/0028.md`
-- Latest summary: `summaries/beats/0028.md`
-- Safe profiles through: chapter 28
+- Last completed: 29
+- Next chapter: 30
+- Current block: 25–29 (5/5)
+- Latest translation: `translations/0029.md`
+- Latest summary: `summaries/0025-0029.md`
+- Safe profiles through: chapter 29
 
 
 ## Current Block
 
-Chapter 28 leaves Taekyung’s unidentified dantian energy immovable. A wolf pack flees when his qi overwhelms it, triggering a forced System Quest to confront Jopil, One Question, One Kill, a Peak master. Jopil has killed Black Mountain Blade and the other pursuers, recognizes Taekyung as the Jin Family’s third Young Master and the Sleeping Dragon, and offers to let him leave if he answers truthfully. Jopil then reveals he is employed to complete a mission and permits only Taekyung to leave, demanding that Gong Yacheong, Socheon, Soyul, and the reconnaissance squad remain behind. Taekyung refuses, provoking Jopil’s savage laughter.
+Jopil attacks Taekyung and overwhelms him as a Peak master. A throwing knife kills one reconnaissance-squad member, and Taekyung’s anger drives him to fight. Jopil enters Berserk after Taekyung cuts his clothes, while Taekyung relies on the Gambler Title’s one-on-one bonus and orders the squad to stay back. Hyuk Mujin and Han Yeop attack anyway; Jopil destroys Hyuk’s sword and Han Yeop’s spearhead, then blasts both into trees. Taekyung’s Sky-Piercing Strike fails, and Jopil wounds him repeatedly before striking toward his chest again.
 
 ## Open Questions
 
 - The capsule's purpose and route home remain unresolved.
 - Murim death and resurrection limits remain unresolved.
+- The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
+- The immediate outcome of Jopil's attack remains unresolved.
+
 
 ## Exceptional Decision
 
@@ -24,4 +27,5 @@ Chapter 28 leaves Taekyung’s unidentified dantian energy immovable. A wolf pac
 
 Active model-facing facts and explicit prior-chapter requirements are maintained
 in `docs/CONTEXT.json`. Review history is maintained under `reviews/`.
+
 

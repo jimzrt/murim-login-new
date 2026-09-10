@@ -1,0 +1,75 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Kept the Mount Beimang hike wording and added a burial-mountain footnote.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Kept goshiwon and footnoted it as a tiny cheap room-for-rent.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the junichi fish proverb and footnoted the quality-fish image.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored smacking his lips in regret.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Made Taekyung the late party; Hyuk and Han Yeop still land the thrust.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Restored the panicked vulgar register of 이 새끼들아.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Restored the lightning image and the three-site injury pattern.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Rendered 카가가각 as a scrape and 피를 머금은 as blood-slick.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Left the unfinished conditional threat intact.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Restored the full Mount Heng Sword Sect name.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "Changed more than ten to ten-odd zhang.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F12",
+      "reason": "Restored the sarcastic would-I-be-all-right reply.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F13",
+      "reason": "Changed the face-plant SFX to a wet thud.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F14",
+      "reason": "Removed the unstated mouth as the bleed site.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

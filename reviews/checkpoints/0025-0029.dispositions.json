@@ -1,0 +1,20 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Expanded the Chapter 25 System completion notice to the established full title, Survivors of the Sakju Branch Quest.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Corrected the Chapter 29 combat narration so Jopil retrieves his sword from the ground before countering Sky-Piercing Strike.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Corrected docs/CONTEXT.json to record the Cultivation Technique at Fourth Stage and the Spear and Manoeuvre Techniques at Fifth Stage.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
