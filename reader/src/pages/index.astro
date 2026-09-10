@@ -1,23 +1,68 @@
 ---
 import Base from "../layouts/Base.astro";
-import { allChapters, chapterHref, chaptersHref, toIndex, withBase } from "../lib/chapters";
+import { allChapters, chapterHref, groupedChapters, toIndex, withBase } from "../lib/chapters";
 
 const entries = await allChapters();
 const chapters = toIndex(entries);
+const groups = groupedChapters(chapters);
 const first = entries[0];
+const firstHref = first ? chapterHref(first.data.chapter) : withBase("");
 ---
 
-<Base title="Murim Login" chapters={chapters}>
-  <main class="wrap">
+<Base title="Murim Login">
+  <main class="wrap" data-page="index" data-count={chapters.length}>
     <section class="hero">
       <img class="cover-image" src={withBase("cover.jpg")} alt="Murim Login cover" />
       <h1>Murim Login</h1>
-      <p class="lede">English translation. Chapters are static HTML; theme and last chapter stay in this browser.</p>
       <div class="cta-row">
-        <a id="continue" class="button" hidden href={first ? chapterHref(first.data.chapter) : chaptersHref()}>Continue reading</a>
-        {first && <a class="button-secondary" href={chapterHref(first.data.chapter)}>Start at {first.data.title}</a>}
-        <a class="button-secondary" href={chaptersHref()}>All chapters</a>
+        <a id="continue" class="button" hidden href={firstHref}>Continue reading</a>
+        {
+          first && (
+            <a id="start" class="button" href={firstHref}>
+              Start at {first.data.title}
+            </a>
+          )
+        }
       </div>
+      <div class="overall-progress" id="overall-progress" hidden>
+        <p class="overall-label" id="overall-label"></p>
+        <div
+          class="overall-track"
+          id="overall-bar"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="0"
+        >
+          <span class="overall-fill" id="overall-fill"></span>
+        </div>
+      </div>
+    </section>
+    <section class="toc" aria-labelledby="toc-heading">
+      <h2 id="toc-heading" class="toc-heading">Chapters</h2>
+      <label class="filter-label">
+        <span class="sr-only">Filter chapters</span>
+        <input id="chapter-filter" type="search" placeholder="Filter chapters" />
+      </label>
+      {
+        groups.map((group) => (
+          <details class="chapter-range" data-start={group.start} data-end={group.end}>
+            <summary>
+              <span>{group.label}</span>
+              <span class="range-count">{group.items.length}</span>
+            </summary>
+            <ol class="chapter-ol">
+              {group.items.map((item) => (
+                <li>
+                  <a href={item.href} data-chapter={item.chapter}>
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </details>
+        ))
+      }
     </section>
   </main>
 </Base>

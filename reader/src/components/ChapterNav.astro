@@ -1,24 +1,38 @@
 ---
-import type { ChapterEntry } from "../lib/chapters";
+import type { ChapterRef } from "../lib/chapters";
 import { chapterHref } from "../lib/chapters";
 
 interface Props {
-  previous?: ChapterEntry;
-  next?: ChapterEntry;
+  previous?: ChapterRef | null;
+  next?: ChapterRef | null;
 }
 
 const { previous, next } = Astro.props;
 ---
 
 <nav class="chapter-nav" aria-label="Chapter navigation">
-  {previous ? (
-    <a data-nav="prev" href={chapterHref(previous.data.chapter)}>← {previous.data.title}</a>
-  ) : (
-    <a data-nav="prev" href="#" aria-disabled="true">← Previous</a>
-  )}
-  {next ? (
-    <a data-nav="next" href={chapterHref(next.data.chapter)}>{next.data.title} →</a>
-  ) : (
-    <a data-nav="next" href="#" aria-disabled="true">Next →</a>
-  )}
+  {
+    previous ? (
+      <a data-nav="prev" rel="prev" href={chapterHref(previous.chapter)}>
+        <span class="nav-dir">Previous</span>
+        <span class="nav-title">{previous.title}</span>
+      </a>
+    ) : (
+      <a data-nav="prev" href="#" aria-disabled="true">
+        <span class="nav-dir">Previous</span>
+      </a>
+    )
+  }
+  {
+    next ? (
+      <a data-nav="next" rel="next" href={chapterHref(next.chapter)}>
+        <span class="nav-dir">Next</span>
+        <span class="nav-title">{next.title}</span>
+      </a>
+    ) : (
+      <a data-nav="next" href="#" aria-disabled="true">
+        <span class="nav-dir">Next</span>
+      </a>
+    )
+  }
 </nav>

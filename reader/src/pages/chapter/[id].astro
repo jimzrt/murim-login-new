@@ -2,32 +2,40 @@
 import { render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import ChapterNav from "../../components/ChapterNav.astro";
-import { allChapters, neighbors, readingMinutes, toIndex, type ChapterEntry } from "../../lib/chapters";
+import { allChapters, neighbors, readingMinutes, toRef, type ChapterEntry } from "../../lib/chapters";
 
 export async function getStaticPaths() {
   const entries = await allChapters();
-  return entries.map((entry) => ({
-    params: { id: entry.id },
-    props: { entry, entries },
-  }));
+  return entries.map((entry) => {
+    const { previous, next } = neighbors(entries, entry.data.chapter);
+    return {
+      params: { id: entry.id },
+      props: {
+        entry,
+        previous: toRef(previous),
+        next: toRef(next),
+      },
+    };
+  });
 }
 
 interface Props {
   entry: ChapterEntry;
-  entries: ChapterEntry[];
+  previous: ReturnType<typeof toRef>;
+  next: ReturnType<typeof toRef>;
 }
 
-const { entry, entries } = Astro.props;
+const { entry, previous, next } = Astro.props;
 const { Content } = await render(entry);
-const { previous, next } = neighbors(entries, entry.data.chapter);
+const minutes = readingMinutes(entry.data.wordCount);
 ---
 
-<Base title={`${entry.data.title} — Murim Login`} chapters={toIndex(entries)}>
-  <main class="wrap" data-chapter={entry.data.chapter}>
+<Base title={`${entry.data.title} — Murim Login`} chapter={entry.data.chapter}>
+  <main class="wrap" data-page="chapter" data-chapter={entry.data.chapter}>
     <header class="chapter-header">
       <p class="eyebrow">Murim Login</p>
       <h1 data-pagefind-body data-pagefind-meta="title">{entry.data.title}</h1>
-      <p class="reading-meta">About {readingMinutes(entry.data.wordCount)} min</p>
+      <p class="reading-meta">{entry.data.chapter} · {minutes} min read</p>
     </header>
     <ChapterNav previous={previous} next={next} />
     <article class="prose" data-pagefind-body>

@@ -1,15 +1,16 @@
 ---
-import type { ChapterIndexItem } from "../lib/chapters";
-import { groupedChapters, withBase } from "../lib/chapters";
+import SiteHeader from "../components/SiteHeader.astro";
+import JumpDialog from "../components/JumpDialog.astro";
+import SettingsDialog from "../components/SettingsDialog.astro";
+import { withBase } from "../lib/chapters";
 import "../styles/global.css";
 
 interface Props {
   title: string;
-  chapters: ChapterIndexItem[];
+  chapter?: number;
 }
 
-const { title, chapters } = Astro.props;
-const groups = groupedChapters(chapters);
+const { title, chapter } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -23,9 +24,25 @@ const base = import.meta.env.BASE_URL;
     <title>{title}</title>
     <script is:inline>
       (function () {
-        var mode = localStorage.getItem("murim-theme") || "system";
-        var dark = mode === "dark" || (mode !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
-        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        var theme = "system";
+        var size = "m";
+        var width = "medium";
+        try {
+          var saved = JSON.parse(localStorage.getItem("murim-reader") || "null");
+          if (saved) {
+            if (saved.theme) theme = saved.theme;
+            if (saved.fontSize) size = saved.fontSize;
+            if (saved.width) width = saved.width;
+          } else {
+            var legacy = localStorage.getItem("murim-theme");
+            if (legacy) theme = legacy;
+          }
+        } catch (e) {}
+        var dark = theme === "dark" || (theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        var root = document.documentElement;
+        root.dataset.theme = dark ? "dark" : "light";
+        root.dataset.size = size;
+        root.dataset.width = width;
       })();
     </script>
     {
@@ -35,35 +52,10 @@ const base = import.meta.env.BASE_URL;
     }
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href={base}>Murim Login</a>
-      <label class="jump">
-        <span class="sr-only">Jump to chapter</span>
-        <select id="jump">
-          <option value="">Jump</option>
-          {
-            groups.map((group) => (
-              <optgroup label={group.label}>
-                {group.items.map((chapter) => (
-                  <option value={chapter.href}>{chapter.title}</option>
-                ))}
-              </optgroup>
-            ))
-          }
-        </select>
-      </label>
-      {import.meta.env.PROD && <pagefind-modal-trigger></pagefind-modal-trigger>}
-      <button id="theme" type="button" aria-label="Switch color theme" title="Theme">
-        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-        </svg>
-        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4" />
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
-        </svg>
-      </button>
-    </header>
+    <SiteHeader chapter={chapter} />
     <slot />
+    <JumpDialog />
+    <SettingsDialog />
     {
       import.meta.env.PROD && (
         <>
@@ -73,35 +65,6 @@ const base = import.meta.env.BASE_URL;
         </>
       )
     }
-    <script is:inline>
-      (function () {
-        var root = document.documentElement;
-        var base = root.getAttribute("data-base") || "/";
-        document.getElementById("theme")?.addEventListener("click", function () {
-          var next = root.dataset.theme === "dark" ? "light" : "dark";
-          localStorage.setItem("murim-theme", next);
-          root.dataset.theme = next;
-        });
-        document.getElementById("jump")?.addEventListener("change", function (event) {
-          var href = event.target.value;
-          if (href) location.href = href;
-        });
-        var page = document.querySelector("[data-chapter]");
-        if (page) {
-          localStorage.setItem("murim-chapter", page.getAttribute("data-chapter"));
-          document.addEventListener("keydown", function (event) {
-            if (event.target.closest("input, select, textarea")) return;
-            var key = event.key === "ArrowLeft" ? "prev" : event.key === "ArrowRight" ? "next" : "";
-            if (key) document.querySelector('[data-nav="' + key + '"]')?.click();
-          });
-        }
-        var cont = document.getElementById("continue");
-        var last = localStorage.getItem("murim-chapter");
-        if (cont && last) {
-          cont.href = base + "chapter/" + last + "/";
-          cont.hidden = false;
-        }
-      })();
-    </script>
+    <script src="../scripts/reader.ts"></script>
   </body>
 </html>

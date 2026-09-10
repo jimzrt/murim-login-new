@@ -20,6 +20,10 @@ export default defineConfig({
   trailingSlash: "always",
   outDir: process.env.ASTRO_OUT_DIR ?? "../build/html",
   compressHTML: true,
+  prefetch: true,
+  redirects: {
+    "/chapters/": "/",
+  },
   build: {
     format: "directory",
   },

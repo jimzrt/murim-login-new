@@ -1,0 +1,22 @@
+<dialog class="reader-dialog" id="jump-dialog" aria-labelledby="jump-title">
+  <div class="dialog-head">
+    <h2 id="jump-title">Jump to chapter</h2>
+    <button type="button" class="icon-btn" id="jump-close" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <label class="dialog-label">
+    <span class="sr-only">Chapter number</span>
+    <input
+      id="jump-input"
+      type="text"
+      inputmode="numeric"
+      autocomplete="off"
+      autocorrect="off"
+      spellcheck="false"
+      enterkeyhint="go"
+      placeholder="Chapter number"
+    />
+  </label>
+  <ul class="jump-results" id="jump-results" role="listbox" aria-label="Matching chapters" hidden></ul>
+</dialog>
