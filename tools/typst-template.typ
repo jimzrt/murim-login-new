@@ -23,7 +23,42 @@ $endif$
 $if(template)$
 #import "$template$": conf
 $else$
-$template.typst()$
+// Page geometry is owned by the cover prelude and book.typ. Pandoc's default
+// conf() calls `#set page` first, which leaves a blank leaf before the cover.
+#let conf(
+  subtitle: none,
+  authors: (),
+  keywords: (),
+  date: none,
+  abstract-title: none,
+  abstract: none,
+  thanks: none,
+  cols: 1,
+  margin: none,
+  paper: none,
+  lang: "en",
+  region: none,
+  font: none,
+  fontsize: 11pt,
+  mathfont: none,
+  codefont: none,
+  linestretch: 1,
+  sectionnumbering: none,
+  linkcolor: none,
+  citecolor: none,
+  filecolor: none,
+  pagenumbering: none,
+  doc,
+) = {
+  set text(lang: lang, size: fontsize)
+  set text(region: region) if region != none
+  set text(font: font) if font != none
+  set par(justify: true, leading: linestretch * 0.65em)
+  set heading(numbering: sectionnumbering)
+  show math.equation: set text(font: mathfont) if mathfont != none
+  show raw: set text(font: codefont) if codefont != none
+  doc
+}
 $endif$
 
 $if(smart)$
@@ -115,10 +150,8 @@ $endif$
   cols: $if(columns)$$columns$$else$1$endif$,
   doc,
 )
-
 $for(include-before)$
 $include-before$
-
 $endfor$
 $if(toc)$
 #outline(

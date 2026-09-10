@@ -84,12 +84,15 @@
   },
   footer: none,
 )
+#counter(page).update(1)
 #set text(size: murim-body-size, fill: murim-ink, font: "Noto Serif")
 #set par(leading: 0.74em, spacing: 0.92em)
 #set heading(numbering: none)
 
 #show heading.where(level: 1): it => {
-  pagebreak(weak: true)
+  if it.outlined {
+    pagebreak(weak: true)
+  }
   set align(center)
   set text(fill: murim-navy, size: 1.38em, weight: "bold")
   block(below: 1.15em, it)

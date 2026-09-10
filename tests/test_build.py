@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.build import BOOK_TYP, COVER, READER, TYPST_TEMPLATE, chapter_paths, pandoc_base
+from tools.build import BOOK_TYP, COVER, READER, TYPST_TEMPLATE, chapter_paths, pandoc_base, write_pdf_cover
 
 
 class BuildToolTest(unittest.TestCase):
@@ -28,6 +28,13 @@ class BuildToolTest(unittest.TestCase):
     def test_cover_asset_exists(self):
         self.assertTrue(COVER.is_file())
 
+    def test_pdf_cover_does_not_insert_a_blank_leaf(self):
+        with tempfile.TemporaryDirectory() as temp:
+            text = write_pdf_cover(Path(temp)).read_text(encoding="utf-8")
+        self.assertIn("#set page", text)
+        self.assertIn("#image(", text)
+        self.assertNotIn("#pagebreak", text)
+
     def test_html_reader_scaffold_exists(self):
         self.assertTrue((READER / "package.json").is_file())
         self.assertTrue((READER / "astro.config.ts").is_file())
@@ -46,13 +53,17 @@ class BuildToolTest(unittest.TestCase):
         self.assertIn("Noto Sans Mono", book)
         self.assertIn("text(style: \"italic\"", book)
         self.assertIn("pagebreak(weak: true)", book)
+        self.assertIn("it.outlined", book)
+        self.assertIn("#counter(page).update(1)", book)
         self.assertIn('paper: "a4"', book)
         self.assertIn("pad(x: 8%", book)
         self.assertTrue(TYPST_TEMPLATE.is_file())
         template = TYPST_TEMPLATE.read_text(encoding="utf-8")
+        self.assertNotIn("$template.typst()", template)
         self.assertNotIn("  title: [$title$],", template)
         self.assertIn("#set document(title: [$title$])", template)
         self.assertIn("title: [Contents]", template)
+        self.assertIn("Page geometry is owned", template)
 
 
 if __name__ == "__main__":
