@@ -1,0 +1,40 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the 병신 insult as Taekyung taking the Friday–Saturday lecture as being treated like an idiot.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Replaced the tongue-click with smacking his lips over the lost weekend overtime.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 방언 as bursting into tongues, not a regional dialect.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "First beat is a limited-edition piece; the 장비 reprise is Equipment.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "System spawn line uses Lizardman Great Chieftain; later 족장 prose stays Chieftain.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "The shining figure is named as Level 40, matching 40레벨이라는 숫자.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Footnoted first romanized Bulgeum; existing tteokbokki note is now [^2].",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

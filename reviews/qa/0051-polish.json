@@ -1,0 +1,47 @@
+{
+  "chapter": 51,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.149,
+    "source_characters": 6177,
+    "source_paragraphs": 214,
+    "translation_characters": 13275,
+    "translation_paragraphs": 231
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "레벨",
+        "preferred": "Level"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "산서",
+        "preferred": "Shanxi"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "불금",
+        "romanization": "bulgeum"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "율곡",
+        "romanization": "yulgok"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}
