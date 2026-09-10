@@ -1,0 +1,639 @@
+{
+  "chapter": 10,
+  "decisions": [
+    {
+      "decision": "BASE",
+      "hunk_id": "H001",
+      "reason": "SOL adds 'estate' and narrows 한 사람 to 'one man'; BASE keeps the generic 'one person' and 'a cliff' without added location."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H002",
+      "reason": "BASE keeps 왔느냐's gruff interrogative; SOL flattens it to the greeting 'You're here,' losing the brusque tone."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "SOL parallels the two Korean noun phrases (build / way of speaking) more cleanly than BASE's mixed verb clause."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H004",
+      "reason": "SOL renders 엉거주춤하게 more directly and concisely than 'gave an awkward bow.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H005",
+      "reason": "BASE keeps 껄끄러운 존재 as a description of him ('awkward presence'); SOL converts it into the narrator's feeling ('made me uncomfortable')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H006",
+      "reason": "SOL's 'with everyone watching' and colloquial 'damnedest' capture 남들 보는 눈 and 무지 애쓰는 better than BASE's wordier clause."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H007",
+      "reason": "BASE preserves 외관상으로는 ('with his appearance') and the emphatic 'even a triad boss'; SOL drops both."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H008",
+      "reason": "SOL's 'In my capacity as' is better, but 'confined to the training hall' adds a location 폐관 does not name; keep the faithful 'closed-door training.'",
+      "replacement": "I can no longer overlook your conduct. In my capacity as Lesser Family Head and acting Family Head, I have ordered you to undergo closed-door training. Do you have anything to say?"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H009",
+      "reason": "BASE keeps 수련동으로 오는 길에 and 방패 역할 ('acting as my shield'); SOL's 'from it' adds an object and 'on the way here' drops the referent."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "SOL's idiomatic 'all for show' conveys 쇼인 거다 better than BASE's flatter 'a show.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H011",
+      "reason": "SOL keeps the recalled line addressed to the narrator (second person), matching the imperative 사흘만 참으십시오; BASE's third person clashes with it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H012",
+      "reason": "SOL's 'pretended to repent' makes the deliberate 척 explicit; BASE's 'as if repenting' could read as narrator uncertainty."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H013",
+      "reason": "SOL's 'best thing… how short the lines were' is more conversational than BASE's stiff 'advantage… that the lines were short.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H014",
+      "reason": "Both faithful; BASE's 'a sorrowful look in his eyes' renders 애잔한 눈빛 without SOL's trimmed phrasing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H015",
+      "reason": "BASE keeps 출관 날짜's unspecific 'the release date'; SOL adds a possessive 'His.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H016",
+      "reason": "BASE keeps 수련동 입구 (entrance to the training hall) and 양팔 (both arms); SOL drops both."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H017",
+      "reason": "SOL omits the added pronoun; 퇴장할 차례 has no subject in the source."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H018",
+      "reason": "BASE's 서다 ('stood') is more faithful than SOL's 'stopped.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H019",
+      "reason": "SOL's 'brought inside' reads more naturally than 'brought there,' and 'Don't push yourself too hard' fits 무리하지 말거라."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H020",
+      "reason": "SOL's 'in my ear' naturalizes 전음과 함께 without adding meaning."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H021",
+      "reason": "BASE's 'dug' matches 파서 better than SOL's 'carved,' and the source keeps these sentences as one paragraph."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H022",
+      "reason": "The insert would duplicate the sentence BASE already keeps in P28; the source is one paragraph."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H023",
+      "reason": "BASE's 'walking behind' keeps 걸었을까; SOL's 'appeared before me' adds a phrase."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H024",
+      "reason": "BASE's 'a wall blocking all entry and exit' matches 모든 출입을 금지하는 more closely than SOL's expanded 'built to prevent anyone.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H025",
+      "reason": "The source keeps the speech tag and '개문!' as separate paragraphs; BASE preserves that layout."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H026",
+      "reason": "Deleting the standalone dialogue paragraph diverges from the source layout."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H027",
+      "reason": "The insert would split off a sentence the source keeps in the same paragraph as what follows."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H028",
+      "reason": "BASE's 'gate mechanism' matches 개폐 장치 and keeps 'grabbed and pulled'; SOL's 'lever that operated the gate' adds interpretation."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H029",
+      "reason": "SOL's 'the sight was overwhelming' is a cleaner rhythm than BASE's 'it was an overwhelming sight.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H030",
+      "reason": "BASE keeps 탄성 ('the exclamation that escaped me'); SOL generalizes to 'amazement' and loses the escaping-voice image."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H031",
+      "reason": "SOL rightly adds the trailing 는데 ('but…') but changes 축축한 to 'dank'; repair keeps 'damp' with the trailing clause.",
+      "replacement": "When I first entered the training hall, I had imagined a damp underground cave, but…"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H032",
+      "reason": "SOL's 'fur blanket' is better than 'furry,' but it adds 'so inviting' and shifts 깔끔한 ('neat') to 'smooth'; repair keeps both fixes.",
+      "replacement": "A broad bed with a fur blanket that lifted my spirits just by looking at it. Instead of a damp, uneven stone floor, a neat gray surface stretched out before me."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H033",
+      "reason": "Both faithful; BASE's terse 'Limestone?' matches the clipped internal thought."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H034",
+      "reason": "SOL preserves the two-step 냉기가 감도는 것만 빼면, 아니, 그걸 감안해도; BASE collapses the self-correction."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H035",
+      "reason": "BASE's 'a punishment' is more natural than SOL's bare 'punishment.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H036",
+      "reason": "SOL keeps 돌아보니 ('I turned to find'); BASE drops the turning beat."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H037",
+      "reason": "The source has 그그긍. within the same paragraph as the next sentence, so no new paragraph is warranted."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H038",
+      "reason": "BASE keeps the sound and the sentence in one paragraph, matching the source; SOL's split deviates."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H039",
+      "reason": "SOL's 'brought inside' and 'Don't push yourself too hard' are more natural than BASE's 'brought there' and 'don't overdo it.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H040",
+      "reason": "BASE's 'the heart of an NPC' matches 마음; SOL's 'devotion' over-specifies the feeling."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H041",
+      "reason": "BASE keeps 목 놓아 울다 (crying aloud); SOL's 'moved to tears' weakens the comedic intensity."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H042",
+      "reason": "The source keeps the topic sentence and examples in one paragraph; SOL's split deviates."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H043",
+      "reason": "BASE's 'committed corruption' matches 비리를 저지른; SOL's 'accused of' shifts to mere allegation."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H044",
+      "reason": "BASE keeps 그 모양새다 ('I looked much the same') and 특실 ('private suite of the training hall'); SOL generalizes and adds 'my.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H045",
+      "reason": "BASE preserves the 날고 기어도 image ('flew high or crawled low'); SOL flattens it to 'how hard anyone else tried.'"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H046",
+      "reason": "SOL preserves 세상에 ('God') but adds 'No wonder'; BASE drops the exclamation. Repair keeps the exclamation without the added causal.",
+      "replacement": "God, what would I have done without this character? His father was the Family Head, his eldest brother was the Lesser Family Head, and his second brother was a martial arts prodigy. He could spend his days loafing around pleasure houses without a care."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H047",
+      "reason": "BASE keeps 알고 보니 ('Now that I thought about it'); SOL drops it entirely."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H048",
+      "reason": "BASE's 'walked around' matches 돌아다녔다; SOL's 'explored' shifts the register."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H049",
+      "reason": "SOL rightly keeps 나뉘어 ('divided') but misreads 주먹밥 as 'fist-sized balls'; repair keeps 'divided' and the correct 'rice balls.'",
+      "replacement": "The food was divided between two jars. When I looked inside, I found rice balls giving off a strong medicinal scent."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H050",
+      "reason": "Both faithful; BASE's 'a long period' matches 장복 without SOL's rewrite."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H051",
+      "reason": "BASE's 'nutritional supplementation' matches 영양 보충; SOL overstates to 'all the nutrition you needed.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H052",
+      "reason": "SOL's pronoun avoids repeating the item name and reads cleaner."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H053",
+      "reason": "BASE keeps 양손 ('with both hands') and the separate dialogue paragraph matching the source."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H054",
+      "reason": "The source keeps the muttered command as its own dialogue paragraph."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H055",
+      "reason": "SOL fixes 멀쩡하게 놓여 있던 ('jars just sitting there'), which BASE mistranslated as 'perfectly ordinary.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H056",
+      "reason": "Both faithful; SOL's added 'now' is unsupported."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H057",
+      "reason": "BASE keeps 발견한 ('The second necessity I found') and 식수 ('drinking water')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H058",
+      "reason": "SOL's 'Then came…' is a tighter rendering than BASE's 'And then there was….'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H059",
+      "reason": "SOL keeps 걸려 있는 ('hung') as the source states; BASE's 'held' changes the image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H060",
+      "reason": "Matches the source noun form and the earlier 'Item acquisition' command."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H061",
+      "reason": "BASE keeps the item-name order 'Training Wooden Spear' from the System panel."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H062",
+      "reason": "BASE keeps 완벽하지 ('everything would be perfect'); SOL drops it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H063",
+      "reason": "BASE keeps 인벤토리에서 ('out of my inventory')."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H064",
+      "reason": "Both faithful and equally readable; SOL's clause-fronting is not a meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H065",
+      "reason": "SOL matches 하나만이 아니다 ('not the only one'); BASE's 'wasn't always ding' implies a temporal distinction."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H066",
+      "reason": "Both faithful; BASE's 'the other sound' keeps the referent clearer than SOL's 'the other one.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H067",
+      "reason": "BASE keeps the source's parenthetical count format, used consistently in the other System panels."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H068",
+      "reason": "Both fine; BASE keeps the panel description intact."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H069",
+      "reason": "SOL's 'I had lost count' is more idiomatic than BASE's 'I had no idea how many times.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H070",
+      "reason": "SOL's 'I got this all wrong' matches 잘못 생각했네 better than BASE's 'was thinking about this all wrong.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H071",
+      "reason": "BASE keeps 대로 (the spear moving as directed, 'as quickly as I wanted'); SOL drops it."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H072",
+      "reason": "SOL clarifies the cause ('Its lightness') and is punchier ('this damned picky System'); BASE is vague and clunky."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H073",
+      "reason": "Consistent with the source's parenthesis count format."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H074",
+      "reason": "BASE keeps the indefinite first mention 'a Sharp Spear' and the compact 'shaft thickness.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H075",
+      "reason": "BASE's 'But' matches 그런데; SOL's 'So' shifts the connective."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H076",
+      "reason": "BASE's 'insanely' sanitizes 더럽게, while SOL's 'fucking' equates it to 시발 ('fuck'); 'damn' matches this crude-but-milder intensifier.",
+      "replacement": "It's damn heavy. Seriously."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H077",
+      "reason": "SOL keeps 통짜 ('solid steel'); BASE's 'entirely of steel' loses the solid-piece sense."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H078",
+      "reason": "SOL's conditional ('wouldn't last if I swung…') matches 휘두렀다가는; BASE's 'couldn't withstand' flattens it."
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H079",
+      "reason": "SOL uses the glossary 'Second Rate' but drops the 팔랑개비 image; BASE keeps the pinwheel but lowercases the term. Keep both.",
+      "replacement": "My current realm was Second Rate. Even with the System's help, swinging more than half a sack of rice around like a pinwheel was impossible."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H080",
+      "reason": "BASE keeps the 'tiger power' wording and 솟아나는 ('welling up'); SOL's 'tap into' shifts the verb."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H081",
+      "reason": "BASE's 'That was when…' matches 그런 생각을 했을 때였다."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H082",
+      "reason": "Terse echo of the earlier 'tiger power' callback."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H083",
+      "reason": "SOL's 'I do have it' captures the realization 있다; BASE's 'It's here?' misreads it as locative."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H084",
+      "reason": "BASE keeps the impersonal 있다 ('there was internal energy') building to the ten-year line; SOL makes it possessive ('I had') and splits the paragraph."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H085",
+      "reason": "The insert would split off a clause the source keeps in the same paragraph as P120."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H086",
+      "reason": "BASE keeps the impersonal passive 이끌어 낼 수 있는 ('could be drawn out'); SOL adds 'I.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H087",
+      "reason": "Both fine; BASE's 'forgotten about it' keeps the referent clear."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H088",
+      "reason": "SOL's line ('It's not like I've ever used anything like that') reverses 써 봤어야지 ('I should have tried using it')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H089",
+      "reason": "SOL's idioms ('experience was the best teacher,' 'only half a Hunter') read more naturally than BASE's paraphrases."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H090",
+      "reason": "Both fine; BASE's 'At least' fits 그래도."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H091",
+      "reason": "Both fine; BASE keeps 어이없게 ('dumbfounded') and 천천히, 신중하게 ('Slowly and carefully')."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H092",
+      "reason": "BASE's 'played rapidly' preserves 되감기 (playback/rewind); SOL's 'raced' drops the image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H093",
+      "reason": "BASE mirrors the source's repeated 'spread' wording; SOL varies it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H094",
+      "reason": "BASE's 'overflowed' matches 넘쳐흐른다; SOL's 'surged' shifts the verb."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H095",
+      "reason": "BASE's rhetorical 'How can…' reads better than SOL's awkward statement-as-question 'A person can change this much?'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H096",
+      "reason": "BASE keeps 길 ('the paths I wanted it to follow'); SOL's 'exactly as I willed it' drops the path image."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H097",
+      "reason": "Consistent with the source's parenthesis count format."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H098",
+      "reason": "Both fine; SOL's added 'finally' is unsupported."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H099",
+      "reason": "BASE's 'a worried expression' matches 근심 섞인; SOL's 'etched across his face' intensifies."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H100",
+      "reason": "BASE keeps 잘 ('doing well'); SOL's 'all right' weakens it."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H101",
+      "reason": "Both faithful; SOL's 'hasn't fully recovered' is no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H102",
+      "reason": "BASE keeps 'even spit' matching 침 발라도; SOL adds 'a little.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H103",
+      "reason": "SOL keeps 때부터 ('since childhood') and 몰라서 하는 말이야 ('you only say that because'), both dropped by BASE."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H104",
+      "reason": "BASE keeps 대답했다 ('answered'); SOL drops the reply for 'stared.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H105",
+      "reason": "BASE keeps 만 해도 ('alone') and the connective 그리고 ('And'); SOL drops both."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H106",
+      "reason": "SOL's 'cutting him open would count as self-defense' matches 갈라도 better and the phrasing is tighter."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H107",
+      "reason": "BASE's 'subtly' matches 슬쩍 (furtively); SOL's 'quietly' shifts the sense."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H108",
+      "reason": "BASE's 'paying compensation' doesn't name a recipient the source omits; SOL adds 'the Medicine King Hall.'"
+    },
+    {
+      "decision": "REPAIR",
+      "hunk_id": "H109",
+      "reason": "BASE mistranslates 모르긴 몰라도 as 'Whatever else may be true'; SOL omits the hedge. Repair restores the speaker's uncertainty.",
+      "replacement": "“He swallowed that much elixir. I can't be sure, but he probably won't suffer from minor ailments until the day he dies.”"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H110",
+      "reason": "BASE keeps present 부족해, 안쓰럽다 ('feel sorry for him'), and 꼴; SOL shifts tense and to 'heart aches.'"
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H111",
+      "reason": "BASE's one-word 'Weak?' matches the terse echo 힘이 없다고요? and pairs with P153."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H112",
+      "reason": "Both fine; BASE keeps 과거 ('in the past')."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H113",
+      "reason": "SOL's 'known as the Night King' is more idiomatic than BASE's 'known by the nickname.'"
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H114",
+      "reason": "SOL keeps 하나는 ('in at least one respect') and 상상해 보다 ('tried to imagine'), which BASE drops."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H115",
+      "reason": "SOL keeps 막내도 그렇고 ('the youngest too'), which BASE drops."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H116",
+      "reason": "The source keeps the sect name and the weight sentence in one paragraph; BASE does too."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H117",
+      "reason": "The insert would duplicate the weight clause BASE already keeps in P164."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H118",
+      "reason": "Both faithful; SOL's 'the sect had grown' is no meaningful gain."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H119",
+      "reason": "BASE's 'intentions' (의도) keeps it distinct from P169's 'purpose,' matching the source's two questions."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H120",
+      "reason": "Both fine; BASE keeps 풀어 ('out') and 알아보다 ('find out')."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H121",
+      "reason": "Both fine; 만지작거렸다 is rendered acceptably either way."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H122",
+      "reason": "BASE keeps 목적 ('For what purpose'), distinct from P166's intentions; SOL's 'What did they want?' repeats H119's phrasing."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H123",
+      "reason": "Both faithful; no meaningful gain in SOL's reordering."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H124",
+      "reason": "Both fine; BASE keeps 무엇이든 간에 ('may be')."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H125",
+      "reason": "BASE keeps both 살아남아 ('survive') and 내일을 맞이 ('live to see tomorrow'); SOL drops one."
+    }
+  ],
+  "version": 1
+}

@@ -158,13 +158,14 @@ The diff is paragraph-aware. A hunk can contain one or several adjacent paragrap
 
 DeepSeek receives:
 
-- complete Korean source;
-- complete baseline English;
-- complete Sol English;
+- complete Korean source (once, with line numbers);
+- complete baseline English (once, with `P#` paragraph labels);
 - exact glossary rows;
 - project fidelity rules;
-- numbered changed hunks with local context;
+- numbered changed hunks containing only the changed BASE and SOL spans, plus `P#` / Korean line citations;
 - terminology-risk annotations when a preferred baseline term disappears from Sol's hunk.
+
+The complete Sol chapter is not sent. Neighboring unchanged English is looked up in the numbered baseline rather than duplicated around every hunk.
 
 It must return exactly one of:
 

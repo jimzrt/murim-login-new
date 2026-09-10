@@ -1,0 +1,2148 @@
+{
+  "baseline_blocks": 174,
+  "baseline_sha256": "278ca5dab21ecc8a08c8304941816e7bec36c9698e3c4727ad96cef86d5c41b6",
+  "global_terminology_alerts": [],
+  "hunk_count": 125,
+  "hunks": [
+    {
+      "baseline": "After walking for more than ten minutes, we arrived at a cliff that blocked off the rear of the Jin Family of Taiyuan. A massive cavern gaped open in its face. One person stood in front of it.",
+      "baseline_paragraphs": "P2",
+      "baseline_range": [
+        1,
+        2
+      ],
+      "hunk_id": "H001",
+      "korean_lines": "5",
+      "sol": "After walking for more than ten minutes, we reached the cliff that sealed off the rear of the Jin Family of Taiyuan estate. A vast cavern gaped open in its face, and one man stood before it.",
+      "sol_range": [
+        1,
+        2
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Hmm. You came?”",
+      "baseline_paragraphs": "P3",
+      "baseline_range": [
+        2,
+        3
+      ],
+      "hunk_id": "H002",
+      "korean_lines": "7",
+      "sol": "“Hmm. You’re here.”",
+      "sol_range": [
+        2,
+        3
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "He had the build of a brown bear and spoke in a solemn tone.",
+      "baseline_paragraphs": "P4",
+      "baseline_range": [
+        3,
+        4
+      ],
+      "hunk_id": "H003",
+      "korean_lines": "9",
+      "sol": "He had the build of a brown bear and a solemn way of speaking.",
+      "sol_range": [
+        3,
+        4
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gave an awkward bow.",
+      "baseline_paragraphs": "P6",
+      "baseline_range": [
+        5,
+        6
+      ],
+      "hunk_id": "H004",
+      "korean_lines": "13",
+      "sol": "I bowed awkwardly.",
+      "sol_range": [
+        5,
+        6
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung was an awkward presence. As if suddenly gaining an NPC family wasn’t enough, he also paid an absurd amount of attention to me.",
+      "baseline_paragraphs": "P8",
+      "baseline_range": [
+        7,
+        8
+      ],
+      "hunk_id": "H005",
+      "korean_lines": "17",
+      "sol": "Jin Wikyung made me uncomfortable. As if suddenly acquiring an NPC family wasn’t enough, he took an absurd amount of interest in me.",
+      "sol_range": [
+        7,
+        8
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Just look at him. He was trying so hard not to show it in front of everyone else. But if you looked closely, his eyes were moist.",
+      "baseline_paragraphs": "P9",
+      "baseline_range": [
+        8,
+        9
+      ],
+      "hunk_id": "H006",
+      "korean_lines": "19",
+      "sol": "Just look at him. He was trying his damnedest not to show it with everyone watching. But if you looked closely, his eyes were glistening.",
+      "sol_range": [
+        8,
+        9
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "With his appearance, he looked like the kind of man who could make even a triad boss back down. Yet somehow, every character in this game was completely bizarre.",
+      "baseline_paragraphs": "P11",
+      "baseline_range": [
+        10,
+        11
+      ],
+      "hunk_id": "H007",
+      "korean_lines": "23",
+      "sol": "He looked like he could make a triad boss back down, yet somehow every character in this game was completely bizarre.",
+      "sol_range": [
+        10,
+        11
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I can no longer overlook your conduct. As the Lesser Family Head and acting Family Head, I have ordered you to undergo closed-door training. Do you have anything to say?”",
+      "baseline_paragraphs": "P12",
+      "baseline_range": [
+        11,
+        12
+      ],
+      "hunk_id": "H008",
+      "korean_lines": "25",
+      "sol": "“I can no longer overlook your conduct. In my capacity as Lesser Family Head and acting Family Head, I have ordered you confined to the training hall. Do you have anything to say?”",
+      "sol_range": [
+        11,
+        12
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But this was all a staged performance. On the way to the training hall, Wipeng had explained what was really going on. There was a power struggle among the upper ranks of the Jin Family of Taiyuan, and Jin Wikyung was acting as my shield.",
+      "baseline_paragraphs": "P14",
+      "baseline_range": [
+        13,
+        14
+      ],
+      "hunk_id": "H009",
+      "korean_lines": "31",
+      "sol": "But this was all staged. On the way here, Wipeng had explained what was really going on. There was a power struggle among the Jin Family of Taiyuan’s upper ranks, and Jin Wikyung was shielding me from it.",
+      "sol_range": [
+        13,
+        14
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This forced confinement was, in other words, a show.",
+      "baseline_paragraphs": "P15",
+      "baseline_range": [
+        14,
+        15
+      ],
+      "hunk_id": "H010",
+      "korean_lines": "35",
+      "sol": "In other words, this forced confinement was all for show.",
+      "sol_range": [
+        14,
+        15
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*The Young Master needed a place to train anyway, didn’t he? Just endure it for three days.*",
+      "baseline_paragraphs": "P16",
+      "baseline_range": [
+        15,
+        16
+      ],
+      "hunk_id": "H011",
+      "korean_lines": "37",
+      "sol": "*You needed somewhere to train anyway, didn’t you, Young Master? Just endure it for three days.*",
+      "sol_range": [
+        15,
+        16
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Remembering Wipeng’s final words, I bowed my head as if repenting.",
+      "baseline_paragraphs": "P17",
+      "baseline_range": [
+        16,
+        17
+      ],
+      "hunk_id": "H012",
+      "korean_lines": "39",
+      "sol": "Remembering Wipeng’s final words, I bowed my head and pretended to repent.",
+      "sol_range": [
+        16,
+        17
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The advantage of this play was that the lines were short.",
+      "baseline_paragraphs": "P19",
+      "baseline_range": [
+        18,
+        19
+      ],
+      "hunk_id": "H013",
+      "korean_lines": "43",
+      "sol": "The best thing about this play was how short the lines were.",
+      "sol_range": [
+        18,
+        19
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung delivered his final line with a sorrowful look in his eyes.",
+      "baseline_paragraphs": "P20",
+      "baseline_range": [
+        19,
+        20
+      ],
+      "hunk_id": "H014",
+      "korean_lines": "45",
+      "sol": "Jin Wikyung delivered his final line with sorrow in his eyes.",
+      "sol_range": [
+        19,
+        20
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Confine the criminal to the training hall. The release date will be announced later.”",
+      "baseline_paragraphs": "P21",
+      "baseline_range": [
+        20,
+        21
+      ],
+      "hunk_id": "H015",
+      "korean_lines": "47",
+      "sol": "“Confine the criminal to the training hall. His release date will be announced later.”",
+      "sol_range": [
+        20,
+        21
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The moment he finished speaking, two warriors guarding the entrance to the training hall approached and grabbed me by both arms.",
+      "baseline_paragraphs": "P22",
+      "baseline_range": [
+        21,
+        22
+      ],
+      "hunk_id": "H016",
+      "korean_lines": "49",
+      "sol": "The moment he finished speaking, two warriors guarding the entrance approached and seized me by the arms.",
+      "sol_range": [
+        21,
+        22
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The play was over. Time for me to exit the stage.",
+      "baseline_paragraphs": "P23",
+      "baseline_range": [
+        22,
+        23
+      ],
+      "hunk_id": "H017",
+      "korean_lines": "53",
+      "sol": "The play was over. Time to exit the stage.",
+      "sol_range": [
+        22,
+        23
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I stood at the entrance to the training hall.",
+      "baseline_paragraphs": "P24",
+      "baseline_range": [
+        23,
+        24
+      ],
+      "hunk_id": "H018",
+      "korean_lines": "57",
+      "sol": "I stopped at the entrance to the training hall.",
+      "sol_range": [
+        23,
+        24
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I’ve had everything you need brought there. Little brother, don’t overdo it.*",
+      "baseline_paragraphs": "P25",
+      "baseline_range": [
+        24,
+        25
+      ],
+      "hunk_id": "H019",
+      "korean_lines": "59",
+      "sol": "*I’ve had everything you need brought inside. Don’t push yourself too hard, little brother.*",
+      "sol_range": [
+        24,
+        25
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Along with Jin Wikyung’s Sound Transmission, I took my first step inside.",
+      "baseline_paragraphs": "P26",
+      "baseline_range": [
+        25,
+        26
+      ],
+      "hunk_id": "H020",
+      "korean_lines": "61",
+      "sol": "With Jin Wikyung’s Sound Transmission in my ear, I took my first step inside.",
+      "sol_range": [
+        25,
+        26
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The training hall was, in a word, a cave. An artificial cave dug into a cliff, at that. It was tall, spacious, and damp.",
+      "baseline_paragraphs": "P28",
+      "baseline_range": [
+        27,
+        28
+      ],
+      "hunk_id": "H021",
+      "korean_lines": "65",
+      "sol": "The training hall was, in a word, a cave. An artificial cave carved into the cliff, at that.",
+      "sol_range": [
+        27,
+        28
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P28",
+      "baseline_range": [
+        28,
+        28
+      ],
+      "hunk_id": "H022",
+      "korean_lines": "65",
+      "sol": "It was tall, spacious, and damp.",
+      "sol_range": [
+        28,
+        29
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "How long had I been walking behind the warrior assigned to the training hall? By the time I could no longer tell whether I was wearing leather shoes or wet mops, a massive iron gate appeared.",
+      "baseline_paragraphs": "P30",
+      "baseline_range": [
+        29,
+        30
+      ],
+      "hunk_id": "H023",
+      "korean_lines": "69",
+      "sol": "How long had I been following the warrior assigned to the training hall? By the time I could no longer tell whether I was wearing leather shoes or wet mops, a massive iron gate appeared before me.",
+      "sol_range": [
+        30,
+        31
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My mouth fell open the moment I saw it. Filling the passageway without leaving a gap, it looked less like a door and more like a wall blocking all entry and exit.",
+      "baseline_paragraphs": "P32",
+      "baseline_range": [
+        31,
+        32
+      ],
+      "hunk_id": "H024",
+      "korean_lines": "73",
+      "sol": "My mouth fell open the moment I saw it. The gate filled the passage without leaving a single gap. It looked less like a door than a wall built to prevent anyone from entering or leaving.",
+      "sol_range": [
+        32,
+        33
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The warrior leading me raised his torch and shouted,",
+      "baseline_paragraphs": "P33",
+      "baseline_range": [
+        32,
+        33
+      ],
+      "hunk_id": "H025",
+      "korean_lines": "75",
+      "sol": "The warrior guiding me raised his torch and shouted, “Open the gate!”",
+      "sol_range": [
+        33,
+        34
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Open the gate!”",
+      "baseline_paragraphs": "P34",
+      "baseline_range": [
+        33,
+        34
+      ],
+      "hunk_id": "H026",
+      "korean_lines": "77",
+      "sol": "",
+      "sol_range": [
+        34,
+        34
+      ],
+      "tag": "delete",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P35",
+      "baseline_range": [
+        35,
+        35
+      ],
+      "hunk_id": "H027",
+      "korean_lines": "79",
+      "sol": "The enormous iron gate slowly opened its jaws.",
+      "sol_range": [
+        35,
+        36
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The massive iron gate slowly opened its jaws. It wasn’t some magical command like “Open, Sesame.” One NPC who had been waiting nearby simply grabbed and pulled the protruding gate mechanism.",
+      "baseline_paragraphs": "P36",
+      "baseline_range": [
+        35,
+        36
+      ],
+      "hunk_id": "H028",
+      "korean_lines": "81",
+      "sol": "It wasn’t some magic command like “Open, Sesame.” An NPC waiting nearby had simply pulled a protruding lever that operated the gate.",
+      "sol_range": [
+        36,
+        37
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Even so, it was an overwhelming sight.",
+      "baseline_paragraphs": "P37",
+      "baseline_range": [
+        36,
+        37
+      ],
+      "hunk_id": "H029",
+      "korean_lines": "83",
+      "sol": "Even so, the sight was overwhelming.",
+      "sol_range": [
+        37,
+        38
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This time, I couldn’t hide the exclamation that escaped me.",
+      "baseline_paragraphs": "P40",
+      "baseline_range": [
+        39,
+        40
+      ],
+      "hunk_id": "H030",
+      "korean_lines": "89",
+      "sol": "This time, I couldn’t hold back my amazement.",
+      "sol_range": [
+        40,
+        41
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "When I had first entered the training hall, I had imagined a damp underground cave.",
+      "baseline_paragraphs": "P41",
+      "baseline_range": [
+        40,
+        41
+      ],
+      "hunk_id": "H031",
+      "korean_lines": "91",
+      "sol": "When I first entered the training hall, I had imagined a dank underground cavern, but…",
+      "sol_range": [
+        41,
+        42
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A broad bed covered in a furry blanket lifted my spirits just by looking at it. Instead of a damp, uneven stone floor, a neat gray surface stretched out before me.",
+      "baseline_paragraphs": "P43",
+      "baseline_range": [
+        42,
+        43
+      ],
+      "hunk_id": "H032",
+      "korean_lines": "95",
+      "sol": "There was a broad bed with a fur blanket so inviting that merely looking at it lifted my spirits. Instead of a damp, uneven stone floor, a smooth gray surface stretched before me.",
+      "sol_range": [
+        43,
+        44
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Cement… Obviously not. Limestone?*",
+      "baseline_paragraphs": "P44",
+      "baseline_range": [
+        43,
+        44
+      ],
+      "hunk_id": "H033",
+      "korean_lines": "97",
+      "sol": "*Cement… Obviously not. Limestone, maybe?*",
+      "sol_range": [
+        44,
+        45
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Even with the chill in the air, the environment was far better than I had imagined.",
+      "baseline_paragraphs": "P45",
+      "baseline_range": [
+        44,
+        45
+      ],
+      "hunk_id": "H034",
+      "korean_lines": "101",
+      "sol": "Aside from the chill in the air—and even with that taken into account—the place was far better than I had imagined.",
+      "sol_range": [
+        45,
+        46
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*This is supposed to be a punishment?*",
+      "baseline_paragraphs": "P46",
+      "baseline_range": [
+        45,
+        46
+      ],
+      "hunk_id": "H035",
+      "korean_lines": "105",
+      "sol": "*This is supposed to be punishment?*",
+      "sol_range": [
+        46,
+        47
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I looked around in a daze, then heard someone clear his throat behind me. It was the warrior who had guided me here.",
+      "baseline_paragraphs": "P47",
+      "baseline_range": [
+        46,
+        47
+      ],
+      "hunk_id": "H036",
+      "korean_lines": "107",
+      "sol": "As I stared around in bewilderment, someone cleared his throat behind me. I turned to find the warrior who had guided me here.",
+      "sol_range": [
+        47,
+        48
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P48",
+      "baseline_range": [
+        48,
+        48
+      ],
+      "hunk_id": "H037",
+      "korean_lines": "111",
+      "sol": "Grrrnnng.",
+      "sol_range": [
+        49,
+        50
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I watched the iron gate slowly close with another grinding sound, then suddenly remembered the Sound Transmission I had heard at the entrance to the training hall.",
+      "baseline_paragraphs": "P49",
+      "baseline_range": [
+        48,
+        49
+      ],
+      "hunk_id": "H038",
+      "korean_lines": "115",
+      "sol": "As I watched the iron gate slowly close, I suddenly remembered the Sound Transmission I had heard at the entrance.",
+      "sol_range": [
+        50,
+        51
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I’ve had everything you need brought there. Little brother, don’t overdo it.*",
+      "baseline_paragraphs": "P50",
+      "baseline_range": [
+        49,
+        50
+      ],
+      "hunk_id": "H039",
+      "korean_lines": "117",
+      "sol": "*I’ve had everything you need brought inside. Don’t push yourself too hard, little brother.*",
+      "sol_range": [
+        51,
+        52
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Ah. The heart of an NPC who cared about his little brother.",
+      "baseline_paragraphs": "P51",
+      "baseline_range": [
+        50,
+        51
+      ],
+      "hunk_id": "H040",
+      "korean_lines": "119",
+      "sol": "Ah, the devotion of an NPC who cared for his little brother.",
+      "sol_range": [
+        52,
+        53
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This pathetic user was bawling his eyes out.",
+      "baseline_paragraphs": "P52",
+      "baseline_range": [
+        51,
+        52
+      ],
+      "hunk_id": "H041",
+      "korean_lines": "121",
+      "sol": "This pathetic user was moved to tears.",
+      "sol_range": [
+        53,
+        54
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P53",
+      "baseline_range": [
+        53,
+        53
+      ],
+      "hunk_id": "H042",
+      "korean_lines": "123",
+      "sol": "It happened all the time in the real world.",
+      "sol_range": [
+        55,
+        56
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was something that happened all the time in the real world, too. High-ranking officials who had committed corruption showing up at the prosecutors’ office in wheelchairs, or checking themselves into private hospital rooms to avoid investigation.",
+      "baseline_paragraphs": "P54",
+      "baseline_range": [
+        53,
+        54
+      ],
+      "hunk_id": "H043",
+      "korean_lines": "125",
+      "sol": "High-ranking officials accused of corruption would show up at the prosecutors’ office in wheelchairs or check themselves into private hospital suites to avoid an investigation.",
+      "sol_range": [
+        56,
+        57
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My situation was a little different, but I looked much the same. I gazed at the private suite of the training hall with a deeply moved expression.",
+      "baseline_paragraphs": "P55",
+      "baseline_range": [
+        54,
+        55
+      ],
+      "hunk_id": "H044",
+      "korean_lines": "127",
+      "sol": "My situation was a little different, but the general picture was the same. Deeply moved, I gazed upon my private suite in the training hall.",
+      "sol_range": [
+        57,
+        58
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It wasn’t only the graphics and artificial intelligence that were realistic. The game also carried the social message that, no matter how high you flew or how low you crawled, gold spoons had it best.",
+      "baseline_paragraphs": "P57",
+      "baseline_range": [
+        56,
+        57
+      ],
+      "hunk_id": "H045",
+      "korean_lines": "131",
+      "sol": "It wasn’t just the graphics and artificial intelligence that were realistic. The game even conveyed the social message that no matter how hard anyone else tried, being born with a gold spoon was best.",
+      "sol_range": [
+        59,
+        60
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "What would I have done without this character? His father was the Family Head, his eldest brother was the Lesser Family Head, and his second brother was a martial arts prodigy. He could spend his days loafing around pleasure houses without a care.",
+      "baseline_paragraphs": "P58",
+      "baseline_range": [
+        57,
+        58
+      ],
+      "hunk_id": "H046",
+      "korean_lines": "133",
+      "sol": "God, what would I have done if I hadn’t gotten this character? His father was the Family Head, his eldest brother was the Lesser Family Head, and his second brother was a martial arts prodigy. No wonder he could spend all his time loafing around pleasure houses without a care in the world.",
+      "sol_range": [
+        60,
+        61
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Now that I thought about it, wasn’t he actually some great sage who had grasped the ways of the world at a young age?",
+      "baseline_paragraphs": "P60",
+      "baseline_range": [
+        59,
+        60
+      ],
+      "hunk_id": "H047",
+      "korean_lines": "141",
+      "sol": "Wasn’t he actually a great sage who had grasped the ways of the world at a tender age?",
+      "sol_range": [
+        62,
+        63
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Shuddering at the realistic God-Spoon System, I walked around the training hall, which covered well over three thousand square feet. Before long, I found the “necessities” the warrior had mentioned.",
+      "baseline_paragraphs": "P61",
+      "baseline_range": [
+        60,
+        61
+      ],
+      "hunk_id": "H048",
+      "korean_lines": "143",
+      "sol": "Shuddering at the realistic God-Spoon System, I explored the training hall, which covered well over three thousand square feet. Before long, I found the “necessities” the warrior had mentioned.",
+      "sol_range": [
+        63,
+        64
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The food was stored in two jars. When I looked inside, I found rice balls that gave off a strong medicinal scent.",
+      "baseline_paragraphs": "P63",
+      "baseline_range": [
+        62,
+        63
+      ],
+      "hunk_id": "H049",
+      "korean_lines": "147",
+      "sol": "The food was divided between two jars. When I looked inside, I found fist-sized balls giving off a powerful medicinal scent.",
+      "sol_range": [
+        65,
+        66
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> **Item Window**\n>\n> **Excellent Grain-Repelling Pill**\n>\n> **Type:** Pill\n>\n> **Grade:** First Rate\n>\n> **Restriction:** None\n>\n> **Description:** A grain-repelling pill made by crudely cramming in all kinds of beneficial medicinal ingredients. Restores vitality when consumed and grants additional effects when taken over a long period.",
+      "baseline_paragraphs": "P64",
+      "baseline_range": [
+        63,
+        64
+      ],
+      "hunk_id": "H050",
+      "korean_lines": "149",
+      "sol": "> **System**\n>\n> **Item Window**\n>\n> **Excellent Grain-Repelling Pill**\n>\n> **Type:** Pill\n>\n> **Grade:** First Rate\n>\n> **Restriction:** None\n>\n> **Description:** A grain-repelling pill made by crudely cramming in all kinds of beneficial medicinal ingredients. Restores vitality when consumed and grants additional effects when taken over an extended period.",
+      "sol_range": [
+        66,
+        67
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had seen them plenty of times in martial arts novels. They were light, compact, easy to carry, and apparently provided nutritional supplementation, too.",
+      "baseline_paragraphs": "P66",
+      "baseline_range": [
+        65,
+        66
+      ],
+      "hunk_id": "H051",
+      "korean_lines": "157",
+      "sol": "I had seen these plenty of times in martial arts novels. They were light, compact, easy to carry, and supposedly provided all the nutrition you needed.",
+      "sol_range": [
+        68,
+        69
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The other jar was packed full of grain-repelling pills as well.",
+      "baseline_paragraphs": "P67",
+      "baseline_range": [
+        66,
+        67
+      ],
+      "hunk_id": "H052",
+      "korean_lines": "159",
+      "sol": "The other jar was packed full of them too.",
+      "sol_range": [
+        69,
+        70
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gripped the jars with both hands and muttered,",
+      "baseline_paragraphs": "P69",
+      "baseline_range": [
+        68,
+        69
+      ],
+      "hunk_id": "H053",
+      "korean_lines": "163",
+      "sol": "I took hold of both jars and muttered, “Acquire item.”",
+      "sol_range": [
+        71,
+        72
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Item acquisition.”",
+      "baseline_paragraphs": "P70",
+      "baseline_range": [
+        69,
+        70
+      ],
+      "hunk_id": "H054",
+      "korean_lines": "165",
+      "sol": "",
+      "sol_range": [
+        72,
+        72
+      ],
+      "tag": "delete",
+      "terminology_alerts": [
+        {
+          "korean": "아이템",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "Item"
+        }
+      ]
+    },
+    {
+      "baseline": "If someone else had seen me, they would have fallen over in shock. The two perfectly ordinary jars had vanished as if they had evaporated.",
+      "baseline_paragraphs": "P71",
+      "baseline_range": [
+        70,
+        71
+      ],
+      "hunk_id": "H055",
+      "korean_lines": "167",
+      "sol": "If anyone else had seen me, they would have fallen over in shock. The two jars sitting there a moment ago vanished as if they had evaporated.",
+      "sol_range": [
+        72,
+        73
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gazed fondly at the jars stored in my inventory.",
+      "baseline_paragraphs": "P72",
+      "baseline_range": [
+        71,
+        72
+      ],
+      "hunk_id": "H056",
+      "korean_lines": "169",
+      "sol": "I gazed fondly at the jars now stored in my inventory.",
+      "sol_range": [
+        73,
+        74
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The second necessity I found was water. Since the training hall was, after all, a cave, a cold underground spring in one corner took care of my drinking water.",
+      "baseline_paragraphs": "P74",
+      "baseline_range": [
+        73,
+        74
+      ],
+      "hunk_id": "H057",
+      "korean_lines": "173",
+      "sol": "The second necessity was water. Since the training hall was, after all, a cave, a cold underground spring in one corner took care of my drinking needs.",
+      "sol_range": [
+        75,
+        76
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "And then there was the third and final necessity.",
+      "baseline_paragraphs": "P75",
+      "baseline_range": [
+        74,
+        75
+      ],
+      "hunk_id": "H058",
+      "korean_lines": "175",
+      "sol": "Then came the third and final necessity.",
+      "sol_range": [
+        76,
+        77
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A weapons rack held several weapons in a neat row. Naturally, the first thing I picked up was a sturdy-looking wooden spear.",
+      "baseline_paragraphs": "P77",
+      "baseline_range": [
+        76,
+        77
+      ],
+      "hunk_id": "H059",
+      "korean_lines": "179",
+      "sol": "Several weapons hung in a neat row on a rack. Naturally, the first one I picked up was a sturdy-looking wooden spear.",
+      "sol_range": [
+        78,
+        79
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*Item appraisal.*",
+      "baseline_paragraphs": "P78",
+      "baseline_range": [
+        77,
+        78
+      ],
+      "hunk_id": "H060",
+      "korean_lines": "181",
+      "sol": "*Appraise item.*",
+      "sol_range": [
+        79,
+        80
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "A training wooden spear made for beginners. It was exactly what I needed right now.",
+      "baseline_paragraphs": "P82",
+      "baseline_range": [
+        81,
+        82
+      ],
+      "hunk_id": "H061",
+      "korean_lines": "193",
+      "sol": "A wooden training spear made for beginners. It was exactly what I needed right now.",
+      "sol_range": [
+        83,
+        84
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "If I had just one more thing, everything would be perfect.",
+      "baseline_paragraphs": "P83",
+      "baseline_range": [
+        82,
+        83
+      ],
+      "hunk_id": "H062",
+      "korean_lines": "195",
+      "sol": "All I needed was one more thing.",
+      "sol_range": [
+        84,
+        85
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Grinning, I took a martial arts manual titled *Jin Family’s Spear Technique* out of my inventory.",
+      "baseline_paragraphs": "P85",
+      "baseline_range": [
+        84,
+        85
+      ],
+      "hunk_id": "H063",
+      "korean_lines": "203",
+      "sol": "Grinning, I pulled out the martial arts manual titled *Jin Family’s Spear Technique*.",
+      "sol_range": [
+        86,
+        87
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had learned something for the first time yesterday while practicing the Jin Family’s Manoeuvre Technique.",
+      "baseline_paragraphs": "P92",
+      "baseline_range": [
+        91,
+        92
+      ],
+      "hunk_id": "H064",
+      "korean_lines": "221",
+      "sol": "While practicing the Jin Family’s Manoeuvre Technique yesterday, I had learned something for the first time.",
+      "sol_range": [
+        93,
+        94
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The System’s notification sound wasn’t always ding.",
+      "baseline_paragraphs": "P93",
+      "baseline_range": [
+        92,
+        93
+      ],
+      "hunk_id": "H065",
+      "korean_lines": "225",
+      "sol": "Ding wasn’t the System’s only notification sound.",
+      "sol_range": [
+        94,
+        95
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had also learned just how much I hated the other sound.",
+      "baseline_paragraphs": "P94",
+      "baseline_range": [
+        93,
+        94
+      ],
+      "hunk_id": "H066",
+      "korean_lines": "229",
+      "sol": "And I had learned just how much I hated the other one.",
+      "sol_range": [
+        95,
+        96
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - The movement failed.\n>\n> - Successful attempts (2 / 100)",
+      "baseline_paragraphs": "P96",
+      "baseline_range": [
+        95,
+        96
+      ],
+      "hunk_id": "H067",
+      "korean_lines": "233",
+      "sol": "> **System**\n>\n> - The movement failed.\n>\n> - Successful attempts: 2 / 100",
+      "sol_range": [
+        97,
+        98
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was the failure message. The System window that appeared without fail whenever I botched a movement.",
+      "baseline_paragraphs": "P97",
+      "baseline_range": [
+        96,
+        97
+      ],
+      "hunk_id": "H068",
+      "korean_lines": "237",
+      "sol": "The failure message. A System window that appeared without fail whenever I botched a movement.",
+      "sol_range": [
+        98,
+        99
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I had no idea how many times I had seen it by now.",
+      "baseline_paragraphs": "P98",
+      "baseline_range": [
+        97,
+        98
+      ],
+      "hunk_id": "H069",
+      "korean_lines": "239",
+      "sol": "I had lost count of how many times I’d seen it.",
+      "sol_range": [
+        99,
+        100
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*I was thinking about this all wrong.*",
+      "baseline_paragraphs": "P100",
+      "baseline_range": [
+        99,
+        100
+      ],
+      "hunk_id": "H070",
+      "korean_lines": "245",
+      "sol": "*I got this all wrong.*",
+      "sol_range": [
+        101,
+        102
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Maybe it was because it was made of wood, but the spear was light. Whether I thrust or swung it, it moved as quickly as I wanted.",
+      "baseline_paragraphs": "P101",
+      "baseline_range": [
+        100,
+        101
+      ],
+      "hunk_id": "H071",
+      "korean_lines": "247",
+      "sol": "Maybe because it was made of wood, the spear was light. Whether I thrust or swung it, it moved quickly.",
+      "sol_range": [
+        102,
+        103
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Because it was so difficult to make minute adjustments, I kept making mistakes. There was no chance that such a filthy, ridiculously picky System would overlook minor errors.",
+      "baseline_paragraphs": "P104",
+      "baseline_range": [
+        103,
+        104
+      ],
+      "hunk_id": "H072",
+      "korean_lines": "253",
+      "sol": "Its lightness made fine adjustments difficult, so I kept slipping up. There was no way this damned picky System would overlook even the smallest mistake.",
+      "sol_range": [
+        105,
+        106
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - The movement failed.\n>\n> - Successful attempts (5 / 100)",
+      "baseline_paragraphs": "P106",
+      "baseline_range": [
+        105,
+        106
+      ],
+      "hunk_id": "H073",
+      "korean_lines": "259",
+      "sol": "> **System**\n>\n> - The movement failed.\n>\n> - Successful attempts: 5 / 100",
+      "sol_range": [
+        107,
+        108
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In the end, I tossed the *Training Wooden Spear* aside and pulled a *Sharp Spear* from my inventory. Its length and shaft thickness were roughly similar to the spear I had used in the real world.",
+      "baseline_paragraphs": "P108",
+      "baseline_range": [
+        107,
+        108
+      ],
+      "hunk_id": "H074",
+      "korean_lines": "265",
+      "sol": "In the end, I tossed the *Training Wooden Spear* aside and pulled the *Sharp Spear* from my inventory. Its length and the thickness of its shaft were roughly the same as the spear I had used in the real world.",
+      "sol_range": [
+        109,
+        110
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "But why hadn’t I taken it out from the beginning?",
+      "baseline_paragraphs": "P109",
+      "baseline_range": [
+        108,
+        109
+      ],
+      "hunk_id": "H075",
+      "korean_lines": "267",
+      "sol": "So why hadn’t I taken it out from the start?",
+      "sol_range": [
+        110,
+        111
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“It’s insanely heavy. Seriously.”",
+      "baseline_paragraphs": "P110",
+      "baseline_range": [
+        109,
+        110
+      ],
+      "hunk_id": "H076",
+      "korean_lines": "269",
+      "sol": "“It’s fucking heavy. Seriously.”",
+      "sol_range": [
+        111,
+        112
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Since it had been made entirely of steel, its weight was no joke. By feel alone, it was a monster weighing nearly fifty kilograms.",
+      "baseline_paragraphs": "P111",
+      "baseline_range": [
+        110,
+        111
+      ],
+      "hunk_id": "H077",
+      "korean_lines": "271",
+      "sol": "Since it was made entirely of solid steel, its weight was no joke. By feel alone, the monster had to weigh close to fifty kilograms.",
+      "sol_range": [
+        112,
+        113
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My Stamina couldn’t withstand swinging something like this for hours.",
+      "baseline_paragraphs": "P112",
+      "baseline_range": [
+        111,
+        112
+      ],
+      "hunk_id": "H078",
+      "korean_lines": "273",
+      "sol": "My Stamina wouldn’t last if I swung something like this for hours.",
+      "sol_range": [
+        113,
+        114
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "My current realm was second-rate. Even with the System’s help, swinging around more than half a sack of rice as if it were a pinwheel was impossible.",
+      "baseline_paragraphs": "P113",
+      "baseline_range": [
+        112,
+        113
+      ],
+      "hunk_id": "H079",
+      "korean_lines": "275",
+      "sol": "My current realm was Second Rate. Even with the System’s help, I couldn’t whirl around more than half a sack of rice as if it weighed nothing.",
+      "sol_range": [
+        114,
+        115
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*It’s not like I suddenly have tiger power or something.*",
+      "baseline_paragraphs": "P114",
+      "baseline_range": [
+        113,
+        114
+      ],
+      "hunk_id": "H080",
+      "korean_lines": "277",
+      "sol": "*It’s not like I can suddenly tap into the strength of a tiger.*",
+      "sol_range": [
+        115,
+        116
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "That was when it hit me.",
+      "baseline_paragraphs": "P115",
+      "baseline_range": [
+        114,
+        115
+      ],
+      "hunk_id": "H081",
+      "korean_lines": "279",
+      "sol": "Then it hit me.",
+      "sol_range": [
+        116,
+        117
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Tiger power?",
+      "baseline_paragraphs": "P118",
+      "baseline_range": [
+        117,
+        118
+      ],
+      "hunk_id": "H082",
+      "korean_lines": "285",
+      "sol": "The strength of a tiger?",
+      "sol_range": [
+        119,
+        120
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“It’s here?”",
+      "baseline_paragraphs": "P119",
+      "baseline_range": [
+        118,
+        119
+      ],
+      "hunk_id": "H083",
+      "korean_lines": "287",
+      "sol": "“I do have it.”",
+      "sol_range": [
+        120,
+        121
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "This was a game. There was a System and stats. And there was internal energy.",
+      "baseline_paragraphs": "P120",
+      "baseline_range": [
+        119,
+        120
+      ],
+      "hunk_id": "H084",
+      "korean_lines": "289",
+      "sol": "This was a game. It had a System and stats.",
+      "sol_range": [
+        121,
+        122
+      ],
+      "tag": "replace",
+      "terminology_alerts": [
+        {
+          "korean": "공력",
+          "message": "preferred glossary term appears in BASE but not SOL for this hunk",
+          "preferred": "internal energy"
+        }
+      ]
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P120",
+      "baseline_range": [
+        120,
+        120
+      ],
+      "hunk_id": "H085",
+      "korean_lines": "289",
+      "sol": "And I had internal energy.",
+      "sol_range": [
+        122,
+        123
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Ten years of internal energy that could be drawn out through a cultivation technique!",
+      "baseline_paragraphs": "P121",
+      "baseline_range": [
+        120,
+        121
+      ],
+      "hunk_id": "H086",
+      "korean_lines": "291",
+      "sol": "Ten years of internal energy that I could draw out through a cultivation technique!",
+      "sol_range": [
+        123,
+        124
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "It was embarrassing that I had forgotten about it even for a moment.",
+      "baseline_paragraphs": "P122",
+      "baseline_range": [
+        121,
+        122
+      ],
+      "hunk_id": "H087",
+      "korean_lines": "293",
+      "sol": "It was embarrassing that I had forgotten, even for a moment.",
+      "sol_range": [
+        124,
+        125
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I should’ve tried using that…”",
+      "baseline_paragraphs": "P123",
+      "baseline_range": [
+        122,
+        123
+      ],
+      "hunk_id": "H088",
+      "korean_lines": "295",
+      "sol": "“It’s not like I’ve ever used anything like that before…”",
+      "sol_range": [
+        125,
+        126
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "They say you only know what something is like once you’ve experienced it. Was it any wonder an F-rank Hunter was F-rank? With barely any mana to speak of, I made do with my bare body. Even among Hunters, I was treated like a half-baked amateur.",
+      "baseline_paragraphs": "P124",
+      "baseline_range": [
+        123,
+        124
+      ],
+      "hunk_id": "H089",
+      "korean_lines": "297",
+      "sol": "They said experience was the best teacher. There was a reason an F-rank Hunter was F-rank. With barely any mana to speak of, I had always made do with my bare body. Even among Hunters, I was treated like I was only half a Hunter.",
+      "sol_range": [
+        126,
+        127
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*At least that solves one problem.*",
+      "baseline_paragraphs": "P125",
+      "baseline_range": [
+        124,
+        125
+      ],
+      "hunk_id": "H090",
+      "korean_lines": "299",
+      "sol": "*Still, that solves one problem.*",
+      "sol_range": [
+        127,
+        128
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I let out a dumbfounded laugh, then picked up the spear. Slowly and carefully, I began drawing out my internal energy.",
+      "baseline_paragraphs": "P126",
+      "baseline_range": [
+        125,
+        126
+      ],
+      "hunk_id": "H091",
+      "korean_lines": "301",
+      "sol": "I let out a disbelieving laugh and picked up the spear. Then, slowly and carefully, I drew out my internal energy.",
+      "sol_range": [
+        128,
+        129
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The formula of the Jin Family’s Cultivation Technique, imprinted in my mind by the System, played rapidly through my thoughts, guiding my internal energy along its prescribed path.",
+      "baseline_paragraphs": "P127",
+      "baseline_range": [
+        126,
+        127
+      ],
+      "hunk_id": "H092",
+      "korean_lines": "303",
+      "sol": "The formula of the Jin Family’s Cultivation Technique, imprinted in my mind by the System, raced through my thoughts and guided my internal energy along its prescribed path.",
+      "sol_range": [
+        129,
+        130
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The ten years of internal energy coiled in my dantian spread throughout my body. Because this was a game and I was a martial artist, I could feel it spreading through every part of me.",
+      "baseline_paragraphs": "P130",
+      "baseline_range": [
+        129,
+        130
+      ],
+      "hunk_id": "H093",
+      "korean_lines": "309",
+      "sol": "The ten years of internal energy coiled in my dantian spread throughout my body. Because this was a game and I was a martial artist, I could feel that energy flowing into every part of me.",
+      "sol_range": [
+        132,
+        133
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Strength overflowed through my entire body. My vastly improved physical abilities and senses once again filled me with exhilaration after a lifetime as an F-rank Hunter.",
+      "baseline_paragraphs": "P132",
+      "baseline_range": [
+        131,
+        132
+      ],
+      "hunk_id": "H094",
+      "korean_lines": "313",
+      "sol": "Power surged through my entire body. My vastly heightened physical abilities and senses once again brought exhilaration to someone who had spent his life as an F-rank Hunter.",
+      "sol_range": [
+        134,
+        135
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "*How can a person change this much?*",
+      "baseline_paragraphs": "P133",
+      "baseline_range": [
+        132,
+        133
+      ],
+      "hunk_id": "H095",
+      "korean_lines": "315",
+      "sol": "*A person can change this much?*",
+      "sol_range": [
+        135,
+        136
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "I gripped the spear and began practicing the *Jin Family’s Spear Technique*. The fifty-kilogram iron spear no longer felt heavy. It thrust and slashed through the air along the paths I wanted it to follow.",
+      "baseline_paragraphs": "P134",
+      "baseline_range": [
+        133,
+        134
+      ],
+      "hunk_id": "H096",
+      "korean_lines": "317",
+      "sol": "I gripped the spear and began practicing the *Jin Family’s Spear Technique*. The fifty-kilogram iron spear no longer felt heavy. It thrust and slashed through the air exactly as I willed it.",
+      "sol_range": [
+        136,
+        137
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "> **System**\n>\n> - Successful attempts (6 / 100)",
+      "baseline_paragraphs": "P137",
+      "baseline_range": [
+        136,
+        137
+      ],
+      "hunk_id": "H097",
+      "korean_lines": "327",
+      "sol": "> **System**\n>\n> - Successful attempts: 6 / 100",
+      "sol_range": [
+        139,
+        140
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The notification I had been waiting for began to ring.",
+      "baseline_paragraphs": "P138",
+      "baseline_range": [
+        137,
+        138
+      ],
+      "hunk_id": "H098",
+      "korean_lines": "331",
+      "sol": "The notification I had been waiting for finally began to ring.",
+      "sol_range": [
+        140,
+        141
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung spoke with a worried expression.",
+      "baseline_paragraphs": "P140",
+      "baseline_range": [
+        139,
+        140
+      ],
+      "hunk_id": "H099",
+      "korean_lines": "337",
+      "sol": "Jin Wikyung spoke with worry etched across his face.",
+      "sol_range": [
+        142,
+        143
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“He’s doing well, right?”",
+      "baseline_paragraphs": "P141",
+      "baseline_range": [
+        140,
+        141
+      ],
+      "hunk_id": "H100",
+      "korean_lines": "339",
+      "sol": "“He’s doing all right, isn’t he?”",
+      "sol_range": [
+        143,
+        144
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“He’s still not fully recovered… He’ll be all right, won’t he?”",
+      "baseline_paragraphs": "P143",
+      "baseline_range": [
+        142,
+        143
+      ],
+      "hunk_id": "H101",
+      "korean_lines": "343",
+      "sol": "“He still hasn’t fully recovered… He’ll be all right, won’t he?”",
+      "sol_range": [
+        145,
+        146
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Anyone who didn’t know better would think the Third Young Master was on death’s door. At that point, even spit would cure him.”",
+      "baseline_paragraphs": "P144",
+      "baseline_range": [
+        143,
+        144
+      ],
+      "hunk_id": "H102",
+      "korean_lines": "345",
+      "sol": "“Anyone who didn’t know better would think the Third Young Master was on death’s door. At this point, even a little spit would cure him.”",
+      "sol_range": [
+        146,
+        147
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“No. You don’t know how weak the youngest was when he was little.”",
+      "baseline_paragraphs": "P145",
+      "baseline_range": [
+        144,
+        145
+      ],
+      "hunk_id": "H103",
+      "korean_lines": "347",
+      "sol": "“No. You only say that because you don’t know how frail the youngest has been since childhood.”",
+      "sol_range": [
+        147,
+        148
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng answered with an incredulous look.",
+      "baseline_paragraphs": "P146",
+      "baseline_range": [
+        145,
+        146
+      ],
+      "hunk_id": "H104",
+      "korean_lines": "349",
+      "sol": "Wipeng stared at him incredulously.",
+      "sol_range": [
+        148,
+        149
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“The elixirs and tonics that have gone into the Third Young Master alone would be enough to fill an entire room. And have you already forgotten about the hundred-year snow ginseng theft last year?”",
+      "baseline_paragraphs": "P147",
+      "baseline_range": [
+        146,
+        147
+      ],
+      "hunk_id": "H105",
+      "korean_lines": "351",
+      "sol": "“The elixirs and tonics that have gone into the Third Young Master would fill an entire room. Have you already forgotten the hundred-year snow ginseng theft last year?”",
+      "sol_range": [
+        149,
+        150
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“At the time, the Medicine King Hall Master was so furious that he ran around shouting that he was going to cut open the Third Young Master’s stomach. To be honest, even while I was stopping him, I found myself thinking that it would qualify as self-defense.”",
+      "baseline_paragraphs": "P149",
+      "baseline_range": [
+        148,
+        149
+      ],
+      "hunk_id": "H106",
+      "korean_lines": "355",
+      "sol": "“The Medicine King Hall Master was so furious that he ran around threatening to cut open the Third Young Master’s stomach. To be honest, even as I restrained him, I couldn’t help thinking that cutting him open would count as self-defense.”",
+      "sol_range": [
+        151,
+        152
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung subtly averted his gaze.",
+      "baseline_paragraphs": "P150",
+      "baseline_range": [
+        149,
+        150
+      ],
+      "hunk_id": "H107",
+      "korean_lines": "357",
+      "sol": "Jin Wikyung quietly averted his gaze.",
+      "sol_range": [
+        152,
+        153
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "In the end, the matter had been settled by paying compensation out of Jin Wikyung’s personal fortune, but the Medicine King Hall Master’s rage had been extraordinary.",
+      "baseline_paragraphs": "P151",
+      "baseline_range": [
+        150,
+        151
+      ],
+      "hunk_id": "H108",
+      "korean_lines": "359",
+      "sol": "The matter had ultimately been settled by compensating the Medicine King Hall out of Jin Wikyung’s personal fortune, but the Hall Master’s fury at the time had been extraordinary.",
+      "sol_range": [
+        153,
+        154
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“He swallowed that much elixir. Whatever else may be true, he probably won’t suffer from minor ailments until the day he dies.”",
+      "baseline_paragraphs": "P152",
+      "baseline_range": [
+        151,
+        152
+      ],
+      "hunk_id": "H109",
+      "korean_lines": "361",
+      "sol": "“After swallowing an elixir like that, the Third Young Master probably won’t suffer so much as a minor illness for the rest of his life.”",
+      "sol_range": [
+        154,
+        155
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“It still isn’t enough. Can’t you tell just by looking at him? Every time I see the youngest, I feel sorry for him. He looks like a skeleton with a few scraps of flesh stuck to it. He’s so feeble and weak every morning.”",
+      "baseline_paragraphs": "P153",
+      "baseline_range": [
+        152,
+        153
+      ],
+      "hunk_id": "H110",
+      "korean_lines": "363",
+      "sol": "“It still wasn’t enough. Can’t you tell just by looking at him? My heart aches every time I see the youngest. He’s nothing but a skeleton with a few scraps of flesh clinging to it. Every morning, he looks so feeble and drained of strength.”",
+      "sol_range": [
+        155,
+        156
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Weak?”",
+      "baseline_paragraphs": "P154",
+      "baseline_range": [
+        153,
+        154
+      ],
+      "hunk_id": "H111",
+      "korean_lines": "365",
+      "sol": "“Drained of strength?”",
+      "sol_range": [
+        156,
+        157
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Wipeng suddenly remembered a rumor he had heard in the past.",
+      "baseline_paragraphs": "P155",
+      "baseline_range": [
+        154,
+        155
+      ],
+      "hunk_id": "H112",
+      "korean_lines": "367",
+      "sol": "Wipeng suddenly remembered a rumor he had once heard.",
+      "sol_range": [
+        157,
+        158
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Among the courtesans of Taiyuan’s red-light district, Jin Taekyung was supposedly known by the nickname Night King.",
+      "baseline_paragraphs": "P156",
+      "baseline_range": [
+        155,
+        156
+      ],
+      "hunk_id": "H113",
+      "korean_lines": "369",
+      "sol": "Among the courtesans of Taiyuan’s red-light district, Jin Taekyung was supposedly known as the Night King.",
+      "sol_range": [
+        158,
+        159
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "The medicine must have worked properly, after all. Without realizing it, Wipeng raised his forearm and began imagining the size.",
+      "baseline_paragraphs": "P158",
+      "baseline_range": [
+        157,
+        158
+      ],
+      "hunk_id": "H114",
+      "korean_lines": "373",
+      "sol": "It seemed the medicine had done its job in at least one respect. Without realizing it, Wipeng raised his forearm and tried to imagine the size.",
+      "sol_range": [
+        160,
+        161
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“There’s so much to worry about, both inside and outside the family. Especially… I don’t like the fact that ‘they’ have made contact.”",
+      "baseline_paragraphs": "P162",
+      "baseline_range": [
+        161,
+        162
+      ],
+      "hunk_id": "H115",
+      "korean_lines": "381",
+      "sol": "“Between the youngest and everything happening inside and outside the family, there’s no end to my worries. Especially… I don’t like that ‘they’ have made contact.”",
+      "sol_range": [
+        164,
+        165
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Mount Heng Sword Sect. The weight of that name was anything but light.",
+      "baseline_paragraphs": "P164",
+      "baseline_range": [
+        163,
+        164
+      ],
+      "hunk_id": "H116",
+      "korean_lines": "385",
+      "sol": "The Mount Heng Sword Sect.",
+      "sol_range": [
+        166,
+        167
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "",
+      "baseline_paragraphs": "after P164",
+      "baseline_range": [
+        164,
+        164
+      ],
+      "hunk_id": "H117",
+      "korean_lines": "385",
+      "sol": "That name carried considerable weight.",
+      "sol_range": [
+        167,
+        168
+      ],
+      "tag": "insert",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Since an undefeated wandering martial artist first hung its signboard decades ago, it had grown at a frightening pace. By now, it had become strong enough to threaten the position of the Jin Family of Taiyuan.",
+      "baseline_paragraphs": "P165",
+      "baseline_range": [
+        164,
+        165
+      ],
+      "hunk_id": "H118",
+      "korean_lines": "387",
+      "sol": "Since an undefeated wandering martial artist first hung its signboard decades ago, the sect had grown at a frightening pace. Now, it had become powerful enough to threaten the Jin Family of Taiyuan’s position.",
+      "sol_range": [
+        168,
+        169
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“What could their intentions be?”",
+      "baseline_paragraphs": "P166",
+      "baseline_range": [
+        165,
+        166
+      ],
+      "hunk_id": "H119",
+      "korean_lines": "389",
+      "sol": "“What could they want?”",
+      "sol_range": [
+        169,
+        170
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“I’ve sent my subordinates out to find out.”",
+      "baseline_paragraphs": "P167",
+      "baseline_range": [
+        166,
+        167
+      ],
+      "hunk_id": "H120",
+      "korean_lines": "391",
+      "sol": "“I’ve sent my subordinates to investigate.”",
+      "sol_range": [
+        170,
+        171
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Jin Wikyung fidgeted with the letter from the Mount Heng Sword Sect.",
+      "baseline_paragraphs": "P168",
+      "baseline_range": [
+        167,
+        168
+      ],
+      "hunk_id": "H121",
+      "korean_lines": "393",
+      "sol": "Jin Wikyung toyed with the letter from the Mount Heng Sword Sect.",
+      "sol_range": [
+        171,
+        172
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Why were they coming? For what purpose?",
+      "baseline_paragraphs": "P169",
+      "baseline_range": [
+        168,
+        169
+      ],
+      "hunk_id": "H122",
+      "korean_lines": "395",
+      "sol": "Why were they coming? What did they want?",
+      "sol_range": [
+        172,
+        173
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "After one question led to another, he reached a single conclusion.",
+      "baseline_paragraphs": "P170",
+      "baseline_range": [
+        169,
+        170
+      ],
+      "hunk_id": "H123",
+      "korean_lines": "395",
+      "sol": "One question led to another, until he arrived at a single conclusion.",
+      "sol_range": [
+        173,
+        174
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "“Notify every branch in Shanxi. Whatever the Mount Heng Sword Sect’s purpose may be, tell them to make every possible preparation.”",
+      "baseline_paragraphs": "P171",
+      "baseline_range": [
+        170,
+        171
+      ],
+      "hunk_id": "H124",
+      "korean_lines": "395",
+      "sol": "“Notify every branch in Shanxi. Whatever the Mount Heng Sword Sect’s purpose, tell them to make every possible preparation.”",
+      "sol_range": [
+        174,
+        175
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    },
+    {
+      "baseline": "Only those who prepared themselves would survive and live to see tomorrow.",
+      "baseline_paragraphs": "P173",
+      "baseline_range": [
+        172,
+        173
+      ],
+      "hunk_id": "H125",
+      "korean_lines": "395",
+      "sol": "Only those who were prepared would survive to see tomorrow.",
+      "sol_range": [
+        176,
+        177
+      ],
+      "tag": "replace",
+      "terminology_alerts": []
+    }
+  ],
+  "sol_blocks": 178,
+  "sol_sha256": "5f0c0ce6c077ab87634e2cd4c888d58bc157fd15f1adfe0546d5277111db4f3f",
+  "version": 1
+}

@@ -70,3 +70,35 @@ def test_fuzzy_alignment_does_not_collapse_fully_edited_chapter():
     # Heading remains an anchor and edited prose is adjudicable in small units.
     assert diff["hunk_count"] == 3
     assert all(len(h["baseline_range"]) == 2 for h in diff["hunks"])
+
+
+def test_adjudicator_packet_is_compact():
+    source = "＃1화\n\n“쓰레기네.”\n\n진호가 말했다.\n"
+    baseline = "# Chapter 1\n\n“It’s garbage.”\n\nJinho spoke.\n"
+    sol = "# Chapter 1\n\n“It’s garbage.”\n\nJinho said it.\n"
+    diff = mastering.build_diff(baseline, sol, [], source)
+    assert diff["hunk_count"] == 1
+    hunk = diff["hunks"][0]
+    assert hunk["baseline_paragraphs"] == "P3"
+    assert hunk["korean_lines"] == "5"
+    assert "context_before_baseline" not in hunk
+    packet = mastering.adjudicator_packet(1, source, baseline, [], diff)
+    assert "## Complete SOL" not in packet
+    assert "BASE context before" not in packet
+    assert "SOL context after" not in packet
+    assert "Baseline paragraphs: P3" in packet
+    assert "Korean lines: 5" in packet
+    assert "[P1]" in packet
+    assert "1|＃1화" in packet
+    assert packet.count("Jinho spoke.") == 2
+    assert packet.count("Jinho said it.") == 1
+    sections = [
+        "## Korean source",
+        "## Complete BASELINE English",
+        "## Exact glossary matches for this Korean chapter",
+        "## Adjudicator rules",
+        "## Critical binding translation rules",
+        "## Numbered diff hunks",
+    ]
+    indexes = [packet.index(name) for name in sections]
+    assert indexes == sorted(indexes)

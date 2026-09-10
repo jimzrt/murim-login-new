@@ -438,6 +438,61 @@ def blocks(text: str) -> list[str]:
     return [part.strip("\n") for part in re.split(r"\n\s*\n", text) if part.strip()]
 
 
+def paragraph_line_spans(text: str) -> list[tuple[int, int]]:
+    """1-indexed inclusive line spans for blank-line-separated paragraphs."""
+    lines = text.rstrip("\n").splitlines()
+    spans: list[tuple[int, int]] = []
+    start: int | None = None
+    last_nonempty: int | None = None
+    for idx, line in enumerate(lines, start=1):
+        if line.strip():
+            if start is None:
+                start = idx
+            last_nonempty = idx
+        elif start is not None:
+            spans.append((start, last_nonempty or start))
+            start = None
+            last_nonempty = None
+    if start is not None:
+        spans.append((start, last_nonempty or start))
+    return spans
+
+
+def format_paragraph_ref(i1: int, i2: int) -> str:
+    """Format a 0-based half-open baseline block range as P# labels."""
+    if i1 >= i2:
+        return "before P1" if i1 <= 0 else f"after P{i1}"
+    start, end = i1 + 1, i2
+    return f"P{start}" if start == end else f"P{start}-P{end}"
+
+
+def format_line_range(start: int, end: int) -> str:
+    return str(start) if start == end else f"{start}-{end}"
+
+
+def map_korean_lines(i1: int, i2: int, spans: list[tuple[int, int]]) -> str:
+    """Map a baseline block range onto Korean source line numbers by paragraph order."""
+    if not spans:
+        return ""
+    n_src = len(spans)
+    if i1 >= i2:
+        idx = min(n_src - 1, max(i1 - 1, 0))
+        return format_line_range(*spans[idx])
+    start_idx = min(i1, n_src - 1)
+    end_idx = min(max(i2 - 1, start_idx), n_src - 1)
+    return format_line_range(spans[start_idx][0], spans[end_idx][1])
+
+
+def format_numbered_source(source: str) -> str:
+    lines = source.rstrip("\n").splitlines()
+    width = max(1, len(str(len(lines) or 1)))
+    return "\n".join(f"{i:>{width}}|{line}" for i, line in enumerate(lines, start=1))
+
+
+def format_numbered_baseline(baseline: str) -> str:
+    return "\n\n".join(f"[P{i}]\n{para}" for i, para in enumerate(blocks(baseline), start=1))
+
+
 def _similarity(left: str, right: str) -> float:
     left = re.sub(r"\s+", " ", left).strip()
     right = re.sub(r"\s+", " ", right).strip()
@@ -501,10 +556,11 @@ def align_blocks(base_blocks: list[str], sol_blocks: list[str]) -> list[tuple[st
     return atomic
 
 
-def build_diff(baseline: str, sol: str, glossary: list[dict]) -> dict:
+def build_diff(baseline: str, sol: str, glossary: list[dict], source: str = "") -> dict:
     base_blocks = blocks(baseline)
     sol_blocks = blocks(sol)
     opcodes = align_blocks(base_blocks, sol_blocks)
+    korean_spans = paragraph_line_spans(source)
     hunks: list[dict] = []
     hunk_num = 0
     for tag, i1, i2, j1, j2 in opcodes:
@@ -527,12 +583,10 @@ def build_diff(baseline: str, sol: str, glossary: list[dict]) -> dict:
             "tag": tag,
             "baseline_range": [i1, i2],
             "sol_range": [j1, j2],
+            "baseline_paragraphs": format_paragraph_ref(i1, i2),
+            "korean_lines": map_korean_lines(i1, i2, korean_spans),
             "baseline": base_text,
             "sol": sol_text,
-            "context_before_baseline": base_blocks[i1 - 1] if i1 > 0 else "",
-            "context_after_baseline": base_blocks[i2] if i2 < len(base_blocks) else "",
-            "context_before_sol": sol_blocks[j1 - 1] if j1 > 0 else "",
-            "context_after_sol": sol_blocks[j2] if j2 < len(sol_blocks) else "",
             "terminology_alerts": alerts,
         })
     global_alerts: list[dict] = []
@@ -561,51 +615,65 @@ def diff_markdown(diff: dict) -> str:
         lines.append("")
     for h in diff["hunks"]:
         lines += [f"## {h['hunk_id']} ({h['tag']})", ""]
+        lines.append(f"Baseline paragraphs: {h.get('baseline_paragraphs', '')}")
+        if h.get("korean_lines"):
+            lines.append(f"Korean lines: {h['korean_lines']}")
+        lines.append("")
         for alert in h.get("terminology_alerts", []):
             lines.append(f"**Terminology alert:** `{alert['korean']}` → `{alert['preferred']}`")
             lines.append("")
-        lines += ["### BASE", "", h["baseline"] or "*(empty)*", "", "### SOL", "", h["sol"] or "*(empty)*", ""]
+        lines += ["BASE:", "", h["baseline"] or "*(empty)*", "", "SOL:", "", h["sol"] or "*(empty)*", ""]
     return "\n".join(lines).rstrip() + "\n"
 
 
-def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossary: list[dict], diff: dict) -> str:
+def format_hunk_for_packet(h: dict) -> str:
+    parts = [
+        f"### {h['hunk_id']} — {h['tag']}",
+        f"Baseline paragraphs: {h.get('baseline_paragraphs', '')}",
+    ]
+    if h.get("korean_lines"):
+        parts.append(f"Korean lines: {h['korean_lines']}")
+    for alert in h.get("terminology_alerts", []):
+        parts.append(
+            f"Terminology alert: `{alert['korean']}` → `{alert['preferred']}` present in BASE, absent from SOL."
+        )
+    parts += [
+        "",
+        "BASE:",
+        h["baseline"] or "(empty)",
+        "",
+        "SOL:",
+        h["sol"] or "(empty)",
+        "",
+    ]
+    return "\n".join(parts)
+
+
+def adjudicator_packet(number: int, source: str, baseline: str, glossary: list[dict], diff: dict) -> str:
     brief = read_text(ROOT / "MASTERING_ADJUDICATOR.md").strip()
     rules = read_text(ROOT / "RULES.md").strip()
-    hunk_parts: list[str] = []
-    for h in diff["hunks"]:
-        alerts = h.get("terminology_alerts", [])
-        alert_text = "\n".join(
-            f"- PROTECTED TERM RISK: `{a['korean']}` → `{a['preferred']}` was present in BASE and is absent from SOL."
-            for a in alerts
-        ) or "(none)"
-        hunk_parts.append(f"""### {h['hunk_id']} — {h['tag']}
-
-Terminology alerts:
-{alert_text}
-
-BASE context before:
-```markdown
-{h['context_before_baseline']}
-```
-
-BASE changed text:
-```markdown
-{h['baseline']}
-```
-
-SOL changed text:
-```markdown
-{h['sol']}
-```
-
-SOL context after:
-```markdown
-{h['context_after_sol']}
-```
-""")
+    hunk_parts = [format_hunk_for_packet(h) for h in diff["hunks"]]
     global_alerts = diff.get("global_terminology_alerts", [])
     global_text = "\n".join(f"- `{a['korean']}` → `{a['preferred']}`" for a in global_alerts) or "(none)"
     return f"""# Adjudication Task — Chapter {number}
+
+## Korean source
+
+```text
+{format_numbered_source(source)}
+```
+
+## Complete BASELINE English
+
+```markdown
+{format_numbered_baseline(baseline)}
+```
+
+## Exact glossary matches for this Korean chapter
+
+{glossary_text(glossary)}
+
+## Adjudicator rules
 
 {brief}
 
@@ -613,33 +681,13 @@ SOL context after:
 
 {rules}
 
-## Exact glossary matches
-
-{glossary_text(glossary)}
-
 ## Global protected-term risks introduced by SOL
 
 {global_text}
 
-## Korean source
-
-```text
-{source.rstrip()}
-```
-
-## Complete BASELINE English
-
-```markdown
-{baseline.rstrip()}
-```
-
-## Complete SOL English
-
-```markdown
-{sol.rstrip()}
-```
-
 ## Numbered diff hunks
+
+Each hunk is the changed span only. Neighboring unchanged English is in the numbered baseline above; use the P# labels and Korean line numbers to look up surrounding context. The complete SOL chapter is not included.
 
 {chr(10).join(hunk_parts)}
 
@@ -758,7 +806,7 @@ def command_adjudicate(number: int, force: bool = False) -> None:
     baseline = normalize_chapter(read_text(p["baseline"]))
     sol = normalize_chapter(read_text(p["sol"]))
     glossary = exact_glossary(source)
-    diff = build_diff(baseline, sol, glossary)
+    diff = build_diff(baseline, sol, glossary, source)
     atomic_json(p["diff_json"], diff)
     atomic_text(p["diff_md"], diff_markdown(diff))
     if diff["hunk_count"] == 0:
@@ -767,7 +815,7 @@ def command_adjudicate(number: int, force: bool = False) -> None:
         update_state(p, state, "ADJUDICATED", hunk_count=0)
         print(f"{number:04d}: no changes; adjudication skipped")
         return
-    packet = adjudicator_packet(number, source, baseline, sol, glossary, diff)
+    packet = adjudicator_packet(number, source, baseline, glossary, diff)
     enforce_budget(packet, "adjudicator")
     atomic_text(p["adjudicator_packet"], packet)
     cfg = load_config()
