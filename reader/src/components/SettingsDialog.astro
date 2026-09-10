@@ -1,0 +1,34 @@
+<dialog class="reader-dialog" id="settings-dialog" aria-labelledby="settings-title">
+  <div class="dialog-head">
+    <h2 id="settings-title">Reading</h2>
+    <button type="button" class="icon-btn" id="settings-close" aria-label="Close">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <form class="settings-form">
+    <fieldset>
+      <legend>Font size</legend>
+      <div class="choice-row">
+        <label><input type="radio" name="size" value="s" /> S</label>
+        <label><input type="radio" name="size" value="m" /> M</label>
+        <label><input type="radio" name="size" value="l" /> L</label>
+        <label><input type="radio" name="size" value="xl" /> XL</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Width</legend>
+      <div class="choice-row">
+        <label><input type="radio" name="width" value="narrow" /> Narrow</label>
+        <label><input type="radio" name="width" value="medium" /> Medium</label>
+        <label><input type="radio" name="width" value="wide" /> Wide</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Theme</legend>
+      <div class="choice-row">
+        <label><input type="radio" name="theme" value="light" /> Light</label>
+        <label><input type="radio" name="theme" value="dark" /> Dark</label>
+      </div>
+    </fieldset>
+  </form>
+</dialog>

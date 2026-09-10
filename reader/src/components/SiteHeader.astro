@@ -1,0 +1,38 @@
+---
+interface Props {
+  chapter?: number;
+}
+
+const { chapter } = Astro.props;
+const home = import.meta.env.BASE_URL;
+---
+
+{
+  chapter != null && (
+    <div
+      class="read-progress"
+      id="read-progress"
+      role="progressbar"
+      aria-label="Chapter reading progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+    >
+      <span class="read-progress__bar" id="read-progress-bar"></span>
+    </div>
+  )
+}
+<header class="site-header" id="site-header">
+  <a class="nav-home" href={home}>
+    <span class="nav-home-full">Murim Login</span>
+    <span class="nav-home-short">Index</span>
+  </a>
+  <button class="nav-btn" id="jump-open" type="button">Chapter</button>
+  {import.meta.env.PROD && <pagefind-modal-trigger class="nav-search"></pagefind-modal-trigger>}
+  <button class="nav-btn nav-icon-btn" id="settings-open" type="button" aria-label="Settings" title="Settings">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3 1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8 1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"></path>
+    </svg>
+  </button>
+</header>

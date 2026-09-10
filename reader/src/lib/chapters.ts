@@ -9,6 +9,24 @@ export interface ChapterIndexItem {
   href: string;
 }
 
+export interface ChapterRef {
+  chapter: number;
+  title: string;
+}
+
+export interface ChapterGroup {
+  label: string;
+  start: number;
+  end: number;
+  items: ChapterIndexItem[];
+}
+
+export interface CompactChapter {
+  n: number;
+  t: string;
+  h: string;
+}
+
 export function withBase(path: string): string {
   const base = import.meta.env.BASE_URL ?? "/";
   return `${base}${path.replace(/^\//, "")}`;
@@ -16,10 +34,6 @@ export function withBase(path: string): string {
 
 export function chapterHref(chapter: number): string {
   return withBase(`chapter/${chapter}/`);
-}
-
-export function chaptersHref(): string {
-  return withBase("chapters/");
 }
 
 export async function allChapters(): Promise<ChapterEntry[]> {
@@ -35,6 +49,10 @@ export function toIndex(entries: ChapterEntry[]): ChapterIndexItem[] {
   }));
 }
 
+export function toCompact(items: ChapterIndexItem[]): CompactChapter[] {
+  return items.map((item) => ({ n: item.chapter, t: item.title, h: item.href }));
+}
+
 export function neighbors(entries: ChapterEntry[], chapter: number) {
   const index = entries.findIndex((entry) => entry.data.chapter === chapter);
   return {
@@ -43,14 +61,18 @@ export function neighbors(entries: ChapterEntry[], chapter: number) {
   };
 }
 
-export function groupedChapters(items: ChapterIndexItem[], size = 50) {
-  const groups: { label: string; items: ChapterIndexItem[] }[] = [];
+export function toRef(entry?: ChapterEntry): ChapterRef | null {
+  return entry ? { chapter: entry.data.chapter, title: entry.data.title } : null;
+}
+
+export function groupedChapters(items: ChapterIndexItem[], size = 50): ChapterGroup[] {
+  const groups: ChapterGroup[] = [];
   for (const item of items) {
     const start = Math.floor(item.chapter / size) * size;
-    const label = `${start}–${start + size - 1}`;
+    const end = start + size - 1;
     const current = groups.at(-1);
-    if (!current || current.label !== label) {
-      groups.push({ label, items: [item] });
+    if (!current || current.start !== start) {
+      groups.push({ label: `${start}–${end}`, start, end, items: [item] });
     } else {
       current.items.push(item);
     }
