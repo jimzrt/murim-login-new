@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "“Oh, can we order some yukhoe?” / “……Yes.” / “Rice, too.” / “…”",
+      "current": "“Oh, can we order some yukhoe?” / “…” / “Yes, please.” / “…”",
+      "defect": "Turn order is kept, but Choi’s delayed “yes” is emptied to silence and Taekyung’s follow-up “rice, too” is replaced with “Yes, please,” so the extra order and Choi’s reluctant consent disappear.",
+      "id": "F01",
+      "rationale": "After the 25-serving gag, Taekyung asks for yukhoe; Choi answers with a hesitant 네; Taekyung piles on 공깃밥; Choi is left speechless. The draft assigns the affirmative to Taekyung and drops the rice.",
+      "severity": "critical",
+      "source": "“아, 육회 시켜도 돼요?” / “……네.” / “공깃밥도.” / “…….”"
+    },
+    {
+      "confidence": 0.93,
+      "correction": "He went back to his Guild, ran Gates his ass off for a year and a half, then got fired.",
+      "current": "He went back to his Guild, ran Gates like his life depended on it for a year and a half, then got fired.",
+      "defect": "좆 빠지게 is crude exhaustion slang; the English sanitizes it into a non-vulgar idiom.",
+      "id": "F02",
+      "rationale": "The caller’s register is coarse throughout this recap; replacing the vulgar adverb with ‘like his life depended on it’ softens the line.",
+      "severity": "major",
+      "source": "다시 길드 복직해서 일 년 반 동안 좆 빠지게 게이트 돌다가 잘렸어."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "“For fuck’s sake.” … “The finder’s fee is 180,000 won.” with a footnote that sip-pal (eighteen) echoes the swear he just used, and keep the abrupt formal delivery.",
+      "current": "“For fuck’s sake.” / “Fine. It’s hot out, so good luck with that.” / “The reward is 180,000 won.”",
+      "defect": "십팔만 is a punchline on 시팔 plus a sudden formal 입니다; the draft keeps the number but loses the sound-play and the stiff polite turn.",
+      "id": "F03",
+      "rationale": "He swears 시팔, Jinho blows him off, then he offers 십팔만 원 in polite copula. Without the echo, it is only a random raise from 100,000 to 180,000.",
+      "severity": "major",
+      "source": "“이런 시팔.” / “그래, 날 더운데 수고해라.” / “사례금은 십팔만 원입니다.”"
+    },
+    {
+      "confidence": 0.95,
+      "correction": "A Hunter rank reassessment.",
+      "current": "A Hunter Grade reassessment.",
+      "defect": "Hunter 등급 here is a Hunter classification, which the ledger reserves for rank; Grade is the System/UI field.",
+      "id": "F04",
+      "rationale": "Binding split: rank for Hunter classifications and ordinary prose; Grade only for System quest/item/skill fields. This is association remeasurement, not a System panel.",
+      "severity": "major",
+      "source": "헌터 등급 재측정."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "Even the memories from two years ago, when other people’s contempt, and the guilt and helplessness, had made my body tremble.",
+      "current": "Even the memories from two years ago, when contempt, guilt, and helplessness from other people had made my body tremble.",
+      "defect": "타인들의 most naturally modifies 무시; 죄책감 and 무력감 are Taekyung’s own guilt and helplessness. The English makes all three come from other people.",
+      "id": "F05",
+      "rationale": "The Sangdong aftermath in this sentence is others’ scorn plus his guilt and powerlessness. Attaching all three to ‘from other people’ reassigns the trauma.",
+      "severity": "major",
+      "source": "타인들의 무시와 죄책감과 무력감에 몸을 떨어야 했던 2년 전의 기억까지."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "My life was already bleak enough; I wanted to write it off as a nightmare I’d had and keep living my life as I was.",
+      "current": "I wanted to think of Murim as nothing more than a nightmare and live my life as I had before.",
+      "defect": "The source is ‘treat it as a nightmare I had once’ and live his life as now; Murim is not named in this clause.",
+      "id": "F06",
+      "rationale": "Fidelity forbids adding a plot label the sentence does not use. The discard motive is forgetting / calling it one nightmare, not an explicit Murim gloss.",
+      "severity": "major",
+      "source": "가뜩이나 퍽퍽한 인생, 악몽 한 번 꿨다 생각하고 지금처럼 내 인생을 살기 위해서."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“We’re at twenty-five servings…”",
+      "current": "“You’re on your twenty-fifth serving…”",
+      "defect": "25인분째 is the table’s running total, not a ‘you’ subject. Taekyung’s ‘twelve each’ only works as splitting that shared count.",
+      "id": "F07",
+      "rationale": "Inserting ‘you’ turns a joint tally into Choi accusing Taekyung of eating all 25 before the 12-each / I-only-ate-three exchange.",
+      "severity": "minor",
+      "source": "“지금 25인분짼데…….”"
+    },
+    {
+      "confidence": 0.82,
+      "correction": "*What’s going on?*",
+      "current": "*What’s happening to me?*",
+      "defect": "The thought is ‘what is going on,’ not ‘what is happening to me.’",
+      "id": "F08",
+      "rationale": "Narrowing the question to himself changes the scope of the bewilderment after the unread Item.",
+      "severity": "minor",
+      "source": "‘무슨 일이 벌어지고 있는 거야?’"
+    }
+  ],
+  "summary": "Critical speaker/content swap in the yukhoe order (Choi’s reluctant yes and the rice add-on are lost). Several major fidelity hits: sanitized Gate-running profanity, the sip-pal/180,000 pun, Hunter rank vs Grade, trauma attribution, and an added Murim gloss.",
+  "version": 1
+}

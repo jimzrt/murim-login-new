@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Choi’s delayed yes, Taekyung’s rice add-on, and Choi’s speechless beat.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the caller’s vulgar exhaustion slang instead of a sanitized idiom.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Kept the raise, used finder’s fee with stiff copula, and footnoted the sip-pal echo.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered Association 등급 as Hunter rank, not System Grade.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Attached others’ contempt to 타인들의 무시 and left guilt and helplessness as Taekyung’s.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Removed the added Murim gloss; kept one-nightmare forgetfulness and living as he was.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Made 25 servings the table total so the twelve-each split still works.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Restored the open ‘what’s going on’ thought after the unread Item.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,42 @@
+{
+  "chapter": 46,
+  "draft_sha256": "a2437ccf5b7e6ead58c6ba3d2bd573ad7dd5f937f38a6e0354231d573923af60",
+  "finding_count": 8,
+  "major_or_critical_count": 6,
+  "packet_sha256": "a3d5946c9ab461f67d7e9c67cb586428c4cee9726f6648a221e92828e48676d9",
+  "qa_sha256": "07d5ad736732e82eedd7c6c7357adf4d63cf3bca7f3f37de3530d9bde39fef8b",
+  "report_sha256": "2c156f570574aabca09a217a04810bd3e55693aba325a820abda66f09427525b",
+  "usage": {
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "cost_usd": 0,
+    "elapsed_seconds": 298.129,
+    "event_log": "/home/james/Documents/murim_login_new/.work/0046/omp/review.jsonl",
+    "exact": true,
+    "input_bytes": 61493,
+    "input_tokens": 0,
+    "models": {
+      "cursor/cursor-grok-4.6": {
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "cost_usd": 0,
+        "input_tokens": 0,
+        "model": "cursor-grok-4.6",
+        "output_tokens": 6471,
+        "provider": "cursor",
+        "requests": 1,
+        "total_tokens": 6471
+      }
+    },
+    "output_bytes": 5392,
+    "output_tokens": 6471,
+    "requested_model": "cursor/cursor-grok-4.6:medium",
+    "requests": 1,
+    "stop_reasons": [
+      "stop"
+    ],
+    "total_tokens": 6471,
+    "usage_source": "omp_provider_reported"
+  },
+  "version": 2
+}

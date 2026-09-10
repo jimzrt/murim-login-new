@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 45,
-  "continuity_sources": [44, 45],
+  "safe_through": 46,
+  "continuity_sources": [45, 46],
   "active_continuity": [
     "Jin Taekyung is back in reality after logging out of Murim. He is an F-rank Hunter and works as a porter for the Peace Guild on an E-rank Gate raid.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -17,13 +17,17 @@
     "Fame is 0 and the active Titles are Novice Trainee and Gambler. The Traitor Chain Quest is active but incomplete: Taekyung must punish the traitor and lead the battle to victory; failure means death.",
     "Team Leader Choi killed the Hobgoblin Priest and witnessed Taekyung kill the Great Warrior. Officials are investigating how two C-rank Rare Monsters appeared in an E-rank Gate.",
     "Im Kkeokjeong and the other veteran E-rank Hunters survived the Boss Zone fight but were sent to the hospital for about a week.",
-    "Taekyung accepts that Murim was real and wonders whether he can return; Choi's response to Taekyung's request for secrecy about his strength remains unclear."
+    "Taekyung accepts that Murim was real and wonders whether he can return; Choi's response to Taekyung's request for secrecy about his strength remains unclear.",
+    "Team Leader Choi offered Taekyung a Peace Guild position with a 100 million won signing bonus, but Taekyung refused for now because the System might disappear and leave him unable to earn a living.",
+    "Choi's background check found that Taekyung was the sole survivor of the Sangdong Station Mutated Gate, returned to Gate work for a year and a half, and was fired three days ago; Choi suspects he is at least C-rank or recently reawakened.",
+    "Seong Jinho took Taekyung's discarded Ark - 2020 capsule and returned it to his room after bargaining over a finder's fee. The manual confirms that the capsule is permanently bound to its registered user until death.",
+    "The System reads ordinary objects but cannot read the capsule or its manual. Taekyung is going to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment."
   ],
   "open_questions": [
-    "The capsule's purpose and route back to Murim remain unresolved.",
+    "The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.",
-    "How the System's restoration relates to Murim, whether Taekyung can return, and whether the officials' investigation exposes him remain unresolved."
+    "Whether Choi keeps Taekyung's strength secret, whether the officials' investigation exposes him, and how the System's restoration relates to Murim and a possible return remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -41,6 +45,8 @@
     "Use Three Paths Sect for 三道問, retaining the Chapter 34 note that the given final character is 問 rather than the usual 門.",
     "Use gukbap with a first-use footnote identifying it as soup served with rice.",
     "Use Hobgoblin Priest and Hobgoblin Great Warrior for the two C-rank Rare Monsters in the Boss Zone.",
-    "Preserve the exact System notifications “Synchronization complete” and “All systems are inherited.”"
+    "Preserve the exact System notifications “Synchronization complete” and “All systems are inherited.”",
+    "Preserve the *sip-pal* (“eighteen”) finder’s-fee pun and explain the abrupt formal delivery in a footnote.",
+    "Keep the exact unreadable-item notification “This Item cannot be read.” and the capsule manual’s permanent user-binding rule."
   ]
 }

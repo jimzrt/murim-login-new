@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 45
-- Next chapter: 46
-- Current block: 45–49 (1/5)
-- Latest translation: `translations/0045.md`
-- Latest summary: `summaries/beats/0045.md`
-- Safe profiles through: chapter 45
+- Last completed: 46
+- Next chapter: 47
+- Current block: 45–49 (2/5)
+- Latest translation: `translations/0046.md`
+- Latest summary: `summaries/beats/0046.md`
+- Safe profiles through: chapter 46
 
 
 
@@ -15,13 +15,13 @@
 
 
 
-Taekyung kills the Level 45 Hobgoblin Great Warrior after Character Synchronization restores his systems in reality. Team Leader Choi has killed the Hobgoblin Priest, and officials begin investigating how two C-rank Rare Monsters appeared in an E-rank Gate. Im Kkeokjeong and the other veterans survive but require hospitalization; Taekyung’s return route to Murim and the consequences of his restored System remain unresolved.
+Taekyung refuses Team Leader Choi’s 100 million won Peace Guild signing offer because the System may disappear. Choi’s background check finds Taekyung was the sole survivor of the Sangdong Station Mutated Gate and was fired three days ago after a year and a half of Gate work; Choi suspects he is at least C-rank or recently reawakened. Seong Jinho returns Taekyung’s discarded Ark - 2020 capsule, whose manual confirms permanent user binding until death, but the System cannot read the capsule or manual. Taekyung heads to the Bucheon Branch of the Hunter Association for a Hunter rank reassessment.
 
 ## Open Questions
-- The capsule's purpose and route back to Murim remain unresolved.
+- The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.
 - Murim death and resurrection limits remain unresolved.
 - The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
-- Whether the officials' investigation exposes Taekyung's restored abilities and how the System's return relates to Murim remain unresolved.
+- Whether Choi keeps Taekyung's strength secret, whether the officials' investigation exposes Taekyung, and how the System's return relates to Murim remain unresolved.
 
 
 ## Exceptional Decision
