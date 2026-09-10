@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 52
-- Next chapter: 53
-- Current block: 50–54 (3/5)
-- Latest translation: `translations/0052.md`
-- Latest summary: `summaries/0045-0049.md`
-- Safe profiles through: chapter 52
+- Last completed: 55
+- Next chapter: 56
+- Current block: 55–59 (1/5)
+- Latest translation: `translations/0055.md`
+- Latest summary: `summaries/0050-0054.md`
+- Safe profiles through: chapter 55
 
 
 
@@ -15,13 +15,14 @@
 
 
 
-- Taekyung returns home after months with his C-rank Hunter license and 300 million won. He tells his mother and younger sister Hayeon an edited account of his reawakening and income, then spends freely on clothes and an expensive meal for them at Mirae Department Store.
+- Taekyung reconnects to Murim and wakes during the Mount Heng–Jin Family battle. The Head Elder’s betrayal remains hidden while he positions the battle to destroy Mount Heng; Taekyung orders the reconnaissance squad to reach the gorge, and Lee Cheonbaek commits Mount Heng’s core masters to the attack.
 
 ## Open Questions
-- The capsule's purpose and route back to Murim remain unresolved; the System cannot read the capsule or its manual.
+- The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has successfully reconnected to Murim, but whether it can transport him safely and reliably and what will happen after the battle remain unknown.
 - Murim death and resurrection limits remain unresolved.
-- The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
-- Whether the officials’ investigation later exposes Taekyung despite Choi’s cover story, how the System’s return relates to Murim, whether Taekyung’s formal C-rank registration completes, Choi’s exact current rank, and whether Sopung Guild can recruit Choi Min-su remain unresolved.
+- The identity of the Head Elder's Sound Transmission accomplice, the betrayal's outcome, and the full purpose of their plan remain unresolved.
+- The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.
+- Whether the officials' investigation exposes Taekyung, whether the System's return relates to Murim, whether Taekyung can return safely, Choi's exact current rank, whether Peace Guild can recruit Taekyung after his refusal, and whether Sopung Guild can recruit Choi Min-su remain unresolved.
 
 
 ## Exceptional Decision

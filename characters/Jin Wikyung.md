@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 37
+- **Safe through:** Chapter 55
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -15,6 +15,7 @@
 - **Chapter 36 continuity:** Wikyung leads the departure ceremony for more than five hundred Jin Family and allied martial artists and predicts victory within three days. He refuses Taekyung’s request for a reconnaissance mission to gain Fame, tells him to survive, and orders him to flee if the family loses so Taekyung and Jin Mukyung can become the family’s roots.
 - **Chapter 37 continuity:** At Honju, Wikyung convenes the command staff after learning that Mount Heng’s reinforcements have crossed Mount Otae. He predicts the enemy will clash rather than retreat, plans to seize Jeongyang’s high ground, and uses the narrow Eight Spring Gorge as a kill zone. With help from a resourceful Lower District Sect ally, he has hidden about one hundred horn bows on the cliffs above the gorge. He sends 300 Jin Family martial artists and 150 allied reinforcements toward the gorge at dawn.
 
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–34, and 36–37
+- **Chapter 55 continuity:** At Eight Spring Gorge, Wikyung sees that the Jin Family holds the terrain advantage but is troubled by the rising casualties. He accepts the Head Elder’s plan for himself, the Head Elder, and Wipeng to confront Mount Heng’s command while the cliff archers attack.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, 10–25, 32–34, 36–37, and 55
 
 

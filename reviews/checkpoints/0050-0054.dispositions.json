@@ -1,0 +1,55 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "This valid arithmetic issue is in previously accepted Chapter 51 output; the Chapter 54 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Chapter 54 already uses the accepted 200-million-won total; the conflicting figure is in previously accepted Chapter 52 output, outside this transaction.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Updated docs/CONTEXT.json to the post-Chapter-51 Level 40 state with 180 Strength, 185 Stamina, 191 Agility, and 0 Remaining Points.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Updated docs/CONTEXT.json to distinguish Kim Sangshik's expulsion from Kim Sangho's ordered resignation.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Normalized the six-dot ellipses in the Chapter 54 polished reading copy; earlier accepted chapter outputs are not reopened in this transaction.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Separated the three remembered quotations into distinct Markdown paragraphs in the Chapter 54 polished reading copy.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C07",
+      "reason": "Changed the malformed opening sentence in the Chapter 54 polished reading copy to 'came through vividly.'",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C08",
+      "reason": "This issue is in previously accepted Chapter 53 output; the Chapter 54 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C09",
+      "reason": "This issue is in previously accepted Chapter 50 output; the Chapter 54 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    },
+    {
+      "finding_id": "C10",
+      "reason": "This issue is in previously accepted Chapter 50 output; the Chapter 54 transaction does not reopen an earlier chapter.",
+      "status": "rejected"
+    }
+  ],
+  "version": 1
+}

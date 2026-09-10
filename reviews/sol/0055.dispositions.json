@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored 반 시진 as one hour and 한/두 시진 as two/four hours, and made Hyuk remind Taekyung of Hyuk’s own two-hour estimate.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "The squad members fail to offer to piggyback the unconscious squad leader in Hyuk’s place, not to carry Hyuk.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the Head Elder’s self-conscious 낯간지러운 stance toward the character for chivalry.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered 분노 as rage at losing his son, not grief.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored address, one good-natured smile at Hyuk’s choked-up face, and the immediate get-up command, leaving the brighter smile for the later beat.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
