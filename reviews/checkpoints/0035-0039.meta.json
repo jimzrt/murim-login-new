@@ -1,0 +1,11 @@
+{
+  "chapter": 39,
+  "finding_count": 5,
+  "major_or_critical_count": 3,
+  "packet_sha256": "7b8a5f069e727c7679fb9c9465cf3186b47220c9bb61d09f83eb621d0d37dd0b",
+  "report_sha256": "ae3fd4258a5a074c74a22f5b937529522a62bcd2c441e82e25ef08950aa4180e",
+  "revised_sha256": "68a81ec694f2beeb578cd28656960fa1d919f83b0a511aba2150d85de9745b59",
+  "summary_sha256": {
+    "summaries/0035-0039.md": "d069fd8724703bd10114f3993f8fa72b547c190b4690050891d6d562b984cf8c"
+  }
+}

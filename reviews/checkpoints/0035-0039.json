@@ -1,0 +1,56 @@
+{
+  "findings": [
+    {
+      "confidence": 1.0,
+      "correction": "Replace this entry with Taekyung’s Chapter 39 status: Lv. 33, First Rate, 547 Fame, and successfully logged out; retain the requirements only as historical Quest information.",
+      "current": "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 32, has fifteen years of internal energy, and is First Rate; only the Fame 500 requirement remains incomplete, with his total at 497/500.",
+      "defect": "This presents obsolete Chapter 37 status as active state, contradicting the later entries establishing that Taekyung reached Lv. 33 and 547/500 Fame, completed the Logout conditions, and returned to reality.",
+      "id": "C01",
+      "rationale": "Active continuity must describe the latest completed chapter rather than an intermediate state.",
+      "severity": "major",
+      "source": "Durable state, active_continuity entry 3"
+    },
+    {
+      "confidence": 0.98,
+      "correction": "Describe the group as Gwak Jun and nineteen other assassins, or simply as twenty assassins led by Gwak Jun. Apply the same correction to the active-continuity entry saying “Gwak Jun and twenty supposed Three Paths Sect martial artists.”",
+      "current": "At Honju, Gwak Jun, the supposedly allied Level 40 leader of the Three Paths Sect, reveals that he and twenty black-clad fighters are First Rate assassins.",
+      "defect": "This makes twenty-one assassins, while Chapter 38’s Quest objective and completion count establish twenty total assassins, including Gwak Jun.",
+      "id": "C02",
+      "rationale": "The Quest advances to 20/20 only when Gwak dies, so he is included in the total of twenty.",
+      "severity": "major",
+      "source": "Checkpoint Plot and Durable state, Honju assassin descriptions"
+    },
+    {
+      "confidence": 0.95,
+      "correction": "Use eight present reconnaissance-squad members in Chapters 36 and 38, consistent with seven expected members plus Hyuk Mujin.",
+      "current": "I smiled at the eight reconnaissance-squad members. Then a thought suddenly struck me.\n\n*No, wait.*\n\nEight? Had I counted wrong?\n\nI started counting again from the end, one person at a time. Not counting me, there were nine.",
+      "defect": "The scene changes the number of present squad members from eight to nine even though its own arithmetic says seven were expected and Hyuk Mujin’s unexpected presence should raise that number to eight. Chapter 38 then repeats the conflicting count by calling them “The nine said to be Jin Taekyung’s subordinates.”",
+      "id": "C03",
+      "rationale": "The established squad lost one member to Jopil, and Han Yeop remains hospitalized; the displayed count and the scene’s stated calculation otherwise disagree.",
+      "severity": "minor",
+      "source": "Chapter 36, rear-guard reunion; Chapter 38, Gwak Jun’s battle assessment"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Record the manual and Fire Divine Elixir as last seen on the rock at the Honju rear-guard position when the attack began; record only the Nameless Sword as confirmed in Inventory unless a later chapter resolves the other items’ disposition.",
+      "current": "Taekyung possesses Jopil’s **Flame Divine Palm** manual, **Fire Divine Elixir**, and **Nameless Sword** in his Inventory.",
+      "defect": "Chapter 37 explicitly places the manual and elixir case on a rock, and the uninterrupted confrontation, battle, and forced logout never show Taekyung returning them to Inventory. Only the Nameless Sword remains confirmed there.",
+      "id": "C04",
+      "rationale": "Claiming all three remain in Inventory erases a potentially consequential unresolved item location at the moment of logout.",
+      "severity": "major",
+      "source": "Checkpoint Continuity and Durable state, Taekyung’s current inventory"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Merge the Flame Divine Palm, Fire Divine Elixir, and Nameless Sword results into one continuous blockquote headed once by “System.”",
+      "current": "> **Effect:** Acquired Flame Divine Palm\n\n> **System**\n>\n> **Item Window**\n>\n> **Fire Divine Elixir**",
+      "defect": "The three consecutive Item Window results are split into separate System blockquotes even though no prose intervenes.",
+      "id": "C05",
+      "rationale": "The binding formatting rule requires consecutive System notices to remain inside the same blockquote window unless prose intervenes.",
+      "severity": "minor",
+      "source": "Chapter 35, consecutive Item Window results"
+    }
+  ],
+  "summary": "The reading copies largely preserve Taekyung’s voice, established terminology, the assassination reveal, and the return-to-reality cliffhanger. Actionable issues remain in the durable state, participant counts, item continuity, and System-panel formatting.",
+  "version": 1
+}

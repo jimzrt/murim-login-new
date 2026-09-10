@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Logout as the event at the thirty-day mark, not thirty days after a prior Logout.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Assigned 당황한 to Taekyung; Jinho looks at him and sighs.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored the Honghwaru scoff instead of generic disbelief.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored 목젖 as uvula in the hangover triad.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored 새끼들 as bastards instead of a neutral anyone.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Both 골 때리네 lines now match blunt slang without added f-word.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "뚫어져라 rendered as a piercing stare, not a long wait.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Dropped added running around; kept mental overload at Honghwaru.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

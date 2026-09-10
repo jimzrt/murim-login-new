@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "Logout after exactly thirty days.",
+      "current": "It had been exactly thirty days since I’d logged out.",
+      "defect": "Reverses when Logout happens: the Korean is Logout after exactly thirty days in-game, not thirty days after a prior Logout.",
+      "id": "F01",
+      "rationale": "만의 로그아웃 marks the Logout that has just come at the thirty-day mark. “since I’d logged out” places Logout in the past and contradicts the still-in-capsule test that follows.",
+      "severity": "critical",
+      "source": "꼭 30일 만의 로그아웃."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "Looking at me standing there flustered, Jinho hyung sighed.",
+      "current": "Jinho hyung sighed as he looked at me in confusion.",
+      "defect": "당황한 modifies the narrator; the English makes Jinho the confused one.",
+      "id": "F02",
+      "rationale": "당황한 나를 보며 is Jinho regarding a panicked Taekyung, then sighing. “looked at me in confusion” assigns that state to Jinho.",
+      "severity": "critical",
+      "source": "당황한 나를 보며 진호 형이 한숨을 내쉬었다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“Honghwaru, my ass. Just close the capsule door.”",
+      "current": "“Yeah, right. Just close the capsule door.”",
+      "defect": "Drops the specific scoff at Honghwaru; generic disbelief replaces the echo.",
+      "id": "F03",
+      "rationale": "He repeats 홍화루 to dismiss the instruction, not merely to refuse in general.",
+      "severity": "major",
+      "source": "“홍화루 같은 소리 하네. 캡슐 문이나 닫아.”"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "My head hurts from the hangover, my uvula hurts, and my heart hurts looking at you.",
+      "current": "My head hurts from my hangover, my throat hurts, and my heart hurts every time I look at you.",
+      "defect": "목젖 in the hangover triad is the uvula gag already established; “throat” flattens it.",
+      "id": "F04",
+      "rationale": "The line stacks hangover, the uvula strike, and hurt feelings. 목젖 is the same word used for the hit, not a generic throat.",
+      "severity": "major",
+      "source": "숙취 때문에 머리도 아프고 목젖도 아프고 널 보는 내 마음도 아프다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "the bastards who fired up a factory … should have been dragged before a judge.",
+      "current": "anyone who had fired up a factory … should have been dragged before a judge.",
+      "defect": "새끼들 is a slur; “anyone” sanitizes the speaker’s register.",
+      "id": "F05",
+      "rationale": "Rules require matching profanity/insult strength. 새끼들 is not a neutral indefinite.",
+      "severity": "major",
+      "source": "공장 돌리는 새끼들은 법정에 세워야 한다는 게 내 생각이다."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "“Unbelievable.”",
+      "current": "“This is fucking wild.”",
+      "defect": "골 때리네 is blunt slang, not an f-word; the added profanity is repeated for both speakers.",
+      "id": "F06",
+      "rationale": "Same line is Taekyung’s reaction and Jinho’s deadpan verdict. Intensifying it with “fucking” changes register without a matching source curse.",
+      "severity": "minor",
+      "source": "“골 때리네.”"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Jinho hyung stared a hole through me, then spoke.",
+      "current": "Jinho hyung stared at me for a long time before speaking.",
+      "defect": "뚫어져라 is intensity of the stare, not duration.",
+      "id": "F07",
+      "rationale": "The verb marks a piercing look while he decides, not that a long time passed.",
+      "severity": "minor",
+      "source": "진호 형은 나를 뚫어져라 응시하다가 입을 열었다."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "By now he had to be too busy at Honghwaru trying to figure out what was going on…",
+      "current": "By now, he must be running around Honghwaru trying to figure out what’s going on…",
+      "defect": "Adds “running around”; the Korean is only that he’d be too busy/overwhelmed making sense of the situation.",
+      "id": "F08",
+      "rationale": "정신이 없을 describes mental overload, not a new physical action.",
+      "severity": "minor",
+      "source": "지금쯤이면 홍화루에서 사태 파악하느라 정신이 없을……."
+    }
+  ],
+  "summary": "Critical timeline reversal on Logout; confusion assigned to the wrong person; Honghwaru scoff and uvula callback dropped; insult sanitized.",
+  "version": 1
+}

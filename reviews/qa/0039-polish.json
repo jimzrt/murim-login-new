@@ -1,0 +1,31 @@
+{
+  "chapter": 39,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.102,
+    "source_characters": 5258,
+    "source_paragraphs": 179,
+    "translation_characters": 11050,
+    "translation_paragraphs": 182
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "동기화",
+        "preferred": "Synchronization / Sync"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 38
-- Next chapter: 39
-- Current block: 35–39 (4/5)
+- Last completed: 39
+- Next chapter: 40
+- Current block: 35–39 (5/5)
 - Latest translation: `translations/0038.md`
-- Latest summary: `summaries/beats/0038.md`
-- Safe profiles through: chapter 38
+- Latest summary: `summaries/beats/0039.md`
+- Safe profiles through: chapter 39
 
 
 

@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "safe_through": 38,
-  "continuity_sources": [37, 38],
+  "safe_through": 39,
+  "continuity_sources": [38, 39],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
-    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 32, has fifteen years of internal energy, and is First Rate; only the Fame 500 requirement remains incomplete, with his total at 497/500.",
+    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is now Lv. 33, First Rate, and at 547 Fame; he completed the conditions and successfully logged out. The requirements remain historical Quest information.",
     "Taekyung's Jin Family's Cultivation Technique is at the Fifth Stage; his Spear and Manoeuvre Techniques are at the Sixth Stage, and his Fourth-Stage Qi Sense detects targets through Lv. 50.",
     "Taekyung has the Gambler Title, which increases combat stats by 10% in a one-on-one fight; it does not apply when allies join the fight.",
     "The hardened third internal energy came from the hundred-year snow ginseng. It awakened during the mortal danger in Chapter 30, and most of the ginseng-granted energy was consumed by Taekyung's final Skill use; his current internal-energy total is fifteen years.",
@@ -51,7 +51,7 @@
     "Hyuk Mujin and Han Yeop recover in Medicine King Hall from serious but nonfatal injuries and resolve to become stronger than Jopil and catch up to Taekyung. Han's internal injuries remain unhealed in Chapter 36; Hyuk's internal injuries have healed, but he sneaks out despite serious external injuries to join the march.",
     "Taekyung visits the injured squad members, Gong Yacheong, Socheon, and Soyul before the Jin Family's march; the System shows Fame 475/500, and ordinary family-wide Fame gains have stalled.",
     "Gong Yacheong returns Jopil's Flame Divine Palm manual, Fire Divine Elixir, and Nameless Sword to Taekyung. The manual is Supreme Peak and restricted to a holder of Scorching Yang Qi; the Peak elixir grants thirty years of internal energy but contains dangerous fire qi; the ten-thousand-year cold-iron sword's special power is unknown.",
-    "Taekyung stores Jopil's recovered items in his Inventory and gains another point of Fame.",
+    "The Flame Divine Palm manual and Fire Divine Elixir are last seen on a rock at the Honju rear-guard position when the attack begins; only the Nameless Sword is confirmed in Taekyung's Inventory.",
     "The Head Elder meets an unidentified ally in the garden through Sound Transmission. Their preparations, including troop deployments, are complete; the Head Elder is willing to do anything to become Family Head and Shanxi's sole hegemon.",
     "At the departure ceremony, more than five hundred Jin Family and allied martial artists assemble. The force is divided into vanguard, center, and rear guard; Taekyung commands the rear guard, which contains only a few dozen martial artists.",
     "Jin Wikyung rallies the departing force by predicting victory within three days. The war is expected to pit about fifteen hundred martial artists against one another once both sides commit their forces.",
@@ -60,11 +60,11 @@
     "Mount Heng’s exhausted reinforcements have crossed Mount Otae and are low on food. Jin Wikyung plans to seize Jeongyang’s high ground and draw the enemy through narrow Eight Spring Gorge, where about one hundred horn bows are hidden on the cliffs with help from the Lower District Sect.",
     "Taekyung’s Fame is 497/500 for Logout. He stays awake counting the remaining three points, reflects on his month in Murim, and recognizes that the reconnaissance squad’s loyalty feels real.",
     "Taekyung tells the anxious rear guard that he trusts Jin Wikyung, and the squad affirms its trust in Taekyung.",
-    "Gwak Jun and twenty supposed Three Paths Sect martial artists in the rear guard are assassins, all First Rate, ordered to eliminate everyone and join the main force. A hidden ambush is accidentally disrupted by a herd of Level 1 water deer.",
-    "Taekyung accepts the Peak Slay the Assassins Quest, restricted to him, with the objective to kill twenty assassins and death as failure. He and the reconnaissance squad defeat the infiltrators through coordinated formations, Inventory weapons, and One Flash.",
-    "Gwak Jun is captured but severs his own heart meridian and dies before revealing the full plan. He says the Three Paths Sect was established thirty years ago according to an unidentified conspirator's will.",
-    "More than one hundred martial artists from the Three Paths Sect and Gunggwimun joined the Jin Family's force, and nearly half the main force belongs to the Head Elder's faction. Taekyung strongly suspects that the Head Elder is a traitor who united the family's strength to seize Shanxi, but this remains unconfirmed.",
-    "The Slay the Assassins Quest completes after Gwak's death. Taekyung gains EXP, a level-up, and 50 Fame, taking him from 497/500 to 547/500; all Logout conditions are met and a three-second Logout countdown begins, but he loses consciousness before the result is shown."
+    "At Honju, twenty supposed Three Paths Sect martial artists, including Gwak Jun, reveal themselves as First Rate assassins; a herd of water deer breaks their ambush. Taekyung and the reconnaissance squad kill the infiltrators, and Gwak dies after severing his own heart meridian.",
+    "Gwak says the Three Paths Sect was established thirty years earlier according to an unidentified conspirator's will. Taekyung suspects the Head Elder united the Jin Family's strength to seize Shanxi; the accomplice and full plan remain unresolved.",
+    "The Slay the Assassins Quest completes after Gwak's death, granting 50 Fame and a level-up; Taekyung reaches 547/500 Fame and Logout begins, but he loses consciousness before its result is shown.",
+    "Taekyung logs out after exactly thirty days in Murim; only three hours pass in reality. The System is unavailable after logout, and Seong Jinho does not believe Taekyung's account.",
+    "The unplugged Ark - 2020 capsule's manual names H Soft as manufacturer and January 1, 2020 as its manufacture date. It says the registered user is permanently bound until death, reality/game time passes at an adjustable slow ratio, and Character Synchronization is a key feature; the capsule's purpose, synchronization, and route home remain unresolved."
 
   ],
   "open_questions": [

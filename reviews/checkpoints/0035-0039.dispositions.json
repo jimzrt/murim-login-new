@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Updated docs/CONTEXT.json to record Taekyung's current Chapter 39 status as Level 33, First Rate, 547 Fame, and successfully logged out, while retaining the Logout thresholds as historical Quest information.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Corrected the durable context and Taekyung profile to state that the twenty assassins included Gwak Jun, rather than adding twenty assassins to him.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Corrected the Chapter 36 and Chapter 38 accepted translations to eight present reconnaissance-squad members, consistent with Han Yeop's absence and Hyuk Mujin's unexpected arrival.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Corrected the durable context and Taekyung profile: the Flame Divine Palm manual and Fire Divine Elixir remain last seen on the rock, while only the Nameless Sword is confirmed in Inventory.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Merged the three consecutive Chapter 35 Item Window notices into one continuous System blockquote with a single System heading.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}
