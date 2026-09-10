@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored the whispered identification as Kkeokjeong hyung before the generic who-is-it.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored the teammates’ address as Kkeokjeong hyung.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Narrated the waist split as a completed action so the fake-out still lands.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Rendered 전승됩니다 as present-declarative inheritance, not a finished transfer.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored 뒤통수 as the back of the head in the extended idiom.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Changed 십여 미터 from more than ten meters to about ten meters.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,86 @@
+{
+  "findings": [
+    {
+      "confidence": 0.98,
+      "correction": "Change the final clause to say that he decides to live in reality for or alongside his family, without implying shared residence.",
+      "current": "After speaking with his sister Hayeon and thinking of his mother, he accepts that he has returned home and decides to live with his family.",
+      "defect": "The summary implies that Taekyung decides to move in or reside with his family, but the reading copy has him return to his room at Hope Goshiwon. His decision is to live in reality because his family is there.",
+      "id": "C01",
+      "rationale": "The current wording contradicts Taekyung’s physical living situation and could cause later continuity notes to place him in the family home prematurely.",
+      "severity": "major",
+      "source": "checkpoint summary, Plot, Chapter 40"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Replace “two other veteran E-rank Hunters” with “three other veteran E-rank Hunters.”",
+      "current": "Taekyung's E-rank Gate party consists of Team Leader Choi, Im, two other veteran E-rank Hunters, and Taekyung as porter.",
+      "defect": "The party count drops one veteran Hunter. Chapters 41 and 44 establish Im plus three other veteran E-rank Hunters, along with Team Leader Choi and Taekyung.",
+      "id": "C02",
+      "rationale": "Chapter 41 introduces three men besides Im, and Chapter 44 accounts for Im, the second tank, and two additional combatants before the party is incapacitated.",
+      "severity": "major",
+      "source": "durable state, active_continuity item 7"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Replace “route home” with “route back to Murim.”",
+      "current": "The capsule's purpose and route home remain unresolved.",
+      "defect": "“Route home” is stale and internally contradictory now that Taekyung is already back in reality. The unresolved route is the route back to Murim.",
+      "id": "C03",
+      "rationale": "The checkpoint summary and active continuity correctly identify return to Murim—not return to reality—as the unresolved direction of travel.",
+      "severity": "minor",
+      "source": "durable state, open_questions item 1"
+    },
+    {
+      "confidence": 0.97,
+      "correction": "Use “mana” consistently for the modern Hunter energy in both passages and remove the parenthetical alternate term.",
+      "current": "Gear that isn’t imbued with mana—or magic power—falls apart in no time.",
+      "defect": "The parenthetical treats “magic power” as an alternate modern-Hunter energy term, creating terminology drift from the required use of “mana.” The chapter later repeats the drift in “the cool, sticky energy unique to magic power.”",
+      "id": "C04",
+      "rationale": "The binding terminology rule distinguishes modern-system mana from Murim qi; introducing a second English label weakens that distinction.",
+      "severity": "minor",
+      "source": "Chapter 42, raid-equipment explanation"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Change “E-rank Magic Gems” to “E-grade Magic Gems.”",
+      "current": "Hobgoblins were generous monsters. Poison-resistant hides, a few usable weapons—and they even dropped two E-rank Magic Gems.",
+      "defect": "“E-rank Magic Gems” conflicts with Chapter 42’s established “B-grade Magic Gems” and its description of a Magic Gem’s Grade.",
+      "id": "C05",
+      "rationale": "Grade is the packet’s classification term for Magic Gems, while rank is used for Hunters and Gates.",
+      "severity": "minor",
+      "source": "Chapter 43, post-combat byproduct assessment"
+    },
+    {
+      "confidence": 0.99,
+      "correction": "Reformat all of Hayeon’s and Taekyung’s spoken phone lines as dialogue in curly double quotes.",
+      "current": "— Yeah. Why?",
+      "defect": "The phone dialogue is formatted with dash-led lines instead of the required curly double quotation marks.",
+      "id": "C06",
+      "rationale": "The binding speech rule requires curly double quotes and gives no separate phone-dialogue convention.",
+      "severity": "minor",
+      "source": "Chapter 40, Hayeon phone conversation"
+    },
+    {
+      "confidence": 1.0,
+      "correction": "Change “Charged” to “charged.”",
+      "current": "Im Kkeokjeong Charged the Great Warrior chasing me.",
+      "defect": "“Charged” is accidentally capitalized in the middle of the sentence.",
+      "id": "C07",
+      "rationale": "This is a visible reading-copy typo with no stylistic or semantic purpose.",
+      "severity": "minor",
+      "source": "Chapter 44, first team counterattack"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "Change the second sentence to say that he is working as a porter on an E-rank Gate raid.",
+      "current": "Jin Taekyung is back in reality after logging out of Murim. He is an F-rank Hunter and works as a porter for an E-rank Gate.",
+      "defect": "“Works as a porter for an E-rank Gate” makes the Gate sound like his employer rather than the raid assignment.",
+      "id": "C08",
+      "rationale": "The revised wording states his current role and assignment precisely without changing continuity.",
+      "severity": "minor",
+      "source": "durable state, active_continuity item 1"
+    }
+  ],
+  "summary": "The reading copies preserve the packet’s voice and unresolved hooks overall, but the checkpoint summary and durable state contain two substantive continuity errors. Several smaller terminology and formatting inconsistencies are also actionable.",
+  "version": 1
+}

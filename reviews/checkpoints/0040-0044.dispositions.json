@@ -1,0 +1,45 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Updated summaries/beats/0040.md to say Taekyung decides to live in reality with his family nearby, without implying that he moves into the family home.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Corrected docs/CONTEXT.json to record three other veteran E-rank Hunters in the Gate party besides Im.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Changed the unresolved capsule destination in docs/CONTEXT.json, docs/STATE.md, and summaries/beats/0040.md to the route back to Murim.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C04",
+      "reason": "Changed the Chapter 42 modern Hunter energy wording from magic power to mana in translations/0042.md.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C05",
+      "reason": "Changed the Chapter 43 Magic Gem classification from E-rank to E-grade in translations/0043.md.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C06",
+      "reason": "Reformatted the Chapter 40 phone dialogue as curly-quoted dialogue in translations/0040.md.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C07",
+      "reason": "Corrected the accidental capitalization in the Chapter 44 counterattack sentence in .work/0044/polished.md.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C08",
+      "reason": "Updated docs/CONTEXT.json to describe Taekyung as working as a porter on an E-rank Gate raid.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

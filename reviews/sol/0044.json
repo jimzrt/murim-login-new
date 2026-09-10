@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "“Kkeokjeong hyung?”",
+      "current": "“Hyung?”",
+      "defect": "The whispered identification names Kkeokjeong; the draft makes it a generic hyung.",
+      "id": "F01",
+      "rationale": "In the dust he first calls that specific person, then, getting no answer, asks who it is. Dropping the name erases that identification step.",
+      "severity": "major",
+      "source": "“꺽정 형님?”"
+    },
+    {
+      "confidence": 0.86,
+      "correction": "“No! Kkeokjeong hyung!”",
+      "current": "“No! Hyung!”",
+      "defect": "Teammates address him as 꺽정 형님; the nickname is omitted.",
+      "id": "F02",
+      "rationale": "The established address is Kkeokjeong hyung. Generic Hyung loses that intimacy and who is being named.",
+      "severity": "major",
+      "source": "“안 돼! 꺽정 형님!”"
+    },
+    {
+      "confidence": 0.84,
+      "correction": "The greatsword split my waist right through, iron spear and all—",
+      "current": "The greatsword should have split my waist clean in two, iron spear and all—",
+      "defect": "The source states the cut as a completed action, then cuts off; should have telegraphs that it failed.",
+      "id": "F03",
+      "rationale": "The fake-out depends on narrating the waist being split, then revealing spear and waist are unharmed.",
+      "severity": "major",
+      "source": "대검은 철창과 함께 내 허리를 그대로 갈라 버렸……."
+    },
+    {
+      "confidence": 0.78,
+      "correction": "All systems are inherited.",
+      "current": "All systems have been transferred.",
+      "defect": "전승(傳承) is inheritance/transmission, and 됩니다 is present-declarative, not a completed transfer.",
+      "id": "F04",
+      "rationale": "After Synchronization complete, the System announces that every system is being inherited, not that a transfer already finished.",
+      "severity": "major",
+      "source": "- 모든 시스템이 전승(傳承)됩니다."
+    },
+    {
+      "confidence": 0.83,
+      "correction": "My nose wasn’t the only thing getting broken. The back of my head was, too.",
+      "current": "My nose wasn’t the only thing getting broken. My skull was, too.",
+      "defect": "뒤통수 is the back of the head, the other side from the nose in the extended idiom.",
+      "id": "F05",
+      "rationale": "The joke is nose and occiput both broken, not a generic skull injury.",
+      "severity": "minor",
+      "source": "이건 코도 깨지고 뒤통수도 깨진 거다."
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Im Kkeokjeong flew about ten meters",
+      "current": "Im Kkeokjeong flew more than ten meters",
+      "defect": "십여 미터 is about ten meters, not more than ten.",
+      "id": "F06",
+      "rationale": "여 marks an approximate ten, not a distance beyond ten.",
+      "severity": "minor",
+      "source": "십여 미터를 날아가"
+    }
+  ],
+  "summary": "Specific address of Im as 꺽정 형님 is dropped twice; the greatsword fake-out is recast as hypothetical; 전승 is flattened to a completed transfer.",
+  "version": 1
+}

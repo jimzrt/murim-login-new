@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 43
-- Next chapter: 44
-- Current block: 40–44 (4/5)
+- Last completed: 44
+- Next chapter: 45
+- Current block: 40–44 (5/5)
 - Latest translation: `translations/0043.md`
-- Latest summary: `summaries/beats/0043.md`
-- Safe profiles through: chapter 43
+- Latest summary: `summaries/beats/0044.md`
+- Safe profiles through: chapter 44
 
 
 
@@ -15,14 +15,14 @@
 
 
 
-Taekyung processes the Hobgoblins with professional speed while the Peace Guild party advances through the E-rank Gate. At the Boss Zone, an old Hobgoblin Priest uses the corpses of nearly a hundred Hobgoblins to trap the party and summon a C-rank Hobgoblin Great Warrior. Team Leader Choi identifies both rare monsters, attacks the Priest, and orders the others to hold the Great Warrior down.
+Taekyung is nearly killed by the Hobgoblin Great Warrior while the Peace Guild party is overwhelmed in the Boss Zone. He blocks the monster’s greatsword, triggering Character Synchronization and restoring all systems in reality, then uses his spear to maim the Level 45 Great Warrior. Team Leader Choi kills the Hobgoblin Priest and stares in disbelief at the porter’s power.
 
 ## Open Questions
 
-- The capsule's purpose and route home remain unresolved.
+- The capsule's purpose and route back to Murim remain unresolved.
 - Murim death and resurrection limits remain unresolved.
 - The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved.
-- Whether the trapped party can survive the Hobgoblin Priest and Great Warrior remains unresolved.
+- Whether Taekyung can defeat the Hobgoblin Great Warrior and what happens to the trapped party remains unresolved.
 
 
 ## Exceptional Decision

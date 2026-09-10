@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 43
+- **Safe through:** Chapter 44
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -31,4 +31,5 @@
 - **Chapter 41 continuity:** After Sopung Guild fires him, Taekyung registers at the Hunter Manpower Office and signs with Peace Guild as a porter for an E-rank Gate. He reunites with his old acquaintance Im Kkeokjeong, now the E-rank Hunter Im Hyeokjun, who recommends him to Team Leader Choi. Taekyung travels to the Gate with Im and three veteran E-rank Hunters; it is his first raid since returning to reality.
 - **Chapter 42 continuity:** Taekyung begins his first raid since returning to reality as a porter for Peace Guild at an E-rank Gate. Im Kkeokjeong and three veteran E-rank Hunters accompany him under Team Leader Choi, a C-rank Hunter. After watching Choi and the veterans clear a Hobgoblin group, Taekyung recognizes that he would be stronger than Choi in Murim but is only an F-rank porter in reality.
 - **Chapter 43 continuity:** Taekyung professionally butchers the defeated Hobgoblins for paid byproduct work while the party advances. In the Boss Zone, an old Hobgoblin Priest traps the party and summons a C-rank Hobgoblin Great Warrior from nearly a hundred corpses; Team Leader Choi orders the party to hold it down while he attacks the Priest.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–43
+- **Chapter 44 continuity:** During the Boss Zone fight, Taekyung lures the Hobgoblin Great Warrior away from the unconscious party and blocks its greatsword. Character Synchronization completes in reality and all systems are inherited, restoring his System abilities; he then uses his spear to severely wound the Level 45 Great Warrior. Team Leader Choi kills the Hobgoblin Priest and witnesses Taekyung’s power, but the Great Warrior’s final fate remains unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–44
