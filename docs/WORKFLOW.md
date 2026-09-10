@@ -41,13 +41,20 @@ that has no ledger entry and blocks `Rank:` as a System/UI classification field.
 `docs/STATE.md` is a short human operational view, not a historical review log.
 Review history belongs to the structured files under `reviews/`.
 
-## Review and Revision
+## Review, Revision, and Polish
 
 The chapter reviewer returns validated JSON at `reviews/sol/NNNN.json`; the
 human view is `reviews/sol/NNNN.md`; hashes and counts are in
 `reviews/sol/NNNN.meta.json`. Revision creates
 `reviews/sol/NNNN.dispositions.json`. Every finding needs exactly one applied,
 rejected, or unresolved disposition. Unresolved critical/major findings block.
+
+From `polish_from_chapter` onward, a controller polish stage runs after
+`REVISED`. It is a no-tools OMP call: source, revised copy, `RULES.md`,
+`final_pass.md`, exact glossary matches, and matching profiles. The model
+returns a complete reading copy; deterministic QA must pass before durable
+updates, summary, checkpoint, or acceptance. Chapters before that cutoff keep
+the previous `REVISED` → accept path.
 
 Deterministic reports live in `reviews/qa/`; exact provider-reported phase usage
 and elapsed time live in `reviews/metrics/`. Run `python tools/cost_report.py`

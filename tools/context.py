@@ -453,6 +453,60 @@ the translation section.
 """
 
 
+def build_polish_packet(number: int, revised: str) -> str:
+    source = chapter_text(number)
+    rules_path = ROOT / "RULES.md"
+    handoff_path = ROOT / "final_pass.md"
+    source_path = ROOT / "original 1-1104.txt"
+    compendium_path = ROOT / "compendium.md"
+    names_path = ROOT / "docs" / "NAMES.md"
+    rules = rules_path.read_text(encoding="utf-8").strip()
+    handoff = handoff_path.read_text(encoding="utf-8").strip()
+    glossary = exact_glossary_entries(source)
+    profiles = profile_entries(source)
+    body = f"""# Polish Task — Chapter {number}
+
+Edit only this revised reading copy. Return only the complete English Markdown
+reading copy beginning with `# Chapter {number}`. Do not review, explain,
+update files, or continue to another chapter.
+
+Follow the editorial handoff below. Start from the revised copy; do not
+retranslate from scratch. Preserve meaning, pacing, humor, character voice,
+System terminology, names, and Korean/Murim cultural content. Check the
+Korean source before changing an idiom, metaphor, joke, or cultural phrasing.
+
+## Editorial handoff
+
+{handoff}
+
+## Binding rules
+
+{rules}
+
+## Korean source
+
+```text
+{source.rstrip()}
+```
+
+## Revised reading copy
+
+```markdown
+{revised.rstrip()}
+```
+
+## Exact glossary matches
+
+{glossary_text(glossary)}
+
+## Present-character profiles
+
+{profiles_text(profiles)}
+"""
+    used = [rules_path, handoff_path, source_path, compendium_path, names_path, *(path for path, _ in profiles)]
+    return body.replace("# Polish Task", f"<!-- packet-manifest\n{manifest(used, body)}\n-->\n\n# Polish Task", 1)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("chapter", type=int)

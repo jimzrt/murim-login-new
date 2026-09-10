@@ -23,6 +23,7 @@ class ContextPacketTest(unittest.TestCase):
             draft_packet = context.build_draft_packet(5)
             review_packet = context.build_review_packet(5, "# Chapter 5\n\nDraft.\n", {"warnings": []})
             revision_packet = context.build_revision_packet(5, "# Chapter 5\n\nDraft.\n", {"findings": []})
+            polish_packet = context.build_polish_packet(5, "# Chapter 5\n\nRevised.\n")
         self.assertIn("translations/0004.md", draft_packet)
         self.assertIn("Latest completed summary", draft_packet)
         self.assertNotIn("translations/0004.md", review_packet)
@@ -33,6 +34,12 @@ class ContextPacketTest(unittest.TestCase):
         self.assertLess(revision_packet.find("## Korean source"), revision_packet.find("<<<TRANSLATION>>>"))
         self.assertIn("<<<END>>>", revision_packet)
         self.assertIn("After <<<END>>>, stop immediately.", revision_packet)
+        self.assertIn("Editorial handoff", polish_packet)
+        self.assertIn("Translate the thought, not the Korean sentence structure", polish_packet)
+        self.assertIn("Revised reading copy", polish_packet)
+        self.assertNotIn("Structured findings", polish_packet)
+        self.assertNotIn("Latest completed summary", polish_packet)
+        self.assertNotIn("<<<TRANSLATION>>>", polish_packet)
 
     def test_durable_context_requires_version(self):
         problems = context.durable_context_problems(

@@ -21,26 +21,31 @@ except ModuleNotFoundError:
     from run_lock import hold_run_lock
 
 STAGES = (
-    "READY", "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED",
+    "READY", "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED", "POLISHED",
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
-MODEL_ROLES = ("draft", "review", "revision", "summary", "coordinator")
+MODEL_ROLES = ("draft", "review", "revision", "polish", "summary", "coordinator")
 DEFAULT_CONFIG = {
     "models": {
         "draft": "openai-codex/gpt-5.6-luna:high",
         "review": "openai-codex/gpt-5.6-sol:medium",
         "revision": "openai-codex/gpt-5.6-luna:high",
+        "polish": "openai-codex/gpt-5.6-luna:high",
         "summary": "openai-codex/gpt-5.6-luna:high",
         "coordinator": "openai-codex/gpt-5.6-luna:high",
     },
     "context_max_bytes": 16384,
     "continuity_source_limit": 2,
-    "packet_token_limits": {"draft": 60000, "review": 60000, "revision": 60000, "checkpoint": 120000, "summary": 20000},
+    "packet_token_limits": {
+        "draft": 60000, "review": 60000, "revision": 60000, "polish": 60000,
+        "checkpoint": 120000, "summary": 20000,
+    },
     "summary_interval": 5,
     "beat_max_bytes": 4096,
     "checkpoint_review_interval": 5,
     "checkpoint_evaluation_window": 20,
+    "polish_from_chapter": 27,
 }
 
 
@@ -78,6 +83,9 @@ def project_config() -> dict:
         raise SystemExit("checkpoint_review_interval must be a positive multiple of summary_interval")
     if int(value["continuity_source_limit"]) < 0 or int(value["continuity_source_limit"]) > 2:
         raise SystemExit("continuity_source_limit must be between 0 and 2")
+    value["polish_from_chapter"] = int(value.get("polish_from_chapter", 27))
+    if value["polish_from_chapter"] < 0:
+        raise SystemExit("polish_from_chapter must be non-negative")
     return value
 
 
@@ -136,6 +144,9 @@ def paths(number: int) -> dict[str, Path]:
         "revised": work / "revised.md",
         "final_qa": ROOT / "reviews" / "qa" / f"{number:04d}-final.json",
         "revision_context": work / "revision-context.md",
+        "polish_context": work / "polish-context.md",
+        "polished": work / "polished.md",
+        "polish_qa": ROOT / "reviews" / "qa" / f"{number:04d}-polish.json",
         "dispositions": ROOT / "reviews" / "sol" / f"{number:04d}.dispositions.json",
         "metrics": ROOT / "reviews" / "metrics" / f"{number:04d}.json",
         "translation": ROOT / "translations" / f"{number:04d}.md",
@@ -219,7 +230,7 @@ def save(state: dict, p: dict[str, Path], stage: str, **artifacts: str) -> None:
 
 
 IN_FLIGHT_STAGES = {
-    "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED",
+    "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED", "POLISHED",
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED",
 }
 
@@ -281,20 +292,40 @@ def validate_reading_copy(path: Path, number: int) -> None:
         raise SystemExit("reading copy contains Hangul; final chapter must be English-only")
 
 
+def polish_due(number: int) -> bool:
+    return number >= int(project_config()["polish_from_chapter"])
+
+
+def post_revision_stage(number: int) -> str:
+    return "POLISHED" if polish_due(number) else "REVISED"
+
+
+def reading_copy_path(p: dict[str, Path], number: int) -> Path:
+    return p["polished"] if polish_due(number) else p["revised"]
+
+
+def durable_next_action(number: int, p: dict[str, Path]) -> str:
+    beat = p["beat"].relative_to(ROOT)
+    durable = (
+        f"update {beat}, docs/STATE.md, docs/CONTEXT.json "
+        "(keep version, continuity_sources, active_continuity, open_questions, "
+        "and temporary_decisions), and profiles from this chapter only"
+    )
+    if interval_due(number, "summary_interval") and not checkpoint_exists(number):
+        return f"{durable}, then: python tools/workflow.py summarize {number}"
+    if interval_due(number, "checkpoint_review_interval"):
+        return f"python tools/workflow.py checkpoint {number}"
+    return f"{durable}, then: python tools/workflow.py accept {number}"
+
+
 def next_action(state: dict, p: dict[str, Path]) -> str:
     number = state["chapter"]
     if state["stage"] == "REVISED":
-        beat = p["beat"].relative_to(ROOT)
-        durable = (
-            f"update {beat}, docs/STATE.md, docs/CONTEXT.json "
-            "(keep version, continuity_sources, active_continuity, open_questions, "
-            "and temporary_decisions), and profiles from this chapter only"
-        )
-        if interval_due(number, "summary_interval") and not checkpoint_exists(number):
-            return f"{durable}, then: python tools/workflow.py summarize {number}"
-        if interval_due(number, "checkpoint_review_interval"):
-            return f"python tools/workflow.py checkpoint {number}"
-        return f"{durable}, then: python tools/workflow.py accept {number}"
+        if polish_due(number):
+            return f"python tools/workflow.py polish {number}"
+        return durable_next_action(number, p)
+    if state["stage"] == "POLISHED":
+        return durable_next_action(number, p)
     return {
         "READY": f"python tools/workflow.py prepare {number}",
         "CONTEXT_READY": f"python tools/workflow.py draft {number}",
@@ -504,9 +535,65 @@ def command_revise(number: int) -> None:
     command_revised(number)
 
 
-def command_summarize(number: int) -> None:
+def command_polished(number: int) -> None:
+    state, p = load(number)
+    require(state, "REVISED", "POLISHED")
+    if digest(p["revised"]) != state["artifacts"]["revised_sha256"]:
+        raise SystemExit("polish is stale because revised.md changed")
+    validate_reading_copy(p["polished"], number)
+    try:
+        from tools.context import chapter_text, exact_glossary_entries
+        from tools.qa import run_qa
+    except ModuleNotFoundError:
+        from context import chapter_text, exact_glossary_entries
+        from qa import run_qa
+    source = chapter_text(number)
+    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
+    qa = run_qa(number, source, p["polished"].read_text(encoding="utf-8"), glossary)
+    atomic_json(p["polish_qa"], qa)
+    atomic_json(p["final_qa"], qa)
+    if not qa["passed"]:
+        raise SystemExit(f"polish failed deterministic QA; inspect {p['polish_qa']}")
+    save(
+        state,
+        p,
+        "POLISHED",
+        polished_sha256=digest(p["polished"]),
+        final_qa_sha256=digest(p["final_qa"]),
+    )
+
+
+def command_polish(number: int) -> None:
     state, p = load(number)
     require(state, "REVISED")
+    if not polish_due(number):
+        raise SystemExit(f"polish starts at chapter {project_config()['polish_from_chapter']}")
+    if digest(p["revised"]) != state["artifacts"]["revised_sha256"]:
+        raise SystemExit("revised.md changed after REVISED")
+    if digest(p["dispositions"]) != state["artifacts"]["dispositions_sha256"]:
+        raise SystemExit("structured dispositions changed after REVISED")
+    try:
+        from tools.context import build_polish_packet
+    except ModuleNotFoundError:
+        from context import build_polish_packet
+    packet = build_polish_packet(number, p["revised"].read_text(encoding="utf-8"))
+    enforce_packet_budget("polish", packet)
+    atomic_text(p["polish_context"], packet)
+    raw, metrics = run_omp(
+        p["polish_context"],
+        project_config()["polish_model"],
+        960,
+        log_path=omp_log_path(number, "polish"),
+    )
+    atomic_text(p["work"] / "polish-raw.txt", raw)
+    atomic_text(p["polished"], raw)
+    record_metric(p, "polish_model", **metrics)
+    command_polished(number)
+
+
+def command_summarize(number: int) -> None:
+    state, p = load(number)
+    require(state, post_revision_stage(number))
     if not interval_due(number, "summary_interval"):
         raise SystemExit("this chapter does not end a summary block")
     if not state_claims_completion(number):
@@ -543,7 +630,7 @@ def command_summarize(number: int) -> None:
         **metrics,
         packet_token_estimate=packet_tokens,
     )
-    save(state, p, "REVISED", summary_sha256=digest(p["checkpoint_summary"]))
+    save(state, p, post_revision_stage(number), summary_sha256=digest(p["checkpoint_summary"]))
 
 
 def state_claims_completion(number: int) -> bool:
@@ -594,7 +681,7 @@ def checkpoint_summary_paths(number: int) -> list[Path]:
 
 def command_checkpoint(number: int) -> None:
     state, p = load(number)
-    require(state, "REVISED")
+    require(state, post_revision_stage(number))
     if not interval_due(number, "checkpoint_review_interval"):
         raise SystemExit("this chapter does not end a five-chapter block")
     if not state_claims_completion(number):
@@ -608,7 +695,7 @@ def command_checkpoint(number: int) -> None:
     chapters: list[str] = []
     review_interval = int(project_config()["checkpoint_review_interval"])
     for chapter in range(number - review_interval + 1, number + 1):
-        chapter_path = p["revised"] if chapter == number else ROOT / "translations" / f"{chapter:04d}.md"
+        chapter_path = reading_copy_path(p, number) if chapter == number else ROOT / "translations" / f"{chapter:04d}.md"
         validate_reading_copy(chapter_path, chapter)
         chapters.append(f"## Chapter artifact {chapter}\n\n{chapter_path.read_text(encoding='utf-8').strip()}")
     rules = (ROOT / "RULES.md").read_text(encoding="utf-8").strip()
@@ -691,7 +778,7 @@ Return this exact shape with no Markdown fence:
         "report_sha256": digest(p["checkpoint_json"]),
         "finding_count": len(report["findings"]),
         "major_or_critical_count": sum(item["severity"] in {"major", "critical"} for item in report["findings"]),
-        "revised_sha256": digest(p["revised"]),
+        "revised_sha256": digest(reading_copy_path(p, number)),
         "summary_sha256": {str(path.relative_to(ROOT)): digest(path) for path in summary_paths},
     }
     atomic_json(p["checkpoint_meta"], metadata)
@@ -721,7 +808,8 @@ def command_checkpointed(number: int) -> None:
     if blocking_dispositions(checkpoint_review, normalized_object):
         raise SystemExit("critical or major checkpoint findings remain unresolved")
     atomic_json(p["checkpoint_disposition"], normalized_object)
-    validate_reading_copy(p["revised"], number)
+    copy = reading_copy_path(p, number)
+    validate_reading_copy(copy, number)
     try:
         from tools.context import chapter_text, exact_glossary_entries
         from tools.qa import run_qa
@@ -730,31 +818,33 @@ def command_checkpointed(number: int) -> None:
         from qa import run_qa
     source = chapter_text(number)
     glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
-    qa = run_qa(number, source, p["revised"].read_text(encoding="utf-8"), glossary)
+    qa = run_qa(number, source, copy.read_text(encoding="utf-8"), glossary)
     atomic_json(p["final_qa"], qa)
     if not qa["passed"]:
         raise SystemExit(f"checkpoint revision failed deterministic QA; inspect {p['final_qa']}")
-    save(
-        state,
-        p,
-        "CHECKPOINT_APPLIED",
-        revised_sha256=digest(p["revised"]),
-        checkpoint_disposition_sha256=digest(p["checkpoint_disposition"]),
-        final_qa_sha256=digest(p["final_qa"]),
-    )
+    artifacts = {
+        "revised_sha256": digest(copy),
+        "checkpoint_disposition_sha256": digest(p["checkpoint_disposition"]),
+        "final_qa_sha256": digest(p["final_qa"]),
+    }
+    if polish_due(number):
+        artifacts["polished_sha256"] = digest(copy)
+    save(state, p, "CHECKPOINT_APPLIED", **artifacts)
 
 
 def command_accept(number: int) -> None:
     state, p = load(number)
-    expected = "CHECKPOINT_APPLIED" if interval_due(number, "checkpoint_review_interval") else "REVISED"
+    expected = "CHECKPOINT_APPLIED" if interval_due(number, "checkpoint_review_interval") else post_revision_stage(number)
     require(state, expected)
-    validate_reading_copy(p["revised"], number)
-    if digest(p["revised"]) != state["artifacts"]["revised_sha256"]:
-        raise SystemExit("revised.md changed after REVISED; record it again before acceptance")
+    copy = reading_copy_path(p, number)
+    validate_reading_copy(copy, number)
+    copy_key = "polished_sha256" if polish_due(number) else "revised_sha256"
+    if digest(copy) != state["artifacts"][copy_key]:
+        raise SystemExit("reading copy changed after the last recorded stage; record it again before acceptance")
     if digest(p["dispositions"]) != state["artifacts"]["dispositions_sha256"]:
         raise SystemExit("structured dispositions changed after REVISED")
     if digest(p["final_qa"]) != state["artifacts"]["final_qa_sha256"]:
-        raise SystemExit("final QA changed after REVISED")
+        raise SystemExit("final QA changed after the last recorded stage")
     if not state_claims_completion(number):
         raise SystemExit(
             f"docs/STATE.md must say '- Last completed: {number}' and '- Next chapter: {number + 1}' before acceptance"
@@ -770,7 +860,7 @@ def command_accept(number: int) -> None:
         raise SystemExit(f"write {p['beat'].relative_to(ROOT)} before acceptance")
     p["translation"].parent.mkdir(parents=True, exist_ok=True)
     temporary = p["translation"].with_suffix(".md.tmp")
-    shutil.copyfile(p["revised"], temporary)
+    shutil.copyfile(copy, temporary)
     os.replace(temporary, p["translation"])
     save(state, p, "ACCEPTED", translation_sha256=digest(p["translation"]))
 
@@ -817,6 +907,8 @@ def command_committed(number: int, commit: str) -> None:
             str(p["metrics"].relative_to(ROOT)),
         }
     )
+    if polish_due(number):
+        required.add(str(p["polish_qa"].relative_to(ROOT)))
     missing = required.difference(names)
     if missing:
         raise SystemExit("commit is missing: " + ", ".join(sorted(missing)))
@@ -837,7 +929,7 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
         "status", "prepare", "draft", "drafted", "review", "revise",
-        "revised", "summarize", "checkpoint", "checkpointed", "accept",
+        "revised", "polish", "polished", "summarize", "checkpoint", "checkpointed", "accept",
     ):
         item = sub.add_parser(name)
         item.add_argument("chapter", type=int)
@@ -870,6 +962,10 @@ def main() -> int:
             command_revised(args.chapter)
         elif args.command == "revise":
             command_revise(args.chapter)
+        elif args.command == "polished":
+            command_polished(args.chapter)
+        elif args.command == "polish":
+            command_polish(args.chapter)
         elif args.command == "summarize":
             command_summarize(args.chapter)
         elif args.command == "checkpoint":

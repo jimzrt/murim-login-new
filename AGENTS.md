@@ -46,6 +46,10 @@ not load the bulk source, full compendium, archive directories, or
   translations or the summary archive.
 - Revision receives the source, draft, structured findings, rules, glossary,
   and matching profiles. It does not receive draft-only history or state.
+- Polish receives the source, revised reading copy, `final_pass.md`, rules,
+  glossary, and matching profiles. It does not receive review findings, the
+  summary archive, or prior translations. Chapters before `polish_from_chapter`
+  skip this stage.
 - Summarize receives the previous block summary, this block's chapter beats,
   and bounded active state. It does not receive full reading copies.
 
@@ -53,14 +57,16 @@ not load the bulk source, full compendium, archive directories, or
 
 - The draft model drafts; deterministic QA must pass; the review model returns
   validated structured findings; the revision model returns the revised reading
-  copy plus one disposition per finding; final QA must pass.
+  copy plus one disposition per finding; from `polish_from_chapter` onward the
+  polish model returns a complete reading copy using `final_pass.md`; final QA
+  must pass.
 - Unresolved critical or major findings block acceptance. Reviews and
   dispositions are durable JSON with generated Markdown reading reports.
-- At `REVISED`, update durable terminology in `docs/NAMES.md` or the
-  compendium, affected safe profiles, `docs/CONTEXT.json`, `docs/STATE.md`,
-  and `summaries/beats/NNNN.md` from this chapter only. Do not load other
-  reading copies to summarize. When status asks for it, run
-  `python tools/workflow.py summarize N`.
+- At `POLISHED`, or at `REVISED` when polish is skipped, update durable
+  terminology in `docs/NAMES.md` or the compendium, affected safe profiles,
+  `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from this
+  chapter only. Do not load other reading copies to summarize. When status
+  asks for it, run `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
   task agent, nested session, or direct `omp` invocation. `run_next.py` must
   wait for each `workflow.py` command; do not background it.

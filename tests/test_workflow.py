@@ -198,6 +198,7 @@ class WorkflowTest(unittest.TestCase):
                 "draft": "provider/draft:high",
                 "review": "provider/review:medium",
                 "revision": "provider/revision:high",
+                "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
                 "coordinator": "provider/coordinator:high",
             }
@@ -205,6 +206,7 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(resolved["draft_model"], "provider/draft:high")
         self.assertEqual(resolved["review_model"], "provider/review:medium")
         self.assertEqual(resolved["revision_model"], "provider/revision:high")
+        self.assertEqual(resolved["polish_model"], "provider/polish:high")
         self.assertEqual(resolved["summary_model"], "provider/summary:high")
         self.assertEqual(resolved["coordinator_model"], "provider/coordinator:high")
         self.assertEqual(resolved["checkpoint_model"], "provider/review:medium")
@@ -216,6 +218,7 @@ class WorkflowTest(unittest.TestCase):
                 "draft": "provider/draft:high",
                 "review": "provider/review:medium",
                 "revision": "provider/revision:high",
+                "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
                 "coordinator": "provider/coordinator:high",
                 "checkpoint": "provider/checkpoint:medium",
@@ -231,6 +234,7 @@ class WorkflowTest(unittest.TestCase):
                     "draft": "provider/draft:high",
                     "review": "provider/review:medium",
                     "revision": "provider/revision:high",
+                    "polish": "provider/polish:high",
                     "summary": "provider/summary:high",
                 }
             })
@@ -245,6 +249,71 @@ class WorkflowTest(unittest.TestCase):
                 encoding="utf-8",
             )
         self.assertEqual(workflow.incomplete_chapter(), 14)
+
+
+    def test_revised_chapter_before_polish_cutoff_asks_for_durable_updates(self):
+        state, paths = workflow.load(1)
+        state["stage"] = "REVISED"
+        action = workflow.next_action(state, paths)
+        self.assertIn("summaries/beats/0001.md", action)
+        self.assertIn("python tools/workflow.py accept 1", action)
+        self.assertNotIn("polish", action)
+
+    def test_revised_chapter_from_cutoff_asks_for_polish(self):
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 26\n- Next chapter: 27\n",
+            encoding="utf-8",
+        )
+        (self.root / "docs" / "workflow.json").write_text(
+            json.dumps({**workflow.DEFAULT_CONFIG, "version": 1}), encoding="utf-8"
+        )
+        state, paths = workflow.load(27)
+        state["stage"] = "REVISED"
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py polish 27")
+        state["stage"] = "POLISHED"
+        action = workflow.next_action(state, paths)
+        self.assertIn("python tools/workflow.py accept 27", action)
+        self.assertNotIn("python tools/workflow.py polish 27", action)
+
+    def test_accept_promotes_polished_copy_from_cutoff(self):
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 26\n- Next chapter: 27\n",
+            encoding="utf-8",
+        )
+        (self.root / "docs" / "workflow.json").write_text(
+            json.dumps({**workflow.DEFAULT_CONFIG, "version": 1, "summary_interval": 100, "checkpoint_review_interval": 100}),
+            encoding="utf-8",
+        )
+        state, paths = workflow.load(27)
+        paths["revised"].parent.mkdir(parents=True, exist_ok=True)
+        paths["revised"].write_text("# Chapter 27\n\nRevised.\n", encoding="utf-8")
+        paths["polished"].write_text("# Chapter 27\n\nPolished.\n", encoding="utf-8")
+        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
+        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
+        paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
+        paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
+        paths["beat"].parent.mkdir(parents=True, exist_ok=True)
+        paths["beat"].write_text(
+            "# Chapter 27\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
+            encoding="utf-8",
+        )
+        state["stage"] = "POLISHED"
+        state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
+        state["artifacts"]["polished_sha256"] = workflow.digest(paths["polished"])
+        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
+        state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
+        workflow.atomic_json(paths["state"], state)
+        (self.root / "docs" / "STATE.md").write_text(
+            "# Translation State\n\n- Last completed: 27\n- Next chapter: 28\n",
+            encoding="utf-8",
+        )
+        (self.root / "docs" / "CONTEXT.json").write_text(
+            json.dumps({"version":1,"safe_through":27,"continuity_sources":[27],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n",
+            encoding="utf-8",
+        )
+        workflow.command_accept(27)
+        self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 27\n\nPolished.\n")
+
 
 
 if __name__ == "__main__":
