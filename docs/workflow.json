@@ -7,7 +7,7 @@
     "summary": "openai-codex/gpt-5.6-luna:high",
     "coordinator": "openai-codex/gpt-5.6-luna:high",
     "checkpoint": "openai-codex/gpt-5.6-sol:medium",
-    "polish": "openai-codex/gpt-5.6-luna:high"
+    "polish": "cursor/cursor-grok-4.6:medium"
   },
   "context_max_bytes": 16384,
   "continuity_source_limit": 2,
