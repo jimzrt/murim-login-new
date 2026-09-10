@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../lib/chapters";
+
 interface Props {
   chapter?: number;
 }
@@ -23,9 +25,15 @@ const home = import.meta.env.BASE_URL;
   )
 }
 <header class="site-header" id="site-header">
-  <a class="nav-home" href={home}>
+  <a class="nav-home" href={home} title="Home">
+    <img class="nav-logo" src={withBase("favicon.svg")} width="28" height="28" alt="" />
     <span class="nav-home-full">Murim Login</span>
-    <span class="nav-home-short">Index</span>
+    <svg class="nav-home-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 10.8 12 4l8 6.8"></path>
+      <path d="M6.5 9.8V20h11V9.8"></path>
+      <path d="M10 20v-6h4v6"></path>
+    </svg>
+    <span class="sr-only nav-home-sr">Home</span>
   </a>
   <button class="nav-btn" id="jump-open" type="button">Chapter</button>
   {import.meta.env.PROD && <pagefind-modal-trigger class="nav-search"></pagefind-modal-trigger>}

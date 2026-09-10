@@ -16,6 +16,24 @@
   --header-h: 3rem;
 }
 
+html[data-theme="light"],
+html[data-theme="dark"] {
+  --pf-text: var(--ink);
+  --pf-text-secondary: var(--muted);
+  --pf-text-muted: var(--muted);
+  --pf-background: var(--paper);
+  --pf-border: var(--rule);
+  --pf-border-focus: var(--gold);
+  --pf-skeleton: color-mix(in srgb, var(--rule) 65%, var(--paper));
+  --pf-skeleton-shine: color-mix(in srgb, var(--paper) 80%, var(--rule));
+  --pf-hover: color-mix(in srgb, var(--gold) 14%, var(--paper));
+  --pf-mark: var(--navy);
+  --pf-scroll-shadow: color-mix(in srgb, var(--ink) 10%, transparent);
+  --pf-outline-focus: var(--accent);
+  --pf-font: var(--ui);
+  --pf-modal-backdrop: color-mix(in srgb, #0b1220 58%, transparent);
+}
+
 html[data-theme="dark"] {
   color-scheme: dark;
   --paper: #101826;
@@ -27,6 +45,15 @@ html[data-theme="dark"] {
   --gold-bright: #f5e08a;
   --navy: #2d6aad;
   --navy-deep: #1c4a82;
+  --pf-hover: color-mix(in srgb, var(--navy) 24%, var(--paper));
+  --pf-mark: var(--gold-bright);
+  --pf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.32);
+  --pf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --pf-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --pf-error-bg: #2a1a1a;
+  --pf-error-border: #5c2828;
+  --pf-error-text: #f87171;
+  --pf-error-text-secondary: #ef4444;
 }
 
 html[data-size="s"] {
@@ -144,6 +171,9 @@ input {
   flex: 0 1 auto;
   min-width: 0;
   margin-right: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   overflow: hidden;
   color: var(--ink);
   font-weight: 650;
@@ -152,7 +182,15 @@ input {
   white-space: nowrap;
 }
 
-.nav-home-short {
+.nav-logo {
+  width: 1.7rem;
+  height: 1.7rem;
+  flex: 0 0 auto;
+  border-radius: 0.28rem;
+}
+
+.nav-home-icon,
+.nav-home-sr {
   display: none;
 }
 
@@ -212,15 +250,27 @@ pagefind-modal-trigger button,
 @media (max-width: 40rem) {
   .nav-home {
     margin-right: 0;
-    text-align: center;
+    overflow: visible;
+    justify-content: center;
   }
 
+  .nav-logo,
   .nav-home-full {
     display: none;
   }
 
-  .nav-home-short {
-    display: inline;
+  .nav-home-icon {
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .nav-home-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
   }
 
   .site-header {

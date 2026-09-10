@@ -106,6 +106,7 @@ function applyPrefs(next: ReaderState) {
   const dark =
     next.theme === "dark" || (next.theme !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches);
   root.dataset.theme = dark ? "dark" : "light";
+  root.dataset.pfTheme = dark ? "dark" : "light";
   root.dataset.size = next.fontSize;
   root.dataset.width = next.width;
 }

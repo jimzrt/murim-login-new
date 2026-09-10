@@ -41,13 +41,39 @@ const base = import.meta.env.BASE_URL;
         var dark = theme === "dark" || (theme !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
         var root = document.documentElement;
         root.dataset.theme = dark ? "dark" : "light";
+        root.dataset.pfTheme = dark ? "dark" : "light";
         root.dataset.size = size;
         root.dataset.width = width;
       })();
     </script>
     {
       import.meta.env.PROD && (
-        <link rel="stylesheet" href={withBase("pagefind/pagefind-component-ui.css")} />
+        <>
+          <link rel="stylesheet" href={withBase("pagefind/pagefind-component-ui.css")} />
+          <style is:inline>
+            pagefind-modal,
+            pagefind-searchbox {
+              color-scheme: inherit;
+              --pf-text: var(--ink);
+              --pf-text-secondary: var(--muted);
+              --pf-text-muted: var(--muted);
+              --pf-background: var(--paper);
+              --pf-border: var(--rule);
+              --pf-border-focus: var(--gold);
+              --pf-skeleton: var(--rule);
+              --pf-hover: color-mix(in srgb, var(--gold) 14%, var(--paper));
+              --pf-mark: var(--navy);
+              --pf-outline-focus: var(--accent);
+              --pf-font: var(--ui);
+              --pf-modal-backdrop: color-mix(in srgb, #0b1220 58%, transparent);
+            }
+            html[data-theme="dark"] pagefind-modal,
+            html[data-theme="dark"] pagefind-searchbox {
+              --pf-hover: color-mix(in srgb, var(--navy) 24%, var(--paper));
+              --pf-mark: var(--gold-bright);
+            }
+          </style>
+        </>
       )
     }
   </head>
