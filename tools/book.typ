@@ -13,8 +13,10 @@
   set text(font: "Noto Sans Mono", size: murim-body-size, fill: rgb("#ffffff"), weight: "bold")
   set par(leading: 0.68em, spacing: 0.7em)
   show strong: set text(fill: rgb("#f0d56a"), weight: "bold")
-  show list: it => align(left, block(inset: (x: 10pt), it))
-  show enum: it => align(left, block(inset: (x: 10pt), it))
+  set list(marker: [#box(width: 1.15pt, height: 0.72em, fill: murim-gold, baseline: 12%)])
+  set enum(numbering: "1.")
+  show list: it => align(left, block(inset: (x: 6pt), it))
+  show enum: it => align(left, block(inset: (x: 6pt), it))
 
   let banner = box(
     fill: rgb("#245a96"),

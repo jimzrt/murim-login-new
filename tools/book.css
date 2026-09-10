@@ -131,7 +131,24 @@ blockquote {
 .system-window ul,
 .system-window ol {
   text-align: left;
-  padding-left: 1.2em;
+  padding-left: 0;
+  list-style: none;
+}
+
+.system-window li {
+  position: relative;
+  margin: 0.25em 0;
+  padding-left: 0.85em;
+}
+
+.system-window li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.22em;
+  bottom: 0.22em;
+  width: 0.12em;
+  background: #c9a227;
 }
 
 .system-window strong {

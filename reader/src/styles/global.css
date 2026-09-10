@@ -669,8 +669,26 @@ html[data-theme="light"] .system-window {
 .system-window ol {
   display: table;
   margin: 0.55em auto;
-  padding-left: 1.15em;
+  padding-left: 0;
+  list-style: none;
   text-align: left;
+}
+
+.system-window li {
+  position: relative;
+  margin: 0.35em 0;
+  padding-left: 0.85em;
+}
+
+.system-window li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.28em;
+  bottom: 0.28em;
+  width: 0.12em;
+  border-radius: 1px;
+  background: var(--system-gold, var(--gold));
 }
 
 @media (max-width: 40rem) {
