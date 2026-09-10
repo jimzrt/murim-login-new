@@ -1,0 +1,60 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Gwak’s swagger as a claim that there has been no betrayal and they will not die, not a justification for dying.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Replaced burning-nerves with the crude bodily-fear idiom and kept the shrink-back vs. triumphant contrast.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored Hyuk’s eyes flying wide in shock after being stopped, not a glare.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored the narrator’s cue that this reaction is odd, then Hyuk’s brief think-and-toss punchline.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Restored Hyuk bracing Taekyung as strength leaves, with the startled look on his face.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Kept Failure as a sibling quest field after the Chain Quest tag, not the unnamed chain quest’s fail condition.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "Restored the setup that the charge-cry is an animal cry, not a vague cry of some sort.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "Made the casualties plural under each spear motion; kept Gwak as the possessor so the referent stays his men.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Changed Hyuk’s reply from an attentive Yes? to a puzzled What? matching 왜요.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Changed dozen or so to ten or so for 십여 명 and tightened the leftover-sound line.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F11",
+      "reason": "Kept Golden Sore Medicine in the joke and added a first-use footnote that it is a salve for blade wounds.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

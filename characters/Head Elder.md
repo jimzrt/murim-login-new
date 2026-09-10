@@ -1,6 +1,6 @@
 # Head Elder
 
-- **Safe through:** Chapter 37
+- **Safe through:** Chapter 38
 - **Aliases:** Name not yet revealed
 - **Role:** Head Elder of the Jin Family of Taiyuan; senior family authority
 - **Personality:** Inscrutable, politically shrewd, and ruthless in council; his motives remain unclear
@@ -11,6 +11,7 @@
 - **Chapter 27 continuity:** In a secret Sound Transmission conversation, the Head Elder confirms that he sent Jopil and expects Taekyung’s death to change Jin Wikyung’s mind. He says he has waited too long for the resulting bloodshed, plans to drive out the Lower District Sect after the matter ends, and is warned to watch his words and actions by the unidentified other participant.
 - **Chapter 37 continuity:** The Head Elder marches with Jin Wikyung at the head of the vanguard. At the Honju war council, he identifies Eight Spring Gorge’s steep, narrow mouth and notes that the mounted bandits will have to abandon their horses. Gwak Jun identifies him by the title Blade of Flowers and praises his reputation as a Great Faction War hero.
 
-- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, and 37
+- **Chapter 38 continuity:** Gwak Jun reveals that the Three Paths Sect was established thirty years earlier according to “that person’s” will. Taekyung and Hyuk Mujin infer that more than one hundred martial artists from the Three Paths Sect and Gunggwimun joined the Jin Family’s force, while nearly half the main force belongs to the Head Elder’s faction. Taekyung therefore strongly suspects that the Head Elder is a traitor who united the family’s strength to seize Shanxi, but the full plan and the Head Elder’s unidentified accomplice remain unresolved.
+- **Sources:** Korean source and accepted translation, Chapters 16–21, 27, and 37–38
 
 

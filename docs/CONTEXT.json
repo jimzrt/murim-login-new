@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 37,
-  "continuity_sources": [36, 37],
+  "safe_through": 38,
+  "continuity_sources": [37, 38],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -34,17 +34,10 @@
     "Taekyung uses daggers from his Inventory to stab Jopil's foot, sever both Achilles tendons, and drive a dagger into Jopil's dantian as his internal energy peaks, causing qi deviation.",
     "Jopil is the nineteenth-generation successor of the Fire Gate Clan. He burns his life for a final attack, but Taekyung awakens the hardened third internal energy, channels it through his ruined qi and blood channels, and kills Jopil with Thrust with All My Might through the broken Sharp Spear.",
     "Hyuk Mujin and Han Yeop survived Jopil's final attack; both suffered serious injuries, but their lives are not in danger.",
-    "Mount Beimang is a burial mountain; going or hiking there is an idiom for dying. A goshiwon is a tiny, cheap room-for-rent housing arrangement.",
     "Taekyung was unconscious for five days after killing Jopil; the Medicine King Hall Leader had expected him to die within a day.",
     "The reconnaissance squad and the Sakju Branch survivors returned safely. Two people suffered serious injuries, but no lives are in danger.",
-    "The unnamed squad member killed by Jopil was an orphan. His body was recovered and buried, and Taekyung learned the young man’s chosen name and dream of becoming Number One of All Time.",
     "Wipeng urged Taekyung to remember the dead and live their share as well; Wipeng’s own dream is to become Number One Under Heaven.",
-    "Taekyung’s modern-world backstory includes a disastrous Gate raid two years earlier: after he insisted on entering the boss zone, every teammate died except him.",
     "Two days before Taekyung wakes, one hundred Jin Family elites defeat two hundred Mount Heng vanguard troops at Honju; fewer than thirty Mount Heng fighters escape, and Jin Family casualties are similar in number.",
-    "The Mount Heng Sword Sect's Lesser Family Head escapes the Honju battle. The Mount Heng Twin Devils are Peak masters; Wipeng and Jin Wikyung each kill one, and their deaths are a major gain because fewer than twenty Peak masters exist across Shanxi.",
-    "Wipeng sincerely acknowledges Taekyung's defeat of Jopil but says Taekyung was not stronger than Jopil and won through a surprise attack.",
-    "Jin Wikyung hears the account of Taekyung's victory, wrecks part of Taekyung's bedroom in an emotional outburst, then carries Taekyung's bandaged body before a crowd.",
-    "The family rumor exaggerates Taekyung's actions into leading a death squad, defeating Jopil and one hundred wandering martial artists, and rescuing the Sakju Branch's household; Wikyung publicly celebrates him as the Sleeping Dragon of Shanxi.",
     "Taekyung checks the System after recovering: he is Lv. 30, has Fame 410 and fifteen years of internal energy, and remains Second Rate. Thrust with All My Might has become the Peak, Second-Stage Skill One Flash, whose stamina and internal-energy cost can be adjusted but which can leave him helpless.",
     "Lee Seogwang is Lee Cheonbaek's son and the Young Sect Leader of Mount Heng. He returns from Honju with twenty-three survivors, including himself, after more than two hundred Mount Heng troops and three Peak masters are lost.",
     "Lee Cheonbaek has five hundred men assembled, plans to march on Taiyuan in three days, and is willing to hire wandering martial artists, black-market fighters, and mounted bandits while suppressing rumors that Taekyung killed Jopil.",
@@ -66,7 +59,12 @@
     "At Honju, Level 40 Gwak Jun of the Three Paths Sect joins the rear guard; he is fearless, intensely confident, and leads the sect’s martial artists in black robes.",
     "Mount Heng’s exhausted reinforcements have crossed Mount Otae and are low on food. Jin Wikyung plans to seize Jeongyang’s high ground and draw the enemy through narrow Eight Spring Gorge, where about one hundred horn bows are hidden on the cliffs with help from the Lower District Sect.",
     "Taekyung’s Fame is 497/500 for Logout. He stays awake counting the remaining three points, reflects on his month in Murim, and recognizes that the reconnaissance squad’s loyalty feels real.",
-    "Taekyung tells the anxious rear guard that he trusts Jin Wikyung, and the squad affirms its trust in Taekyung."
+    "Taekyung tells the anxious rear guard that he trusts Jin Wikyung, and the squad affirms its trust in Taekyung.",
+    "Gwak Jun and twenty supposed Three Paths Sect martial artists in the rear guard are assassins, all First Rate, ordered to eliminate everyone and join the main force. A hidden ambush is accidentally disrupted by a herd of Level 1 water deer.",
+    "Taekyung accepts the Peak Slay the Assassins Quest, restricted to him, with the objective to kill twenty assassins and death as failure. He and the reconnaissance squad defeat the infiltrators through coordinated formations, Inventory weapons, and One Flash.",
+    "Gwak Jun is captured but severs his own heart meridian and dies before revealing the full plan. He says the Three Paths Sect was established thirty years ago according to an unidentified conspirator's will.",
+    "More than one hundred martial artists from the Three Paths Sect and Gunggwimun joined the Jin Family's force, and nearly half the main force belongs to the Head Elder's faction. Taekyung strongly suspects that the Head Elder is a traitor who united the family's strength to seize Shanxi, but this remains unconfirmed.",
+    "The Slay the Assassins Quest completes after Gwak's death. Taekyung gains EXP, a level-up, and 50 Fame, taking him from 497/500 to 547/500; all Logout conditions are met and a three-second Logout countdown begins, but he loses consciousness before the result is shown."
 
   ],
   "open_questions": [

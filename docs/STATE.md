@@ -1,18 +1,21 @@
 # Translation State
 
-- Last completed: 37
-- Next chapter: 38
-- Current block: 35–39 (3/5)
-- Latest translation: `translations/0037.md`
-- Latest summary: `summaries/0030-0034.md`
-- Safe profiles through: chapter 37
+- Last completed: 38
+- Next chapter: 39
+- Current block: 35–39 (4/5)
+- Latest translation: `translations/0038.md`
+- Latest summary: `summaries/beats/0038.md`
+- Safe profiles through: chapter 38
 
 
 
 ## Current Block
 
 
-Jin Wikyung and Taekyung’s force continues toward Jeongyang after reaching Honju. Gwak Jun of the Three Paths Sect is a confident Level 40 martial artist in the rear guard. Mount Heng’s exhausted reinforcements have crossed Mount Otae and are about to join the main force; Wikyung plans to draw them through Eight Spring Gorge with about one hundred hidden horn bows supplied with help from the Lower District Sect. Taekyung’s Fame is 497/500, and the reconnaissance squad affirms its trust in him as he says he trusts Wikyung.
+
+At Honju, Gwak Jun reveals that the twenty supposed Three Paths Sect martial artists in the rear guard are assassins, all First Rate, ordered to eliminate everyone and join the main force. A herd of water deer breaks the hidden ambush. Taekyung and the reconnaissance squad defeat the assassins through coordinated formations, Inventory weapons, and One Flash. Gwak dies after severing his own heart meridian, while his revelations make Taekyung suspect that the Head Elder united the Jin Family’s strength to seize Shanxi. The Slay the Assassins Quest completes, granting 50 Fame and a level-up; Taekyung reaches the Logout threshold and enters a three-second countdown before losing consciousness.
+
+
 
 ## Open Questions
 

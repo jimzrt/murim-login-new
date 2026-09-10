@@ -1,6 +1,6 @@
 # Hyuk Mujin (혁무진)
 
-- **Safe through:** Chapter 37
+- **Safe through:** Chapter 38
 - **Aliases:** None revealed
 - **Role:** Captain of the Gatekeepers at the Jin Family of Taiyuan; deputy squad leader of White Tiger Hall’s reconnaissance squad
 - **Personality:** Young, disciplined, suspicious of Jin Taekyung, and openly contemptuous of the family’s disgraced third son; believes loyalty and respectable conduct matter, but is also proud and hungry for glory
@@ -14,5 +14,6 @@
 - **Chapter 36 continuity:** Hyuk’s internal injuries have healed, but his external injuries remain serious and painful. Against the physician’s orders, he sneaks out of Medicine King Hall to join Taekyung’s rear guard for the Jin Family’s march.
 - **Chapter 37 continuity:** Hyuk accompanies Taekyung’s rear guard during the march and reacts to his sleepless, Fame-counting state with blunt concern. When fear spreads through the squad before the battle, Hyuk says he trusts Taekyung more than the squad leader trusts his own big brother, reinforcing the unit’s loyalty.
 
-- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–37
+- **Chapter 38 continuity:** Hyuk recognizes that Gwak Jun’s group cannot be ordinary Three Paths Sect disciples and helps Taekyung infer that the infiltrators are part of a larger conspiracy. He fights beside the reconnaissance squad, confirms that more than one hundred allied martial artists came from the Three Paths Sect and Gunggwimun, and realizes that nearly half the main force belongs to the Head Elder’s faction. He identifies Gwak’s self-inflicted death as severing his heart meridian.
+- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–38
 

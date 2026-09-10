@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 37
+- **Safe through:** Chapter 38
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -25,4 +25,5 @@
 - **Chapter 36 continuity:** Taekyung’s Fame reaches 475/500 for Logout, then ordinary family-wide gains stall. At the departure ceremony, he commands the rear guard and asks Jin Wikyung for a reconnaissance mission to gain Fame; Wikyung refuses and tells him to survive, fleeing if the Jin Family loses so he and Jin Mukyung can become the family’s roots.
 - **Chapter 37 continuity:** During the march to Honju, Taekyung meets Level 40 Gwak Jun of the Three Paths Sect and observes his unsettling confidence. At the war council, he learns that Mount Heng’s exhausted reinforcements are about to join the main force; Jin Wikyung plans to draw them through Eight Spring Gorge using hidden horn bows supplied with help from Wolhwa. Taekyung’s Fame reaches 497/500, leaving him awake and counting the final three points before Logout. He jokes about Jopil’s Supreme Peak manual and dangerous thirty-year elixir, reflects on his time in Murim, and admits that the reconnaissance squad’s loyalty feels real. He tells the frightened rear guard that he trusts Jin Wikyung, and the squad affirms its trust in him.
 
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–37
+- **Chapter 38 continuity:** Taekyung discovers that Gwak Jun and twenty supposed Three Paths Sect martial artists are assassins, all First Rate, and detects a hidden ambush. A herd of water deer accidentally breaks the ambush as he accepts the Peak Slay the Assassins Quest. He and the reconnaissance squad defeat the infiltrators through coordinated formations, Inventory weapons, and One Flash; Gwak is captured but severs his own heart meridian. Taekyung infers that the Head Elder may be a traitor who united the Jin Family’s strength to seize Shanxi, then completes the Quest, gains 50 Fame and a level-up, and reaches the Logout threshold. Logout begins a three-second countdown, but he loses consciousness before its result is shown.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–38

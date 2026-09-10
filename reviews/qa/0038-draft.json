@@ -1,0 +1,79 @@
+{
+  "chapter": 38,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.27,
+    "source_characters": 6075,
+    "source_paragraphs": 220,
+    "translation_characters": 13791,
+    "translation_paragraphs": 223
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "일격",
+        "preferred": "One Strike"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "청해",
+        "preferred": "Qinghai"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀문",
+        "preferred": "your sect"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "귀가",
+        "preferred": "your family"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "novel_name",
+      "details": {
+        "korean": "궁귀문",
+        "romanization": "gunggwimun"
+      },
+      "message": "source term was romanized without a ledger entry; use the established English or footnote the first use"
+    }
+  ]
+}
