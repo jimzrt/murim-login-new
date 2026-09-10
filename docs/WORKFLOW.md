@@ -51,7 +51,7 @@ rejected, or unresolved disposition. Unresolved critical/major findings block.
 
 From `polish_from_chapter` onward, a controller polish stage runs after
 `REVISED`. It is a no-tools OMP call: source, revised copy, `RULES.md`,
-`final_pass.md`, exact glossary matches, and matching profiles. The model
+`POLISH.md`, exact glossary matches, and matching profiles. The model
 returns a complete reading copy; deterministic QA must pass before durable
 updates, summary, checkpoint, or acceptance. Chapters before that cutoff keep
 the previous `REVISED` → accept path.

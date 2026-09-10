@@ -456,7 +456,7 @@ the translation section.
 def build_polish_packet(number: int, revised: str) -> str:
     source = chapter_text(number)
     rules_path = ROOT / "RULES.md"
-    handoff_path = ROOT / "final_pass.md"
+    handoff_path = ROOT / "POLISH.md"
     source_path = ROOT / "original 1-1104.txt"
     compendium_path = ROOT / "compendium.md"
     names_path = ROOT / "docs" / "NAMES.md"
@@ -470,12 +470,12 @@ Edit only this revised reading copy. Return only the complete English Markdown
 reading copy beginning with `# Chapter {number}`. Do not review, explain,
 update files, or continue to another chapter.
 
-Follow the editorial handoff below. Start from the revised copy; do not
+Follow the polish brief below. Start from the revised copy; do not
 retranslate from scratch. Preserve meaning, pacing, humor, character voice,
 System terminology, names, and Korean/Murim cultural content. Check the
 Korean source before changing an idiom, metaphor, joke, or cultural phrasing.
 
-## Editorial handoff
+## Polish brief
 
 {handoff}
 

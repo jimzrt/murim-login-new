@@ -46,7 +46,7 @@ not load the bulk source, full compendium, archive directories, or
   translations or the summary archive.
 - Revision receives the source, draft, structured findings, rules, glossary,
   and matching profiles. It does not receive draft-only history or state.
-- Polish receives the source, revised reading copy, `final_pass.md`, rules,
+- Polish receives the source, revised reading copy, `POLISH.md`, rules,
   glossary, and matching profiles. It does not receive review findings, the
   summary archive, or prior translations. Chapters before `polish_from_chapter`
   skip this stage.
@@ -58,7 +58,7 @@ not load the bulk source, full compendium, archive directories, or
 - The draft model drafts; deterministic QA must pass; the review model returns
   validated structured findings; the revision model returns the revised reading
   copy plus one disposition per finding; from `polish_from_chapter` onward the
-  polish model returns a complete reading copy using `final_pass.md`; final QA
+  polish model returns a complete reading copy using `POLISH.md`; final QA
   must pass.
 - Unresolved critical or major findings block acceptance. Reviews and
   dispositions are durable JSON with generated Markdown reading reports.

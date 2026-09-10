@@ -1,4 +1,4 @@
-# Translation Editing Handoff — *Murim Login*
+# Polish Brief — Murim Login
 
 ## Goal
 Make the English natural and fluent without changing meaning, pacing, humor, character voice, System terminology, or Korean/Murim cultural content.
@@ -49,7 +49,7 @@ Use formal capitalization in System/UI text and normal English in prose.
 - Use one consistent romanization style, including tone marks in Chinese pinyin (`Tài lěng le`, `Zhōngguó rén ma?`). Check the original before changing an unmarked form: `Shenme` remains unmarked here because the spelling supports Taekyung’s “Ms. Sunmi” mishearing joke.
 - For Murim metaphors and idioms, check the Korean before rewriting. Preserve the image when it carries meaning, but render its function in natural English; do not retain calques such as “silence flowed” or “spit and move on” without a source-based reason.
 
-## Workflow
+## Passes
 1. Native-English pass: remove calques, awkward structure, collocations, and tense problems.
 2. Voice pass: preserve casual, blunt character voice and spoken dialogue.
 3. Terminology pass: standardize System terms, ranks, capitalization, names, and romanization.

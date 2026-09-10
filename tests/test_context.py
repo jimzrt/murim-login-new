@@ -34,7 +34,7 @@ class ContextPacketTest(unittest.TestCase):
         self.assertLess(revision_packet.find("## Korean source"), revision_packet.find("<<<TRANSLATION>>>"))
         self.assertIn("<<<END>>>", revision_packet)
         self.assertIn("After <<<END>>>, stop immediately.", revision_packet)
-        self.assertIn("Editorial handoff", polish_packet)
+        self.assertIn("Polish brief", polish_packet)
         self.assertIn("Translate the thought, not the Korean sentence structure", polish_packet)
         self.assertIn("Revised reading copy", polish_packet)
         self.assertNotIn("Structured findings", polish_packet)
