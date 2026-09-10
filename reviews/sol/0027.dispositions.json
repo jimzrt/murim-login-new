@@ -1,0 +1,25 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Both 정도로 clauses modify 생생했다; the second asserts guilt over abandoning one NPC, not a blocked result.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "아니 반 시진만 scales the request down to only half a shichen and 방법을 is the method, not a vague try something.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "한 식경? 반 시진? is an uncertain pair of estimates, not a comparative more than.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Socheon says only 괜찮, 괜찮습니다; Squad Leader is not spoken and invents address.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,55 @@
+{
+  "chapter": 27,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.232,
+    "source_characters": 5924,
+    "source_paragraphs": 202,
+    "translation_characters": 13224,
+    "translation_paragraphs": 218
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "살기",
+        "preferred": "killing intent"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "제자",
+        "preferred": "Disciple"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "상태",
+        "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "대협",
+        "preferred": "Great Hero or Sir depending tone"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "대사",
+        "preferred": "Master for a senior Buddhist monk"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

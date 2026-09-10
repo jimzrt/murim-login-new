@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 26,
-  "continuity_sources": [25, 26],
+  "safe_through": 27,
+  "continuity_sources": [26, 27],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -61,11 +61,17 @@
     "Jin Wikyung sends Wipeng with more than twenty riders to locate and protect Taekyung.",
     "After Hyuk exposes Taekyung's identity, the reconnaissance squad travels toward the main family through a blizzard; Gong warns that wandering martial artists' experience and Jopil's persistence make the pursuit especially dangerous.",
     "Jopil's tracking subordinate is Third Rate in martial arts but has Peak-level tracking skill. Jopil orders stragglers killed, leaves twenty stripped corpses behind, finds the fugitives' traces, and remains interested in meeting the mysterious master who has caught his attention for the first time in a long while.",
-    "Gong remains pale and injured despite fasting pills and circulated qi, Socheon is exhausted but keeps pace, and Soyul longs to see her father. Taekyung considers fleeing because the others are NPCs while he is real, but an inexplicable resistance keeps him with the group; the reason remains unresolved."
+    "Gong remains pale and injured despite fasting pills and circulated qi, Socheon is exhausted but keeps pace, and Soyul longs to see her father. Taekyung considers fleeing because the others are NPCs while he is real, but an inexplicable resistance keeps him with the group; the reason remains unresolved.",
+    "In Chapter 27, Gong Yacheong reveals that cheap poison coated the pursuers’ weapons; fasting pills restore stamina but do not detoxify poison, and his condition rapidly deteriorates.",
+    "Gong Yacheong asks Taekyung to return Socheon and Soyul alive. Taekyung accepts the no-reward Gong Yacheong’s Last Request Quest.",
+    "Taekyung orders the reconnaissance squad to leave Gong behind, but Han Yeop disobeys, carries the unconscious Gong, and is helped by Taekyung after Taekyung turns back. Socheon and Soyul continue with the squad.",
+    "Taekyung’s guilt over abandoning an NPC becomes unbearable when Soyul feels real, prompting him to turn back despite believing the retreat is necessary.",
+    "A secret Sound Transmission conversation reveals that the Head Elder sent Jopil and expects Taekyung’s death to change Jin Wikyung’s mind; the Head Elder also plans to drive out the Lower District Sect after the matter ends, while the other participant’s identity and the wider plan remain unknown."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
-    "The limits of Murim's death and resurrection rules remain unresolved."
+    "The limits of Murim's death and resurrection rules remain unresolved.",
+    "The identity of the Head Elder's Sound Transmission accomplice and the full purpose of their plan remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",

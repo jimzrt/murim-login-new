@@ -1,0 +1,46 @@
+{
+  "findings": [
+    {
+      "confidence": 0.96,
+      "correction": "They felt so vivid that I got goose bumps across my skin. Too vivid to believe this was a game. Vivid enough that I felt guilty over abandoning a single NPC.",
+      "current": "They felt so vivid that I got goose bumps across my skin.\n\nToo vivid to believe this was a game.\n\nToo vivid for me to feel guilty over abandoning a single NPC.",
+      "defect": "The second 정도로 clause is a result (vivid enough that he feels guilt), not a negated result. “Too vivid for me to feel guilty” reverses the source.",
+      "id": "F01",
+      "rationale": "Both fragments modify 생생했다: 생각할 수 없을 정도로 (cannot think of it as a game) and 양심의 가책을 느낄 정도로 (to the point of feeling pangs of conscience). English “too X for Y” blocks Y; the Korean asserts Y.",
+      "severity": "critical",
+      "source": "피부 위로 소름이 돋을 정도로 생생했다. 게임이라고는 생각할 수 없을 정도로.\n\n고작 NPC 하나 버린 걸로 양심의 가책을 느낄 정도로."
+    },
+    {
+      "confidence": 0.94,
+      "correction": "If we rest for one shichen—no, just half a shichen—and try the method, that should be enough.",
+      "current": "If we rest for one shichen—no, more than half a shichen—and try something, we should have enough time.",
+      "defect": "아니 반 시진만 scales the request down to only half a shichen. “More than half a shichen” changes the quantity and the bargaining direction.",
+      "id": "F02",
+      "rationale": "만 marks limitation (“only half”). He first says one shichen, then reduces it; the draft’s “more than” does not match that correction.",
+      "severity": "major",
+      "source": "한 시진, 아니 반 시진만 쉬면서 방법을 시도해 보면 될 겁니다."
+    },
+    {
+      "confidence": 0.93,
+      "correction": "A sikyeong? Half a shichen?",
+      "current": "A sikyeong? More than half a shichen?",
+      "defect": "The narrator guesses between a sikyeong and half a shichen. “More than” is not in the source.",
+      "id": "F03",
+      "rationale": "반 시진 is “half a shichen,” parallel to 한 식경 as an uncertain estimate of elapsed time, not a comparative “more than.”",
+      "severity": "major",
+      "source": "한 식경? 반 시진?"
+    },
+    {
+      "confidence": 0.91,
+      "correction": "“Huff. I’m fine. I’m fine.”",
+      "current": "“Huff. I’m fine. I’m fine, Squad Leader.”",
+      "defect": "Squad Leader is not spoken. Socheon is not a squad member; the added title invents a hierarchy of address.",
+      "id": "F04",
+      "rationale": "The line is only 괜찮, 괜찮습니다. 조장님 appears later from Hyuk Mujin, not from Socheon.",
+      "severity": "major",
+      "source": "“후욱. 괜찮, 괜찮습니다.”"
+    }
+  ],
+  "summary": "Three meaning-changing defects: a reversed guilt clause, twice-inflated 반 시진, and an invented Squad Leader address on Socheon’s line.",
+  "version": 1
+}

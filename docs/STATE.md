@@ -1,16 +1,16 @@
 # Translation State
 
-- Last completed: 26
-- Next chapter: 27
-- Current block: 25–29 (2/5)
-- Latest translation: `translations/0026.md`
-- Latest summary: `summaries/beats/0025.md`
-- Safe profiles through: chapter 26
+- Last completed: 27
+- Next chapter: 28
+- Current block: 25–29 (3/5)
+- Latest translation: `translations/0027.md`
+- Latest summary: `summaries/beats/0027.md`
+- Safe profiles through: chapter 27
 
 
 ## Current Block
 
-Chapter 26 confirms Taekyung’s identity to Gong Yacheong after Hyuk Mujin exposes him. The reconnaissance squad travels toward the main family through a blizzard while Gong explains the experience and persistence that make Jopil’s wandering martial artists dangerous. Taekyung’s Main Quest shows First Rate incomplete, Level 30 at 24/30, and Fame at 250/500 toward Logout. He still cannot identify what enables realm advancement. Jopil’s Third Rate subordinate has Peak-level tracking skill; Jopil orders stragglers killed, follows the fugitives’ traces, and becomes interested in the mysterious master. Taekyung recognizes Gong’s worsening injuries and the children’s exhaustion, considers fleeing because the others are NPCs while he is real, but remains with the group as night falls.
+Chapter 27 reveals that Gong Yacheong was poisoned and is rapidly deteriorating. He asks Taekyung to return Socheon and Soyul alive, prompting Taekyung to accept a no-reward quest. Taekyung orders the squad to leave Gong behind, but Han Yeop disobeys and carries the unconscious man; Taekyung turns back to help. Taekyung’s guilt over abandoning an NPC gives way to action. In a secret Sound Transmission conversation, the Head Elder confirms that he sent Jopil and expects Taekyung’s death to change Jin Wikyung’s mind, while also planning to drive out the Lower District Sect.
 
 
 ## Open Questions
