@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 40,
-  "continuity_sources": [39, 40],
+  "safe_through": 41,
+  "continuity_sources": [40, 41],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
@@ -41,7 +41,6 @@
     "Taekyung checks the System after recovering: he is Lv. 30, has Fame 410 and fifteen years of internal energy, and remains Second Rate. Thrust with All My Might has become the Peak, Second-Stage Skill One Flash, whose stamina and internal-energy cost can be adjusted but which can leave him helpless.",
     "Lee Seogwang is Lee Cheonbaek's son and the Young Sect Leader of Mount Heng. He returns from Honju with twenty-three survivors, including himself, after more than two hundred Mount Heng troops and three Peak masters are lost.",
     "Lee Cheonbaek has five hundred men assembled, plans to march on Taiyuan in three days, and is willing to hire wandering martial artists, black-market fighters, and mounted bandits while suppressing rumors that Taekyung killed Jopil.",
-    "Taekyung recovers from Jopil's attack in two days. The hundred-year snow ginseng granted twenty years of internal energy, but most of it was consumed by his final Skill use.",
     "Taekyung recognizes that he enjoys living as a martial artist in Murim but still wants to return to his family and true self in the real world. Jin Wikyung is the person he intends to ask about reaching First Rate.",
     "Jin Wikyung learns from the Lower District Sect that Mount Heng is gathering troops. The Jin Family will march north with all its forces in two days and strike before the reinforcements join the Blood Wolf Sword's main force, which could then number about one thousand.",
     "The Five Gates of Shanxi is an alliance of five small- and medium-sized sects that has agreed to aid the Jin Family. A representative of its Three Paths Sect introduces himself to Taekyung and pledges support.",
@@ -64,7 +63,8 @@
     "Gwak says the Three Paths Sect was established thirty years earlier according to an unidentified conspirator's will. Taekyung suspects the Head Elder united the Jin Family's strength to seize Shanxi; the accomplice and full plan remain unresolved.",
     "The Slay the Assassins Quest completes after Gwak's death, granting 50 Fame and a level-up; Taekyung reaches 547/500 Fame, Logout begins, and he loses consciousness before waking in reality.",
     "Taekyung logs out after exactly thirty days in Murim; only three hours pass in reality. The System is unavailable after logout, and Seong Jinho does not believe Taekyung's account.",
-    "The unplugged Ark - 2020 capsule's manual names H Soft as manufacturer and January 1, 2020 as its manufacture date. It says the registered user is permanently bound until death, reality/game time passes at an adjustable slow ratio, and Character Synchronization is a key feature; the capsule's purpose, synchronization, and route home remain unresolved."
+    "The Ark - 2020 manual identifies H Soft as its manufacturer (January 1, 2020), says users are bound until death and time runs at an adjustable slow ratio, and names Character Synchronization; its purpose and route to Murim remain unresolved.",
+    "After returning to reality, Taekyung registers at the Hunter Manpower Office, signs with Peace Guild as a porter for an E-rank Gate, and reunites with Im Kkeokjeong, now E-rank Hunter Im Hyeokjun. Im recommends him to Team Leader Choi and joins the raid with three veteran E-rank Hunters."
 
   ],
   "open_questions": [

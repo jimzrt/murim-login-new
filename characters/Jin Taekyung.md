@@ -1,6 +1,6 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 40
+- **Safe through:** Chapter 41
 - **Aliases:** None revealed
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
@@ -28,4 +28,5 @@
 - **Chapter 38 continuity:** Taekyung discovers that twenty supposed Three Paths Sect martial artists, including Gwak Jun, are assassins, all First Rate, and detects a hidden ambush. A herd of water deer accidentally breaks the ambush as he accepts the Peak Slay the Assassins Quest. He and the reconnaissance squad defeat the infiltrators through coordinated formations, Inventory weapons, and One Flash; Gwak is captured but severs his own heart meridian. Taekyung infers that the Head Elder may be a traitor who united the Jin Family's strength to seize Shanxi, then completes the Quest, gains 50 Fame and a level-up, and reaches the Logout threshold. Logout begins a three-second countdown, but he loses consciousness before its result is shown.
 - **Chapter 39 continuity:** Taekyung successfully logs out after thirty days in Murim, discovering that only three hours passed in reality. The System is unavailable, and Seong Jinho dismisses his account after finding the capsule unplugged. The product manual identifies the device as an Ark - 2020 made by H Soft on January 1, 2020, and reveals permanent user binding until death, a slow and reversible time ratio, and Character Synchronization; the capsule's purpose and synchronization remain unexplained.
 - **Chapter 40 continuity:** Taekyung confirms that the Ark - 2020 manual's text is visible only to him. He rejects the leading virtual-reality game as too artificial to resemble Murim, reconnects with his sister Hayeon, and decides to live in reality; Jinho remains skeptical but starts investigating H Soft after Taekyung discards the capsule.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–40
+- **Chapter 41 continuity:** After Sopung Guild fires him, Taekyung registers at the Hunter Manpower Office and signs with Peace Guild as a porter for an E-rank Gate. He reunites with his old acquaintance Im Kkeokjeong, now the E-rank Hunter Im Hyeokjun, who recommends him to Team Leader Choi. Taekyung travels to the Gate with Im and three veteran E-rank Hunters; it is his first raid since returning to reality.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–41

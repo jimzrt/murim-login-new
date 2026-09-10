@@ -1,0 +1,66 @@
+{
+  "findings": [
+    {
+      "confidence": 0.9,
+      "correction": "Keep Im Kkeokjeong and add a first-use footnote: famous Joseon-era folk-hero bandit, hence the look-based nickname.",
+      "current": "However, he looked enough like a bandit that everyone called him Im Kkeokjeong.",
+      "defect": "First use of the unlisted nickname is romanized with no footnote. The joke and the reason everyone uses it depend on Im Kkeokjeong being the famous Korean folk-hero bandit, not a random hairy-man label.",
+      "id": "F01",
+      "rationale": "Binding footnote/ledger rule for unlisted names; without the namesake, the bandit appearance → 임꺽정 causal link is lost.",
+      "severity": "major",
+      "source": "다만 산적을 연상시키는 외모라 모두 그를 임꺽정이라고 불렀다."
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“Rejected.”",
+      "current": "“No.”",
+      "defect": "거절 is an explicit rejection of the E-rank job, not a vague negative. “No” can read as disbelief or a one-word prompt rather than Taekyung trying to turn the contract down before the porter line.",
+      "id": "F02",
+      "rationale": "The next line (positions full; porter) answers a refusal. Softening 거절 to “No” changes the speech act.",
+      "severity": "major",
+      "source": "“거절.”"
+    },
+    {
+      "confidence": 0.82,
+      "correction": "“All right, everyone, say hello. This is a kid brother I know.”",
+      "current": "“All right, everyone, say hello. This is a younger brother of mine.”",
+      "defect": "Omits 아는 and makes 동생 sound like kinship. Source is a junior he knows, not a blood brother.",
+      "id": "F03",
+      "rationale": "Audit target is kinship. 아는 marks acquaintance; English “younger brother of mine” overstates the relationship.",
+      "severity": "major",
+      "source": "“자, 다들 인사해. 여긴 내 아는 동생.”"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "Some people got angry, asking if this wasn’t just open discrimination.\n\nIt was.",
+      "current": "Some people got angry and asked if the discrimination had to be so blatant.\n\nIt did.",
+      "defect": "Punchline confirms that it is discrimination, not that the blatancy “had to” exist.",
+      "id": "F04",
+      "rationale": "차별하는 거 맞다 affirms the fact of discrimination; “It did” answers a different question.",
+      "severity": "minor",
+      "source": "너무 대놓고 차별하는 것 아니냐며 분노하는 사람도 있지만, 차별하는 거 맞다."
+    },
+    {
+      "confidence": 0.84,
+      "correction": "“Young man, you’re a tall one. You seem like you can fight.”",
+      "current": "“Young man, you’re quite a looker. You seem like you can fight.”",
+      "defect": "훤칠하다 is tall, lanky, striking stature, not facial attractiveness. “Looker” breaks the link to looking like he can fight.",
+      "id": "F05",
+      "rationale": "Wrong physical attribute; the compliment is build/height, not being a looker.",
+      "severity": "minor",
+      "source": "“젊은 친구가 훤칠하네. 잘 싸울 것 같어.”"
+    },
+    {
+      "confidence": 0.83,
+      "correction": "Well, then…",
+      "current": "Well, damn.",
+      "defect": "Adds profanity. 이거 참 is a mild, embarrassed well-then, not a curse.",
+      "id": "F06",
+      "rationale": "Profanity must match source strength; this narration beat is not strong.",
+      "severity": "minor",
+      "source": "이거 참……."
+    }
+  ],
+  "summary": "Nickname, refusal, and kinship are the load-bearing misses: Im Kkeokjeong’s bandit-folk-hero force is unexplained, 거절 is reduced to a vague No, and 아는 동생 reads as blood family.",
+  "version": 1
+}

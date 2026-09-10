@@ -1,0 +1,35 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Kept Im Kkeokjeong and added a first-use footnote identifying the Joseon folk-hero bandit namesake.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Restored 거절 as the explicit speech act “Rejected.”",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Rendered 아는 동생 as a junior he knows, not blood kinship.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Punchline now affirms that it is discrimination.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "훤칠하다 is stature/height, not facial attractiveness.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "이거 참 is mild; removed added profanity.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

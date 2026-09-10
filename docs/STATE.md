@@ -1,11 +1,11 @@
 # Translation State
 
-- Last completed: 40
-- Next chapter: 41
-- Current block: 40–44 (1/5)
-- Latest translation: `translations/0040.md`
-- Latest summary: `summaries/beats/0040.md`
-- Safe profiles through: chapter 40
+- Last completed: 41
+- Next chapter: 42
+- Current block: 40–44 (2/5)
+- Latest translation: `translations/0041.md`
+- Latest summary: `summaries/beats/0041.md`
+- Safe profiles through: chapter 41
 
 
 
@@ -13,7 +13,7 @@
 
 
 
-Taekyung returns to reality after exactly thirty days in Murim and only three hours outside. The Ark - 2020 manual is visible only to him; he rejects the leading VR game as unreal, reconnects with Hayeon, and decides to live in reality. Jinho remains skeptical but begins investigating H Soft after seeing the discarded capsule.
+Taekyung returns to the Hunter Manpower Office after being fired from Sopung Guild and signs with Peace Guild as a porter for an E-rank Gate. He reunites with his old acquaintance Im Kkeokjeong, who has advanced from F-rank to E-rank and recommends him to Team Leader Choi. Taekyung rides to the Gate with Im and three veteran E-rank Hunters.
 
 
 
