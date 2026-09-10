@@ -1,0 +1,20 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "C01",
+      "reason": "Updated the durable progression entry to Taekyung's post-Chapter 34 First Rate and Level 32 status, with only Fame 500 incomplete and roughly fifty Fame remaining.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C02",
+      "reason": "Updated the active martial-art stages to Fifth-Stage Cultivation, Sixth-Stage Spear and Manoeuvre, and Fourth-Stage Qi Sense after the universal one-stage increase.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "C03",
+      "reason": "Rewrote the energy entry as historical snow-ginseng energy awakened in Chapter 30, with the current fifteen-year internal-energy total after most was consumed.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

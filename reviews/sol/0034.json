@@ -1,0 +1,106 @@
+{
+  "findings": [
+    {
+      "confidence": 0.95,
+      "correction": "the common game-promotional line: *Awaiting a new hero!*",
+      "current": "the common game-promotional line: *A new hero awaits!*",
+      "defect": "The omitted subject waits for a new hero; the English makes the hero the one who waits.",
+      "id": "F01",
+      "rationale": "기다린다 takes 새로운 영웅 as object, the usual ‘we/the world await a new hero’ ad line, not ‘a new hero awaits (something)’.",
+      "severity": "critical",
+      "source": "‘새로운 영웅을 기다린다!’라는 흔한 게임 홍보 멘트"
+    },
+    {
+      "confidence": 0.88,
+      "correction": "“I think he's the same age as me.”\n\n“…Hang in there.”",
+      "current": "“I think he's the same age as me.”\n\n“…”\n\n“Hang in there.”",
+      "defect": "One Jinho line is split into two quoted turns, so alternating dialogue makes ‘Hang in there’ look like Taekyung’s.",
+      "id": "F02",
+      "rationale": "힘내라 is Jinho’s beat after the same-age line; a separate “…” turn reverses who is consoling whom.",
+      "severity": "critical",
+      "source": "‘나랑 동갑일걸.’\n‘……힘내라.’"
+    },
+    {
+      "confidence": 0.9,
+      "correction": "“You look like you've just been slapped.”\n\n“…You must be mistaken.”",
+      "current": "“You look like you've just been slapped.”\n\n“…”\n\n“You must be mistaken.”",
+      "defect": "Taekyung’s denial is split into two quotes, so the second line can read as Wikyung’s.",
+      "id": "F03",
+      "rationale": "잘못 보셨네요 is Taekyung rejecting the slapped-face reading; turn-taking makes Wikyung the one saying he is mistaken.",
+      "severity": "critical",
+      "source": "“뺨이라도 한 대 맞은 표정이구나.”\n“……잘못 보셨네요.”"
+    },
+    {
+      "confidence": 0.93,
+      "correction": "*Still, I'd piled up quite a bit.*",
+      "current": "*Still, quite a crowd.*\n\nI opened the Status Window and saw that I was about fifty short of the target value.",
+      "defect": "모였다 is read as a crowd; the prior and next lines are about Fame toward the target.",
+      "id": "F04",
+      "rationale": "그래도 contrasts family NPCs no longer raising 명성치; the Status Window check of being about 50 short only follows if the thought is about Fame, not the crowd already described.",
+      "severity": "critical",
+      "source": "태원진가 사람들로는 명성치가 오르지 않았다.\n‘그래도 꽤 모였다.’\n상태창을 열어 보니 목표 수치보다 50 정도가 부족했다."
+    },
+    {
+      "confidence": 0.91,
+      "correction": "I had already overwhelmed Lee Seogeun, a First Rate master.",
+      "current": "I had overwhelmed Lee Seogeun, an accomplished First Rate master.",
+      "defect": "일찍이 is moved onto Lee Seogeun as ‘accomplished’ instead of marking that Taekyung had already overwhelmed him.",
+      "id": "F05",
+      "rationale": "일찍이 modifies the past feat 압도했다; 일류 고수인 only identifies Lee Seogeun’s realm.",
+      "severity": "major",
+      "source": "일찍이 일류 고수인 이소군을 압도했다."
+    },
+    {
+      "confidence": 0.9,
+      "correction": "If I couldn't even believe in myself, I was Second Rate. No. I *had been* Second Rate.",
+      "current": "Someone who couldn't even believe in himself was Second Rate.\n\nNo. He *had been* Second Rate.",
+      "defect": "First-person self-judgment becomes a third-person ‘he’.",
+      "id": "F06",
+      "rationale": "나는 … 이류다 / 였었다 is Taekyung correcting his own present-tense claim, not a general ‘he’.",
+      "severity": "major",
+      "source": "스스로도 못 믿는 나는 이류다. 아니, 였었다."
+    },
+    {
+      "confidence": 0.86,
+      "correction": "*What a dumbass.*",
+      "current": "*What an idiot.*",
+      "defect": "병신 is stronger self-abuse than ‘idiot’.",
+      "id": "F07",
+      "rationale": "The line is crude self-reproach at not trusting himself; ‘idiot’ sanitizes the register.",
+      "severity": "major",
+      "source": "‘이런 병신.’"
+    },
+    {
+      "confidence": 0.96,
+      "correction": "“Ahh. Thank you. Gapbulaesuyu.”",
+      "current": "“Ahh. Thank you. Gà bù lái sī yóu.”",
+      "defect": "Korean parroting of English ‘God bless you’ is recast as Chinese pinyin.",
+      "id": "F08",
+      "rationale": "갑부래수유 is the NPC repeating 갓 블레스 유 by ear, not Chinese dialogue the series romanizes with tone marks.",
+      "severity": "major",
+      "source": "“아아. 감사합니다. 갑부래수유.”"
+    },
+    {
+      "confidence": 0.8,
+      "correction": "*Believe? As in the character 信?*",
+      "current": "*Faith?*",
+      "defect": "The named reading is 믿을 신 (believe), which the tea-writing advice then uses.",
+      "id": "F09",
+      "rationale": "진위경’s gloss is 너 자신을 믿으란 소리 and 믿는 것부터 시작; ‘Faith?’ shifts the character toward a different English noun.",
+      "severity": "major",
+      "source": "‘믿을 신(信)?’"
+    },
+    {
+      "confidence": 0.74,
+      "correction": "Keep a sect-style name if needed, but footnote that the source supplies 三道問 (question), not 門.",
+      "current": "“Guo of the Three Paths Sect presents his respects.”[^1]\n\n[^1]: “Three Paths Sect” is a literal rendering of the sect’s name.",
+      "defect": "The footnote calls ‘Sect’ a literal rendering while the given graph is 問, not 門.",
+      "id": "F10",
+      "rationale": "First-use notes must match the characters on the page; 問 is not a literal ‘Sect’.",
+      "severity": "minor",
+      "source": "“삼도문(三道問)의 곽 모가 인사 올립니다.”"
+    }
+  ],
+  "summary": "Several speaker, subject, and mechanism errors change who speaks, what the promo line means, what Taekyung is counting, and how the God-bless-you beat works.",
+  "version": 1
+}

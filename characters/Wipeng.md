@@ -1,6 +1,6 @@
 # Wipeng (위팽)
 
-- **Safe through:** Chapter 32
+- **Safe through:** Chapter 34
 - **Aliases:** None revealed
 - **Role:** Jin Wikyung’s personal guard
 - **Personality:** Loyal, observant, teasing, and resigned to his master’s impulsive departures
@@ -10,4 +10,5 @@
 - **Chapter 22 continuity:** After Taekyung’s reconnaissance squad departs, Wipeng points out that Taekyung should be doing fine and questions Wikyung’s denial that he is worried. He receives the Lower District Sect’s messenger hawk report about Jopil, One Question, One Kill, and twenty special-detachment members in Jeongyang, then tells Wikyung that Taekyung went there.
 - **Chapter 31 continuity:** Wipeng wakes Taekyung after five days of unconsciousness and reports that the reconnaissance squad and the Sakju Branch survivors returned safely, with two serious injuries but no lives in danger. He confirms that the unnamed squad member killed by Jopil was an orphan whose body was recovered and buried. He urges Taekyung to remember the dead and live their share as well, then reveals that his own dream is to become Number One Under Heaven.
 - **Chapter 32 continuity:** Wipeng reports the Jin Family’s victory at Honju and explains that he and Wikyung each killed one of the Mount Heng Twin Devils, both Peak masters. He recounts Taekyung’s fight with Jopil, sincerely acknowledges Taekyung’s achievement while warning that Taekyung was not actually stronger than Jopil, and teases him by imitating his eye spasm. He witnesses Wikyung’s destructive, overly affectionate public celebration of Taekyung as the Sleeping Dragon of Shanxi.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–32
+- **Chapter 34 continuity:** Wipeng arrives late at the main assembly hall, bewildered by Jin Wikyung’s laughter after Taekyung reaches the First Rate realm.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 31–34

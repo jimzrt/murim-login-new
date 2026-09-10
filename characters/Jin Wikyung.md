@@ -1,6 +1,6 @@
 # Jin Wikyung (진위경)
 
-- **Safe through:** Chapter 33
+- **Safe through:** Chapter 34
 - **Aliases:** None revealed
 - **Role:** Thirty-five-year-old Lesser Family Head of the Jin Family of Taiyuan
 - **Personality:** Calm and authoritative in public; affectionate and protective toward Taekyung beneath a stern mask; accepts responsibility from his subordinates and shows immediate concern for family
@@ -11,5 +11,6 @@
 - **Chapter 22 continuity:** After Taekyung’s reconnaissance squad leaves, Wikyung admits that he had been worrying about his youngest brother but insists Taekyung is grown and can manage without being coddled. A Lower District Sect messenger hawk then reports that Jopil, One Question, One Kill, and twenty special-detachment members have appeared in Jeongyang. Wikyung orders fifty martial artists to retrieve Jin Family members safely and becomes alarmed when he learns Taekyung is also in Jeongyang.
 - **Chapter 32 continuity:** Wikyung reports that the Jin Family’s one hundred elites defeated two hundred Mount Heng vanguard troops at Honju; fewer than thirty Mount Heng fighters escaped, and the Jin Family’s casualties were similar. He and Wipeng each killed one of the Mount Heng Twin Devils, both Peak masters. Overcome with affection and pride after hearing Taekyung’s account of Jopil’s defeat, Wikyung wrecks part of Taekyung’s bedroom, carries him to the opening, and publicly celebrates him before a crowd as the Sleeping Dragon of Shanxi.
 - **Chapter 33 continuity:** Taekyung regards Wikyung as the best private tutor for explaining how to reach the First Rate realm and asks to speak with him.
-- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–33
+- **Chapter 34 continuity:** Wikyung learns that Mount Heng is gathering troops and plans to march north with all Jin Family forces in two days, before reinforcements join the Blood Wolf Sword’s main force. He asks Taekyung to command the rear guard and explains the Five Gates of Shanxi alliance’s support. When Taekyung asks how to advance realms, Wikyung tells him that martial arts begin with belief; Taekyung’s realization triggers his First Rate breakthrough, and Wikyung laughs aloud at the result.
+- **Sources:** Korean source and accepted translation, Chapters 6, 8, and 10–25, 32–34
 

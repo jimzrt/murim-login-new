@@ -1,0 +1,55 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Promo line now treats the new hero as the object being awaited.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Merged the pause and Hang in there into one Jinho turn.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Merged Taekyung’s denial so Wikyung does not appear to say he is mistaken.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "모였다 now refers to accumulated Fame, not the crowd.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "일찍이 now marks that Taekyung had already overwhelmed Lee Seogeun.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F06",
+      "reason": "Self-judgment restored to first person, including the had-been correction.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F07",
+      "reason": "병신 rendered as dumbass to keep the crude self-reproach.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F08",
+      "reason": "갑부래수유 kept as Korean-ear parroting, not pinyin.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F09",
+      "reason": "Thought names the believe reading of 信, matching the later advice.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F10",
+      "reason": "Kept Three Paths Sect and footnoted that the source writes 三道問, not 門.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

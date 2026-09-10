@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "safe_through": 33,
-  "continuity_sources": [32, 33],
+  "safe_through": 34,
+  "continuity_sources": [33, 34],
   "active_continuity": [
     "Jin Taekyung is trapped in Murim through an old game capsule; death is presented as permanent and he cannot log out at will.",
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
-    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 30 with Fame 410 and fifteen years of internal energy; Lv. 30 is complete, while First Rate and Fame 500 remain incomplete.",
-    "Taekyung's Jin Family's Cultivation Technique remains at the Fourth Stage; his Spear and Manoeuvre Techniques are at the Fifth Stage, and Third-Stage Qi Sense detects targets through Lv. 50.",
+    "Logout is the Main Quest reward for reaching First Rate, Lv. 30, and 500 Fame. Taekyung is Lv. 32, has fifteen years of internal energy, and is First Rate; only the Fame 500 requirement remains incomplete, with his total roughly fifty short.",
+    "Taekyung's Jin Family's Cultivation Technique is at the Fifth Stage; his Spear and Manoeuvre Techniques are at the Sixth Stage, and his Fourth-Stage Qi Sense detects targets through Lv. 50.",
     "Taekyung has the Gambler Title, which increases combat stats by 10% in a one-on-one fight; it does not apply when allies join the fight.",
-    "Taekyung's unidentified dantian energy is stronger than his ten years of internal energy, rejects contact during ordinary cultivation, and remained immovable until the mortal danger in Chapter 30 awakened it; training raised Sinews and Bones by 1 each while the Status Window still displayed ten years.",
+    "The hardened third internal energy came from the hundred-year snow ginseng. It awakened during the mortal danger in Chapter 30, and most of the ginseng-granted energy was consumed by Taekyung's final Skill use; his current internal-energy total is fifteen years.",
     "Jin Wikyung is Taekyung's thirty-five-year-old eldest brother and the Lesser Family Head of the Jin Family of Taiyuan; Wipeng is his trusted guard. The Head Elder is Taekyung's great-uncle and the family's most senior elder.",
     "Jin Mukyung is twenty-five, the Heaven Shaking Sword, and a cadet at Heaven's Gate Temple.",
     "The Mount Heng Sword Sect and the Jin Family of Taiyuan are sworn enemies. Mount Heng has declared war, made Taekyung a public enemy, and triggered the Main Quest — War; fleeing incurs severe penalties. Wikyung sealed the family grounds against entry or exit without his seal.",
@@ -49,7 +49,13 @@
     "Lee Seogwang is Lee Cheonbaek's son and the Young Sect Leader of Mount Heng. He returns from Honju with twenty-three survivors, including himself, after more than two hundred Mount Heng troops and three Peak masters are lost.",
     "Lee Cheonbaek has five hundred men assembled, plans to march on Taiyuan in three days, and is willing to hire wandering martial artists, black-market fighters, and mounted bandits while suppressing rumors that Taekyung killed Jopil.",
     "Taekyung recovers from Jopil's attack in two days. The hundred-year snow ginseng granted twenty years of internal energy, but most of it was consumed by his final Skill use.",
-    "Taekyung recognizes that he enjoys living as a martial artist in Murim but still wants to return to his family and true self in the real world. Jin Wikyung is the person he intends to ask about reaching First Rate."
+    "Taekyung recognizes that he enjoys living as a martial artist in Murim but still wants to return to his family and true self in the real world. Jin Wikyung is the person he intends to ask about reaching First Rate.",
+    "Jin Wikyung learns from the Lower District Sect that Mount Heng is gathering troops. The Jin Family will march north with all its forces in two days and strike before the reinforcements join the Blood Wolf Sword's main force, which could then number about one thousand.",
+    "The Five Gates of Shanxi is an alliance of five small- and medium-sized sects that has agreed to aid the Jin Family. A representative of its Three Paths Sect introduces himself to Taekyung and pledges support.",
+    "Taekyung accepts the Rear Guard Defense short-term Quest after Jin Wikyung asks him to command the rear guard; the System rewards Fame for acceptance and penalizes refusal.",
+    "Jin Wikyung tells Taekyung that martial arts begin with belief. Taekyung realizes he has trusted the System's Second Rate label instead of his own achievements and recognizes that he is already First Rate.",
+    "Reaching First Rate raises every martial art by one stage, greatly improves Taekyung's Sinews and Bones and Meridians, expands his dantian, and grants two level-ups.",
+    "Taekyung gains Fame from the accepted Quest and public awe and rumors, but remains roughly fifty short of the Logout target. He goes to Medicine King Hall, where entry is restricted to authorized personnel."
   ],
   "open_questions": [
     "The capsule's purpose and the route home remain unresolved.",
@@ -68,6 +74,7 @@
     "Preserve the alliance terms, the approximate count “about two hundred,” the rank “Super First Rate,” and the guards’ crude insult.",
     "Keep Taekyung’s staged title delivery as “Yama. Whip. Great Hero!” rather than treating Yama Whip as a personal name.",
     "Keep the fixed Tutorial wording “Check and Distribute Skill Window Points” in both the objective and completion notice; use “Redistribute” only when previously assigned points are actually reallocated.",
-    "Use tone-marked pinyin for Chinese dialogue such as “Tài lěng le” and “Zhōngguó rén ma?”; keep “Shenme” unmarked in Chapter 2 because it supports Taekyung’s “Ms. Sunmi” mishearing joke."
+    "Use tone-marked pinyin for Chinese dialogue such as “Tài lěng le” and “Zhōngguó rén ma?”; keep “Shenme” unmarked in Chapter 2 because it supports Taekyung’s “Ms. Sunmi” mishearing joke.",
+    "Use Three Paths Sect for 三道問, retaining the Chapter 34 note that the given final character is 問 rather than the usual 門."
   ]
 }
