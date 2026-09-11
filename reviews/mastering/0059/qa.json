@@ -1,0 +1,23 @@
+{
+  "chapter": 59,
+  "errors": [],
+  "metrics": {
+    "length_ratio": 2.233,
+    "source_characters": 5445,
+    "source_paragraphs": 169,
+    "translation_characters": 12161,
+    "translation_paragraphs": 174
+  },
+  "passed": true,
+  "version": 1,
+  "warnings": [
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "기세",
+        "preferred": "aura / momentum"
+      },
+      "message": "matched preferred term is absent"
+    }
+  ]
+}

@@ -649,7 +649,7 @@ def format_hunk_for_packet(h: dict) -> str:
     return "\n".join(parts)
 
 
-def adjudicator_packet(number: int, source: str, baseline: str, glossary: list[dict], diff: dict) -> str:
+def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossary: list[dict], diff: dict) -> str:
     brief = read_text(ROOT / "MASTERING_ADJUDICATOR.md").strip()
     rules = read_text(ROOT / "RULES.md").strip()
     hunk_parts = [format_hunk_for_packet(h) for h in diff["hunks"]]
@@ -667,6 +667,12 @@ def adjudicator_packet(number: int, source: str, baseline: str, glossary: list[d
 
 ```markdown
 {format_numbered_baseline(baseline)}
+```
+
+## Complete SOL English
+
+```markdown
+{sol.rstrip()}
 ```
 
 ## Exact glossary matches for this Korean chapter
@@ -687,7 +693,7 @@ def adjudicator_packet(number: int, source: str, baseline: str, glossary: list[d
 
 ## Numbered diff hunks
 
-Each hunk is the changed span only. Neighboring unchanged English is in the numbered baseline above; use the P# labels and Korean line numbers to look up surrounding context. The complete SOL chapter is not included.
+Each hunk is the changed span only. Neighboring unchanged English is in the numbered baseline and complete SOL above; use the P# labels and Korean line numbers to look up surrounding context.
 
 {chr(10).join(hunk_parts)}
 
@@ -815,7 +821,7 @@ def command_adjudicate(number: int, force: bool = False) -> None:
         update_state(p, state, "ADJUDICATED", hunk_count=0)
         print(f"{number:04d}: no changes; adjudication skipped")
         return
-    packet = adjudicator_packet(number, source, baseline, glossary, diff)
+    packet = adjudicator_packet(number, source, baseline, sol, glossary, diff)
     enforce_budget(packet, "adjudicator")
     atomic_text(p["adjudicator_packet"], packet)
     cfg = load_config()
