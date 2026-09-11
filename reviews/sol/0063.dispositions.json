@@ -1,0 +1,30 @@
+{
+  "dispositions": [
+    {
+      "finding_id": "F01",
+      "reason": "Restored Taekyung as the speaker of the contract line and Choi as the one who likely took it as a bluff.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F02",
+      "reason": "Hyuk’s expression now matches the newcomer’s, not the narrator’s.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F03",
+      "reason": "Restored Hyuk’s opening boast as hegemon of Shanxi and Great Jin Family wording.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F04",
+      "reason": "Restored the dog/horse mess pun so 말판 can answer 개판.",
+      "status": "applied"
+    },
+    {
+      "finding_id": "F05",
+      "reason": "Trigger is now the Shan of Shanxi, not the first English syllable of the epithet.",
+      "status": "applied"
+    }
+  ],
+  "version": 1
+}

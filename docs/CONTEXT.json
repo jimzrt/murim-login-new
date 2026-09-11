@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "safe_through": 62,
-  "continuity_sources": [61, 62],
+  "safe_through": 63,
+  "continuity_sources": [62, 63],
   "active_continuity": [
     "Taekyung is the disgraced third son of the Jin Family of Taiyuan and narrates with dry, self-mocking, occasionally profane humor.",
     "The Ark - 2020 capsule's purpose and route back to Murim remain unresolved; its manual says users are bound until death, time runs at an adjustable slow ratio, and Character Synchronization exists.",
@@ -14,19 +14,21 @@
     "The Head Elder, Jin Baekyang, led the betrayal. He revealed that an ambush during the Great Faction War killed almost all of the three hundred volunteers under his command while his elder brother became Family Head and turned the disaster into a victory; revenge was his motive.",
     "The Head Elder destroyed Jin Wikyung's ancestral treasure sword and fought Taekyung with incomplete Sword Force and innate qi. Taekyung's One Flash destroyed the Head Elder's arm, and his body endured the technique's side effects.",
     "Lee Cheonbaek was gravely wounded, silenced, and paralyzed by the Head Elder after offering his life and Mount Heng's surrender. He later ambushed the Head Elder with a dagger, enabling Taekyung to finish the attack; Lee died in the process.",
-    "Taekyung killed Jin Baekyang with One Flash after Lee Cheonbaek's ambush. The System recorded the defeat, granted multiple level-ups, completed the Traitor Chain Quest, greatly increased his Level and Fame, and awarded the Sleeping Dragon of Shanxi title. His exact resulting Level is unknown.",
+    "Taekyung killed Jin Baekyang with One Flash after Lee Cheonbaek's ambush. The System recorded the victory, raised him to Level 50 with Fame 1,180 and 100 Remaining Points, completed the Traitor Chain Quest, and awarded the Sleeping Dragon of Shanxi title. His active Titles are Sleeping Dragon of Shanxi, Scion of a Prestigious Family, Novice Trainee, and Gambler.",
     "Jin Wikyung survived the final fight and did not carry out the execution himself. Wipeng and the Jin Family forces survived the battle, while the black-clad forces surrendered after the Head Elder's death.",
     "The First Elder died after warning Wipeng to beware Dark Heaven. His fate is resolved, but the cause of the sudden death is unknown.",
     "Gunggwimun Sect Leader Jin Chung ordered his fifty disciples to scatter, stayed behind to protect them, and was killed by a concealed Dark Heaven agent. The agent and ten black-clad men then massacred the remaining Gunggwimun disciples.",
     "Dark Heaven rescued the future conspirators from the Demonic Cult forty years earlier, offered them revenge, and implanted a gu in their heads. Its agent says the Shanxi scheme served a bigger picture and deliberately spares Taekyung for today; the organization's full purpose and agent identities remain unresolved.",
-    "The current Eight Spring Gorge battle is over, but the surviving Jin Family and Mount Heng forces must deal with the dead, the exposed conspiracy, and Dark Heaven's continuing threat."
+    "Five days after the battle, the Jin Family's victory is spreading through Shanxi. Mount Heng Sword Sect is on the verge of closing its gates after Lee Seogeun and Blood Wolf Sword Lee Cheonbaek died, and the First Young Master was killed by mounted bandits.",
+    "Jin Mukyung, the Jin Family Second Young Master and Heaven Shaking Sword, returns after several years away. He is recognized as Taekyung's older brother after cleaning the grime from his face; his present System Level is unreadable.",
+    "Taekyung completes Qi Circulation and advances the Jin Family's Cultivation Technique to the Eighth Stage. His Internal Energy remains at fifteen years because its accumulation speed is poor, and he plans to become as strong as possible before returning to reality."
   ],
   "open_questions": [
-    "The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has reconnected to Murim, but whether it can transport him safely and reliably and what will happen after the battle remain unknown.",
+    "The Ark - 2020 capsule's ultimate purpose and route remain unresolved; Taekyung has reconnected to Murim, but whether it can transport him safely and reliably and what will happen after he returns remain unknown.",
     "The limits of Murim's death and resurrection rules remain unresolved.",
     "Dark Heaven is revealed as the force behind the Head Elder's conspiracy, but its full purpose, the identity and extent of its agents, and the meaning of the bigger picture remain unresolved.",
     "The cause of Taekyung's recurring nightmares and Jin Wikyung's appearance in them remains unresolved.",
-    "Whether the officials' investigation exposes Taekyung, whether the System's restoration relates to Murim, Choi's exact current rank, whether Peace Guild can recruit Taekyung after his refusal, and whether Sopung Guild can recruit Choi Min-su remain unresolved."
+    "Whether the officials' investigation exposes Taekyung, whether the System's restoration relates to Murim, Choi's exact current rank, whether Peace Guild can recruit Taekyung after his refusal, whether Sopung Guild can recruit Choi Min-su, and what Jin Mukyung intends after returning remain unresolved."
   ],
   "temporary_decisions": [
     "The source name 성진호 is Seong Jinho; do not substitute the compendium's separate 송진호 entry.",
@@ -52,6 +54,7 @@
     "Use swamp Lizardmen for 늪 리자드맨 and preserve the female-Lizardman pheromone lure and its resolution in Chapter 51.",
     "Use Lizardman Great Chieftain for 대족장, One Flash for 일섬, and footnote *Bulgeum* as Korean slang for Friday night.",
     "Use goshiwon for 고시원, with a concise first-use footnote explaining the tiny rented-room arrangement and approximate size.",
-    "Render the System prompt [무림]에 접속하시겠습니까? as “Would you like to connect to Murim?”; reserve “logged in” for 로그인했다."
+    "Render the System prompt [무림]에 접속하시겠습니까? as “Would you like to connect to Murim?”; reserve “logged in” for 로그인했다.",
+    "Preserve Chapter 63's System wording “You have successfully completed Qi Circulation” and “the realm ... has risen to the Eighth Stage.”"
   ]
 }

@@ -1,6 +1,6 @@
 # Hyuk Mujin (혁무진)
 
-- **Safe through:** Chapter 60
+- **Safe through:** Chapter 63
 - **Aliases:** None revealed
 - **Role:** Captain of the Gatekeepers at the Jin Family of Taiyuan; deputy squad leader of White Tiger Hall’s reconnaissance squad
 - **Personality:** Young, disciplined, suspicious of Jin Taekyung, and openly contemptuous of the family’s disgraced third son; believes loyalty and respectable conduct matter, but is also proud and hungry for glory
@@ -19,5 +19,6 @@
 - **Chapter 58 continuity:** Hyuk follows Taekyung into the Head Elder's attack, helps protect him during the retreat, identifies the supposedly rescued man as the Blood Wolf Sword Lee Cheonbaek, and joins the reconnaissance squad's encircling formation.
 - **Chapter 59 continuity:** Hyuk remains with Taekyung and the reconnaissance squad as they engage the Head Elder after Jin Wikyung orders the group to hold him off.
 - **Chapter 60 continuity:** Hyuk orders the reconnaissance squad to mix rocks into their dirt attack, drawing the Head Elder’s attention. Taekyung saves him from the elder’s Sword Energy, and Hyuk remains with the squad as Jin Wikyung arrives and the group attacks the Head Elder.
-- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–38, 55, and 58–60
+- **Chapter 63 continuity:** Hyuk serves as Captain of the Gatekeepers and loudly recites his titles when Jin Mukyung arrives at the gate. He recognizes Mukyung, freezes when Taekyung fails to do so, and is present when Mukyung orders him to open the gate.
+- **Sources:** Korean source and accepted translation, Chapters 6–7, 13, 22–23, 26–29, and 35–38, 55, and 58–60, 63
 

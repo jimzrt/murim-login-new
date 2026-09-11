@@ -1,7 +1,7 @@
 # Jin Taekyung (진태경)
 
-- **Safe through:** Chapter 62
-- **Aliases:** None revealed
+- **Safe through:** Chapter 63
+- **Aliases:** Sleeping Dragon of Shanxi
 - **Role:** Modern-world protagonist; recently fired after seven years at his job; F-rank Hunter; youngest son of the Jin Family of Taiyuan
 - **Personality:** Hungry, self-aware, dryly observant, and willing to take a questionable opportunity when desperate; treats the impossible as a game until the danger becomes undeniable
 - **Voice:** First-person, conversational, dryly self-mocking; uses vivid trap-and-prey imagery, game jargon, and occasional profanity
@@ -49,4 +49,5 @@
 - **Chapter 60 continuity:** Taekyung uses dirt and rocks to keep the Head Elder occupied while protecting the reconnaissance squad. He intercepts the Sword Energy aimed at Hyuk Mujin and is cut in the side, then orders an encircling formation. After Jin Wikyung arrives with several dozen guards, Taekyung joins the assault, uses a fallen ally as cover, and attacks the Head Elder with One Flash; the result remains unresolved.
 - **Chapter 61 continuity:** Taekyung’s One Flash destroys the Head Elder’s arm, and Taekyung remains conscious instead of collapsing, showing that his body can now withstand the technique’s side effects. He confronts the Head Elder over the succession motive behind the betrayal, then uses One Flash again when the elder draws on innate qi and attacks with Sword Force; the result remains unresolved.
 - **Chapter 62 continuity:** Taekyung survives the final exchange, kills Jin Baekyang with One Flash after Lee Cheonbaek's ambush, and receives multiple level-ups. The System completes the Traitor Chain Quest, greatly increases his Level and Fame, and awards him the Sleeping Dragon of Shanxi title. He witnesses the First Elder's death, the surrender of the black-clad forces, and Dark Heaven's massacre of Gunggwimun; a Dark Heaven agent deliberately spares him for the present.
-- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–62
+- **Chapter 63 continuity:** Five days after the Eight Spring Gorge battle, Taekyung's fame has spread throughout Shanxi under the new Peak-grade Sleeping Dragon of Shanxi Title, which grants All Stats +10 and Fame +100. He completes Qi Circulation and raises the Jin Family's Cultivation Technique to the Eighth Stage, while his Internal Energy remains at fifteen years. His Status Window shows Level 50, Fame 1,180, 100 Remaining Points, and four active Titles. He plans to grow as strong as possible before returning to reality, then meets his older brother Jin Mukyung, whose face is nearly identical to his.
+- **Sources:** Korean source and accepted translation, Chapters 0–8 and 10–63
