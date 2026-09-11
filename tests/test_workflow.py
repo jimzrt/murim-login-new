@@ -346,13 +346,11 @@ class WorkflowTest(unittest.TestCase):
             "models": {
                 "draft": "provider/draft:high",
                 "review": "provider/review:medium",
-                "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
             }
         })
         self.assertEqual(resolved["draft_model"], "provider/draft:high")
         self.assertEqual(resolved["review_model"], "provider/review:medium")
-        self.assertEqual(resolved["polish_model"], "provider/polish:high")
         self.assertEqual(resolved["summary_model"], "provider/summary:high")
         self.assertEqual(resolved["checkpoint_model"], "provider/review:medium")
         self.assertEqual(resolved["models"]["draft"], "provider/draft:high")
@@ -362,8 +360,6 @@ class WorkflowTest(unittest.TestCase):
             "models": {
                 "draft": "provider/draft:high",
                 "review": "provider/review:medium",
-                "revision": "provider/revision:high",
-                "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
                 "checkpoint": "provider/checkpoint:medium",
             }
@@ -377,7 +373,6 @@ class WorkflowTest(unittest.TestCase):
                 "models": {
                     "draft": "provider/draft:high",
                     "review": "provider/review:medium",
-                    "polish": "provider/polish:high",
                 }
             })
 
@@ -393,61 +388,40 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(workflow.incomplete_chapter(), 14)
 
 
-    def test_revised_chapter_before_polish_cutoff_asks_for_generated_update(self):
+    def test_every_revised_chapter_asks_for_generated_update(self):
         state, paths = workflow.load(1)
         state["stage"] = "REVISED"
         self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py update 1")
 
-    def test_revised_chapter_from_cutoff_asks_for_polish(self):
-        (self.root / "docs" / "STATE.md").write_text(
-            "# Translation State\n\n- Last completed: 26\n- Next chapter: 27\n",
-            encoding="utf-8",
-        )
-        (self.root / "docs" / "workflow.json").write_text(
-            json.dumps({**workflow.DEFAULT_CONFIG, "version": 1}), encoding="utf-8"
-        )
-        state, paths = workflow.load(27)
-        state["stage"] = "REVISED"
-        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py polish 27")
-        state["stage"] = "POLISHED"
-        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py update 27")
-
-    def test_accept_promotes_polished_copy_from_cutoff(self):
-        (self.root / "docs" / "STATE.md").write_text(
-            "# Translation State\n\n- Last completed: 26\n- Next chapter: 27\n",
-            encoding="utf-8",
-        )
+    def test_accept_promotes_revised_copy_without_standalone_polish(self):
         (self.root / "docs" / "workflow.json").write_text(
             json.dumps({**workflow.DEFAULT_CONFIG, "version": 1, "summary_interval": 100, "checkpoint_review_interval": 100}),
             encoding="utf-8",
         )
-        state, paths = workflow.load(27)
+        state, paths = workflow.load(1)
         paths["revised"].parent.mkdir(parents=True, exist_ok=True)
-        paths["revised"].write_text("# Chapter 27\n\nRevised.\n", encoding="utf-8")
-        paths["polished"].write_text("# Chapter 27\n\nPolished.\n", encoding="utf-8")
+        paths["revised"].write_text("# Chapter 1\n\nRevised.\n", encoding="utf-8")
         paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
         paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
         paths["beat"].parent.mkdir(parents=True, exist_ok=True)
         paths["beat"].write_text(
-            "# Chapter 27\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
+            "# Chapter 1\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
             encoding="utf-8",
         )
-        state["stage"] = "POLISHED"
+        state["stage"] = "REVISED"
         state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
-        state["artifacts"]["polished_sha256"] = workflow.digest(paths["polished"])
         state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
         workflow.atomic_json(paths["state"], state)
         (self.root / "docs" / "STATE.md").write_text(
-            "# Translation State\n\n- Last completed: 27\n- Next chapter: 28\n",
-            encoding="utf-8",
+            "# Translation State\n\n- Last completed: 1\n- Next chapter: 2\n", encoding="utf-8"
         )
         (self.root / "docs" / "CONTEXT.json").write_text(
-            json.dumps({"version":1,"safe_through":27,"continuity_sources":[27],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n",
+            json.dumps({"version":1,"safe_through":1,"continuity_sources":[1],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n",
             encoding="utf-8",
         )
         self.record_update(state, paths)
-        workflow.command_accept(27)
-        self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 27\n\nPolished.\n")
+        workflow.command_accept(1)
+        self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 1\n\nRevised.\n")
 
     def test_mastering_is_a_primary_transaction_stage(self):
         state, paths = workflow.load(1)

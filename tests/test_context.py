@@ -18,24 +18,16 @@ class ContextPacketTest(unittest.TestCase):
             "temporary_decisions": ["Temporary decision."],
         }
 
-    def test_phase_packets_do_not_repeat_draft_only_context(self):
+    def test_review_packet_does_not_repeat_draft_only_context(self):
         with patch.object(context, "load_active_context", return_value=self.active()):
             draft_packet = context.build_draft_packet(5)
             review_packet = context.build_review_packet(5, "# Chapter 5\n\nDraft.\n", {"warnings": []})
-            polish_packet = context.build_polish_packet(5, "# Chapter 5\n\nRevised.\n")
         self.assertIn("translations/0004.md", draft_packet)
         self.assertIn("Latest completed summary", draft_packet)
         self.assertNotIn("translations/0004.md", review_packet)
         self.assertNotIn("Latest completed summary", review_packet)
         self.assertIn('"replacement": "finished exact replacement English"', review_packet)
         self.assertIn("must quote one exact, uniquely occurring draft span", review_packet)
-        self.assertIn("Polish brief", polish_packet)
-        self.assertIn("first nonblank line must be exactly", polish_packet)
-        self.assertIn("Translate the thought, not the Korean sentence structure", polish_packet)
-        self.assertIn("Revised reading copy", polish_packet)
-        self.assertNotIn("Structured findings", polish_packet)
-        self.assertNotIn("Latest completed summary", polish_packet)
-        self.assertNotIn("<<<TRANSLATION>>>", polish_packet)
 
     def test_update_packet_is_bounded_to_current_durable_inputs(self):
         with tempfile.TemporaryDirectory() as directory:

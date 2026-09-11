@@ -6,7 +6,6 @@ Translation roles live in `models` in [`docs/workflow.json`](workflow.json):
 - `review` (chapter review and retrofit review)
 - `summary`
 - `checkpoint` (optional; five-chapter checkpoint review; defaults to `review`)
-- `polish`
 
 Mastering roles live in `models` in [`docs/mastering.json`](mastering.json):
 
@@ -14,8 +13,8 @@ Mastering roles live in `models` in [`docs/mastering.json`](mastering.json):
 - `adjudicator`
 
 Do not copy those IDs into docs or defaults elsewhere. Call sites read the
-resolved `draft_model`, `review_model`, `polish_model`, `summary_model`, and
-`checkpoint_model` keys from `project_config()`, and mastering selectors from
+resolved `draft_model`, `review_model`, `summary_model`, and `checkpoint_model`
+keys from `project_config()`, and mastering selectors from
 `docs/mastering.json`.
 
 Ordered provider fallbacks for the translation and mastering selectors are in

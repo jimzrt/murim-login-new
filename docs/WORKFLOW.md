@@ -16,11 +16,10 @@ output under `.work/NNNN/` as `*-raw.txt`. Every model call also writes its OMP
 JSON event stream under `.work/NNNN/omp/<phase>.jsonl`, with parsed text beside
 it. Use those logs when a revision aborts with `stopReason=error`.
 
-A polish or draft heading failure is usually a one-line preamble glued to
-`# Chapter N` in `polish-raw.txt` or `draft-raw.txt`. Do not rerun the model.
-Salvage from that heading, write the reading copy, and run `polished` or
-`drafted`. QA is `reviews/qa/NNNN-*.json`, not `reviews/qa/NNNN.md`. The
-accepted translation is created only by `accept`.
+A draft heading failure is usually a one-line preamble glued to `# Chapter N`
+in `draft-raw.txt`. Do not rerun the model. Salvage from that heading, write
+`draft.md`, and run `drafted`. QA is `reviews/qa/NNNN-*.json`, not
+`reviews/qa/NNNN.md`. The accepted translation is created only by `accept`.
 
 Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
 `workflow.py` commands, and `audit_range.py` take an exclusive flock on
@@ -50,21 +49,19 @@ without a ledger entry and blocks `Rank:` as a System/UI classification field.
 `docs/STATE.md` is a short human operational view, not a historical review log.
 Review history belongs to the structured files under `reviews/`.
 
-## Review, Revision, and Polish
+## Review, Revision, and Mastering
 
 The chapter reviewer returns validated JSON with exact finished replacements at
 `reviews/sol/NNNN.json`; the human view is `reviews/sol/NNNN.md`; hashes and
 counts are in `reviews/sol/NNNN.meta.json`. Revision makes no model call: it
-atomically applies every unique, non-overlapping `current` → `replacement` span
-and runs deterministic QA. Missing, repeated, or overlapping spans stop the
-transaction.
+atomically applies every unique, non-overlapping `current` → `replacement` span,
+runs deterministic QA, and advances directly to durable-state generation.
+Missing, repeated, or overlapping spans stop the transaction.
 
-From `polish_from_chapter` onward, a controller polish stage runs after
-`REVISED`. It is a no-tools OMP call: source, revised copy, `RULES.md`,
-`POLISH.md`, exact glossary matches, and matching profiles. The model
-returns a complete reading copy; deterministic QA must pass before durable
-updates, summary, checkpoint, or acceptance. Chapters before that cutoff keep
-the previous `REVISED` → accept path.
+There is no standalone full-copy polish pass. The mastering editor is the one
+final full-copy edit; its packet already includes `POLISH.md`, the source,
+rules, glossary, compact profiles, and bounded continuity. Its independent
+adjudication and final QA gate promotion.
 
 `python tools/workflow.py update N` replaces the former manual durable-state
 step. One bounded no-tools call receives only the current source and final copy,
@@ -121,7 +118,7 @@ records remain excluded from exact provider totals.
 ## Checkpoints and Summaries
 
 Summary and checkpoint-review intervals are independent in `docs/workflow.json`.
-After each revised or polished chapter, `python tools/workflow.py update N`
+After each revised chapter, `python tools/workflow.py update N`
 generates a compact beat at `summaries/beats/NNNN.md` from that chapter only.
 At the summary interval, `python tools/workflow.py summarize N` builds a bounded
 packet from the previous block summary, this block's beats, and

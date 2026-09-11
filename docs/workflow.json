@@ -4,8 +4,7 @@
     "draft": "openai-codex/gpt-5.6-luna:high",
     "review": "cursor/cursor-grok-4.6:medium",
     "summary": "openai-codex/gpt-5.6-luna:high",
-    "checkpoint": "openai-codex/gpt-5.6-sol:medium",
-    "polish": "cursor/cursor-grok-4.6:medium"
+    "checkpoint": "openai-codex/gpt-5.6-sol:medium"
   },
   "context_max_bytes": 16384,
   "continuity_source_limit": 2,
@@ -16,8 +15,7 @@
     "review": 60000,
     "checkpoint": 120000,
     "summary": 20000,
-    "update": 30000,
-    "polish": 60000
+    "update": 30000
   },
   "beat_max_bytes": 4096,
   "summary_interval": 5,
@@ -27,6 +25,5 @@
   "retrofit_parallel_jobs": 2,
   "retrofit_review_token_limit": 70000,
   "retrofit_refine_token_limit": 80000,
-  "retrofit_min_auto_confidence": 0.8,
-  "polish_from_chapter": 27
+  "retrofit_min_auto_confidence": 0.8
 }

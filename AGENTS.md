@@ -31,13 +31,12 @@ completion, hashes, promotion, recovery, and the next action. Routine work must
 not load other chapter source files, the full compendium, archive directories, or
 `characters/spoilers/`.
 
-If draft or polish fails because the first nonblank line is not `# Chapter N`,
-do not rerun the model. The raw output is `.work/NNNN/draft-raw.txt` or
-`polish-raw.txt`. If that file contains the heading after a short preamble,
-write the text from the heading onward into `draft.md`/`polished.md` and run
-`python tools/workflow.py drafted N` or `polished N`. QA reports live at
-`reviews/qa/NNNN-draft.json`, `NNNN-polish.json`, and `NNNN-final.json`.
-`translations/NNNN.md` does not exist until `accept`.
+If draft fails because the first nonblank line is not `# Chapter N`, do not
+rerun the model. If `.work/NNNN/draft-raw.txt` contains the heading after a
+short preamble, write the text from that heading onward into `draft.md` and run
+`python tools/workflow.py drafted N`. QA reports live at
+`reviews/qa/NNNN-draft.json` and `NNNN-final.json`. `translations/NNNN.md` does
+not exist until `accept`.
 
 ## Model-Facing Context
 
@@ -56,10 +55,6 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 - Revision is deterministic: it applies each review finding's exact, unique
   `current` → `replacement` span to the reviewed draft. It makes no model call
   and receives no additional context.
-- Polish receives the source, revised reading copy, `POLISH.md`, rules,
-  glossary, and compact matching profiles. It does not receive review findings,
-  the summary archive, or prior translations. Chapters before
-  `polish_from_chapter` skip this stage.
 - Summarize receives the previous block summary, this block's chapter beats,
   and bounded active state. It does not receive full reading copies.
 
@@ -67,13 +62,13 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 
 - The draft model drafts; deterministic QA must pass; the review model returns
   validated structured findings with exact finished replacements. Revision
-  applies those replacements atomically and blocks on missing, repeated, or
-  overlapping spans. From `polish_from_chapter` onward the polish model returns
-  a complete reading copy using `POLISH.md`; final QA must pass.
+  applies those replacements atomically, blocks on missing, repeated, or
+  overlapping spans, and runs final QA. The mastering editor is the only
+  later full-copy edit and applies `POLISH.md`.
 - Reviews are durable JSON with generated Markdown reading reports. Checkpoint
   dispositions remain structured and unresolved critical or major checkpoint
   findings block acceptance.
-- At `POLISHED`, or at `REVISED` when polish is skipped, run
+- At `REVISED`, run
   `python tools/workflow.py update N`. Its bounded no-tools model call returns
   structured chapter facts; the controller validates and deterministically
   writes `docs/NAMES.md`, affected safe profiles, `docs/CONTEXT.json`,

@@ -112,7 +112,7 @@ class ModelIoTest(unittest.TestCase):
 
 class ReadingCopyExtractTest(unittest.TestCase):
     def test_extract_reading_copy_strips_same_line_preamble(self):
-        raw = "Checking the chapter workflow and source so the polish pass stays faithful.# Chapter 28\n\n*Hoo.*\n"
+        raw = "Checking the chapter workflow and source so the final pass stays faithful.# Chapter 28\n\n*Hoo.*\n"
         self.assertEqual(extract_reading_copy(raw, 28), "# Chapter 28\n\n*Hoo.*\n")
 
     def test_extract_reading_copy_rejects_missing_heading(self):

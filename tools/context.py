@@ -539,59 +539,6 @@ Use empty arrays when no name or profile change is required.
 
 
 
-def build_polish_packet(number: int, revised: str) -> str:
-    source = chapter_text(number)
-    rules_path = ROOT / "RULES.md"
-    handoff_path = ROOT / "POLISH.md"
-    source_path = chapter_source_path(number)
-    compendium_path = ROOT / "compendium.md"
-    names_path = ROOT / "docs" / "NAMES.md"
-    rules = rules_path.read_text(encoding="utf-8").strip()
-    handoff = handoff_path.read_text(encoding="utf-8").strip()
-    glossary = exact_glossary_entries(source)
-    profiles = profile_entries(source)
-    body = f"""# Polish Task — Chapter {number}
-
-Edit only this revised reading copy. Return only the complete English Markdown
-reading copy. The first nonblank line must be exactly `# Chapter {number}`.
-Do not write a preface, status line, or thinking before that heading. Do not
-review, explain, update files, or continue to another chapter.
-
-Follow the polish brief below. Start from the revised copy; do not
-retranslate from scratch. Preserve meaning, pacing, humor, character voice,
-System terminology, names, and Korean/Murim cultural content. Check the
-Korean source before changing an idiom, metaphor, joke, or cultural phrasing.
-
-## Polish brief
-
-{handoff}
-
-## Binding rules
-
-{rules}
-
-## Korean source
-
-```text
-{source.rstrip()}
-```
-
-## Revised reading copy
-
-```markdown
-{revised.rstrip()}
-```
-
-## Exact glossary matches
-
-{glossary_text(glossary)}
-
-## Present-character profiles
-
-{profiles_text(profiles)}
-"""
-    used = [rules_path, handoff_path, source_path, compendium_path, names_path, *(path for path, _ in profiles)]
-    return body.replace("# Polish Task", f"<!-- packet-manifest\n{manifest(used, body)}\n-->\n\n# Polish Task", 1)
 
 
 def main() -> int:

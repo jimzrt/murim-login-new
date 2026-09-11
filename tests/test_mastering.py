@@ -111,6 +111,18 @@ def test_fuzzy_alignment_does_not_collapse_fully_edited_chapter():
     assert all(len(h["baseline_range"]) == 2 for h in diff["hunks"])
 
 
+def test_master_packet_owns_full_copy_polish():
+    packet = mastering.master_packet(
+        1,
+        "＃1화\n\n원문.\n",
+        "# Chapter 1\n\nBaseline.\n",
+        [],
+    )
+    assert "## Project polish guidance" in packet
+    assert "Translate the thought, not the Korean sentence structure" in packet
+    assert "## Current accepted English baseline" in packet
+
+
 def test_adjudicator_packet_is_compact():
     source = "＃1화\n\n“쓰레기네.”\n\n진호가 말했다.\n"
     baseline = "# Chapter 1\n\n“It’s garbage.”\n\nJinho spoke.\n"
