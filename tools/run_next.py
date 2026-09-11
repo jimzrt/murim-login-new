@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from cost_report import build_report, format_report, format_resource_report
 from run_lock import hold_run_lock
-from workflow import command_committed, command_master, incomplete_chapter, interval_due, paths, project_config
+from workflow import command_committed, incomplete_chapter, interval_due, paths, project_config
 
 TRANSLATION_RE = re.compile(r"^translations/(\d{4})\.md$")
 WORKFLOW_ACTION_RE = re.compile(r"^python tools/workflow\.py ([a-z]+) (\d+)$")
@@ -97,7 +97,7 @@ def run_workflow_command(chapter: int, action: str) -> None:
             f"Complete it, then rerun python tools/run_next.py."
         )
     command = match.group(1)
-    if command in {"status", "master", "committed"}:
+    if command in {"status", "committed"}:
         raise SystemExit(f"workflow returned forbidden automatic action: {action}")
     print(f"→ workflow {command} {chapter}", flush=True)
     started = time.monotonic()
@@ -111,11 +111,11 @@ def run_workflow_command(chapter: int, action: str) -> None:
     print(f"✓ workflow {command} {chapter}  {elapsed}s", flush=True)
 
 
-def run_to_accepted(chapter: int, lock) -> None:
+def run_to_mastered(chapter: int, lock) -> None:
     for _ in range(32):
         status = workflow_status(chapter)
         stage = status.get("stage")
-        if stage == "ACCEPTED":
+        if stage == "MASTERED":
             return
         if stage == "COMMITTED":
             raise SystemExit(f"chapter {chapter} is already committed")
@@ -135,16 +135,16 @@ def print_cost_report(chapter: int) -> None:
     print(format_resource_report(report), flush=True)
 
 
-def commit_accepted(chapter: int) -> None:
+def commit_mastered(chapter: int) -> None:
     transaction = json.loads(paths(chapter)["state"].read_text(encoding="utf-8"))
-    if transaction.get("stage") != "ACCEPTED":
-        raise SystemExit(f"workflow stopped at {transaction.get('stage')}; expected ACCEPTED")
+    if transaction.get("stage") != "MASTERED":
+        raise SystemExit(f"workflow stopped at {transaction.get('stage')}; expected MASTERED")
     changes = changed_paths()
     unexpected = [path for path in changes if not allowed_change(path, chapter)]
     if unexpected:
         raise SystemExit("refusing to commit unexpected paths: " + ", ".join(unexpected))
     if not changes:
-        raise SystemExit("workflow reached ACCEPTED without checkpointable changes")
+        raise SystemExit("workflow reached MASTERED without checkpointable changes")
     print(f"Committing {len(changes)} files:", flush=True)
     for path in changes:
         print(f"  {path}", flush=True)
@@ -165,14 +165,11 @@ def main() -> int:
     with hold_run_lock(ROOT, holder="run_next", chapter=chapter, stage=stage or label) as lock:
         require_repository(chapter, resume=in_progress is not None)
         print(f"Chapter {chapter}: {label}", flush=True)
-        if stage != "ACCEPTED":
-            run_to_accepted(chapter, lock)
-        print(f"Chapter {chapter}: mastering", flush=True)
-        lock.update(stage="mastering")
-        command_master(chapter)
+        if stage != "MASTERED":
+            run_to_mastered(chapter, lock)
         print_cost_report(chapter)
         lock.update(stage="committing")
-        commit_accepted(chapter)
+        commit_mastered(chapter)
         lock.update(stage="COMMITTED")
     return 0
 

@@ -13,7 +13,7 @@
 - Run chapter review only through `python tools/workflow.py review N`.
 - Never start nested agents, hub, task, or reviewer sessions.
 - Wait for each `workflow.py` bash command to finish; do not background it.
-- Under `tools/run_next.py`, stop at `ACCEPTED`; the wrapper owns mastering and commits.
+- Under `tools/run_next.py`, follow reported actions through `MASTERED`; the wrapper owns commit.
 - Stop on command failure, stale hashes, ambiguity, or `COMMITTED`.
 - For accepted-range re-audits, use `tools/audit_range.py`; never reopen normal chapter transactions.
 - docs/CONTEXT.json must keep version, safe_through, continuity_sources, active_continuity, open_questions, and temporary_decisions.

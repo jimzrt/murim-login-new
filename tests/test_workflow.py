@@ -7,6 +7,7 @@ from unittest.mock import patch
 from tools import workflow
 from tools import omp_json
 from tools import context
+from tools import mastering
 
 
 class WorkflowTest(unittest.TestCase):
@@ -448,16 +449,31 @@ class WorkflowTest(unittest.TestCase):
         workflow.command_accept(27)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 27\n\nPolished.\n")
 
-    def test_accepted_chapter_asks_for_master_until_promoted(self):
+    def test_mastering_is_a_primary_transaction_stage(self):
         state, paths = workflow.load(1)
+        paths["translation"].parent.mkdir(parents=True, exist_ok=True)
+        paths["translation"].write_text("# Chapter 1\n\nAccepted.\n", encoding="utf-8")
         state["stage"] = "ACCEPTED"
+        workflow.atomic_json(paths["state"], state)
         self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py master 1")
-        mastering = self.root / "reviews" / "mastering" / "0001"
-        mastering.mkdir(parents=True)
-        (mastering / "state.json").write_text(
-            '{"stage":"PROMOTED","qa_passed":true}\n', encoding="utf-8"
-        )
-        self.assertIn("workflow.py committed 1", workflow.next_action(state, paths))
+        master_state = self.root / "reviews" / "mastering" / "0001" / "state.json"
+        master_metrics = master_state.with_name("metrics.json")
+
+        def finish(_number):
+            paths["translation"].write_text("# Chapter 1\n\nMastered.\n", encoding="utf-8")
+            workflow.atomic_json(master_state, {"stage": "PROMOTED", "qa_passed": True})
+
+        with (
+            patch.object(mastering, "command_finish_for_commit", side_effect=finish),
+            patch.object(mastering, "chapter_paths", return_value={"state": master_state, "metrics": master_metrics}),
+            patch.object(mastering, "state_for", return_value={"stage": "PROMOTED", "qa_passed": True}),
+            patch.object(mastering, "load_metrics", return_value={"stages": {}}),
+        ):
+            workflow.command_master(1)
+        recorded = json.loads(paths["state"].read_text(encoding="utf-8"))
+        self.assertEqual(recorded["stage"], "MASTERED")
+        self.assertEqual(recorded["artifacts"]["mastered_translation_sha256"], workflow.digest(paths["translation"]))
+        self.assertIn("workflow.py committed 1", workflow.next_action(recorded, paths))
 
     def test_master_requires_accepted_stage(self):
         state, paths = workflow.load(1)

@@ -22,7 +22,7 @@ except ModuleNotFoundError:
 
 STAGES = (
     "READY", "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED", "POLISHED",
-    "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
+    "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "MASTERED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
 MODEL_ROLES = ("draft", "review", "polish", "summary")
@@ -237,16 +237,10 @@ def save(state: dict, p: dict[str, Path], stage: str, **artifacts: str) -> None:
 
 IN_FLIGHT_STAGES = {
     "CONTEXT_READY", "DRAFTED", "REVIEWED", "REVISED", "POLISHED",
-    "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED",
+    "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "MASTERED",
 }
 
 
-def _git_tracks(relative: str) -> bool:
-    result = subprocess.run(
-        ["git", "ls-files", "--error-unmatch", relative],
-        cwd=ROOT, text=True, capture_output=True,
-    )
-    return result.returncode == 0
 
 
 def incomplete_chapter() -> int | None:
@@ -264,8 +258,6 @@ def incomplete_chapter() -> int | None:
         if not isinstance(number, int):
             continue
         if stage in IN_FLIGHT_STAGES:
-            found.append(number)
-        elif stage == "ACCEPTED" and not _git_tracks(f"translations/{number:04d}.md"):
             found.append(number)
     unique = sorted(set(found))
     if len(unique) > 1:
@@ -343,16 +335,6 @@ def durable_next_action(number: int, state: dict, p: dict[str, Path]) -> str:
     return f"python tools/workflow.py accept {number}"
 
 
-def mastering_promoted(number: int) -> bool:
-    path = ROOT / "reviews" / "mastering" / f"{number:04d}" / "state.json"
-    if not path.exists():
-        return False
-    try:
-        state = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return False
-    return state.get("stage") == "PROMOTED" and bool(state.get("qa_passed"))
-
 
 def mastering_required_files(number: int) -> set[str]:
     folder = Path("reviews") / "mastering" / f"{number:04d}"
@@ -373,11 +355,6 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
         return durable_next_action(number, state, p)
     if state["stage"] == "POLISHED":
         return durable_next_action(number, state, p)
-    accepted = (
-        f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD"
-        if mastering_promoted(number)
-        else f"python tools/workflow.py master {number}"
-    )
     return {
         "READY": f"python tools/workflow.py prepare {number}",
         "CONTEXT_READY": f"python tools/workflow.py draft {number}",
@@ -385,7 +362,8 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
         "REVIEWED": f"python tools/workflow.py revise {number}",
         "CHECKPOINT_REVIEWED": f"apply or disposition checkpoint findings in {p['checkpoint_disposition'].relative_to(ROOT)}, then: python tools/workflow.py checkpointed {number}",
         "CHECKPOINT_APPLIED": f"python tools/workflow.py accept {number}",
-        "ACCEPTED": accepted,
+        "ACCEPTED": f"python tools/workflow.py master {number}",
+        "MASTERED": f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD",
         "COMMITTED": "stop; do not begin another chapter",
     }[state["stage"]]
 
@@ -1064,18 +1042,33 @@ def command_master(number: int) -> None:
     state, p = load(number)
     require(state, "ACCEPTED")
     try:
-        from tools.mastering import command_finish_for_commit, chapter_paths as mastering_paths, load_metrics as mastering_metrics
+        from tools.mastering import (
+            chapter_paths as mastering_paths, command_finish_for_commit,
+            load_metrics as mastering_metrics, state_for as mastering_state,
+        )
     except ModuleNotFoundError:
-        from mastering import command_finish_for_commit, chapter_paths as mastering_paths, load_metrics as mastering_metrics
+        from mastering import (
+            chapter_paths as mastering_paths, command_finish_for_commit,
+            load_metrics as mastering_metrics, state_for as mastering_state,
+        )
     try:
         command_finish_for_commit(number)
     except (ValueError, RuntimeError, FileNotFoundError) as error:
         raise SystemExit(str(error)) from None
-    data = mastering_metrics(mastering_paths(number))
+    mp = mastering_paths(number)
+    mastered = mastering_state(number)
+    if mastered.get("stage") != "PROMOTED" or not mastered.get("qa_passed"):
+        raise SystemExit(f"chapter {number}: mastering did not reach PROMOTED")
+    data = mastering_metrics(mp)
     for stage in ("master", "adjudicator"):
         values = data.get("stages", {}).get(stage)
         if values:
             record_metric(p, f"{stage}_model", **values)
+    save(
+        state, p, "MASTERED",
+        mastering_state_sha256=digest(mp["state"]),
+        mastered_translation_sha256=digest(p["translation"]),
+    )
 
 
 def command_accept(number: int) -> None:
@@ -1113,7 +1106,12 @@ def command_accept(number: int) -> None:
 
 def command_committed(number: int, commit: str) -> None:
     state, p = load(number)
-    require(state, "ACCEPTED")
+    require(state, "MASTERED")
+    if digest(p["translation"]) != state["artifacts"].get("mastered_translation_sha256"):
+        raise SystemExit("mastered translation changed before commit registration")
+    mastering_state_path = ROOT / "reviews" / "mastering" / f"{number:04d}" / "state.json"
+    if digest(mastering_state_path) != state["artifacts"].get("mastering_state_sha256"):
+        raise SystemExit("mastering state changed before commit registration")
     resolved = subprocess.run(
         ["git", "rev-parse", "--verify", commit], cwd=ROOT, text=True, capture_output=True, check=True
     ).stdout.strip()

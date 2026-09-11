@@ -93,10 +93,10 @@ python tools/run_next.py
 ```
 
 The wrapper reads `- Next chapter: N` from `docs/STATE.md`, asks
-`workflow.py status N` for every transition, and executes only the exact command it reports.
-No coordinator model or tool-driving agent is involved. After `ACCEPTED`, it
-runs mastering, promotes the verified copy, prints chapter and project cost
-reports, commits the accepted change set, registers the commit, and stops.
+`workflow.py status N` for every transition, and executes only the exact command
+it reports through `MASTERED`. No coordinator model or tool-driving agent is
+involved. It then prints chapter and project cost reports, commits the accepted
+change set, registers the commit, and stops.
 
 If status reports a human action instead of one exact `workflow.py` command
 (currently checkpoint dispositions), the wrapper stops without guessing.
@@ -173,10 +173,12 @@ chapters. Safe profiles contain revealed facts only.
 
 ## Git Checkpoint
 
-After `ACCEPTED`, `run_next.py` runs mastering, promotes the verified mastered
-copy into `translations/`, then commits that translation, mastering artifacts,
-packet, structured review, QA, metrics, relevant context files, and any
-checkpoint patches to earlier translations in the current block. Use
+`accept` creates the baseline translation and advances the primary transaction
+to `ACCEPTED`. The reported `master` action resumes the mastering overlay,
+promotes its verified copy, records mastering and translation hashes, and
+advances that same transaction to `MASTERED`. Only then does `run_next.py`
+commit the translation, mastering artifacts, packets, structured review, QA,
+metrics, relevant context files, and checkpoint patches using
 `Accept Chapter N`, then register the exact commit through the controller.
 
 ## Exports
