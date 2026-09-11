@@ -17,6 +17,7 @@
     "review": 60000,
     "checkpoint": 120000,
     "summary": 20000,
+    "update": 30000,
     "polish": 60000
   },
   "beat_max_bytes": 4096,

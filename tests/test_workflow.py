@@ -17,6 +17,9 @@ class WorkflowTest(unittest.TestCase):
         (self.root / "docs" / "STATE.md").write_text(
             "# Translation State\n\n- Last completed: 0\n- Next chapter: 1\n", encoding="utf-8"
         )
+        (self.root / "docs" / "NAMES.md").write_text(
+            "# Names\n\n| Korean | English | Notes |\n|---|---|---|\n", encoding="utf-8"
+        )
         self.root_patch = patch.object(workflow, "ROOT", self.root)
         self.hash_patch = patch.object(workflow, "source_hash", return_value="source-hash")
         self.root_patch.start()
@@ -26,6 +29,22 @@ class WorkflowTest(unittest.TestCase):
         self.hash_patch.stop()
         self.root_patch.stop()
         self.temporary.cleanup()
+    def record_update(self, state, paths):
+        files = {}
+        for path in (
+            self.root / "docs" / "STATE.md",
+            self.root / "docs" / "CONTEXT.json",
+            self.root / "docs" / "NAMES.md",
+            paths["beat"],
+        ):
+            if path.exists():
+                files[str(path.relative_to(self.root))] = workflow.digest(path)
+        workflow.atomic_json(paths["update_result"], {
+            "version": 1, "chapter": state["chapter"], "files": files, "update": {},
+        })
+        state["artifacts"]["update_result_sha256"] = workflow.digest(paths["update_result"])
+        workflow.atomic_json(paths["state"], state)
+
 
     def test_accept_promotes_revised_copy_only_after_state_update(self):
         state, paths = workflow.load(1)
@@ -55,6 +74,7 @@ class WorkflowTest(unittest.TestCase):
             "# Chapter 1\n\n## Plot\n\nFinished.\n\n## Continuity\n\n- Hook.\n\n## Translation Decisions\n\n- None.\n",
             encoding="utf-8",
         )
+        self.record_update(state, paths)
         workflow.command_accept(1)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 1\n\nFinished.\n")
         recorded = json.loads(paths["state"].read_text(encoding="utf-8"))
@@ -81,6 +101,7 @@ class WorkflowTest(unittest.TestCase):
         (self.root / "docs" / "CONTEXT.json").write_text(
             '{"safe_through":1,"continuity_sources":[1]}\n', encoding="utf-8"
         )
+        self.record_update(state, paths)
         with self.assertRaises(SystemExit) as error:
             workflow.command_accept(1)
         self.assertIn("version", str(error.exception))
@@ -169,15 +190,107 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(recorded["stage"], "REVISED")
         self.assertNotIn("dispositions_sha256", recorded["artifacts"])
 
-    def test_revised_block_asks_for_summarize_then_checkpoint(self):
+    def test_update_generates_and_records_all_durable_state(self):
+        (self.root / "docs" / "workflow.json").write_text(
+            json.dumps({**workflow.DEFAULT_CONFIG, "version": 1}), encoding="utf-8"
+        )
+        (self.root / "docs" / "CONTEXT.json").write_text(json.dumps({
+            "version": 1,
+            "safe_through": 0,
+            "continuity_sources": [],
+            "active_continuity": ["Old."],
+            "open_questions": ["Old?"],
+            "temporary_decisions": [],
+        }), encoding="utf-8")
+        source_path = self.root / "source.txt"
+        source_path.write_text("주인공은 새이름과 신규를 만났다.", encoding="utf-8")
+        profile = self.root / "characters" / "Hero.md"
+        profile.parent.mkdir()
+        profile.write_text("""# Hero (주인공)
+
+- **Safe through:** Chapter 0
+- **Aliases:** None
+- **Role:** Wanderer
+- **Personality:** Quiet
+- **Voice:** Direct
+- **Relationships:** None
+- **Continuity:** Archived.
+""", encoding="utf-8")
+        state, paths = workflow.load(1)
+        paths["revised"].parent.mkdir(parents=True, exist_ok=True)
+        paths["revised"].write_text("# Chapter 1\n\nHero met New Name.\n", encoding="utf-8")
+        state["stage"] = "REVISED"
+        state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
+        workflow.atomic_json(paths["state"], state)
+        response = json.dumps({
+            "chapter": 1,
+            "beat": {
+                "plot": ["Hero met two people."],
+                "continuity": ["They remain together."],
+                "translation_decisions": ["새이름 is New Name."],
+            },
+            "context": {
+                "version": 1,
+                "safe_through": 1,
+                "continuity_sources": [1],
+                "active_continuity": ["The group is together."],
+                "open_questions": ["Why did they meet?"],
+                "temporary_decisions": ["Keep New Name."],
+            },
+            "names": [{"korean": "새이름", "english": "New Name", "notes": "New ally"}],
+            "profile_updates": [{
+                "path": "characters/Hero.md",
+                "current": "- **Role:** Wanderer",
+                "replacement": "- **Role:** Group leader",
+            }],
+            "profile_creations": [{
+                "filename": "Recruit.md",
+                "korean": "신규",
+                "english": "Recruit",
+                "aliases": [],
+                "role": "New ally",
+                "personality": "Unknown",
+                "voice": "Unknown",
+                "relationships": "Met Hero",
+            }],
+        }, ensure_ascii=False)
+        metrics = {"exact": True, "requests": 1, "models": {}}
+        compact = context.compact_profile(profile.read_text(encoding="utf-8"))
+        patches = (
+            patch.object(context, "ROOT", self.root),
+            patch.object(context, "chapter_text", return_value=source_path.read_text(encoding="utf-8")),
+            patch.object(context, "chapter_source_path", return_value=source_path),
+            patch.object(context, "exact_glossary_entries", return_value=[]),
+            patch.object(context, "profile_entries", return_value=[(profile, compact)]),
+        )
+        with patches[0], patches[1], patches[2], patches[3], patches[4], patch.object(
+            workflow, "run_omp", return_value=(response, metrics)
+        ) as model:
+            before = (self.root / "docs" / "STATE.md").read_text(encoding="utf-8")
+            workflow.command_update(1, True)
+            self.assertEqual((self.root / "docs" / "STATE.md").read_text(encoding="utf-8"), before)
+            model.assert_not_called()
+            workflow.command_update(1, False)
+        self.assertIn("- Last completed: 1", (self.root / "docs" / "STATE.md").read_text(encoding="utf-8"))
+        self.assertIn("| 새이름 | **New Name** | New ally |", (self.root / "docs" / "NAMES.md").read_text(encoding="utf-8"))
+        self.assertIn("- **Role:** Group leader", profile.read_text(encoding="utf-8"))
+        self.assertIn("- **Safe through:** Chapter 1", profile.read_text(encoding="utf-8"))
+        self.assertTrue((self.root / "characters" / "Recruit.md").exists())
+        self.assertTrue(workflow.durable_update_valid(
+            json.loads(paths["state"].read_text(encoding="utf-8")), paths
+        ))
+
+    def test_revised_block_runs_update_then_summarize_then_checkpoint(self):
         (self.root / "docs" / "STATE.md").write_text(
             "# Translation State\n\n- Last completed: 8\n- Next chapter: 9\n", encoding="utf-8"
         )
         state, paths = workflow.load(9)
         state["stage"] = "REVISED"
-        action = workflow.next_action(state, paths)
-        self.assertIn("summaries/beats/0009.md", action)
-        self.assertIn("python tools/workflow.py summarize 9", action)
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py update 9")
+        paths["beat"].parent.mkdir(parents=True, exist_ok=True)
+        paths["beat"].write_text("# Chapter 9\n", encoding="utf-8")
+        self.record_update(state, paths)
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py summarize 9")
         paths["checkpoint_summary"].parent.mkdir(parents=True, exist_ok=True)
         paths["checkpoint_summary"].write_text("# Chapters 5–9\n", encoding="utf-8")
         self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py checkpoint 9")
@@ -206,6 +319,7 @@ class WorkflowTest(unittest.TestCase):
         (self.root / "docs" / "CONTEXT.json").write_text(
             json.dumps({"version":1,"safe_through":4,"continuity_sources":[4],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n", encoding="utf-8"
         )
+        self.record_update(state, paths)
         exact = {
             "exact": True,
             "usage_source": "omp_provider_reported",
@@ -283,13 +397,10 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(workflow.incomplete_chapter(), 14)
 
 
-    def test_revised_chapter_before_polish_cutoff_asks_for_durable_updates(self):
+    def test_revised_chapter_before_polish_cutoff_asks_for_generated_update(self):
         state, paths = workflow.load(1)
         state["stage"] = "REVISED"
-        action = workflow.next_action(state, paths)
-        self.assertIn("summaries/beats/0001.md", action)
-        self.assertIn("python tools/workflow.py accept 1", action)
-        self.assertNotIn("polish", action)
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py update 1")
 
     def test_revised_chapter_from_cutoff_asks_for_polish(self):
         (self.root / "docs" / "STATE.md").write_text(
@@ -303,9 +414,7 @@ class WorkflowTest(unittest.TestCase):
         state["stage"] = "REVISED"
         self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py polish 27")
         state["stage"] = "POLISHED"
-        action = workflow.next_action(state, paths)
-        self.assertIn("python tools/workflow.py accept 27", action)
-        self.assertNotIn("python tools/workflow.py polish 27", action)
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py update 27")
 
     def test_accept_promotes_polished_copy_from_cutoff(self):
         (self.root / "docs" / "STATE.md").write_text(
@@ -340,6 +449,7 @@ class WorkflowTest(unittest.TestCase):
             json.dumps({"version":1,"safe_through":27,"continuity_sources":[27],"active_continuity":["Hook."],"open_questions":["Open."],"temporary_decisions":["Decision."]}) + "\n",
             encoding="utf-8",
         )
+        self.record_update(state, paths)
         workflow.command_accept(27)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 27\n\nPolished.\n")
 

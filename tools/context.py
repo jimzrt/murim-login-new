@@ -432,6 +432,111 @@ not overlap.
 """
 
 
+def build_update_packet(number: int, reading_copy: str) -> str:
+    source = chapter_text(number)
+    source_path = chapter_source_path(number)
+    context_path = ROOT / "docs" / "CONTEXT.json"
+    names_path = ROOT / "docs" / "NAMES.md"
+    profiles = profile_entries(source)
+    prior = read_json(context_path)
+    body = f"""# Durable State Update — Chapter {number}
+
+Return exactly one JSON object and no Markdown fence. Record only facts established
+by this chapter. Do not use tools, edit prose, infer future events, or copy archived
+profile continuity.
+
+`context` must contain exactly the durable context schema shown below, with version
+1 and safe_through {number}. Keep at most
+{workflow_config()["continuity_source_limit"]} continuity_sources. Use only chapter
+numbers through {number}. `profile_updates` may replace one exact, uniquely occurring
+complete line in a listed profile, and only an Aliases, Role, Personality, Voice, or
+Relationships line. Use `profile_creations` only for a newly introduced named
+character without a listed profile. Filenames must be plain `.md` basenames.
+`names` contains only newly required Korean-to-English rows; Korean keys must occur
+in the source. Beat plot paragraphs are plain strings; continuity and translation
+decisions are concise list items.
+
+Return this exact shape:
+
+{{
+  "chapter": {number},
+  "beat": {{
+    "plot": ["chapter plot paragraph"],
+    "continuity": ["binding continuity item"],
+    "translation_decisions": ["binding terminology or voice decision"]
+  }},
+  "context": {{
+    "version": 1,
+    "safe_through": {number},
+    "continuity_sources": [{number}],
+    "active_continuity": ["active fact"],
+    "open_questions": ["unresolved question"],
+    "temporary_decisions": ["temporary translation decision"]
+  }},
+  "names": [
+    {{"korean": "source spelling", "english": "English rendering", "notes": "brief note"}}
+  ],
+  "profile_updates": [
+    {{
+      "path": "characters/Listed Profile.md",
+      "current": "- **Role:** exact current full line",
+      "replacement": "- **Role:** finished replacement full line"
+    }}
+  ],
+  "profile_creations": [
+    {{
+      "filename": "English Name.md",
+      "korean": "source name",
+      "english": "English Name",
+      "aliases": [],
+      "role": "stable role",
+      "personality": "stable traits",
+      "voice": "stable voice",
+      "relationships": "stable relationships"
+    }}
+  ]
+}}
+
+Use empty arrays when no name or profile change is required.
+
+## Prior durable context
+
+```json
+{json.dumps(prior, ensure_ascii=False, indent=2)}
+```
+
+## Existing names ledger
+
+{names_path.read_text(encoding="utf-8").strip()}
+
+## Exact glossary matches
+
+{glossary_text(exact_glossary_entries(source))}
+
+## Listed compact profiles
+
+{profiles_text(profiles)}
+
+## Korean source
+
+```text
+{source.rstrip()}
+```
+
+## Final English reading copy
+
+```markdown
+{reading_copy.rstrip()}
+```
+"""
+    used = [source_path, context_path, names_path, *(path for path, _ in profiles)]
+    return body.replace(
+        "# Durable State Update",
+        f"<!-- packet-manifest\n{manifest(used, body)}\n-->\n\n# Durable State Update",
+        1,
+    )
+
+
 
 
 def build_polish_packet(number: int, revised: str) -> str:

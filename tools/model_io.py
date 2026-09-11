@@ -114,6 +114,91 @@ def apply_review_replacements(text: str, review: dict) -> str:
     return revised.rstrip() + "\n"
 
 
+def _nonempty_strings(value: object, label: str, *, allow_empty: bool = True) -> list[str]:
+    if not isinstance(value, list) or (not allow_empty and not value):
+        raise ValueError(f"{label} must be {'a nonempty ' if not allow_empty else 'an '}array")
+    if any(not isinstance(item, str) or not item.strip() for item in value):
+        raise ValueError(f"{label} must contain nonempty strings")
+    return [item.strip() for item in value]
+
+
+def validate_durable_update(value: dict, number: int) -> dict:
+    if value.get("chapter") != number:
+        raise ValueError(f"durable update chapter must be {number}")
+    beat = value.get("beat")
+    if not isinstance(beat, dict):
+        raise ValueError("durable update requires a beat object")
+    normalized_beat = {
+        "plot": _nonempty_strings(beat.get("plot"), "beat.plot", allow_empty=False),
+        "continuity": _nonempty_strings(beat.get("continuity"), "beat.continuity"),
+        "translation_decisions": _nonempty_strings(
+            beat.get("translation_decisions"), "beat.translation_decisions"
+        ),
+    }
+    context = value.get("context")
+    if not isinstance(context, dict):
+        raise ValueError("durable update requires a context object")
+    names = value.get("names")
+    if not isinstance(names, list):
+        raise ValueError("durable update names must be an array")
+    normalized_names = []
+    for position, item in enumerate(names, 1):
+        if not isinstance(item, dict):
+            raise ValueError(f"name {position} must be an object")
+        row = {}
+        for key in ("korean", "english", "notes"):
+            field = item.get(key)
+            if not isinstance(field, str) or (key != "notes" and not field.strip()):
+                raise ValueError(f"name {position} requires {key}")
+            if "\n" in field or "|" in field:
+                raise ValueError(f"name {position} {key} cannot contain a newline or pipe")
+            row[key] = field.strip()
+        normalized_names.append(row)
+    profile_updates = value.get("profile_updates")
+    if not isinstance(profile_updates, list):
+        raise ValueError("durable update profile_updates must be an array")
+    normalized_updates = []
+    for position, item in enumerate(profile_updates, 1):
+        if not isinstance(item, dict):
+            raise ValueError(f"profile update {position} must be an object")
+        path, current, replacement = (item.get(key) for key in ("path", "current", "replacement"))
+        if not all(isinstance(field, str) and field.strip() for field in (path, current, replacement)):
+            raise ValueError(f"profile update {position} requires path, current, and replacement")
+        if current == replacement or "\n" in current or "\n" in replacement:
+            raise ValueError(f"profile update {position} must replace one complete line")
+        normalized_updates.append({
+            "path": path.strip(),
+            "current": current,
+            "replacement": replacement,
+        })
+    creations = value.get("profile_creations")
+    if not isinstance(creations, list):
+        raise ValueError("durable update profile_creations must be an array")
+    normalized_creations = []
+    for position, item in enumerate(creations, 1):
+        if not isinstance(item, dict):
+            raise ValueError(f"profile creation {position} must be an object")
+        normalized = {}
+        for key in ("filename", "korean", "english", "role", "personality", "voice", "relationships"):
+            field = item.get(key)
+            if not isinstance(field, str) or not field.strip():
+                raise ValueError(f"profile creation {position} requires {key}")
+            normalized[key] = field.strip()
+        normalized["aliases"] = _nonempty_strings(
+            item.get("aliases"), f"profile creation {position} aliases"
+        )
+        normalized_creations.append(normalized)
+    return {
+        "version": 1,
+        "chapter": number,
+        "beat": normalized_beat,
+        "context": context,
+        "names": normalized_names,
+        "profile_updates": normalized_updates,
+        "profile_creations": normalized_creations,
+    }
+
+
 def validate_dispositions(dispositions: object, review: dict) -> list[dict]:
     if not isinstance(dispositions, list):
         raise ValueError("response requires a dispositions array")

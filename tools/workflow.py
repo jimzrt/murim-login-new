@@ -39,7 +39,7 @@ DEFAULT_CONFIG = {
     "profile_max_bytes": 4096,
     "profile_total_max_bytes": 12288,
     "packet_token_limits": {
-        "draft": 60000, "review": 60000, "polish": 60000,
+        "draft": 60000, "review": 60000, "polish": 60000, "update": 30000,
         "checkpoint": 120000, "summary": 20000,
     },
     "summary_interval": 5,
@@ -159,6 +159,8 @@ def paths(number: int) -> dict[str, Path]:
         "report": ROOT / "reviews" / "sol" / f"{number:04d}.md",
         "review_json": ROOT / "reviews" / "sol" / f"{number:04d}.json",
         "review_meta": ROOT / "reviews" / "sol" / f"{number:04d}.meta.json",
+        "update_packet": ROOT / "reviews" / "packets" / f"update-{number:04d}.md",
+        "update_result": ROOT / "reviews" / "updates" / f"{number:04d}.json",
         "beat": ROOT / "summaries" / "beats" / f"{number:04d}.md",
         "checkpoint_summary": ROOT / "summaries" / f"{summary_name}.md",
         "summary_packet": ROOT / "reviews" / "packets" / f"summary-{summary_name}.md",
@@ -309,18 +311,37 @@ def reading_copy_path(p: dict[str, Path], number: int) -> Path:
     return p["polished"] if polish_due(number) else p["revised"]
 
 
-def durable_next_action(number: int, p: dict[str, Path]) -> str:
-    beat = p["beat"].relative_to(ROOT)
-    durable = (
-        f"update {beat}, docs/STATE.md, docs/CONTEXT.json "
-        "(keep version, continuity_sources, active_continuity, open_questions, "
-        "and temporary_decisions), and profiles from this chapter only"
+def durable_update_valid(state: dict, p: dict[str, Path]) -> bool:
+    expected = state["artifacts"].get("update_result_sha256")
+    if not expected or not p["update_result"].exists() or digest(p["update_result"]) != expected:
+        return False
+    try:
+        result = json.loads(p["update_result"].read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    files = result.get("files")
+    return (
+        result.get("chapter") == state["chapter"]
+        and isinstance(files, dict)
+        and bool(files)
+        and all(
+            isinstance(relative, str)
+            and isinstance(expected_hash, str)
+            and (ROOT / relative).is_file()
+            and digest(ROOT / relative) == expected_hash
+            for relative, expected_hash in files.items()
+        )
     )
+
+
+def durable_next_action(number: int, state: dict, p: dict[str, Path]) -> str:
+    if not durable_update_valid(state, p):
+        return f"python tools/workflow.py update {number}"
     if interval_due(number, "summary_interval") and not checkpoint_exists(number):
-        return f"{durable}, then: python tools/workflow.py summarize {number}"
+        return f"python tools/workflow.py summarize {number}"
     if interval_due(number, "checkpoint_review_interval"):
         return f"python tools/workflow.py checkpoint {number}"
-    return f"{durable}, then: python tools/workflow.py accept {number}"
+    return f"python tools/workflow.py accept {number}"
 
 
 def mastering_promoted(number: int) -> bool:
@@ -350,9 +371,9 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
     if state["stage"] == "REVISED":
         if polish_due(number):
             return f"python tools/workflow.py polish {number}"
-        return durable_next_action(number, p)
+        return durable_next_action(number, state, p)
     if state["stage"] == "POLISHED":
-        return durable_next_action(number, p)
+        return durable_next_action(number, state, p)
     accepted = (
         f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD"
         if mastering_promoted(number)
@@ -605,15 +626,213 @@ def command_polish(number: int) -> None:
     command_polished(number)
 
 
+PROFILE_UPDATE_FIELDS = ("Aliases", "Role", "Personality", "Voice", "Relationships")
+
+
+def render_beat(number: int, beat: dict) -> str:
+    bullets = lambda items: "\n".join(f"- {item}" for item in items) or "- None."
+    return (
+        f"# Chapter {number}\n\n## Plot\n\n"
+        + "\n\n".join(beat["plot"])
+        + f"\n\n## Continuity\n\n{bullets(beat['continuity'])}"
+        + f"\n\n## Translation Decisions\n\n{bullets(beat['translation_decisions'])}\n"
+    )
+
+
+def render_state(number: int, context: dict, beat: dict) -> str:
+    interval = int(project_config()["summary_interval"])
+    start = number - number % interval
+    end = start + interval - 1
+    position = number - start + 1
+    bullets = lambda items: "\n".join(f"- {item}" for item in items) or "- None."
+    return f"""# Translation State
+
+- Last completed: {number}
+- Next chapter: {number + 1}
+- Current block: {start}–{end} ({position}/{interval})
+- Latest translation: `translations/{number:04d}.md`
+- Latest summary: `summaries/beats/{number:04d}.md`
+- Safe profiles through: chapter {number}
+
+## Current Block
+
+{bullets(beat["plot"])}
+
+## Open Questions
+
+{bullets(context["open_questions"])}
+
+## Exceptional Decision
+
+{bullets(context["temporary_decisions"])}
+
+Active model-facing facts and explicit prior-chapter requirements are maintained
+in `docs/CONTEXT.json`. Review history is maintained under `reviews/`.
+"""
+
+
+def durable_files(number: int, update: dict) -> dict[Path, str]:
+    try:
+        from tools.context import (
+            CONTEXT_REQUIRED_KEYS, bounded_profiles, chapter_text,
+            durable_context_problems, exact_glossary_entries, profile_entries,
+        )
+    except ModuleNotFoundError:
+        from context import (
+            CONTEXT_REQUIRED_KEYS, bounded_profiles, chapter_text,
+            durable_context_problems, exact_glossary_entries, profile_entries,
+        )
+
+    config = project_config()
+    context = update["context"]
+    if set(context) != set(CONTEXT_REQUIRED_KEYS):
+        raise ValueError("durable context must contain exactly the required keys")
+    problems = durable_context_problems(context, number, config["continuity_source_limit"])
+    if problems:
+        raise ValueError("CONTEXT.json is invalid: " + "; ".join(problems))
+    context_text = json.dumps(context, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    if len(context_text.encode("utf-8")) > config["context_max_bytes"]:
+        raise ValueError("generated CONTEXT.json exceeds context_max_bytes")
+
+    source = chapter_text(number)
+    names_path = ROOT / "docs" / "NAMES.md"
+    names_text = names_path.read_text(encoding="utf-8").rstrip()
+    known_names = {item["korean"] for item in exact_glossary_entries(source)}
+    seen_names: set[str] = set()
+    for row in update["names"]:
+        korean = row["korean"]
+        if korean not in source:
+            raise ValueError(f"new name is absent from source: {korean}")
+        if (
+            korean in seen_names
+            or korean in known_names
+            or re.search(rf"^\|\s*{re.escape(korean)}\s*\|", names_text, re.MULTILINE)
+        ):
+            raise ValueError(f"duplicate names ledger key: {korean}")
+        seen_names.add(korean)
+        names_text += f"\n| {korean} | **{row['english']}** | {row['notes']} |"
+
+    matched = {str(path.relative_to(ROOT)): path for path, _ in profile_entries(source)}
+    profile_texts = {path: path.read_text(encoding="utf-8") for path in matched.values()}
+    for item in update["profile_updates"]:
+        relative = item["path"]
+        if relative not in matched:
+            raise ValueError(f"profile update path was not listed in the packet: {relative}")
+        current, replacement = item["current"], item["replacement"]
+        prefix = next(
+            (f"- **{field}:**" for field in PROFILE_UPDATE_FIELDS if current.startswith(f"- **{field}:**")),
+            None,
+        )
+        if not prefix or not replacement.startswith(prefix):
+            raise ValueError(f"profile update must preserve an allowed field: {relative}")
+        path = matched[relative]
+        if profile_texts[path].count(current) != 1:
+            raise ValueError(f"profile update current line is not unique: {relative}")
+        profile_texts[path] = profile_texts[path].replace(current, replacement)
+
+    safe_line = re.compile(r"^- \*\*Safe through:\*\*.*$", re.MULTILINE)
+    for path, body in profile_texts.items():
+        if len(safe_line.findall(body)) != 1:
+            raise ValueError(f"profile requires one Safe through line: {path.relative_to(ROOT)}")
+        profile_texts[path] = safe_line.sub(f"- **Safe through:** Chapter {number}", body)
+
+    creations: dict[Path, str] = {}
+    for item in update["profile_creations"]:
+        filename = item["filename"]
+        if Path(filename).name != filename or not re.fullmatch(r"[A-Za-z0-9 .'-]+\.md", filename):
+            raise ValueError(f"invalid profile filename: {filename}")
+        if item["korean"] not in source:
+            raise ValueError(f"new profile name is absent from source: {item['korean']}")
+        path = ROOT / "characters" / filename
+        if path.exists() or path in creations:
+            raise ValueError(f"profile already exists: {path.relative_to(ROOT)}")
+        aliases = ", ".join(item["aliases"]) or "None"
+        creations[path] = f"""# {item["english"]} ({item["korean"]})
+
+- **Safe through:** Chapter {number}
+- **Aliases:** {aliases}
+- **Role:** {item["role"]}
+- **Personality:** {item["personality"]}
+- **Voice:** {item["voice"]}
+- **Relationships:** {item["relationships"]}
+- **Sources:** Korean source and accepted translation, Chapter {number}
+"""
+
+    beat_text = render_beat(number, update["beat"])
+    if len(beat_text.encode("utf-8")) > config["beat_max_bytes"]:
+        raise ValueError("generated chapter beat exceeds beat_max_bytes")
+    bounded_profiles(list(profile_texts.items()) + list(creations.items()))
+    return {
+        ROOT / "docs" / "CONTEXT.json": context_text,
+        ROOT / "docs" / "STATE.md": render_state(number, context, update["beat"]),
+        names_path: names_text + "\n",
+        paths(number)["beat"]: beat_text,
+        **profile_texts,
+        **creations,
+    }
+
+
+def command_update(number: int, dry_run: bool) -> None:
+    state, p = load(number)
+    require(state, post_revision_stage(number))
+    copy = reading_copy_path(p, number)
+    copy_key = "polished_sha256" if polish_due(number) else "revised_sha256"
+    if digest(copy) != state["artifacts"][copy_key]:
+        raise SystemExit("reading copy changed after the last recorded stage")
+    try:
+        from tools.context import build_update_packet, validate_beat
+        from tools.model_io import parse_json_object, validate_durable_update
+    except ModuleNotFoundError:
+        from context import build_update_packet, validate_beat
+        from model_io import parse_json_object, validate_durable_update
+    try:
+        packet = build_update_packet(number, copy.read_text(encoding="utf-8"))
+    except (ValueError, FileNotFoundError) as error:
+        raise SystemExit(str(error)) from None
+    packet_tokens = enforce_packet_budget("update", packet)
+    atomic_text(p["update_packet"], packet)
+    if dry_run:
+        return
+    raw, metrics = run_omp(
+        p["update_packet"],
+        project_config()["summary_model"],
+        960,
+        log_path=omp_log_path(number, "update"),
+    )
+    atomic_text(p["work"] / "update-raw.txt", raw)
+    try:
+        update = validate_durable_update(parse_json_object(raw), number)
+        files = durable_files(number, update)
+    except (ValueError, FileNotFoundError) as error:
+        record_failed_model_output(p["work"] / "update-raw.txt", raw, error)
+    changed = {
+        path: text
+        for path, text in files.items()
+        if not path.exists() or path.read_text(encoding="utf-8") != text
+    }
+    for path, text in changed.items():
+        atomic_text(path, text)
+    try:
+        validate_beat(p["beat"], number, project_config()["beat_max_bytes"])
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
+    file_hashes = {str(path.relative_to(ROOT)): digest(path) for path in changed}
+    atomic_json(p["update_result"], {
+        "version": 1, "chapter": number, "files": file_hashes, "update": update,
+    })
+    record_metric(p, "update_model", **metrics)
+    save(state, p, state["stage"], update_result_sha256=digest(p["update_result"]))
+
+
 def command_summarize(number: int) -> None:
     state, p = load(number)
     require(state, post_revision_stage(number))
+    if not durable_update_valid(state, p):
+        raise SystemExit(f"run: python tools/workflow.py update {number}")
     if not interval_due(number, "summary_interval"):
         raise SystemExit("this chapter does not end a summary block")
-    if not state_claims_completion(number):
-        raise SystemExit("update Last completed and Next chapter in docs/STATE.md before summarizing")
-    if not context_claims_completion(number):
-        raise SystemExit(f"update bounded docs/CONTEXT.json through chapter {number} before summarizing")
+    if not state_claims_completion(number) or not context_claims_completion(number):
+        raise SystemExit(f"generated durable state for chapter {number} is invalid")
     try:
         from tools.context import build_summary_packet, normalize_block_summary
     except ModuleNotFoundError:
@@ -638,12 +857,7 @@ def command_summarize(number: int) -> None:
     except ValueError as error:
         raise SystemExit(str(error)) from None
     atomic_text(p["checkpoint_summary"], summary)
-    record_metric(
-        p,
-        "summary_model",
-        **metrics,
-        packet_token_estimate=packet_tokens,
-    )
+    record_metric(p, "summary_model", **metrics)
     save(state, p, post_revision_stage(number), summary_sha256=digest(p["checkpoint_summary"]))
 
 
@@ -696,12 +910,12 @@ def checkpoint_summary_paths(number: int) -> list[Path]:
 def command_checkpoint(number: int) -> None:
     state, p = load(number)
     require(state, post_revision_stage(number))
+    if not durable_update_valid(state, p):
+        raise SystemExit(f"run: python tools/workflow.py update {number}")
     if not interval_due(number, "checkpoint_review_interval"):
         raise SystemExit("this chapter does not end a five-chapter block")
-    if not state_claims_completion(number):
-        raise SystemExit("update Last completed and Next chapter in docs/STATE.md before checkpoint review")
-    if not context_claims_completion(number):
-        raise SystemExit(f"update bounded docs/CONTEXT.json through chapter {number} before checkpoint review")
+    if not state_claims_completion(number) or not context_claims_completion(number):
+        raise SystemExit(f"generated durable state for chapter {number} is invalid")
     summary_paths = checkpoint_summary_paths(number)
     missing_summaries = [path for path in summary_paths if not path.exists()]
     if missing_summaries:
@@ -869,6 +1083,8 @@ def command_accept(number: int) -> None:
     state, p = load(number)
     expected = "CHECKPOINT_APPLIED" if interval_due(number, "checkpoint_review_interval") else post_revision_stage(number)
     require(state, expected)
+    if not durable_update_valid(state, p):
+        raise SystemExit(f"run: python tools/workflow.py update {number}")
     copy = reading_copy_path(p, number)
     validate_reading_copy(copy, number)
     copy_key = "polished_sha256" if polish_due(number) else "revised_sha256"
@@ -910,7 +1126,11 @@ def command_committed(number: int, commit: str) -> None:
         str(p["report"].relative_to(ROOT)),
         str(p["review_meta"].relative_to(ROOT)),
         str(p["beat"].relative_to(ROOT)),
+        str(p["update_packet"].relative_to(ROOT)),
+        str(p["update_result"].relative_to(ROOT)),
     }
+    update = json.loads(p["update_result"].read_text(encoding="utf-8"))
+    required.update(update["files"])
     if interval_due(number, "summary_interval"):
         required.update(
             {
@@ -960,14 +1180,14 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
         "status", "prepare", "draft", "drafted", "review", "revise",
-        "polish", "polished", "summarize", "checkpoint", "checkpointed", "accept",
-        "master",
+        "polish", "polished", "update", "summarize", "checkpoint", "checkpointed",
+        "accept", "master",
     ):
         item = sub.add_parser(name)
         item.add_argument("chapter", type=int)
         if name == "status":
             item.add_argument("--json", action="store_true")
-        if name == "review":
+        if name in {"review", "update"}:
             item.add_argument("--dry-run", action="store_true")
     committed = sub.add_parser("committed")
     committed.add_argument("chapter", type=int)
@@ -980,6 +1200,9 @@ def main() -> int:
         return 0
     if args.command == "review" and getattr(args, "dry_run", False):
         command_review(args.chapter, True)
+        return 0
+    if args.command == "update" and getattr(args, "dry_run", False):
+        command_update(args.chapter, True)
         return 0
     with hold_run_lock(ROOT, holder="workflow", chapter=args.chapter, stage=args.command):
         if args.command == "prepare":
@@ -996,6 +1219,8 @@ def main() -> int:
             command_polished(args.chapter)
         elif args.command == "polish":
             command_polish(args.chapter)
+        elif args.command == "update":
+            command_update(args.chapter, args.dry_run)
         elif args.command == "summarize":
             command_summarize(args.chapter)
         elif args.command == "checkpoint":

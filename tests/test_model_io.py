@@ -8,6 +8,7 @@ from tools.model_io import (
     validate_patchset,
     validate_range_review,
     validate_review,
+    validate_durable_update,
 )
 
 
@@ -57,6 +58,29 @@ class ModelIoTest(unittest.TestCase):
         })
         with self.assertRaisesRegex(ValueError, "overlap"):
             apply_review_replacements("Current.", review)
+
+    def test_durable_update_rejects_multiline_profile_patch(self):
+        value = {
+            "chapter": 4,
+            "beat": {"plot": ["Plot."], "continuity": [], "translation_decisions": []},
+            "context": {
+                "version": 1,
+                "safe_through": 4,
+                "continuity_sources": [4],
+                "active_continuity": ["Fact."],
+                "open_questions": ["Question?"],
+                "temporary_decisions": [],
+            },
+            "names": [],
+            "profile_updates": [{
+                "path": "characters/Hero.md",
+                "current": "- **Role:** Old\n- **Voice:** Old",
+                "replacement": "- **Role:** New",
+            }],
+            "profile_creations": [],
+        }
+        with self.assertRaisesRegex(ValueError, "one complete line"):
+            validate_durable_update(value, 4)
 
     def test_unresolved_major_checkpoint_finding_blocks_acceptance(self):
         review = self.review()

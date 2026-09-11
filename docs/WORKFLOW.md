@@ -66,6 +66,16 @@ returns a complete reading copy; deterministic QA must pass before durable
 updates, summary, checkpoint, or acceptance. Chapters before that cutoff keep
 the previous `REVISED` → accept path.
 
+`python tools/workflow.py update N` replaces the former manual durable-state
+step. One bounded no-tools call receives only the current source and final copy,
+current `CONTEXT.json` and names ledger, exact glossary matches, and compact
+matching profiles. The controller validates exact profile-line replacements,
+new names and profiles, context bounds, and chapter-local facts before generating
+`docs/STATE.md`, `docs/CONTEXT.json`, `docs/NAMES.md`, affected profiles, and the
+chapter beat. The packet and normalized result are
+`reviews/packets/update-NNNN.md` and `reviews/updates/NNNN.json`; their hashes
+gate summary, checkpoint, acceptance, and commit.
+
 Deterministic reports live in `reviews/qa/`; provider-reported phase usage,
 packet bytes and token estimates, output bytes, and elapsed time live in
 `reviews/metrics/`. Run `python tools/cost_report.py` to inspect aggregate
@@ -119,12 +129,13 @@ records remain excluded from exact provider totals.
 
 ## Checkpoints and Summaries
 
-Summary and checkpoint-review intervals are independent in
-`docs/workflow.json`. After each revised chapter, write a compact beat at
-`summaries/beats/NNNN.md` from that chapter only. At the summary interval,
-`python tools/workflow.py summarize N` builds a bounded packet from the previous
-block summary, this block's beats, and `docs/CONTEXT.json` — not the five full
-reading copies — and writes `summaries/START-END.md`. Keep those compact plot
+Summary and checkpoint-review intervals are independent in `docs/workflow.json`.
+After each revised or polished chapter, `python tools/workflow.py update N`
+generates a compact beat at `summaries/beats/NNNN.md` from that chapter only.
+At the summary interval, `python tools/workflow.py summarize N` builds a bounded
+packet from the previous block summary, this block's beats, and
+`docs/CONTEXT.json` — not the five full reading copies — and writes
+`summaries/START-END.md`. Keep those compact plot
 summaries at the configured interval. Initially review every five chapters. After
 at least the configured evaluation window, inspect checkpoint-only finding yield:
 

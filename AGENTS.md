@@ -74,13 +74,13 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 - Reviews are durable JSON with generated Markdown reading reports. Checkpoint
   dispositions remain structured and unresolved critical or major checkpoint
   findings block acceptance.
-- At `POLISHED`, or at `REVISED` when polish is skipped, update durable
-  terminology in `docs/NAMES.md` or the compendium, affected safe profiles,
-  `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from this
-  chapter only. Each beat's first nonblank line must be exactly `# Chapter N`,
-  followed by `## Plot`, `## Continuity`, and `## Translation Decisions`. Do not
-  use `# Chapter N Beat`. Do not load other reading copies to summarize. When
-  status asks for it, run `python tools/workflow.py summarize N`.
+- At `POLISHED`, or at `REVISED` when polish is skipped, run
+  `python tools/workflow.py update N`. Its bounded no-tools model call returns
+  structured chapter facts; the controller validates and deterministically
+  writes `docs/NAMES.md`, affected safe profiles, `docs/CONTEXT.json`,
+  `docs/STATE.md`, and `summaries/beats/NNNN.md`. It records the packet and
+  exact output under `reviews/`. Do not edit those generated updates manually.
+  When status asks for it, run `python tools/workflow.py summarize N`.
 - Follow configured checkpoint actions. Never substitute `/advisor`, a hub,
   task agent, nested session, or direct `omp` invocation. `run_next.py` must
   wait for each `workflow.py` command; do not background it.

@@ -37,6 +37,40 @@ class ContextPacketTest(unittest.TestCase):
         self.assertNotIn("Latest completed summary", polish_packet)
         self.assertNotIn("<<<TRANSLATION>>>", polish_packet)
 
+    def test_update_packet_is_bounded_to_current_durable_inputs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "docs").mkdir()
+            (root / "characters").mkdir()
+            (root / "docs" / "workflow.json").write_text(json.dumps({
+                "continuity_source_limit": 2,
+                "profile_max_bytes": 4096,
+                "profile_total_max_bytes": 12288,
+            }), encoding="utf-8")
+            (root / "docs" / "CONTEXT.json").write_text(
+                json.dumps(self.active()), encoding="utf-8"
+            )
+            (root / "docs" / "NAMES.md").write_text(
+                "# Names\n\n| Korean | English | Notes |\n|---|---|---|\n", encoding="utf-8")
+            source_path = root / "chapter.txt"
+            source_path.write_text("주인공", encoding="utf-8")
+            profile_path = root / "characters" / "Hero.md"
+            profile = "# Hero (주인공)\n\n- **Safe through:** Chapter 4\n- **Voice:** Direct\n"
+            profile_path.write_text(profile, encoding="utf-8")
+            with (
+                patch.object(context, "ROOT", root),
+                patch.object(context, "chapter_text", return_value="주인공"),
+                patch.object(context, "chapter_source_path", return_value=source_path),
+                patch.object(context, "exact_glossary_entries", return_value=[]),
+                patch.object(context, "profile_entries", return_value=[(profile_path, profile)]),
+            ):
+                packet = context.build_update_packet(5, "# Chapter 5\n\nFinal.\n")
+        self.assertIn("# Durable State Update — Chapter 5", packet)
+        self.assertIn("# Chapter 5\n\nFinal.", packet)
+        self.assertIn('"profile_updates"', packet)
+        self.assertNotIn("Latest completed summary", packet)
+        self.assertNotIn("compendium.md", packet)
+
     def test_compact_profiles_keep_voice_and_drop_archived_continuity(self):
         body = """# Jin Taekyung (진태경)
 
