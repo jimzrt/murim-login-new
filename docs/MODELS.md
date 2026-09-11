@@ -4,9 +4,7 @@ Translation roles live in `models` in [`docs/workflow.json`](workflow.json):
 
 - `draft`
 - `review` (chapter review and retrofit review)
-- `revision` (chapter revision and retrofit refinement)
 - `summary`
-- `coordinator`
 - `checkpoint` (optional; five-chapter checkpoint review; defaults to `review`)
 - `polish`
 
@@ -16,9 +14,9 @@ Mastering roles live in `models` in [`docs/mastering.json`](mastering.json):
 - `adjudicator`
 
 Do not copy those IDs into docs or defaults elsewhere. Call sites read the
-resolved `draft_model`, `review_model`, `polish_model`, `summary_model`,
-`coordinator_model`, and `checkpoint_model` keys from `project_config()`, and
-mastering selectors from `docs/mastering.json`.
+resolved `draft_model`, `review_model`, `polish_model`, `summary_model`, and
+`checkpoint_model` keys from `project_config()`, and mastering selectors from
+`docs/mastering.json`.
 
 Ordered provider fallbacks for the translation and mastering selectors are in
 [`.omp/config.yml`](../.omp/config.yml). OpenAI models prefer the Codex

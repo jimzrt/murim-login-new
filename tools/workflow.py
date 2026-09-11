@@ -25,14 +25,13 @@ STAGES = (
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
-MODEL_ROLES = ("draft", "review", "polish", "summary", "coordinator")
+MODEL_ROLES = ("draft", "review", "polish", "summary")
 DEFAULT_CONFIG = {
     "models": {
         "draft": "openai-codex/gpt-5.6-luna:high",
         "review": "cursor/cursor-grok-4.6:medium",
         "polish": "cursor/cursor-grok-4.6:medium",
         "summary": "openai-codex/gpt-5.6-luna:high",
-        "coordinator": "openai-codex/gpt-5.6-luna:high",
     },
     "context_max_bytes": 16384,
     "continuity_source_limit": 2,

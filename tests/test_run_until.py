@@ -50,7 +50,7 @@ class RunUntilTest(unittest.TestCase):
     def test_runs_each_chapter_and_stops_on_failure(self):
         calls: list[int] = []
 
-        def fake_run(model):
+        def fake_run():
             current = run_until.next_chapter()
             calls.append(current)
             if current == 14:
@@ -94,7 +94,7 @@ class RunUntilTest(unittest.TestCase):
                 "from pathlib import Path\n"
                 "sys.path.insert(0, sys.argv[1])\n"
                 "from tools.run_lock import hold_run_lock\n"
-                "with hold_run_lock(Path(sys.argv[2]), holder='run_next', chapter=12, stage='coordinator'):\n"
+                "with hold_run_lock(Path(sys.argv[2]), holder='run_next', chapter=12, stage='workflow'):\n"
                 "    time.sleep(30)\n",
                 str(repo),
                 str(self.root),
@@ -131,11 +131,11 @@ class RunUntilTest(unittest.TestCase):
     def test_nested_run_next_joins_run_until_lock(self):
         from tools.run_lock import hold_run_lock, read_payload, lock_path
 
-        def fake_run(model):
-            with hold_run_lock(self.root, holder="run_next", chapter=13, stage="coordinator"):
+        def fake_run():
+            with hold_run_lock(self.root, holder="run_next", chapter=13, stage="workflow"):
                 payload = read_payload(lock_path(self.root))
                 self.assertEqual(payload["holder"], "run_until")
-                self.assertEqual(payload["stage"], "coordinator")
+                self.assertEqual(payload["stage"], "workflow")
             write_state(self.root, 14)
             return 0
 

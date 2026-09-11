@@ -25,10 +25,10 @@ accepted translation is created only by `accept`.
 Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
 `workflow.py` commands, and `audit_range.py` take an exclusive flock on
 `.work/run.lock` and write JSON there (pid, holder, chapter, stage). A second
-start fails with that status. Nested `run_next` under `run_until`, and
-coordinator `workflow.py` calls, join the same lock. The kernel drops the lock
-if the process dies; the file is gitignored. Inspect with
-`python tools/run_lock.py`. Status and dry-run commands do not take the lock.
+start fails with that status. Nested `run_next` under `run_until` and child
+`workflow.py` commands join the same lock. The kernel drops the lock if the
+process dies; the file is gitignored. Inspect with `python tools/run_lock.py`.
+Status and dry-run commands do not take the lock.
 
 ## Bounded Context Hygiene
 
@@ -86,31 +86,22 @@ on-demand usage is account-wide and cannot be attributed to a chapter.
 ## Routine Next-Chapter Run and Usage
 
 
-Only one chapter run may be active. `run_next.py`, `run_until.py`, mutating
-`workflow.py` commands, and `audit_range.py` take an exclusive flock on
-`.work/run.lock` and write JSON there (pid, holder, chapter, stage). A second
-start fails with that status. Nested `run_next` under `run_until`, and
-coordinator `workflow.py` calls, join the same lock. The kernel drops the lock
-if the process dies; the file is gitignored. Inspect with
-`python tools/run_lock.py`.
-
 From a clean Git worktree, run:
 
 ```bash
 python tools/run_next.py
 ```
 
-The wrapper reads `- Next chapter: N` from `docs/STATE.md`, displays coordinator
-text and the full tool arguments as they run, runs exactly that chapter through
-`ACCEPTED`, records the coordinator's own JSON usage, runs mastering (Sol edit,
-DeepSeek adjudication, assemble, QA) and promotes the verified copy, prints the
-chapter cost report plus a project total, commits the accepted change set,
-registers the commit, and stops. The coordinator session is bash-only (no hub or nested
-agents), waits for each `workflow.py` command, and uses
-`.omp/coordinator-overlay.yml` so OMP cannot auto-background those calls. On a checkpoint chapter, applied review patches to earlier
-reading copies in the same block are included in `Accept Chapter N`. The inner
-chapter calls and outer coordinator are therefore all attributed to the same
-chapter before its checkpoint is created.
+The wrapper reads `- Next chapter: N` from `docs/STATE.md`, asks
+`workflow.py status N` for every transition, and executes only the exact command it reports.
+No coordinator model or tool-driving agent is involved. After `ACCEPTED`, it
+runs mastering, promotes the verified copy, prints chapter and project cost
+reports, commits the accepted change set, registers the commit, and stops.
+
+If status reports a human action instead of one exact `workflow.py` command
+(currently checkpoint dispositions), the wrapper stops without guessing.
+Complete that action and rerun `python tools/run_next.py`; it resumes the same
+transaction.
 
 Inspect exact usage with:
 

@@ -347,14 +347,12 @@ class WorkflowTest(unittest.TestCase):
                 "review": "provider/review:medium",
                 "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
-                "coordinator": "provider/coordinator:high",
             }
         })
         self.assertEqual(resolved["draft_model"], "provider/draft:high")
         self.assertEqual(resolved["review_model"], "provider/review:medium")
         self.assertEqual(resolved["polish_model"], "provider/polish:high")
         self.assertEqual(resolved["summary_model"], "provider/summary:high")
-        self.assertEqual(resolved["coordinator_model"], "provider/coordinator:high")
         self.assertEqual(resolved["checkpoint_model"], "provider/review:medium")
         self.assertEqual(resolved["models"]["draft"], "provider/draft:high")
 
@@ -366,7 +364,6 @@ class WorkflowTest(unittest.TestCase):
                 "revision": "provider/revision:high",
                 "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
-                "coordinator": "provider/coordinator:high",
                 "checkpoint": "provider/checkpoint:medium",
             }
         })
@@ -379,9 +376,7 @@ class WorkflowTest(unittest.TestCase):
                 "models": {
                     "draft": "provider/draft:high",
                     "review": "provider/review:medium",
-                    "revision": "provider/revision:high",
                     "polish": "provider/polish:high",
-                    "summary": "provider/summary:high",
                 }
             })
 

@@ -1,8 +1,8 @@
-import io
 import tempfile
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from types import SimpleNamespace
+from unittest.mock import call, patch
 
 from tools import run_next
 
@@ -19,7 +19,8 @@ class RunNextTest(unittest.TestCase):
             with patch.object(run_next, "ROOT", root):
                 self.assertEqual(run_next.next_chapter(), 9)
 
-    def test_checkpoint_allowlist_includes_block_translations(self):
+    def test_checkpoint_allowlist_includes_generated_state_and_block_translations(self):
+        self.assertTrue(run_next.allowed_change("docs/NAMES.md", 9))
         self.assertTrue(run_next.allowed_change("translations/0009.md", 9))
         self.assertTrue(run_next.allowed_change("translations/0005.md", 9))
         self.assertTrue(run_next.allowed_change("translations/0008.md", 9))
@@ -30,191 +31,40 @@ class RunNextTest(unittest.TestCase):
         self.assertFalse(run_next.allowed_change("characters/spoilers/future.md", 9))
         self.assertFalse(run_next.allowed_change("tools/workflow.py", 9))
 
-    def test_coordinator_command_disables_hub_and_auto_background(self):
-        command = run_next.coordinator_command(14, "provider/coordinator:high")
-        self.assertEqual(command[command.index("--tools") + 1], run_next.COORDINATOR_TOOLS)
-        self.assertNotIn("hub", command[command.index("--tools") + 1])
-        self.assertNotIn("task", command[command.index("--tools") + 1])
-        self.assertEqual(command[command.index("--config") + 1], str(run_next.COORDINATOR_OVERLAY))
-        self.assertEqual(command[command.index("--max-time") + 1], str(run_next.COORDINATOR_MAX_TIME))
-        self.assertIn("--no-pty", command)
-        self.assertIn("--no-extensions", command)
-        self.assertIn("checkpoint dispositions", run_next.COORDINATOR_SYSTEM)
-        self.assertIn("timeout=3600", run_next.COORDINATOR_SYSTEM)
-        self.assertIn("keep every required key", run_next.COORDINATOR_SYSTEM)
-        self.assertIn("temporary_decisions", run_next.COORDINATOR_SYSTEM)
-        self.assertIn("do not rerun that model", run_next.COORDINATOR_SYSTEM)
-        self.assertIn("Do not run mastering.py", run_next.COORDINATOR_SYSTEM)
-        prompt = run_next.coordinator_command(14, "provider/coordinator:high")[-1]
-        self.assertIn("through ACCEPTED", prompt)
-        self.assertIn("Do not master", prompt)
-        overlay = run_next.COORDINATOR_OVERLAY.read_text(encoding="utf-8")
-        self.assertIn("autoBackground:\n    enabled: false", overlay)
-        self.assertIn("hub: deny", overlay)
-        self.assertIn("task: deny", overlay)
-        self.assertIn("async:\n  enabled: false", overlay)
+    def test_runner_executes_only_each_reported_workflow_action(self):
+        statuses = [
+            {"stage": "READY", "next_action": "python tools/workflow.py prepare 14"},
+            {"stage": "CONTEXT_READY", "next_action": "python tools/workflow.py draft 14"},
+            {"stage": "ACCEPTED", "next_action": "python tools/workflow.py master 14"},
+        ]
+        lock = SimpleNamespace(update=lambda **_values: None)
+        with (
+            patch.object(run_next, "workflow_status", side_effect=statuses),
+            patch.object(run_next, "run_workflow_command") as command,
+        ):
+            run_next.run_to_accepted(14, lock)
+        self.assertEqual(command.call_args_list, [
+            call(14, "python tools/workflow.py prepare 14"),
+            call(14, "python tools/workflow.py draft 14"),
+        ])
 
-    def test_summarizes_workflow_and_file_tool_args(self):
-        self.assertEqual(
-            run_next.summarize_tool_args("bash", {"command": "python tools/workflow.py status 9"}),
-            "python tools/workflow.py status 9",
-        )
-        self.assertEqual(
-            run_next.summarize_tool_args("bash", {
-                "command": "python tools/workflow.py draft 9",
-                "timeout": 120,
-            }),
-            "python tools/workflow.py draft 9  (timeout=120)",
-        )
-        self.assertEqual(
-            run_next.summarize_tool_args("read", {"path": ".work/0009/draft.md"}),
-            "path=.work/0009/draft.md",
-        )
-        self.assertIn(
-            "description=Apply checkpoint findings",
-            run_next.summarize_tool_args("hub", {
-                "description": "Apply checkpoint findings",
-                "prompt": "python tools/workflow.py draft 14",
-            }),
-        )
-        self.assertIn(
-            "prompt=python tools/workflow.py draft 14",
-            run_next.summarize_tool_args("hub", {
-                "description": "Apply checkpoint findings",
-                "prompt": "python tools/workflow.py draft 14",
-            }),
-        )
-        self.assertEqual(
-            run_next.format_tool_start("bash", {"command": "python tools/workflow.py status 9"}),
-            "→ bash  python tools/workflow.py status 9",
-        )
-        self.assertEqual(
-            run_next.format_tool_start("read", {"path": ".work/0009/draft.md"}),
-            "→ read  path=.work/0009/draft.md",
-        )
+    def test_manual_checkpoint_action_stops_without_guessing(self):
+        action = "apply or disposition checkpoint findings, then: python tools/workflow.py checkpointed 14"
+        with self.assertRaisesRegex(SystemExit, "manual action"):
+            run_next.run_workflow_command(14, action)
 
-    def test_rejects_hub_and_task(self):
-        with self.assertRaises(SystemExit) as error:
-            run_next.reject_forbidden_tool({
-                "type": "tool_execution_start",
-                "toolName": "hub",
-                "args": {
-                    "description": "wait for draft",
-                    "prompt": "python tools/workflow.py draft 14",
-                },
-            })
-        self.assertIn("forbidden tool hub", str(error.exception))
-        self.assertIn("python tools/workflow.py draft 14", str(error.exception))
-        run_next.reject_forbidden_tool({
-            "type": "tool_execution_start",
-            "toolName": "bash",
-            "args": {"command": "python tools/workflow.py draft 14"},
-        })
+    def test_workflow_command_rejects_another_chapter(self):
+        with self.assertRaisesRegex(SystemExit, "manual action"):
+            run_next.run_workflow_command(14, "python tools/workflow.py draft 15")
 
-    def test_progress_end_lines_include_status_command_and_elapsed(self):
-        times = iter([10.0, 171.2, 200.0, 200.4])
-        renderer = run_next.ProgressRenderer(clock=lambda: next(times))
-        self.assertEqual(
-            renderer.line({
-                "type": "tool_execution_start",
-                "toolCallId": "draft",
-                "toolName": "bash",
-                "args": {"command": "python tools/workflow.py draft 9"},
-            }),
-            "→ bash  python tools/workflow.py draft 9",
-        )
-        self.assertEqual(
-            renderer.line({
-                "type": "tool_execution_end",
-                "toolCallId": "draft",
-                "toolName": "bash",
-                "isError": False,
-                "result": {"content": [{"type": "text", "text": "ok"}]},
-            }),
-            "✓ bash  python tools/workflow.py draft 9  161s",
-        )
-        self.assertEqual(
-            renderer.line({
-                "type": "tool_execution_start",
-                "toolCallId": "status",
-                "toolName": "bash",
-                "args": {"command": "python tools/workflow.py status 9"},
-            }),
-            "→ bash  python tools/workflow.py status 9",
-        )
-        self.assertEqual(
-            renderer.line({
-                "type": "tool_execution_end",
-                "toolCallId": "status",
-                "toolName": "bash",
-                "isError": False,
-                "result": {"content": [{
-                    "type": "text",
-                    "text": "Chapter: 9\nStage: CONTEXT_READY\nNext action: python tools/workflow.py draft 9\n",
-                }]},
-            }),
-            "✓ CONTEXT_READY; next: python tools/workflow.py draft 9",
-        )
+    def test_workflow_command_runs_without_an_omp_coordinator(self):
+        completed = SimpleNamespace(returncode=0)
+        with patch.object(run_next.subprocess, "run", return_value=completed) as runner:
+            run_next.run_workflow_command(14, "python tools/workflow.py draft 14")
+        command = runner.call_args.args[0]
+        self.assertEqual(command[-2:], ["draft", "14"])
+        self.assertNotIn("omp", command)
 
-    def test_timeout_results_are_logged(self):
-        times = iter([1.0, 121.0])
-        renderer = run_next.ProgressRenderer(clock=lambda: next(times))
-        renderer.line({
-            "type": "tool_execution_start",
-            "toolCallId": "hub",
-            "toolName": "hub",
-            "args": {
-                "description": "wait for draft",
-                "prompt": "python tools/workflow.py draft 14",
-            },
-        })
-        line = renderer.line({
-            "type": "tool_execution_end",
-            "toolCallId": "hub",
-            "toolName": "hub",
-            "isError": True,
-            "result": {"content": "python tools/workflow.py draft 14 timed out after 120 seconds"},
-        })
-        self.assertIn("✗ hub", line)
-        self.assertIn("timed out after 120 seconds", line)
-        self.assertIn("120s", line)
-
-    def test_assistant_text_does_not_glue_to_tool_lines(self):
-        renderer = run_next.ProgressRenderer(clock=lambda: 0.0)
-        buffer = io.StringIO()
-        with patch("sys.stdout", buffer):
-            run_next.render_event({
-                "type": "message_update",
-                "assistantMessageEvent": {"type": "text_delta", "delta": "it should wait"},
-            }, renderer)
-            run_next.render_event({
-                "type": "tool_execution_start",
-                "toolCallId": "draft",
-                "toolName": "bash",
-                "args": {"command": "python tools/workflow.py draft 14"},
-            }, renderer)
-        output = buffer.getvalue()
-        self.assertIn("\nit should wait\n", output)
-        self.assertIn("→ bash  python tools/workflow.py draft 14\n", output)
-
-
-    def test_external_head_move_is_not_a_coordinator_commit(self):
-        calls = {"rev-parse": "bbbbbbbb", "log": "Publish the HTML reader on GitHub Pages."}
-
-        def fake_git(*args, capture=True):
-            if args[:2] == ("rev-parse", "--verify"):
-                return calls["rev-parse"]
-            if args[:2] == ("log", "-1"):
-                return calls["log"]
-            raise AssertionError(args)
-
-        with patch.object(run_next, "git", side_effect=fake_git):
-            run_next.unexpected_coordinator_commit("aaaaaaaa", 17)
-            calls["log"] = "Accept Chapter 17"
-            with self.assertRaises(SystemExit) as error:
-                run_next.unexpected_coordinator_commit("aaaaaaaa", 17)
-            self.assertIn("coordinator committed unexpectedly", str(error.exception))
 
 if __name__ == "__main__":
-
     unittest.main()

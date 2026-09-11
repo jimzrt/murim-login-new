@@ -40,15 +40,15 @@ class RunLockTest(unittest.TestCase):
 
     def test_same_process_joins_and_keeps_owner_identity(self):
         with hold_run_lock(self.root, holder="run_until", chapter=27, stage="starting", until=100):
-            with hold_run_lock(self.root, holder="run_next", chapter=27, stage="coordinator") as nested:
+            with hold_run_lock(self.root, holder="run_next", chapter=27, stage="workflow") as nested:
                 self.assertFalse(nested.owned)
                 payload = read_payload(nested.path)
                 self.assertEqual(payload["holder"], "run_until")
-                self.assertEqual(payload["stage"], "coordinator")
+                self.assertEqual(payload["stage"], "workflow")
                 self.assertEqual(payload["until"], 100)
                 self.assertEqual(payload["pid"], os.getpid())
             payload = read_payload(lock_path(self.root))
-            self.assertEqual(payload["stage"], "coordinator")
+            self.assertEqual(payload["stage"], "workflow")
             self.assertNotEqual(payload.get("stage"), "released")
         payload = read_payload(lock_path(self.root))
         self.assertEqual(payload["stage"], "released")
@@ -125,7 +125,7 @@ class RunLockTest(unittest.TestCase):
                     "sys.path.insert(0, sys.argv[1])\n"
                     "from tools.run_lock import hold_run_lock, read_payload, lock_path\n"
                     "root = Path(sys.argv[2])\n"
-                    "with hold_run_lock(root, holder='run_next', chapter=27, stage='coordinator') as lock:\n"
+                    "with hold_run_lock(root, holder='run_next', chapter=27, stage='workflow') as lock:\n"
                     "    print(json.dumps({'owned': lock.owned, **read_payload(lock_path(root))}))\n",
                     str(REPO),
                     str(self.root),
@@ -139,7 +139,7 @@ class RunLockTest(unittest.TestCase):
             payload = json.loads(result.stdout)
             self.assertFalse(payload["owned"])
             self.assertEqual(payload["holder"], "run_until")
-            self.assertEqual(payload["stage"], "coordinator")
+            self.assertEqual(payload["stage"], "workflow")
             self.assertEqual(payload["until"], 100)
 
 

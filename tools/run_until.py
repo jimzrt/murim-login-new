@@ -37,17 +37,14 @@ def planned_chapters(until: int) -> list[int]:
     return list(range(start, until + 1))
 
 
-def run_next_chapter(model: str | None) -> int:
+def run_next_chapter() -> int:
     command = [sys.executable, str(ROOT / "tools" / "run_next.py")]
-    if model:
-        command.extend(["--model", model])
     return subprocess.run(command, cwd=ROOT).returncode
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("until", type=int, help="stop after this chapter is committed")
-    parser.add_argument("--model", help="forwarded to run_next.py")
     parser.add_argument("--dry-run", action="store_true", help="print the plan and exit")
     args = parser.parse_args()
     chapters = planned_chapters(args.until)
@@ -75,7 +72,7 @@ def main() -> int:
                 )
             lock.update(chapter=chapter, stage="run_next")
             print(f"\n=== Chapter {chapter} ({index}/{len(chapters)}) ===", flush=True)
-            code = run_next_chapter(args.model)
+            code = run_next_chapter()
             if code:
                 lock.update(stage="failed")
                 print(

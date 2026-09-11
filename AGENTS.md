@@ -10,10 +10,10 @@ For the next chapter, the preferred entry point is:
 python tools/run_next.py
 ```
 
-It reads the exact next chapter from `docs/STATE.md`, runs the controller through
-`ACCEPTED`, records the coordinator's exact OMP JSON usage, runs the two-model
-mastering overlay, promotes the verified mastered copy into `translations/`,
-creates `Accept Chapter N`, registers that commit, and stops at `COMMITTED`. It
+It reads the exact next chapter from `docs/STATE.md`, executes each controller
+action reported by `status` through `ACCEPTED`, runs the two-model mastering
+overlay, promotes the verified mastered copy into `translations/`, creates
+`Accept Chapter N`, registers that commit, and stops at `COMMITTED`. It
 requires a clean Git worktree. An exclusive lock at `.work/run.lock` prevents a
 second `run_next`/`run_until` from overlapping; inspect it with
 `python tools/run_lock.py`. When invoked by this wrapper, stop at `ACCEPTED`;
