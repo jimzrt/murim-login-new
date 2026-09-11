@@ -1,12 +1,12 @@
 {
-  "chapter": 8,
+  "chapter": 9,
   "errors": [],
   "metrics": {
-    "length_ratio": 2.3,
-    "source_characters": 5384,
-    "source_paragraphs": 166,
-    "translation_characters": 12383,
-    "translation_paragraphs": 162
+    "length_ratio": 2.382,
+    "source_characters": 6332,
+    "source_paragraphs": 205,
+    "translation_characters": 15084,
+    "translation_paragraphs": 214
   },
   "passed": true,
   "version": 1,
@@ -14,8 +14,8 @@
     {
       "code": "terminology",
       "details": {
-        "korean": "천무학관",
-        "preferred": "Heaven's Gate Temple"
+        "korean": "단전",
+        "preferred": "dantian"
       },
       "message": "matched preferred term is absent"
     },
@@ -30,16 +30,16 @@
     {
       "code": "terminology",
       "details": {
-        "korean": "기루",
-        "preferred": "pleasure house"
+        "korean": "문주",
+        "preferred": "Sect Leader"
       },
       "message": "matched preferred term is absent"
     },
     {
       "code": "terminology",
       "details": {
-        "korean": "진가심법",
-        "preferred": "Jin Family's Cultivation Technique"
+        "korean": "소문주",
+        "preferred": "Young Sect Leader"
       },
       "message": "matched preferred term is absent"
     },
@@ -64,6 +64,14 @@
       "details": {
         "korean": "상태",
         "preferred": "Status"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "본가",
+        "preferred": "our family / this family"
       },
       "message": "matched preferred term is absent"
     }

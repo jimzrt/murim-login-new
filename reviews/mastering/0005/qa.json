@@ -23,22 +23,6 @@
     {
       "code": "terminology",
       "details": {
-        "korean": "경지",
-        "preferred": "realm / realm stage"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
-        "korean": "보법",
-        "preferred": "manoeuvre technique / footwork technique"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
         "korean": "운기조식",
         "preferred": "circulate one's qi"
       },

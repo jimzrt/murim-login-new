@@ -1,8 +1,8 @@
 # Chapter 8
 
-“There are no abnormalities.”
+“There’s nothing wrong with him.”
 
-That was the physician’s conclusion. I nodded inwardly at his confident tone. He was telling the truth.
+That was the physician’s conclusion. Hearing the certainty in his voice, I nodded to myself. He was right.
 
 *There’s nothing wrong with my brain.*
 
@@ -10,25 +10,25 @@ I was simply inhabiting this body.
 
 But someone didn’t seem satisfied with the diagnosis.
 
-“Then why can’t he remember?”
+“Then why can’t he remember anything?”
 
-The dignified atmosphere. The commanding voice. I knew his name now.
+A dignified air and a commanding voice. I knew his name now.
 
 *Jin Wikyung.*
 
-Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan, Jin Wikyung. Right. He really wasn’t my father.
+Jin Taekyung’s eldest brother and the Lesser Family Head of the Jin Family of Taiyuan. Right. He really wasn’t my father.
 
 *That guy was practically tearing up earlier.*
 
-Now he had put on a mask of stern solemnity and seriousness, acting as if nothing had happened.
+Now he was pretending nothing had happened, his stern, solemn, serious mask firmly back in place.
 
-The innocent physician fumbled for an answer.
+The poor physician fumbled for an answer.
 
-“Well, that is certainly my assessment, but there can occasionally be exceptions…”
+“Well, that is certainly my diagnosis, but there can occasionally be exceptions…”
 
 “That will do. You may leave.”
 
-The physician left with a wounded expression, and Jin Wikyung immediately moved close to me as if he had been waiting for the chance. His voice overflowed with affection and concern.
+The physician left looking wounded. As if he had been waiting for the chance, Jin Wikyung immediately moved closer. His voice overflowed with affection and concern.
 
 “You truly don’t remember?”
 
@@ -36,29 +36,29 @@ The physician left with a wounded expression, and Jin Wikyung immediately moved 
 
 “Not a thing?”
 
-I quietly nodded. I had already finished calculating how I was going to act.
+I quietly nodded. I had already worked out how I was going to play this.
 
 *Let’s keep going like this.*
 
-An amnesiac patient—the kind I had only ever seen in dramas. There was no better situation for me. I didn’t need to make an effort to fit into the game’s circumstances, and I didn’t even need to gather information.
+Amnesia—the kind I had only ever seen in dramas. Nothing could have been more convenient in my current situation. I didn’t have to struggle to fit into the game’s setting or even gather information.
 
-All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation unfold on its own. Just like now.
+All I had to do was lie still, blink at everyone with an expression that said *I don’t know anything*, and let the situation take care of itself. Just like now.
 
-“Do you remember what you said a moment ago?”
+“Do you remember what you just said?”
 
 “What did I say?”
 
-Thinking that I had lost my memory, Jin Wikyung told me a few basic facts. That was how I learned his identity.
+Believing that I had lost my memory, Jin Wikyung had told me a few basic facts. That was how I had learned who he was.
 
 “Tell me my name.”
 
 “Jin Wikyung. The Lesser Family Head of the Jin Family of Taiyuan.”
 
-“Age?”
+“How old am I?”
 
 “Thirty-five.”
 
-Good grief. He was in his thirties with that face? And apparently, he was still an unmarried bachelor.
+Good grief. He was in his thirties with that face? Apparently, he was still a bachelor too.
 
 “What about our parents?”
 
@@ -66,17 +66,17 @@ Good grief. He was in his thirties with that face? And apparently, he was still 
 
 “Correct. And your second brother?”
 
-“Jin Mukyung, the Heaven Shaking Sword. Twenty-five years old. Currently a cadet at Heaven’s Gate Temple.”
+“Jin Mukyung, the Heaven Shaking Sword. Twenty-five. Currently a cadet at Heaven’s Gate Temple.”
 
-I had no idea where Heaven’s Gate Temple was located. I was simply parroting back everything I had heard.
+I had no idea where Heaven’s Gate Temple was. I was simply parroting back what I had heard.
 
-Jin Wikyung mechanically repeated “Correct, correct” to each of my answers, then tilted his head.
+Jin Wikyung had been mechanically saying, “Correct, correct,” after each answer, but now he tilted his head.
 
 “The Heaven Shaking Sword? Did I tell you his sobriquet too?”
 
 No. The coachman had told me that.
 
-The moment our eyes met, I grabbed my forehead.
+The moment our eyes met, I clutched my forehead.
 
 “Ah, my head! My head hurts!”
 
@@ -90,9 +90,9 @@ This was practically a cheat code.
 
 Leaving the physician’s final words behind, I walked out of Medicine King Hall. A servant with a plain, friendly face was waiting for me at the entrance.
 
-“I’ll guide you to your quarters, Young Master.”
+“I’ll show you to your quarters, Young Master.”
 
-The servant walked ahead without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he quietly explained what they were.
+The servant set off without hesitation. He already seemed to know that I had lost my memory, because whenever we passed a building or a person, he would explain who or what they were in a quiet voice.
 
 *A guide, an errand boy, and an encyclopedia.*
 
@@ -104,17 +104,17 @@ He was busy with his duties, so this was probably his way of looking after me.
 
 At last, we stopped in front of a two-story wooden building.
 
-Weren’t buildings like this usually called pavilions in China? It had a rather impressive old-fashioned charm.
+Wasn’t this kind of building called a pavilion in China? It had a distinctly old-fashioned charm.
 
 “Wow.”
 
 It was unbelievably spacious, too. The moment the servant opened the door, my jaw dropped.
 
-“The second floor contains your bedroom. Bells have been installed throughout the building, so please ring one if you need anything.”
+“Your bedroom is on the second floor. Bells have been installed throughout the building, so please ring one if you need anything.”
 
-After the servant left, I came to my senses and began exploring the pavilion. The first floor alone looked to be more than three hundred square meters.
+Once the servant left, I collected myself and began exploring the pavilion. The first floor alone looked to be well over three hundred square meters.
 
-To someone who had lived in a goshiwon room measuring barely seven square meters,[^1] this was no different from an Olympic stadium.
+To someone who had lived in a goshiwon room barely seven square meters in size,[^1] it might as well have been an Olympic stadium.
 
 *This is the first time I’ve ever envied an NPC.*
 
@@ -124,23 +124,23 @@ There were six rooms on the first floor alone. A sudden wave of curiosity rose i
 
 Treasures? Martial arts manuals? Amazing items?
 
-I didn’t care what it was. I opened the nearest door.
+I didn’t care what it was. I flung open the nearest door.
 
 “Whoa.”
 
-A gasp escaped me the moment I opened it. The room was bright despite having no fluorescent lights. Silk clothes filled the shelves lining the walls. There were an astonishing number of them, even at a glance.
+The exclamation slipped out the moment the door opened. There were no fluorescent lights, yet the room was bright—thanks to the silk clothes packed onto the shelves along the walls. There was an astonishing amount of them, even at a glance.
 
 Of course, it wasn’t what I was looking for.
 
 *This bastard has a lot of clothes.*
 
-A club rat—no, a pleasure-house regular. I clicked my tongue and closed the door. Then I went straight to the second room and threw that door open, too.
+A club rat—no, a pleasure-house regular through and through. I clicked my tongue, closed the door, and went straight to the second room. Then I threw that door open too.
 
 “More clothes?”
 
 I had underestimated Jin Taekyung. At this point, wasn’t he practically the fashion icon of his era?
 
-I forced myself to ignore the unease slowly crawling up my spine and moved to the third room.
+Trying to ignore the unease creeping over me, I moved on to the third room.
 
 The door flew open.
 
@@ -148,13 +148,13 @@ The door flew open.
 
 Seriously, what kind of person was he? Seeing three rooms packed completely full of clothes made my throat close up, as if I had swallowed a sweet potato.
 
-*Could this possibly mean…*
+*Could it be…*
 
-My unease gradually took shape and pressed down on my body. With heavy steps, I stood before the next room. Unlike the others, it clearly hadn’t been used in a long time. I grabbed the rusty handle and slowly pushed.
+My unease was taking shape, growing heavier by the second. I trudged to the final room. Unlike the others, it clearly hadn’t been used in a long time. I took hold of the rusty handle and slowly pushed.
 
 Creeeak.
 
-The final room revealed itself with an irritating groan.
+With an irritating groan, the final room revealed what lay inside.
 
 Sunlight filtered through a small window. Dust rose with every step. And beyond it stood several bookshelves.
 
@@ -164,7 +164,7 @@ A smile spread across my face before I even realized it.
 
 * * *
 
-There were five bookshelves in total. I approached the nearest one and pulled out a book. When I shook off the thick layer of dust, the writing on its cover appeared.
+There were five bookshelves in total. I approached the nearest one and pulled out a book. When I brushed off the thick layer of dust, the writing on the cover appeared.
 
 This was why the System was so convenient. Thanks to Synchronization, I could read and pronounce even writing that looked like an alien language as naturally as my mother tongue.
 
@@ -190,9 +190,9 @@ Ding.
 
 Jackpot!
 
-I read through the System window with a pounding heart.
+My heart pounded as I read through the System window.
 
-Three-Turn Footwork. The most basic third-rate footwork technique. This was the kind of martial arts manual I had only ever seen in novels.
+Three-Turn Footwork. The most basic third-rate footwork technique. This was it—the kind of martial arts manual I had only ever seen in novels.
 
 My first plan was to learn martial arts.
 
@@ -202,11 +202,11 @@ The suspicion I had formed after completing the Quest to circulate my qi, just b
 
 *Thank goodness.*
 
-I had been worried that I might have to learn martial arts one step at a time, like the protagonists and NPCs in novels. Fortunately, that fear had been unfounded.
+I had been worried that I might have to learn everything step by step, like the protagonists and NPCs in novels. Fortunately, that fear had proved unfounded.
 
 *Even a trash game is still a game.*
 
-If the System applied to ordinary martial arts the same way it had to circulating qi, rapid growth would be a piece of cake.
+If the System applied to ordinary martial arts the same way it had when I circulated my qi, rapid growth would be a piece of cake.
 
 I was about to shout, “I accept!”—but stopped.
 
@@ -250,13 +250,13 @@ Ding.
 
 * * *
 
-Work had been another fierce battle today. I hadn’t been able to leave the office from morning until nearly midnight. It had already been two months of this grueling pace.
+Today’s battle against work had been fierce. Jin Wikyung had not left the office once between morning and the present hour, which was approaching midnight. This grueling pace had already continued for two months.
 
 “You’ve worked hard.”
 
-That was Wipeng’s signal that the day’s work was over.
+Wipeng’s words signaled the end of the day’s work.
 
-Jin Wikyung rose, his body stiff, and left the office. The owner of this place was his father, who had vanished one day—not Jin Wikyung himself.
+Jin Wikyung rose, stretching his stiff body, and left the office. After all, the owner of that room was not Jin Wikyung, but his father, who had vanished without warning one day.
 
 His residence was a pavilion in the inner compound at the center of the Jin Family estate, and it took about a quarter hour to walk there.
 
@@ -264,19 +264,19 @@ His residence was a pavilion in the inner compound at the center of the Jin Fami
 
 Wipeng, who had followed him like a shadow, draped a thick fur cloak over his shoulders. Jin Wikyung smiled tiredly.
 
-“Thank you. If I didn’t have you, I might have collapsed long ago.”
+“Thank you. Without you, I might have collapsed long ago.”
 
-“What else could I do? Someone has to play the lady of the house.”
+“What else can I do? Someone has to play the lady of the house.”
 
 “Forget it. The old men are already hounding me enough as it is.”
 
-Jin Wikyung rubbed his stiff eyes. He was in his mid-thirties, but still unmarried. He had kept putting it off under the excuse of being young, and more than a decade had passed in those delays.
+Jin Wikyung rubbed his dry eyes. Though he was in his mid-thirties, he remained unmarried. He had kept putting marriage off on the grounds that he was still young, and those delays had added up to more than a decade.
 
 *I suppose I’ll have to do it eventually. For the family’s sake.*
 
-If someone asked whether he had never experienced love, the answer would be no.
+Had he ever been in love? Yes.
 
-But Jin Wikyung was not an immature child. One day, he would become the Family Head and take responsibility for everyone in the household. If a political marriage could strengthen the family, it would be a small price to pay as far as he was concerned.
+But Jin Wikyung was no immature child. One day, he would become the Family Head and bear responsibility for everyone in the household. If a political marriage could strengthen the family, he considered it a small price to pay.
 
 “The stars are bright. We almost wouldn’t need torches.”
 
@@ -298,9 +298,9 @@ As he spoke, Jin Wikyung strode forward. Wipeng had no choice but to follow.
 
 “Shh.”
 
-The two men entered the pavilion. The light was coming from the old room on the far left. The constant creaking made it clear that someone was moving around inside.
+The two men entered the pavilion. The light came from the old room on the far left. Constant creaking sounded from within, as if someone were moving around without pause.
 
-“I underestimated the Third Young Master. It sounds like he even brought a woman with him. Listen to that. I’ll bet my salary for this month.”
+“I underestimated the Third Young Master. It sounds like he even brought a woman in. Listen to that. I’ll bet this month’s salary on it.”
 
 Wipeng’s lips moved. He was using Sound Transmission, sending his voice through internal energy.
 
@@ -310,9 +310,9 @@ Wipeng’s lips moved. He was using Sound Transmission, sending his voice throug
 
 “Shut your mouth.”
 
-Jin Wikyung sent the short, heavy response through Sound Transmission, then moved right up to the door. Through the narrow gap, he could see what was happening inside.
+Jin Wikyung sent the short, heavy reply through Sound Transmission, then moved right up to the door. Through the open crack, he could see what was happening inside.
 
-Wipeng cut in again with a wounded expression.
+Then Wipeng cut in with a wounded expression.
 
 “I never took you for this sort of person, my lord, but your tastes are rather unusual…”
 
@@ -322,13 +322,13 @@ The next moment, Wipeng’s mouth fell open.
 
 *What did I just see?*
 
-*Was I seeing things because I’ve been feeling weak lately?*
+*Am I seeing things because I’ve been feeling weak lately?*
 
 He rubbed his eyes with his sleeve, but all five senses continued to take in the scene before him exactly as it was.
 
 “Now, take two steps diagonally…”
 
-It was a young man with a sturdy build. He muttered continuously while moving his body without pause. Countless footprints covered the dusty floor, and more were being added even now.
+A sturdy young man muttered continuously as he moved without pause. Countless footprints covered the dusty floor, and more were appearing even now.
 
 Swish. Stumble.
 
@@ -336,11 +336,11 @@ Swish. Stumble.
 
 It was the Third Young Master. That foul personality and that foul mouth. There was no doubt that he was Jin Taekyung.
 
-He hadn’t trained in martial arts since the age of twelve, yet he was practicing past midnight, drenched in dust and sweat!
+He had not trained in martial arts since he was twelve, yet here he was, practicing past midnight until he was drenched in dust and sweat.
 
 “Wipeng.”
 
-Wipeng, who had been staring blankly, suddenly snapped back to reality.
+Wipeng, who had been staring blankly, snapped back to his senses.
 
 “Yes, yes?”
 

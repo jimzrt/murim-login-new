@@ -14,24 +14,8 @@
     {
       "code": "terminology",
       "details": {
-        "korean": "경지",
-        "preferred": "realm / realm stage"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
         "korean": "상태",
         "preferred": "Status"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
-        "korean": "본가",
-        "preferred": "our family / this family"
       },
       "message": "matched preferred term is absent"
     },

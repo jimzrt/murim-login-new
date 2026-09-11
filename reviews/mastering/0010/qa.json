@@ -1,52 +1,16 @@
 {
-  "chapter": 4,
+  "chapter": 10,
   "errors": [],
   "metrics": {
-    "length_ratio": 2.267,
-    "source_characters": 6283,
-    "source_paragraphs": 200,
-    "translation_characters": 14242,
-    "translation_paragraphs": 193
+    "length_ratio": 2.447,
+    "source_characters": 5697,
+    "source_paragraphs": 169,
+    "translation_characters": 13942,
+    "translation_paragraphs": 177
   },
   "passed": true,
   "version": 1,
   "warnings": [
-    {
-      "code": "numbers",
-      "details": {
-        "values": [
-          "1",
-          "2",
-          "6",
-          "8"
-        ]
-      },
-      "message": "Arabic numerals from the source are absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
-        "korean": "삼류",
-        "preferred": "Third Rate"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
-        "korean": "이류",
-        "preferred": "Second Rate"
-      },
-      "message": "matched preferred term is absent"
-    },
-    {
-      "code": "terminology",
-      "details": {
-        "korean": "일류",
-        "preferred": "First Rate"
-      },
-      "message": "matched preferred term is absent"
-    },
     {
       "code": "terminology",
       "details": {
@@ -58,16 +22,40 @@
     {
       "code": "terminology",
       "details": {
-        "korean": "귀가",
-        "preferred": "your family"
+        "korean": "진가보법",
+        "preferred": "Jin Family's Manoeuvre Technique"
       },
       "message": "matched preferred term is absent"
     },
     {
       "code": "terminology",
       "details": {
-        "korean": "대협",
-        "preferred": "Great Hero or Sir depending tone"
+        "korean": "진가창법",
+        "preferred": "Jin Family's Spear Technique"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "보상",
+        "preferred": "Reward"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "습득",
+        "preferred": "Acquired"
+      },
+      "message": "matched preferred term is absent"
+    },
+    {
+      "code": "terminology",
+      "details": {
+        "korean": "대사",
+        "preferred": "Master for a senior Buddhist monk"
       },
       "message": "matched preferred term is absent"
     }

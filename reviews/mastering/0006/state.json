@@ -8,9 +8,10 @@
   },
   "final_sha256": "b4a81a7691cbd66d3fce41738c5321c9f978f644bc34fd138d5df43735becc46",
   "hunk_count": 107,
+  "promoted_sha256": "b4a81a7691cbd66d3fce41738c5321c9f978f644bc34fd138d5df43735becc46",
   "qa_passed": true,
   "sol_sha256": "9a01420aae58b1fb124c763256bff51b5d6c76618bf6507d895e3fcb651b8cb9",
   "source_sha256": "5dfbbb8f7568721e08ba6caf8d7a75f06a62ffd8642ed6ce99b4ef0749ede101",
-  "stage": "VERIFIED",
+  "stage": "PROMOTED",
   "version": 1
 }

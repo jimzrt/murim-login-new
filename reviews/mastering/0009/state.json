@@ -6,11 +6,12 @@
     "REPAIR": 0,
     "SOL": 55
   },
-  "final_sha256": "7429868892b145f0c5aac45d5c0f06ab215c0dc8028b0796cc091b9d8afd7192",
+  "final_sha256": "48176a8c08b4d9a09afba0713442c3e29c4a9fab5ce265361468957bdd40a04f",
   "hunk_count": 114,
+  "promoted_sha256": "48176a8c08b4d9a09afba0713442c3e29c4a9fab5ce265361468957bdd40a04f",
   "qa_passed": true,
   "sol_sha256": "23aec8b861a07c39c379d6f744f939f114a326f8b4dc85bdfbacf3fe301fe445",
   "source_sha256": "8e371d0fe784fa5b5a7cb7881bf63e7e767053e5206f51ad2e2db38ebd0dd7ac",
-  "stage": "ADJUDICATED",
+  "stage": "PROMOTED",
   "version": 1
 }
