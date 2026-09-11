@@ -4,575 +4,572 @@
     {
       "decision": "SOL",
       "hunk_id": "H001",
-      "reason": "“As a reward for completing the achievement” and “by mastering” read more naturally than BASE while keeping the same System content."
+      "reason": "'by mastering' and 'As a reward for completing the achievement' are more idiomatic than 'upon mastering'/'As an achievement completion reward'; both faithful."
     },
     {
       "decision": "BASE",
       "hunk_id": "H002",
-      "reason": "“bum” suits the modern snarky register; “beggar” risks a Beggar-Sect/murim connotation the Korean 거지꼴 does not carry."
+      "reason": "'bum' vs 'beggar' are equally faithful for 거지꼴; no meaningful gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H003",
+      "reason": "'removed the erotic novels' is the better collocation for books than 'took out'."
     },
     {
       "decision": "BASE",
-      "hunk_id": "H003",
-      "reason": "“took out” vs “removed”; genuinely indistinguishable."
-    },
-    {
-      "decision": "SOL",
       "hunk_id": "H004",
-      "reason": "Parallel “would’ve run… would’ve ended up in prison” reads more idiomatically than BASE’s mixed tense."
+      "reason": "Both render the Korean conditional equally well; no gain."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H005",
-      "reason": "Colon construction is tighter and “as far as I was concerned” is more natural while preserving 수확은 있었다."
+      "reason": "Both faithful; SOL's colon recast is not clearly better."
     },
     {
       "decision": "BASE",
       "hunk_id": "H006",
-      "reason": "SOL’s “supposedly” adds a hedge not present in 잊고 있었다."
-    },
-    {
-      "decision": "BASE",
-      "hunk_id": "H007",
-      "reason": "“Let’s check…” is natural internal monologue; SOL’s bare fragment is no improvement."
+      "reason": "SOL's 'supposedly' adds an unsupported hedge; BASE keeps the causal 'because I hadn't practiced'."
     },
     {
       "decision": "SOL",
+      "hunk_id": "H007",
+      "reason": "Clipped 'Check the…' matches the terse source line '진가보법 확인.'"
+    },
+    {
+      "decision": "BASE",
       "hunk_id": "H008",
-      "reason": "“but practical” is tighter for a System description field."
+      "reason": "'but it is practical' vs 'but practical' are indistinguishable."
     },
     {
       "decision": "SOL",
       "hunk_id": "H009",
-      "reason": "Preserves the 시조/시조새 wordplay (“prehistoric bird”), which BASE’s “founding granddad” loses."
+      "reason": "SOL preserves the 시조/시조새 founder-vs-prehistoric-bird pun and the '더럽게' intensity; BASE drops the joke."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H010",
+      "reason": "Capital 'Grade' matches the binding System term and the clipped notice style; BASE's 'Intelligence stat' adds 'stat'."
     },
     {
       "decision": "BASE",
-      "hunk_id": "H010",
-      "reason": "SOL capitalizes “Grade” in running prose, inconsistent with the panel field convention; no real gain otherwise."
-    },
-    {
-      "decision": "SOL",
       "hunk_id": "H011",
-      "reason": "Past perfect better marks the retrospective pause before the next paragraph returns to sequence."
+      "reason": "Simple past vs past perfect are indistinguishable here."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H012",
-      "reason": "“The problem came next” is a punchier deadpan beat."
+      "reason": "'started after that' and 'came next' are equivalent."
     },
     {
       "decision": "SOL",
       "hunk_id": "H013",
-      "reason": "“Displaying…” is natural System voice versus BASE’s stiff passive."
+      "reason": "Terse 'Displaying the movement sequence' matches the source System-notice style."
     },
     {
-      "decision": "REPAIR",
+      "decision": "BASE",
       "hunk_id": "H014",
-      "reason": "BASE correctly attributes the fussiness/precision (칼 같은) to the footprints but is wordy; SOL has punchy clipped conditionals but reassigns the quality to a vague “it.” Combine both.",
-      "replacement": "I practiced the manoeuvre technique by following the footprints the System displayed, but they were absurdly fussy and razor-precise. Stray even slightly outside them and I failed. Take too long to make the next move and I failed."
+      "reason": "BASE keeps the '칼 같은' razor image ('razor-precise'); SOL's 'strict and exacting' genericizes it."
     },
     {
       "decision": "SOL",
       "hunk_id": "H015",
-      "reason": "“count as one completion” matches 1회 완수 more precisely than BASE."
+      "reason": "'count as one completion' is closer to '1회 완수'."
     },
     {
       "decision": "SOL",
       "hunk_id": "H016",
-      "reason": "“I was nearly half a handspan shorter” is more direct than “My height was shorter by…”."
+      "reason": "'this character's' and 'I was nearly half a handspan shorter' read more naturally."
     },
     {
       "decision": "BASE",
       "hunk_id": "H017",
-      "reason": "“succeeded” vs “managed it”; indistinguishable."
+      "reason": "'succeeded' vs 'managed it' are indistinguishable."
     },
     {
       "decision": "BASE",
       "hunk_id": "H018",
-      "reason": "SOL’s “By the time I completed… one hundred times” is clunkier than BASE."
+      "reason": "'After completing' and 'By the time I completed' are equivalent."
     },
     {
       "decision": "SOL",
       "hunk_id": "H019",
-      "reason": "“one thing” matches 하나 better than BASE’s generalized “something.”"
+      "reason": "'one thing' matches the source '하나'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H020",
-      "reason": "Keeps “group battles” for 집단전; SOL’s “fighting groups” is weaker, and the rest is equivalent."
+      "reason": "SOL's 'the two most important things were luck first and your feet second' is awkward; BASE reads cleaner and is faithful."
     },
     {
       "decision": "SOL",
       "hunk_id": "H021",
-      "reason": "Clipped verbs match the terse 전진. 후퇴. 정지."
+      "reason": "Staccato 'Advance. Retreat. Or stop.' matches the source's clipped verbs."
     },
     {
       "decision": "BASE",
       "hunk_id": "H022",
-      "reason": "“your arm… your legs” parallel is better; SOL’s “an arm” is not."
+      "reason": "'your arm' vs 'an arm' are equivalent; no gain."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H023",
-      "reason": "Indistinguishable; BASE’s “all my battles” is fine."
+      "reason": "'before your arms could' and 'every battle I'd fought' read more smoothly."
     },
     {
       "decision": "BASE",
       "hunk_id": "H024",
-      "reason": "SOL adds “more than” to 반나절, an unsupported quantity change."
+      "reason": "SOL adds 'more than' half a day, an unsupported quantity; BASE keeps 'half a day'."
     },
     {
       "decision": "SOL",
       "hunk_id": "H025",
-      "reason": "“Whew” is natural English exhale versus transliterated “Fuu.”"
+      "reason": "'Whew.' is natural English for the sigh '후우' rather than the transliteration 'Fuu'."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H026",
-      "reason": "Both faithful; BASE is tighter and avoids calqued “from my mind.”"
+      "reason": "'forced the distracting thoughts from my mind' captures 잡념 and 애써 better."
     },
     {
       "decision": "BASE",
       "hunk_id": "H027",
-      "reason": "Indistinguishable."
+      "reason": "'mixed in among the manuals' vs 'among them' are indistinguishable."
     },
     {
       "decision": "SOL",
       "hunk_id": "H028",
-      "reason": "Merged participle “holding a tray laden with breakfast” reads more naturally."
+      "reason": "'holding a tray laden with breakfast' is tighter and avoids the tacked-on 'on it'."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H029",
-      "reason": "“That was because I’d been circulating my qi” is clearer than SOL’s abstract “Circulating my qi was the reason.”"
+      "reason": "'Circulating my qi was the reason' is terser and faithful."
     },
     {
       "decision": "SOL",
       "hunk_id": "H030",
-      "reason": "“Come to think of it” naturalizes 곰곰이 생각해 보니; “doing it” avoids repetition."
+      "reason": "'Come to think of it' renders 곰곰이 생각해 보니, and 'doing it' avoids repetition."
     },
     {
       "decision": "SOL",
       "hunk_id": "H031",
-      "reason": "Naturalizes the 가슴 한구석 emotion idiom without losing the warmth beat."
+      "reason": "'Warmth spread through my chest' is the natural English for the 가슴 한구석 idiom."
     },
     {
       "decision": "SOL",
       "hunk_id": "H032",
-      "reason": "“something this small” matches 이게 뭐라고 better than BASE."
+      "reason": "'something this small' matches '이게 뭐라고'; BASE's 'feel so emotional' misreads 울컥."
     },
     {
       "decision": "SOL",
       "hunk_id": "H033",
-      "reason": "Drops BASE’s unsupported “strangely” and is terser."
-    },
-    {
-      "decision": "BASE",
-      "hunk_id": "H034",
-      "reason": "Keeps 탕약 as “herbal decoction” and BASE’s seasoning image; SOL’s “herbal medicine” is generic."
-    },
-    {
-      "decision": "BASE",
-      "hunk_id": "H035",
-      "reason": "Preserves the 눈살 knit-brow image; SOL’s “face scrunch up” is vaguer."
+      "reason": "Concise; BASE's 'strangely' is unsupported."
     },
     {
       "decision": "SOL",
+      "hunk_id": "H034",
+      "reason": "'herbal medicine' is natural for 탕약; BASE's 'best seasoning' adds a superlative."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H035",
+      "reason": "Colloquial 'face scrunch up'; 'cleared everything away' avoids adding 'table'."
+    },
+    {
+      "decision": "BASE",
       "hunk_id": "H036",
-      "reason": "“spoken politely to” is more idiomatic than “used polite speech with.”"
+      "reason": "Both faithful and fluent; no meaningful gain."
     },
     {
       "decision": "SOL",
       "hunk_id": "H037",
-      "reason": "“my dignity as a user” reads naturally versus BASE’s literal “dignity of a user.”"
+      "reason": "'my dignity as a user' reads naturally and stays faithful."
     },
     {
       "decision": "BASE",
       "hunk_id": "H038",
-      "reason": "“drop the honorifics” and “speak informally” are equally faithful; no clear gain."
+      "reason": "'drop the honorifics' and 'speak informally' are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H039",
-      "reason": "“call him…” is clearer than SOL’s “throwing around.”"
+      "reason": "Both render 이놈 저놈 acceptably; no gain."
     },
     {
       "decision": "BASE",
       "hunk_id": "H040",
-      "reason": "Indistinguishable."
+      "reason": "'informally' vs 'casually' for 반말 are equivalent."
     },
     {
       "decision": "SOL",
       "hunk_id": "H041",
-      "reason": "Tighter phrasing with identical meaning."
+      "reason": "'I'd injured my head' is tighter than 'suffered a head injury'."
     },
     {
       "decision": "SOL",
       "hunk_id": "H042",
-      "reason": "달려간 is “ran,” not BASE’s weaker “went.”"
+      "reason": "'ran straight' matches 달려가다."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H043",
+      "reason": "'sent the documents flying into the air' is vivid and faithful."
     },
     {
       "decision": "BASE",
-      "hunk_id": "H043",
-      "reason": "Both faithful; “scattered into the air” is fine."
-    },
-    {
-      "decision": "SOL",
       "hunk_id": "H044",
-      "reason": "“This calls for a celebration” is the more idiomatic exclamation."
+      "reason": "'cause for celebration' and 'calls for a celebration' are equivalent."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H045",
-      "reason": "“who gave you permission” is a natural hierarchical rebuke for 누구 맘대로요."
+      "reason": "Both render 누구 맘대로요 acceptably."
     },
     {
       "decision": "BASE",
       "hunk_id": "H046",
-      "reason": "Keeps 서류 as “documents”; SOL narrows to “pages.”"
+      "reason": "'every last one of the fluttering documents' is as good as 'page'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H047",
-      "reason": "Indistinguishable."
+      "reason": "'the others' vs 'anyone else' for 다른 사람들 are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H048",
-      "reason": "SOL’s “finally” adds a nuance the Korean 본격적으로 does not state."
+      "reason": "SOL adds 'finally', not in the source '지금'."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H049",
-      "reason": "The fragment answers the preceding rhetorical question naturally."
+      "reason": "SOL drops the predicate 중요하죠 ('is more important'), weakening Wipeng's contradiction."
     },
     {
       "decision": "BASE",
       "hunk_id": "H050",
-      "reason": "Indistinguishable."
+      "reason": "'may be held' matches 열리다; SOL's split adds no real gain."
     },
     {
       "decision": "SOL",
       "hunk_id": "H051",
-      "reason": "“Is that anything new?” idiomatically captures 하루 이틀 일입니까."
+      "reason": "'Is that anything new?' is the natural English idiom for 하루 이틀 일입니까."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H052",
-      "reason": "“yet again” captures the exasperation of 또."
+      "reason": "'again' vs 'yet again' is indistinguishable."
     },
     {
       "decision": "BASE",
       "hunk_id": "H053",
-      "reason": "SOL’s “I refuse your refusal” adds an interpretation not explicit in the Korean."
+      "reason": "SOL's 'I refuse your refusal' adds a witticism the source doesn't state."
     },
     {
       "decision": "SOL",
       "hunk_id": "H054",
-      "reason": "Parallel “To you… To everyone else…” is cleaner."
+      "reason": "'To you, he's…' is tighter than 'From your perspective'."
     },
     {
       "decision": "SOL",
       "hunk_id": "H055",
-      "reason": "“What’s with that tone?” matches 말투가 왜 그래 better."
+      "reason": "'What's with that tone?' matches 말투가 왜 그래."
     },
     {
       "decision": "SOL",
       "hunk_id": "H056",
-      "reason": "Corrects BASE’s misreading of 막아 주다 (“to protect him,” not “keep them from making things worse”)."
+      "reason": "'chipping away…bit by bit' matches 야금야금; 'protect him' clarifies 그거 막아 주느라."
     },
     {
       "decision": "BASE",
       "hunk_id": "H057",
-      "reason": "SOL adds “for you,” which the Korean does not state."
+      "reason": "SOL adds 'for you', not present in the source."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H058",
-      "reason": "“tremble” vs “twitch”; indistinguishable."
+      "reason": "'twitch' is the better collocation for eyelids than 'tremble'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H059",
-      "reason": "Keeps “even” for 이라도."
+      "reason": "BASE keeps 'even a few silver coins' (이라도); SOL drops 'even'."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H060",
-      "reason": "“groaned and let out a deep sigh” is more natural than the “With a groan” opener."
+      "reason": "'With a groan…let out a deep sigh' and 'groaned and let out a deep sigh' are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H061",
-      "reason": "SOL’s “much longer” adds a time nuance absent from 슬슬."
+      "reason": "Both render 슬슬 이대로는 안 된다 acceptably."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H062",
-      "reason": "Indistinguishable."
+      "reason": "'Thinking is all well and good' is natural for 생각 좋죠."
     },
     {
       "decision": "BASE",
       "hunk_id": "H063",
-      "reason": "Indistinguishable."
+      "reason": "'do my best' vs 'do everything I can' are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H064",
-      "reason": "Both natural; SOL’s restructuring is not clearly better."
+      "reason": "Both render 정색하고/의뭉스러운 acceptably."
     },
     {
       "decision": "BASE",
       "hunk_id": "H065",
-      "reason": "Indistinguishable."
+      "reason": "'mean it' vs 'mean that' are indistinguishable."
     },
     {
       "decision": "BASE",
       "hunk_id": "H066",
-      "reason": "Indistinguishable."
+      "reason": "SOL only drops 'And'; no gain."
+    },
+    {
+      "decision": "SOL",
+      "hunk_id": "H067",
+      "reason": "'trailed off' is concise for 말꼬리를 흐렸다."
     },
     {
       "decision": "BASE",
-      "hunk_id": "H067",
-      "reason": "“let his voice trail off” better renders 말꼬리를 흐리다 than SOL’s bare “trailed off.”"
-    },
-    {
-      "decision": "SOL",
       "hunk_id": "H068",
-      "reason": "“behavior was … encouraging” reads naturally; BASE’s “behaving … was … hopeful” is awkward."
+      "reason": "BASE preserves the source order 'a lie or the truth'; SOL reverses it."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H069",
-      "reason": "Compact and natural."
+      "reason": "Both render 잠시 생각에 잠겨 있던 acceptably."
     },
     {
       "decision": "BASE",
       "hunk_id": "H070",
-      "reason": "Preserves the trailing “What sort of…?”; SOL supplies a noun the Korean leaves unstated."
+      "reason": "SOL adds 'order', losing the source's trailing '어떤……?' ellipsis."
     },
     {
-      "decision": "REPAIR",
+      "decision": "SOL",
       "hunk_id": "H071",
-      "reason": "Both candidates insert “indefinite,” which does not appear in line 313 and spoils the later 무기한 reveal at line 337/345.",
-      "replacement": "“Use a few suitable charges and have him forcibly confined in the training hall as punishment.”"
+      "reason": "'Find a few suitable charges and sentence him…' is tighter and faithful to 가져다 쓰고."
     },
     {
       "decision": "BASE",
       "hunk_id": "H072",
-      "reason": "Keeps 진위경 as the one who receives pressure and the future “was about to receive”; SOL’s vague “they faced” changes subject and tense."
+      "reason": "BASE resolves the omitted subject (Jin Wikyung) clearly; SOL's 'they' is vaguer, and the name is dropped."
     },
     {
       "decision": "BASE",
       "hunk_id": "H073",
-      "reason": "Indistinguishable."
+      "reason": "'It fulfills…too' and 'It also fulfills…' are equivalent."
     },
     {
       "decision": "SOL",
       "hunk_id": "H074",
-      "reason": "“As expected of you, my lord” is idiomatic praise for 역시 주군이십니다."
+      "reason": "'As expected of you, my lord' is natural English praise; BASE's 'you're my lord' is stilted."
     },
     {
       "decision": "SOL",
       "hunk_id": "H075",
-      "reason": "“the people in my family” matches 집안사람들; “such a clever child” matches 참 영특했는데."
+      "reason": "'the people in my family' matches 집안사람들."
     },
     {
       "decision": "BASE",
       "hunk_id": "H076",
-      "reason": "Indistinguishable."
+      "reason": "'write' vs 'draft' the order are equivalent."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H077",
-      "reason": "Keeps “within the family” for 문내 and “confinement,” consistent with the punishment order elsewhere."
+      "reason": "'sentenced to indefinite seclusion' reads cleaner for the decree while staying faithful."
     },
     {
       "decision": "SOL",
       "hunk_id": "H078",
-      "reason": "Isolates the name-recall beat as its own line, matching the Korean."
+      "reason": "Retains the source's name-recall beat ('이름이…… 위팽이라고 했던가?') as its own line."
     },
     {
       "decision": "SOL",
       "hunk_id": "H079",
-      "reason": "Pairs with the split; the remaining action sentence is unchanged in meaning."
+      "reason": "Removes the name recall now carried by H078; remaining clause is faithful."
     },
     {
       "decision": "BASE",
       "hunk_id": "H080",
-      "reason": "“deadline” is the natural gloss of 기한, not “end date.”"
+      "reason": "'no set deadline' vs 'no set end date' are equivalent for 정해진 기한이 없다."
     },
     {
       "decision": "SOL",
       "hunk_id": "H081",
-      "reason": "“exactly what I thought it meant” is idiomatic and clears the duplicated phrasing."
+      "reason": "'exactly what I thought it meant' avoids BASE's circular 'the same thing I knew it meant'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H082",
-      "reason": "SOL deletes the first 하하 laugh, dropping a beat in the laughter sequence."
+      "reason": "BASE keeps the source's '하하' laugh; SOL deletes it."
     },
     {
       "decision": "SOL",
       "hunk_id": "H083",
-      "reason": "Replaces the duplicated language-system line with the correct line 359 laughter-contagious text."
+      "reason": "SOL replaces the baseline's erroneous duplicate paragraph with the source's 'laughter is contagious' narration."
     },
     {
       "decision": "BASE",
       "hunk_id": "H084",
-      "reason": "Indistinguishable."
+      "reason": "SOL's 'nice and warm' adds 'nice'; BASE's 'warm atmosphere' is faithful to 훈훈해진 분위기."
     },
     {
       "decision": "BASE",
       "hunk_id": "H085",
-      "reason": "Indistinguishable."
+      "reason": "'The convict, Jin Taekyung' vs 'The criminal Jin Taekyung' and bonds renderings are equivalent."
     },
     {
       "decision": "SOL",
       "hunk_id": "H086",
-      "reason": "“a room to practice in” matches Korean word order; the split matches the two separate source lines."
+      "reason": "Correctly ends the spoken line before the unquoted narration that follows in the source."
     },
     {
-      "decision": "REPAIR",
+      "decision": "SOL",
       "hunk_id": "H087",
-      "reason": "The Korean line 377 is his spoken outburst continuing the previous quote; SOL wrongly renders it as unquoted narration.",
-      "replacement": "“Are you people all completely fucking insane?”"
+      "reason": "Restores '완전히 정신병자 새끼들 아냐' as narration rather than misattributed dialogue."
     },
     {
       "decision": "SOL",
       "hunk_id": "H088",
-      "reason": "“That kind of bullshit.” is punchy and faithful to 이딴 말이나 할 거 아냐."
+      "reason": "'That kind of bullshit' is punchier and faithful to 이딴 말이나 할 거 아냐."
     },
     {
       "decision": "SOL",
       "hunk_id": "H089",
-      "reason": "“soldiers got a pay raise” is more idiomatic while preserving the joke."
+      "reason": "'are the type to…enjoy military service because soldiers got a pay raise' is idiomatic."
     },
     {
       "decision": "BASE",
       "hunk_id": "H090",
-      "reason": "Indistinguishable."
+      "reason": "'on the surface' vs 'at first glance' for 단편적으로 are equivalent."
+    },
+    {
+      "decision": "BASE",
+      "hunk_id": "H091",
+      "reason": "'day after day' vs 'every day' are equivalent; SOL reorders but changes nothing."
     },
     {
       "decision": "SOL",
-      "hunk_id": "H091",
-      "reason": "“urgently needed” matches 시급한 better than BASE’s “immediately.”"
-    },
-    {
-      "decision": "BASE",
       "hunk_id": "H092",
-      "reason": "Keeps the lips-move beat as its own paragraph."
+      "reason": "Merging into one paragraph matches the source, which keeps the two sentences together."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H093",
-      "reason": "Preserves the two distinct sentences and their rhythm rather than merging."
+      "reason": "Merged narration is faithful; 'strange quality unlike ordinary speech' renders 육성과는 다른 기묘한 느낌."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H094",
-      "reason": "Sound Transmission is speech; retaining curly quotes keeps it distinct from System/narration and consistent with the chapter."
+      "reason": "Sound Transmission rendered consistently as a plain blockquote; 'Don't be alarmed. Just listen.' is faithful."
     },
     {
       "decision": "BASE",
       "hunk_id": "H095",
-      "reason": "Indistinguishable."
+      "reason": "'saw it in' vs 'reading about it in' martial arts novels are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H096",
-      "reason": "Retains quotes for the telepathic speech; content otherwise equivalent."
+      "reason": "'is a person of concern' vs 'is considered a person of concern' are equivalent for 요주의 인물."
     },
     {
       "decision": "BASE",
       "hunk_id": "H097",
-      "reason": "SOL adds “honest life,” absent from 한평생 열심히 살았는데."
+      "reason": "SOL adds 'honest', unsupported by 열심히 살았는데."
     },
     {
       "decision": "BASE",
       "hunk_id": "H098",
-      "reason": "“lamented” is closer to 슬퍼하는 than SOL’s loaded “wallowed in sorrow.”"
+      "reason": "'lamented' vs 'wallowed in sorrow' for 슬퍼하는 are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H099",
-      "reason": "Keeps quotes and the vivid “bury you” rendering of 처박다."
+      "reason": "BASE's 'bury you in the training hall' matches 처박아 놓으실; SOL's 'leave' weakens it."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H100",
-      "reason": "Keeps “I shook my head.” as its own physical beat before the thought."
+      "reason": "Merging the action with the following thought matches the source, which keeps them in one paragraph."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H101",
-      "reason": "Preserves the italicized direct thought required by the style rules."
+      "reason": "Faithful merge; 'There was no way he would do that' preserves 그럴 리가 없다."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H102",
-      "reason": "Keeps the “Not unless…” logical link to the preceding denial."
+      "reason": "'locked in there together' is concise and faithful to 단둘이 처박히기."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H103",
-      "reason": "Retains quotes for the transmitted speech; wording is equivalent."
+      "reason": "Consistent Sound Transmission blockquote styling; content faithful."
     },
     {
       "decision": "BASE",
       "hunk_id": "H104",
-      "reason": "SOL intensifies with “burned” and “beat me senseless,” beyond 엿보였다 and 두들겨 패서라도."
+      "reason": "SOL adds 'senseless' and 'himself' and changes 엿보였다 ('showed') to 'burned'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H105",
-      "reason": "“bastard” vs “asshole”; indistinguishable."
+      "reason": "'you bastard' vs 'asshole' for 이 새끼야 are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H106",
-      "reason": "끌어올려 is “raised,” the activation of [기감], not SOL’s “focused.”"
+      "reason": "'raised' matches 끌어올려; 'focused' shifts the sense."
     },
     {
-      "decision": "SOL",
+      "decision": "BASE",
       "hunk_id": "H107",
-      "reason": "A single stat readout needs no list-item dash; SOL’s panel is cleaner."
+      "reason": "The bulleted Level readout and SOL's bare bold line are equally acceptable."
     },
     {
       "decision": "SOL",
       "hunk_id": "H108",
-      "reason": "Matches 레벨 깡패 exactly; BASE’s “at least” is added."
+      "reason": "BASE's 'at least' is an addition not present in '레벨 깡패'."
     },
     {
       "decision": "BASE",
       "hunk_id": "H109",
-      "reason": "BASE’s comparative is cleaner English for 못지않은."
+      "reason": "'every bit the human butcher Jin Wikyung was' and SOL's 'as much of a…as' are equivalent."
     },
     {
       "decision": "BASE",
       "hunk_id": "H110",
-      "reason": "Indistinguishable."
+      "reason": "BASE's 'opened his eyes wide' matches 부릅뜨다 better than SOL's milder 'eyes widened'."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H111",
-      "reason": "Retains quotes for the transmitted speech."
+      "reason": "Consistent Sound Transmission blockquote styling."
     },
     {
       "decision": "BASE",
       "hunk_id": "H112",
-      "reason": "Keeps the concessive force of (으)면서도 (“Even as I trembled”)."
+      "reason": "'Even as I trembled' preserves the concessive 떨면서도; identical otherwise."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H113",
-      "reason": "Retains quotes for the transmitted speech."
+      "reason": "Consistent Sound Transmission blockquote styling."
     },
     {
-      "decision": "BASE",
+      "decision": "SOL",
       "hunk_id": "H114",
-      "reason": "Preserves the separate internal exclamation “What kind of bastard is this?” that SOL folds into narration."
+      "reason": "'as if he were thinking exactly that' naturally renders 그런 얼굴로; BASE's 'that exact look' is vague."
     }
   ],
   "version": 1

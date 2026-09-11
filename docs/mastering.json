@@ -2,12 +2,12 @@
   "version": 1,
   "models": {
     "master": "openrouter/openai/gpt-5.6-sol:low",
-    "adjudicator": "openrouter/deepseek/deepseek-v4.1-flash:low"
+    "adjudicator": "cursor/cursor-grok-4.6:low"
   },
   "omp_config": ".omp/review-overlay.yml",
   "timeouts": {
-    "master": 900,
-    "adjudicator": 900
+    "master": 1800,
+    "adjudicator": 1800
   },
   "packet_token_limit": 90000,
   "continuity_previous_chapters": 2,

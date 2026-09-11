@@ -2,38 +2,38 @@
   "chapter": 9,
   "stages": {
     "adjudicator": {
-      "cache_read_tokens": 8832,
+      "cache_read_tokens": 8064,
       "cache_write_tokens": 0,
-      "cost_usd": 0.050338692,
-      "elapsed_seconds": 194.655,
-      "event_log": "/home/james/Documents/murim_login_new/reviews/mastering/0009/omp/adjudicator.jsonl",
+      "cost_usd": 0.059172684,
+      "elapsed_seconds": 188.981,
+      "event_log": "/Users/james/dev/murim-login-new/reviews/mastering/0009/omp/adjudicator.jsonl",
       "exact": true,
-      "input_tokens": 22523,
+      "input_tokens": 26089,
       "models": {
         "openrouter/deepseek/deepseek-v4.1-flash": {
-          "cache_read_tokens": 8832,
+          "cache_read_tokens": 8064,
           "cache_write_tokens": 0,
-          "cost_usd": 0.050338692,
-          "input_tokens": 22523,
+          "cost_usd": 0.059172684,
+          "input_tokens": 26089,
           "model": "deepseek/deepseek-v4.1-flash",
-          "output_tokens": 36274,
+          "output_tokens": 42748,
           "provider": "openrouter",
-          "reasoning_tokens": 32546,
+          "reasoning_tokens": 37658,
           "requests": 1,
-          "total_tokens": 67629
+          "total_tokens": 76901
         }
       },
-      "output_bytes": 14396,
-      "output_tokens": 36274,
-      "packet_bytes": 87510,
-      "packet_token_estimate": 21878,
-      "reasoning_tokens": 32546,
+      "output_bytes": 17852,
+      "output_tokens": 42748,
+      "packet_bytes": 103229,
+      "packet_token_estimate": 25808,
+      "reasoning_tokens": 37658,
       "requested_model": "openrouter/deepseek/deepseek-v4.1-flash:low",
       "requests": 1,
       "stop_reasons": [
         "stop"
       ],
-      "total_tokens": 67629,
+      "total_tokens": 76901,
       "usage_source": "omp_provider_reported"
     },
     "master": {
