@@ -169,13 +169,13 @@ DeepSeek receives:
 
 - complete Korean source (once, with line numbers);
 - complete baseline English (once, with `P#` paragraph labels);
-- complete Sol English (once, as the assembled reading copy);
+- complete Sol English (once, with `P#` paragraph labels);
 - exact glossary rows;
 - project fidelity rules;
-- numbered changed hunks containing only the changed BASE and SOL spans, plus `P#` / Korean line citations;
+- numbered changed hunks containing only BASE/SOL paragraph references and Korean line citations;
 - terminology-risk annotations when a preferred baseline term disappears from Sol's hunk.
 
-Neighboring unchanged English is looked up in the numbered baseline and complete Sol chapter rather than duplicated around every hunk. The complete Sol chapter is required so adjacent hunks that split or restructure one baseline sentence can be judged as assembled prose.
+Changed prose is not repeated in the hunk list. Both versions and their neighboring context are read from the complete numbered chapters above, which also lets adjacent hunks that split or restructure one baseline sentence be judged as assembled prose.
 
 It must return exactly one of:
 

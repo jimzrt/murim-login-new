@@ -131,22 +131,27 @@ def test_adjudicator_packet_is_compact():
     assert diff["hunk_count"] == 1
     hunk = diff["hunks"][0]
     assert hunk["baseline_paragraphs"] == "P3"
+    assert hunk["sol_paragraphs"] == "P3"
     assert hunk["korean_lines"] == "5"
     assert "context_before_baseline" not in hunk
     packet = mastering.adjudicator_packet(1, source, baseline, sol, [], diff)
-    assert "## Complete SOL English" in packet
+    assert "## Complete numbered SOL English" in packet
     assert "BASE context before" not in packet
     assert "SOL context after" not in packet
     assert "Baseline paragraphs: P3" in packet
+    assert "SOL paragraphs: P3" in packet
     assert "Korean lines: 5" in packet
     assert "[P1]" in packet
     assert "1|＃1화" in packet
-    assert packet.count("Jinho spoke.") == 2
-    assert packet.count("Jinho said it.") == 2
+    assert packet.count("Jinho spoke.") == 1
+    assert packet.count("Jinho said it.") == 1
+    hunk_section = packet.split("## Numbered diff hunks", 1)[1]
+    assert "Jinho spoke." not in hunk_section
+    assert "Jinho said it." not in hunk_section
     sections = [
         "## Korean source",
         "## Complete BASELINE English",
-        "## Complete SOL English",
+        "## Complete numbered SOL English",
         "## Exact glossary matches for this Korean chapter",
         "## Adjudicator rules",
         "## Critical binding translation rules",

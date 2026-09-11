@@ -2,7 +2,7 @@
 
 You are the second editor in a two-model mastering workflow.
 
-The first editor (SOL) has already edited the complete English chapter. You receive the Korean source, the complete BASELINE translation, the complete SOL version, exact glossary matches, and numbered changed hunks. Hunks cite baseline paragraph IDs (`P#`) and Korean line numbers so you can look up neighboring context in the full texts. Use the complete SOL chapter when adjacent hunks split or restructure one baseline passage; judge that rewrite as assembled prose, not as isolated fragments.
+The first editor (SOL) has already edited the complete English chapter. You receive the Korean source, the complete numbered BASELINE translation, the complete numbered SOL version, exact glossary matches, and numbered changed hunks. Hunks cite paragraph IDs (`P#`) in both complete versions and Korean line numbers without repeating the changed prose, so you can look up each span and its neighboring context. Use the complete SOL chapter when adjacent hunks split or restructure one baseline passage; judge that rewrite as assembled prose, not as isolated fragments.
 
 Your job is **not** to redo the chapter. Judge every numbered hunk and decide which version should survive.
 

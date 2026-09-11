@@ -612,6 +612,7 @@ def build_diff(baseline: str, sol: str, glossary: list[dict], source: str = "") 
             "baseline_range": [i1, i2],
             "sol_range": [j1, j2],
             "baseline_paragraphs": format_paragraph_ref(i1, i2),
+            "sol_paragraphs": format_paragraph_ref(j1, j2),
             "korean_lines": map_korean_lines(i1, i2, korean_spans),
             "baseline": base_text,
             "sol": sol_text,
@@ -644,6 +645,7 @@ def diff_markdown(diff: dict) -> str:
     for h in diff["hunks"]:
         lines += [f"## {h['hunk_id']} ({h['tag']})", ""]
         lines.append(f"Baseline paragraphs: {h.get('baseline_paragraphs', '')}")
+        lines.append(f"SOL paragraphs: {h.get('sol_paragraphs', '')}")
         if h.get("korean_lines"):
             lines.append(f"Korean lines: {h['korean_lines']}")
         lines.append("")
@@ -658,6 +660,7 @@ def format_hunk_for_packet(h: dict) -> str:
     parts = [
         f"### {h['hunk_id']} — {h['tag']}",
         f"Baseline paragraphs: {h.get('baseline_paragraphs', '')}",
+        f"SOL paragraphs: {h.get('sol_paragraphs', '')}",
     ]
     if h.get("korean_lines"):
         parts.append(f"Korean lines: {h['korean_lines']}")
@@ -665,16 +668,7 @@ def format_hunk_for_packet(h: dict) -> str:
         parts.append(
             f"Terminology alert: `{alert['korean']}` → `{alert['preferred']}` present in BASE, absent from SOL."
         )
-    parts += [
-        "",
-        "BASE:",
-        h["baseline"] or "(empty)",
-        "",
-        "SOL:",
-        h["sol"] or "(empty)",
-        "",
-    ]
-    return "\n".join(parts)
+    return "\n".join(parts) + "\n"
 
 
 def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossary: list[dict], diff: dict) -> str:
@@ -697,10 +691,10 @@ def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossa
 {format_numbered_baseline(baseline)}
 ```
 
-## Complete SOL English
+## Complete numbered SOL English
 
 ```markdown
-{sol.rstrip()}
+{format_numbered_baseline(sol)}
 ```
 
 ## Exact glossary matches for this Korean chapter
@@ -721,7 +715,9 @@ def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossa
 
 ## Numbered diff hunks
 
-Each hunk is the changed span only. Neighboring unchanged English is in the numbered baseline and complete SOL above; use the P# labels and Korean line numbers to look up surrounding context.
+Each hunk identifies its changed BASE and SOL spans by paragraph ID. Read those
+spans and their neighboring context in the complete numbered versions above;
+use the Korean line numbers for source verification.
 
 {chr(10).join(hunk_parts)}
 
