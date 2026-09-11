@@ -15,8 +15,8 @@ Mastering roles live in `models` in [`docs/mastering.json`](mastering.json):
 - `master`
 - `adjudicator`
 
-Do not copy those IDs into docs or defaults elsewhere. Call sites read the resolved
-`draft_model`, `review_model`, `revision_model`, `summary_model`,
+Do not copy those IDs into docs or defaults elsewhere. Call sites read the
+resolved `draft_model`, `review_model`, `polish_model`, `summary_model`,
 `coordinator_model`, and `checkpoint_model` keys from `project_config()`, and
 mastering selectors from `docs/mastering.json`.
 
@@ -28,8 +28,8 @@ requests Cursor Grok and uses DeepSeek only as that stage's overflow.
 
 All calls are isolated, non-interactive, tool-free, session-free, and bounded by
 phase-specific packets and token ceilings. Do not silently substitute models in
-the workflow. Reviewer output and revision dispositions are schema-validated
-before workflow state advances.
+the workflow. Reviewer replacements and checkpoint dispositions are
+schema-validated before workflow state advances.
 
 Every model subprocess uses OMP JSON mode. Each assistant `message_end` must
 contain provider-reported usage; a missing or malformed usage record is a hard

@@ -25,12 +25,11 @@ STAGES = (
     "CHECKPOINT_REVIEWED", "CHECKPOINT_APPLIED", "ACCEPTED", "COMMITTED",
 )
 HANGUL = re.compile(r"[가-힣]")
-MODEL_ROLES = ("draft", "review", "revision", "polish", "summary", "coordinator")
+MODEL_ROLES = ("draft", "review", "polish", "summary", "coordinator")
 DEFAULT_CONFIG = {
     "models": {
         "draft": "openai-codex/gpt-5.6-luna:high",
         "review": "cursor/cursor-grok-4.6:medium",
-        "revision": "cursor/cursor-grok-4.6:medium",
         "polish": "cursor/cursor-grok-4.6:medium",
         "summary": "openai-codex/gpt-5.6-luna:high",
         "coordinator": "openai-codex/gpt-5.6-luna:high",
@@ -40,7 +39,7 @@ DEFAULT_CONFIG = {
     "profile_max_bytes": 4096,
     "profile_total_max_bytes": 12288,
     "packet_token_limits": {
-        "draft": 60000, "review": 60000, "revision": 60000, "polish": 60000,
+        "draft": 60000, "review": 60000, "polish": 60000,
         "checkpoint": 120000, "summary": 20000,
     },
     "summary_interval": 5,
@@ -151,11 +150,9 @@ def paths(number: int) -> dict[str, Path]:
         "draft_qa": ROOT / "reviews" / "qa" / f"{number:04d}-draft.json",
         "revised": work / "revised.md",
         "final_qa": ROOT / "reviews" / "qa" / f"{number:04d}-final.json",
-        "revision_context": work / "revision-context.md",
         "polish_context": work / "polish-context.md",
         "polished": work / "polished.md",
         "polish_qa": ROOT / "reviews" / "qa" / f"{number:04d}-polish.json",
-        "dispositions": ROOT / "reviews" / "sol" / f"{number:04d}.dispositions.json",
         "metrics": ROOT / "reviews" / "metrics" / f"{number:04d}.json",
         "translation": ROOT / "translations" / f"{number:04d}.md",
         "packet": ROOT / "reviews" / "packets" / f"{number:04d}.md",
@@ -508,42 +505,6 @@ def command_review(number: int, dry_run: bool) -> None:
     )
 
 
-def command_revised(number: int) -> None:
-    state, p = load(number)
-    require(state, "REVIEWED", "REVISED")
-    if digest(p["draft"]) != state["artifacts"]["reviewed_draft_sha256"]:
-        raise SystemExit("review is stale because draft.md changed")
-    validate_reading_copy(p["revised"], number)
-    if not p["dispositions"].exists():
-        raise SystemExit(f"missing structured dispositions: {p['dispositions']}")
-    review = json.loads(p["review_json"].read_text(encoding="utf-8"))
-    dispositions = json.loads(p["dispositions"].read_text(encoding="utf-8"))
-    try:
-        from tools.model_io import blocking_dispositions
-        from tools.context import chapter_text, exact_glossary_entries
-        from tools.qa import run_qa
-    except ModuleNotFoundError:
-        from model_io import blocking_dispositions
-        from context import chapter_text, exact_glossary_entries
-        from qa import run_qa
-    if blocking_dispositions(review, dispositions):
-        raise SystemExit("critical or major findings remain unresolved")
-    source = chapter_text(number)
-    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
-    qa = run_qa(number, source, p["revised"].read_text(encoding="utf-8"), glossary)
-    atomic_json(p["final_qa"], qa)
-    if not qa["passed"]:
-        raise SystemExit(f"revision failed deterministic QA; inspect {p['final_qa']}")
-    save(
-        state,
-        p,
-        "REVISED",
-        revised_sha256=digest(p["revised"]),
-        dispositions_sha256=digest(p["dispositions"]),
-        final_qa_sha256=digest(p["final_qa"]),
-    )
-
-
 def command_revise(number: int) -> None:
     state, p = load(number)
     require(state, "REVIEWED")
@@ -552,31 +513,34 @@ def command_revise(number: int) -> None:
     if digest(p["review_json"]) != state["artifacts"]["report_sha256"]:
         raise SystemExit("saved review changed after REVIEWED")
     try:
-        from tools.context import build_revision_packet
-        from tools.model_io import parse_revision_response
+        from tools.context import chapter_text, exact_glossary_entries
+        from tools.model_io import apply_review_replacements
+        from tools.qa import run_qa
     except ModuleNotFoundError:
-        from context import build_revision_packet
-        from model_io import parse_revision_response
+        from context import chapter_text, exact_glossary_entries
+        from model_io import apply_review_replacements
+        from qa import run_qa
     review = json.loads(p["review_json"].read_text(encoding="utf-8"))
-    packet = build_revision_packet(number, p["draft"].read_text(encoding="utf-8"), review)
-    enforce_packet_budget("revision", packet)
-    atomic_text(p["revision_context"], packet)
-    raw, metrics = run_omp(
-        p["revision_context"],
-        project_config()["revision_model"],
-        960,
-        log_path=omp_log_path(number, "revision"),
-    )
-    atomic_text(p["work"] / "revision-raw.txt", raw)
+    draft = p["draft"].read_text(encoding="utf-8")
     try:
-        revision = parse_revision_response(raw, review)
+        revised = apply_review_replacements(draft, review)
     except ValueError as error:
-        record_failed_model_output(p["work"] / "revision-raw.txt", raw, error)
-    atomic_text(p["revised"], revision["translation"])
-    canonical_dispositions = {"version": 1, "dispositions": revision["dispositions"]}
-    atomic_json(p["dispositions"], canonical_dispositions)
-    record_metric(p, "revision_model", **metrics)
-    command_revised(number)
+        raise SystemExit(str(error)) from None
+    atomic_text(p["revised"], revised)
+    validate_reading_copy(p["revised"], number)
+    source = chapter_text(number)
+    glossary = [(item["korean"], item["english"]) for item in exact_glossary_entries(source)]
+    qa = run_qa(number, source, revised, glossary)
+    atomic_json(p["final_qa"], qa)
+    if not qa["passed"]:
+        raise SystemExit(f"revision failed deterministic QA; inspect {p['final_qa']}")
+    save(
+        state,
+        p,
+        "REVISED",
+        revised_sha256=digest(p["revised"]),
+        final_qa_sha256=digest(p["final_qa"]),
+    )
 
 
 def command_polished(number: int) -> None:
@@ -614,8 +578,6 @@ def command_polish(number: int) -> None:
         raise SystemExit(f"polish starts at chapter {project_config()['polish_from_chapter']}")
     if digest(p["revised"]) != state["artifacts"]["revised_sha256"]:
         raise SystemExit("revised.md changed after REVISED")
-    if digest(p["dispositions"]) != state["artifacts"]["dispositions_sha256"]:
-        raise SystemExit("structured dispositions changed after REVISED")
     try:
         from tools.context import build_polish_packet
     except ModuleNotFoundError:
@@ -761,8 +723,9 @@ differences, internal contradiction, and accidental spoilers. Do not redo the
 source-fidelity reviews and do not rewrite files. Return exactly one JSON object
 using the chapter-review schema: summary plus a findings array. Use stable IDs
 `C01`, `C02`, and so on; source identifies the chapter/location, current quotes
-the exact English, correction gives the action, and confidence is 0 through 1.
-Use an empty findings array when nothing is actionable.
+one exact uniquely occurring English span, replacement supplies finished text,
+and confidence is 0 through 1. Use an empty findings array when nothing is
+actionable.
 
 Return this exact shape with no Markdown fence:
 
@@ -775,7 +738,7 @@ Return this exact shape with no Markdown fence:
       "source": "chapter and location",
       "current": "exact current English",
       "defect": "specific defect",
-      "correction": "recommended action",
+      "replacement": "finished exact replacement English",
       "rationale": "specific reason",
       "confidence": 0.0
     }}
@@ -911,8 +874,6 @@ def command_accept(number: int) -> None:
     copy_key = "polished_sha256" if polish_due(number) else "revised_sha256"
     if digest(copy) != state["artifacts"][copy_key]:
         raise SystemExit("reading copy changed after the last recorded stage; record it again before acceptance")
-    if digest(p["dispositions"]) != state["artifacts"]["dispositions_sha256"]:
-        raise SystemExit("structured dispositions changed after REVISED")
     if digest(p["final_qa"]) != state["artifacts"]["final_qa_sha256"]:
         raise SystemExit("final QA changed after the last recorded stage")
     if not state_claims_completion(number):
@@ -971,7 +932,6 @@ def command_committed(number: int, commit: str) -> None:
         {
             str(p["review_json"].relative_to(ROOT)),
             str(p["review_meta"].relative_to(ROOT)),
-            str(p["dispositions"].relative_to(ROOT)),
             str(p["draft_qa"].relative_to(ROOT)),
             str(p["final_qa"].relative_to(ROOT)),
             str(p["metrics"].relative_to(ROOT)),
@@ -1000,8 +960,8 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
         "status", "prepare", "draft", "drafted", "review", "revise",
-        "revised", "polish", "polished", "summarize", "checkpoint", "checkpointed",
-        "accept", "master",
+        "polish", "polished", "summarize", "checkpoint", "checkpointed", "accept",
+        "master",
     ):
         item = sub.add_parser(name)
         item.add_argument("chapter", type=int)
@@ -1030,8 +990,6 @@ def main() -> int:
             command_draft(args.chapter)
         elif args.command == "review":
             command_review(args.chapter, args.dry_run)
-        elif args.command == "revised":
-            command_revised(args.chapter)
         elif args.command == "revise":
             command_revise(args.chapter)
         elif args.command == "polished":

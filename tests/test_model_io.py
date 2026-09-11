@@ -1,14 +1,13 @@
 import unittest
 
 from tools.model_io import (
+    apply_review_replacements,
     blocking_dispositions,
     extract_reading_copy,
     parse_json_object,
-    parse_revision_response,
     validate_patchset,
     validate_range_review,
     validate_review,
-    validate_revision,
 )
 
 
@@ -19,7 +18,7 @@ class ModelIoTest(unittest.TestCase):
             "findings": [{
                 "id": "F01", "severity": "major", "source": "원문",
                 "current": "Current.", "defect": "Wrong subject.",
-                "correction": "Corrected.", "rationale": "Grammar.", "confidence": 0.9,
+                "replacement": "Corrected.", "rationale": "Grammar.", "confidence": 0.9,
             }],
         })
 
@@ -36,51 +35,37 @@ class ModelIoTest(unittest.TestCase):
             parse_json_object("   ")
         self.assertIn("empty response", str(error.exception))
 
-    def test_revision_requires_exactly_one_disposition_per_finding(self):
+    def test_review_replacements_apply_without_rewriting_unchanged_text(self):
+        revised = apply_review_replacements("# Chapter 1\n\nCurrent. Keep.\n", self.review())
+        self.assertEqual(revised, "# Chapter 1\n\nCorrected. Keep.\n")
+
+    def test_review_replacement_requires_a_unique_current_span(self):
+        with self.assertRaisesRegex(ValueError, "occurs 2 times"):
+            apply_review_replacements("Current. Current.", self.review())
+
+    def test_overlapping_review_replacements_are_rejected(self):
         review = self.review()
-        with self.assertRaises(ValueError):
-            validate_revision({"translation": "# Chapter 1\n", "dispositions": []}, review)
+        review["findings"].append({
+            "id": "F02",
+            "severity": "minor",
+            "source": "원문",
+            "current": "rent.",
+            "replacement": "vised.",
+            "defect": "Overlap.",
+            "rationale": "Cannot apply atomically.",
+            "confidence": 0.8,
+        })
+        with self.assertRaisesRegex(ValueError, "overlap"):
+            apply_review_replacements("Current.", review)
 
-    def test_unresolved_major_finding_blocks_acceptance(self):
+    def test_unresolved_major_checkpoint_finding_blocks_acceptance(self):
         review = self.review()
-        revision = validate_revision({
-            "translation": "# Chapter 1\n\nText.\n",
-            "dispositions": [{"finding_id": "F01", "status": "unresolved", "reason": "Ambiguous."}],
-        }, review)
-        self.assertEqual(blocking_dispositions(review, revision), ["F01"])
-
-    def test_revision_envelope_keeps_markdown_outside_json(self):
-        review = self.review()
-        raw = '''<<<TRANSLATION>>>
-# Chapter 1
-
-“Ordinary Markdown.”
-<<<DISPOSITIONS>>>
-{"dispositions":[{"finding_id":"F01","status":"applied","reason":"Corrected the subject."}]}'''
-        revision = parse_revision_response(raw, review)
-        self.assertTrue(revision["translation"].startswith("# Chapter 1"))
-        self.assertEqual(revision["dispositions"][0]["status"], "applied")
-
-    def test_looped_revision_envelope_uses_the_first_copy(self):
-        review = self.review()
-        raw = """<<<TRANSLATION>>>
-# Chapter 1
-
-“Ordinary Markdown.”
-<<<DISPOSITIONS>>>
-{"dispositions":[{"finding_id":"F01","status":"applied","reason":"Corrected the subject."}]}
-<<<END>>>
-<<<TRANSLATION>>>
-# Chapter 1
-
-Repeated looping copy.
-<<<DISPOSITIONS>>>
-{"dispositions":[{"finding_id":"F01","status":"applied","reason":"looped"}]}
-"""
-        revision = parse_revision_response(raw, review)
-        self.assertIn("Ordinary Markdown", revision["translation"])
-        self.assertNotIn("Repeated looping copy", revision["translation"])
-        self.assertEqual(revision["dispositions"][0]["reason"], "Corrected the subject.")
+        dispositions = {
+            "dispositions": [
+                {"finding_id": "F01", "status": "unresolved", "reason": "Ambiguous."}
+            ]
+        }
+        self.assertEqual(blocking_dispositions(review, dispositions), ["F01"])
 
     def test_trailing_prose_after_json_is_ignored(self):
         value = parse_json_object(

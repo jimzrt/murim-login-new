@@ -360,8 +360,10 @@ def build_review_packet(number: int, draft: str, qa: dict) -> str:
 
 Review only this packet. Do not use tools, infer future plot, rewrite the chapter,
 or give praise. Check fidelity, omissions, additions, subjects, ambiguity,
-terminology, voice, hierarchy, humor, profanity, Markdown, footnotes, and spoilers.
-Treat deterministic QA warnings as leads, not proof.
+terminology, voice, hierarchy, humor, profanity, Markdown, footnotes, and
+spoilers. Treat deterministic QA warnings as leads, not proof. Every finding
+must quote one exact, uniquely occurring draft span and supply its finished
+replacement; do not return instructions for another editor.
 
 Audit in this order: (1) reversed or altered actions, negation, subjects, kinship,
 quantities, and causal/mechanical explanations; (2) omitted pragmatic cues and
@@ -382,14 +384,15 @@ Return exactly one JSON object and no Markdown fence:
       "source": "exact Korean passage",
       "current": "exact current English",
       "defect": "specific defect",
-      "correction": "recommended correction",
+      "replacement": "finished exact replacement English",
       "rationale": "source-supported reason",
       "confidence": 0.0
     }}
   ]
 }}
 
-Use an empty findings array when nothing is actionable.
+Use an empty findings array when nothing is actionable. Replacement spans must
+not overlap.
 
 ## Korean source
 
@@ -429,68 +432,6 @@ Use an empty findings array when nothing is actionable.
 """
 
 
-def build_revision_packet(number: int, draft: str, review: dict) -> str:
-    source = chapter_text(number)
-    rules = (ROOT / "RULES.md").read_text(encoding="utf-8").strip()
-    glossary = exact_glossary_entries(source)
-    profiles = profile_entries(source)
-    return f"""# Structured Revision Task — Chapter {number}
-
-Revise the reviewed draft. Apply only source-supported findings, preserve meaning
-and ambiguity, and perform the required natural-English collocation pass.
-Fidelity has priority over punchier prose. Preserve exact actions, kinship,
-mechanisms, pragmatic cues, and the source's level of euphemism or profanity.
-
-Start from the reviewed draft. Change only what the findings require, plus the
-collocation pass. Do not retranslate the chapter from scratch.
-
-## Korean source
-
-```text
-{source.rstrip()}
-```
-
-## Reviewed draft
-
-```markdown
-{draft.rstrip()}
-```
-
-## Structured findings
-
-```json
-{json.dumps(review, ensure_ascii=False, indent=2)}
-```
-
-## Binding rules
-
-{rules}
-
-## Exact glossary matches
-
-{glossary_text(glossary)}
-
-## Present-character profiles
-
-{profiles_text(profiles)}
-
-## Output format
-
-Reply with only the envelope below. Keep the translation as ordinary Markdown;
-only dispositions are JSON. Do not copy the Korean source, draft, findings,
-rules, glossary, profiles, or these instructions into the output. Do not wrap
-the envelope in a Markdown fence. After <<<END>>>, stop immediately.
-
-<<<TRANSLATION>>>
-# Chapter {number}
-<complete revised reading copy>
-<<<DISPOSITIONS>>>
-{{"dispositions":[{{"finding_id":"F01","status":"applied|rejected|unresolved","reason":"specific reason"}}]}}
-<<<END>>>
-
-Include exactly one disposition for every finding. Do not put audit notes inside
-the translation section.
-"""
 
 
 def build_polish_packet(number: int, revised: str) -> str:

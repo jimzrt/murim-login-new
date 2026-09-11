@@ -16,8 +16,8 @@ Prioritize in this order:
 
 Semantic fidelity outranks polish. Preserve the source's degree of explicitness.
 Do not report optional synonyms, generic praise, or whole-chapter rewrites.
-Every finding must quote an exact current-English span and recommend a bounded
-correction. Mark a finding critical only when it reverses or changes a scene
+Every finding must quote an exact current-English span and provide a finished,
+bounded replacement. Mark a finding critical only when it changes a scene
 fact, action, identity, negation, or consequence; major for meaningful lost
 hierarchy, mechanism, characterization, ambiguity, or register; minor for clear
 localized defects without changed meaning.

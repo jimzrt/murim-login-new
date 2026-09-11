@@ -147,7 +147,7 @@ Return exactly one JSON object with no Markdown fence:
       "source": "exact Korean passage",
       "current": "exact current-English span",
       "defect": "specific defect",
-      "correction": "bounded recommended correction",
+      "replacement": "finished bounded replacement English",
       "rationale": "source-supported reason",
       "confidence": 0.0
     }}
@@ -365,7 +365,7 @@ def refine(start: int, end: int) -> dict:
         raise SystemExit(f"refinement packet estimate {tokens} exceeds {limit}")
     packet_path = directory / "refine-packet.md"
     atomic_text(packet_path, packet)
-    raw, metrics = run_omp(packet_path, project_config()["revision_model"], 960)
+    raw, metrics = run_omp(packet_path, project_config()["review_model"], 960)
     try:
         patchset = validate_patchset(parse_json_object(raw), review_data)
     except ValueError as error:

@@ -54,9 +54,9 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 - Review receives the source, draft, rules, exact glossary matches, the same
   compact matching profiles, active continuity, and deterministic QA. It does
   not receive prior translations or the summary archive.
-- Revision receives the source, draft, structured findings, rules, glossary,
-  and compact matching profiles. It does not receive draft-only history or
-  state.
+- Revision is deterministic: it applies each review finding's exact, unique
+  `current` → `replacement` span to the reviewed draft. It makes no model call
+  and receives no additional context.
 - Polish receives the source, revised reading copy, `POLISH.md`, rules,
   glossary, and compact matching profiles. It does not receive review findings,
   the summary archive, or prior translations. Chapters before
@@ -67,12 +67,13 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 ## Gates
 
 - The draft model drafts; deterministic QA must pass; the review model returns
-  validated structured findings; the revision model returns the revised reading
-  copy plus one disposition per finding; from `polish_from_chapter` onward the
-  polish model returns a complete reading copy using `POLISH.md`; final QA
-  must pass.
-- Unresolved critical or major findings block acceptance. Reviews and
-  dispositions are durable JSON with generated Markdown reading reports.
+  validated structured findings with exact finished replacements. Revision
+  applies those replacements atomically and blocks on missing, repeated, or
+  overlapping spans. From `polish_from_chapter` onward the polish model returns
+  a complete reading copy using `POLISH.md`; final QA must pass.
+- Reviews are durable JSON with generated Markdown reading reports. Checkpoint
+  dispositions remain structured and unresolved critical or major checkpoint
+  findings block acceptance.
 - At `POLISHED`, or at `REVISED` when polish is skipped, update durable
   terminology in `docs/NAMES.md` or the compendium, affected safe profiles,
   `docs/CONTEXT.json`, `docs/STATE.md`, and `summaries/beats/NNNN.md` from this
@@ -89,9 +90,9 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 `translations/NNNN.md` contains accepted reading copies only. After acceptance,
 the wrapper runs mastering and promotes the verified mastered copy over that
 file; the pre-master snapshot remains at `reviews/mastering/NNNN/baseline.md`.
-After promotion, commit the chapter, structured review/dispositions, QA reports,
-mastering artifacts, metrics, and relevant durable-context changes. Register the
-exact commit with the reported command. The `run_next.py` wrapper performs
+After promotion, commit the chapter, structured review, QA reports, mastering
+artifacts, metrics, and relevant durable-context changes. Register the exact
+commit with the reported command. The `run_next.py` wrapper performs
 mastering, promotion, commit, and registration itself. Never commit `.work/`,
 caches, or an unaccepted draft.
 

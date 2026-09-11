@@ -64,7 +64,7 @@ def validate_review(value: dict) -> dict:
         raise ValueError("review response requires a findings array")
     normalized: list[dict] = []
     seen: set[str] = set()
-    required = ("id", "severity", "source", "current", "defect", "correction", "rationale")
+    required = ("id", "severity", "source", "current", "replacement", "defect", "rationale")
     for position, finding in enumerate(findings, 1):
         if not isinstance(finding, dict):
             raise ValueError(f"finding {position} must be an object")
@@ -81,6 +81,8 @@ def validate_review(value: dict) -> dict:
         confidence = finding.get("confidence")
         if not isinstance(confidence, (int, float)) or isinstance(confidence, bool) or not 0 <= confidence <= 1:
             raise ValueError(f"confidence for {identifier} must be between 0 and 1")
+        if finding["current"] == finding["replacement"]:
+            raise ValueError(f"finding {identifier} replacement must differ from current text")
         normalized.append({
             **finding,
             "id": identifier,
@@ -91,6 +93,25 @@ def validate_review(value: dict) -> dict:
     if not isinstance(summary, str):
         raise ValueError("review summary must be a string")
     return {"version": 1, "summary": summary.strip(), "findings": normalized}
+
+
+def apply_review_replacements(text: str, review: dict) -> str:
+    spans: list[tuple[int, int, str, str]] = []
+    for finding in review["findings"]:
+        old = finding["current"]
+        count = text.count(old)
+        if count != 1:
+            raise ValueError(f"finding {finding['id']} current text occurs {count} times")
+        start = text.index(old)
+        spans.append((start, start + len(old), finding["replacement"], finding["id"]))
+    spans.sort()
+    for previous, current in zip(spans, spans[1:]):
+        if current[0] < previous[1]:
+            raise ValueError(f"findings {previous[3]} and {current[3]} overlap")
+    revised = text
+    for start, end, replacement, _ in reversed(spans):
+        revised = revised[:start] + replacement + revised[end:]
+    return revised.rstrip() + "\n"
 
 
 def validate_dispositions(dispositions: object, review: dict) -> list[dict]:
@@ -119,38 +140,6 @@ def validate_dispositions(dispositions: object, review: dict) -> list[dict]:
     return normalized
 
 
-def validate_revision(value: dict, review: dict) -> dict:
-    translation = value.get("translation")
-    if not isinstance(translation, str) or not translation.strip():
-        raise ValueError("revision response requires a nonempty translation")
-    normalized = validate_dispositions(value.get("dispositions"), review)
-    return {"version": 1, "translation": translation.strip() + "\n", "dispositions": normalized}
-
-
-def parse_revision_response(raw: str, review: dict) -> dict:
-    """Parse a low-overhead Markdown + JSON envelope, with JSON fallback."""
-    text = raw.strip()
-    if text.startswith("{") or text.startswith("```json"):
-        return validate_revision(parse_json_object(text), review)
-    translation_marker = "<<<TRANSLATION>>>"
-    disposition_marker = "<<<DISPOSITIONS>>>"
-    end_marker = "<<<END>>>"
-    marker_at = text.find(translation_marker)
-    if marker_at < 0 or disposition_marker not in text[marker_at:]:
-        raise ValueError("revision response is missing required envelope markers")
-    text = text[marker_at:]
-    translation, separator, disposition_text = text[len(translation_marker):].partition(disposition_marker)
-    if not separator or not translation.strip():
-        raise ValueError("revision response has an empty translation or disposition section")
-    if end_marker in disposition_text:
-        disposition_text = disposition_text.split(end_marker, 1)[0]
-    if translation_marker in disposition_text:
-        disposition_text = disposition_text.split(translation_marker, 1)[0]
-    disposition_object = parse_json_object(disposition_text)
-    normalized = validate_dispositions(disposition_object.get("dispositions"), review)
-    return {"version": 1, "translation": translation.strip() + "\n", "dispositions": normalized}
-
-
 def blocking_dispositions(review: dict, revision: dict) -> list[str]:
     severities = {finding["id"]: finding["severity"] for finding in review["findings"]}
     return [
@@ -158,6 +147,8 @@ def blocking_dispositions(review: dict, revision: dict) -> list[str]:
         for item in revision["dispositions"]
         if item["status"] == "unresolved" and severities[item["finding_id"]] in {"critical", "major"}
     ]
+
+
 
 
 def review_markdown(review: dict) -> str:
@@ -173,7 +164,7 @@ def review_markdown(review: dict) -> str:
             f"- **Source:** {finding['source']}",
             f"- **Current:** {finding['current']}",
             f"- **Defect:** {finding['defect']}",
-            f"- **Correction:** {finding['correction']}",
+            f"- **Replacement:** {finding['replacement']}",
             f"- **Rationale:** {finding['rationale']}",
         ])
     return "\n".join(sections).rstrip() + "\n"

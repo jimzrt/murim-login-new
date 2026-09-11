@@ -31,13 +31,10 @@ class WorkflowTest(unittest.TestCase):
         state, paths = workflow.load(1)
         paths["revised"].parent.mkdir(parents=True, exist_ok=True)
         paths["revised"].write_text("# Chapter 1\n\nFinished.\n", encoding="utf-8")
-        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
-        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
         paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
         paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
         state["stage"] = "REVISED"
         state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
-        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
         state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
         workflow.atomic_json(paths["state"], state)
 
@@ -67,8 +64,6 @@ class WorkflowTest(unittest.TestCase):
         state, paths = workflow.load(1)
         paths["revised"].parent.mkdir(parents=True, exist_ok=True)
         paths["revised"].write_text("# Chapter 1\n\nFinished.\n", encoding="utf-8")
-        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
-        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
         paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
         paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
         paths["beat"].parent.mkdir(parents=True, exist_ok=True)
@@ -78,7 +73,6 @@ class WorkflowTest(unittest.TestCase):
         )
         state["stage"] = "REVISED"
         state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
-        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
         state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
         workflow.atomic_json(paths["state"], state)
         (self.root / "docs" / "STATE.md").write_text(
@@ -136,6 +130,44 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(metrics["input_tokens"], 12)
         self.assertEqual(metrics["input_bytes"], len("bounded packet"))
         self.assertEqual(metrics["packet_token_estimate"], 4)
+
+    def test_revise_applies_exact_review_replacements_without_model_call(self):
+        state, paths = workflow.load(1)
+        paths["draft"].parent.mkdir(parents=True, exist_ok=True)
+        paths["draft"].write_text("# Chapter 1\n\nCurrent. Keep.\n", encoding="utf-8")
+        review = {
+            "version": 1,
+            "summary": "One fix.",
+            "findings": [{
+                "id": "F01",
+                "severity": "major",
+                "source": "원문",
+                "current": "Current.",
+                "replacement": "Corrected.",
+                "defect": "Wrong subject.",
+                "rationale": "Source-supported.",
+                "confidence": 0.9,
+            }],
+        }
+        paths["review_json"].parent.mkdir(parents=True, exist_ok=True)
+        workflow.atomic_json(paths["review_json"], review)
+        state["stage"] = "REVIEWED"
+        state["artifacts"]["reviewed_draft_sha256"] = workflow.digest(paths["draft"])
+        state["artifacts"]["report_sha256"] = workflow.digest(paths["review_json"])
+        workflow.atomic_json(paths["state"], state)
+        passed = {"passed": True, "errors": [], "warnings": []}
+        with (
+            patch.object(context, "chapter_text", return_value="source"),
+            patch.object(context, "exact_glossary_entries", return_value=[]),
+            patch("tools.qa.run_qa", return_value=passed),
+            patch.object(workflow, "run_omp") as model,
+        ):
+            workflow.command_revise(1)
+        model.assert_not_called()
+        self.assertEqual(paths["revised"].read_text(encoding="utf-8"), "# Chapter 1\n\nCorrected. Keep.\n")
+        recorded = json.loads(paths["state"].read_text(encoding="utf-8"))
+        self.assertEqual(recorded["stage"], "REVISED")
+        self.assertNotIn("dispositions_sha256", recorded["artifacts"])
 
     def test_revised_block_asks_for_summarize_then_checkpoint(self):
         (self.root / "docs" / "STATE.md").write_text(
@@ -199,7 +231,6 @@ class WorkflowTest(unittest.TestCase):
             "models": {
                 "draft": "provider/draft:high",
                 "review": "provider/review:medium",
-                "revision": "provider/revision:high",
                 "polish": "provider/polish:high",
                 "summary": "provider/summary:high",
                 "coordinator": "provider/coordinator:high",
@@ -207,7 +238,6 @@ class WorkflowTest(unittest.TestCase):
         })
         self.assertEqual(resolved["draft_model"], "provider/draft:high")
         self.assertEqual(resolved["review_model"], "provider/review:medium")
-        self.assertEqual(resolved["revision_model"], "provider/revision:high")
         self.assertEqual(resolved["polish_model"], "provider/polish:high")
         self.assertEqual(resolved["summary_model"], "provider/summary:high")
         self.assertEqual(resolved["coordinator_model"], "provider/coordinator:high")
@@ -290,8 +320,6 @@ class WorkflowTest(unittest.TestCase):
         paths["revised"].parent.mkdir(parents=True, exist_ok=True)
         paths["revised"].write_text("# Chapter 27\n\nRevised.\n", encoding="utf-8")
         paths["polished"].write_text("# Chapter 27\n\nPolished.\n", encoding="utf-8")
-        paths["dispositions"].parent.mkdir(parents=True, exist_ok=True)
-        paths["dispositions"].write_text('{"version":1,"dispositions":[]}\n', encoding="utf-8")
         paths["final_qa"].parent.mkdir(parents=True, exist_ok=True)
         paths["final_qa"].write_text('{"passed":true}\n', encoding="utf-8")
         paths["beat"].parent.mkdir(parents=True, exist_ok=True)
@@ -302,7 +330,6 @@ class WorkflowTest(unittest.TestCase):
         state["stage"] = "POLISHED"
         state["artifacts"]["revised_sha256"] = workflow.digest(paths["revised"])
         state["artifacts"]["polished_sha256"] = workflow.digest(paths["polished"])
-        state["artifacts"]["dispositions_sha256"] = workflow.digest(paths["dispositions"])
         state["artifacts"]["final_qa_sha256"] = workflow.digest(paths["final_qa"])
         workflow.atomic_json(paths["state"], state)
         (self.root / "docs" / "STATE.md").write_text(

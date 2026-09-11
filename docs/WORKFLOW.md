@@ -52,11 +52,12 @@ Review history belongs to the structured files under `reviews/`.
 
 ## Review, Revision, and Polish
 
-The chapter reviewer returns validated JSON at `reviews/sol/NNNN.json`; the
-human view is `reviews/sol/NNNN.md`; hashes and counts are in
-`reviews/sol/NNNN.meta.json`. Revision creates
-`reviews/sol/NNNN.dispositions.json`. Every finding needs exactly one applied,
-rejected, or unresolved disposition. Unresolved critical/major findings block.
+The chapter reviewer returns validated JSON with exact finished replacements at
+`reviews/sol/NNNN.json`; the human view is `reviews/sol/NNNN.md`; hashes and
+counts are in `reviews/sol/NNNN.meta.json`. Revision makes no model call: it
+atomically applies every unique, non-overlapping `current` → `replacement` span
+and runs deterministic QA. Missing, repeated, or overlapping spans stop the
+transaction.
 
 From `polish_from_chapter` onward, a controller polish stage runs after
 `REVISED`. It is a no-tools OMP call: source, revised copy, `RULES.md`,
@@ -134,7 +135,7 @@ python tools/cost_report.py
 If checkpoint reviews repeatedly find nothing new, increase
 `checkpoint_review_interval` to 10 or 20 while retaining five-chapter summaries.
 If they catch meaningful drift, keep the shorter interval. A checkpoint uses
-structured findings and exact structured dispositions just like chapter review.
+structured exact replacements plus independent structured dispositions.
 
 ## Retrospective Range Audit
 
@@ -172,8 +173,8 @@ chapters. Safe profiles contain revealed facts only.
 
 After `ACCEPTED`, `run_next.py` runs mastering, promotes the verified mastered
 copy into `translations/`, then commits that translation, mastering artifacts,
-packet, structured review/dispositions, QA, metrics, relevant context files, and
-any checkpoint patches to earlier translations in the current block. Use
+packet, structured review, QA, metrics, relevant context files, and any
+checkpoint patches to earlier translations in the current block. Use
 `Accept Chapter N`, then register the exact commit through the controller.
 
 ## Exports

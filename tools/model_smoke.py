@@ -73,7 +73,7 @@ Return exactly one JSON object and no Markdown fence:
       "source": "exact Korean passage",
       "current": "exact current English",
       "defect": "specific defect",
-      "correction": "recommended correction",
+      "replacement": "finished exact replacement English",
       "rationale": "source-supported reason",
       "confidence": 0.0
     }
