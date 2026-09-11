@@ -172,10 +172,12 @@ DeepSeek receives:
 - complete Sol English (once, with `P#` paragraph labels);
 - exact glossary rows;
 - project fidelity rules;
-- numbered changed hunks containing only BASE/SOL paragraph references and Korean line citations;
+- numbered changed hunks containing the exact changed BASE/SOL prose, paragraph references, and Korean line citations;
 - terminology-risk annotations when a preferred baseline term disappears from Sol's hunk.
 
-Changed prose is not repeated in the hunk list. Both versions and their neighboring context are read from the complete numbered chapters above, which also lets adjacent hunks that split or restructure one baseline sentence be judged as assembled prose.
+After assembly, deterministic QA is followed by a bounded whole-chapter fidelity gate. Any critical or major semantic finding blocks promotion; minor findings are retained for inspection.
+
+Changed prose is repeated in each hunk for reliable direct comparison. Both complete numbered chapters remain available for neighboring context and for judging adjacent hunks that split or restructure one baseline sentence as assembled prose.
 
 It must return exactly one of:
 

@@ -2,7 +2,7 @@
   "version": 1,
   "models": {
     "draft": "openai-codex/gpt-5.6-luna:high",
-    "review": "cursor/cursor-grok-4.6:medium",
+    "review": "openai-codex/gpt-5.6-sol:medium",
     "summary": "openai-codex/gpt-5.6-luna:high",
     "checkpoint": "openai-codex/gpt-5.6-sol:medium"
   },

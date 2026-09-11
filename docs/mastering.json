@@ -1,14 +1,16 @@
 {
   "version": 1,
   "models": {
-    "master": "openai-codex/gpt-5.6-sol:low",
-    "adjudicator": "cursor/cursor-grok-4.6:low"
+    "master": "openai-codex/gpt-5.6-sol:medium",
+    "adjudicator": "cursor/cursor-grok-4.6:high",
+    "quality_gate": "openai-codex/gpt-5.6-sol:high"
   },
   "omp_config": ".omp/review-overlay.yml",
   "adjudicator_omp_config": ".omp/adjudicator-overlay.yml",
   "timeouts": {
     "master": 1800,
-    "adjudicator": 1800
+    "adjudicator": 1800,
+    "quality_gate": 1800
   },
   "packet_token_limit": 90000,
   "continuity_previous_chapters": 2,

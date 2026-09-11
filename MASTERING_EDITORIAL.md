@@ -19,6 +19,9 @@ Never invent, omit, explain away, generalize, intensify, soften, or reinterpret 
 - jokes and comic specificity, even when a more generic English joke would sound smoother;
 - hierarchy, kinship, forms of address, characterization, and speaker attitude;
 - System mechanics, Murim concepts, names, ranks, techniques, items, organizations, and established terminology.
+- chapter-level logical consistency: interpret labels, counters, notifications, and repeated facts from how they behave across the scene, not from an isolated surface gloss;
+- idioms by their narrative function rather than their component words, and jokes with their setup, recognition, and punchline timing intact;
+- cross-sentence implications: do not create a claim that contradicts “again,” an increasing value, an earlier action, or the explanation immediately around it;
 
 Do not add jokes, metaphors, explanations, emotional conclusions, or colorful details that are absent from the Korean. Do not replace a specific source image with a generic equivalent merely because the generic version is smoother.
 

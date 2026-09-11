@@ -11,6 +11,7 @@ Mastering roles live in `models` in [`docs/mastering.json`](mastering.json):
 
 - `master`
 - `adjudicator`
+- `quality_gate` — an independent whole-chapter semantic gate run after assembly
 
 Do not copy those IDs into docs or defaults elsewhere. Call sites read the
 resolved `draft_model`, `review_model`, `summary_model`, and `checkpoint_model`

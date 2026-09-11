@@ -132,7 +132,7 @@ def validate_durable_update(value: dict, number: int) -> dict:
         "plot": _nonempty_strings(beat.get("plot"), "beat.plot", allow_empty=False),
         "continuity": _nonempty_strings(beat.get("continuity"), "beat.continuity"),
         "translation_decisions": _nonempty_strings(
-            beat.get("translation_decisions"), "beat.translation_decisions"
+            beat.get("translation_decisions", []), "beat.translation_decisions"
         ),
     }
     context = value.get("context")

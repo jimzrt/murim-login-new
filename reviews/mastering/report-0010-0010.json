@@ -1,0 +1,34 @@
+{
+  "rows": [
+    {
+      "adjudicator_cost_usd": 0.0,
+      "chapter": 10,
+      "decisions": {
+        "BASE": 52,
+        "REPAIR": 12,
+        "SOL": 61
+      },
+      "fidelity_findings": 4,
+      "fidelity_gate_cost_usd": 0.284996,
+      "fidelity_major_or_critical": 2,
+      "hunks": 125,
+      "master_cost_usd": 0.081366,
+      "stage": "PROMOTED",
+      "total_cost_usd": 0.366362
+    }
+  ],
+  "totals": {
+    "BASE": 52,
+    "REPAIR": 12,
+    "SOL": 61,
+    "adjudicator_cost_usd": 0.0,
+    "chapters": 1,
+    "fidelity_findings": 4,
+    "fidelity_gate_cost_usd": 0.284996,
+    "fidelity_major_or_critical": 2,
+    "hunks": 125,
+    "master_cost_usd": 0.081366,
+    "total_cost_usd": 0.366362
+  },
+  "version": 1
+}

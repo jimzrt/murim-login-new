@@ -61,9 +61,12 @@ def load_config() -> dict:
     cfg = json.loads(read_text(CONFIG_PATH))
     if cfg.get("version") != 1:
         raise SystemExit("docs/mastering.json version must be 1")
-    for role in ("master", "adjudicator"):
+    for role in ("master", "adjudicator", "quality_gate"):
         if not isinstance(cfg.get("models", {}).get(role), str):
             raise SystemExit(f"docs/mastering.json missing models.{role}")
+    for role in ("master", "adjudicator", "quality_gate"):
+        if not isinstance(cfg.get("timeouts", {}).get(role), int):
+            raise SystemExit(f"docs/mastering.json missing timeouts.{role}")
     return cfg
 
 
@@ -105,6 +108,8 @@ def chapter_paths(number: int) -> dict[str, Path]:
         "adjudication": work / "adjudication.json",
         "final": work / "final.md",
         "qa": work / "qa.json",
+        "fidelity_packet": work / "fidelity-packet.md",
+        "fidelity_review": work / "fidelity-review.json",
         "metrics": work / "metrics.json",
         "logs": work / "omp",
         "translation": ROOT / "translations" / f"{number:04d}.md",
@@ -413,11 +418,14 @@ def run_qa(number: int, source: str, translation: str, glossary: list[dict]) -> 
 
 def invalidate_downstream(p: dict[str, Path], from_stage: str) -> None:
     if from_stage == "master":
-        keys = ("diff_json", "diff_md", "adjudicator_packet", "adjudication", "final", "qa")
-        metric_stages = {"adjudicator"}
+        keys = (
+            "diff_json", "diff_md", "adjudicator_packet", "adjudication",
+            "final", "qa", "fidelity_packet", "fidelity_review",
+        )
+        metric_stages = {"adjudicator", "fidelity_gate"}
     elif from_stage == "adjudicator":
-        keys = ("final", "qa")
-        metric_stages = set()
+        keys = ("final", "qa", "fidelity_packet", "fidelity_review")
+        metric_stages = {"fidelity_gate"}
     else:
         return
     for key in keys:
@@ -668,6 +676,16 @@ def format_hunk_for_packet(h: dict) -> str:
         parts.append(
             f"Terminology alert: `{alert['korean']}` → `{alert['preferred']}` present in BASE, absent from SOL."
         )
+    parts.extend([
+        "",
+        "BASE:",
+        "",
+        h["baseline"] or "*(empty)*",
+        "",
+        "SOL:",
+        "",
+        h["sol"] or "*(empty)*",
+    ])
     return "\n".join(parts) + "\n"
 
 
@@ -715,9 +733,9 @@ def adjudicator_packet(number: int, source: str, baseline: str, sol: str, glossa
 
 ## Numbered diff hunks
 
-Each hunk identifies its changed BASE and SOL spans by paragraph ID. Read those
-spans and their neighboring context in the complete numbered versions above;
-use the Korean line numbers for source verification.
+Each hunk repeats its exact changed BASE and SOL spans for direct comparison.
+Use the paragraph IDs to read neighboring context in the complete numbered
+versions above and the Korean line numbers for source verification.
 
 {chr(10).join(hunk_parts)}
 
@@ -909,18 +927,160 @@ def command_assemble(number: int) -> None:
     print(f"{number:04d}: final chapter assembled")
 
 
+def run_fidelity_gate(
+    number: int,
+    source: str,
+    final: str,
+    deterministic_qa: dict,
+    paths: dict[str, Path],
+) -> dict:
+    """Run one bounded semantic review after BASE/SOL assembly."""
+    packet = f"""# Fidelity Gate — Chapter {number}
+
+Audit the complete assembled English chapter against the Korean source.
+Report only genuine source-fidelity defects: wrong action, subject, object,
+causality, quantity, mechanism, terminology, ambiguity, joke logic, register,
+or physical detail. Check repeated UI labels and counters against how they
+behave across the whole scene. Interpret idioms by their function, not by
+translating their component words. Do not report optional stylistic rewrites.
+
+Return exactly one JSON object and no Markdown fence:
+
+{{
+  "summary": "brief assessment",
+  "findings": [
+    {{
+      "id": "F01",
+      "severity": "critical|major|minor",
+      "source": "source location",
+      "current": "exact uniquely occurring English span",
+      "defect": "specific fidelity defect",
+      "replacement": "finished replacement only when necessary",
+      "rationale": "source-grounded reason",
+      "confidence": 0.0
+    }}
+  ]
+}}
+
+Use an empty findings array when the chapter is faithful. A critical or major
+finding blocks promotion; minor findings are recorded for human inspection.
+
+## Korean source
+
+```text
+{format_numbered_source(source)}
+```
+
+## Assembled English
+
+```markdown
+{format_numbered_baseline(final)}
+```
+
+## Deterministic QA
+
+```json
+{json.dumps(deterministic_qa, ensure_ascii=False, indent=2)}
+```
+
+## Binding editorial rules
+
+{read_text(ROOT / "RULES.md").strip()}
+
+{read_text(ROOT / "MASTERING_EDITORIAL.md").strip()}
+"""
+    enforce_budget(packet, "fidelity gate")
+    atomic_text(paths["fidelity_packet"], packet)
+    cfg = load_config()
+    output, metrics = run_omp(
+        paths["fidelity_packet"],
+        cfg["models"]["quality_gate"],
+        int(cfg["timeouts"]["quality_gate"]),
+        paths["logs"] / "fidelity-gate.jsonl",
+    )
+    try:
+        from tools.model_io import validate_review
+    except ModuleNotFoundError:
+        from model_io import validate_review
+    value = validate_review(parse_json_object(output))
+    atomic_json(paths["fidelity_review"], value)
+    save_metric(
+        paths,
+        "fidelity_gate",
+        {
+            **metrics,
+            "finding_count": len(value["findings"]),
+            "major_or_critical_count": sum(
+                item["severity"] in {"major", "critical"} for item in value["findings"]
+            ),
+        },
+    )
+    return value
+
+def apply_fidelity_repairs(text: str, review: dict) -> tuple[str, int]:
+    findings = [
+        finding for finding in review.get("findings", [])
+        if finding["severity"] in {"major", "critical"}
+    ]
+    if not findings:
+        return text, 0
+    try:
+        from tools.model_io import apply_review_replacements
+    except ModuleNotFoundError:
+        from model_io import apply_review_replacements
+    repaired = apply_review_replacements(text, {"findings": findings})
+    return normalize_chapter(repaired), len(findings)
+
+
+
 def command_qa(number: int) -> None:
     state, p = create_or_verify_state(number)
     if not p["final"].exists():
         raise ValueError(f"chapter {number}: assemble final first")
     source = read_text(p["source"])
-    final = normalize_chapter(read_text(p["final"]))
     glossary = exact_glossary(source)
+    final = normalize_chapter(read_text(p["final"]))
     qa = run_qa(number, source, final, glossary)
     atomic_json(p["qa"], qa)
-    update_state(p, state, "VERIFIED" if qa["passed"] else "QA_FAILED", qa_passed=bool(qa["passed"]))
-    status = "PASS" if qa["passed"] else "FAIL"
-    print(f"{number:04d}: QA {status} — {len(qa['errors'])} errors, {len(qa['warnings'])} warnings")
+    fidelity = {"findings": []}
+    repairs = 0
+    for attempt in range(2):
+        if not qa["passed"]:
+            break
+        fidelity = run_fidelity_gate(number, source, final, qa, p)
+        major_or_critical = sum(
+            item["severity"] in {"major", "critical"}
+            for item in fidelity["findings"]
+        )
+        if not major_or_critical or attempt == 1:
+            break
+        final, applied = apply_fidelity_repairs(final, fidelity)
+        if not applied:
+            break
+        repairs += applied
+        validate_chapter(final, number, "fidelity repair")
+        atomic_text(p["final"], final)
+        update_state(p, state, "ASSEMBLED", final_sha256=sha256_text(final))
+        qa = run_qa(number, source, final, glossary)
+        atomic_json(p["qa"], qa)
+    semantic_failures = sum(
+        item["severity"] in {"major", "critical"}
+        for item in fidelity["findings"]
+    )
+    passed = bool(qa["passed"]) and semantic_failures == 0
+    update_state(
+        p,
+        state,
+        "VERIFIED" if passed else "QA_FAILED",
+        qa_passed=passed,
+        fidelity_repairs=repairs,
+    )
+    status = "PASS" if passed else "FAIL"
+    print(
+        f"{number:04d}: QA {status} — {len(qa['errors'])} errors, "
+        f"{len(qa['warnings'])} warnings, {semantic_failures} major/critical "
+        f"fidelity findings, {repairs} repairs"
+    )
 
 
 def command_run(number: int) -> None:
@@ -982,20 +1142,29 @@ def command_report(chapters: Iterable[int]) -> None:
         state = state_for(number)
         master = metrics.get("stages", {}).get("master", {})
         judge = metrics.get("stages", {}).get("adjudicator", {})
+        gate = metrics.get("stages", {}).get("fidelity_gate", {})
         row = {
             "chapter": number,
             "stage": state.get("stage"),
             "hunks": state.get("hunk_count", 0),
             "decisions": state.get("decisions", {}),
+            "fidelity_findings": gate.get("finding_count", 0),
+            "fidelity_major_or_critical": gate.get("major_or_critical_count", 0),
             "master_cost_usd": metric_cost(master),
             "adjudicator_cost_usd": metric_cost(judge),
+            "fidelity_gate_cost_usd": metric_cost(gate),
         }
-        row["total_cost_usd"] = row["master_cost_usd"] + row["adjudicator_cost_usd"]
+        row["total_cost_usd"] = (
+            row["master_cost_usd"] + row["adjudicator_cost_usd"] + row["fidelity_gate_cost_usd"]
+        )
         rows.append(row)
     totals = {
         "chapters": len(rows),
         "master_cost_usd": sum(r["master_cost_usd"] for r in rows),
         "adjudicator_cost_usd": sum(r["adjudicator_cost_usd"] for r in rows),
+        "fidelity_gate_cost_usd": sum(r["fidelity_gate_cost_usd"] for r in rows),
+        "fidelity_findings": sum(int(r["fidelity_findings"] or 0) for r in rows),
+        "fidelity_major_or_critical": sum(int(r["fidelity_major_or_critical"] or 0) for r in rows),
         "total_cost_usd": sum(r["total_cost_usd"] for r in rows),
         "hunks": sum(int(r["hunks"] or 0) for r in rows),
         "SOL": sum(int(r["decisions"].get("SOL", 0)) for r in rows),
@@ -1038,6 +1207,7 @@ def command_doctor() -> None:
     print("Mastering overlay OK")
     print(f"master:       {cfg['models']['master']}")
     print(f"adjudicator:  {cfg['models']['adjudicator']}")
+    print(f"quality gate:  {cfg['models']['quality_gate']}")
     omp_config = cfg.get("omp_config")
     print(f"OMP config:   {omp_config or '(none)'}")
     adj_config = cfg.get("adjudicator_omp_config")

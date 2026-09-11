@@ -102,6 +102,28 @@ def test_normalize_strips_single_fence():
     assert mastering.normalize_chapter(value) == "# Chapter 2\n\nText.\n"
 
 
+def test_apply_fidelity_repairs_only_major_findings():
+    text = "# Chapter 1\n\nCounter (2 / 100).\n\nKeep this.\n"
+    review = {
+        "findings": [
+            {
+                "id": "F01",
+                "severity": "major",
+                "current": "Counter (2 / 100).",
+                "replacement": "Successful repetitions (2 / 100).",
+            },
+            {
+                "id": "F02",
+                "severity": "minor",
+                "current": "Keep this.",
+                "replacement": "Keep that.",
+            },
+        ]
+    }
+    repaired, count = mastering.apply_fidelity_repairs(text, review)
+    assert count == 1
+    assert "Successful repetitions (2 / 100)." in repaired
+    assert "Keep this." in repaired
 def test_fuzzy_alignment_does_not_collapse_fully_edited_chapter():
     baseline = "# Chapter 1\n\nThe hunter walked home.\n\nHe opened the door.\n\nThe room was empty.\n"
     sol = "# Chapter 1\n\nThe hunter headed home.\n\nHe pushed the door open.\n\nNo one was inside.\n"
@@ -143,11 +165,11 @@ def test_adjudicator_packet_is_compact():
     assert "Korean lines: 5" in packet
     assert "[P1]" in packet
     assert "1|＃1화" in packet
-    assert packet.count("Jinho spoke.") == 1
-    assert packet.count("Jinho said it.") == 1
+    assert packet.count("Jinho spoke.") == 2
+    assert packet.count("Jinho said it.") == 2
     hunk_section = packet.split("## Numbered diff hunks", 1)[1]
-    assert "Jinho spoke." not in hunk_section
-    assert "Jinho said it." not in hunk_section
+    assert "Jinho spoke." in hunk_section
+    assert "Jinho said it." in hunk_section
     sections = [
         "## Korean source",
         "## Complete BASELINE English",
