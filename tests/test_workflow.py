@@ -314,6 +314,24 @@ class WorkflowTest(unittest.TestCase):
         workflow.command_accept(27)
         self.assertEqual(paths["translation"].read_text(encoding="utf-8"), "# Chapter 27\n\nPolished.\n")
 
+    def test_accepted_chapter_asks_for_master_until_promoted(self):
+        state, paths = workflow.load(1)
+        state["stage"] = "ACCEPTED"
+        self.assertEqual(workflow.next_action(state, paths), "python tools/workflow.py master 1")
+        mastering = self.root / "reviews" / "mastering" / "0001"
+        mastering.mkdir(parents=True)
+        (mastering / "state.json").write_text(
+            '{"stage":"PROMOTED","qa_passed":true}\n', encoding="utf-8"
+        )
+        self.assertIn("workflow.py committed 1", workflow.next_action(state, paths))
+
+    def test_master_requires_accepted_stage(self):
+        state, paths = workflow.load(1)
+        state["stage"] = "REVISED"
+        workflow.atomic_json(paths["state"], state)
+        with self.assertRaises(SystemExit):
+            workflow.command_master(1)
+
 
 
 if __name__ == "__main__":

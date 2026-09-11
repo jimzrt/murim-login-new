@@ -1,10 +1,12 @@
 # Two-Model Mastering Overlay
 
-This overlay adds a retrospective, non-destructive mastering workflow to `murim-login-new`.
+This overlay is the last automatic stage of a normal chapter run. After
+`accept`, `run_next.py` runs the two-model mastering overlay, promotes the
+verified copy into `translations/`, and includes those artifacts in
+`Accept Chapter N`. The pre-master English remains at
+`reviews/mastering/<chapter>/baseline.md`.
 
-It does **not** replace or modify the existing translation controller, `source/`, or `translations/` during normal runs.
-
-## Pipeline
+Manual overlay commands still work for reruns and retrospective chapters:
 
 ```text
 accepted translation
@@ -20,6 +22,8 @@ SOL / BASE / REPAIR per hunk
 assembled final chapter
       ↓
 existing deterministic QA
+      ↓
+promote into translations/ (automatic on run_next; manual promote still requires --confirm)
 ```
 
 There are exactly **two LLM calls per chapter**. DeepSeek writes a replacement only for a `REPAIR` decision; there is no third model or second Sol call.
@@ -178,19 +182,17 @@ The adjudicator prompt is intentionally biased **toward Sol when both versions a
 
 ## Safety against accidental overwrites
 
-At the start of mastering a chapter, the script snapshots and hashes the Korean source and accepted English. Later stages abort if either live file changes during the transaction.
+At the start of mastering a chapter, the script snapshots and hashes the Korean source and accepted English. Later stages abort if either live file changes during the transaction. After promotion, the live translation must keep matching the promoted copy.
 
-Normal commands never modify `translations/`.
+`python tools/workflow.py master N` and `run_next.py` promote automatically once mastering QA passes. Manual overlay commands other than `promote` never modify `translations/`.
 
-After the pilot, if you deliberately want to promote verified results:
+Manual promotion of an already-verified chapter still requires:
 
 ```bash
 python tools/mastering.py promote 1-10 --confirm REPLACE_TRANSLATIONS
 ```
 
-Promotion only accepts chapters whose final deterministic QA passed, and it refuses to overwrite a translation that changed after the mastering snapshot was made. The original baseline remains in `reviews/mastering/<chapter>/baseline.md`.
-
-For the first test, **do not promote anything**. Read the ten `final.md` files and compare them with the baselines first.
+Promotion only accepts chapters whose final deterministic QA passed. The original baseline remains in `reviews/mastering/<chapter>/baseline.md`.
 
 ## Recommended evaluation after chapters 1–10
 

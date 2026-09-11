@@ -318,6 +318,28 @@ def durable_next_action(number: int, p: dict[str, Path]) -> str:
     return f"{durable}, then: python tools/workflow.py accept {number}"
 
 
+def mastering_promoted(number: int) -> bool:
+    path = ROOT / "reviews" / "mastering" / f"{number:04d}" / "state.json"
+    if not path.exists():
+        return False
+    try:
+        state = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return state.get("stage") == "PROMOTED" and bool(state.get("qa_passed"))
+
+
+def mastering_required_files(number: int) -> set[str]:
+    folder = Path("reviews") / "mastering" / f"{number:04d}"
+    return {
+        str(folder / name)
+        for name in (
+            "baseline.md", "sol.md", "final.md", "adjudication.json",
+            "qa.json", "state.json", "metrics.json",
+        )
+    }
+
+
 def next_action(state: dict, p: dict[str, Path]) -> str:
     number = state["chapter"]
     if state["stage"] == "REVISED":
@@ -326,6 +348,11 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
         return durable_next_action(number, p)
     if state["stage"] == "POLISHED":
         return durable_next_action(number, p)
+    accepted = (
+        f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD"
+        if mastering_promoted(number)
+        else f"python tools/workflow.py master {number}"
+    )
     return {
         "READY": f"python tools/workflow.py prepare {number}",
         "CONTEXT_READY": f"python tools/workflow.py draft {number}",
@@ -333,7 +360,7 @@ def next_action(state: dict, p: dict[str, Path]) -> str:
         "REVIEWED": f"python tools/workflow.py revise {number}",
         "CHECKPOINT_REVIEWED": f"apply or disposition checkpoint findings in {p['checkpoint_disposition'].relative_to(ROOT)}, then: python tools/workflow.py checkpointed {number}",
         "CHECKPOINT_APPLIED": f"python tools/workflow.py accept {number}",
-        "ACCEPTED": f"commit accepted files, then: python tools/workflow.py committed {number} --commit HEAD",
+        "ACCEPTED": accepted,
         "COMMITTED": "stop; do not begin another chapter",
     }[state["stage"]]
 
@@ -848,6 +875,24 @@ def command_checkpointed(number: int) -> None:
     save(state, p, "CHECKPOINT_APPLIED", **artifacts)
 
 
+def command_master(number: int) -> None:
+    state, p = load(number)
+    require(state, "ACCEPTED")
+    try:
+        from tools.mastering import command_finish_for_commit, chapter_paths as mastering_paths, load_metrics as mastering_metrics
+    except ModuleNotFoundError:
+        from mastering import command_finish_for_commit, chapter_paths as mastering_paths, load_metrics as mastering_metrics
+    try:
+        command_finish_for_commit(number)
+    except (ValueError, RuntimeError, FileNotFoundError) as error:
+        raise SystemExit(str(error)) from None
+    data = mastering_metrics(mastering_paths(number))
+    for stage in ("master", "adjudicator"):
+        values = data.get("stages", {}).get(stage)
+        if values:
+            record_metric(p, f"{stage}_model", **values)
+
+
 def command_accept(number: int) -> None:
     state, p = load(number)
     expected = "CHECKPOINT_APPLIED" if interval_due(number, "checkpoint_review_interval") else post_revision_stage(number)
@@ -925,6 +970,7 @@ def command_committed(number: int, commit: str) -> None:
     )
     if polish_due(number):
         required.add(str(p["polish_qa"].relative_to(ROOT)))
+    required.update(mastering_required_files(number))
     missing = required.difference(names)
     if missing:
         raise SystemExit("commit is missing: " + ", ".join(sorted(missing)))
@@ -945,7 +991,8 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     for name in (
         "status", "prepare", "draft", "drafted", "review", "revise",
-        "revised", "polish", "polished", "summarize", "checkpoint", "checkpointed", "accept",
+        "revised", "polish", "polished", "summarize", "checkpoint", "checkpointed",
+        "accept", "master",
     ):
         item = sub.add_parser(name)
         item.add_argument("chapter", type=int)
@@ -990,6 +1037,8 @@ def main() -> int:
             command_checkpointed(args.chapter)
         elif args.command == "accept":
             command_accept(args.chapter)
+        elif args.command == "master":
+            command_master(args.chapter)
         else:
             command_committed(args.chapter, args.commit)
     return 0

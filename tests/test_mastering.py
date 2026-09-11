@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 from pathlib import Path
+from unittest.mock import patch
 
 MODULE_PATH = Path(__file__).resolve().parents[1] / "tools" / "mastering.py"
 spec = importlib.util.spec_from_file_location("mastering", MODULE_PATH)
@@ -62,6 +63,26 @@ def test_terminology_alerts_treat_slash_terms_as_alternatives():
     assert dropped["global_terminology_alerts"][0]["preferred"] == "aura / momentum"
 
 
+def test_expected_live_hash_uses_promoted_copy():
+    baseline = mastering.expected_live_translation_hash({"stage": "VERIFIED", "baseline_sha256": "aaa"})
+    promoted = mastering.expected_live_translation_hash({"stage": "PROMOTED", "baseline_sha256": "aaa", "promoted_sha256": "bbb"})
+    assert baseline == "aaa"
+    assert promoted == "bbb"
+
+
+def test_finish_for_commit_skips_when_already_promoted(monkeypatch):
+    calls = []
+
+    def fake_state(_number):
+        return {"stage": "PROMOTED", "qa_passed": True}
+
+    monkeypatch.setattr(mastering, "state_for", fake_state)
+    monkeypatch.setattr(mastering, "command_run", lambda _number: calls.append("run"))
+    monkeypatch.setattr(mastering, "command_promote", lambda *_args: calls.append("promote"))
+    mastering.command_finish_for_commit(3)
+    assert calls == []
+
+
 def test_validate_adjudication_requires_exact_hunks():
     diff = {"hunks": [{"hunk_id": "H001"}, {"hunk_id": "H002"}]}
     value = {
@@ -120,3 +141,21 @@ def test_adjudicator_packet_is_compact():
     ]
     indexes = [packet.index(name) for name in sections]
     assert indexes == sorted(indexes)
+
+
+def test_expected_live_hash_uses_promoted_copy():
+    baseline = mastering.expected_live_translation_hash({"stage": "VERIFIED", "baseline_sha256": "aaa"})
+    promoted = mastering.expected_live_translation_hash(
+        {"stage": "PROMOTED", "baseline_sha256": "aaa", "promoted_sha256": "bbb"}
+    )
+    assert baseline == "aaa"
+    assert promoted == "bbb"
+
+
+def test_finish_for_commit_skips_when_already_promoted():
+    calls: list[str] = []
+    with patch.object(mastering, "state_for", return_value={"stage": "PROMOTED", "qa_passed": True}):
+        with patch.object(mastering, "command_run", lambda _number: calls.append("run")):
+            with patch.object(mastering, "command_promote", lambda *_args: calls.append("promote")):
+                mastering.command_finish_for_commit(3)
+    assert calls == []

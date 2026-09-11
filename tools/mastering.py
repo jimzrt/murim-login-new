@@ -261,19 +261,32 @@ def snapshot(number: int) -> tuple[str, str, list[dict], dict[str, Path]]:
     return source, baseline, glossary, p
 
 
+def expected_live_translation_hash(state: dict) -> str:
+    if state.get("stage") == "PROMOTED":
+        return str(state.get("promoted_sha256") or "")
+    return str(state.get("baseline_sha256") or "")
+
+
 def create_or_verify_state(number: int) -> tuple[dict, dict[str, Path]]:
-    source, baseline, _, p = snapshot(number)
+    p = chapter_paths(number)
+    source = current_source(number)
     source_hash = sha256_text(source)
-    baseline_hash = sha256_text(baseline)
     if p["state"].exists():
         state = json.loads(read_text(p["state"]))
         if state.get("source_sha256") != source_hash:
             raise ValueError(f"chapter {number}: Korean source changed since mastering began")
-        if state.get("baseline_sha256") != baseline_hash:
-            raise ValueError(f"chapter {number}: accepted translation changed since mastering began")
         if not p["source"].exists() or not p["baseline"].exists():
             raise ValueError(f"chapter {number}: mastering snapshots are missing")
+        if not p["translation"].exists():
+            raise FileNotFoundError(f"missing accepted translation: {p['translation'].relative_to(ROOT)}")
+        live_hash = sha256_text(normalize_chapter(read_text(p["translation"])))
+        expected = expected_live_translation_hash(state)
+        if live_hash != expected:
+            if state.get("stage") == "PROMOTED":
+                raise ValueError(f"chapter {number}: promoted translation changed")
+            raise ValueError(f"chapter {number}: accepted translation changed since mastering began")
         return state, p
+    _, baseline, _, p = snapshot(number)
     p["work"].mkdir(parents=True, exist_ok=True)
     atomic_text(p["source"], source.rstrip() + "\n")
     atomic_text(p["baseline"], baseline)
@@ -282,7 +295,7 @@ def create_or_verify_state(number: int) -> tuple[dict, dict[str, Path]]:
         "chapter": number,
         "stage": "SNAPSHOTTED",
         "source_sha256": source_hash,
-        "baseline_sha256": baseline_hash,
+        "baseline_sha256": sha256_text(baseline),
     }
     atomic_json(p["state"], state)
     return state, p
@@ -905,6 +918,20 @@ def command_run(number: int) -> None:
     command_adjudicate(number)
     command_assemble(number)
     command_qa(number)
+
+
+def command_finish_for_commit(number: int) -> None:
+    """Run the overlay through VERIFIED and promote the mastered copy into translations/."""
+    state = state_for(number)
+    if state.get("stage") == "PROMOTED" and state.get("qa_passed"):
+        print(f"{number:04d}: already promoted; skipping mastering")
+        return
+    command_run(number)
+    p = chapter_paths(number)
+    state = state_for(number)
+    if not state.get("qa_passed") or state.get("stage") != "VERIFIED":
+        raise ValueError(f"chapter {number}: mastering QA failed; inspect {p['qa'].relative_to(ROOT)}")
+    command_promote(number, "REPLACE_TRANSLATIONS")
 
 
 def state_for(number: int) -> dict:

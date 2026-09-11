@@ -11,12 +11,13 @@ python tools/run_next.py
 ```
 
 It reads the exact next chapter from `docs/STATE.md`, runs the controller through
-`ACCEPTED`, records the coordinator's exact OMP JSON usage, creates `Accept
-Chapter N`, registers that commit, and stops at `COMMITTED`. It requires a clean
-Git worktree. An exclusive lock at `.work/run.lock` prevents a second
-`run_next`/`run_until` from overlapping; inspect it with `python tools/run_lock.py`.
-When invoked by this wrapper, stop at `ACCEPTED`; never commit or
-run `workflow.py committed` yourself.
+`ACCEPTED`, records the coordinator's exact OMP JSON usage, runs the two-model
+mastering overlay, promotes the verified mastered copy into `translations/`,
+creates `Accept Chapter N`, registers that commit, and stops at `COMMITTED`. It
+requires a clean Git worktree. An exclusive lock at `.work/run.lock` prevents a
+second `run_next`/`run_until` from overlapping; inspect it with
+`python tools/run_lock.py`. When invoked by this wrapper, stop at `ACCEPTED`;
+never master, commit, or run `workflow.py committed` yourself.
 
 ## Controller Loop
 
@@ -83,11 +84,14 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
 
 ## Acceptance
 
-`translations/NNNN.md` contains accepted reading copies only. After promotion,
-commit the chapter, structured review/dispositions, QA reports, metrics, and
-relevant durable-context changes. Register the exact commit with the reported
-command. The `run_next.py` wrapper performs these last two operations itself.
-Never commit `.work/`, caches, or an unaccepted draft.
+`translations/NNNN.md` contains accepted reading copies only. After acceptance,
+the wrapper runs mastering and promotes the verified mastered copy over that
+file; the pre-master snapshot remains at `reviews/mastering/NNNN/baseline.md`.
+After promotion, commit the chapter, structured review/dispositions, QA reports,
+mastering artifacts, metrics, and relevant durable-context changes. Register the
+exact commit with the reported command. The `run_next.py` wrapper performs
+mastering, promotion, commit, and registration itself. Never commit `.work/`,
+caches, or an unaccepted draft.
 
 Binding language policy is in `RULES.md`. Configuration is in
 `docs/workflow.json`. Read `docs/WORKFLOW.md` only for recovery, profiles,

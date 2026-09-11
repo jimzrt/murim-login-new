@@ -17,7 +17,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from cost_report import build_report, format_report, usage_line
 from omp_json import EventCapture, OmpJsonError
 from run_lock import hold_run_lock
-from workflow import command_committed, incomplete_chapter, interval_due, paths, project_config, record_metric
+from workflow import command_committed, command_master, incomplete_chapter, interval_due, paths, project_config, record_metric
 
 TRANSLATION_RE = re.compile(r"^translations/(\d{4})\.md$")
 WORKFLOW_RE = re.compile(r"(?:python\s+)?tools/workflow\.py\s+(\S+)(?:\s+(\d+))?")
@@ -40,7 +40,8 @@ COORDINATOR_SYSTEM = (
     "or polish-raw.txt, write draft.md or polished.md, then run drafted or polished. "
     "QA files are reviews/qa/NNNN-draft.json and NNNN-final.json; translations/NNNN.md "
     "does not exist until accept. "
-    "Do not commit and do not run workflow.py committed."
+    "Do not run mastering.py, do not run workflow.py master, do not commit, and "
+    "do not run workflow.py committed."
 )
 
 
@@ -278,7 +279,8 @@ def reject_forbidden_tool(event: dict) -> None:
 def coordinator_command(chapter: int, model: str) -> list[str]:
     prompt = (
         f"Complete chapter {chapter} through ACCEPTED and then stop. "
-        "Do not commit and do not run workflow.py committed; the wrapper owns the checkpoint."
+        "Do not master, do not commit, and do not run workflow.py committed; "
+        "the wrapper owns mastering and the checkpoint."
     )
     return [
         "omp",
@@ -519,6 +521,9 @@ def main() -> int:
             except OmpJsonError as error:
                 raise SystemExit(str(error)) from None
             unexpected_coordinator_commit(starting_head, chapter)
+        print(f"Chapter {chapter}: mastering", flush=True)
+        lock.update(stage="mastering")
+        command_master(chapter)
         lock.update(stage="committing")
         commit_accepted(chapter, metrics)
         lock.update(stage="COMMITTED")
