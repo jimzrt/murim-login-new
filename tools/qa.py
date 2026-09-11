@@ -82,14 +82,19 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
             warnings.append(finding("semantic_probe", message))
     if "전음" in source and "공력" in source and not re.search(r"\b(?:internal energy|qi)\b", translation, re.I):
         warnings.append(finding("mechanism", "source explains Sound Transmission through internal energy, but that mechanism is absent"))
-    for korean, english in glossary:
-        plain = re.sub(r"[*_`]", "", english).strip()
-        if korean in source and plain and plain.casefold() not in translation.casefold():
-            warnings.append(finding("terminology", "matched preferred term is absent", korean=korean, preferred=plain))
     try:
-        from tools.names import novel_romanizations
+        from tools.names import novel_romanizations, preferred_english_present, preferred_english_terms
     except ModuleNotFoundError:
-        from names import novel_romanizations
+        from names import novel_romanizations, preferred_english_present, preferred_english_terms
+    for korean, english in glossary:
+        terms = preferred_english_terms(english)
+        if korean in source and terms and not preferred_english_present(translation, english):
+            warnings.append(finding(
+                "terminology",
+                "matched preferred term is absent",
+                korean=korean,
+                preferred=" / ".join(terms),
+            ))
     for item in novel_romanizations(source, translation):
         warnings.append(finding(
             "novel_name",

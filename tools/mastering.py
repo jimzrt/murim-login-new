@@ -131,8 +131,12 @@ def glossary_text(entries: list[dict]) -> str:
     return "\n".join(item.get("row", "") for item in entries if item.get("row")) or "(No exact glossary rows matched.)"
 
 
-def plain_term(value: str) -> str:
-    return re.sub(r"[*_`]", "", value).strip()
+def _preferred_english():
+    try:
+        from tools.names import preferred_english_present, preferred_english_terms
+    except ModuleNotFoundError:
+        from names import preferred_english_present, preferred_english_terms
+    return preferred_english_present, preferred_english_terms
 
 
 def normalize_chapter(text: str) -> str:
@@ -557,6 +561,7 @@ def align_blocks(base_blocks: list[str], sol_blocks: list[str]) -> list[tuple[st
 
 
 def build_diff(baseline: str, sol: str, glossary: list[dict], source: str = "") -> dict:
+    present, terms_of = _preferred_english()
     base_blocks = blocks(baseline)
     sol_blocks = blocks(sol)
     opcodes = align_blocks(base_blocks, sol_blocks)
@@ -571,11 +576,11 @@ def build_diff(baseline: str, sol: str, glossary: list[dict], source: str = "") 
         sol_text = "\n\n".join(sol_blocks[j1:j2])
         alerts: list[dict] = []
         for item in glossary:
-            preferred = plain_term(str(item.get("english", "")))
-            if preferred and preferred.casefold() in base_text.casefold() and preferred.casefold() not in sol_text.casefold():
+            english = str(item.get("english", ""))
+            if present(base_text, english) and not present(sol_text, english):
                 alerts.append({
                     "korean": item.get("korean", ""),
-                    "preferred": preferred,
+                    "preferred": " / ".join(terms_of(english)),
                     "message": "preferred glossary term appears in BASE but not SOL for this hunk",
                 })
         hunks.append({
@@ -591,9 +596,9 @@ def build_diff(baseline: str, sol: str, glossary: list[dict], source: str = "") 
         })
     global_alerts: list[dict] = []
     for item in glossary:
-        preferred = plain_term(str(item.get("english", "")))
-        if preferred and preferred.casefold() in baseline.casefold() and preferred.casefold() not in sol.casefold():
-            global_alerts.append({"korean": item.get("korean", ""), "preferred": preferred})
+        english = str(item.get("english", ""))
+        if present(baseline, english) and not present(sol, english):
+            global_alerts.append({"korean": item.get("korean", ""), "preferred": " / ".join(terms_of(english))})
     return {
         "version": 1,
         "baseline_sha256": sha256_text(normalize_chapter(baseline)),

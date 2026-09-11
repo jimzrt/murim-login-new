@@ -53,3 +53,19 @@ class QaTest(unittest.TestCase):
         self.assertTrue(result["passed"], result)
         self.assertTrue(any(item["code"] == "terminology" for item in result["warnings"]))
         self.assertFalse(any(item["code"] == "novel_name" for item in result["warnings"]))
+
+    def test_slash_separated_preferred_terms_are_alternatives(self):
+        source = "＃1화\n\n" + ("그는 말했다. " * 9) + "기세가 살아났다.\n\n* * *\n\n100"
+        glossary = [("기세", "**aura** / **momentum**")]
+        with_momentum = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” Their momentum returned.\n\n* * *\n\n100 remained.\n'
+        with_aura = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” An aura pressed down.\n\n* * *\n\n100 remained.\n'
+        missing = '# Chapter 1\n\nHe said, “This is deliberately long enough to pass the translation ratio check.” The pressure returned.\n\n* * *\n\n100 remained.\n'
+        for target in (with_momentum, with_aura):
+            result = run_qa(1, source, target, glossary)
+            self.assertTrue(result["passed"], result)
+            self.assertFalse(any(item["code"] == "terminology" for item in result["warnings"]))
+        result = run_qa(1, source, missing, glossary)
+        self.assertTrue(result["passed"], result)
+        warning = next(item for item in result["warnings"] if item["code"] == "terminology")
+        self.assertEqual(warning["details"]["korean"], "기세")
+        self.assertEqual(warning["details"]["preferred"], "aura / momentum")

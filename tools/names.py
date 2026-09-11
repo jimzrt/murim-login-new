@@ -28,6 +28,20 @@ def strip_english(value: str) -> str:
     return re.sub(r"[*_`]", "", value).strip()
 
 
+def preferred_english_terms(english: str) -> list[str]:
+    """Preferred glossary renderings; slash-separated cells are alternatives."""
+    parts = [part.strip() for part in strip_english(english).split(" / ") if part.strip()]
+    if len(parts) <= 1:
+        return parts
+    substantial = [part for part in parts if len(part) >= 3]
+    return substantial or parts
+
+
+def preferred_english_present(text: str, english: str) -> bool:
+    folded = text.casefold()
+    return any(term.casefold() in folded for term in preferred_english_terms(english))
+
+
 def romanize_syllable(char: str) -> str:
     code = ord(char) - 0xAC00
     if not 0 <= code <= 11171:

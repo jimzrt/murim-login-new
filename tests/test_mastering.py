@@ -45,6 +45,23 @@ def test_diff_and_assemble_sol_base_repair():
     assert out.startswith("# Chapter 1")
 
 
+def test_terminology_alerts_treat_slash_terms_as_alternatives():
+    glossary = [{"korean": "기세", "english": "**aura** / **momentum**"}]
+    switched = mastering.build_diff(
+        "# Chapter 1\n\nTheir momentum returned.\n",
+        "# Chapter 1\n\nAn aura pressed down.\n",
+        glossary,
+    )
+    assert switched["global_terminology_alerts"] == []
+    assert all(not h["terminology_alerts"] for h in switched["hunks"])
+    dropped = mastering.build_diff(
+        "# Chapter 1\n\nTheir momentum returned.\n",
+        "# Chapter 1\n\nThe pressure returned.\n",
+        glossary,
+    )
+    assert dropped["global_terminology_alerts"][0]["preferred"] == "aura / momentum"
+
+
 def test_validate_adjudication_requires_exact_hunks():
     diff = {"hunks": [{"hunk_id": "H001"}, {"hunk_id": "H002"}]}
     value = {

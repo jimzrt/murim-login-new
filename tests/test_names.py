@@ -7,6 +7,14 @@ from tools import names
 
 
 class NamesLedgerTest(unittest.TestCase):
+    def test_slash_separated_english_cells_are_alternatives(self):
+        self.assertEqual(names.preferred_english_terms("**aura** / **momentum**"), ["aura", "momentum"])
+        self.assertEqual(names.preferred_english_terms("**Heavenly Axe**"), ["Heavenly Axe"])
+        self.assertTrue(names.preferred_english_present("Their momentum returned.", "**aura** / **momentum**"))
+        self.assertTrue(names.preferred_english_present("An aura pressed down.", "**aura** / **momentum**"))
+        self.assertFalse(names.preferred_english_present("The pressure returned.", "**aura** / **momentum**"))
+        self.assertNotIn("I", names.preferred_english_terms("**I / this lord** only when deliberately grandiose"))
+
     def test_romanizes_cheonryeokbu_and_cheongwanil(self):
         self.assertEqual(names.romanize("천력부"), "cheonryeokbu")
         self.assertEqual(names.romanize("천관일"), "cheongwanil")
