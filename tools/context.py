@@ -12,6 +12,38 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SUMMARY_NAME = re.compile(r"^(\d{4})-(\d{4})\.md$")
 
+PROFILE_FIELDS = ("Safe through", "Aliases", "Role", "Personality", "Voice", "Relationships")
+
+
+def compact_profile(body: str) -> str:
+    lines = body.strip().splitlines()
+    heading = next((line.strip() for line in lines if line.startswith("# ")), "")
+    fields = [
+        line.strip()
+        for line in lines
+        if any(line.startswith(f"- **{name}:**") for name in PROFILE_FIELDS)
+    ]
+    if not heading:
+        raise ValueError("character profile requires a Markdown heading")
+    return "\n\n".join((heading, "\n".join(fields))).strip()
+
+
+def bounded_profiles(profiles: list[tuple[Path, str]]) -> list[tuple[Path, str]]:
+    config = workflow_config()
+    per_profile = int(config.get("profile_max_bytes", 4096))
+    total_limit = int(config.get("profile_total_max_bytes", 12288))
+    result: list[tuple[Path, str]] = []
+    total = 0
+    for path, body in profiles:
+        compact = compact_profile(body)
+        size = len(compact.encode("utf-8"))
+        if size > per_profile:
+            raise ValueError(f"{path} compact profile exceeds profile_max_bytes")
+        total += size
+        if total > total_limit:
+            raise ValueError("matched character profiles exceed profile_total_max_bytes")
+        result.append((path, compact))
+    return result
 
 def read_json(path: Path) -> dict:
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -123,8 +155,8 @@ def profile_entries(source: str) -> list[tuple[Path, str]]:
     for path in sorted((ROOT / "characters").glob("*.md")):
         body = path.read_text(encoding="utf-8")
         if any(name in source for name in profile_koreans(body)):
-            profiles.append((path, body.strip()))
-    return profiles
+            profiles.append((path, body))
+    return bounded_profiles(profiles)
 
 
 def profiles_text(profiles: list[tuple[Path, str]]) -> str:

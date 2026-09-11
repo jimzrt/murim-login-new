@@ -11,6 +11,8 @@
   },
   "context_max_bytes": 16384,
   "continuity_source_limit": 2,
+  "profile_max_bytes": 4096,
+  "profile_total_max_bytes": 12288,
   "packet_token_limits": {
     "draft": 60000,
     "review": 60000,

@@ -149,7 +149,9 @@ This overlay instead uses:
 - exact glossary rows matched to the current Korean source;
 - the latest summary whose end chapter is strictly earlier than the chapter being mastered;
 - tails of up to two prior chapters; when a prior chapter has already reached VERIFIED in this mastering run, its mastered final is preferred, otherwise the accepted translation is used;
-- character profiles only when their `Safe through: Chapter N` marker is strictly earlier than the chapter being mastered.
+- compact identity/voice/relationship fields from character profiles only when
+  their `Safe through: Chapter N` marker is strictly earlier than the chapter
+  being mastered; archived chapter-by-chapter continuity is not injected.
 
 For chapters 1–10, current character profiles will therefore usually be excluded, which is intentional. This prevents later character knowledge from contaminating early-chapter edits.
 

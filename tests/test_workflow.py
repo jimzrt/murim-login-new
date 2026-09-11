@@ -134,6 +134,8 @@ class WorkflowTest(unittest.TestCase):
         self.assertEqual(output, "answer\n")
         self.assertTrue(metrics["exact"])
         self.assertEqual(metrics["input_tokens"], 12)
+        self.assertEqual(metrics["input_bytes"], len("bounded packet"))
+        self.assertEqual(metrics["packet_token_estimate"], 4)
 
     def test_revised_block_asks_for_summarize_then_checkpoint(self):
         (self.root / "docs" / "STATE.md").write_text(

@@ -47,18 +47,20 @@ write the text from the heading onward into `draft.md`/`polished.md` and run
   `temporary_decisions`. Keep only active continuity, unresolved questions,
   temporary decisions, and zero to two explicit `continuity_sources`. Move
   stable facts to profiles/compendium and resolved plot to summaries.
-- Draft receives the source, complete rules, exact glossary matches, matching
-  profiles, bounded active state, latest summary, and only the explicitly named
-  continuity reading copies.
-- Review receives the source, draft, rules, exact glossary matches, matching
-  profiles, active continuity, and deterministic QA. It does not receive prior
-  translations or the summary archive.
+- Draft receives the source, complete rules, exact glossary matches, compact
+  identity/voice/relationship fields from matching profiles, bounded active
+  state, latest summary, and only the explicitly named continuity reading
+  copies. Archived per-chapter profile continuity is not injected.
+- Review receives the source, draft, rules, exact glossary matches, the same
+  compact matching profiles, active continuity, and deterministic QA. It does
+  not receive prior translations or the summary archive.
 - Revision receives the source, draft, structured findings, rules, glossary,
-  and matching profiles. It does not receive draft-only history or state.
+  and compact matching profiles. It does not receive draft-only history or
+  state.
 - Polish receives the source, revised reading copy, `POLISH.md`, rules,
-  glossary, and matching profiles. It does not receive review findings, the
-  summary archive, or prior translations. Chapters before `polish_from_chapter`
-  skip this stage.
+  glossary, and compact matching profiles. It does not receive review findings,
+  the summary archive, or prior translations. Chapters before
+  `polish_from_chapter` skip this stage.
 - Summarize receives the previous block summary, this block's chapter beats,
   and bounded active state. It does not receive full reading copies.
 

@@ -18,6 +18,47 @@ COUNT_FIELDS = (
     "requests", "input_tokens", "output_tokens", "cache_read_tokens",
     "cache_write_tokens", "total_tokens", "reasoning_tokens",
 )
+WORKLOAD_FIELDS = ("packet_bytes", "packet_token_estimate", "output_bytes", "elapsed_seconds")
+
+
+def workload_values(source: dict) -> dict:
+    packet_bytes = source.get("input_bytes", source.get("packet_bytes"))
+    estimate = source.get("packet_token_estimate")
+    if estimate is None and isinstance(packet_bytes, (int, float)) and not isinstance(packet_bytes, bool):
+        estimate = (int(packet_bytes) + 3) // 4
+    return {
+        "packet_bytes": packet_bytes,
+        "packet_token_estimate": estimate,
+        "output_bytes": source.get("output_bytes"),
+        "elapsed_seconds": source.get("elapsed_seconds"),
+    }
+
+
+def blank_workload() -> dict:
+    return {
+        "stage_count": 0,
+        **{field: 0 for field in WORKLOAD_FIELDS},
+        **{f"{field}_coverage": 0 for field in WORKLOAD_FIELDS},
+    }
+
+
+def add_workload(target: dict, source: dict) -> None:
+    target["stage_count"] += 1
+    for field, value in workload_values(source).items():
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            target[field] += value
+            target[f"{field}_coverage"] += 1
+
+
+def finish_workload(value: dict) -> dict:
+    result = dict(value)
+    count = result.pop("stage_count")
+    result["coverage"] = {
+        field: f"{result.pop(f'{field}_coverage')}/{count}"
+        for field in WORKLOAD_FIELDS
+    }
+    result["elapsed_seconds"] = round(result["elapsed_seconds"], 3)
+    return result
 FAMILY_LABELS = {
     "luna": "Luna",
     "grok": "Grok",
@@ -78,12 +119,27 @@ def blank_family() -> dict:
 def add_model_to_resources(resources: dict, model_key: str, usage: dict) -> None:
     provider = selector_provider(model_key)
     family = model_family(model_key)
+    billing_type = billing_type_for(provider)
     bucket = resources.setdefault(provider, {
         "provider": provider,
-        "billing_type": billing_type_for(provider),
+        "billing_type": billing_type,
         "families": {},
+        "actual_api_cash_usd": 0.0,
+        "subscription_api_equivalent_usd": 0.0,
+        "attributed_cost_complete": True,
         **blank_usage(),
     })
+    cost = usage.get("cost_usd")
+    cost_available = (
+        isinstance(cost, (int, float))
+        and not isinstance(cost, bool)
+        and (billing_type == "api" or cost > 0 or not usage.get("requests"))
+    )
+    if cost_available:
+        field = "subscription_api_equivalent_usd" if billing_type == "subscription" else "actual_api_cash_usd"
+        bucket[field] += float(cost)
+    else:
+        bucket["attributed_cost_complete"] = False
     add_usage(bucket, usage)
     add_usage(bucket["families"].setdefault(family, blank_family()), usage)
 
@@ -97,6 +153,30 @@ def finish_resources(resources: dict) -> dict:
         }
         finished[provider] = {**finish_usage(bucket), "families": families}
     return finished
+
+
+def cost_attribution(models: dict[str, dict]) -> dict:
+    actual = 0.0
+    equivalent = 0.0
+    missing: list[str] = []
+    for model_key, usage in models.items():
+        cost = usage.get("cost_usd")
+        if not isinstance(cost, (int, float)) or isinstance(cost, bool):
+            missing.append(model_key)
+            continue
+        billing_type = billing_type_for(selector_provider(model_key))
+        if billing_type == "subscription" and cost == 0 and usage.get("requests"):
+            missing.append(model_key)
+        elif billing_type == "subscription":
+            equivalent += float(cost)
+        else:
+            actual += float(cost)
+    return {
+        "actual_api_cash_usd": actual,
+        "subscription_api_equivalent_usd": equivalent,
+        "complete": not missing,
+        "missing_models": sorted(missing),
+    }
 
 
 def merge_stage_map(target: dict[str, dict], stages: dict) -> None:
@@ -178,13 +258,17 @@ def quota_summaries(live: dict | None, provider: str) -> list[str]:
 
 def build_report(*, live_usage: bool = False) -> dict:
     totals = blank_usage()
+    total_workload = blank_workload()
     models: dict[str, dict] = {}
     stages: dict[str, dict] = {}
+    stage_workloads: dict[str, dict] = {}
+    stage_costs: dict[str, dict] = {}
     chapters: dict[str, dict] = {}
     unavailable: list[dict] = []
     resources: dict[str, dict] = {}
     for chapter, stage_map in load_chapter_stages(ROOT).items():
         chapter_totals = blank_usage()
+        chapter_workload = blank_workload()
         chapter_models: dict[str, dict] = {}
         chapter_stages: dict[str, dict] = {}
         for name, values in stage_map.items():
@@ -195,17 +279,42 @@ def build_report(*, live_usage: bool = False) -> dict:
                 continue
             phase = blank_usage()
             add_usage(phase, values)
-            chapter_stages[name] = finish_usage(phase)
+            phase_workload = blank_workload()
+            add_workload(phase_workload, values)
+            phase_costs = cost_attribution(values.get("models", {}))
+            chapter_stages[name] = {
+                **finish_usage(phase),
+                "workload": finish_workload(phase_workload),
+                "costs": phase_costs,
+            }
             add_usage(stages.setdefault(name, blank_usage()), values)
+            add_workload(stage_workloads.setdefault(name, blank_workload()), values)
+            combined_costs = stage_costs.setdefault(name, {
+                "actual_api_cash_usd": 0.0,
+                "subscription_api_equivalent_usd": 0.0,
+                "complete": True,
+                "missing_models": [],
+            })
+            combined_costs["actual_api_cash_usd"] += phase_costs["actual_api_cash_usd"]
+            combined_costs["subscription_api_equivalent_usd"] += phase_costs["subscription_api_equivalent_usd"]
+            combined_costs["complete"] = combined_costs["complete"] and phase_costs["complete"]
+            combined_costs["missing_models"].extend(phase_costs["missing_models"])
             add_usage(chapter_totals, values)
             add_usage(totals, values)
+            add_workload(chapter_workload, values)
+            add_workload(total_workload, values)
             for model_name, model_usage in values.get("models", {}).items():
                 add_usage(chapter_models.setdefault(model_name, blank_usage()), model_usage)
                 add_usage(models.setdefault(model_name, blank_usage()), model_usage)
                 add_model_to_resources(resources, model_name, model_usage)
+        finished_chapter_models = {
+            name: finish_usage(value) for name, value in sorted(chapter_models.items())
+        }
         chapters[chapter] = {
             "totals": finish_usage(chapter_totals),
-            "models": {name: finish_usage(value) for name, value in sorted(chapter_models.items())},
+            "workload": finish_workload(chapter_workload),
+            "costs": cost_attribution(finished_chapter_models),
+            "models": finished_chapter_models,
             "stages": chapter_stages,
         }
     checkpoint_reviews = []
@@ -233,14 +342,30 @@ def build_report(*, live_usage: bool = False) -> dict:
             "exact_model_calls": exact_calls,
             "usage": finish_usage(usage),
         })
+    finished_models = {name: finish_usage(value) for name, value in sorted(models.items())}
+    finished_stages = {}
+    for name, usage in sorted(stages.items()):
+        costs = stage_costs[name]
+        costs["missing_models"] = sorted(set(costs["missing_models"]))
+        finished_stages[name] = {
+            **finish_usage(usage),
+            "workload": finish_workload(stage_workloads[name]),
+            "costs": costs,
+        }
     report = {
-        "version": 3,
+        "version": 4,
         "usage_source": "omp_provider_reported",
         "chapters": chapters,
-        "models": {name: finish_usage(value) for name, value in sorted(models.items())},
-        "stages": {name: finish_usage(value) for name, value in sorted(stages.items())},
+        "models": finished_models,
+        "stages": finished_stages,
         "totals": finish_usage(totals),
+        "workload": finish_workload(total_workload),
+        "costs": cost_attribution(finished_models),
         "resources": finish_resources(resources),
+        "cost_attribution_note": (
+            "API-provider cost is actual cash; subscription-provider cost is API-equivalent value. "
+            "Live subscription and on-demand allowance usage is account-wide and cannot be assigned to a chapter."
+        ),
         "unavailable_stages": unavailable,
         "checkpoint_reviews": checkpoint_reviews,
         "checkpoint_unique_finding_total": sum(item["findings"] for item in checkpoint_reviews),
@@ -258,12 +383,33 @@ def money(value: float) -> str:
 
 
 def usage_line(label: str, usage: dict) -> str:
-    cost = f", ${usage['cost_usd']:.4f}" if "cost_usd" in usage else ""
     reasoning = f", {usage['reasoning_tokens']} reasoning" if usage.get("reasoning_tokens") else ""
+    workload = usage.get("workload") or {}
+    packet = f", {int(workload['packet_bytes']):,} packet bytes" if workload.get("packet_bytes") else ""
+    estimate = (
+        f", ~{int(workload['packet_token_estimate']):,} packet tokens"
+        if workload.get("packet_token_estimate") else ""
+    )
+    elapsed = f", {workload['elapsed_seconds']:.1f}s" if workload.get("elapsed_seconds") else ""
+    coverage = workload.get("coverage") or {}
+    partial = [
+        f"{field} {seen} stages"
+        for field, seen in coverage.items()
+        if isinstance(seen, str) and seen.split("/", 1)[0] != seen.split("/", 1)[-1]
+    ]
+    coverage_note = f", partial workload: {', '.join(partial)}" if partial else ""
     return (
         f"{label}: {usage['requests']} requests, {usage['input_tokens']} input, "
         f"{usage['output_tokens']} output, {usage['cache_read_tokens']} cache-read, "
-        f"{usage['cache_write_tokens']} cache-write{reasoning}{cost}"
+        f"{usage['cache_write_tokens']} cache-write{reasoning}{packet}{estimate}{elapsed}{coverage_note}"
+    )
+
+
+def cost_line(costs: dict) -> str:
+    suffix = "" if costs.get("complete") else " (provider cost missing for some models)"
+    return (
+        f"Cost attribution: {money(costs['actual_api_cash_usd'])} actual API cash, "
+        f"{money(costs['subscription_api_equivalent_usd'])} subscription API-equivalent{suffix}"
     )
 
 
@@ -302,9 +448,12 @@ def format_resource_report(report: dict) -> str:
         lines.append("  Calls:                   0")
     quota = quota_summaries(live, "openai-codex")
     lines.append(f"  Quota currently used:    {'; '.join(quota) if quota else '(unavailable)'}")
-    if "cost_usd" in openai:
-        lines.append(f"  API-equivalent value:    {money(openai['cost_usd'])}")
-    lines.append("  Actual incremental:      $0.00")
+    openai_value = (
+        money(openai.get("subscription_api_equivalent_usd", 0.0))
+        if openai.get("attributed_cost_complete", True) else "(unavailable for some calls)"
+    )
+    lines.append(f"  API-equivalent value:    {openai_value}")
+    lines.append("  Per-call cash:           subscription; no API charge attributed")
     lines.append("")
 
     cursor = resources.get("cursor", {"families": {}, "requests": 0})
@@ -319,9 +468,12 @@ def format_resource_report(report: dict) -> str:
             lines.append(f"  {label:<24}{count:,}")
     quota = quota_summaries(live, "cursor")
     lines.append(f"  Monthly allowance used:  {'; '.join(quota) if quota else '(unavailable)'}")
-    if "cost_usd" in cursor:
-        lines.append(f"  API-equivalent value:    {money(cursor['cost_usd'])}")
-    lines.append("  Actual incremental:      $0.00")
+    cursor_value = (
+        money(cursor.get("subscription_api_equivalent_usd", 0.0))
+        if cursor.get("attributed_cost_complete", True) else "(unavailable for some calls)"
+    )
+    lines.append(f"  API-equivalent value:    {cursor_value}")
+    lines.append("  Per-call cash:           subscription/on-demand split unavailable")
     lines.append("")
 
     openrouter = resources.get("openrouter", {"families": {}, "requests": 0})
@@ -354,9 +506,11 @@ def format_report(report: dict, chapter: int | None = None) -> str:
         lines = [f"Chapter {chapter}"]
         for name, usage in selected["stages"].items():
             lines.append(usage_line(name, usage))
+            lines.append("  " + cost_line(usage["costs"]))
         for name, usage in selected["models"].items():
             lines.append(usage_line(name, usage))
-        lines.append(usage_line("Total", selected["totals"]))
+        lines.append(usage_line("Total", {**selected["totals"], "workload": selected["workload"]}))
+        lines.append(cost_line(selected["costs"]))
         return "\n".join(lines)
     lines = [format_resource_report(report), ""]
     lines.append(f"Chapters with metric files: {len(report['chapters'])}")
@@ -364,7 +518,8 @@ def format_report(report: dict, chapter: int | None = None) -> str:
         lines.append(usage_line(name, usage))
     token_total = dict(report["totals"])
     token_total.pop("cost_usd", None)
-    lines.append(usage_line("Total", token_total))
+    lines.append(usage_line("Total", {**token_total, "workload": report["workload"]}))
+    lines.append(cost_line(report["costs"]))
     if report["unavailable_stages"]:
         lines.append(
             f"Exact usage unavailable for {len(report['unavailable_stages'])} legacy stages; they were excluded."

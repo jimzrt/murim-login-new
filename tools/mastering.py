@@ -197,8 +197,10 @@ def safe_profiles(source: str, number: int) -> list[tuple[Path, str]]:
     if not cfg.get("include_safe_profiles", True):
         return []
     try:
+        from tools.context import bounded_profiles
         from tools.names import profile_koreans
     except ModuleNotFoundError:
+        from context import bounded_profiles
         from names import profile_koreans
     result: list[tuple[Path, str]] = []
     for path in sorted((ROOT / "characters").glob("*.md")):
@@ -214,7 +216,7 @@ def safe_profiles(source: str, number: int) -> list[tuple[Path, str]]:
             continue
         if any(name and name in source for name in names):
             result.append((path, body.strip()))
-    return result
+    return bounded_profiles(result)
 
 
 def continuity_bundle(number: int) -> str:

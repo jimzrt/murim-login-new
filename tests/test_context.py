@@ -42,6 +42,32 @@ class ContextPacketTest(unittest.TestCase):
         self.assertNotIn("Latest completed summary", polish_packet)
         self.assertNotIn("<<<TRANSLATION>>>", polish_packet)
 
+    def test_compact_profiles_keep_voice_and_drop_archived_continuity(self):
+        body = """# Jin Taekyung (진태경)
+
+- **Safe through:** Chapter 63
+- **Aliases:** Sleeping Dragon
+- **Role:** Protagonist
+- **Personality:** Dryly observant
+- **Voice:** Casual and sarcastic
+- **Relationships:** Jin family
+- **Continuity:** Resolved plot history
+- **Chapter 63 continuity:** More resolved plot history
+- **Sources:** Chapters 1–63
+"""
+        compact = context.compact_profile(body)
+        self.assertIn("Casual and sarcastic", compact)
+        self.assertIn("Jin family", compact)
+        self.assertNotIn("resolved plot history", compact.casefold())
+        self.assertNotIn("Sources", compact)
+
+    def test_profile_packet_budget_rejects_oversized_identity_data(self):
+        body = "# Character (인물)\\n\\n- **Voice:** " + "x" * 20
+        limits = {"profile_max_bytes": 16, "profile_total_max_bytes": 32}
+        with patch.object(context, "workflow_config", return_value=limits):
+            with self.assertRaisesRegex(ValueError, "profile_max_bytes"):
+                context.bounded_profiles([(Path("character.md"), body)])
+
     def test_durable_context_requires_version(self):
         problems = context.durable_context_problems(
             {"safe_through": 18, "continuity_sources": [18]},

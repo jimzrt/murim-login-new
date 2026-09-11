@@ -26,6 +26,10 @@ class CostReportTest(unittest.TestCase):
                     "cache_read_tokens": 2,
                     "cache_write_tokens": 0,
                     "total_tokens": 17,
+                    "input_bytes": 400,
+                    "packet_token_estimate": 100,
+                    "output_bytes": 20,
+                    "elapsed_seconds": 1.25,
                     "models": {"openai-codex/luna": {
                         "requests": 1,
                         "input_tokens": 10,
@@ -42,6 +46,11 @@ class CostReportTest(unittest.TestCase):
         self.assertEqual(report["totals"]["input_tokens"], 10)
         self.assertEqual(report["chapters"]["8"]["models"]["openai-codex/luna"]["output_tokens"], 5)
         self.assertEqual(report["checkpoint_unique_finding_total"], 2)
+        self.assertEqual(report["chapters"]["8"]["workload"]["packet_bytes"], 400)
+        self.assertEqual(report["chapters"]["8"]["workload"]["packet_token_estimate"], 100)
+        self.assertEqual(report["chapters"]["8"]["workload"]["elapsed_seconds"], 1.25)
+        self.assertEqual(report["chapters"]["8"]["costs"]["subscription_api_equivalent_usd"], 0)
+        self.assertEqual(report["chapters"]["8"]["costs"]["actual_api_cash_usd"], 0)
         text = cost_report.format_report(report, 8)
         self.assertIn("Chapter 8", text)
         self.assertIn("draft_model:", text.split("openai-codex/luna:")[0])
@@ -53,7 +62,8 @@ class CostReportTest(unittest.TestCase):
         self.assertIn("MURIM LOGIN RESOURCE USAGE", full)
         self.assertIn("OpenAI subscription", full)
         self.assertIn("Luna calls", full)
-        self.assertIn("Actual incremental", full)
+        self.assertIn("Per-call cash", full)
+        self.assertIn("API-equivalent value:    (unavailable for some calls)", full)
 
     def test_legacy_estimates_are_excluded(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -174,6 +184,11 @@ class CostReportTest(unittest.TestCase):
         self.assertEqual(resources["cursor"]["families"]["luna"]["requests"], 1)
         self.assertEqual(resources["cursor"]["families"]["grok"]["requests"], 1)
         self.assertEqual(resources["openrouter"]["families"]["deepseek"]["cost_usd"], 0.18)
+        self.assertEqual(resources["openai-codex"]["subscription_api_equivalent_usd"], 1.10)
+        self.assertEqual(resources["cursor"]["subscription_api_equivalent_usd"], 0.70)
+        self.assertEqual(resources["openrouter"]["actual_api_cash_usd"], 0.18)
+        self.assertEqual(report["costs"]["actual_api_cash_usd"], 0.18)
+        self.assertEqual(report["costs"]["subscription_api_equivalent_usd"], 1.80)
         text = cost_report.format_resource_report(report)
         self.assertIn("Sol calls", text)
         self.assertIn("API-equivalent value:", text)

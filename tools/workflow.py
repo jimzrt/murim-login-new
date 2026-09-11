@@ -37,6 +37,8 @@ DEFAULT_CONFIG = {
     },
     "context_max_bytes": 16384,
     "continuity_source_limit": 2,
+    "profile_max_bytes": 4096,
+    "profile_total_max_bytes": 12288,
     "packet_token_limits": {
         "draft": 60000, "review": 60000, "revision": 60000, "polish": 60000,
         "checkpoint": 120000, "summary": 20000,
@@ -83,6 +85,12 @@ def project_config() -> dict:
         raise SystemExit("checkpoint_review_interval must be a positive multiple of summary_interval")
     if int(value["continuity_source_limit"]) < 0 or int(value["continuity_source_limit"]) > 2:
         raise SystemExit("continuity_source_limit must be between 0 and 2")
+    profile_max = int(value.get("profile_max_bytes", 4096))
+    profile_total = int(value.get("profile_total_max_bytes", 12288))
+    if profile_max <= 0 or profile_total < profile_max:
+        raise SystemExit("profile byte limits must be positive and total must cover one profile")
+    value["profile_max_bytes"] = profile_max
+    value["profile_total_max_bytes"] = profile_total
     value["polish_from_chapter"] = int(value.get("polish_from_chapter", 27))
     if value["polish_from_chapter"] < 0:
         raise SystemExit("polish_from_chapter must be non-negative")
@@ -435,6 +443,7 @@ def run_omp(packet: Path, model: str, timeout: int, log_path: Path | None = None
     except OmpJsonError as error:
         raise SystemExit(str(error)) from None
     metrics["input_bytes"] = packet.stat().st_size
+    metrics["packet_token_estimate"] = estimated_tokens(packet.read_text(encoding="utf-8"))
     return output, metrics
 
 

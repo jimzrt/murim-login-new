@@ -39,10 +39,13 @@ configured limit. Include a prior translation only when wording, dialogue, or a
 scene directly continues. At checkpoints, move resolved facts into the summary,
 compendium, or safe profiles and remove them from active context.
 
-`docs/NAMES.md`, `compendium.md` table rows, and character profile headings/aliases
-form the names ledger. Packets inject a row only when that Korean is in the
-current chapter. Deterministic QA warns if the draft romanizes a source term
-that has no ledger entry and blocks `Rank:` as a System/UI classification field.
+`docs/NAMES.md`, compendium table rows, and character profile headings/aliases
+form the names ledger. Packets inject a row only when that Korean appears in
+the current chapter. Matching profiles inject only bounded identity, role,
+personality, voice, and relationship fields; their archived per-chapter
+continuity remains in the profile files and summaries instead of consuming
+model context. Deterministic QA warns if the draft romanizes a source term
+without a ledger entry and blocks `Rank:` as a System/UI classification field.
 
 `docs/STATE.md` is a short human operational view, not a historical review log.
 Review history belongs to the structured files under `reviews/`.
@@ -62,11 +65,12 @@ returns a complete reading copy; deterministic QA must pass before durable
 updates, summary, checkpoint, or acceptance. Chapters before that cutoff keep
 the previous `REVISED` → accept path.
 
-Deterministic reports live in `reviews/qa/`; exact provider-reported phase usage
-and elapsed time live in `reviews/metrics/`. Run `python tools/cost_report.py`
-to inspect aggregate usage and checkpoint yield. Subscription calls are tracked
-as quota consumed plus API-equivalent value; OpenRouter calls are tracked as
-actual token spend. Do not mix those figures.
+Deterministic reports live in `reviews/qa/`; provider-reported phase usage,
+packet bytes and token estimates, output bytes, and elapsed time live in
+`reviews/metrics/`. Run `python tools/cost_report.py` to inspect aggregate
+usage and checkpoint yield. Subscription API-equivalent value, live account
+quota, and actual OpenRouter cash spend are reported separately. Cursor
+on-demand usage is account-wide and cannot be attributed to a chapter.
 
 ## Routine Next-Chapter Run and Usage
 
@@ -105,11 +109,12 @@ python tools/cost_report.py --chapter N --json
 python tools/cost_report.py --json
 ```
 
-The full report leads with subscription quota / API-equivalent value versus
-OpenRouter cash spend. Model calls use OMP JSON events, with no additional model
-request or prompt content. Missing provider usage is a hard failure. Older
-estimated records are reported as unavailable and excluded rather than mixed
-into exact totals.
+The full report separates subscription quota and API-equivalent value from
+actual OpenRouter cash spend. Chapter reports also show packet size, estimated
+packet tokens, wall time, and incomplete workload coverage. Model token and
+cost fields come from OMP JSON events; packet estimates do not trigger another
+model request. Missing provider usage is a hard failure. Older estimated token
+records remain excluded from exact provider totals.
 
 ## Checkpoints and Summaries
 
