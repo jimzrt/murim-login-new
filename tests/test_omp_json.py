@@ -1,15 +1,16 @@
 import json
 import unittest
+from pathlib import Path
 
 from tools.omp_json import OmpJsonError, parse_json_lines
 
 
-def event(model="gpt-test", input_tokens=100, output_tokens=20, text="done", stop="stop"):
+def event(model="gpt-test", input_tokens=100, output_tokens=20, text="done", stop="stop", provider="openai-codex"):
     return json.dumps({
         "type": "message_end",
         "message": {
             "role": "assistant",
-            "provider": "openai-codex",
+            "provider": provider,
             "model": model,
             "content": [{"type": "text", "text": text}],
             "usage": {
@@ -37,6 +38,8 @@ class OmpJsonTest(unittest.TestCase):
         self.assertEqual(usage["cache_read_tokens"], 30)
         self.assertEqual(usage["reasoning_tokens"], 7)
         self.assertEqual(usage["models"]["openai-codex/gpt-test"]["requests"], 1)
+        self.assertFalse(usage["fallback_used"])
+        self.assertEqual(usage["billing_type"], "subscription")
 
     def test_aggregates_every_assistant_request_by_actual_model(self):
         _, usage = parse_json_lines([
@@ -77,6 +80,61 @@ class OmpJsonTest(unittest.TestCase):
         }})
         with self.assertRaises(OmpJsonError):
             parse_json_lines([bad], "requested/high")
+
+    def test_fallback_events_set_actual_provider_and_api_billing(self):
+        _, usage = parse_json_lines([
+            json.dumps({
+                "type": "retry_fallback_applied",
+                "from": "cursor/gpt-5.6-luna:high",
+                "to": "openrouter/openai/gpt-5.6-luna:high",
+                "role": "draft",
+            }),
+            json.dumps({
+                "type": "retry_fallback_succeeded",
+                "model": "openrouter/openai/gpt-5.6-luna:high",
+                "role": "draft",
+            }),
+            event(model="openai/gpt-5.6-luna", provider="openrouter"),
+        ], "cursor/gpt-5.6-luna:high")
+        self.assertTrue(usage["fallback_used"])
+        self.assertEqual(usage["provider"], "openrouter")
+        self.assertEqual(usage["model"], "openai/gpt-5.6-luna")
+        self.assertEqual(usage["billing_type"], "api")
+        self.assertEqual(usage["cost_reported"], 0.0123)
+        self.assertEqual(usage["models"]["openrouter/openai/gpt-5.6-luna"]["billing_type"], "api")
+        self.assertEqual(usage["fallbacks"][0]["from"], "cursor/gpt-5.6-luna:high")
+
+    def test_provider_mismatch_without_events_is_still_fallback(self):
+        _, usage = parse_json_lines(
+            [event(model="gpt-5.6-sol", provider="cursor")],
+            "openai-codex/gpt-5.6-sol:low",
+        )
+        self.assertTrue(usage["fallback_used"])
+        self.assertEqual(usage["provider"], "cursor")
+        self.assertEqual(usage["billing_type"], "subscription")
+
+    def test_matching_requested_provider_is_not_fallback(self):
+        _, usage = parse_json_lines(
+            [event(model="gpt-5.6-luna")],
+            "openai-codex/gpt-5.6-luna:high",
+        )
+        self.assertFalse(usage["fallback_used"])
+        self.assertEqual(usage["provider"], "openai-codex")
+        self.assertNotIn("fallbacks", usage)
+
+    def test_project_omp_config_defines_subscription_overflow_chains(self):
+        root = Path(__file__).resolve().parents[1]
+        text = (root / ".omp" / "config.yml").read_text(encoding="utf-8")
+        self.assertIn("usageAwareFallback: true", text)
+        self.assertIn("usageReservePct: 5", text)
+        self.assertIn("fallbackRevertPolicy: cooldown-expiry", text)
+        self.assertIn("openai-codex/gpt-5.6-sol:", text)
+        self.assertIn("openai-codex/gpt-5.6-luna:", text)
+        self.assertIn("cursor/gpt-5.6-luna:", text)
+        self.assertIn("cursor/cursor-grok-4.6:", text)
+        self.assertNotIn("deepseek-v4.1-flash", text)
+        overlay = (root / ".omp" / "adjudicator-overlay.yml").read_text(encoding="utf-8")
+        self.assertIn("openrouter/deepseek/deepseek-v4.1-flash:low", overlay)
 
 
 if __name__ == "__main__":

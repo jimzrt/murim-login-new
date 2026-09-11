@@ -354,7 +354,13 @@ Edit the complete baseline against the Korean source. Return only the complete m
 """
 
 
-def run_omp(packet_path: Path, model: str, timeout: int, log_path: Path) -> tuple[str, dict]:
+def run_omp(
+    packet_path: Path,
+    model: str,
+    timeout: int,
+    log_path: Path,
+    extra_configs: list[str] | None = None,
+) -> tuple[str, dict]:
     try:
         from tools.omp_json import OmpJsonError, run_json_command
     except ModuleNotFoundError:
@@ -363,8 +369,10 @@ def run_omp(packet_path: Path, model: str, timeout: int, log_path: Path) -> tupl
     command = [
         "omp", "--mode", "json", "--no-session", "--no-tools", "--no-rules", "--no-extensions",
     ]
-    omp_config = cfg.get("omp_config")
-    if omp_config:
+    overlays = [cfg.get("omp_config"), *(extra_configs or [])]
+    for omp_config in overlays:
+        if not omp_config:
+            continue
         path = ROOT / str(omp_config)
         if path.exists():
             command += ["--config", str(path)]
@@ -845,7 +853,11 @@ def command_adjudicate(number: int, force: bool = False) -> None:
     cfg = load_config()
     model = cfg["models"]["adjudicator"]
     output, metrics = run_omp(
-        p["adjudicator_packet"], model, int(cfg["timeouts"]["adjudicator"]), p["logs"] / "adjudicator.jsonl"
+        p["adjudicator_packet"],
+        model,
+        int(cfg["timeouts"]["adjudicator"]),
+        p["logs"] / "adjudicator.jsonl",
+        extra_configs=[str(cfg["adjudicator_omp_config"])] if cfg.get("adjudicator_omp_config") else None,
     )
     raw_path = p["logs"] / "adjudicator-output.txt"
     atomic_text(raw_path, output)
@@ -1030,6 +1042,8 @@ def command_doctor() -> None:
     print(f"adjudicator:  {cfg['models']['adjudicator']}")
     omp_config = cfg.get("omp_config")
     print(f"OMP config:   {omp_config or '(none)'}")
+    adj_config = cfg.get("adjudicator_omp_config")
+    print(f"Adjudicator:  {adj_config or '(none)'}")
     print("No model call was made.")
 
 

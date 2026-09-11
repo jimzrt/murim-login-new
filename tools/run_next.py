@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 
-from cost_report import build_report, format_report, usage_line
+from cost_report import build_report, format_report, format_resource_report
 from omp_json import EventCapture, OmpJsonError
 from run_lock import hold_run_lock
 from workflow import command_committed, command_master, incomplete_chapter, interval_due, paths, project_config, record_metric
@@ -394,10 +394,11 @@ def render_event(event: dict, renderer: ProgressRenderer | None = None) -> None:
 
 
 def print_cost_report(chapter: int) -> None:
-    report = build_report()
+    report = build_report(live_usage=True)
     print(flush=True)
     print(format_report(report, chapter), flush=True)
-    print(usage_line("Project total", report["totals"]), flush=True)
+    print(flush=True)
+    print(format_resource_report(report), flush=True)
 
 
 def coordinator_log_path(chapter: int) -> Path:

@@ -72,18 +72,21 @@ python tools/mastering.py doctor
 
 `doctor` checks the installation and model configuration but makes no paid model call.
 
-The defaults in `docs/mastering.json` are the model selectors used in the bake-off:
+Primary mastering selectors live in `docs/mastering.json`. Sol is requested on
+the OpenAI Codex subscription first; OMP falls back through Cursor Sol to paid
+OpenRouter Sol using the chains in `.omp/config.yml`. The adjudicator requests
+Cursor Grok first and falls through to DeepSeek via `.omp/adjudicator-overlay.yml`.
 
 ```json
 {
   "models": {
-    "master": "openrouter/openai/gpt-5.6-sol:low",
-    "adjudicator": "openrouter/deepseek/deepseek-v4.1-flash:low"
+    "master": "openai-codex/gpt-5.6-sol:low",
+    "adjudicator": "cursor/cursor-grok-4.6:low"
   }
 }
 ```
 
-Change only these strings if your local OMP/OpenRouter naming differs.
+Change only these strings if your local OMP naming differs.
 
 ## Ten-chapter test
 

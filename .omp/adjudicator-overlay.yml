@@ -1,0 +1,9 @@
+advisor:
+  enabled: false
+
+# Adjudicator-only overflow. Merged after project config for that process, so it
+# replaces the review Grok chain (Cursor → OpenRouter Grok) with Cursor → DeepSeek.
+retry:
+  fallbackChains:
+    cursor/cursor-grok-4.6:
+      - openrouter/deepseek/deepseek-v4.1-flash:low

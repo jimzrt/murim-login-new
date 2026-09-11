@@ -1,10 +1,11 @@
 {
   "version": 1,
   "models": {
-    "master": "openrouter/openai/gpt-5.6-sol:low",
+    "master": "openai-codex/gpt-5.6-sol:low",
     "adjudicator": "cursor/cursor-grok-4.6:low"
   },
   "omp_config": ".omp/review-overlay.yml",
+  "adjudicator_omp_config": ".omp/adjudicator-overlay.yml",
   "timeouts": {
     "master": 1800,
     "adjudicator": 1800

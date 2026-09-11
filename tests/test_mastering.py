@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import tempfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -159,3 +160,27 @@ def test_finish_for_commit_skips_when_already_promoted():
             with patch.object(mastering, "command_promote", lambda *_args: calls.append("promote")):
                 mastering.command_finish_for_commit(3)
     assert calls == []
+
+
+def test_adjudicator_run_omp_passes_deepseek_overlay():
+    work = Path(tempfile.mkdtemp())
+    packet = work / "packet.md"
+    packet.write_text("x", encoding="utf-8")
+    captured: dict[str, list[str]] = {}
+
+    def fake_run(command, **_kwargs):
+        captured["command"] = command
+        return "# Chapter 1\n", {"exact": True}
+
+    with patch("tools.omp_json.run_json_command", fake_run):
+        mastering.run_omp(
+            packet,
+            "cursor/cursor-grok-4.6:low",
+            120,
+            work / "log.jsonl",
+            extra_configs=[".omp/adjudicator-overlay.yml"],
+        )
+    configs = [item for i, item in enumerate(captured["command"]) if captured["command"][i - 1] == "--config"]
+    assert any(str(item).endswith("review-overlay.yml") for item in configs)
+    assert any(str(item).endswith("adjudicator-overlay.yml") for item in configs)
+    assert captured["command"][captured["command"].index("--model") + 1] == "cursor/cursor-grok-4.6:low"

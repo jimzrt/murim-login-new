@@ -29,9 +29,9 @@ MODEL_ROLES = ("draft", "review", "revision", "polish", "summary", "coordinator"
 DEFAULT_CONFIG = {
     "models": {
         "draft": "openai-codex/gpt-5.6-luna:high",
-        "review": "openai-codex/gpt-5.6-sol:medium",
-        "revision": "openai-codex/gpt-5.6-luna:high",
-        "polish": "openai-codex/gpt-5.6-luna:high",
+        "review": "cursor/cursor-grok-4.6:medium",
+        "revision": "cursor/cursor-grok-4.6:medium",
+        "polish": "cursor/cursor-grok-4.6:medium",
         "summary": "openai-codex/gpt-5.6-luna:high",
         "coordinator": "openai-codex/gpt-5.6-luna:high",
     },

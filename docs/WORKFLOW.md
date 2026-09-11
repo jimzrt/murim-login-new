@@ -64,7 +64,9 @@ the previous `REVISED` → accept path.
 
 Deterministic reports live in `reviews/qa/`; exact provider-reported phase usage
 and elapsed time live in `reviews/metrics/`. Run `python tools/cost_report.py`
-to inspect aggregate usage and checkpoint yield.
+to inspect aggregate usage and checkpoint yield. Subscription calls are tracked
+as quota consumed plus API-equivalent value; OpenRouter calls are tracked as
+actual token spend. Do not mix those figures.
 
 ## Routine Next-Chapter Run and Usage
 
@@ -103,9 +105,11 @@ python tools/cost_report.py --chapter N --json
 python tools/cost_report.py --json
 ```
 
-Model calls use OMP JSON events, with no additional model request or prompt
-content. Missing provider usage is a hard failure. Older estimated records are
-reported as unavailable and excluded rather than mixed into exact totals.
+The full report leads with subscription quota / API-equivalent value versus
+OpenRouter cash spend. Model calls use OMP JSON events, with no additional model
+request or prompt content. Missing provider usage is a hard failure. Older
+estimated records are reported as unavailable and excluded rather than mixed
+into exact totals.
 
 ## Checkpoints and Summaries
 
