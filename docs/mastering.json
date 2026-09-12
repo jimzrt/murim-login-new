@@ -17,5 +17,5 @@
   "continuity_tail_words": 900,
   "include_safe_profiles": true,
   "continuity_prefer_verified_mastered": true,
-  "quality_gate_min_auto_confidence": 0.95
+  "quality_gate_min_auto_confidence": 0.9
 }

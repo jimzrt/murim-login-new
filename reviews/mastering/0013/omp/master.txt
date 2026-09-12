@@ -4,7 +4,7 @@ The five horses raced on. They crossed mountains, fields, and rivers, finally re
 
 “Where have you come from?”
 
-When the Jin Family of Taiyuan’s gate guard asked the tense question, the young man in the lead smiled. Hostility he could not hide seeped from his crooked, lifted lips.
+At the Jin Family of Taiyuan gate guard’s tense question, the young man in the lead smiled. His crooked lips couldn’t hide the hostility behind them.
 
 “Mount Heng.”
 
@@ -18,7 +18,7 @@ Hyuk Mujin could take on any form. All I had to do was picture him in my mind. S
 
 The martial arts had become second nature. At first, I had focused on executing them from beginning to end, one form after another. But things were different now.
 
-The forms changed with the situation. Martial arts didn’t have to be performed in a fixed sequence, each form flowing into the next. I had reached the point where I could skip that prescribed order and link the forms together.
+The forms changed with the situation. Martial arts didn’t have to be performed in a fixed sequence, each form flowing into the next. I had reached the point where I could skip that prescribed order and link the forms together as needed.
 
 *Like this.*
 
@@ -26,7 +26,7 @@ Whoooosh!
 
 By the time I heard the wind, it was already too late. His abdomen pierced through, Hyuk Mujin let out a rueful sigh.
 
-- You’re improving quickly.
+“You’re improving quickly.”
 
 “I trained with a spear for seven years, you bastard.”
 
@@ -54,7 +54,7 @@ On top of that, the Jin Family’s Cultivation Technique had reached the Third S
 
 “Open Status Window.”
 
-After distributing my remaining points, the tip of my nose prickled for some reason.
+After distributing my remaining points, my nose prickled with emotion.
 
 > **System**
 >
@@ -93,13 +93,13 @@ These were stats *of* combat, *by* combat, and *for* combat.
 
 *And that’s not even counting the martial arts.*
 
-I wasn’t the same person I had been back then. Hyuk Mujin? I was confident I could beat him now.
+I wasn’t the same person I had been before. Hyuk Mujin? I was confident I could beat him now.
 
 The F-rank Hunter who hadn’t known the first thing about martial arts was dead. I was now a Murim martial artist who had learned a Peak cultivation technique and two first-rate martial arts.
 
 *It starts today.*
 
-Everything was ready. Once I left the training hall today, I would gather the things I had in mind and leave the Jin Family of Taiyuan.
+Everything was ready. Once I left the training hall, I would gather the things I had in mind and leave the Jin Family of Taiyuan.
 
 *I might even be able to get Jin Wikyung’s help.*
 
@@ -107,17 +107,17 @@ Just dealing with dim-witted bandits like the Heavenly Axe should let me reach m
 
 *Mom. Hayeon. I miss you.*
 
-The rims of my eyes were about to redden when—
+My eyes were just beginning to redden when—
 
 Grrrrrr—
 
 “O-oh! Ohhh!”
 
-This was the moment I had been waiting for. The iron door blocking the entrance to the training hall was opening. That dark, heavy chunk of metal looked as beautiful as the gates of heaven.
+The moment I had been waiting for had finally arrived. The iron door blocking the entrance to the training hall was opening. That ugly, heavy chunk of metal looked as beautiful as the gates of heaven.
 
 “Finally! I’m getting out!”
 
-I ran toward the entrance to heaven with a face full of joy.
+Overjoyed, I raced toward the entrance to heaven.
 
 The angel who would free me from this place appeared behind the door.
 
@@ -133,9 +133,9 @@ Wipeng, an angel who resembled a desert fox, answered in a strangely qualified t
 
 “…What?”
 
-“You will be leaving. But there’s somewhere we need to stop by first.”
+“You will be leaving. But there’s somewhere we need to stop first.”
 
-“Somewhere we need to stop by?”
+“Somewhere we need to stop?”
 
 A chill ran down my spine. Some unknown survival instinct reared its head.
 
@@ -159,7 +159,7 @@ This was ominous. Very ominous. I had to find some way out of this.
 
 “No.”
 
-“It seems like an important occasion, and I shouldn’t show up smelling like this…”
+“This sounds like an important occasion, and I shouldn’t show up smelling like this…”
 
 “Are you thinking of running away?”
 
@@ -167,13 +167,13 @@ He looked like a desert fox, but his instincts put a meerkat to shame. Before I 
 
 “Third Young Master. From now on, answer my questions truthfully. Understood?”
 
-His voice was dry, and his eyes were cold. The aura coming from him made it impossible for me to open my mouth. All I could do was nod.
+His voice was dry, and his eyes were cold. The aura emanating from him made it impossible for me to speak. All I could do was nod.
 
 *Jin Taekyung.*
 
 The three-syllable name flashed through my mind.
 
-There was no doubt about it. This bastard was responsible. He had dumped a load of shit without me even knowing.
+There was no doubt about it. That bastard was responsible. He had taken a shit I knew nothing about.
 
 And then…
 
@@ -189,11 +189,11 @@ As I followed Wipeng toward the main assembly hall, my mind went completely blan
 
 Even if it had only been an attempt, it was a sex crime so vile that beating the culprit to death wouldn’t have been enough.
 
-I remembered how I had always said that, as a human being and an older brother with a younger sister, sex offenders should be executed.
+As a human being and an older brother with a younger sister, I had always said that sex offenders deserved to be executed.
 
 *That crazy son of a bitch.*
 
-My palms were damp with cold sweat. I said it again, not knowing how many times I had repeated it already.
+My palms were slick with cold sweat. For what had to be the hundredth time, I said,
 
 “It really wasn’t me. Please believe me.”
 
@@ -215,29 +215,29 @@ He answered without even taking a breath.
 
 “You have to let me take care of business!”
 
-“Just do it in your pants.”
+“Then relieve yourself here.”
 
-Son of a bitch. I gave up and immediately turned around and ran, drawing up all my internal energy and concentrating it in my feet.
+Son of a bitch. I gave up and immediately turned and ran, drawing up all my internal energy and concentrating it in my feet.
 
 Grab.
 
 “Third Young Master.”
 
-I was caught in three steps. Wipeng had me by the back of the neck, looking down at me with cold eyes.
+I was caught in three steps. Wipeng had me by the back of the neck and was looking down at me with cold eyes.
 
-“If you keep this up… I might have to stop being polite.”
+“If you keep this up… I may have to stop being polite.”
 
 Resistance was pointless. Wipeng was a master whose Level I couldn’t determine even with Qi Sense.
 
 *No choice.*
 
-With a sinking heart, I walked for who knew how long before a tall pavilion came into view.
+I trudged on with a sinking heart. After what felt like an eternity, a tall pavilion came into view.
 
-Several warriors were standing guard outside. I recognized the Jin Family of Taiyuan’s distinctive navy uniforms, but some of the men wore red clothes I had never seen before.
+Several warriors stood guard outside. I recognized the Jin Family of Taiyuan’s distinctive navy uniforms, but some of the men wore red clothes I had never seen before.
 
 *Those must be members of the Mount Heng Sword Sect.*
 
-Considering the usual relationship between the two sects, they should have been at each other’s throats. Yet right now, they were united in glaring at me.
+Considering the usual relationship between the two sides, they should have been at each other’s throats. Yet right now, they were united in glaring at me.
 
 “Fuck…”
 
@@ -253,15 +253,15 @@ As I reminded myself of that fact, Wipeng threw open the doors to the main assem
 
 I took a deep breath and stepped into the pavilion, repeating the same words over and over in my head.
 
-*Even if a tiger carries you off, you can survive if you keep your wits about you. Even if a tiger carries you off, if you just keep your wits about you…*
+*Even if a tiger carries you off, you can survive if you keep your wits about you. Even if a tiger carries you off, you can keep your wits—*
 
-The moment I entered the hall, the low murmuring abruptly stopped. A dozen men, young and old, stood arrayed along either side, while Jin Wikyung occupied the seat of honor.
+The moment I entered the hall, the low murmurs abruptly stopped. A dozen men, young and old, stood arrayed along either side, while Jin Wikyung occupied the seat of honor.
 
 And in the center stood a young man.
 
 “It’s been a while, Young Master Jin.”
 
-The instant I faced that unpleasant smile—
+The instant I saw his unpleasant smile—
 
 Ding.
 
@@ -269,7 +269,7 @@ Ding.
 >
 > - **Killing intent** detected!
 
-…At least use your blinker before pulling in.
+…At least signal before you cut in.
 
 * * *
 
@@ -283,11 +283,11 @@ But this guy…
 
 This was on an entirely different level from anything I had experienced.
 
-If I had to compare it to something, it was like the difference between a low-level monster and a mid-level monster. His killing intent was far more refined, more furtive, and more chilling.
+If I had to compare it to something, it was like the difference between a low-level monster and a mid-level monster. His killing intent was far more refined, subtle, and chilling.
 
 “I believe I caught a glimpse of you in the marketplace last time. I don’t know whether you’ll remember me.”
 
-Lee Seogeun spat out each word. Above his head, a System window floated in the air.
+Lee Seogeun bit off each word. Above his head, a System window floated in the air.
 
 > **System**
 >
@@ -299,9 +299,9 @@ That was the Level I had read with Qi Sense the instant I detected his killing i
 
 Even worse were the looks from everyone else.
 
-Dozens of menacing gazes, young and old alike, were fixed on me. My knees began to go weak. In that atmosphere, Lee Seogeun opened his mouth.
+Dozens of menacing eyes, young and old alike, were fixed on me. My knees began to weaken. Amid that atmosphere, Lee Seogeun spoke.
 
-“What a shame. If you had come a little earlier, we could have had a deeper conversation. We were discussing something interesting until just now.”
+“What a shame. If you had arrived a little earlier, we could have had a deeper conversation. We were discussing something interesting until just now.”
 
 “…Were you?”
 
@@ -311,11 +311,11 @@ Dozens of menacing gazes, young and old alike, were fixed on me. My knees began 
 
 I only hoped it wasn’t a discussion about whether to cut off my head or my balls. And if that miserable guess was correct, I would rather they cut off my balls than my head.
 
-*If I was lucky, I might be able to recover with a Level Up… Why am I even thinking about this?*
+*If I’m lucky, a Level Up might heal them… Why am I even thinking about this?*
 
-It was simply miserable. Lee Seogeun studied my expression before speaking again.
+It was beyond miserable. Lee Seogeun studied my expression before speaking again.
 
-“I heard you returned to the family a few days ago. Where have you been?”
+“I heard you returned to the family a few days ago. Where were you?”
 
 “Honghwaru.”
 
@@ -325,7 +325,7 @@ It was simply miserable. Lee Seogeun studied my expression before speaking again
 
 I wanted to tell him everything honestly.
 
-*I got fired from my Guild that day, had a glass of soju with the hyung from the goshiwon, then went into the capsule and fell asleep. When I woke up, I was at Honghwaru, and now I’m working hard toward Logout. Something like that.*
+*I got fired from my Guild that day, shared some soju with the older guy from my goshiwon, then climbed into the capsule and fell asleep. When I woke up, I was at Honghwaru, and now I’m working hard toward Logout. Something like that.*
 
 *I’d be lucky if he didn’t draw his sword.*
 
@@ -335,7 +335,7 @@ As I hesitated, unable to answer, Lee Seogeun pulled something from inside his r
 
 “Myeongwollu?”
 
-“The pleasure house you used to frequent? Don’t try to make excuses by saying you’ve never heard of it. These are the testimonies and signatures of the people who saw you there that day.”
+“The pleasure house you used to frequent? Don’t try to claim you’ve never heard of it. I have the testimony and signatures of the people who saw you there that day.”
 
 In other words, it was a list of witness statements. Figuring I might as well look, I read through the papers.
 
@@ -343,15 +343,15 @@ Then I noticed something strange.
 
 “What is this?”
 
-“You don’t know even after seeing it yourself?”
+“You can’t tell even after reading it?”
 
 This bastard was dropping the formal speech now, too.
 
-“I’m saying that because I read it. There isn’t a single proper testimony here.”
+“I’m asking because I read it. There isn’t a single proper statement here.”
 
 I read every one of the dozens of statements, but not one contained anything decisive.
 
-They all said roughly the same thing: Jin Taekyung had gotten thoroughly drunk, gone to the wrong room, and that room had belonged to the daughter of the Mount Heng Sword Sect. Then a scream had rung out.
+They all said roughly the same thing: Jin Taekyung had gotten thoroughly drunk, gone to the wrong room, and that room had belonged to the daughter of the Mount Heng Sword Sect. Then someone had heard a scream.
 
 “The bastard who tore my sister’s clothes and tried to rape her is shameless beyond belief. You really are exactly as the rumors say.”
 
@@ -359,7 +359,7 @@ They all said roughly the same thing: Jin Taekyung had gotten thoroughly drunk, 
 
 “You bastard!”
 
-Flutter!
+Fwap!
 
 “Ah.”
 
@@ -373,7 +373,7 @@ How should I put it? This whole chain of events—especially the witness stateme
 
 But I had no time to dwell on that unease.
 
-“Come out with me, you bastard! I’ll make you pay for what you’ve done!”
+“Come outside, you bastard! I’ll make you pay for what you’ve done!”
 
 The instant Lee Seogeun shouted—
 
