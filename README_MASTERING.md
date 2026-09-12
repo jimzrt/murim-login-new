@@ -175,7 +175,7 @@ DeepSeek receives:
 - numbered changed hunks containing the exact changed BASE/SOL prose, paragraph references, and Korean line citations;
 - terminology-risk annotations when a preferred baseline term disappears from Sol's hunk.
 
-After assembly, deterministic QA is followed by a bounded whole-chapter fidelity gate. Any critical or major semantic finding blocks promotion; minor findings are retained for inspection.
+After assembly, deterministic QA is followed by a bounded whole-chapter fidelity gate. The gate receives both the Korean source and the accepted baseline, so it can catch regressions as well as new mistranslations. Major/critical findings and high-confidence minor findings are repaired automatically and checked again; unresolved major/critical findings block promotion.
 
 Changed prose is repeated in each hunk for reliable direct comparison. Both complete numbered chapters remain available for neighboring context and for judging adjacent hunks that split or restructure one baseline sentence as assembled prose.
 
@@ -185,7 +185,9 @@ It must return exactly one of:
 - `BASE` — revert that hunk to the accepted baseline;
 - `REPAIR` — neither version is satisfactory; DeepSeek supplies a narrowly bounded replacement.
 
-The adjudicator prompt is intentionally biased **toward Sol when both versions are faithful**, so a conservative judge does not erase legitimate prose improvements merely because they differ from the baseline.
+The adjudicator prompt is neutral when both versions are faithful: it keeps Sol
+only when the improvement is concrete, while preserving the accepted baseline's
+established terminology, formatting, and source-specific texture.
 
 ## Safety against accidental overwrites
 

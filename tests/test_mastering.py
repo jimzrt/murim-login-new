@@ -120,10 +120,30 @@ def test_apply_fidelity_repairs_only_major_findings():
             },
         ]
     }
-    repaired, count = mastering.apply_fidelity_repairs(text, review)
+    repaired, count = mastering.apply_fidelity_repairs(text, review, 0.98)
     assert count == 1
     assert "Successful repetitions (2 / 100)." in repaired
     assert "Keep this." in repaired
+
+
+def test_apply_fidelity_repairs_rejects_truncated_model_replacement():
+    review = {
+        "findings": [{
+            "id": "F01",
+            "severity": "critical",
+            "confidence": 1.0,
+            "current": "Keep this.",
+            "replacement": "[Showing lines 1-300 of 389. Use :301 to continue]",
+        }]
+    }
+    try:
+        mastering.apply_fidelity_repairs("# Chapter 1\n\nKeep this.\n", review, 0.95)
+    except ValueError as error:
+        assert "pagination marker" in str(error)
+    else:
+        raise AssertionError("truncated replacement was accepted")
+
+
 def test_fuzzy_alignment_does_not_collapse_fully_edited_chapter():
     baseline = "# Chapter 1\n\nThe hunter walked home.\n\nHe opened the door.\n\nThe room was empty.\n"
     sol = "# Chapter 1\n\nThe hunter headed home.\n\nHe pushed the door open.\n\nNo one was inside.\n"
@@ -143,6 +163,30 @@ def test_master_packet_owns_full_copy_polish():
     assert "## Project polish guidance" in packet
     assert "Translate the thought, not the Korean sentence structure" in packet
     assert "## Current accepted English baseline" in packet
+
+
+def test_fidelity_gate_packet_includes_baseline_regression_anchor():
+    work = Path(tempfile.mkdtemp())
+    paths = mastering.chapter_paths(1)
+    paths["fidelity_packet"] = work / "fidelity-packet.md"
+    packet_source = "＃1화\n\n원문.\n"
+    # Build the packet without invoking OMP; the helper writes the packet
+    # immediately before its model call.
+    with patch.object(mastering, "run_omp", return_value=(
+        '{"findings":[]}', {"requests": 1}
+    )):
+        with patch.object(mastering, "atomic_json"):
+            with patch.object(mastering, "save_metric"):
+                mastering.run_fidelity_gate(
+                    1,
+                    packet_source,
+                    "# Chapter 1\n\nFinal.\n",
+                    {"passed": True},
+                    paths,
+                    baseline="# Chapter 1\n\nBaseline.\n",
+                )
+    assert "## Accepted baseline for regression comparison" in paths["fidelity_packet"].read_text()
+    assert "Baseline." in paths["fidelity_packet"].read_text()
 
 
 def test_adjudicator_packet_is_compact():

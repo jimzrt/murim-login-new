@@ -435,6 +435,581 @@ finding blocks promotion; minor findings are recorded for human inspection.
 # Chapter 10
 
 [P2]
+After walking for more than ten minutes, we reached the cliff blocking off the rear of the Jin Family of Taiyuan estate. A vast cavern gaped open in its face. A man stood before it.
+
+[P3]
+“Hmm. You’ve come.”
+
+[P4]
+Built like a brown bear, with a solemn way of speaking. Jin Wikyung.
+
+[P5]
+I awkwardly bowed my head.
+
+[P6]
+“Hello, big… brother.”
+
+[P7]
+Jin Wikyung made me uncomfortable. As if suddenly gaining an NPC family weren’t enough, he took an incredible amount of interest in me.
+
+[P8]
+*Look at him. He’s trying so hard not to show it with everyone watching.*
+
+[P9]
+But if you looked closely, his eyes were glistening.
+
+[P10]
+*Is he seriously this emotional?*
+
+[P11]
+He looked like he could make even a triad boss back down. I had no idea why all the characters in this game were such a bizarre bunch.
+
+[P12]
+“I can no longer overlook your conduct. As the Lesser Family Head and acting Family Head, I have ordered you into closed-door confinement. Do you have anything to say?”
+
+[P13]
+*Of course I do.*
+
+[P14]
+But this was all staged. On the way to the training hall, Wipeng had explained what was really going on. The factions within the Jin Family of Taiyuan were locked in a power struggle, and Jin Wikyung was acting as my shield.
+
+[P15]
+This forced confinement, then, was all for show.
+
+[P16]
+> You needed somewhere to train anyway, didn’t you, Young Master? Just bear with it for three days.
+
+[P17]
+Remembering Wipeng’s final words, I lowered my head and pretended to repent.
+
+[P18]
+“I will gladly accept my punishment.”
+
+[P19]
+The great thing about this performance was that my lines were short. Jin Wikyung delivered his final line with sorrowful eyes.
+
+[P20]
+“Lock the convict in the training hall. The date of his release will be announced later.”
+
+[P21]
+The moment he finished speaking, the two warriors guarding the entrance approached and seized me by the arms.
+
+[P22]
+The performance was over. Time to make my exit.
+
+[P23]
+I stood at the entrance to the training hall.
+
+[P24]
+> I’ve had everything you need brought inside. Youngest, don’t overdo it.
+
+[P25]
+With Jin Wikyung’s Sound Transmission reaching me, I took my first step inside.
+
+[P26]
+* * *
+
+[P27]
+The training hall was, in a word, a cave. An artificial cave carved into the cliff.
+
+[P28]
+It was tall, wide, and damp.
+
+[P29]
+Splash. Splash.
+
+[P30]
+How long had I been following the warrior assigned to the training hall? Just as I began to wonder whether I was wearing leather shoes or wet rags, a massive iron gate appeared.
+
+[P31]
+*Whoa…*
+
+[P32]
+My mouth fell open the moment I saw it. Filling the passageway without a gap, it looked less like a door and more like a wall preventing anyone from entering or leaving.
+
+[P33]
+The warrior who had guided me raised his torch and shouted,
+
+[P34]
+“Open the gate!”
+
+[P35]
+Groooan—
+
+[P36]
+The enormous iron gate slowly opened its jaws. It wasn’t some magical “Open Sesame” spell. An NPC who had been waiting nearby had simply pulled the protruding gate mechanism.
+
+[P37]
+Even so, it was an overwhelming sight.
+
+[P38]
+And the moment I saw what lay beyond it—
+
+[P39]
+“Wow.”
+
+[P40]
+This time, I couldn’t hide the exclamation that escaped me.
+
+[P41]
+When I had first entered the training hall, I’d expected a damp underground cave. But…
+
+[P42]
+“What is all this?”
+
+[P43]
+There was a wide bed topped with a fur blanket that made me feel better just looking at it. Instead of a damp, uneven stone floor, a clean gray surface stretched across the room.
+
+[P44]
+*Cement…? Obviously not. Limestone, maybe?*
+
+[P45]
+Aside from the chill in the air—or even taking that into account—it was far better than I had imagined.
+
+[P46]
+*This is supposed to be a punishment?*
+
+[P47]
+As I stared around in a daze, someone cleared his throat behind me. I turned to find the warrior who had guided me inside.
+
+[P48]
+“Everything you need has been prepared. Then I shall take my leave.”
+
+[P49]
+Groooan.
+
+[P50]
+Watching the iron gate slowly close, I suddenly remembered the Sound Transmission I had heard at the entrance.
+
+[P51]
+> I’ve had everything you need brought inside. Youngest, don’t overdo it.
+
+[P52]
+Ah. The heart of an NPC thinking about his little brother.
+
+[P53]
+This pathetic user weeps at the top of his lungs.
+
+[P54]
+* * *
+
+[P55]
+It happened all the time in the real world too. Corrupt high-ranking officials went in and out of prosecutors’ offices in wheelchairs and checked themselves into private hospital rooms to avoid investigations.
+
+[P56]
+My situation was a little different, but the general shape was the same. I stared at the VIP room in the training hall, looking moved.
+
+[P57]
+“So this is the life of a gold spoon.”[^1]
+
+[P58]
+It wasn’t just the graphics and artificial intelligence that were realistic. The game also carried a social message: no matter how hard you struggled, gold spoons still had it best.
+
+[P59]
+Good grief. What would I have done if I hadn’t gotten this character? His father was the Family Head, his eldest brother was the Lesser Family Head, and his second brother was a martial arts genius.
+
+[P60]
+No wonder he could spend his days as a pleasure-house regular without a care in the world.
+
+[P61]
+*Jin Taekyung, you bastard…*
+
+[P62]
+He turned out to be some great sage who had understood the ways of the world at a young age.
+
+[P63]
+Trembling at the realistic God-Spoon System, I wandered around the training hall, which covered more than three hundred square meters. Then I found the “necessities” the warrior had mentioned.
+
+[P64]
+*Food first.*
+
+[P65]
+The food was divided between two jars. When I looked inside, I found rice balls that gave off a strong medicinal-herb scent.
+
+[P66]
+> **System**
+>
+> **Item Window**
+>
+> **Excellent Grain-Repelling Pill**
+>
+> **Type:** Pill
+>
+> **Grade:** First Rate
+>
+> **Restriction:** None
+>
+> **Description:** A grain-repelling pill made by crudely cramming in all kinds of beneficial medicinal herbs. Restores vitality upon consumption and grants additional effects when taken regularly over a long period.
+
+[P67]
+“Oh, so this is the famous grain-repelling pill?”
+
+[P68]
+I had seen them in plenty of martial arts novels. They were light, compact, easy to carry, and apparently provided nutritional support too.
+
+[P69]
+The other jar was packed full of them too.
+
+[P70]
+*I should put these in my inventory for now.*
+
+[P71]
+I gripped the jars with both hands and muttered,
+
+[P72]
+“Acquire item.”
+
+[P73]
+If anyone else had seen me, they would have fallen over in shock. The two jars that had been sitting there perfectly normally vanished as if they had evaporated.
+
+[P74]
+I gazed fondly at the jars stored in my inventory.
+
+[P75]
+*That solves the food problem.*
+
+[P76]
+The second necessity I found was water. Since the training hall was, after all, a cave, a cold underground spring in one corner took care of my drinking water.
+
+[P77]
+And finally, the third.
+
+[P78]
+“Hmm.”
+
+[P79]
+Several weapons hung side by side on a rack. Naturally, the first thing I picked up was a sturdy-looking wooden spear.
+
+[P80]
+*Item Appraisal.*
+
+[P81]
+Ding.
+
+[P82]
+> **System**
+>
+> **Item Window**
+>
+> **Training Wooden Spear**
+>
+> **Type:** Weapon
+>
+> **Grade:** Third Rate
+>
+> **Restriction:** None
+>
+> **Description:** Made for beginners.
+
+[P83]
+“Oh.”
+
+[P84]
+A training wooden spear made for beginners. It was exactly what I needed right now.
+
+[P85]
+If I had just one more thing, everything would be perfect.
+
+[P86]
+“Inventory Open.”
+
+[P87]
+Grinning, I pulled the martial arts manual titled *Jin Family’s Spear Technique* from my inventory.
+
+[P88]
+Ding.
+
+[P89]
+> **System**
+>
+> - Would you like to learn **Jin Family’s Spear Technique**? (3 / 10)
+
+[P90]
+“Obviously.”
+
+[P91]
+The System was great.
+
+[P92]
+Sometimes, it was even adorable.
+
+[P93]
+* * *
+
+[P94]
+While learning the Jin Family’s Manoeuvre Technique yesterday, I discovered something for the first time.
+
+[P95]
+The System’s notifications didn’t always go *ding*.
+
+[P96]
+And one of them was incredibly annoying.
+
+[P97]
+Beep!
+
+[P98]
+> **System**
+>
+> - The movement has failed.
+>
+> - Successful attempts (2 / 100)
+
+[P99]
+A failure message. The System window popped up without fail whenever I flubbed a move.
+
+[P100]
+I had no idea how many times I’d seen it by now.
+
+[P101]
+I looked at the *Training Wooden Spear* in my hand.
+
+[P102]
+*I was thinking about this wrong.*
+
+[P103]
+Maybe because it was wooden, the spear was light. It moved quickly whether I thrust or swung it.
+
+[P104]
+That was the problem.
+
+[P105]
+*It’s too light to control.*
+
+[P106]
+Because fine adjustments were difficult, I kept slipping up. And there was no way a System this damn picky would overlook such minor errors.
+
+[P107]
+Beep.
+
+[P108]
+> **System**
+>
+> - The movement has failed.
+>
+> - Successful attempts (5 / 100)
+
+[P109]
+“Argh. Fuck.”
+
+[P110]
+In the end, I threw down the *Training Wooden Spear* and pulled the *Sharp Spear* from my inventory. Its length and shaft thickness were roughly the same as the spear I had used in the real world.
+
+[P111]
+So why hadn’t I taken it out from the beginning?
+
+[P112]
+“It’s insanely heavy. Seriously.”
+
+[P113]
+Since it was made entirely of solid steel, its weight was no joke. The thing felt like a monster weighing nearly fifty kilograms.
+
+[P114]
+If I swung something like this for hours, my stamina wouldn’t hold out.
+
+[P115]
+My current realm was Second Rate. Even with the System’s help, swinging something heavier than half a sack of rice around like a pinwheel was too much.
+
+[P116]
+*It’s not like the power of a tiger is going to come out of nowhere.*
+
+[P117]
+That was when it hit me.
+
+[P118]
+“…Huh?”
+
+[P119]
+What had I just said?
+
+[P120]
+The strength of a tiger?
+
+[P121]
+“Wait, I do have that!”
+
+[P122]
+This was a game. There was a System and stats. And there was internal energy. Ten years’ worth of internal energy that could be drawn out through a cultivation technique!
+
+[P123]
+It was embarrassing that I had forgotten about it, even for a moment.
+
+[P124]
+“It’s not like I’ve ever used anything like that before…”
+
+[P125]
+You only know what you’ve experienced. An F-rank Hunter didn’t become F-rank for no reason. With no mana worth a damn, I had relied entirely on my bare body, so even among Hunters I had been treated like a halfwit.
+
+[P126]
+*At least I’ve solved one problem.*
+
+[P127]
+I let out a dumbfounded laugh and picked up the spear. Then, slowly and carefully, I drew up my internal energy.
+
+[P128]
+In my mind, the formula for the Jin Family’s Cultivation Technique that the System had engraved into me rapidly rewound through my mind, guiding my internal energy along its prescribed path.
+
+[P129]
+Tingling.
+
+[P130]
+The response was immediate.
+
+[P131]
+The ten years’ worth of internal energy curled up inside my dantian spread throughout my entire body. I could feel that energy—something I could experience only because this was a game, because I was a martial artist in Murim—reaching every limb and bone.
+
+[P132]
+*This is…*
+
+[P133]
+Strength overflowed through my entire body. My dramatically enhanced physical abilities and senses gave me another taste of the rapture I had never known while living as an F-rank Hunter.
+
+[P134]
+*How can things change this much?*
+
+[P135]
+I gripped the spear and performed the *Jin Family’s Spear Technique*. The fifty-kilogram iron spear no longer felt heavy. It pierced and slashed through the air along the paths I chose.
+
+[P136]
+And then—
+
+[P137]
+Ding.
+
+[P138]
+> **System**
+>
+> - Successful attempts (6 / 100)
+
+[P139]
+At last, the notification I had been waiting for began to chime.
+
+[P140]
+* * *
+
+[P141]
+Jin Wikyung spoke with a worried expression.
+
+[P142]
+“He’s doing well, right?”
+
+[P143]
+“He should be, if he has any sense of shame.”
+
+[P144]
+“He still hasn’t fully recovered… He should be all right, shouldn’t he?”
+
+[P145]
+“If a stranger saw you, they’d think the Third Young Master was at death’s door. A little spit and he’d be fine.”
+
+[P146]
+“No. You only say that because you don’t know how frail the youngest has been since childhood.”
+
+[P147]
+Wipeng answered with an incredulous expression.
+
+[P148]
+“The elixirs and tonics that have gone into the Third Young Master alone would fill an entire room. And have you already forgotten last year’s Hundred-Year Snow Ginseng theft?”
+
+[P149]
+“Now, that…”
+
+[P150]
+“At the time, the Medicine King Hall Master was so furious that he ran around threatening to cut open the Third Young Master’s belly. Honestly, even while stopping him, I thought that cutting him open would count as self-defense.”
+
+[P151]
+Jin Wikyung quietly looked away.
+
+[P152]
+The matter had eventually been settled by compensating the Medicine King Hall out of Jin Wikyung’s personal fortune, but the Hall Master’s fury at the time had been tremendous.
+
+[P153]
+“After swallowing that much elixir, he probably won’t suffer so much as a minor illness for the rest of his life.”
+
+[P154]
+“It’s still not enough. Can’t you tell just by looking? Every time I see the youngest, I feel sorry for him. He looks like a skeleton with a few scraps of flesh stuck to it. Every morning, he’s so weak that he doesn’t even have any strength.”
+
+[P155]
+“No strength?”
+
+[P156]
+Wipeng suddenly remembered a rumor he had heard in the past. Among the courtesans of Taiyuan’s red-light district, Jin Taekyung was supposedly known by the nickname the Night King.
+
+[P157]
+*Just how much are we talking about?*
+
+[P158]
+The medicine must have worked properly in at least one respect.
+
+[P159]
+Without realizing it, Wipeng raised his forearm and tried to picture the size.
+
+[P160]
+“What are you doing?”
+
+[P161]
+“Ah, nothing.”
+
+[P162]
+Jin Wikyung looked at the mountain of documents piled before him and sighed.
+
+[P163]
+“Between the youngest and everything else, there’s no end of things to worry about, both inside and outside the family. Especially… it bothers me that ‘they’ have made contact.”
+
+[P164]
+“You mean the Mount Heng Sword Sect.”
+
+[P165]
+The Mount Heng Sword Sect.
+
+[P166]
+The weight carried by that name was far from light.
+
+[P167]
+Several decades earlier, an undefeated wandering martial artist had hung up its signboard. Since then, the sect had grown at a frightening pace, and now it had become powerful enough to threaten the position of the Jin Family of Taiyuan.
+
+[P168]
+“What could their intention be?”
+
+[P169]
+“I’ve sent my subordinates to investigate.”
+
+[P170]
+Jin Wikyung fiddled with the letter from the Mount Heng Sword Sect.
+
+[P171]
+Why were they coming? For what purpose?
+
+[P172]
+After one question led to another, he reached a single conclusion.
+
+[P173]
+“Notify every branch in Shanxi. Whatever the Mount Heng Sword Sect’s purpose may be, tell them to make every possible preparation.”
+
+[P174]
+This was Murim.
+
+[P175]
+Only those who were prepared would survive to see tomorrow.
+
+[P176]
+[^1]: In Korean, “gold spoon” is shorthand for someone born into wealth; “God-Spoon” is a pun that escalates the expression.
+```
+
+
+## Accepted baseline for regression comparison
+
+This is the accepted English copy before mastering. Use it as a regression
+anchor: report a finding when the assembled copy loses an established term,
+source-specific image, formatting convention, continuity fact, or other detail
+that the baseline preserved, unless the Korean source clearly requires the
+change.
+
+```markdown
+[P1]
+# Chapter 10
+
+[P2]
 After walking for more than ten minutes, we arrived at a cliff that blocked off the rear of the Jin Family of Taiyuan. A massive cavern gaped open in its face. One person stood in front of it.
 
 [P3]
@@ -999,69 +1574,78 @@ Only those who were prepared would survive to see tomorrow.
 [^1]: In Korean, “gold spoon” is shorthand for someone born into wealth; “God-Spoon” is a pun that escalates the expression.
 ```
 
+
 ## Deterministic QA
 
 ```json
 {
-  "chapter": 10,
-  "errors": [],
-  "metrics": {
-    "length_ratio": 2.447,
-    "source_characters": 5697,
-    "source_paragraphs": 169,
-    "translation_characters": 13942,
-    "translation_paragraphs": 177
-  },
-  "passed": true,
   "version": 1,
+  "chapter": 10,
+  "passed": true,
+  "metrics": {
+    "source_characters": 5697,
+    "translation_characters": 13729,
+    "length_ratio": 2.41,
+    "source_paragraphs": 169,
+    "translation_paragraphs": 176
+  },
+  "errors": [],
   "warnings": [
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
+      "details": {
+        "korean": "기루",
+        "preferred": "pleasure house"
+      }
+    },
+    {
+      "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "진가심법",
         "preferred": "Jin Family's Cultivation Technique"
-      },
-      "message": "matched preferred term is absent"
+      }
     },
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "진가보법",
         "preferred": "Jin Family's Manoeuvre Technique"
-      },
-      "message": "matched preferred term is absent"
+      }
     },
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "진가창법",
         "preferred": "Jin Family's Spear Technique"
-      },
-      "message": "matched preferred term is absent"
+      }
     },
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "보상",
         "preferred": "Reward"
-      },
-      "message": "matched preferred term is absent"
+      }
     },
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "습득",
         "preferred": "Acquired"
-      },
-      "message": "matched preferred term is absent"
+      }
     },
     {
       "code": "terminology",
+      "message": "matched preferred term is absent",
       "details": {
         "korean": "대사",
         "preferred": "Master for a senior Buddhist monk"
-      },
-      "message": "matched preferred term is absent"
+      }
     }
   ]
 }
@@ -1086,7 +1670,7 @@ Only those who were prepared would survive to see tomorrow.
 - `compendium.md` and `docs/NAMES.md` are binding for established names, titles, ranks, techniques, organizations, system terms, items, and locations. Profile headings and aliases join that ledger.
 - Search only exact Korean terms already present in the current chapter; the compendium contains future-sensitive entries.
 - Never re-romanize established names or invent grand names for uncertain terms. First use of an unlisted name or title almost always needs a footnote or a mapped ledger term.
-- Use `qi` for Murim energy and `mana` for the modern Hunter system when the source distinguishes them.
+- Use `qi` for Murim energy and `mana` for the modern Hunter system when the source distinguishes them. Preserve an established chapter-specific rendering such as `internal energy` when the exact glossary and surrounding Korean distinguish accumulated `공력` from resulting `기운`.
 - In System panels, render `등급` as `**Grade:**` for quest, item, skill, and martial-art classifications. Reserve `rank` for Hunter classifications or ordinary prose; never replace a System `Grade` field with `Rank`.
 
 ## English and Markdown
@@ -1140,6 +1724,14 @@ You may freely recast sentences and paragraphs when the English is stiff, litera
 
 Do not change text merely to make it different. If the baseline is already strong, leave it alone.
 
+The accepted baseline is also the project's style and terminology anchor. Do not
+replace an established rendering, cultural term, System label, Markdown form, or
+recurring phrase with a synonym merely because the synonym sounds smoother.
+Make that change only when the Korean source, `RULES.md`, or the exact glossary
+requires it. In particular, do not turn a source-specific image into a nearby
+English image, or change a gold-spoon joke, item name, technique name, or UI
+label into a different expression without source support.
+
 ## Fidelity constraints
 
 Never invent, omit, explain away, generalize, intensify, soften, or reinterpret source-supported content. In particular, preserve:
@@ -1152,10 +1744,16 @@ Never invent, omit, explain away, generalize, intensify, soften, or reinterpret 
 - chapter-level logical consistency: interpret labels, counters, notifications, and repeated facts from how they behave across the scene, not from an isolated surface gloss;
 - idioms by their narrative function rather than their component words, and jokes with their setup, recognition, and punchline timing intact;
 - cross-sentence implications: do not create a claim that contradicts “again,” an increasing value, an earlier action, or the explanation immediately around it;
+- repeated terminology and formatting: once the baseline or glossary establishes a rendering, keep it consistent throughout the chapter unless the source clearly changes the sense;
 
 Do not add jokes, metaphors, explanations, emotional conclusions, or colorful details that are absent from the Korean. Do not replace a specific source image with a generic equivalent merely because the generic version is smoother.
 
 When natural English and literal form conflict, preserve the source meaning and pragmatic effect while changing the English form as much as necessary.
+
+Before returning the chapter, perform a silent continuity pass: trace every
+counter, quantity, repeated System label, item or technique name, joke setup and
+payoff, and physical cause-and-effect sequence from the Korean through the
+finished English. Correct any local sentence that contradicts the sequence.
 
 ## Relationship to project files
 

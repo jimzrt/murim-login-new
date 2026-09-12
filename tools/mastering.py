@@ -933,8 +933,25 @@ def run_fidelity_gate(
     final: str,
     deterministic_qa: dict,
     paths: dict[str, Path],
+    baseline: str | None = None,
 ) -> dict:
     """Run one bounded semantic review after BASE/SOL assembly."""
+    baseline_section = ""
+    if baseline is not None:
+        baseline_section = f"""
+
+## Accepted baseline for regression comparison
+
+This is the accepted English copy before mastering. Use it as a regression
+anchor: report a finding when the assembled copy loses an established term,
+source-specific image, formatting convention, continuity fact, or other detail
+that the baseline preserved, unless the Korean source clearly requires the
+change.
+
+```markdown
+{format_numbered_baseline(baseline)}
+```
+"""
     packet = f"""# Fidelity Gate — Chapter {number}
 
 Audit the complete assembled English chapter against the Korean source.
@@ -976,6 +993,7 @@ finding blocks promotion; minor findings are recorded for human inspection.
 ```markdown
 {format_numbered_baseline(final)}
 ```
+{baseline_section}
 
 ## Deterministic QA
 
@@ -1017,13 +1035,26 @@ finding blocks promotion; minor findings are recorded for human inspection.
     )
     return value
 
-def apply_fidelity_repairs(text: str, review: dict) -> tuple[str, int]:
+def apply_fidelity_repairs(
+    text: str, review: dict, min_confidence: float
+) -> tuple[str, int]:
     findings = [
         finding for finding in review.get("findings", [])
         if finding["severity"] in {"major", "critical"}
+        or float(finding.get("confidence", 0)) >= min_confidence
     ]
     if not findings:
         return text, 0
+    for finding in findings:
+        replacement = finding["replacement"]
+        if re.search(r"\[Showing lines\b.*\bUse :\d+ to continue\]", replacement, re.I):
+            raise ValueError(
+                f"finding {finding['id']} replacement contains a pagination marker"
+            )
+        if "..." in replacement:
+            raise ValueError(
+                f"finding {finding['id']} replacement contains an ASCII truncation marker"
+            )
     try:
         from tools.model_io import apply_review_replacements
     except ModuleNotFoundError:
@@ -1040,21 +1071,25 @@ def command_qa(number: int) -> None:
     source = read_text(p["source"])
     glossary = exact_glossary(source)
     final = normalize_chapter(read_text(p["final"]))
-    qa = run_qa(number, source, final, glossary)
-    atomic_json(p["qa"], qa)
     fidelity = {"findings": []}
     repairs = 0
+    qa = run_qa(number, source, final, glossary)
+    atomic_json(p["qa"], qa)
+    auto_repair_confidence = float(load_config().get("quality_gate_min_auto_confidence", 0.98))
     for attempt in range(2):
         if not qa["passed"]:
             break
-        fidelity = run_fidelity_gate(number, source, final, qa, p)
-        major_or_critical = sum(
+        fidelity = run_fidelity_gate(
+            number, source, final, qa, p, baseline=read_text(p["baseline"])
+        )
+        repairable = sum(
             item["severity"] in {"major", "critical"}
+            or float(item.get("confidence", 0)) >= auto_repair_confidence
             for item in fidelity["findings"]
         )
-        if not major_or_critical or attempt == 1:
+        if not repairable or attempt == 1:
             break
-        final, applied = apply_fidelity_repairs(final, fidelity)
+        final, applied = apply_fidelity_repairs(final, fidelity, auto_repair_confidence)
         if not applied:
             break
         repairs += applied

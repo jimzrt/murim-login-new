@@ -10,6 +10,14 @@ You may freely recast sentences and paragraphs when the English is stiff, litera
 
 Do not change text merely to make it different. If the baseline is already strong, leave it alone.
 
+The accepted baseline is also the project's style and terminology anchor. Do not
+replace an established rendering, cultural term, System label, Markdown form, or
+recurring phrase with a synonym merely because the synonym sounds smoother.
+Make that change only when the Korean source, `RULES.md`, or the exact glossary
+requires it. In particular, do not turn a source-specific image into a nearby
+English image, or change a gold-spoon joke, item name, technique name, or UI
+label into a different expression without source support.
+
 ## Fidelity constraints
 
 Never invent, omit, explain away, generalize, intensify, soften, or reinterpret source-supported content. In particular, preserve:
@@ -22,10 +30,16 @@ Never invent, omit, explain away, generalize, intensify, soften, or reinterpret 
 - chapter-level logical consistency: interpret labels, counters, notifications, and repeated facts from how they behave across the scene, not from an isolated surface gloss;
 - idioms by their narrative function rather than their component words, and jokes with their setup, recognition, and punchline timing intact;
 - cross-sentence implications: do not create a claim that contradicts “again,” an increasing value, an earlier action, or the explanation immediately around it;
+- repeated terminology and formatting: once the baseline or glossary establishes a rendering, keep it consistent throughout the chapter unless the source clearly changes the sense;
 
 Do not add jokes, metaphors, explanations, emotional conclusions, or colorful details that are absent from the Korean. Do not replace a specific source image with a generic equivalent merely because the generic version is smoother.
 
 When natural English and literal form conflict, preserve the source meaning and pragmatic effect while changing the English form as much as necessary.
+
+Before returning the chapter, perform a silent continuity pass: trace every
+counter, quantity, repeated System label, item or technique name, joke setup and
+payoff, and physical cause-and-effect sequence from the Korean through the
+finished English. Correct any local sentence that contradicts the sequence.
 
 ## Relationship to project files
 

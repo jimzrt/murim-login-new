@@ -29,6 +29,10 @@ phase-specific packets and token ceilings. Do not silently substitute models in
 the workflow. Reviewer replacements and checkpoint dispositions are
 schema-validated before workflow state advances.
 
+`docs/mastering.json` also defines `quality_gate_min_auto_confidence`, the
+confidence threshold for automatically applying source-grounded minor fidelity
+repairs.
+
 Every model subprocess uses OMP JSON mode. Each assistant `message_end` must
 contain provider-reported usage; a missing or malformed usage record is a hard
 failure. Metrics retain the requested model, the actual provider/model OMP used,

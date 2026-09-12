@@ -2,45 +2,35 @@
   "findings": [
     {
       "confidence": 0.99,
-      "current": "The game also carried the social message that, no matter how high you flew or how low you crawled, gold spoons had it best.",
-      "defect": "The Korean idiom 아무리 날고 기어도 means “no matter what one does” or “no matter how hard one tries.” Translating its component images literally introduces an unintended contrast between flying high and crawling low.",
+      "current": "“Hmm. You’ve come.”",
+      "defect": "The source is explicitly interrogative, but the English changes Jin Wikyung’s question into a declaration.",
       "id": "F01",
-      "rationale": "The source expresses the futility of effort compared with inherited privilege; it does not invoke literal or metaphorical vertical movement.",
-      "replacement": "The game also carried the social message that, no matter what you did, being born with a gold spoon was best.",
+      "rationale": "왔느냐 carries a question ending and is punctuated as a question; the accepted baseline also preserved that speech act.",
+      "replacement": "“Hmm. You’re here?”",
       "severity": "minor",
-      "source": "line 121 / P60"
+      "source": "line 7 / P3"
     },
     {
-      "confidence": 0.99,
-      "current": "Whether I thrust or swung it, it moved as quickly as I wanted.",
-      "defect": "The phrase “as quickly as I wanted” adds successful control over the spear’s speed. The source says the light wooden spear moves quickly whenever he thrusts or swings it, and that excessive responsiveness is precisely why fine control is difficult.",
+      "confidence": 0.91,
+      "current": "If I swung something like this for hours, my stamina wouldn’t hold out.",
+      "defect": "The assembled copy lowercases the established System stat Stamina, losing the baseline’s terminology distinction.",
       "id": "F02",
-      "rationale": "The added claim that it moves as desired contradicts the immediately following causal explanation that its lightness makes it hard to control.",
-      "replacement": "Whether I thrust it or swung it, it moved fast.",
-      "severity": "major",
-      "source": "lines 249–253 / P103–P106"
-    },
-    {
-      "confidence": 0.98,
-      "current": "And I had internal energy.\n\nTen years of internal energy that I could draw out through a cultivation technique!",
-      "defect": "The chapter repeatedly renders the Murim term 공력 as “internal energy” throughout P123–P133. Binding terminology requires “qi,” particularly here, where Murim power is explicitly contrasted with modern Hunter mana.",
-      "id": "F03",
-      "rationale": "공력 is the accumulated Murim qi he circulates with the Jin Family’s Cultivation Technique. All subsequent occurrences of “internal energy” in this sequence require the same terminology correction.",
-      "replacement": "And I had qi.\n\nTen years’ worth of qi that I could draw out through a cultivation technique!",
-      "severity": "major",
-      "source": "lines 289–307 / P123–P133"
-    },
-    {
-      "confidence": 0.94,
-      "current": "At that point, even spit would cure him.",
-      "defect": "“At that point” most naturally refers to the preceding hypothetical that Taekyung is on death’s door. The source instead refers to his actual, trivially mild condition: he is so far from death that even applying spit would suffice.",
-      "id": "F04",
-      "rationale": "The joke contrasts Jin Wikyung’s mortal concern with Wipeng’s assessment that Taekyung barely needs treatment; the current referent muddles that contrast.",
-      "replacement": "In his actual condition, even a dab of spit would heal him.",
+      "rationale": "체력 refers to the character’s game-governed capacity in this passage, and the accepted baseline establishes its rendering as the named stat “Stamina.”",
+      "replacement": "If I swung something like this for hours, my Stamina wouldn’t hold out.",
       "severity": "minor",
-      "source": "lines 341–344 / P146–P147"
+      "source": "lines 273–275 / P114"
+    },
+    {
+      "confidence": 0.96,
+      "current": "My dramatically enhanced physical abilities and senses gave me another taste of the rapture I had never known while living as an F-rank Hunter.",
+      "defect": "The translation adds that the narrator had never experienced rapture while living as an F-rank Hunter. The source identifies his former status but makes no categorical claim about his past emotional experience.",
+      "id": "F03",
+      "rationale": "The source says the enhanced abilities and senses once again brought exhilaration to someone who had lived as an F-rank Hunter; “had never known” is unsupported.",
+      "replacement": "Having lived as an F-rank Hunter, I was once again exhilarated by my dramatically enhanced physical abilities and senses.",
+      "severity": "minor",
+      "source": "lines 311–313 / P133"
     }
   ],
-  "summary": "Two major defects affect the spear’s physical logic and the required Murim-energy terminology. Two minor defects distort an idiom and a joke’s referent.",
+  "summary": "Faithful overall, with three localized defects involving a changed speech act, established System-stat terminology, and an unsupported claim about the narrator’s past experience.",
   "version": 1
 }

@@ -16,6 +16,11 @@ The purpose of this stage is to preserve source fidelity **while allowing cumula
 
 At the same time, do not reward change for its own sake. If SOL is not actually better, keep BASELINE.
 
+Treat BASELINE as the established project style and terminology anchor. A SOL
+synonym is not an improvement when it replaces a glossary term, recurring
+rendering, source-specific image, System label, or Markdown convention without
+source support. Preserve BASELINE in those cases even if SOL sounds polished.
+
 **Literal closeness to Korean wording is not the same as fidelity.** The goal is to preserve the source's meaning and effect in natural English.
 
 ## Decision hierarchy
@@ -35,6 +40,8 @@ Choose `SOL` when:
 
 * SOL is source-faithful; and
 * SOL is better English than BASELINE in any meaningful way, including naturalness, idiomaticity, rhythm, dialogue, clarity, precision, concision, flow, voice, or readability.
+* SOL does not create a chapter-level contradiction in counters, quantities,
+  repeated terminology, joke setup/payoff, or physical cause and effect.
 
 The improvement does **not** need to be dramatic. Small improvements matter because they accumulate across a long manuscript.
 
@@ -55,6 +62,8 @@ Choose `BASE` when any of the following is true:
 * SOL violates an exact glossary term or established continuity.
 * SOL is more literal, calqued, stiff, mechanical, awkward, generic, or unnatural than BASELINE.
 * SOL loses a source-specific image, joke, callback, detail, action, or tonal effect that BASELINE preserves.
+* SOL replaces an established project rendering or Markdown convention with an
+  unsupported synonym.
 * SOL is merely different rather than better.
 * After considering fidelity, voice, rhythm, idiomaticity, and prose quality, the two versions are genuinely indistinguishable in quality.
 

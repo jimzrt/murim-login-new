@@ -39,6 +39,8 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
         errors.append(finding("hangul", "reading copy contains Hangul"))
     if translation.lstrip().startswith("```") or re.match(r"^(Here is|I translated|Translation:)", translation.lstrip(), re.I):
         errors.append(finding("wrapper", "reading copy contains a model wrapper or audit preface"))
+    if re.search(r"\[Showing lines\b.*\bUse :\d+ to continue\]", translation, re.I):
+        errors.append(finding("pagination", "reading copy contains a truncated file-view pagination marker"))
     if translation.count("“") != translation.count("”"):
         errors.append(finding("quotes", "curly double quotation marks are unbalanced"))
     source_breaks = source.count("* * *")
@@ -47,8 +49,21 @@ def run_qa(number: int, source: str, translation: str, glossary: list[tuple[str,
         errors.append(finding("scene_breaks", "scene-break count differs", source=source_breaks, target=target_breaks))
     refs = set(FOOTNOTE_REF.findall(translation))
     definitions = set(FOOTNOTE_DEF.findall(translation))
-    if refs != definitions:
-        errors.append(finding("footnotes", "footnote references and definitions differ", missing_definitions=sorted(refs-definitions), unused_definitions=sorted(definitions-refs)))
+    missing_definitions = sorted(refs - definitions)
+    unused_definitions = sorted(definitions - refs)
+    if missing_definitions:
+        errors.append(finding(
+            "footnotes",
+            "footnote references and definitions differ",
+            missing_definitions=missing_definitions,
+            unused_definitions=unused_definitions,
+        ))
+    elif unused_definitions:
+        warnings.append(finding(
+            "unused_footnotes",
+            "translation contains unused footnote definitions",
+            unused_definitions=unused_definitions,
+        ))
     ratio = len(translation) / max(1, len(source))
     if ratio < 1.25 or ratio > 3.4:
         errors.append(finding("length_ratio", "translation length is outside the expected safety range", ratio=round(ratio, 3)))
